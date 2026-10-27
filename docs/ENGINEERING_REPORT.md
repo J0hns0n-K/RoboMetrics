@@ -10,7 +10,7 @@ Date: 2026-10-27, Asia/Seoul. **AI-authored preparation record**, not a complete
 - Master Handoff v2 SHA256: `60472771df326048d8a93020a2d808ec7623d8633159b33c0b8ec7610765e432`. Read as project context; school document links were not fetched.
 - Baseline executed by AI assistant: Node v24.22.1, Windows x64, original six tests passed.
 - New scripts, audit tests, explanatory documents, and example scenario: AI assistance, separate from the original reference import.
-- Student evidence: Junmo answered `4` for an open 3×3 corner-to-corner grid, selected the center obstacle from AI-provided options, and predicted `4번` for the resulting grid before execution. See `TASK_01_DECISION.md` and the separately committed scenario. This is a guided obstacle choice and prediction; student-authored code, independent map design, interpretation, and independently operated trials are still pending.
+- Student evidence: Junmo answered `4` for an open 3×3 corner-to-corner grid, selected the center obstacle from AI-provided options, predicted `4번` before execution, and interpreted the observed distance comparison in chat (quoted below). See `TASK_01_DECISION.md` and the separately committed scenario. Student-authored code, independent map design, explanation of expansion counts, and independently operated trials are still pending.
 
 ## Question and method
 
