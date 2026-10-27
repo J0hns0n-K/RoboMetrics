@@ -1,5 +1,15 @@
 # RoboMetrics — Junmo's Engineering EC R&D
 
+## Live kickoff — 2026-10-27
+
+- Private remote: `J0hns0n-K/junmo-robometrics` (created and reference import pushed).
+- Original 20-file ZIP preserved in reference commit `43fa8ec965180532c1fcf4a553309ed350b25277`.
+- Start here: [first engineering task, Korean](docs/TASK_01_KR.md), [algorithm review](docs/ALGORITHM_REVIEW_KR.md), [current engineering record](docs/ENGINEERING_REPORT.md).
+- New audit tests and helpers are **AI-authored support**. Student coding, independent experiments, and a counterexample are still pending. Junmo answered the open-grid four-move check in chat; that is a manual check, not code authorship.
+- No dependency installation: `node --test` runs tests; `node scripts/serve.mjs` previews the original UI at `http://127.0.0.1:8080`.
+- Fixed-map example: `node scripts/run-scenario.mjs experiments/reference-open-grid.json data/reference/open-grid-run-02.json`. Each output must use a new name.
+- The original handoff below is a historical snapshot; its remote-not-created status has been superseded by this section.
+
 **Status:** 2026-10-27 counselor/AI-created **kickoff reference scaffold**, NOT verified student-authored research.
 **Declared track:** Early browser-native *path-planning benchmark* (Oct 27–29), with a separately scoped RD *sim-to-real robotics* study (Nov–Dec and Jan only if deadlines permit).
 **Intended major:** Computer Engineering (verified in Junmo's Common App working document).

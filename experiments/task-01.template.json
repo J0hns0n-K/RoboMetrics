@@ -1,0 +1,11 @@
+{
+  "id": "task-01-my-map",
+  "status": "template",
+  "contributionType": "student-declared",
+  "contributor": "",
+  "assistance": "",
+  "prediction": "",
+  "rows": ["S....", ".....", "....G"],
+  "budgets": [5, 10, 15],
+  "note": "Copy to task-01.student.json. Design obstacles using #, write your prediction and actual assistance, then change status to ready. Commit BEFORE executing. Declared authorship is not independently verified."
+}

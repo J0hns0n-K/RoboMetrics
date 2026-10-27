@@ -2,7 +2,10 @@
 
 | Date | Contributor | Action | Evidence | Student explanation | Verified by |
 |---|---|---|---|---|---|
-| 2026-10-27 | AI assistant under counselor request | Created initial RoboMetrics reference project: UI, A*/Greedy/Dijkstra, synthetic maps, 6 Node tests, docs | This starter archive and local test output | NOT Junmo-authored; independently review before claiming | Counselor |
+| 2026-10-27 | AI assistant under counselor request (archive attribution) | Created initial RoboMetrics reference project: UI, A*/Greedy/Dijkstra, synthetic maps, 6 Node tests, docs | ZIP; reference commit `43fa8ec965180532c1fcf4a553309ed350b25277` | NOT Junmo-authored | Archive states attribution; original six tests rerun by AI at kickoff |
+| 2026-10-27 | AI assistant in this kickoff | Imported original 20 files; created private remote and pushed reference commit; ran original tests | Commit above; private remote; 6/6 pass on Node v24.22.1 | Setup assistance, not student implementation or execution | Git/API and test output |
+| 2026-10-27 | Junmo (user chat response) | Answered `4` for minimum moves on the open 3×3 grid shown in chat | Direct response to the manual path-count question | Only the answer is established; no code, obstacle-map design, or independent experiment yet | Response observed by assistant; no outside verification |
+| 2026-10-27 | AI assistant | Added independent BFS audit, fixed-map JSON runner, preview helper, task worksheet and engineering preparation record | Separate kickoff-support commit; `test/audit.test.mjs`; `scripts/`; `docs/TASK_01_KR.md` | All these files are AI-authored support | Automated checks recorded in `data/reference/` |
 | YYYY-MM-DD | Junmo | **PENDING — only fill after real action** | Git commit SHA, screenshots, experiment data | What decision he made and why | TBD |
 
 Requirements: Never rewrite AI/mentor-seeded files as though student wrote them unaided. Track decisions, learning, assistance, errors, fixes, tests and dates.
