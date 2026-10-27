@@ -1,0 +1,445 @@
+{
+  "schemaVersion": 1,
+  "label": "SYNTHETIC FIXED GRID — NOT PHYSICAL ROBOT DATA",
+  "scenario": {
+    "id": "task-02-matched-open-reference",
+    "status": "ready",
+    "contributionType": "ai-reference",
+    "contributor": "AI assistant",
+    "assistance": "AI supplied this wall-free control with the same 5x3 dimensions and start/goal as task-02.detour.json. The four-move prediction and all software operation are AI support, not a student-supplied prediction for this control.",
+    "prediction": "Four rightward moves should reach the goal. Compare against the matched obstacle map without changing dimensions or endpoints.",
+    "rows": [
+      "S...G",
+      ".....",
+      "....."
+    ],
+    "budgets": [
+      5,
+      8,
+      9,
+      15
+    ]
+  },
+  "authorship": {
+    "declaredType": "ai-reference",
+    "contributor": "AI assistant",
+    "assistance": "AI supplied this wall-free control with the same 5x3 dimensions and start/goal as task-02.detour.json. The four-move prediction and all software operation are AI support, not a student-supplied prediction for this control.",
+    "independentlyVerified": false
+  },
+  "conventions": {
+    "pathLength": "Number of moves; start is zero moves.",
+    "expanded": "Distinct nodes removed for examination, INCLUDING start and goal.",
+    "movement": "Four neighbors; unit cost; static fully known obstacles.",
+    "tieBreak": "FIFO insertion order at equal priority; neighbor order right, down, left, up.",
+    "reference": "Dijkstra shares the starter search engine; independent BFS is in test/audit.test.mjs."
+  },
+  "referenceLength": 4,
+  "unlimited": {
+    "astar": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "pathLength": 4,
+      "expanded": 5,
+      "relativeLength": 1
+    },
+    "greedy": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "pathLength": 4,
+      "expanded": 5,
+      "relativeLength": 1
+    },
+    "dijkstra": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "pathLength": 4,
+      "expanded": 10,
+      "relativeLength": 1
+    }
+  },
+  "trials": [
+    {
+      "budget": 5,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "dijkstra": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 5,
+          "relativeLength": null
+        }
+      }
+    },
+    {
+      "budget": 8,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "dijkstra": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 8,
+          "relativeLength": null
+        }
+      }
+    },
+    {
+      "budget": 9,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "dijkstra": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 9,
+          "relativeLength": null
+        }
+      }
+    },
+    {
+      "budget": 15,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "dijkstra": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 10,
+          "relativeLength": 1
+        }
+      }
+    }
+  ],
+  "execution": {
+    "executedBy": "Command operator; student execution is not inferred from a generated file.",
+    "timestamp": "2026-10-27T10:07:52.129Z",
+    "node": "v24.22.1",
+    "platform": "win32/x64",
+    "sourceCommit": "9aed8478d02ac5ce0e08448333400cacfc375771",
+    "workspaceDirty": false,
+    "inputFile": "experiments/task-02.open-reference.json",
+    "inputSha256": "604ebff6d988bc414ecc0afcbf920a64d71dcac7e82ff41f0394414017815f98",
+    "coreSha256": "6efb7a36d4abde7c0ea82c5c9bc1aaf51eae01d53c4ed0365f9151d654fc1686",
+    "runnerSha256": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc"
+  }
+}

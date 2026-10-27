@@ -44,6 +44,14 @@ The student's path-length prediction agrees with the result. After seeing the re
 
 The separate computational interpretation is **AI-written**: path lengths match while examined-node counts differ; FIFO ties make A* examine additional equally scored candidates before the goal. This single guided example does not establish general algorithm superiority or an implementation improvement. No student-authored algorithm change has been made.
 
+## Guided exercise 02 — minimum distance increases on a matched obstacle map
+
+AI supplied a 5×3 detour map and explained the wall-free four-move baseline. Before execution, Junmo answered **8** for the obstacle map. Inputs and the prediction were committed in `9aed8478d02ac5ce0e08448333400cacfc375771`; both assistant-operated runs used that clean source. Raw records: `data/guided/task-02-open-run-01.json` and `data/guided/task-02-detour-run-01.json`.
+
+All three policies found 4 moves on the matched open map and 8 on the obstacle map, agreeing with the student's detour prediction. Width, height, endpoints and movement rules were held constant. The earlier 3×3 map is not the control for this comparison. A*/Greedy examined 5/5 nodes on the open map and 9/9 on the detour. At budget 8 none succeeds on the detour; at budget 9 all succeed.
+
+AI route explanation: down twice, right twice, up twice, right twice reaches the goal in 8 moves. The first vertical wall forces the two-row detour; a path needs at least four net rightward moves, two downward and two upward. Student route reasoning and post-result interpretation remain unrecorded. The student's actual contribution is the correct prior numerical prediction; the map, control, transcription, operator work and explanation are AI assistance. No search-engine implementation change or Greedy path-quality counterexample has been made.
+
 ## Student report sections to complete later
 
 1. Student's own question and prior prediction, with timestamp/commit.

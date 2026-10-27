@@ -27,6 +27,18 @@ Browser smoke export: `data/reference/browser-benchmark.json`, seed 20261027, de
 - Student interpretation, verbatim from chat after seeing the result: **장애물이 있다고 해서 최소 이동 거리가 꼭 바뀌는 것은 아님** (an obstacle does not necessarily change the minimum travel distance). This is supported by comparing the open and center-blocked 3×3 grids, both four moves.
 - Student's explanation of differing expansion counts, a code/experiment revision, and independent operation remain pending.
 
+## 2026-10-27 guided exercise 02 — detour prediction
+
+- AI supplied the complete 5×3 obstacle map; Junmo's exact prior answer was `8`. This is a numerical prediction, not student map design or a student-written algorithm.
+- Both input files and the prediction note were committed before execution: `9aed8478d02ac5ce0e08448333400cacfc375771`.
+- Matched control: same 5×3 dimensions, start (0,0), goal (4,0), four-neighbor movement and unit step cost; only obstacles differ. The AI supplied the control and its four-move prediction.
+- AI selected budgets 5/8/9/15 and operated both runs. Outputs were initially staged under ignored `.git/evidence/` so the two executions used clean source, then copied unchanged into tracked data files.
+- Raw: `data/guided/task-02-open-run-01.json` and `data/guided/task-02-detour-run-01.json`; complete paths, budget failures, source/input hashes and environment included.
+- All three algorithms found 4 moves on the open control and 8 on the obstacle map. The student's prediction matched the latter. A*/Greedy expansions were 5/5 on the control and 9/9 on the detour. Dijkstra expansions were 10 and 9 respectively.
+- At budget 8 the detour run fails for all policies; at budget 9 all succeed. This convention includes examining both start and goal, so 8 moves can require 9 examined nodes.
+- AI interpretation: the matched obstacle map adds 4 moves. The wall in column 1 forces a visit to the bottom row; returning to the goal row requires two upward moves. Four net rightward moves plus two down and two up gives a lower bound of 8, achieved by the returned path.
+- No student route explanation or post-result interpretation has yet been supplied for this exercise. Neither exercise establishes a Greedy path-quality counterexample or general algorithm ranking. Search-engine code is unchanged; no new test-suite run was needed for input/document-only additions.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

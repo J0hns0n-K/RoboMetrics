@@ -9,6 +9,7 @@
 - No dependency installation: `node --test` runs tests; `node scripts/serve.mjs` previews the original UI at `http://127.0.0.1:8080`.
 - Fixed-map example: `node scripts/run-scenario.mjs experiments/reference-open-grid.json data/reference/open-grid-run-02.json`. Each output must use a new name.
 - The original handoff below is a historical snapshot; its remote-not-created status has been superseded by this section.
+- Guided follow-up: Junmo predicted 8 moves on an AI-supplied 5×3 detour map before execution. Matched assistant-operated runs confirmed 4 moves without walls and 8 with walls; see `docs/TASK_02_DECISION.md` and `data/guided/task-02-*-run-01.json`. The prediction is student input; the map and software operation are AI support.
 
 **Status:** 2026-10-27 counselor/AI-created **kickoff reference scaffold**, NOT verified student-authored research.
 **Declared track:** Early browser-native *path-planning benchmark* (Oct 27–29), with a separately scoped RD *sim-to-real robotics* study (Nov–Dec and Jan only if deadlines permit).
