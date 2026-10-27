@@ -1,0 +1,10 @@
+{
+  "id": "task-02-matched-open-reference",
+  "status": "ready",
+  "contributionType": "ai-reference",
+  "contributor": "AI assistant",
+  "assistance": "AI supplied this wall-free control with the same 5x3 dimensions and start/goal as task-02.detour.json. The four-move prediction and all software operation are AI support, not a student-supplied prediction for this control.",
+  "prediction": "Four rightward moves should reach the goal. Compare against the matched obstacle map without changing dimensions or endpoints.",
+  "rows": ["S...G", ".....", "....."],
+  "budgets": [5, 8, 9, 15]
+}
