@@ -2,7 +2,7 @@
 
 ## Live kickoff — 2026-10-27
 
-- Private remote: `J0hns0n-K/junmo-robometrics` (created and reference import pushed).
+- Current remote: `J0hns0n-K/RoboMetrics`, confirmed **public** on 2026-10-27. The repository was initially created private as `junmo-robometrics`; GitHub now redirects that former address to `RoboMetrics`. The local remote has been updated to the canonical URL. Historical creation records below retain the original name and visibility at creation.
 - Original 20-file ZIP preserved in reference commit `43fa8ec965180532c1fcf4a553309ed350b25277`.
 - Start here: [first engineering task, Korean](docs/TASK_01_KR.md), [algorithm review](docs/ALGORITHM_REVIEW_KR.md), [current engineering record](docs/ENGINEERING_REPORT.md).
 - New audit tests and helpers are **AI-authored support**. Junmo selected a center obstacle, predicted four moves, and interpreted the result: an obstacle need not increase the minimum distance. Input is in `experiments/task-01.student.json`, assistant-operated results in `data/guided/`. Student coding, independent experiments, and a Greedy counterexample are still pending.
