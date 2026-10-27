@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "label": "GUIDED BUDGET PARAMETER EXERCISE; AI-OPERATED SYNTHETIC GRID",
+  "timestampUtc": "2026-10-27T11:48:04.5819885+00:00",
+  "sourceCommit": "87720eb451c507c5c423d549889918f815b58e22",
+  "workspaceDirtyAtExecution": false,
+  "sourceFile": "practice/02-planning-budget.mjs",
+  "sourceSha256": "6056f11502927874b4e92b4616a2c6fb074d6ede59d00ff483c645e6fbfef5aa",
+  "coreSha256": "6efb7a36d4abde7c0ea82c5c9bc1aaf51eae01d53c4ed0365f9151d654fc1686",
+  "node": "v24.22.1",
+  "executedBy": "AI assistant",
+  "studentReport": "저장했어",
+  "studentEdit": "budget 8 to 5",
+  "budget": 5,
+  "rows": [
+    "S..",
+    ".#.",
+    "..G"
+  ],
+  "newStudentPredictionCollected": false,
+  "earlierMapResults": "data/guided/task-01-run-01.json",
+  "matchesPriorCoreHash": true,
+  "stdoutFile": "data/learning/practice-02-budget-5.stdout.txt"
+}
