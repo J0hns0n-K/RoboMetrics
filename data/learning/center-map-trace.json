@@ -1,0 +1,245 @@
+{
+  "label": "AI-AUTHORED FIXED-MAP LEARNING REPLAY; NOT STUDENT RESEARCH",
+  "date": "2026-10-28",
+  "coreSha256": "6efb7a36d4abde7c0ea82c5c9bc1aaf51eae01d53c4ed0365f9151d654fc1686",
+  "observation": "Passive trace push after expansion increment in an in-memory copy; original engine files unchanged.",
+  "validation": {
+    "matchedOriginalEngineCases": 20,
+    "prefixChecks": 18
+  },
+  "rows": [
+    "S..",
+    ".#.",
+    "..G"
+  ],
+  "policies": {
+    "astar": {
+      "trace": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "fullResult": {
+        "success": true,
+        "reason": null,
+        "path": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "pathLength": 4,
+        "expanded": 8
+      },
+      "cases": {
+        "1": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "pathLength": null,
+          "expanded": 1
+        },
+        "2": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "pathLength": null,
+          "expanded": 2
+        },
+        "3": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "pathLength": null,
+          "expanded": 3
+        },
+        "4": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "pathLength": null,
+          "expanded": 4
+        },
+        "5": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "pathLength": null,
+          "expanded": 5
+        },
+        "6": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "pathLength": null,
+          "expanded": 6
+        },
+        "7": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "pathLength": null,
+          "expanded": 7
+        },
+        "8": {
+          "success": true,
+          "reason": null,
+          "pathLength": 4,
+          "expanded": 8
+        },
+        "9": {
+          "success": true,
+          "reason": null,
+          "pathLength": 4,
+          "expanded": 8
+        }
+      }
+    },
+    "greedy": {
+      "trace": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "fullResult": {
+        "success": true,
+        "reason": null,
+        "path": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "pathLength": 4,
+        "expanded": 5
+      },
+      "cases": {
+        "1": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "pathLength": null,
+          "expanded": 1
+        },
+        "2": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "pathLength": null,
+          "expanded": 2
+        },
+        "3": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "pathLength": null,
+          "expanded": 3
+        },
+        "4": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "pathLength": null,
+          "expanded": 4
+        },
+        "5": {
+          "success": true,
+          "reason": null,
+          "pathLength": 4,
+          "expanded": 5
+        },
+        "6": {
+          "success": true,
+          "reason": null,
+          "pathLength": 4,
+          "expanded": 5
+        },
+        "7": {
+          "success": true,
+          "reason": null,
+          "pathLength": 4,
+          "expanded": 5
+        },
+        "8": {
+          "success": true,
+          "reason": null,
+          "pathLength": 4,
+          "expanded": 5
+        },
+        "9": {
+          "success": true,
+          "reason": null,
+          "pathLength": 4,
+          "expanded": 5
+        }
+      }
+    }
+  }
+}
