@@ -1,0 +1,14 @@
+{
+  "label": "AI-EXECUTED REFERENCE VALIDATION; NOT STUDENT-RUN RESEARCH",
+  "timestampUtc": "2026-10-27T09:58:23.3132246+00:00",
+  "sourceCommit": "10c99f0d4a1bb29b75e0f04b26333a61d3e72eaa",
+  "sourceWorkspaceCleanBeforeArtifacts": true,
+  "node": "v24.22.1",
+  "platform": "Windows x64",
+  "originalReferenceCommit": "43fa8ec965180532c1fcf4a553309ed350b25277",
+  "testsPassed": 11,
+  "testsFailed": 0,
+  "independentOracle": "Queue-based BFS, all 1024 4x3 obstacle configurations, fixed corner endpoints",
+  "rawTests": "data/reference/audit-tests.tap",
+  "rawScenario": "data/reference/open-grid-run-01.json"
+}

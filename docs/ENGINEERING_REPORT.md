@@ -22,7 +22,11 @@ Execution artifacts under `data/reference/` are assistant-run reference checks. 
 
 ## Results and interpretation
 
-The original six tests passed at kickoff. Additional audit results and the reference open-grid result are preserved in `data/reference/` when executed. Record exact results from those files, without treating finite test coverage as proof for all maps.
+All 11 tests passed (original six plus five AI-authored audits), on clean source commit `10c99f0d4a1bb29b75e0f04b26333a61d3e72eaa`. Raw TAP and a validation manifest are in `data/reference/`.
+
+The assistant-run open 3×3 reference produced four-move paths for all policies; A* and Dijkstra examined 9 nodes, Greedy 5. With budget 5, Greedy succeeds and A* exceeds budget under the recorded FIFO tie break. This demonstrates the difference between path length and expansion count, not a general algorithm ranking.
+
+Browser smoke test: original UI rendered, its 30-trial benchmark completed, and Export JSON produced `data/reference/browser-benchmark.json`. Parameters: seed 20261027, 16×12, density 0.19, budget 180, 30 reachable-only paired maps. A* and Greedy both solved 30/30; mean path length was 26.0667 vs 28.4, mean expansions 118.7667 vs 32.7. This is one **AI-run reference condition**, not the preregistered 12-condition student experiment matrix. Screenshot: `data/reference/ui-smoke.jpg`. The individual displayed map and the batch's rejection-sampled maps are separate views.
 
 One simple map cannot establish that an algorithm is universally better. Expansion count is not elapsed time. The original random benchmark uses reachable-only rejection sampling; route length summaries condition on success. Neither this grid nor its metrics describe physical robot performance.
 
