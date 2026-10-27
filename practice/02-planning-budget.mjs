@@ -2,7 +2,7 @@
 import {makeMap, plan, verifyPath} from '../src/core.mjs';
 
 // 이번에 직접 바꿀 숫자: 컴퓨터가 검토할 수 있는 칸 수
-const budget = 8;
+const budget = 5;
 
 // 가운데 칸만 막힌 3×3 지도. 출발점은 왼쪽 위, 도착점은 오른쪽 아래.
 const map = makeMap(3, 3, [[1, 1]]);
