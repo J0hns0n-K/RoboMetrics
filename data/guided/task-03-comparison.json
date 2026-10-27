@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "label": "AI-EXECUTED COMPARISON OF A GUIDED STUDENT ENVIRONMENT REVISION",
+  "beforeFile": "data/guided/task-02-detour-run-01.json",
+  "afterFile": "data/guided/task-03-run-01.json",
+  "beforeSourceCommit": "9aed8478d02ac5ce0e08448333400cacfc375771",
+  "afterSourceCommit": "9ef0caf4d43b0a75da317ca335de57cf1fa72d27",
+  "sameCoreAndRunnerHashes": true,
+  "changedCells": [
+    {
+      "x": 1,
+      "y": 0,
+      "before": "#",
+      "after": "."
+    }
+  ],
+  "studentPriorResponse": "1번 벽/4번",
+  "studentPredictionMatched": true,
+  "metrics": {
+    "astar": {
+      "beforeMoves": 8,
+      "afterMoves": 4,
+      "changeInMoves": -4,
+      "beforeExpanded": 9,
+      "afterExpanded": 5,
+      "changeInExpanded": -4
+    },
+    "greedy": {
+      "beforeMoves": 8,
+      "afterMoves": 4,
+      "changeInMoves": -4,
+      "beforeExpanded": 9,
+      "afterExpanded": 5,
+      "changeInExpanded": -4
+    },
+    "dijkstra": {
+      "beforeMoves": 8,
+      "afterMoves": 4,
+      "changeInMoves": -4,
+      "beforeExpanded": 9,
+      "afterExpanded": 9,
+      "changeInExpanded": 0
+    }
+  },
+  "interpretationAuthor": "AI assistant",
+  "interpretation": "Removing only wall 1 opens the top-row four-move route. This changes the environment, not the search algorithm."
+}

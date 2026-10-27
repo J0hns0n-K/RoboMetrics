@@ -10,6 +10,7 @@
 - Fixed-map example: `node scripts/run-scenario.mjs experiments/reference-open-grid.json data/reference/open-grid-run-02.json`. Each output must use a new name.
 - The original handoff below is a historical snapshot; its remote-not-created status has been superseded by this section.
 - Guided follow-up: Junmo predicted 8 moves on an AI-supplied 5×3 detour map before execution. Matched assistant-operated runs confirmed 4 moves without walls and 8 with walls; see `docs/TASK_02_DECISION.md` and `data/guided/task-02-*-run-01.json`. The prediction is student input; the map and software operation are AI support.
+- Guided revision: Junmo chose wall 1 for removal and predicted four moves before execution. The assistant-operated single-cell comparison confirmed 8→4 moves; see `docs/TASK_03_DECISION.md` and `data/guided/task-03-comparison.json`. This is a student-selected environment revision, not a search-code change.
 
 **Status:** 2026-10-27 counselor/AI-created **kickoff reference scaffold**, NOT verified student-authored research.
 **Declared track:** Early browser-native *path-planning benchmark* (Oct 27–29), with a separately scoped RD *sim-to-real robotics* study (Nov–Dec and Jan only if deadlines permit).

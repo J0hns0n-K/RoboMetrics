@@ -1,0 +1,466 @@
+{
+  "schemaVersion": 1,
+  "label": "SYNTHETIC FIXED GRID — NOT PHYSICAL ROBOT DATA",
+  "scenario": {
+    "id": "task-03-remove-wall-1",
+    "status": "ready",
+    "contributionType": "student-declared",
+    "contributor": "Junmo — guided map-revision choice and prior path-length prediction",
+    "assistance": "AI provided the task-02 detour map, numbered its four walls, and asked which single wall to remove to shorten the route. Junmo answered 1번 벽/4번 before software execution, selecting wall 1 at coordinate (1,0) and predicting four moves. AI transcribed the revision, retained the prior budgets 5/8/9/15 and all other map conditions, and operates the runner. This is a guided environment revision; no student-authored algorithm change or independent software operation is claimed.",
+    "prediction": "Student's verbatim prior answer: 1번 벽/4번 (remove wall 1; minimum path length four moves).",
+    "rows": [
+      "S...G",
+      ".#.#.",
+      "...#."
+    ],
+    "budgets": [
+      5,
+      8,
+      9,
+      15
+    ]
+  },
+  "authorship": {
+    "declaredType": "student-declared",
+    "contributor": "Junmo — guided map-revision choice and prior path-length prediction",
+    "assistance": "AI provided the task-02 detour map, numbered its four walls, and asked which single wall to remove to shorten the route. Junmo answered 1번 벽/4번 before software execution, selecting wall 1 at coordinate (1,0) and predicting four moves. AI transcribed the revision, retained the prior budgets 5/8/9/15 and all other map conditions, and operates the runner. This is a guided environment revision; no student-authored algorithm change or independent software operation is claimed.",
+    "independentlyVerified": false
+  },
+  "conventions": {
+    "pathLength": "Number of moves; start is zero moves.",
+    "expanded": "Distinct nodes removed for examination, INCLUDING start and goal.",
+    "movement": "Four neighbors; unit cost; static fully known obstacles.",
+    "tieBreak": "FIFO insertion order at equal priority; neighbor order right, down, left, up.",
+    "reference": "Dijkstra shares the starter search engine; independent BFS is in test/audit.test.mjs."
+  },
+  "referenceLength": 4,
+  "unlimited": {
+    "astar": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "pathLength": 4,
+      "expanded": 5,
+      "relativeLength": 1
+    },
+    "greedy": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "pathLength": 4,
+      "expanded": 5,
+      "relativeLength": 1
+    },
+    "dijkstra": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "pathLength": 4,
+      "expanded": 9,
+      "relativeLength": 1
+    }
+  },
+  "trials": [
+    {
+      "budget": 5,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "dijkstra": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 5,
+          "relativeLength": null
+        }
+      }
+    },
+    {
+      "budget": 8,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "dijkstra": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 8,
+          "relativeLength": null
+        }
+      }
+    },
+    {
+      "budget": 9,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "dijkstra": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 9,
+          "relativeLength": 1
+        }
+      }
+    },
+    {
+      "budget": 15,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "dijkstra": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 9,
+          "relativeLength": 1
+        }
+      }
+    }
+  ],
+  "execution": {
+    "executedBy": "Command operator; student execution is not inferred from a generated file.",
+    "timestamp": "2026-10-27T10:10:54.161Z",
+    "node": "v24.22.1",
+    "platform": "win32/x64",
+    "sourceCommit": "9ef0caf4d43b0a75da317ca335de57cf1fa72d27",
+    "workspaceDirty": false,
+    "inputFile": "experiments/task-03.remove-wall-1.json",
+    "inputSha256": "afb6198251aeb45e5c51aaecc7db7fa04171a8072618d040c3d31dc9153f5d30",
+    "coreSha256": "6efb7a36d4abde7c0ea82c5c9bc1aaf51eae01d53c4ed0365f9151d654fc1686",
+    "runnerSha256": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc"
+  }
+}
