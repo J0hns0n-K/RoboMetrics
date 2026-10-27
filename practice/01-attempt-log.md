@@ -16,3 +16,9 @@ The observed saved edit was:
 The function remains the AI-provided `return after - before;`. The actual saved values differ from the exercise target (`before = 8`, `after = 10`). The assistant noticed this before execution, informed the user, and will preserve and run the saved attempt without silently correcting it.
 
 Student contribution: user-reported file edit, observed in the working tree, plus the prior numerical prediction 2. AI assistance: original function, instructions, checking, Git commit, operation and later explanation. This is an arithmetic input-edit exercise, not an algorithm implementation or research result. The time at which the user entered the two values is not independently observed; the saved diff and user report are the evidence.
+
+## Actual execution result
+
+The assistant executed the saved attempt on clean source `472eafd05a36e2d123b857b1298baf3010ed47a4`. Output was **-18**, because the saved expression evaluates as `-8 - 10`. The reported prediction **2** does not match this saved input; it would match the intended `10 - 8` instead.
+
+Raw output: `data/learning/practice-01-attempt-01.stdout.txt`. Source hash, inputs, operator, prior prediction and mismatch are recorded in `data/learning/practice-01-attempt-01.json`. The attempt is preserved. The assistant has not silently changed either input. The next requested student action is to save `const before = 8;` and `const after = 10;` and rerun with the student's prediction of 2.
