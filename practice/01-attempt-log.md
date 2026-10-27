@@ -1,0 +1,18 @@
+# Practice 01 — first saved attempt
+
+2026-10-27, Asia/Seoul. AI transcription of the user response and observed file diff.
+
+The user reported **저장했어/2**: saved, with a predicted output of 2, before assistant execution.
+
+The observed saved edit was:
+
+```diff
+-const before = 8;
+-const after = 4;
++const before = 10;
++const after = -8;
+```
+
+The function remains the AI-provided `return after - before;`. The actual saved values differ from the exercise target (`before = 8`, `after = 10`). The assistant noticed this before execution, informed the user, and will preserve and run the saved attempt without silently correcting it.
+
+Student contribution: user-reported file edit, observed in the working tree, plus the prior numerical prediction 2. AI assistance: original function, instructions, checking, Git commit, operation and later explanation. This is an arithmetic input-edit exercise, not an algorithm implementation or research result. The time at which the user entered the two values is not independently observed; the saved diff and user report are the evidence.

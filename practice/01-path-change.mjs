@@ -5,8 +5,8 @@ function pathChange(before, after) {
   return after - before;
 }
 
-const before = 8;
-const after = 4;
+const before = 10;
+const after = -8;
 
 const change = pathChange(before, after);
 console.log('수정 전 이동 거리:', before);
