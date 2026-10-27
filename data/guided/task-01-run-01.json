@@ -1,0 +1,361 @@
+{
+  "schemaVersion": 1,
+  "label": "SYNTHETIC FIXED GRID — NOT PHYSICAL ROBOT DATA",
+  "scenario": {
+    "id": "task-01-center-obstacle",
+    "status": "ready",
+    "contributionType": "student-declared",
+    "contributor": "Junmo — scaffolded obstacle choice and prior path-length prediction in chat",
+    "assistance": "AI supplied the 3x3 template, explained four-neighbor movement, and offered obstacle-position and prediction choices. Junmo selected the center cell and 4 moves. AI transcribed this file, selected budgets 4/5/7/8 using the prior reference demonstration, committed the inputs, and will operate the runner. This is not student-authored algorithm code or independently operated software.",
+    "prediction": "Student response before execution: 4번 (minimum path length of 4 moves). No student prediction about algorithm success rates or expansion counts was supplied.",
+    "rows": [
+      "S..",
+      ".#.",
+      "..G"
+    ],
+    "budgets": [
+      4,
+      5,
+      7,
+      8
+    ]
+  },
+  "authorship": {
+    "declaredType": "student-declared",
+    "contributor": "Junmo — scaffolded obstacle choice and prior path-length prediction in chat",
+    "assistance": "AI supplied the 3x3 template, explained four-neighbor movement, and offered obstacle-position and prediction choices. Junmo selected the center cell and 4 moves. AI transcribed this file, selected budgets 4/5/7/8 using the prior reference demonstration, committed the inputs, and will operate the runner. This is not student-authored algorithm code or independently operated software.",
+    "independentlyVerified": false
+  },
+  "conventions": {
+    "pathLength": "Number of moves; start is zero moves.",
+    "expanded": "Distinct nodes removed for examination, INCLUDING start and goal.",
+    "movement": "Four neighbors; unit cost; static fully known obstacles.",
+    "tieBreak": "FIFO insertion order at equal priority; neighbor order right, down, left, up.",
+    "reference": "Dijkstra shares the starter search engine; independent BFS is in test/audit.test.mjs."
+  },
+  "referenceLength": 4,
+  "unlimited": {
+    "astar": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "pathLength": 4,
+      "expanded": 8,
+      "relativeLength": 1
+    },
+    "greedy": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "pathLength": 4,
+      "expanded": 5,
+      "relativeLength": 1
+    },
+    "dijkstra": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "pathLength": 4,
+      "expanded": 8,
+      "relativeLength": 1
+    }
+  },
+  "trials": [
+    {
+      "budget": 4,
+      "results": {
+        "astar": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 4,
+          "relativeLength": null
+        },
+        "greedy": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 4,
+          "relativeLength": null
+        },
+        "dijkstra": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 4,
+          "relativeLength": null
+        }
+      }
+    },
+    {
+      "budget": 5,
+      "results": {
+        "astar": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 5,
+          "relativeLength": null
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "dijkstra": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 5,
+          "relativeLength": null
+        }
+      }
+    },
+    {
+      "budget": 7,
+      "results": {
+        "astar": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 7,
+          "relativeLength": null
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "dijkstra": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 7,
+          "relativeLength": null
+        }
+      }
+    },
+    {
+      "budget": 8,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 8,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "dijkstra": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 8,
+          "relativeLength": 1
+        }
+      }
+    }
+  ],
+  "execution": {
+    "executedBy": "Command operator; student execution is not inferred from a generated file.",
+    "timestamp": "2026-10-27T10:01:53.632Z",
+    "node": "v24.22.1",
+    "platform": "win32/x64",
+    "sourceCommit": "97736facb939ed1da56f6255baf405d2646eaa0d",
+    "workspaceDirty": false,
+    "inputFile": "experiments/task-01.student.json",
+    "inputSha256": "53c2cab8d75135132522892f0e94c8596f9fe61a2cadf6661ec461f13a573366",
+    "coreSha256": "6efb7a36d4abde7c0ea82c5c9bc1aaf51eae01d53c4ed0365f9151d654fc1686",
+    "runnerSha256": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc"
+  }
+}

@@ -30,6 +30,18 @@ Browser smoke test: original UI rendered, its 30-trial benchmark completed, and 
 
 One simple map cannot establish that an algorithm is universally better. Expansion count is not elapsed time. The original random benchmark uses reachable-only rejection sampling; route length summaries condition on success. Neither this grid nor its metrics describe physical robot performance.
 
+## Guided student exercise — center obstacle
+
+The student's guided obstacle choice and four-move prediction were committed in `97736facb939ed1da56f6255baf405d2646eaa0d` **before** execution. The assistant then ran `experiments/task-01.student.json` on that clean source. Full paths, failures and budgets are in `data/guided/task-01-run-01.json`.
+
+| Policy | Unlimited path moves | Examined nodes | Success at budget 5 |
+|---|---:|---:|---|
+| A* | 4 | 8 | No, budget exceeded |
+| Greedy | 4 | 5 | Yes |
+| Dijkstra | 4 | 8 | No, budget exceeded |
+
+The student's path-length prediction agrees with the result. The following interpretation is **AI-written**: on this grid, path lengths match while examined-node counts differ; FIFO ties make A* examine additional equally scored candidates before the goal. This single guided example does not establish general superiority or an implementation improvement. Student interpretation is requested but not yet recorded. No student-authored algorithm change has been made.
+
 ## Student report sections to complete later
 
 1. Student's own question and prior prediction, with timestamp/commit.
