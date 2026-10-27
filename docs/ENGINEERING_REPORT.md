@@ -56,9 +56,11 @@ AI route explanation: down twice, right twice, up twice, right twice reaches the
 
 Junmo answered **1번 벽/4번** when asked which numbered wall to remove and what minimum distance to predict. The selected revision opens only (1,0), immediately right of S. Scenario and prediction were committed first in `9ef0caf4d43b0a75da317ca335de57cf1fa72d27`. The assistant then executed the revised map on that clean source. Raw results and the checked comparison are in `data/guided/task-03-run-01.json` and `data/guided/task-03-comparison.json`.
 
-The before/after comparison checks that exactly one cell changed, dimensions/endpoints/budgets match, and core/runner hashes match. All policies' shortest returned lengths changed from 8 to 4, agreeing with the student's prior prediction. A*/Greedy examined 9→5 nodes; Dijkstra examined 9→9. AI explanation: four rightward moves along the opened top row achieve the four-column lower bound. This explanation has not been supplied by the student.
+The before/after comparison checks that exactly one cell changed, dimensions/endpoints/budgets match, and core/runner hashes match. All policies' shortest returned lengths changed from 8 to 4, agreeing with the student's prior prediction. A*/Greedy examined 9→5 nodes; Dijkstra examined 9→9. AI explanation: four rightward moves along the opened top row achieve the four-column lower bound.
 
-The guided exercise now includes a student-selected environment revision, prediction and an assistant-operated matched rerun. This is distinct from independently written code, algorithm optimization, a general performance gain or physical robot work. The student's selection and prediction, and the AI's map prompt/transcription/operation/analysis, remain separately attributed.
+After the result and AI route explanation, Junmo wrote in his own chat response: **그 1번 벽이 최소 이동 루트를 막고 있었어. 다른 벽들은 그 최소 이동 루트에 관여하지 않았고**. This elicited interpretation identifies the changed wall's role in blocking the direct shortest route and the remaining walls outside that route. The claim is supported for this layout. It was recorded after results and discussion, not as a prior rationale or an independently derived proof.
+
+The guided exercise now includes a student-selected environment revision, prior prediction, an assistant-operated matched rerun and the student's post-result explanation. This is distinct from independently written code, algorithm optimization, a general performance gain or physical robot work. The student's selection/prediction/explanation, and the AI's map prompt/transcription/operation/analysis, remain separately attributed.
 
 ## Student report sections to complete later
 

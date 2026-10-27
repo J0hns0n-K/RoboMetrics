@@ -41,12 +41,13 @@ Browser smoke export: `data/reference/browser-benchmark.json`, seed 20261027, de
 
 ## 2026-10-27 guided exercise 03 — student-selected wall removal
 
-- Student's exact prior response: `1번 벽/4번`. Junmo selected wall 1 at (1,0) for removal and predicted four moves. AI supplied the numbered-map task; student rationale has not yet been supplied.
+- Student's exact prior response: `1번 벽/4번`. Junmo selected wall 1 at (1,0) for removal and predicted four moves. AI supplied the numbered-map task; the student's explanation was supplied after results, as recorded below.
 - Scenario and prior prediction committed before execution: `9ef0caf4d43b0a75da317ca335de57cf1fa72d27`. AI operated the runner on that clean source; staged output under ignored `.git/evidence/`, then copied it unchanged into the data directory.
 - Raw: `data/guided/task-03-run-01.json`; comparison: `data/guided/task-03-comparison.json`. Baseline is the unchanged `task-02-detour-run-01.json`.
 - Comparison checks confirmed only (1,0) changed from `#` to `.`, dimensions/endpoints and budgets 5/8/9/15 match, and engine/runner hashes match across the different input commits.
 - Unlimited path length changed from 8 to 4 for all three policies. Examined nodes changed A*: 9→5, Greedy: 9→5, Dijkstra: 9→9. All raw paths and budget trials are preserved.
 - AI explanation: the opened top row permits four rightward moves, matching the four-column separation lower bound. The student selected the environment revision and prior numerical prediction; AI transcribed it, operated software, and wrote this explanation.
+- Student explanation after results and AI discussion, verbatim: **그 1번 벽이 최소 이동 루트를 막고 있었어. 다른 벽들은 그 최소 이동 루트에 관여하지 않았고**. This correctly identifies wall 1 on the direct top-row route and the remaining walls outside it for this layout. It is an elicited post-result explanation, not a pre-execution rationale or a general claim about other maps.
 - This verifies a guided map revision, not an algorithm-code improvement or a Greedy path-quality counterexample. No implementation files changed, so the existing test suite was not rerun; the new input, returned paths and controlled comparison were checked.
 
 ## New experiment template
