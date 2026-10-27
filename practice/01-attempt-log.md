@@ -28,3 +28,9 @@ Raw output: `data/learning/practice-01-attempt-01.stdout.txt`. Source hash, inpu
 The user subsequently reported **저장했어**. The assistant observed a saved diff changing `before = 10; after = -8;` to **`before = 8; after = 10;`**, exactly following the supplied instructions. The function remains unchanged. Preserve this corrected input in a separate commit before rerunning.
 
 The earlier user response supplied the number 2. The assistant has since explained the calculation and the target result; no new independent prediction is claimed for this correction. The student's contribution is the guided saved input edit. AI provides the function, checking, Git operations and execution. The first failed expectation remains recorded in attempt 01.
+
+## Corrected execution result
+
+The assistant executed the corrected file on clean source `b49ce5334c7e0971788346906bc6ae5defc1818b`. Output was **2**, from `10 - 8`, matching the explained target. A positive difference means the after value is two moves larger in this arithmetic example. This does not describe a new measured map result.
+
+Raw output and metadata: `data/learning/practice-01-attempt-02.stdout.txt` and `data/learning/practice-01-attempt-02.json`. The earlier -18 attempt remains preserved separately. Guided file editing, saving, and assistant-operated rerun are now confirmed; independent algorithm implementation is not claimed.
