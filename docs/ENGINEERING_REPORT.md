@@ -40,7 +40,9 @@ The student's guided obstacle choice and four-move prediction were committed in 
 | Greedy | 4 | 5 | Yes |
 | Dijkstra | 4 | 8 | No, budget exceeded |
 
-The student's path-length prediction agrees with the result. The following interpretation is **AI-written**: on this grid, path lengths match while examined-node counts differ; FIFO ties make A* examine additional equally scored candidates before the goal. This single guided example does not establish general superiority or an implementation improvement. Student interpretation is requested but not yet recorded. No student-authored algorithm change has been made.
+The student's path-length prediction agrees with the result. After seeing the result, Junmo wrote: **장애물이 있다고 해서 최소 이동 거리가 꼭 바뀌는 것은 아님** (an obstacle does not necessarily change the minimum travel distance). This student interpretation is supported by the paired open/center-blocked grids, both four moves. The claim is limited to demonstrating that an increase is not inevitable; it does not predict arbitrary maps.
+
+The separate computational interpretation is **AI-written**: path lengths match while examined-node counts differ; FIFO ties make A* examine additional equally scored candidates before the goal. This single guided example does not establish general algorithm superiority or an implementation improvement. No student-authored algorithm change has been made.
 
 ## Student report sections to complete later
 
