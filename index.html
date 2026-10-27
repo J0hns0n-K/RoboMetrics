@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>RoboMetrics | Research Starter</title><link rel="stylesheet" href="styles.css"/></head>
+<body>
+<main class="layout">
+<header><div class="eyebrow">JUNMO · COMPUTER ENGINEERING R&D</div><h1>RoboMetrics</h1><p>Browser-native robot <strong>path-planning benchmark</strong> · synthetic grid maps</p><p class="notice">Mentor-created kickoff reference, 2026-10-27. Not student-authored work or physical robot evidence.</p></header>
+<section class="panel"><h2>Experiment controls</h2><div class="controls">
+<label>Obstacle density <select id="density"><option value="0.12">12% · open</option><option value="0.19" selected>19% · moderate</option><option value="0.28">28% · dense</option></select></label>
+<label>Expansion budget <select id="budget"><option value="75">75</option><option value="120">120</option><option value="180" selected>180</option><option value="300">300</option></select></label>
+<label>Map seed <input id="seed" type="number" value="20261027" min="1" max="1000000000"/></label>
+</div><div class="actions"><button id="generate" type="button">Generate paired map</button><button id="batch" type="button" class="primary">Benchmark 30 trials</button><button id="export" type="button" disabled>Export JSON</button></div></section>
+<section class="panel"><div class="heading"><h2>Same map, competing policies</h2><p>Dark blocks = known obstacles; blue = path; S = start; G = goal.</p></div><div class="views"><div><h3>A* search</h3><div id="map-astar" class="map" role="img" aria-label="A star path view"></div><p id="result-astar" class="metric">—</p></div><div><h3>Greedy best-first</h3><div id="map-greedy" class="map" role="img" aria-label="Greedy path view"></div><p id="result-greedy" class="metric">—</p></div></div></section>
+<section class="panel"><h2>Paired experiment report</h2><p class="hint">Every policy uses the same solvable synthetic maps and the same expansion budget. Planning-only: no sensors, motor dynamics, or robot motion.</p><div id="report" aria-live="polite">Run a batch to generate benchmark data.</div></section>
+<footer>Grid-only prototype · No AI API, backend, IoT, or personal data · Verify conclusions before admissions use.</footer>
+</main><script type="module" src="src/ui.mjs"></script></body></html>
