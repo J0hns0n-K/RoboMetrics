@@ -123,6 +123,13 @@ Browser smoke export: `data/reference/browser-benchmark.json`, seed 20261027, de
 - Assistant calculation from the displayed means: 81.80 fewer examined nodes on average, approximately 68.9% lower. This is a scoped node-count comparison, not measured speed, energy or universal improvement. Archived AI-operated study results remain separate.
 - Next guided task: keep the current settings/report, read A* mean moves and its successful-map denominator, and compare with the previously reported FIFO 26.07 moves across 30 successes. The new reading is pending.
 
+## 2026-10-28 Guided rule-2 route-quality reading
+
+- From the existing instructed rule-2/budget-300 report, Junmo supplied **26.07번 · 30장 기준** for A* mean moves and its successful-map denominator.
+- Both rules' reported route-length means are 26.07 over 30 successful maps, while their reported mean examined-node counts are 118.77 (FIFO) and 36.97 (closer-goal). This completes the guided metric-reading comparison, not an independent replication. Full settings and a new export were not independently observed; raw AI-operated datasets remain separate.
+- Assistant interpretation is scoped to the instructed cohort and displayed precision: the reported average route length is unchanged while examined nodes decrease. Equal means alone do not establish identical paths or map-by-map equality; the archived study has separate per-row checks.
+- Next task: ask for the student's own one-sentence interpretation referring to both mean route length and examined-node count, limited to these 30 maps. Do not attribute the assistant's explanation as student reasoning.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

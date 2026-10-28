@@ -32,7 +32,7 @@ The [full baseline matrix](docs/MATRIX_RESULTS.md) and [tie-rule results](docs/T
 
 After the comparison, Junmo tentatively chose the closer-goal rule as the browser default. The demo exposes both rules, applies the selection to individual maps and the 30-map comparison, records it in JSON exports, and clears stale results when settings change. The library and CLI retain FIFO for compatibility with the original experiments. [Decision and acceptance evidence](docs/DEMO_DESIGN_DECISION.md)
 
-Guided browser comparisons have moved from success counts to actual search work: Junmo reported 30/30 for rule 2 at budget 120, 15/30 for rule 1 at 120, and 30/30 for rule 1 at 300, then mean examined-node counts of 118.77 for rule 1 and 36.97 for rule 2 at the instructed budget 300. These readings motivate checking route quality alongside reduced search work. The user-reported observations are recorded separately from the archived AI-operated datasets; they are not counted as independently verified replications.
+Guided browser comparisons now examine route quality alongside search work. At the instructed budget 300, Junmo reported mean route lengths of 26.07 moves across 30 successful maps for each rule, with mean examined-node counts of 118.77 for FIFO and 36.97 for closer-goal. Earlier reports at budget 120 gave 15/30 and 30/30 successes respectively. These readings connect the chosen default to both metrics rather than success alone. The user-reported observations remain separate from the archived AI-operated datasets; they are not independently verified replications or a general performance guarantee.
 
 ## Reproducibility, scope and contributions
 
@@ -43,7 +43,7 @@ Guided browser comparisons have moved from success counts to actual search work:
 
 ## Next research step
 
-Complete the guided comparison by checking route length alongside examined-node counts, then challenge the finding with additional map families and failure cases. The planned robotics extension introduces body geometry, differential-drive motion, waypoint tracking and sensor/actuator uncertainty. Matched physical trials depend on obtaining and testing hardware; no physical measurements have been collected. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
+Document the student's interpretation of the paired metrics, then challenge the finding with additional map families and failure cases. The planned robotics extension introduces body geometry, differential-drive motion, waypoint tracking and sensor/actuator uncertainty. Matched physical trials depend on obtaining and testing hardware; no physical measurements have been collected. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
 
 ## Run and inspect
 
