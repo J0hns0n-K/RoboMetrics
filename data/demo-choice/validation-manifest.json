@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "label": "AI BROWSER ACCEPTANCE CHECKS FOR STUDENT-SELECTED DEMO DEFAULT; NOT STUDENT-RUN RESEARCH",
+  "dateSeoul": "2026-10-28",
+  "sourceCommit": "bc350254fab14f050feda99dd1c5af3f18bda755",
+  "operator": "AI assistant",
+  "studentChoiceVerbatim": "1번째든 2번째든 둘 다 비슷한 것 같기는 한데 굳이 뽑자면 2번.",
+  "sourceInputsDirty": false,
+  "workspaceStatus": "M practice/02-planning-budget.mjs\n?? data/demo-choice/closer-goal-browser.json\n?? data/demo-choice/demo-ready.jpg\n?? data/demo-choice/fifo-browser.json\n?? data/demo-choice/tests.tap",
+  "sourceHashes": {
+    "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "src/ui.mjs": "83449f56a4844bb877272fb8050d72bf7364df1214eb236b3420c5f3f8f71c38",
+    "index.html": "5b7e5bf5d6eb6692e4500a4d915e05bb79fa2405373dd967c234afb56b1ef09f",
+    "styles.css": "37ed0cd4fa8a2724aedb78014a1ffcd6bd8747f895edc596e31e2b841e5ea1c4"
+  },
+  "browserObservations": {
+    "initialSelectedRule": "closer-goal",
+    "selectedRuleAfterReload": "closer-goal",
+    "oldReportClearedOnRuleChange": true,
+    "exportDisabledOnRuleChange": true,
+    "singleMapRuleApplied": true,
+    "bothExportRulesCorrect": true,
+    "exportRowsMatchCoreForSelectedRule": true,
+    "matchedMapSeedsAcrossRules": true,
+    "greedyRowsUnchanged": true,
+    "finalPreparedRule": "closer-goal",
+    "finalPreparedBudget": 120,
+    "finalBatchAwaitingUserClick": true
+  },
+  "condition": {
+    "seed": 20261027,
+    "density": 0.19,
+    "budget": 120,
+    "runs": 30
+  },
+  "astarSuccesses": {
+    "fifo": 15,
+    "closerGoal": 30
+  },
+  "tests": {
+    "total": 20,
+    "passed": 20,
+    "failed": 0
+  },
+  "artifacts": {
+    "data/demo-choice/closer-goal-browser.json": "28ac7f0402f8e9a2addea231e824babd71e9e603e72ebd4d15daad991b2fe1a8",
+    "data/demo-choice/fifo-browser.json": "71900ad1a9c640cf0a724524556ff07912249e1b2256aed587bfa9b6cda50d78",
+    "data/demo-choice/tests.tap": "2c362b05eab9937a07f0bb687ffa6c2ffcd2ba20b5cfd04e461c1ce309bcd206",
+    "data/demo-choice/demo-ready.jpg": "bbb59d37375d1d235ffd9fb04f170c053c1f6573ea3d976f041fbe0af3f7db48"
+  },
+  "provenanceNote": "Browser files do not invent a source revision; this external acceptance manifest binds the assistant-run snapshots to the committed sources. Earlier comparison/source datasets are retained separately. User has not yet reported operating this updated demo."
+}

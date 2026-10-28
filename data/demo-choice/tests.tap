@@ -1,0 +1,130 @@
+TAP version 13
+# Subtest: all 1024 obstacle configurations of a 4x3 grid agree with independent BFS
+ok 1 - all 1024 obstacle configurations of a 4x3 grid agree with independent BFS
+  ---
+  duration_ms: 16.4514
+  type: 'test'
+  ...
+# Subtest: exact expansion budget includes examining the goal
+ok 2 - exact expansion budget includes examining the goal
+  ---
+  duration_ms: 1.2565
+  type: 'test'
+  ...
+# Subtest: fixed-map runner distinguishes path length from computation budget
+ok 3 - fixed-map runner distinguishes path length from computation budget
+  ---
+  duration_ms: 0.7305
+  type: 'test'
+  ...
+# Subtest: scenario parser rejects unfinished attribution, malformed maps, and invalid budgets
+ok 4 - scenario parser rejects unfinished attribution, malformed maps, and invalid budgets
+  ---
+  duration_ms: 0.3037
+  type: 'test'
+  ...
+# Subtest: unreachable scenarios preserve failure reason and null length ratios
+ok 5 - unreachable scenarios preserve failure reason and null length ratios
+  ---
+  duration_ms: 0.1645
+  type: 'test'
+  ...
+# Subtest: open 3x3 grid: shortest path is Manhattan distance 4
+ok 6 - open 3x3 grid: shortest path is Manhattan distance 4
+  ---
+  duration_ms: 6.742
+  type: 'test'
+  ...
+# Subtest: blocked goal is unreachable and explicit
+ok 7 - blocked goal is unreachable and explicit
+  ---
+  duration_ms: 0.2552
+  type: 'test'
+  ...
+# Subtest: budget limit is distinguishable from unreachable
+ok 8 - budget limit is distinguishable from unreachable
+  ---
+  duration_ms: 0.1663
+  type: 'test'
+  ...
+# Subtest: deterministic map and deterministic search
+ok 9 - deterministic map and deterministic search
+  ---
+  duration_ms: 2.9604
+  type: 'test'
+  ...
+# Subtest: A* path is optimal on sampled solvable static grids
+ok 10 - A* path is optimal on sampled solvable static grids
+  ---
+  duration_ms: 10.5516
+  type: 'test'
+  ...
+# Subtest: paired benchmark reproducible and metrics within bounds
+ok 11 - paired benchmark reproducible and metrics within bounds
+  ---
+  duration_ms: 4.3497
+  type: 'test'
+  ...
+# Subtest: selected seed-260 case gives valid Greedy path longer than a proven shortest path
+ok 12 - selected seed-260 case gives valid Greedy path longer than a proven shortest path
+  ---
+  duration_ms: 4.9036
+  type: 'test'
+  ...
+# Subtest: same counterexample separates budgeted success from path quality
+ok 13 - same counterexample separates budgeted success from path quality
+  ---
+  duration_ms: 0.4002
+  type: 'test'
+  ...
+# Subtest: benchmark exports the selected A* tie rule and applies it without changing paired maps or Greedy
+ok 14 - benchmark exports the selected A* tie rule and applies it without changing paired maps or Greedy
+  ---
+  duration_ms: 6.8927
+  type: 'test'
+  ...
+# Subtest: matrix preserves matched maps, original benchmark rows and deterministic sampling audit
+ok 15 - matrix preserves matched maps, original benchmark rows and deterministic sampling audit
+  ---
+  duration_ms: 12.1124
+  type: 'test'
+  ...
+# Subtest: common-success lengths avoid comparing different success subsets on known counterexample
+ok 16 - common-success lengths avoid comparing different success subsets on known counterexample
+  ---
+  duration_ms: 0.4013
+  type: 'test'
+  ...
+# Subtest: sampling audit detects a substituted map seed rather than accepting an unpaired cohort
+ok 17 - sampling audit detects a substituted map seed rather than accepting an unpaired cohort
+  ---
+  duration_ms: 1.6309
+  type: 'test'
+  ...
+# Subtest: optional tie-break preserves all 720 recorded default A*/Greedy policy metrics
+ok 18 - optional tie-break preserves all 720 recorded default A*/Greedy policy metrics
+  ---
+  duration_ms: 52.6966
+  type: 'test'
+  ...
+# Subtest: goal-directed ties retain optimality and reachability on every 4x3 obstacle layout
+ok 19 - goal-directed ties retain optimality and reachability on every 4x3 obstacle layout
+  ---
+  duration_ms: 7.0939
+  type: 'test'
+  ...
+# Subtest: small control can keep the same optimal route length with different examined-node counts
+ok 20 - small control can keep the same optimal route length with different examined-node counts
+  ---
+  duration_ms: 0.2189
+  type: 'test'
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 20
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 308.5245

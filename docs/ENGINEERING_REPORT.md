@@ -100,7 +100,15 @@ On committed experimental source `260ac09d063c422b92acef8ad4a6afbb622429f7`, all
 
 The small center-obstacle control retains the same four-move path with examined nodes 8→5. In the preselected .19/budget-120 condition, successes change 15/30→30/30. With ample budget 300 on the same 30 maps, mean examined nodes change 118.7667→36.9667 while both retain mean path length 26.0667. This is a node-expansion result under the stated model, not measured runtime, energy or physical robot performance. All 12 conditions, success gains/losses and post-hoc example paths are preserved in `data/tie-break/` and `TIE_BREAK_RESULTS.md`.
 
-Tie-breaking is established prior work; background and scope are cited in `TIE_BREAK_STUDY_KR.md`. This sample does not prove universal superiority. The current application still uses FIFO unless the option is explicitly requested. Student interpretation of this new comparison remains pending; code and implementation improvement are not represented as student-authored.
+Tie-breaking is established prior work; background and scope are cited in `TIE_BREAK_STUDY_KR.md`. This sample does not prove universal superiority. The study retained the library/CLI FIFO default; the later browser-default choice is recorded below. The student did not give a further numerical interpretation, and code/implementation improvement are not represented as student-authored.
+
+## Student-selected browser default — 2026-10-28
+
+After the comparison, Junmo said **1번째든 2번째든 둘 다 비슷한 것 같기는 한데 굳이 뽑자면 2번.** This is a tentative preference for rule 2, not a supplied rationale, independent alternative proposal or implementation. AI implemented it as the browser demo's initial choice, kept FIFO selectable and retained the library/CLI FIFO default.
+
+The selected mode now reaches both single-map planning and the 30-map benchmark and is recorded explicitly in new JSON configurations. Settings changes invalidate the prior report/export. Korean labels distinguish movement, examined-node budget, budget failure and unreachable maps; successful-route means identify their separate denominators. Browser snapshots deliberately do not invent a source commit or verified student operator. Commit-bound CLI records remain the research provenance source.
+
+All 20 tests passed. AI-operated browser checks reproduced 15/30 A* successes for FIFO and 30/30 for closer-goal on the known .19/budget-120 cohort; both exported rows exactly match the selected core mode, with the same map seeds and unchanged Greedy rows. Default restoration and stale-report/export clearing were observed. Sources, exports, TAP, screenshot and hashes are bound in `data/demo-choice/validation-manifest.json`. Student operation of the updated demo is not yet reported. Choice and implementation are separately attributed in `DEMO_DESIGN_DECISION.md`.
 
 ## Student report sections to complete later
 

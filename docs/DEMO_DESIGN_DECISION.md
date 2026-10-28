@@ -20,3 +20,11 @@ Student contribution is the default-choice response. Alternative rule, implement
 ## Acceptance checks
 
 Verify the selected default, both rule choices in single-map/batch execution, matching exported rule metadata, report invalidation after a setting change, and restored rule 2 on a new page load. Preserve browser verification separately from student operation. The integration regression checks that both selected modes use the same accepted maps and unchanged Greedy results.
+
+## Verified implementation
+
+AI browser acceptance checks are archived under `data/demo-choice/`. Their exact committed source revision and hashes are recorded in `data/demo-choice/validation-manifest.json`.
+
+All 20 tests passed. On seed base 20261027, density .19, budget 120 and 30 maps, browser exports show FIFO A*=15/30 and closer-goal A*=30/30, with Greedy unchanged at 30/30. Both exports exactly match core execution for their recorded rule and share identical map seeds. Controls reset the old report and disable export until rerun; reloading restores rule 2. The UI is left ready at rule 2/budget 120, awaiting the student's own button click.
+
+The two browser runs and screenshot are AI verification, not student execution. Browser snapshots intentionally have no invented source SHA; the separate acceptance manifest binds these archived snapshots to the verified code. A future student-operated browser export is a separate event and must not be inferred from these checks.

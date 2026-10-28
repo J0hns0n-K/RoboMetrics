@@ -2,6 +2,8 @@
 
 AI-operated synthetic grid study. The student's later guided interpretation distinguishing path length from budgeted success is preserved verbatim in `MATRIX_RUN_KR.md`; it is not a pre-run forecast or an independently operated study.
 
+This is the historical FIFO-default baseline. The later browser demo defaults to the student-selected closer-goal rule; select FIFO there to reproduce this baseline. The original raw data and source revision remain unchanged.
+
 | Density | Budget | A* successes / 30 | Greedy successes / 30 | Shared successes | Mean Greedy extra moves on shared successes |
 |---:|---:|---:|---:|---:|---:|
 | 0.12 | 75 | 0 | 30 | 0 | — |
