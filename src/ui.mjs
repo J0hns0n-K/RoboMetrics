@@ -1,7 +1,13 @@
 import {randomMap,plan,benchmark,verifyPath} from './core.mjs';
 const $=id=>document.getElementById(id);
 let batch=null;
-function config(){return {seed:Math.max(1,Number($('seed').value)||1),density:Number($('density').value),maxExpansions:Number($('budget').value)};}
+const rules={'closer-goal':'② 목표에 가까운 후보 먼저',fifo:'① 먼저 등록된 후보 먼저'};
+function config(){
+ const seed=Math.min(1e9,Math.max(1,Math.trunc(Number($('seed').value)||1)));
+ $('seed').value=String(seed);
+ return {seed,density:Number($('density').value),maxExpansions:Number($('budget').value),astarTieBreak:$('tie-break').value};
+}
+function clearBatch(){batch=null;$('export').disabled=true;$('report').textContent='설정이 바뀌었습니다. 새 조건으로 ‘지도 30장 비교’를 눌러 주세요.';}
 function svg(map,path){
  const scale=20,pts=new Set(path.map(([x,y])=>y*map.width+x));
  let out=`<svg viewBox="0 0 ${map.width*scale} ${map.height*scale}" xmlns="http://www.w3.org/2000/svg">`;
@@ -15,16 +21,24 @@ function svg(map,path){
  }
  return out+'</svg>';
 }
-function showPair(){const c=config(),m=randomMap(c.seed,16,12,c.density);for(const a of ['astar','greedy']){
-  const r=plan(m,a,c.maxExpansions); $('map-'+a).innerHTML=svg(m,r.path);
-  $('result-'+a).textContent=r.success?`Path ${r.pathLength} steps · ${r.expanded} expanded · verified ${verifyPath(m,r.path)}`:`No path within budget (${r.reason}); ${r.expanded} expanded`;
+function showPair(){const c=config(),m=randomMap(c.seed,16,12,c.density);$('astar-rule').textContent=`동점일 때: ${rules[c.astarTieBreak]}`;for(const a of ['astar','greedy']){
+  const r=plan(m,a,c.maxExpansions,a==='astar'?{tieBreak:c.astarTieBreak}:{});
+  if(r.success&&!verifyPath(m,r.path))throw new Error('경로 검증에 실패했습니다.');
+  $('map-'+a).innerHTML=svg(m,r.path);
+  $('result-'+a).textContent=r.success?`경로: ${r.pathLength}번 이동 · 검토: ${r.expanded}칸`:
+   r.reason==='BUDGET_EXCEEDED'?`검토 예산 초과 · ${r.expanded}칸 검토`:`연결 경로 없음 · ${r.expanded}칸 검토`;
  }}
 function percent(x){return `${(x*100).toFixed(1)}%`};
 function report(){if(!batch)return;const a=batch.summary.astar,g=batch.summary.greedy;const m=x=>x===null?'—':x.toFixed(2);
- $('report').innerHTML=`<span class="tag">Synthetic simulation, ${batch.configuration.runs} paired solvable maps</span><table><thead><tr><th>Metric</th><th>A*</th><th>Greedy</th></tr></thead><tbody><tr><td>Budgeted solve rate</td><td>${percent(a.successRate)}</td><td>${percent(g.successRate)}</td></tr><tr><td>Mean path steps (success only)</td><td>${m(a.meanPathLength)}</td><td>${m(g.meanPathLength)}</td></tr><tr><td>Mean path / shortest</td><td>${m(a.meanRelativeLength)}</td><td>${m(g.meanRelativeLength)}</td></tr><tr><td>Mean expanded nodes (all trials)</td><td>${m(a.meanExpanded)}</td><td>${m(g.meanExpanded)}</td></tr></tbody></table><p class="hint">Length statistics condition on success and may be biased when solve rates differ. This does not measure actual robot collisions or sensor robustness. Dataset includes full seeded trial rows.</p>`;
+ const c=batch.configuration;
+ $('report').innerHTML=`<span class="tag">${c.runs}장 · 검토 예산 ${c.maxExpansions}칸 · A*: ${rules[c.astarTieBreak]}</span><p class="hint">지도 기준 번호 ${c.seed} · 장애물 생성 확률 ${(c.density*100).toFixed(0)}%</p><table><thead><tr><th>비교 항목</th><th>A*</th><th>Greedy</th></tr></thead><tbody><tr><td>길을 찾은 지도 수</td><td>${a.successful}/${c.runs}장 (${percent(a.successRate)})</td><td>${g.successful}/${c.runs}장 (${percent(g.successRate)})</td></tr><tr><td>평균 이동 횟수<br>(성공한 지도만)</td><td>${m(a.meanPathLength)}번 · ${a.successful}장 기준</td><td>${m(g.meanPathLength)}번 · ${g.successful}장 기준</td></tr><tr><td>최단경로 대비 평균 배수<br>(성공한 지도만)</td><td>${m(a.meanRelativeLength)}배</td><td>${m(g.meanRelativeLength)}배</td></tr><tr><td>평균 검토 칸 수<br>(모든 지도)</td><td>${m(a.meanExpanded)}칸</td><td>${m(g.meanExpanded)}칸</td></tr></tbody></table><p class="hint">두 방법에서 성공한 지도가 다르면 평균 이동 횟수의 비교 대상도 달라집니다. 전체 원시 행과 선택한 동점 규칙은 JSON에 포함됩니다.</p>`;
 }
-$('generate').addEventListener('click',()=>{const c=config();$('seed').value=String(c.seed+1);showPair()});
-$('batch').addEventListener('click',()=>{try{batch=benchmark({...config(),runs:30});report();$('export').disabled=false}catch(e){$('report').textContent=String(e.message)}});
-$('export').addEventListener('click',()=>{if(!batch)return;const url=URL.createObjectURL(new Blob([JSON.stringify(batch,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='robometrics-synthetic-benchmark.json';a.click();URL.revokeObjectURL(url)});
-for(const id of ['density','budget','seed'])$(id).addEventListener('change',showPair);
+$('generate').addEventListener('click',()=>{const c=config();$('seed').value=String(c.seed<1e9?c.seed+1:1);clearBatch();showPair()});
+$('batch').addEventListener('click',()=>{try{
+ batch={...benchmark({...config(),runs:30}),browserExport:{generatedAtUTC:new Date().toISOString(),sourceCommit:null,
+  provenance:'Browser demonstration; exact source revision and execution operator are not independently recorded here. Use the commit-bound CLI outputs for research provenance.'}};
+ report();$('export').disabled=false;
+ }catch(e){clearBatch();$('report').textContent=String(e.message)}});
+$('export').addEventListener('click',()=>{if(!batch)return;const url=URL.createObjectURL(new Blob([JSON.stringify(batch,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;const c=batch.configuration;a.download=`robometrics-${c.astarTieBreak}-seed-${c.seed}-budget-${c.maxExpansions}.json`;a.click();URL.revokeObjectURL(url)});
+for(const id of ['density','budget','seed','tie-break'])$(id).addEventListener('change',()=>{clearBatch();showPair()});
 showPair();

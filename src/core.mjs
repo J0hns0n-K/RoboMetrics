@@ -92,8 +92,9 @@ export function verifyPath(map,path) {
 }
 
 /** Paired experiment on same solvable synthetic maps, filtered BEFORE algorithm comparison. */
-export function benchmark({seed=20261027,runs=30,width=16,height=12,density=0.19,maxExpansions=180}={}) {
+export function benchmark({seed=20261027,runs=30,width=16,height=12,density=0.19,maxExpansions=180,astarTieBreak='fifo'}={}) {
   if(!Number.isInteger(runs)||runs<1||runs>250) throw new Error('Runs must be 1–250.');
+  if(!VALID_TIE_BREAKS.has(astarTieBreak)) throw new Error('Unknown A* tie-breaking rule.');
   const algorithms=['astar','greedy'];
   const rows=[]; let checked=0;
   for(let n=0;n<runs;) {
@@ -104,7 +105,7 @@ export function benchmark({seed=20261027,runs=30,width=16,height=12,density=0.19
     if(!reference.success) continue;
     const results={};
     for(const a of algorithms) {
-      const r=plan(map,a,maxExpansions);
+      const r=plan(map,a,maxExpansions,a==='astar'?{tieBreak:astarTieBreak}:{});
       results[a]={success:r.success,reason:r.reason,pathLength:r.pathLength,expanded:r.expanded,
         relativeLength:r.success ? r.pathLength/reference.pathLength : null};
     }
@@ -118,5 +119,5 @@ export function benchmark({seed=20261027,runs=30,width=16,height=12,density=0.19
       meanRelativeLength:mean(ok.map(r=>r.relativeLength)),meanExpanded:mean(trials.map(r=>r.expanded)),successful:ok.length};
   }
   return {label:'SYNTHETIC SIMULATION — NOT PHYSICAL ROBOT DATA',date:'2026-10-27 starter engine',
-    configuration:{seed,runs,width,height,density,maxExpansions,neighborMode:'4-neighbor',obstacles:'static / fully known',sampling:'solvable only; rejection sample',algorithms}, summary,rows};
+    configuration:{seed,runs,width,height,density,maxExpansions,astarTieBreak,neighborMode:'4-neighbor',obstacles:'static / fully known',sampling:'solvable only; rejection sample',algorithms}, summary,rows};
 }

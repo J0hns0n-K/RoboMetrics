@@ -1,15 +1,16 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<html lang="ko"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>RoboMetrics | Research Starter</title><link rel="stylesheet" href="styles.css"/></head>
 <body>
 <main class="layout">
-<header><div class="eyebrow">JUNMO · COMPUTER ENGINEERING R&D</div><h1>RoboMetrics</h1><p>Browser-native robot <strong>path-planning benchmark</strong> · synthetic grid maps</p><p class="notice">Mentor-created kickoff reference, 2026-10-27. Not student-authored work or physical robot evidence.</p></header>
-<section class="panel"><h2>Experiment controls</h2><div class="controls">
-<label>Obstacle density <select id="density"><option value="0.12">12% · open</option><option value="0.19" selected>19% · moderate</option><option value="0.28">28% · dense</option></select></label>
-<label>Expansion budget <select id="budget"><option value="75">75</option><option value="120">120</option><option value="180" selected>180</option><option value="300">300</option></select></label>
-<label>Map seed <input id="seed" type="number" value="20261027" min="1" max="1000000000"/></label>
-</div><div class="actions"><button id="generate" type="button">Generate paired map</button><button id="batch" type="button" class="primary">Benchmark 30 trials</button><button id="export" type="button" disabled>Export JSON</button></div></section>
-<section class="panel"><div class="heading"><h2>Same map, competing policies</h2><p>Dark blocks = known obstacles; blue = path; S = start; G = goal.</p></div><div class="views"><div><h3>A* search</h3><div id="map-astar" class="map" role="img" aria-label="A star path view"></div><p id="result-astar" class="metric">—</p></div><div><h3>Greedy best-first</h3><div id="map-greedy" class="map" role="img" aria-label="Greedy path view"></div><p id="result-greedy" class="metric">—</p></div></div></section>
-<section class="panel"><h2>Paired experiment report</h2><p class="hint">Every policy uses the same solvable synthetic maps and the same expansion budget. Planning-only: no sensors, motor dynamics, or robot motion.</p><div id="report" aria-live="polite">Run a batch to generate benchmark data.</div></section>
-<footer>Grid-only prototype · No AI API, backend, IoT, or personal data · Verify conclusions before admissions use.</footer>
+<header><div class="eyebrow">JUNMO · COMPUTER ENGINEERING R&D</div><h1>RoboMetrics</h1><p>같은 지도에서 <strong>A*와 Greedy의 길찾기</strong> 비교</p><p class="notice">참고 코드와 추가 구현은 AI 지원입니다. 학생의 설계 결정·해석은 별도 기록하며, 지도와 결과는 시뮬레이션입니다.</p></header>
+<section class="panel"><h2>실험 설정</h2><div class="controls">
+<label>장애물 생성 확률 <select id="density"><option value="0.12">12% · 적음</option><option value="0.19" selected>19% · 보통</option><option value="0.28">28% · 많음</option></select></label>
+<label>검토 예산 (칸) <select id="budget"><option value="75">75</option><option value="120">120</option><option value="180" selected>180</option><option value="300">300</option></select></label>
+<label>지도 번호 <input id="seed" type="number" value="20261027" min="1" max="1000000000"/></label>
+<label>A* 동점 규칙 <select id="tie-break"><option value="closer-goal" selected>② 목표에 가까운 후보 먼저</option><option value="fifo">① 먼저 등록된 후보 먼저</option></select></label>
+</div><p class="hint">검토 예산은 컴퓨터가 살펴볼 수 있는 칸 수입니다. 동점 규칙은 A*의 합계 점수가 같을 때만 적용합니다.</p><div class="actions"><button id="generate" type="button">다음 지도</button><button id="batch" type="button" class="primary">지도 30장 비교</button><button id="export" type="button" disabled>JSON 저장</button></div></section>
+<section class="panel"><div class="heading"><h2>같은 지도에서 찾은 경로</h2><p>벽: 회색 · 경로: 파란색 · S: 출발 · G: 도착</p></div><div class="views"><div><h3>A*</h3><p id="astar-rule" class="hint" aria-live="polite"></p><div id="map-astar" class="map" role="img" aria-label="A*가 찾은 경로"></div><p id="result-astar" class="metric">—</p></div><div><h3>Greedy</h3><p class="hint">목표까지의 예상 거리가 작은 후보 먼저</p><div id="map-greedy" class="map" role="img" aria-label="Greedy가 찾은 경로"></div><p id="result-greedy" class="metric">—</p></div></div></section>
+<section class="panel"><h2>지도 30장 비교 결과</h2><p class="hint">두 방법에 같은 지도와 같은 검토 예산을 줍니다. 도착 가능한 합성 지도만 선택합니다. 위의 한 장과 이 비교의 지도 묶음은 별개입니다.</p><div id="report" aria-live="polite">‘지도 30장 비교’를 누르면 결과가 표시됩니다.</div></section>
+<footer>격자 경로 탐색 · 센서·모터·실제 로봇 주행 결과는 포함하지 않습니다.</footer>
 </main><script type="module" src="src/ui.mjs"></script></body></html>
