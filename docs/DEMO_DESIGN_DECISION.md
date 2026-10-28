@@ -42,3 +42,5 @@ After instructions to select rule 1, retain budget 120 and other settings, and r
 > 15(50%)
 
 This records the guided, self-reported FIFO A* result of 15/30. Together with the prior report, the reported counts are rule 1: 15/30 and rule 2: 30/30 under the instructed budget-120 comparison. Full settings and a new raw export were not independently observed. This does not supply a student explanation, independent dataset or general algorithm ranking. The next guided task changes only the budget to 300 while retaining rule 1 and the same map settings.
+
+After those budget-300 instructions, Junmo replied verbatim **30(100%) -> 다음 할 것**. This records guided, self-reported FIFO A* successes of 30/30, compared with the prior 15/30 at budget 120. Full settings and a new raw export were not independently observed. The success report does not measure actual examined-node counts or establish general success probability. The next task reads A*'s mean examined-node count from the current report before changing settings.

@@ -102,6 +102,13 @@ Browser smoke export: `data/reference/browser-benchmark.json`, seed 20261027, de
 - The assistant's interpretation is limited to the reported condition: rule 2 found routes on more maps within the budget. It does not establish a universal ranking or a difference in shortest-path lengths.
 - Next guided action: retain rule 1 and all map settings, change only the budget from 120 to 300, rerun and report A* successes. No outcome is attributed to the student before their reply.
 
+## 2026-10-28 Guided higher-budget browser report
+
+- After instructions to retain rule 1 and all map settings, increase only the budget from 120 to 300, and rerun, Junmo replied verbatim: **30(100%) -> 다음 할 것**.
+- Record the A* count as self-reported 30/30 for the instructed FIFO/budget-300 condition. This follows the self-reported FIFO 15/30 at budget 120. Full settings, operation and a new raw export were not independently observed; archived AI checks remain separate.
+- Assistant interpretation: the reported higher budget allows all 30 routes to be found in this comparison. A budget of 300 is a ceiling, not a measurement that every map used 300 examined nodes. No general success probability or student-authored explanation is inferred.
+- Next task: retain the current report and read A*'s mean examined-node count across all maps, before changing the tie rule. Do not supply the expected value as a student observation.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
