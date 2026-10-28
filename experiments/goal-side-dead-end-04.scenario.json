@@ -1,10 +1,10 @@
 {
   "id": "goal-side-dead-end-length-04",
   "dateSeoul": "2026-10-29",
-  "status": "awaiting-prediction",
+  "status": "ready",
   "contributionType": "student-declared",
   "contributor": "Junmo — guided pattern and dead-end length selection",
-  "assistance": "Student selected the goal-side dead-end pattern from two AI-proposed families and then chose length 4 from options 2 and 4. AI supplied the base layout and options and transcribed the selection. No complete independent map design, code authorship or pre-run outcome prediction is inferred.",
+  "assistance": "Student selected the pattern, chose length 4 and supplied the qualitative pre-run expectation. AI supplied the base layout/options, transcribed inputs and will implement/operate the paired comparison. No independent full-map design or student code authorship is inferred.",
   "studentPatternChoiceVerbatim": "1번",
   "studentLengthChoiceVerbatim": "4",
   "deadEndLength": 4,
@@ -20,8 +20,9 @@
     "fifo",
     "closer-goal"
   ],
-  "prediction": null,
+  "prediction": "Student expects similar examined-node counts for FIFO and closer-goal on this selected map. This is qualitative; no numerical tolerance, exact-equality claim or rationale was supplied.",
   "controls": "Four-connected unit cost, same map/endpoints, Manhattan heuristic, neighbor order, goal handling and budget. Only A* equal-f ordering changes. Budget 300 exceeds the total 21 cells; this comparison isolates examined-node counts without selecting a cutoff after results.",
   "comparisonScope": "One guided hand-constructed map, not a random-map performance estimate. Compare valid path lengths, examined nodes and failure status; retain equal or unfavorable results.",
-  "executionNote": "Do not execute until a scoped prediction is recorded and status is ready. Existing run-scenario.mjs measures FIFO only; a paired-rule evaluation must explicitly pass each tieBreak option rather than treating its default output as both rules."
+  "executionNote": "Prediction recorded before execution. Explicitly pass each A* tieBreak option in the paired runner; the original fixed-scenario runner evaluates FIFO only. Report actual differences without defining a post-hoc tolerance for similar.",
+  "studentPredictionVerbatim": "비슷할 것 같아"
 }

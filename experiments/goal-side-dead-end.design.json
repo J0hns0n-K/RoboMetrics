@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "goal-side-dead-end-guided-design-01",
   "dateSeoul": "2026-10-28",
-  "status": "Student selected length 4; geometry fixed; awaiting a scoped pre-run prediction before execution",
+  "status": "Four-cell geometry and qualitative prediction recorded; awaiting committed paired comparison execution",
   "studentPatternChoiceVerbatim": "1번",
   "studentSelectedPattern": "goal-side dead end",
   "attribution": "Student selected the goal-side dead-end pattern from two AI-proposed families and then chose length 4 from options 2 and 4. AI supplied the base layout and options and transcribed the selection. No complete independent map design, code authorship or pre-run outcome prediction is inferred.",
@@ -50,8 +50,8 @@
       ]
     }
   ],
-  "studentPreRunPrediction": null,
-  "execution": "No planner called for the selected map during this update. Geometry is fixed; record the student expectation and commit a ready scenario before execution.",
+  "studentPreRunPrediction": "비슷할 것 같아",
+  "execution": "No planner called for this map before recording the expectation. Ready scenario preserves the qualitative forecast without imposing a numerical equivalence threshold.",
   "plannedComparison": "A* FIFO versus closer-goal on the exact chosen map, with the same sufficient budget and all planning rules fixed; record valid path length, examined nodes and failure status. A single hand-constructed case does not estimate general performance.",
   "updatedDateSeoul": "2026-10-29",
   "studentLengthChoiceVerbatim": "4",

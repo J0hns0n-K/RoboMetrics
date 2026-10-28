@@ -194,6 +194,12 @@ Next task: retain the current rule-2/budget-300 report and click JSON save to pr
 - Updated design and prepared `experiments/goal-side-dead-end-04.scenario.json` with status awaiting-prediction and prediction null. Planned comparison explicitly applies both A* tie options at the same budget 300; the original scenario runner evaluates FIFO only and cannot stand in for this paired comparison.
 - No planner was called for the candidates or selected map during this update. Next student task: state whether rule 1, rule 2 or similar examined-node counts are expected, or indicate uncertainty, before the scenario is marked ready and executed.
 
+## 2026-10-29 Structured-map expectation recorded before execution
+
+- Junmo wrote **비슷할 것 같아** for the two A* rules' examined-node counts on the selected four-cell dead end. This is qualitative similarity; no numerical tolerance, exact-equality prediction or reason was supplied.
+- Scenario changed to ready only after recording this expectation. Geometry and budget 300 remain fixed. The assistant has not called a planner on this selected map before recording/committing the forecast.
+- AI will supply a paired fixed-map evaluator because the existing scenario runner uses FIFO only. It must explicitly apply both tie rules, validate paths and shortest lengths, and preserve failure reasons. Any implementation checks use previously known controls, not an unrecorded run of the selected map.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
