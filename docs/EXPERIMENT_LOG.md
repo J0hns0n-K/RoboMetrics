@@ -187,6 +187,13 @@ Next task: retain the current rule-2/budget-300 report and click JSON save to pr
 - The student has not selected a length or made a pre-run prediction. The assistant did not call a planner on either candidate during preparation. Numerical outcomes remain unrecorded.
 - Next student task: choose a dead-end length of 2 or 4 open cells to the right of S. Then record a scoped prediction and commit a finalized runnable scenario before comparison.
 
+## 2026-10-29 Dead-end length selected before execution
+
+- Junmo answered **4** to the offered 2-/4-cell length choice. The selected rows are `S....#G`, `.#####.`, `.......`; size 7×3, S at (0,0), G at (6,0).
+- This is guided parameter selection within the AI-proposed layout. Preserve the distinction from independent full-map design or code authorship. The earlier new-cohort prediction does not automatically become a prediction for this map.
+- Updated design and prepared `experiments/goal-side-dead-end-04.scenario.json` with status awaiting-prediction and prediction null. Planned comparison explicitly applies both A* tie options at the same budget 300; the original scenario runner evaluates FIFO only and cannot stand in for this paired comparison.
+- No planner was called for the candidates or selected map during this update. Next student task: state whether rule 1, rule 2 or similar examined-node counts are expected, or indicate uncertainty, before the scenario is marked ready and executed.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

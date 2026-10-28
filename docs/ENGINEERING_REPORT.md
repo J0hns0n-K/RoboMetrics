@@ -126,7 +126,7 @@ Junmo responded **2가 적을 것 같아** when asked for a pre-run expectation 
 
 ## Structured-map follow-up design
 
-Junmo selected **1번**, a goal-side dead end, from two proposed patterns. AI supplied a 7×3 base layout and offered dead-end lengths of 2 or 4 open cells immediately right of S. The next student task is that length choice, followed by a scoped pre-run expectation. This is guided family selection; no independent full-map authorship, code change or prediction is inferred. The design draft and worksheet are `experiments/goal-side-dead-end.design.json` and `STRUCTURED_MAP_TASK_KR.md`. No planner was called for these candidates during preparation, and no result is claimed.
+Junmo selected **1번**, a goal-side dead end, from two proposed patterns. AI supplied a 7×3 base layout and offered dead-end lengths of 2 or 4 open cells immediately right of S. On 2026-10-29 he answered **4**, fixing the four-cell candidate. This is guided family/parameter selection; no independent full-map authorship, code change or scoped prediction is inferred. The design draft and worksheet are `experiments/goal-side-dead-end.design.json` and `STRUCTURED_MAP_TASK_KR.md`; selected geometry and budget 300 are in `experiments/goal-side-dead-end-04.scenario.json`, which remains awaiting-prediction. The next task is a scoped expectation for the two A* tie rules. No planner was called for the candidates or selected map during preparation, and no result is claimed.
 
 ## Student report sections to complete later
 
