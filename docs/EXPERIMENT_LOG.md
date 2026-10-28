@@ -95,6 +95,13 @@ Browser smoke export: `data/reference/browser-benchmark.json`, seed 20261027, de
 - Previously archived AI acceptance runs remain separate. This report does not create a new independently verified dataset or establish a general success probability.
 - Next guided action: select rule 1 (FIFO), keep the other settings fixed, rerun the 30-map comparison and report the A* success count. Do not supply the expected count as the student's observation.
 
+## 2026-10-28 Guided FIFO browser result report
+
+- After instructions to select rule 1 (FIFO), retain budget 120 and all other settings, and rerun the 30-map comparison, Junmo replied verbatim: **15(50%)**.
+- This is a self-reported A* success count of 15/30, compared with the earlier rule-2 report of 30/30. Full settings, operation and a new raw export were not independently observed; the two reports are not additional independently verified research datasets.
+- The assistant's interpretation is limited to the reported condition: rule 2 found routes on more maps within the budget. It does not establish a universal ranking or a difference in shortest-path lengths.
+- Next guided action: retain rule 1 and all map settings, change only the budget from 120 to 300, rerun and report A* successes. No outcome is attributed to the student before their reply.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

@@ -110,6 +110,8 @@ The selected mode now reaches both single-map planning and the 30-map benchmark 
 
 All 20 tests passed. AI-operated browser checks reproduced 15/30 A* successes for FIFO and 30/30 for closer-goal on the known .19/budget-120 cohort; both exported rows exactly match the selected core mode, with the same map seeds and unchanged Greedy rows. Default restoration and stale-report/export clearing were observed. Sources, exports, TAP, screenshot and hashes are bound in `data/demo-choice/validation-manifest.json`. Subsequently, after instructions to use rule 2 at budget 120, Junmo reported **30장(100%)** for the A* success count. This is a guided self-reported UI result; a new raw export and the full current settings were not independently observed. Choice and implementation are separately attributed in `DEMO_DESIGN_DECISION.md`.
 
+After instructions to switch only to rule 1 at the same budget 120, Junmo reported **15(50%)** for A* successes. The guided self-reported comparison is therefore FIFO 15/30 versus closer-goal 30/30. Full settings and new raw exports were not independently observed. These reports remain separate from AI acceptance evidence, and no student explanation or universal superiority claim is inferred. The next guided check increases the budget to 300 while retaining rule 1 and the map settings.
+
 ## Student report sections to complete later
 
 1. Student's own question and prior prediction, with timestamp/commit.

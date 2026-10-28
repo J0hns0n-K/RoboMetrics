@@ -36,3 +36,9 @@ After instructions to set budget 120, run the 30-map comparison with the selecte
 > 30장(100%)
 
 This records a guided, self-reported A* result of 30/30. It is separate from the archived AI acceptance checks. The current button operation, full settings and a new raw export were not independently observed, and no independent replication, general success probability or student code authorship is inferred. The next guided comparison switches only the A* tie rule to rule 1 while holding the other settings fixed.
+
+After instructions to select rule 1, retain budget 120 and other settings, and rerun the 30-map comparison, Junmo replied verbatim:
+
+> 15(50%)
+
+This records the guided, self-reported FIFO A* result of 15/30. Together with the prior report, the reported counts are rule 1: 15/30 and rule 2: 30/30 under the instructed budget-120 comparison. Full settings and a new raw export were not independently observed. This does not supply a student explanation, independent dataset or general algorithm ranking. The next guided task changes only the budget to 300 while retaining rule 1 and the same map settings.
