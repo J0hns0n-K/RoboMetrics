@@ -27,7 +27,7 @@
   "artifacts": {
     "data/batch/early-matrix-run-01.json": "3123d5882ab8856966b0834414a441750fdd3086633837ad4112edf8526af713",
     "data/batch/early-matrix-run-01.csv": "67faf1a17da1ad8e94313215a84deda10015fde33872265fe4bfe1ad07a21ecb",
-    "data/batch/matrix-tests.tap": "ed8e329009fa48bd54209492640d8940c3dc737f6c00979a8cdfd471cd50641f",
+    "data/batch/matrix-tests.tap": "b25c767a44ecccfdb1b9f02b657bf3fcbdb51e5a12a3fd3e5af8430d30e21dcd",
     "data/batch/failure-reports.json": "3fb8bdd1aa315b295cb225cb492eaef0fb37f58b9f6694aa3d28957d9dde9520"
   },
   "attribution": "Student supplied pre-run path-quality expectation and explicitly no directional success-frequency forecast. Tooling, protocol conditions, sampling audit, execution, case selection and current interpretations are AI support. Student post-result interpretation is pending.",
@@ -38,5 +38,6 @@
     "successfulRoutesAtLeastReferenceLength": true,
     "failedPathMetricsNull": true,
     "allFailuresBudgetExceeded": true
-  }
+  },
+  "artifactHashPolicy": "SHA256 of canonical committed artifact bytes. TAP newlines normalized to LF; test content and counts unchanged."
 }
