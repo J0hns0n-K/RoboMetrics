@@ -180,6 +180,13 @@ Next task: retain the current rule-2/budget-300 report and click JSON save to pr
 - User reports and raw content checks are distinct: AI performed ingestion, replay and analysis; browser source revisions stay null and physical click/operator was not independently observed. Full methods and limits are in `docs/TIE_BREAK_VALIDATION_02_RESULTS.md`.
 - Next proposed step: student selects and then designs a structured obstacle case (goal-side dead end or narrow corridor), followed by a scoped pre-run expectation. No choice, map or result is yet attributed to the student.
 
+## 2026-10-28 Structured-map pattern selected, design pending
+
+- Junmo replied **1번**, selecting a goal-side dead end from the two AI-proposed families. This selects a test pattern; it is not evidence of a complete independent map or algorithm design.
+- AI prepared a 7×3 base layout with fixed endpoints and lower rows, and dead-end length options 2 and 4. Draft: `experiments/goal-side-dead-end.design.json`; worksheet: `docs/STRUCTURED_MAP_TASK_KR.md`.
+- The student has not selected a length or made a pre-run prediction. The assistant did not call a planner on either candidate during preparation. Numerical outcomes remain unrecorded.
+- Next student task: choose a dead-end length of 2 or 4 open cells to the right of S. Then record a scoped prediction and commit a finalized runnable scenario before comparison.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

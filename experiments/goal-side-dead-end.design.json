@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "goal-side-dead-end-guided-design-01",
+  "dateSeoul": "2026-10-28",
+  "status": "guided design in progress; not a runnable scenario or completed experiment",
+  "studentPatternChoiceVerbatim": "1번",
+  "studentSelectedPattern": "goal-side dead end",
+  "attribution": "Student selected the first of two AI-proposed map patterns. AI supplies the small base layout and length options. Student has not yet chosen a length, supplied a complete map, predicted an outcome or implemented code.",
+  "fixedLayout": {
+    "width": 7,
+    "height": 3,
+    "start": [
+      0,
+      0
+    ],
+    "goal": [
+      6,
+      0
+    ],
+    "movement": "four-connected unit cost",
+    "rowsBelowTop": [
+      ".#####.",
+      "......."
+    ]
+  },
+  "designParameter": {
+    "name": "deadEndLength",
+    "meaning": "Number of open cells immediately right of S before the blocked end on the top row; excluding S.",
+    "options": [
+      2,
+      4
+    ],
+    "studentSelection": null
+  },
+  "aiProposedCandidates": [
+    {
+      "deadEndLength": 2,
+      "rows": [
+        "S..###G",
+        ".#####.",
+        "......."
+      ]
+    },
+    {
+      "deadEndLength": 4,
+      "rows": [
+        "S....#G",
+        ".#####.",
+        "......."
+      ]
+    }
+  ],
+  "studentPreRunPrediction": null,
+  "execution": "No planner called for these candidates during preparation. Choose the layout parameter, then record a scoped prediction and freeze a runnable scenario before execution.",
+  "plannedComparison": "A* FIFO versus closer-goal on the exact chosen map, with the same sufficient budget and all planning rules fixed; record valid path length, examined nodes and failure status. A single hand-constructed case does not estimate general performance."
+}

@@ -49,7 +49,7 @@ Junmo predicted before execution that rule 2 would again examine fewer nodes. Th
 
 ## Next research step
 
-Challenge the random-map result with a deliberately structured obstacle layout, beginning with a student choice of test case and a prediction before execution. The planned robotics extension introduces body geometry, differential-drive motion, waypoint tracking and sensor/actuator uncertainty. Matched physical trials depend on obtaining and testing hardware; no physical measurements have been collected. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
+Challenge the random-map result with a deliberately structured obstacle layout. Junmo selected a goal-side dead end from two proposed patterns; a [guided design worksheet](docs/STRUCTURED_MAP_TASK_KR.md) lets him choose its length before predicting and testing the two tie rules. The base layout is AI-proposed, and this experiment has not been run. The planned robotics extension introduces body geometry, differential-drive motion, waypoint tracking and sensor/actuator uncertainty. Matched physical trials depend on obtaining and testing hardware; no physical measurements have been collected. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
 
 ## Run and inspect
 

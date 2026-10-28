@@ -33,4 +33,4 @@ Browser source revisions remain null. The recorded validation revision identifie
 
 ## Next research step
 
-Challenge the random-map finding with a deliberately structured obstacle layout. Let the student select and then design the next case, record a scoped expectation before running it, and retain unfavorable outcomes. A goal-side dead end or narrow corridor are proposed starting options; no student choice, map design or outcome has been recorded yet.
+Challenge the random-map finding with a deliberately structured obstacle layout. Junmo selected **1번**, the goal-side dead end, from the two AI-proposed patterns. The [guided worksheet](STRUCTURED_MAP_TASK_KR.md) proposes a small base layout and asks him to choose the dead-end length. A final map, scoped prediction and outcome are pending; the candidates have not been run. Retain unfavorable outcomes as well as favorable ones.
