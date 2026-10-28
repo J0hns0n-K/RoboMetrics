@@ -148,6 +148,14 @@ Next task: retain the current rule-2/budget-300 report and click JSON save to pr
 - The validation record preserves the downloaded byte hash, browser timestamp and null browser source revision, validation revision/source hashes, dirty-workspace disclosure and operator limits. Verified file contents do not independently establish the physical click/operator or original browser execution revision. The user's save report and AI validation are separate contributions.
 - Next proposed comparison: base seed 20262027, density .19, budget 300, both tie rules, 30 reachable maps. Ask for the student's expectation about examined-node counts before execution; no prediction or result has yet been supplied and no new-cohort run is claimed.
 
+## 2026-10-28 New-cohort expectation registered before execution
+
+- In response to the proposed new-cohort comparison, Junmo wrote **2가 적을 것 같아**. Preserve this as a directional expectation that closer-goal will have lower mean examined nodes, after exposure to the earlier cohort. No rationale, success-count prediction or route-length prediction was supplied.
+- AI-authored protocol: `experiments/tie-break-validation-02.protocol.json`. Conditions: base seed 20262027, 16×12, density .19, budget 300, 30 reachable maps, FIFO first then closer-goal, same accepted maps and all other planning rules fixed.
+- Primary comparison is the difference between all-map mean examined-node counts. Preserve failures and success denominators, compare common-success route lengths, and retain both browser exports for validation. Budget-capped means are not uncensored time-to-completion measurements.
+- Previous matrix accepted seed IDs end at 20261083; new candidate IDs start at 20262028. This checks seed-ID separation without generating the new cohort and does not establish statistical independence or unique map layouts.
+- At registration the assistant has not generated or run the new cohort; results are pending. Next user action: set the new base seed, retain density .19 and budget 300, select rule 1, run the 30-map comparison and report A* mean examined nodes. Do not fill expected numerical outcomes before the report arrives.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

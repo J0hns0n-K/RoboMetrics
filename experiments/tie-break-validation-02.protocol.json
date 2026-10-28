@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "tie-break-new-seed-cohort-02",
+  "dateSeoul": "2026-10-28",
+  "statusAtRegistration": "Prediction recorded; new-cohort results pending; no new-cohort execution performed by the assistant during preparation",
+  "studentPredictionVerbatim": "2가 적을 것 같아",
+  "studentPrediction": {
+    "metric": "Mean examined nodes across all 30 maps at budget 300",
+    "direction": "closer-goal less than fifo",
+    "rationale": null,
+    "context": "Elicited after viewing and interpreting the earlier cohort; a new-cohort pre-run expectation, not a blind forecast about the earlier study. No separate prediction of success count or route length was supplied."
+  },
+  "assistantProposedDesign": {
+    "configuration": {
+      "seed": 20262027,
+      "runs": 30,
+      "width": 16,
+      "height": 12,
+      "density": 0.19,
+      "maxExpansions": 300
+    },
+    "variants": [
+      "fifo",
+      "closer-goal"
+    ],
+    "primaryComparison": "Mean FIFO examined nodes minus mean closer-goal examined nodes over all 30 maps; positive difference supports the stated expectation for this cohort.",
+    "controls": "Same generated and accepted seed list, grid dimensions, endpoints, density, budget, movement, costs, heuristic, neighbor order, goal handling and algorithm implementation. Only the equal-f tie rule differs.",
+    "sampling": "Use the existing benchmark reachable-only rejection sample: candidate seeds start at base seed + 1. Retain accepted and rejected seed accounting on validation. Do not replace this cohort after seeing results.",
+    "collectionOrder": [
+      "fifo",
+      "closer-goal"
+    ],
+    "secondaryChecks": [
+      "Success counts and denominator for each rule; retain failures capped at budget.",
+      "Mean moves over each successful subset, with denominators; compare lengths directly on common successes.",
+      "Validate paths and reference lengths when reconstructing recorded rows.",
+      "Check exact accepted-seed matching between exported files and unchanged Greedy rows."
+    ],
+    "retention": "Save both browser JSON files with configuration metadata. Preserve downloaded bytes and add separate AI validation/provenance records. Record guided user readings separately from file verification."
+  },
+  "sourceAtRegistration": {
+    "commit": "d992d391ef004bbd0bb76de6339b34d111f87da2",
+    "committedSourceHashes": {
+      "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+      "src/ui.mjs": "83449f56a4844bb877272fb8050d72bf7364df1214eb236b3420c5f3f8f71c38",
+      "index.html": "5b7e5bf5d6eb6692e4500a4d915e05bb79fa2405373dd967c234afb56b1ef09f"
+    }
+  },
+  "seedSeparation": {
+    "previousMatrixMaxAcceptedSeed": 20261083,
+    "newBaseSeed": 20262027,
+    "candidateSeedIdsBeyondPreviousMatrix": true,
+    "note": "Disjoint seed identifiers do not prove statistically independent or unique map layouts."
+  },
+  "interpretationLimits": [
+    "One additional fixed-seed reachable-only cohort; not universal superiority.",
+    "If either rule has failures, all-map expansion means are budget-capped and are not uncensored completion-time estimates.",
+    "Examined-node counts are not elapsed runtime, energy or physical robot performance.",
+    "Record negative or inconclusive results without changing seeds or dropping maps."
+  ],
+  "attribution": "Student supplied the quoted direction only. AI proposed the cohort, controls and protocol and will perform any separately labeled artifact validation. No student code authorship or independent experimental-design claim is inferred."
+}

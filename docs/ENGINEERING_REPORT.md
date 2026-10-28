@@ -120,6 +120,10 @@ After the assistant's summary and a scoped interpretation prompt, Junmo wrote **
 
 After Junmo reported **저장됨**, the expected rule-2/budget-300 download was located and preserved byte-for-byte in `data/browser-reports/closer-goal-budget300-report-01.json`. The accompanying validation record binds its hash to an exact committed-code replay and matches all 30 A*/30 Greedy metric rows and accepted seeds to the earlier study. This verifies the artifact contents while retaining the browser's null source revision and distinguishing user-reported saving from AI ingestion/validation. It does not independently establish the physical operator or add independent maps. A pre-run expectation for a separate seed cohort is the next guided task.
 
+## Registered follow-up on a separate seed cohort
+
+Junmo responded **2가 적을 것 같아** when asked for a pre-run expectation on the proposed new cohort. This is a directional expectation of lower mean examined-node count for rule 2, informed by the earlier result; no independent rationale or additional outcome prediction is inferred. The AI-authored `experiments/tie-break-validation-02.protocol.json` fixes base seed 20262027, density .19, 16×12, budget 300 and 30 reachable maps for both tie rules. Seed identifiers are beyond the previous matrix's accepted range; this alone does not prove statistical independence. No new-cohort execution was performed by the assistant during registration, and numerical results are pending. Both raw exports and paired row checks are planned before interpreting the follow-up.
+
 ## Student report sections to complete later
 
 1. Student's own question and prior prediction, with timestamp/commit.

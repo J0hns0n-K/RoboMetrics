@@ -45,7 +45,7 @@ After Junmo reported saving, the downloaded [rule-2/budget-300 JSON](data/browse
 
 ## Next research step
 
-Record a prediction before testing a separate seed cohort, then challenge the finding with additional map families and failure cases. The planned robotics extension introduces body geometry, differential-drive motion, waypoint tracking and sensor/actuator uncertainty. Matched physical trials depend on obtaining and testing hardware; no physical measurements have been collected. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
+For a separate seed cohort, Junmo predicted before execution that rule 2 would again examine fewer nodes. The [registered follow-up protocol](experiments/tie-break-validation-02.protocol.json) fixes base seed 20262027, density .19, budget 300 and 30 reachable maps for both rules; results are pending. This checks transfer beyond the original seed cohort before extending to additional map families and failure cases. The planned robotics extension introduces body geometry, differential-drive motion, waypoint tracking and sensor/actuator uncertainty. Matched physical trials depend on obtaining and testing hardware; no physical measurements have been collected. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
 
 ## Run and inspect
 
