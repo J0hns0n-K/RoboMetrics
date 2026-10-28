@@ -1,6 +1,6 @@
 # Full paired-matrix results — 2026-10-28
 
-AI-operated synthetic grid study; student post-result interpretation pending.
+AI-operated synthetic grid study. The student's later guided interpretation distinguishing path length from budgeted success is preserved verbatim in `MATRIX_RUN_KR.md`; it is not a pre-run forecast or an independently operated study.
 
 | Density | Budget | A* successes / 30 | Greedy successes / 30 | Shared successes | Mean Greedy extra moves on shared successes |
 |---:|---:|---:|---:|---:|---:|
