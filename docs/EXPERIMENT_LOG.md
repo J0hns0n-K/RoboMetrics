@@ -156,6 +156,13 @@ Next task: retain the current rule-2/budget-300 report and click JSON save to pr
 - Previous matrix accepted seed IDs end at 20261083; new candidate IDs start at 20262028. This checks seed-ID separation without generating the new cohort and does not establish statistical independence or unique map layouts.
 - At registration the assistant has not generated or run the new cohort; results are pending. Next user action: set the new base seed, retain density .19 and budget 300, select rule 1, run the 30-map comparison and report A* mean examined nodes. Do not fill expected numerical outcomes before the report arrives.
 
+## 2026-10-28 New-cohort FIFO result reported
+
+- After the registered FIFO instructions (base seed 20262027, density .19, budget 300, 30 maps), Junmo supplied **117.77칸** for A* mean examined nodes.
+- This is a guided self-reported metric. Full settings, accepted seeds, success count, mean moves and raw rows have not yet been independently inspected. Rule 2 is pending; no support/rejection of the prediction or new-cohort replay is claimed.
+- The in-progress record is `docs/TIE_BREAK_VALIDATION_02_RESULTS.md`; the pre-run protocol remains unchanged in commit `a859a3aa4c61abe804f92fb941222919e7a35220`.
+- Next: save the current FIFO JSON before changing settings, then change only the tie rule to 2, rerun and report the same A* mean examined-node metric. Do not replace the cohort or provide a predicted numerical outcome.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
