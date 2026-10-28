@@ -34,6 +34,8 @@ After the comparison, Junmo tentatively chose the closer-goal rule as the browse
 
 Guided browser comparisons now examine route quality alongside search work. At the instructed budget 300, Junmo reported mean route lengths of 26.07 moves across 30 successful maps for each rule, with mean examined-node counts of 118.77 for FIFO and 36.97 for closer-goal. Earlier reports at budget 120 gave 15/30 and 30/30 successes respectively. In a guided post-result interpretation, he described full success with rule 2, similar mean route length and substantially fewer examined nodes. At budget 300 both rules succeeded; the distinction there is search work, rather than an increase in success. These readings and interpretation connect the chosen default to both metrics. The user-reported observations remain separate from the archived AI-operated datasets; they are not independently verified replications or a general performance guarantee. [Exact statement and context](docs/DEMO_DESIGN_DECISION.md)
 
+After Junmo reported saving, the downloaded [rule-2/budget-300 JSON](data/browser-reports/closer-goal-budget300-report-01.json) was preserved byte-for-byte. AI validation reproduced its complete benchmark payload and matched all 30 A* and 30 Greedy rows to the earlier study. The [validation record](data/browser-reports/closer-goal-budget300-report-01.validation.json) distinguishes verified file contents from unrecorded browser-operator/source provenance; these remain the same previously studied maps.
+
 ## Reproducibility, scope and contributions
 
 - **Checks:** the archived demo acceptance suite passes 20 tests. Algorithm audits cover all 1,024 obstacle layouts of a small 4×3 grid against an independently written BFS; compatibility checks reproduce 720 historical A*/Greedy metrics.
@@ -43,7 +45,7 @@ Guided browser comparisons now examine route quality alongside search work. At t
 
 ## Next research step
 
-Preserve exports from the guided browser comparison, then challenge the finding with additional map families and failure cases. The planned robotics extension introduces body geometry, differential-drive motion, waypoint tracking and sensor/actuator uncertainty. Matched physical trials depend on obtaining and testing hardware; no physical measurements have been collected. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
+Record a prediction before testing a separate seed cohort, then challenge the finding with additional map families and failure cases. The planned robotics extension introduces body geometry, differential-drive motion, waypoint tracking and sensor/actuator uncertainty. Matched physical trials depend on obtaining and testing hardware; no physical measurements have been collected. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
 
 ## Run and inspect
 

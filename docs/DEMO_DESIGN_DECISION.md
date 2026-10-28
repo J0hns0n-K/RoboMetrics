@@ -58,3 +58,7 @@ After the assistant's table and explanation, Junmo wrote:
 > 1번 규칙 -> 2번 규칙으로 바꾸니까 길을 찾은 지도 수가 100%이고 평균 이동 횟수는 비슷한데 검토 칸 수가 확 줄었어
 
 This is his elicited post-result interpretation following guided assistance. It recognizes full success with rule 2, similar route lengths and lower examined-node counts; it is not an independent alternative proposal, pre-run prediction or code contribution. The assistant separately clarifies the scope: at budget 300 both rules succeed on 30/30, and both displayed mean route lengths equal 26.07. The success-count increase occurred at budget 120. The quote is preserved without rewriting that distinction into the student's words. The next task saves the current rule-2/budget-300 JSON; no new export has yet been inspected.
+
+## Subsequent raw-file verification
+
+Junmo then reported **저장됨**. The expected downloaded file was located and archived byte-for-byte in `data/browser-reports/closer-goal-budget300-report-01.json`, with a separate validation record. Its configuration and summary support the reported rule-2/budget-300 readings. AI replay exactly matches the benchmark payload; all accepted seeds and 30 A*/30 Greedy rows match the historical tie study. Contents are verified, while the physical click/operator and original browser execution revision remain unrecorded; the browser's null source revision is retained. This event adds a preserved browser artifact, not independent maps or student code authorship. Next comes a pre-run expectation for a separate seed cohort.

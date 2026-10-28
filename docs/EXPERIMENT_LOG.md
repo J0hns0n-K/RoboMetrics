@@ -140,6 +140,14 @@ This is an elicited post-result interpretation, not an independent discovery or 
 
 Next task: retain the current rule-2/budget-300 report and click JSON save to preserve its raw rows. No completed export is claimed before evidence arrives.
 
+## 2026-10-28 Browser export located, archived and validated
+
+- Junmo replied **저장됨** after the current rule-2/budget-300 JSON-save task. The assistant found the expected download, `robometrics-closer-goal-seed-20261027-budget-300.json`, and preserved the file byte-for-byte as `data/browser-reports/closer-goal-budget300-report-01.json`.
+- Verified configuration: base seed 20261027, 16×12, density .19, 30 reachable maps, budget 300, closer-goal. A* has 30 successes, mean moves 26.066666666666666 and mean examined nodes 36.96666666666667.
+- AI replay on the revision identified in the accompanying validation record exactly reproduces the entire benchmark payload after separating browser metadata. Accepted seeds and all 30 A*/30 Greedy metric rows match the earlier tie study. This is a validation replay of the same maps, not a new independent experiment.
+- The validation record preserves the downloaded byte hash, browser timestamp and null browser source revision, validation revision/source hashes, dirty-workspace disclosure and operator limits. Verified file contents do not independently establish the physical click/operator or original browser execution revision. The user's save report and AI validation are separate contributions.
+- Next proposed comparison: base seed 20262027, density .19, budget 300, both tie rules, 30 reachable maps. Ask for the student's expectation about examined-node counts before execution; no prediction or result has yet been supplied and no new-cohort run is claimed.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

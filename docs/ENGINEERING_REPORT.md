@@ -118,6 +118,8 @@ For the instructed rule-2/budget-300 rerun, Junmo subsequently reported **36.97�
 
 After the assistant's summary and a scoped interpretation prompt, Junmo wrote **1번 규칙 -> 2번 규칙으로 바꾸니까 길을 찾은 지도 수가 100%이고 평균 이동 횟수는 비슷한데 검토 칸 수가 확 줄었어**. This is elicited post-result interpretation of the assisted comparison. Assistant clarification is separate: both rules succeeded at budget 300 and displayed mean moves matched; the success-count increase occurred at budget 120. The statement is not a prior forecast, independent method discovery or implementation claim. Exact context is retained in `DEMO_DESIGN_DECISION.md`; preserving the current browser JSON is the next task.
 
+After Junmo reported **저장됨**, the expected rule-2/budget-300 download was located and preserved byte-for-byte in `data/browser-reports/closer-goal-budget300-report-01.json`. The accompanying validation record binds its hash to an exact committed-code replay and matches all 30 A*/30 Greedy metric rows and accepted seeds to the earlier study. This verifies the artifact contents while retaining the browser's null source revision and distinguishing user-reported saving from AI ingestion/validation. It does not independently establish the physical operator or add independent maps. A pre-run expectation for a separate seed cohort is the next guided task.
+
 ## Student report sections to complete later
 
 1. Student's own question and prior prediction, with timestamp/commit.

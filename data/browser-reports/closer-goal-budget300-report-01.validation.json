@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "label": "ARCHIVED BROWSER FILE ASSOCIATED WITH USER-REPORTED SAVE; AI INGESTION AND VALIDATION",
+  "validatedAtUTC": "2026-10-28T11:45:20.687Z",
+  "userSaveReport": "저장됨",
+  "downloadedFilename": "robometrics-closer-goal-seed-20261027-budget-300.json",
+  "artifact": "data/browser-reports/closer-goal-budget300-report-01.json",
+  "artifactSha256": "3aaa224da2c7029193faa71721348a2ed0bb7807305ab76e8c3aa8a9f8c7e9fb",
+  "byteIdenticalCopy": true,
+  "browserExport": {
+    "generatedAtUTC": "2026-10-28T11:43:22.810Z",
+    "sourceCommit": null,
+    "provenance": "Browser demonstration; exact source revision and execution operator are not independently recorded here. Use the commit-bound CLI outputs for research provenance."
+  },
+  "validation": {
+    "operator": "AI assistant",
+    "sourceCommit": "7ac991131cf26eb7b6719d333fd1d64a1f24877d",
+    "sourceFilesDirty": false,
+    "workspaceStatus": "M practice/02-planning-budget.mjs\n?? data/browser-reports/",
+    "committedSourceHashes": {
+      "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+      "src/ui.mjs": "83449f56a4844bb877272fb8050d72bf7364df1214eb236b3420c5f3f8f71c38",
+      "index.html": "5b7e5bf5d6eb6692e4500a4d915e05bb79fa2405373dd967c234afb56b1ef09f"
+    },
+    "exactBenchmarkReplayMatch": true,
+    "matchedHistoricalArtifact": "data/tie-break/tie-break-run-01.json",
+    "matchedHistoricalArtifactSha256": "5f0f0d92b723b9399a92a4a1635f8446a325a70b95017e3cc2a3f11fd5f62b95",
+    "sameAcceptedSeeds": true,
+    "astarRowsMatched": 30,
+    "greedyRowsMatched": 30
+  },
+  "configuration": {
+    "seed": 20261027,
+    "runs": 30,
+    "width": 16,
+    "height": 12,
+    "density": 0.19,
+    "maxExpansions": 300,
+    "astarTieBreak": "closer-goal",
+    "neighborMode": "4-neighbor",
+    "obstacles": "static / fully known",
+    "sampling": "solvable only; rejection sample",
+    "algorithms": [
+      "astar",
+      "greedy"
+    ]
+  },
+  "summary": {
+    "astar": {
+      "successRate": 1,
+      "meanPathLength": 26.066666666666666,
+      "meanRelativeLength": 1,
+      "meanExpanded": 36.96666666666667,
+      "successful": 30
+    },
+    "greedy": {
+      "successRate": 1,
+      "meanPathLength": 28.4,
+      "meanRelativeLength": 1.0895604395604395,
+      "meanExpanded": 32.7,
+      "successful": 30
+    }
+  },
+  "provenance": "User reported saving after the guided comparison. The assistant located the expected downloaded file and verified its contents. The physical click/operator and browser source revision were not independently recorded; browser sourceCommit stays null. The validation revision identifies the replay code, not a proven browser execution revision. Same previously studied maps; no additional independent sample or student code authorship is inferred."
+}
