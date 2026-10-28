@@ -1,0 +1,24 @@
+{
+  "id": "astar-tie-break-comparison-2026-10-28",
+  "dateSeoul": "2026-10-28",
+  "baselineMatrix": "data/batch/early-matrix-run-01.json",
+  "baselineSourceCommit": "2dda59173bfc99ce0c9ad418f3724edf621d6a1e",
+  "studentStatementVerbatim": "난 둘 다 똑같다고 봐. 내가 봤을 때는 여기까지 온 거리나 남은 예상 거리는 별로 중요치 않은 것 같아. 합계만 같으면 상관없는 것 같아.",
+  "studentPosition": "The student considers the two equal-total candidates equivalent. He did not select the alternative rule or give a numerical prediction of node counts or success rates.",
+  "assistantOperationalization": "Test whether changing only equal-f ordering changes node expansions and budgeted success while retaining optimal path length. This operational question is AI-formulated; do not attribute a quantified zero-effect hypothesis or the alternative implementation to the student.",
+  "variants": {
+    "fifo": "Smallest f=g+h first, then earliest insertion order; original default.",
+    "closer-goal": "Smallest f=g+h first; only at equal f prefer smaller h (equivalently larger g), then insertion order. Alternative proposed and implemented by AI."
+  },
+  "controlledConditions": "Reuse every accepted seed, density, grid size, endpoint and budget from the committed baseline matrix. Do not resample maps or change heuristic, movement costs, neighbor order, goal handling or closed-set rules. Replay Greedy only to verify unchanged baseline metrics.",
+  "plannedMetrics": [
+    "Successes / 30 for each A* rule and every original density/budget condition.",
+    "Mean expanded nodes over all 30 rows, plus common-success counts and lengths.",
+    "Success gains and losses relative to FIFO, without dropping regressions.",
+    "Every successful A* path must be valid and equal the Dijkstra reference length.",
+    "Default A* and Greedy metrics must reproduce all 720 prior policy rows."
+  ],
+  "plannedDisplay": "Report all 12 conditions. For the concise explanation use density .19/budget 120 success counts (same condition previously discussed) and density .19/budget 300 examined nodes when both complete; do not select the displayed condition after seeing the new outcomes.",
+  "knownPriorEvidence": "Original FIFO matrix, student alternative eight-move route and previous teaching examples are already known. Small-map controls are planned tests, not blind discoveries. No full closer-goal matrix has been executed at protocol preparation.",
+  "attribution": "Student statement is post-instruction qualitative reasoning. AI supplies the alternative rule, implementation, tests, comparison runner and execution. Tie-breaking is an established technique, not a claimed new algorithm. No hardware or runtime/energy result is claimed."
+}

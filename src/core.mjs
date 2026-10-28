@@ -2,8 +2,10 @@
  * RoboMetrics mentor starter reference implementation.
  * Created for kickoff 2026-10-27. NOT evidence of Junmo's independent code or experiments.
  * Grid-based GLOBAL PATH PLANNING only. No real robot, sensing, collision dynamics, or IoT.
+ * Optional A* tie-breaking extension added by AI on 2026-10-28; FIFO remains the default.
  */
 const VALID_ALGORITHMS = new Set(['astar', 'greedy', 'dijkstra']);
+const VALID_TIE_BREAKS = new Set(['fifo', 'closer-goal']);
 const OFFSETS = [[1,0],[0,1],[-1,0],[0,-1]];
 
 export function makeMap(width, height, blocked = [], start = [0,0], goal = [width-1,height-1]) {
@@ -37,9 +39,11 @@ function key(x,y,w) { return y*w+x; }
 function heuristic(a,b) { return Math.abs(a[0]-b[0]) + Math.abs(a[1]-b[1]); }
 function score(algorithm, g, h) { return algorithm==='astar' ? g+h : algorithm==='greedy' ? h : g; }
 
-export function plan(map, algorithm='astar', maxExpansions=Infinity) {
+export function plan(map, algorithm='astar', maxExpansions=Infinity, {tieBreak='fifo'}={}) {
   if(!VALID_ALGORITHMS.has(algorithm)) throw new Error('Unknown algorithm.');
   if(!(maxExpansions===Infinity || (Number.isInteger(maxExpansions) && maxExpansions>=1))) throw new Error('Invalid expansion budget.');
+  if(!VALID_TIE_BREAKS.has(tieBreak)) throw new Error('Unknown tie-breaking rule.');
+  if(algorithm!=='astar' && tieBreak!=='fifo') throw new Error('The optional tie-break applies only to A*.');
   const { width:w,height:h,cells,start,goal } = map;
   const goalKey=key(goal[0],goal[1],w), startKey=key(start[0],start[1],w);
   const distances=Array(w*h).fill(Infinity), parents=new Int32Array(w*h).fill(-1), closed=new Uint8Array(w*h);
@@ -48,7 +52,10 @@ export function plan(map, algorithm='astar', maxExpansions=Infinity) {
   const frontier=[{k:startKey,g:0,priority:score(algorithm,0,heuristic(start,goal)),order:tie++}];
   while(frontier.length) {
     // A stable comparator makes seeded runs deterministic; no claim about CPU-independent timing.
-    frontier.sort((a,b)=>a.priority-b.priority || a.order-b.order);
+    // At equal A* f=g+h, larger g is exactly smaller h. Primary f is unchanged.
+    frontier.sort((a,b)=>a.priority-b.priority
+      || (algorithm==='astar' && tieBreak==='closer-goal' ? b.g-a.g : 0)
+      || a.order-b.order);
     const current=frontier.shift();
     if(closed[current.k] || current.g!==distances[current.k]) continue;
     if(expansions>=maxExpansions) return {success:false,reason:'BUDGET_EXCEEDED',path:[],pathLength:null,expanded:expansions};
