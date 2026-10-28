@@ -1,0 +1,15 @@
+{
+  "id": "student-alternative-shortest-route-seed-260",
+  "referenceScenario": "experiments/reference-greedy-detour.json",
+  "contributor": "Junmo — route and interpretation supplied in chat after the guided comparison",
+  "studentStatementVerbatim": "벽을 굳이 안 없애도 8번만으로 갈 수 있어(아래3칸 오른쪽2칸 아래1칸 오른쪽2칸). 벽이 있든 없든 8번이 최소이동횟수야.",
+  "moveGroups": [
+    {"direction": "down", "steps": 3},
+    {"direction": "right", "steps": 2},
+    {"direction": "down", "steps": 1},
+    {"direction": "right", "steps": 2}
+  ],
+  "claimedLength": 8,
+  "assistance": "AI supplied the original map and A*/Greedy path comparison, and asked which wall to remove. Instead, the user volunteered this alternative eight-move route and questioned the need to remove a wall. AI transcribed the move groups and will operate verification. No student algorithm implementation or independent discovery of the original counterexample is claimed.",
+  "assistantScopeClarification": "Check the current fixed wall layout and subsets of its existing walls removed. The statement is not generalized to arbitrary newly added or rearranged walls. Distinguish an existing optimal route from the route selected by Greedy."
+}
