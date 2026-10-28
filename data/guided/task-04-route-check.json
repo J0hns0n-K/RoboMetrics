@@ -1,0 +1,597 @@
+{
+  "schemaVersion": 1,
+  "label": "AI VERIFICATION OF STUDENT-SUPPLIED ROUTE; SYNTHETIC GRID ONLY",
+  "timestamp": "2026-10-28T09:09:20.099Z",
+  "sourceCommit": "004deec939bdd10bebb3871c66ee44410557b0f6",
+  "workspaceDirty": false,
+  "operator": "AI assistant",
+  "studentInput": "experiments/task-04.student-route.json",
+  "inputSha256": "8a7975296ea3a64271f0a5caf6b273e55d622b26db13cca68b0b722a13ac7012",
+  "coreSha256": "6efb7a36d4abde7c0ea82c5c9bc1aaf51eae01d53c4ed0365f9151d654fc1686",
+  "rows": [
+    "S....",
+    ".#...",
+    ".....",
+    "...##",
+    "##..G"
+  ],
+  "moveGroups": [
+    {
+      "direction": "down",
+      "steps": 3
+    },
+    {
+      "direction": "right",
+      "steps": 2
+    },
+    {
+      "direction": "down",
+      "steps": 1
+    },
+    {
+      "direction": "right",
+      "steps": 2
+    }
+  ],
+  "path": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      4
+    ]
+  ],
+  "pathValid": true,
+  "pathLength": 8,
+  "manhattanLowerBound": 8,
+  "shortestProven": true,
+  "proof": "A valid route attains the Manhattan lower bound. Removing existing walls preserves this route and cannot lower the geometric bound.",
+  "originalGreedyLength": 12,
+  "originalAstarLength": 8,
+  "wallRemovalSubsetsChecked": 32,
+  "wallRemovalChecks": [
+    {
+      "removed": [],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          1,
+          1
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          3,
+          3
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          4,
+          3
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          0,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          3,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          4,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          1,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          3,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          4,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          3,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          4,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    },
+    {
+      "removed": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "pathValid": true,
+      "minimumLength": 8
+    }
+  ],
+  "scope": "Current layout or removal of any subset of its five existing walls; not arbitrary wall placements. These are deterministic verification cases, not independent experimental trials.",
+  "studentAlgorithmImplementation": false
+}

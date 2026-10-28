@@ -70,7 +70,11 @@ An assistant search selected the first qualifying 5×5 generated map, seed 260 a
 
 Reproduction on clean source `87ae90e391d36a72d62c78827664c6bf288172ee` gave A*: 8 moves/20 examined nodes; Greedy: 12/14; Dijkstra: 8/20. The valid eight-move route achieves the Manhattan lower bound between opposite corners. At budget 14 Greedy succeeds and A* exceeds budget; at budget 20 both succeed with different route lengths. Thus budgeted success and route optimality differ on this case, without changing the original planner.
 
-All 13 tests passed, including two new AI-authored counterexample regressions. Raw run, TAP and provenance are in `data/reference/greedy-detour-run-01.json`, `counterexample-tests.tap` and `greedy-detour-validation.json`. AI prepared a visual comparison directly from returned path coordinates. Student analysis of this new example remains pending.
+All 13 tests passed, including two new AI-authored counterexample regressions. Raw run, TAP and provenance are in `data/reference/greedy-detour-run-01.json`, `counterexample-tests.tap` and `greedy-detour-validation.json`. AI prepared a visual comparison directly from returned path coordinates.
+
+After that guided comparison, Junmo volunteered a different route: **down 3, right 2, down 1, right 2**, observing that wall removal is unnecessary for an eight-move route to exist. The exact response and instructions were committed in `004deec939bdd10bebb3871c66ee44410557b0f6` before AI verification. The reconstructed path is valid on the unchanged map, eight moves long, and attains the geometric lower bound of 8. AI checked all 32 subsets of existing walls removed; the same valid optimal route persists. This verifies a scoped statement about the current layout and removing existing walls, not arbitrary obstacle additions or 32 independent trials.
+
+The student's contribution is the alternative path and interpretation after prior instruction; AI supplied the original example and operated/formalized verification. No student algorithm implementation or original discovery of the counterexample is claimed. The verified distinction is that an optimal eight-move path exists while the unchanged Greedy returns twelve moves. Raw verification is in `data/guided/task-04-route-check.json`. Further algorithm comparison can preserve the existing map rather than removing walls.
 
 ## Student report sections to complete later
 

@@ -59,6 +59,15 @@ Browser smoke export: `data/reference/browser-benchmark.json`, seed 20261027, de
 - All 13 tests passed; raw TAP and validation manifest are preserved beside the run. The original search engine is unchanged.
 - AI prepared a path comparison using raw returned coordinates. No student discovery, prediction, implementation, observation response or interpretation is claimed for this case yet.
 
+## 2026-10-28 student-supplied alternative path — unchanged counterexample map
+
+- Instead of selecting a wall for removal, the student supplied down 3/right 2/down 1/right 2 and stated that an eight-move route already exists. Exact response and move groups were committed in `004deec939bdd10bebb3871c66ee44410557b0f6` before AI verification.
+- AI reconstructed the route and verified it on the unchanged seed-260 map. Length is 8, the route is valid, and it attains the independent Manhattan lower bound of 8. It is a different route from the originally displayed A* path, also optimal.
+- AI also checked all 32 subsets of the existing five walls removed: the route remains valid and the lower bound remains 8. This is deterministic finite verification of this layout/removal scope, not independent repeated trials or a claim about arbitrary obstacle placement.
+- Raw route, hashes, proof rationale and removal checks: `data/guided/task-04-route-check.json`, on clean source `004deec939bdd10bebb3871c66ee44410557b0f6`. Reference engine hash matches the original counterexample run.
+- Student contribution: proposed route and the observation that removing a wall is unnecessary for the existence of an optimal path, after the guided comparison. AI contribution: supplied original example, transcribed coordinates, operated verification and wrote the formal lower-bound/scope explanation. No algorithm implementation change or original counterexample discovery claimed.
+- The key distinction is existence of an optimal route (8) versus the route the unchanged Greedy implementation selected (12). Further work can use the unchanged map to compare algorithms without altering the environment.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
