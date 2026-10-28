@@ -78,6 +78,16 @@ Browser smoke export: `data/reference/browser-benchmark.json`, seed 20261027, de
 - Three AI-selected post-hoc case reports preserve full paths and matched metrics: seed 20261028/.12/budget 75 (A* budget failure, Greedy succeeds at 26 moves); seed 20261046/.28/budget 300 (A* 26 moves, Greedy 40); the same dense seed at budget 75 (both budget failures despite reference reachability). Additional replays are validation, not new independent trials.
 - Matrix tooling, audit, operation and initial numerical interpretation are AI support. Student expectation/uncertainty is actual pre-run input. After the results and explanation, the student stated that shorter routes and finding routes on more maps differ under calculation limits; the verbatim response and AI wording clarification are preserved in `MATRIX_RUN_KR.md`. This is a guided post-result interpretation, not a pre-run forecast or independent implementation/execution. FIFO tie-breaking, finite budgets, conditional selection and success-conditioned summaries limit generalization. No physical performance measured.
 
+## 2026-10-28 A* tie-breaking ablation — student qualitative position, AI alternative
+
+- Student said equal-total candidates seem equivalent; exact response is preserved in `experiments/tie-break.protocol.json`. He did not select the alternative rule or predict a numerical effect. AI operationalized a separate question about expansions and budgeted success while retaining shortest-path quality.
+- Source/protocol `260ac09d063c422b92acef8ad4a6afbb622429f7` was committed before full variant execution. Experimental inputs were clean; unrelated practice-file changes were retained and declared, so the entire workspace was not clean.
+- Primary f=g+h, heuristic, movement, map cohorts, budgets, neighbors and goal handling are fixed. Only the equal-f secondary rule changes from FIFO to lower h (equivalently larger g at equal f), then FIFO. Default remains FIFO; extension and runner are AI-authored.
+- All 720 historical A*/Greedy metrics reproduce. All 19 tests pass, including variant reachability/optimality checks on 1,024 4×3 obstacle layouts. Every successful A* result in the comparison matches reference length and has a verified path.
+- Same 90 density-specific cohort entries reused in 360 paired map/budget comparisons; 720 A* variant calls plus 360 unchanged-Greedy compatibility replays and 90 reference checks. Do not add overlapping check counts or treat calls as independent maps.
+- Planned representative condition .19/budget 120: successes 15/30→30/30. At budget 300 both complete on the same 30 maps: mean examined nodes 118.7667→36.9667, same mean moves 26.0667. Small 3×3 control: both 4 moves, examined nodes 8→5.
+- Raw JSON/CSV, full paths for post-hoc first differing examples, TAP and artifact hash manifest are in `data/tie-break/`; all 12 conditions including gains/losses are in `docs/TIE_BREAK_RESULTS.md`. Effects are cohort-specific node counts, not runtime/energy, new algorithm invention or student code authorship. Student post-result interpretation pending.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

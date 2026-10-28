@@ -90,6 +90,18 @@ Raw rows, seed audits, CSV, TAP and SHA256 manifest are in `data/batch/`; the fu
 
 After seeing the results and receiving clarification of success frequency, Junmo stated: **그러네. 짧은 길을 찾는 것이랑 길을 많이 찾는 것은 다르네. 계산 제한이 있으면 아무리 짧은 루트라도 실패로 되니까 그렇네.** This is the student's guided post-result conceptual distinction between route length and budgeted route discovery. AI clarified the precise meaning: a short route may exist while the policy does not find it within budget; an already-found valid route is not reclassified as a failure. The statement is not a prior forecast or evidence of independent implementation/execution. Exact response and timing are in `MATRIX_RUN_KR.md`. This remains an AI-authored engineering record rather than a completed student-authored report or verified EC accomplishment.
 
+## Optional equal-f tie-breaking comparison — 2026-10-28
+
+Junmo considered the two equal-total candidates equivalent; the exact statement is preserved in `experiments/tie-break.protocol.json`. He did not choose lower-h ties or give a numerical node-count hypothesis. AI formulated the controlled operational question: whether equal-f ordering changes examined nodes and budgeted success without changing optimal returned path length. The student's statement is not retroactively converted into a quantified zero-effect prediction.
+
+AI added an opt-in `closer-goal` fourth-parameter option to `plan`, retaining f=g+h as the primary score and FIFO as default. At equal f, larger g is smaller h. All other planning rules and the original accepted map cohorts remain fixed. Implementation, tests, alternative rule, operation and current numerical analysis are AI support.
+
+On committed experimental source `260ac09d063c422b92acef8ad4a6afbb622429f7`, all 19 tests pass and all 720 historical default A*/Greedy metrics reproduce. Variant reachability/optimality is checked on all 1,024 4×3 obstacle layouts against the independently audited reference; all successful variants in the full comparison equal the reference shortest length. The unrelated practice-file working edit is declared in metadata; experiment inputs themselves are committed, so do not describe the entire workspace as clean.
+
+The small center-obstacle control retains the same four-move path with examined nodes 8→5. In the preselected .19/budget-120 condition, successes change 15/30→30/30. With ample budget 300 on the same 30 maps, mean examined nodes change 118.7667→36.9667 while both retain mean path length 26.0667. This is a node-expansion result under the stated model, not measured runtime, energy or physical robot performance. All 12 conditions, success gains/losses and post-hoc example paths are preserved in `data/tie-break/` and `TIE_BREAK_RESULTS.md`.
+
+Tie-breaking is established prior work; background and scope are cited in `TIE_BREAK_STUDY_KR.md`. This sample does not prove universal superiority. The current application still uses FIFO unless the option is explicitly requested. Student interpretation of this new comparison remains pending; code and implementation improvement are not represented as student-authored.
+
 ## Student report sections to complete later
 
 1. Student's own question and prior prediction, with timestamp/commit.

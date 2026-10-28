@@ -1,0 +1,57 @@
+{
+  "label": "AI-IMPLEMENTED AND AI-OPERATED TIE-BREAK COMPARISON; STUDENT QUALITATIVE POSITION PRESERVED",
+  "dateSeoul": "2026-10-28",
+  "sourceCommit": "260ac09d063c422b92acef8ad4a6afbb622429f7",
+  "execution": {
+    "timestamp": "2026-10-28T10:00:47.651Z",
+    "sourceCommit": "260ac09d063c422b92acef8ad4a6afbb622429f7",
+    "workspaceDirty": true,
+    "workspaceStatus": "M practice/02-planning-budget.mjs",
+    "experimentInputsDirty": false,
+    "declaredOperator": "AI assistant",
+    "studentExecutionIndependentlyVerified": false,
+    "node": "v24.22.1",
+    "platform": "win32/x64",
+    "protocolSha256": "d9a3cf4ac1267ec184d67e1def8b74abe5709fe66471517bf7055b9dd84489dc",
+    "baselineMatrixSha256": "3123d5882ab8856966b0834414a441750fdd3086633837ad4112edf8526af713",
+    "coreSha256": "56f7756ca9cc82ab89d181d50bff75ce43e0effa06a2e8f6bc6b86b65f83edd7",
+    "runnerSha256": "7bf5c591d5646034798eddf84ea9e09480adf3b22f4d8c7b6e1c4293bddeecd1"
+  },
+  "counts": {
+    "densitySpecificCohortEntries": 90,
+    "pairedMapBudgetConditions": 360,
+    "astarVariantRuns": 720,
+    "greedyCompatibilityReplays": 360,
+    "dijkstraReferenceChecks": 90,
+    "defaultPolicyCompatibilityChecks": 720
+  },
+  "tests": {
+    "total": 19,
+    "passed": 19,
+    "failed": 0
+  },
+  "integrity": {
+    "astarPolicyRowsChecked": 720,
+    "allSuccessfulAstarLengthsEqualReference": true,
+    "defaultPolicyCompatibilityChecks": 720
+  },
+  "preselectedDisplay": {
+    "density": 0.19,
+    "restrictedBudget": 120,
+    "fifoSuccesses": 15,
+    "closerGoalSuccesses": 30,
+    "ampleBudget": 300,
+    "fifoMeanExpanded": 118.76666666666667,
+    "closerGoalMeanExpanded": 36.96666666666667,
+    "relativeMeanExpansionReduction": 0.6887454392365984,
+    "commonSuccesses": 30,
+    "commonPathLengthDifferences": 0
+  },
+  "artifacts": {
+    "data/tie-break/tie-break-run-01.json": "5f0f0d92b723b9399a92a4a1635f8446a325a70b95017e3cc2a3f11fd5f62b95",
+    "data/tie-break/tie-break-run-01.csv": "b1333ec9808b77bc58580011a01f415bbb6229ad8c1d0b5906c13724c83037c3",
+    "data/tie-break/tie-break-tests.tap": "610fe61a07d9f40281b5f67ae92678d3cb28dfdac0a1adde377597156ef35189"
+  },
+  "attribution": "Student gave a qualitative equal-total equivalence position; no numerical zero-effect prediction or alternative-rule authorship is inferred. AI supplied the alternative rule, code, tests, operation and initial interpretation. Student post-result interpretation is pending.",
+  "provenanceNote": "Experiment inputs were committed. The unrelated practice-file working-tree change was left untouched and explicitly recorded; do not call the entire workspace clean."
+}
