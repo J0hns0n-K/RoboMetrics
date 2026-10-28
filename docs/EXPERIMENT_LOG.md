@@ -50,6 +50,15 @@ Browser smoke export: `data/reference/browser-benchmark.json`, seed 20261027, de
 - Student explanation after results and AI discussion, verbatim: **그 1번 벽이 최소 이동 루트를 막고 있었어. 다른 벽들은 그 최소 이동 루트에 관여하지 않았고**. This correctly identifies wall 1 on the direct top-row route and the remaining walls outside it for this layout. It is an elicited post-result explanation, not a pre-execution rationale or a general claim about other maps.
 - This verifies a guided map revision, not an algorithm-code improvement or a Greedy path-quality counterexample. No implementation files changed, so the existing test suite was not rerun; the new input, returned paths and controlled comparison were checked.
 
+## 2026-10-28 AI reference counterexample — Greedy path quality
+
+- AI selected seed 260 on a 5×5 grid at generation density .28 after inspecting results. Full size/seed search order and selection criteria are in `docs/COUNTEREXAMPLE_01_KR.md` and the fixture. This is post-hoc teaching-case selection, not an independent sample for estimating a general effect.
+- Fixture and tests were committed in `87ae90e391d36a72d62c78827664c6bf288172ee` before the documented reproduction; original discovery outcomes were already known.
+- AI-operated reproduction on clean source: `data/reference/greedy-detour-run-01.json`. A* returns 8 moves/20 examined nodes; Greedy 12 moves/14 nodes; Dijkstra 8 moves/20 nodes. Every returned route is valid. An actual eight-move route matches the Manhattan lower bound, establishing the optimum on this map independently of agreement between A* and Dijkstra.
+- At budget 14 Greedy succeeds and A* exceeds budget; at 20 both succeed, with different path lengths. Preserved all budget outcomes at 8/14/20/25.
+- All 13 tests passed; raw TAP and validation manifest are preserved beside the run. The original search engine is unchanged.
+- AI prepared a path comparison using raw returned coordinates. No student discovery, prediction, implementation, observation response or interpretation is claimed for this case yet.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

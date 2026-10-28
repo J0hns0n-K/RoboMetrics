@@ -1,6 +1,6 @@
 # RoboMetrics — Junmo's Engineering EC R&D
 
-## Live kickoff — 2026-10-27
+## Live kickoff — updated 2026-10-28
 
 - Current remote: `J0hns0n-K/RoboMetrics`, confirmed **public** on 2026-10-27. The repository was initially created private as `junmo-robometrics`; GitHub now redirects that former address to `RoboMetrics`. The local remote has been updated to the canonical URL. Historical creation records below retain the original name and visibility at creation.
 - Original 20-file ZIP preserved in reference commit `43fa8ec965180532c1fcf4a553309ed350b25277`.
@@ -11,6 +11,7 @@
 - The original handoff below is a historical snapshot; its remote-not-created status has been superseded by this section.
 - Guided follow-up: Junmo predicted 8 moves on an AI-supplied 5×3 detour map before execution. Matched assistant-operated runs confirmed 4 moves without walls and 8 with walls; see `docs/TASK_02_DECISION.md` and `data/guided/task-02-*-run-01.json`. The prediction is student input; the map and software operation are AI support.
 - Guided revision: Junmo chose wall 1 for removal and predicted four moves before execution. The assistant-operated single-cell comparison confirmed 8→4 moves; see `docs/TASK_03_DECISION.md` and `data/guided/task-03-comparison.json`. This is a student-selected environment revision, not a search-code change.
+- AI-selected path-quality reference: seed 260 on 5×5 gives A* 8 moves/20 examined nodes vs Greedy 12 moves/14 nodes. All 13 tests passed. This counterexample was selected after inspecting results; student analysis is pending. See `docs/COUNTEREXAMPLE_01_KR.md` and `data/reference/greedy-detour-run-01.json`.
 
 **Status:** 2026-10-27 counselor/AI-created **kickoff reference scaffold**, NOT verified student-authored research.
 **Declared track:** Early browser-native *path-planning benchmark* (Oct 27–29), with a separately scoped RD *sim-to-real robotics* study (Nov–Dec and Jan only if deadlines permit).

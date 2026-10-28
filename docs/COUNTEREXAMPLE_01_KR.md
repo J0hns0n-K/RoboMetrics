@@ -29,3 +29,9 @@ node scripts/run-scenario.mjs experiments/reference-greedy-detour.json data/refe
 ## 학생이 이어서 할 일
 
 두 경로를 지도에서 따라가며, Greedy가 어디에서 더 돌아가는지 본인 말로 설명한다. 현재 지도·사례 선정·코드·실행·최초 해설은 AI 작업이며 학생의 관찰 답변은 아직 받지 않았다. 실제 답변이 생긴 뒤 Contribution Log에 구분해서 기록한다.
+
+## 실행 증거
+
+AI가 clean source `87ae90e391d36a72d62c78827664c6bf288172ee`에서 재실행했다. 원시 경로와 예산별 실패/성공은 `data/reference/greedy-detour-run-01.json`, 테스트 원문은 `data/reference/counterexample-tests.tap`, 검증 메타데이터는 `data/reference/greedy-detour-validation.json`이다. 원래 11개와 새 반례 회귀 검사 2개를 합친 13개 테스트가 모두 통과했다.
+
+충분한 예산에서 A*는 이동 8번/검토 20칸, Greedy는 이동 12번/검토 14칸, Dijkstra는 이동 8번/검토 20칸이었다. AI는 원시 결과의 실제 경로를 그대로 사용해 두 경로를 비교하는 채팅 그림을 준비했다. 그림의 숫자는 이동 순서이며 검토 순서가 아니다. 학생의 관찰·해석은 아직 수집 전이다.

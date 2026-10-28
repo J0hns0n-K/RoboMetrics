@@ -64,6 +64,14 @@ After the result and AI route explanation, Junmo wrote in his own chat response:
 
 The guided exercise now includes a student-selected environment revision, prior prediction, an assistant-operated matched rerun and the student's post-result explanation. This is distinct from independently written code, algorithm optimization, a general performance gain or physical robot work. The student's selection/prediction/explanation, and the AI's map prompt/transcription/operation/analysis, remain separately attributed.
 
+## AI-selected path-quality counterexample — 2026-10-28
+
+An assistant search selected the first qualifying 5×5 generated map, seed 260 at density .28, where Greedy returns a longer valid path while examining fewer nodes. Selection occurred after seeing outcomes; it is an explanatory counterexample, not student discovery, a blind preregistered result, or a random sample for general performance estimates. Selection protocol and map are in `COUNTEREXAMPLE_01_KR.md` and `experiments/reference-greedy-detour.json`.
+
+Reproduction on clean source `87ae90e391d36a72d62c78827664c6bf288172ee` gave A*: 8 moves/20 examined nodes; Greedy: 12/14; Dijkstra: 8/20. The valid eight-move route achieves the Manhattan lower bound between opposite corners. At budget 14 Greedy succeeds and A* exceeds budget; at budget 20 both succeed with different route lengths. Thus budgeted success and route optimality differ on this case, without changing the original planner.
+
+All 13 tests passed, including two new AI-authored counterexample regressions. Raw run, TAP and provenance are in `data/reference/greedy-detour-run-01.json`, `counterexample-tests.tap` and `greedy-detour-validation.json`. AI prepared a visual comparison directly from returned path coordinates. Student analysis of this new example remains pending.
+
 ## Student report sections to complete later
 
 1. Student's own question and prior prediction, with timestamp/commit.
