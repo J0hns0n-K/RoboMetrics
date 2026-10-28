@@ -76,6 +76,18 @@ After that guided comparison, Junmo volunteered a different route: **down 3, rig
 
 The student's contribution is the alternative path and interpretation after prior instruction; AI supplied the original example and operated/formalized verification. No student algorithm implementation or original discovery of the counterexample is claimed. The verified distinction is that an optimal eight-move path exists while the unchanged Greedy returns twelve moves. Raw verification is in `data/guided/task-04-route-check.json`. Further algorithm comparison can preserve the existing map rather than removing walls.
 
+## Full paired matrix — 2026-10-28
+
+Before the full run, Junmo expected A* to return shorter paths based on prior guided examples and said he did not understand success frequency. After the assistant clarified the metric, he explicitly replied **아직 모르겠어** about which policy would succeed on more maps. The protocol preserves both responses. The initial A* answer must not be represented as a falsified directional success-rate hypothesis.
+
+AI-authored orchestration preserves the original planner and benchmark, adds rejected-map/seed accounting and checks identical maps across budgets within each density. It records separate denominators for each policy's successful-route mean, common-success route comparisons and optimal-within-budget counts. These method additions are AI support, not student-written implementation.
+
+The original 16×12/.12/.19/.28/75/120/180/300/30-solvable-map conditions were run on clean source `2dda59173bfc99ce0c9ad418f3724edf621d6a1e`; all 16 tests passed. There are 90 density-specific cohort entries reused for 360 map/budget conditions and 720 A*/Greedy policy calls. These are not independent maps/trials of those larger counts. Density-specific rejection totals are 0/30 candidates, 4/34 and 26/56; accepted seed cohorts can differ between densities.
+
+At density .19/budget 120, A* succeeds on 15/30 and Greedy 30/30. On the common 15 successes only, mean moves are 26 and 27.6. At budget 300 on the same 30 maps, both succeed and mean moves are 26.0667 vs 28.4. Thus more budgeted successes and shorter returned routes are distinct properties in this sample. These findings apply to this fixed-seed reachable-only cohort and the current implementation, including FIFO ties; they do not establish general superiority.
+
+Raw rows, seed audits, CSV, TAP and SHA256 manifest are in `data/batch/`; the full table is `MATRIX_RESULTS.md`. Three post-hoc AI-selected reports preserve complete paths and show an A* budget failure, a longer Greedy route (40 vs 26), and a map where both exceed a tight budget despite reachability. Case reproduction matches recorded metrics; these replays are not additional independent samples. Student interpretation of the full results remains pending. This remains an AI-authored engineering record rather than a completed student-authored report or verified EC accomplishment.
+
 ## Student report sections to complete later
 
 1. Student's own question and prior prediction, with timestamp/commit.

@@ -2,6 +2,8 @@
 
 **Simulation only.** No original physical measurements so far.
 
+Execution note, 2026-10-28: the original conditions below are retained. The first full CLI reproduction, sampling audit and explicit common-success denominators are documented in `MATRIX_RUN_KR.md` and `MATRIX_RESULTS.md`. Rejected-map counts/seeds are now recorded by the AI-authored wrapper; the original planner and benchmark are unchanged. This original v0 text remains a historical protocol, not a claim that all later analyses or student responses were preregistered on Oct 27.
+
 ## Pre-registered independent variables
 1. Obstacles: density 0.12, 0.19, 0.28 (generated on 16×12 grid)
 2. Expansion budgets: 75, 120, 180, 300 expanded nodes

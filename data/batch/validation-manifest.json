@@ -1,0 +1,42 @@
+{
+  "label": "AI-OPERATED REFERENCE-PROTOCOL MATRIX WITH RECORDED STUDENT INPUT",
+  "dateSeoul": "2026-10-28",
+  "sourceCommit": "2dda59173bfc99ce0c9ad418f3724edf621d6a1e",
+  "execution": {
+    "timestamp": "2026-10-28T09:22:41.967Z",
+    "sourceCommit": "2dda59173bfc99ce0c9ad418f3724edf621d6a1e",
+    "workspaceDirty": false,
+    "declaredOperator": "AI assistant",
+    "studentExecutionIndependentlyVerified": false,
+    "node": "v24.22.1",
+    "platform": "win32/x64",
+    "protocolSha256": "43e994ae7470b97584a92b438ebad054485381093f6ab379b9a689a174ef5dec",
+    "coreSha256": "6efb7a36d4abde7c0ea82c5c9bc1aaf51eae01d53c4ed0365f9151d654fc1686",
+    "matrixRunnerSha256": "ce5fd3ac918d7e69d6a9a7fc3965bc8d7d5622ba1ccefec97edac91a8ddf24a6"
+  },
+  "counts": {
+    "densitySpecificCohortEntries": 90,
+    "pairedMapBudgetConditions": 360,
+    "policyRuns": 720
+  },
+  "tests": {
+    "total": 16,
+    "passed": 16,
+    "failed": 0
+  },
+  "artifacts": {
+    "data/batch/early-matrix-run-01.json": "3123d5882ab8856966b0834414a441750fdd3086633837ad4112edf8526af713",
+    "data/batch/early-matrix-run-01.csv": "67faf1a17da1ad8e94313215a84deda10015fde33872265fe4bfe1ad07a21ecb",
+    "data/batch/matrix-tests.tap": "ed8e329009fa48bd54209492640d8940c3dc737f6c00979a8cdfd471cd50641f",
+    "data/batch/failure-reports.json": "3fb8bdd1aa315b295cb225cb492eaef0fb37f58b9f6694aa3d28957d9dde9520"
+  },
+  "attribution": "Student supplied pre-run path-quality expectation and explicitly no directional success-frequency forecast. Tooling, protocol conditions, sampling audit, execution, case selection and current interpretations are AI support. Student post-result interpretation is pending.",
+  "dataIntegrity": {
+    "policyRowsChecked": 720,
+    "expandedWithinBudget": true,
+    "successfulAstarEqualsReference": true,
+    "successfulRoutesAtLeastReferenceLength": true,
+    "failedPathMetricsNull": true,
+    "allFailuresBudgetExceeded": true
+  }
+}

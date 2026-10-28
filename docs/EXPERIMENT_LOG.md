@@ -68,6 +68,16 @@ Browser smoke export: `data/reference/browser-benchmark.json`, seed 20261027, de
 - Student contribution: proposed route and the observation that removing a wall is unnecessary for the existence of an optimal path, after the guided comparison. AI contribution: supplied original example, transcribed coordinates, operated verification and wrote the formal lower-bound/scope explanation. No algorithm implementation change or original counterexample discovery claimed.
 - The key distinction is existence of an optimal route (8) versus the route the unchanged Greedy implementation selected (12). Further work can use the unchanged map to compare algorithms without altering the environment.
 
+## 2026-10-28 full reference-protocol matrix — recorded student input, AI operation
+
+- Student initially expected A* to provide shorter routes, based on prior examples, while saying the meaning of success frequency was unclear. After clarification, the exact success-frequency response was `아직 모르겠어`. Both responses are preserved in the protocol; there is no directional success-frequency hypothesis to reject.
+- Source/protocol commit before execution: `2dda59173bfc99ce0c9ad418f3724edf621d6a1e`; clean workspace, Node v24.22.1, Windows x64. Original core hash unchanged. All 16 tests passed.
+- Conditions: three generation densities .12/.19/.28 × budgets 75/120/180/300, 30 solvable maps per density, 16×12, base seed 20261027. Same maps within each density across policies and budgets. 90 density-specific cohort entries reused for 360 map/budget pairs and 720 A*/Greedy runs; these are not independent 360 maps or 720 trials.
+- Raw JSON/CSV, TAP, SHA256 manifest: `data/batch/`. Full table: `docs/MATRIX_RESULTS.md`. Rejected candidates: .12=0 of 30 checked, .19=4 of 34, .28=26 of 56. Reachable-only selection remains a validity limit; accepted cohorts can differ between densities.
+- Example at .19/budget 120: A* succeeds 15/30, Greedy 30/30. On the shared 15 successes, mean moves are 26 vs 27.6. At .19/budget 300, both succeed 30/30; mean moves 26.0667 vs 28.4 on the same 30 maps. Per-policy success-conditioned means are also retained with explicit denominators, not treated as identical subsets when rates differ.
+- Three AI-selected post-hoc case reports preserve full paths and matched metrics: seed 20261028/.12/budget 75 (A* budget failure, Greedy succeeds at 26 moves); seed 20261046/.28/budget 300 (A* 26 moves, Greedy 40); the same dense seed at budget 75 (both budget failures despite reference reachability). Additional replays are validation, not new independent trials.
+- Matrix tooling, audit, operation and current interpretation are AI support. Student expectation/uncertainty is actual pre-run input; student post-result interpretation and independently written implementation remain pending. FIFO tie-breaking, finite budgets, conditional selection and success-conditioned summaries limit generalization. No physical performance measured.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
