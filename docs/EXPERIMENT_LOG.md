@@ -171,6 +171,15 @@ Next task: retain the current rule-2/budget-300 report and click JSON save to pr
 - This is AI validation of the downloaded cohort, not additional trials or independently observed browser operation. Rule-2 raw contents have not been inspected or replayed; accepted-seed matching, unchanged Greedy rows, rule-2 success count and common-success lengths remain pending.
 - Next user action: retain the current rule-2 settings/report and click JSON save. Preserve that file before final paired validation. The registered protocol remains unchanged.
 
+## 2026-10-28 Registered follow-up paired files validated
+
+- Junmo replied **저장됨** after the rule-2 export task. The assistant located the expected download and preserved exact bytes as `data/browser-reports/closer-goal-seed20262027-budget300-report-01.json`.
+- Paired validation record: `data/browser-reports/seed20262027-budget300-paired-validation-01.json`. Both full benchmark payloads reproduce, registered core/UI hashes match, all accepted seeds match, and Greedy rows are unchanged. All 30 reference and 60 A* metric rows were checked; successful A* paths are valid and shortest.
+- Both rules succeed 30/30 with mean moves 26. Mean examined nodes: FIFO 117.76666666666667, closer-goal 33.8; exact reduction approximately 71.30%. Rule 2 examines fewer nodes on all 30 maps, with zero ties or regressions in this metric. Common-success path-length differences: zero; no claim of identical paths.
+- The student's pre-run direction is supported on this cohort. This is not universal superiority, measured runtime/energy improvement or additional independent samples from replay. Sampling remains 30 accepted from 32 candidates, with rejected seeds 20262039 and 20262057. The pre-run protocol is unchanged.
+- User reports and raw content checks are distinct: AI performed ingestion, replay and analysis; browser source revisions stay null and physical click/operator was not independently observed. Full methods and limits are in `docs/TIE_BREAK_VALIDATION_02_RESULTS.md`.
+- Next proposed step: student selects and then designs a structured obstacle case (goal-side dead end or narrow corridor), followed by a scoped pre-run expectation. No choice, map or result is yet attributed to the student.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

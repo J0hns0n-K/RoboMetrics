@@ -1,0 +1,673 @@
+{
+  "label": "SYNTHETIC SIMULATION — NOT PHYSICAL ROBOT DATA",
+  "date": "2026-10-27 starter engine",
+  "configuration": {
+    "seed": 20262027,
+    "runs": 30,
+    "width": 16,
+    "height": 12,
+    "density": 0.19,
+    "maxExpansions": 300,
+    "astarTieBreak": "closer-goal",
+    "neighborMode": "4-neighbor",
+    "obstacles": "static / fully known",
+    "sampling": "solvable only; rejection sample",
+    "algorithms": [
+      "astar",
+      "greedy"
+    ]
+  },
+  "summary": {
+    "astar": {
+      "successRate": 1,
+      "meanPathLength": 26,
+      "meanRelativeLength": 1,
+      "meanExpanded": 33.8,
+      "successful": 30
+    },
+    "greedy": {
+      "successRate": 1,
+      "meanPathLength": 27.4,
+      "meanRelativeLength": 1.0538461538461537,
+      "meanExpanded": 31.3,
+      "successful": 30
+    }
+  },
+  "rows": [
+    {
+      "trial": 1,
+      "seed": 20262028,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 27,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 27,
+          "relativeLength": 1
+        }
+      }
+    },
+    {
+      "trial": 2,
+      "seed": 20262029,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 31,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 28,
+          "expanded": 29,
+          "relativeLength": 1.0769230769230769
+        }
+      }
+    },
+    {
+      "trial": 3,
+      "seed": 20262030,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 35,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 28,
+          "expanded": 32,
+          "relativeLength": 1.0769230769230769
+        }
+      }
+    },
+    {
+      "trial": 4,
+      "seed": 20262031,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 34,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 28,
+          "expanded": 32,
+          "relativeLength": 1.0769230769230769
+        }
+      }
+    },
+    {
+      "trial": 5,
+      "seed": 20262032,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 29,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 29,
+          "relativeLength": 1
+        }
+      }
+    },
+    {
+      "trial": 6,
+      "seed": 20262033,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 31,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 28,
+          "expanded": 30,
+          "relativeLength": 1.0769230769230769
+        }
+      }
+    },
+    {
+      "trial": 7,
+      "seed": 20262034,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 43,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 28,
+          "expanded": 44,
+          "relativeLength": 1.0769230769230769
+        }
+      }
+    },
+    {
+      "trial": 8,
+      "seed": 20262035,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 30,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 28,
+          "expanded": 29,
+          "relativeLength": 1.0769230769230769
+        }
+      }
+    },
+    {
+      "trial": 9,
+      "seed": 20262036,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 30,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 28,
+          "expanded": 29,
+          "relativeLength": 1.0769230769230769
+        }
+      }
+    },
+    {
+      "trial": 10,
+      "seed": 20262037,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 28,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 28,
+          "relativeLength": 1
+        }
+      }
+    },
+    {
+      "trial": 11,
+      "seed": 20262038,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 31,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 31,
+          "relativeLength": 1
+        }
+      }
+    },
+    {
+      "trial": 12,
+      "seed": 20262040,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 30,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 28,
+          "expanded": 29,
+          "relativeLength": 1.0769230769230769
+        }
+      }
+    },
+    {
+      "trial": 13,
+      "seed": 20262041,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 29,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 29,
+          "relativeLength": 1
+        }
+      }
+    },
+    {
+      "trial": 14,
+      "seed": 20262042,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 62,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 28,
+          "expanded": 31,
+          "relativeLength": 1.0769230769230769
+        }
+      }
+    },
+    {
+      "trial": 15,
+      "seed": 20262043,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 40,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 32,
+          "expanded": 37,
+          "relativeLength": 1.2307692307692308
+        }
+      }
+    },
+    {
+      "trial": 16,
+      "seed": 20262044,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 28,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 28,
+          "relativeLength": 1
+        }
+      }
+    },
+    {
+      "trial": 17,
+      "seed": 20262045,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 32,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 32,
+          "relativeLength": 1
+        }
+      }
+    },
+    {
+      "trial": 18,
+      "seed": 20262046,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 27,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 27,
+          "relativeLength": 1
+        }
+      }
+    },
+    {
+      "trial": 19,
+      "seed": 20262047,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 27,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 27,
+          "relativeLength": 1
+        }
+      }
+    },
+    {
+      "trial": 20,
+      "seed": 20262048,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 29,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 29,
+          "relativeLength": 1
+        }
+      }
+    },
+    {
+      "trial": 21,
+      "seed": 20262049,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 30,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 28,
+          "expanded": 29,
+          "relativeLength": 1.0769230769230769
+        }
+      }
+    },
+    {
+      "trial": 22,
+      "seed": 20262050,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 31,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 28,
+          "expanded": 29,
+          "relativeLength": 1.0769230769230769
+        }
+      }
+    },
+    {
+      "trial": 23,
+      "seed": 20262051,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 28,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 28,
+          "relativeLength": 1
+        }
+      }
+    },
+    {
+      "trial": 24,
+      "seed": 20262052,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 30,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 30,
+          "relativeLength": 1
+        }
+      }
+    },
+    {
+      "trial": 25,
+      "seed": 20262053,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 38,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 28,
+          "expanded": 31,
+          "relativeLength": 1.0769230769230769
+        }
+      }
+    },
+    {
+      "trial": 26,
+      "seed": 20262054,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 66,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 34,
+          "expanded": 49,
+          "relativeLength": 1.3076923076923077
+        }
+      }
+    },
+    {
+      "trial": 27,
+      "seed": 20262055,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 35,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 28,
+          "expanded": 31,
+          "relativeLength": 1.0769230769230769
+        }
+      }
+    },
+    {
+      "trial": 28,
+      "seed": 20262056,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 33,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 28,
+          "expanded": 33,
+          "relativeLength": 1.0769230769230769
+        }
+      }
+    },
+    {
+      "trial": 29,
+      "seed": 20262058,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 33,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 33,
+          "relativeLength": 1
+        }
+      }
+    },
+    {
+      "trial": 30,
+      "seed": 20262059,
+      "referenceLength": 26,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 37,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "pathLength": 26,
+          "expanded": 37,
+          "relativeLength": 1
+        }
+      }
+    }
+  ],
+  "browserExport": {
+    "generatedAtUTC": "2026-10-28T12:01:17.550Z",
+    "sourceCommit": null,
+    "provenance": "Browser demonstration; exact source revision and execution operator are not independently recorded here. Use the commit-bound CLI outputs for research provenance."
+  }
+}
