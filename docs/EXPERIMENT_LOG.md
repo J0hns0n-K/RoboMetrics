@@ -200,6 +200,15 @@ Next task: retain the current rule-2/budget-300 report and click JSON save to pr
 - Scenario changed to ready only after recording this expectation. Geometry and budget 300 remain fixed. The assistant has not called a planner on this selected map before recording/committing the forecast.
 - AI will supply a paired fixed-map evaluator because the existing scenario runner uses FIFO only. It must explicitly apply both tie rules, validate paths and shortest lengths, and preserve failure reasons. Any implementation checks use previously known controls, not an unrecorded run of the selected map.
 
+## 2026-10-29 Structured comparison executed on committed sources
+
+- Qualitative forecast **비슷할 것 같아** was committed first in `5b3e4187de61173af4567ed66faddadad0d41707`. AI added `scripts/compare-fixed-ties.mjs` and three known-map integration controls; all 23 tests pass. The selected map was not a fixture in those tests.
+- AI executed the ready scenario on source `e765e5b910c63bdfc5c2c38e35f3b482e74755e8`, with experimental inputs committed and unrelated practice-file changes declared. Core and original scenario runner remain unchanged.
+- At budget 300 both A* rules succeed, return the same shortest ten-move path and examine 15 nodes. Saved examined nodes: zero. This is compatible with qualitative similarity; no exact-equality forecast or numerical equivalence tolerance is invented.
+- One hand-constructed case shows no reduction here, limiting an always-fewer-node claim without establishing worse behavior or universal equality. AI explanation of primary f scores is separate from student reasoning; student post-result interpretation is still pending.
+- Artifacts: `data/structured/goal-side-dead-end-04-run-01.json`, `fixed-tie-tests-01.tap`, `goal-side-dead-end-04-validation-01.json`. Full paths, forecast/source commits, canonical Git-blob hashes and roles are preserved. This is AI-operated synthetic validation, not student-run hardware work or a representative random sample.
+- Next task: ask the student whether one may now claim rule 2 reduces examined nodes on every map, with a short reason scoped to the observed equal-count case.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

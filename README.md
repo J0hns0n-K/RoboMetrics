@@ -38,7 +38,7 @@ After Junmo reported saving, the downloaded [rule-2/budget-300 JSON](data/browse
 
 ## Reproducibility, scope and contributions
 
-- **Checks:** the archived demo acceptance suite passes 20 tests. Algorithm audits cover all 1,024 obstacle layouts of a small 4×3 grid against an independently written BFS; compatibility checks reproduce 720 historical A*/Greedy metrics.
+- **Checks:** the latest [fixed-map validation suite](data/structured/fixed-tie-tests-01.tap) passes 23 tests; the earlier demo acceptance archive retains its 20-test result. Algorithm audits cover all 1,024 obstacle layouts of a small 4×3 grid against an independently written BFS; compatibility checks reproduce 720 historical A*/Greedy metrics.
 - **Evidence:** [protocol](docs/EXPERIMENT_PROTOCOL.md), [raw baseline data](data/batch/), [raw tie-rule data](data/tie-break/), source revisions, hash manifests and [experiment log](docs/EXPERIMENT_LOG.md) support the numerical claims.
 - **Attribution:** the initial scaffold and subsequent implementation, automated tests and archived batch execution are AI-authored or AI-operated. Junmo's documented contributions include guided choices, parameter edits, a manually supplied shortest route, interpretations and the demo-default choice. The [contribution log](docs/CONTRIBUTION_LOG.md) separates these roles; this overview is AI-assisted writing.
 - **Limits:** static, fully known, four-connected unit-cost grids; reachable-only sampling; fixed seed cohorts. Tie-breaking is established prior work. These results do not establish a universal winner or physical robot performance.
@@ -47,9 +47,13 @@ After Junmo reported saving, the downloaded [rule-2/budget-300 JSON](data/browse
 
 Junmo predicted before execution that rule 2 would again examine fewer nodes. The [registered follow-up](experiments/tie-break-validation-02.protocol.json) fixes base seed 20262027, density .19, budget 300 and 30 reachable maps. Both downloaded files now pass AI replay and paired checks: both rules find shortest routes on 30/30 maps, mean moves are 26.00 for each, and mean examined nodes change from 117.77 to 33.80, about 71.3% lower. Rule 2 examines fewer nodes on every map in this cohort. This supports the recorded direction on these maps; it does not establish universal superiority. The [follow-up record](docs/TIE_BREAK_VALIDATION_02_RESULTS.md) links raw files, hashes, source checks and provenance limits, separating the student's prediction/readings from AI validation.
 
+## Where the reduction did not appear
+
+Junmo selected a goal-side dead end, chose a four-cell branch in the AI-proposed 7×3 layout, and predicted similar examined-node counts before execution. After that forecast was committed, AI implemented and operated a paired fixed-map evaluator. Both rules found a shortest ten-move route and examined 15 nodes at budget 300: no reduction in this case. This is compatible with the qualitative expectation and limits an assertion that the alternative always examines fewer nodes; it does not show that the alternative is worse. The [structured-case record](docs/STRUCTURED_MAP_TASK_KR.md) links full paths, source revisions, tests and attribution.
+
 ## Next research step
 
-Challenge the random-map result with a deliberately structured obstacle layout. Junmo selected a goal-side dead end, chose a four-cell branch in the AI-proposed 7×3 layout, and predicted similar examined-node counts for the two rules before execution. The [guided design worksheet](docs/STRUCTURED_MAP_TASK_KR.md) records this qualitative expectation without inventing a numerical equivalence threshold; results are pending. The planned robotics extension introduces body geometry, differential-drive motion, waypoint tracking and sensor/actuator uncertainty. Matched physical trials depend on obtaining and testing hardware; no physical measurements have been collected. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
+Explain the structured result and refine the conditions under which a different tie order helps, retaining equal or unfavorable cases alongside gains. The planned robotics extension introduces body geometry, differential-drive motion, waypoint tracking and sensor/actuator uncertainty. Matched physical trials depend on obtaining and testing hardware; no physical measurements have been collected. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
 
 ## Run and inspect
 

@@ -126,7 +126,11 @@ Junmo responded **2가 적을 것 같아** when asked for a pre-run expectation 
 
 ## Structured-map follow-up design
 
-Junmo selected **1번**, a goal-side dead end, from two proposed patterns. AI supplied a 7×3 base layout and offered dead-end lengths of 2 or 4 open cells immediately right of S. On 2026-10-29 he answered **4**, fixing the four-cell candidate. This is guided family/parameter selection; no independent full-map authorship, code change or scoped prediction is inferred. The design draft and worksheet are `experiments/goal-side-dead-end.design.json` and `STRUCTURED_MAP_TASK_KR.md`; selected geometry and budget 300 are in `experiments/goal-side-dead-end-04.scenario.json`, which remains awaiting-prediction. The next task is a scoped expectation for the two A* tie rules. No planner was called for the candidates or selected map during preparation, and no result is claimed.
+Junmo selected **1번**, a goal-side dead end, then **4** for branch length in the AI-proposed 7×3 layout. He predicted **비슷할 것 같아** for examined-node counts, without a numerical tolerance or rationale. This forecast was committed in `5b3e4187de61173af4567ed66faddadad0d41707` before execution; no complete independent map or code authorship is inferred.
+
+AI supplied a new explicit paired evaluator and three known-map integration tests, bringing the passing suite to 23. The selected scenario was executed separately on committed source `e765e5b910c63bdfc5c2c38e35f3b482e74755e8`. At budget 300, both rules succeed with the same shortest ten-move path and 15 examined nodes. This is compatible with qualitative similarity, and demonstrates no reduction in this case. It does not show a regression or universal equivalence. Both rules prioritize the same primary f score; the top branch's f=6 precedes the first downward step's f=8, and all 15 traversable cells are examined here. This explanation is AI-authored; student interpretation remains pending.
+
+Full paths, TAP, forecast/source commits, source/artifact hashes and attribution are preserved under `data/structured/` and linked in `STRUCTURED_MAP_TASK_KR.md`. The core and original runner were not changed. The unrelated practice-file edit is declared; student independent operation, measured runtime/energy or physical performance is not claimed.
 
 ## Student report sections to complete later
 

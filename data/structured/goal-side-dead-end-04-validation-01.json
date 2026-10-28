@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "label": "AI IMPLEMENTATION AND EXECUTION OF GUIDED FOUR-CELL DEAD-END COMPARISON",
+  "dateSeoul": "2026-10-29",
+  "forecastCommit": "5b3e4187de61173af4567ed66faddadad0d41707",
+  "sourceCommit": "e765e5b910c63bdfc5c2c38e35f3b482e74755e8",
+  "studentPredictionVerbatim": "비슷할 것 같아",
+  "forecastInterpretation": "Qualitative similarity only; no exact-equality forecast or numerical tolerance was supplied. Observed equality is compatible with the stated expectation.",
+  "sourceInputsDirty": false,
+  "workspaceStatus": "M practice/02-planning-budget.mjs",
+  "sourceHashesGitBlobs": {
+    "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+    "scripts/compare-fixed-ties.mjs": "0af9ce44b2fb4113b5184fa3260fcf06c21f3c6d4aff6f83ca4bb7edef832028",
+    "experiments/goal-side-dead-end-04.scenario.json": "198985c7e962e4d24a5c641c4c2b1c9464c1666afbfe8f9e637f9c1cb5fe1e5c",
+    "test/fixed-ties.test.mjs": "24bedf6106fae2cdab14006154a2a9c086befc305bd6d76f27c8fc1bc0201110"
+  },
+  "artifacts": {
+    "data/structured/goal-side-dead-end-04-run-01.json": "8376fda726ef98eac94ff5ab684978e8b643a8329513e476d8654f5f2100d862",
+    "data/structured/fixed-tie-tests-01.tap": "586f547902498a961bc83ae282227177db2932cecaacac2b33de7b0fad99b65b"
+  },
+  "tests": {
+    "total": 23,
+    "passed": 23,
+    "failed": 0,
+    "reporter": "tap",
+    "scope": "Existing suite plus three new AI-authored integration controls; selected dead-end map is evaluated separately after source commit."
+  },
+  "outcome": {
+    "budget": 300,
+    "fifo": {
+      "success": true,
+      "moves": 10,
+      "examined": 15
+    },
+    "closerGoal": {
+      "success": true,
+      "moves": 10,
+      "examined": 15
+    },
+    "savedExaminedNodes": 0,
+    "traversableCells": 15,
+    "pathsIdentical": true
+  },
+  "provenance": "Student selected an AI-proposed pattern and length and supplied a pre-run qualitative expectation. AI wrote the comparison helper/tests, executed the committed scenario and authored the initial analysis. This is one synthetic hand-constructed case, not independently operated student code or an estimate of general performance. Equality demonstrates no reduction in this case; it does not show the alternative is worse."
+}

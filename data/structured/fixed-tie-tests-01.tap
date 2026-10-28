@@ -1,0 +1,148 @@
+TAP version 13
+# Subtest: all 1024 obstacle configurations of a 4x3 grid agree with independent BFS
+ok 1 - all 1024 obstacle configurations of a 4x3 grid agree with independent BFS
+  ---
+  duration_ms: 16.3328
+  type: 'test'
+  ...
+# Subtest: exact expansion budget includes examining the goal
+ok 2 - exact expansion budget includes examining the goal
+  ---
+  duration_ms: 1.7758
+  type: 'test'
+  ...
+# Subtest: fixed-map runner distinguishes path length from computation budget
+ok 3 - fixed-map runner distinguishes path length from computation budget
+  ---
+  duration_ms: 0.7683
+  type: 'test'
+  ...
+# Subtest: scenario parser rejects unfinished attribution, malformed maps, and invalid budgets
+ok 4 - scenario parser rejects unfinished attribution, malformed maps, and invalid budgets
+  ---
+  duration_ms: 0.8838
+  type: 'test'
+  ...
+# Subtest: unreachable scenarios preserve failure reason and null length ratios
+ok 5 - unreachable scenarios preserve failure reason and null length ratios
+  ---
+  duration_ms: 0.3457
+  type: 'test'
+  ...
+# Subtest: open 3x3 grid: shortest path is Manhattan distance 4
+ok 6 - open 3x3 grid: shortest path is Manhattan distance 4
+  ---
+  duration_ms: 2.3968
+  type: 'test'
+  ...
+# Subtest: blocked goal is unreachable and explicit
+ok 7 - blocked goal is unreachable and explicit
+  ---
+  duration_ms: 0.2483
+  type: 'test'
+  ...
+# Subtest: budget limit is distinguishable from unreachable
+ok 8 - budget limit is distinguishable from unreachable
+  ---
+  duration_ms: 0.2037
+  type: 'test'
+  ...
+# Subtest: deterministic map and deterministic search
+ok 9 - deterministic map and deterministic search
+  ---
+  duration_ms: 2.5167
+  type: 'test'
+  ...
+# Subtest: A* path is optimal on sampled solvable static grids
+ok 10 - A* path is optimal on sampled solvable static grids
+  ---
+  duration_ms: 9.4211
+  type: 'test'
+  ...
+# Subtest: paired benchmark reproducible and metrics within bounds
+ok 11 - paired benchmark reproducible and metrics within bounds
+  ---
+  duration_ms: 4.532
+  type: 'test'
+  ...
+# Subtest: selected seed-260 case gives valid Greedy path longer than a proven shortest path
+ok 12 - selected seed-260 case gives valid Greedy path longer than a proven shortest path
+  ---
+  duration_ms: 4.3354
+  type: 'test'
+  ...
+# Subtest: same counterexample separates budgeted success from path quality
+ok 13 - same counterexample separates budgeted success from path quality
+  ---
+  duration_ms: 0.4628
+  type: 'test'
+  ...
+# Subtest: benchmark exports the selected A* tie rule and applies it without changing paired maps or Greedy
+ok 14 - benchmark exports the selected A* tie rule and applies it without changing paired maps or Greedy
+  ---
+  duration_ms: 7.7772
+  type: 'test'
+  ...
+# Subtest: paired evaluator applies both distinct rules on the known center-obstacle control
+ok 15 - paired evaluator applies both distinct rules on the known center-obstacle control
+  ---
+  duration_ms: 4.1516
+  type: 'test'
+  ...
+# Subtest: paired evaluator preserves exact goal-in-budget boundaries separately for each rule
+ok 16 - paired evaluator preserves exact goal-in-budget boundaries separately for each rule
+  ---
+  duration_ms: 0.3228
+  type: 'test'
+  ...
+# Subtest: paired evaluator retains unreachable outcomes rather than treating them as budget failures
+ok 17 - paired evaluator retains unreachable outcomes rather than treating them as budget failures
+  ---
+  duration_ms: 0.1621
+  type: 'test'
+  ...
+# Subtest: matrix preserves matched maps, original benchmark rows and deterministic sampling audit
+ok 18 - matrix preserves matched maps, original benchmark rows and deterministic sampling audit
+  ---
+  duration_ms: 9.9623
+  type: 'test'
+  ...
+# Subtest: common-success lengths avoid comparing different success subsets on known counterexample
+ok 19 - common-success lengths avoid comparing different success subsets on known counterexample
+  ---
+  duration_ms: 0.3354
+  type: 'test'
+  ...
+# Subtest: sampling audit detects a substituted map seed rather than accepting an unpaired cohort
+ok 20 - sampling audit detects a substituted map seed rather than accepting an unpaired cohort
+  ---
+  duration_ms: 1.626
+  type: 'test'
+  ...
+# Subtest: optional tie-break preserves all 720 recorded default A*/Greedy policy metrics
+ok 21 - optional tie-break preserves all 720 recorded default A*/Greedy policy metrics
+  ---
+  duration_ms: 50.4697
+  type: 'test'
+  ...
+# Subtest: goal-directed ties retain optimality and reachability on every 4x3 obstacle layout
+ok 22 - goal-directed ties retain optimality and reachability on every 4x3 obstacle layout
+  ---
+  duration_ms: 6.5561
+  type: 'test'
+  ...
+# Subtest: small control can keep the same optimal route length with different examined-node counts
+ok 23 - small control can keep the same optimal route length with different examined-node counts
+  ---
+  duration_ms: 0.2394
+  type: 'test'
+  ...
+1..23
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 286.4587

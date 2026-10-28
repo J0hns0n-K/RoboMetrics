@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "label": "AI-OPERATED FIXED-MAP A* TIE COMPARISON; SYNTHETIC GRID",
+  "scenario": {
+    "id": "goal-side-dead-end-length-04",
+    "dateSeoul": "2026-10-29",
+    "status": "ready",
+    "contributionType": "student-declared",
+    "contributor": "Junmo — guided pattern and dead-end length selection",
+    "assistance": "Student selected the pattern, chose length 4 and supplied the qualitative pre-run expectation. AI supplied the base layout/options, transcribed inputs and will implement/operate the paired comparison. No independent full-map design or student code authorship is inferred.",
+    "studentPatternChoiceVerbatim": "1번",
+    "studentLengthChoiceVerbatim": "4",
+    "deadEndLength": 4,
+    "rows": [
+      "S....#G",
+      ".#####.",
+      "......."
+    ],
+    "budgets": [
+      300
+    ],
+    "variants": [
+      "fifo",
+      "closer-goal"
+    ],
+    "prediction": "Student expects similar examined-node counts for FIFO and closer-goal on this selected map. This is qualitative; no numerical tolerance, exact-equality claim or rationale was supplied.",
+    "controls": "Four-connected unit cost, same map/endpoints, Manhattan heuristic, neighbor order, goal handling and budget. Only A* equal-f ordering changes. Budget 300 exceeds the total 21 cells; this comparison isolates examined-node counts without selecting a cutoff after results.",
+    "comparisonScope": "One guided hand-constructed map, not a random-map performance estimate. Compare valid path lengths, examined nodes and failure status; retain equal or unfavorable results.",
+    "executionNote": "Prediction recorded before execution. Explicitly pass each A* tieBreak option in the paired runner; the original fixed-scenario runner evaluates FIFO only. Report actual differences without defining a post-hoc tolerance for similar.",
+    "studentPredictionVerbatim": "비슷할 것 같아"
+  },
+  "conventions": {
+    "primaryScore": "Both A* variants use g+h; only equal-f ordering differs.",
+    "examinedNodes": "Distinct examined nodes, including start and goal; not runtime or energy.",
+    "pathLength": "Number of moves, excluding the start cell.",
+    "reference": "Dijkstra shares the planner; independent BFS audit is in test/audit.test.mjs.",
+    "attribution": "Input retains guided student choices and forecast; evaluator and execution are AI support."
+  },
+  "reference": {
+    "success": true,
+    "reason": null,
+    "path": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        6,
+        0
+      ]
+    ],
+    "pathLength": 10,
+    "expanded": 15
+  },
+  "trials": [
+    {
+      "budget": 300,
+      "results": {
+        "fifo": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              6,
+              0
+            ]
+          ],
+          "pathLength": 10,
+          "expanded": 15,
+          "relativeLength": 1
+        },
+        "closer-goal": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              6,
+              0
+            ]
+          ],
+          "pathLength": 10,
+          "expanded": 15,
+          "relativeLength": 1
+        }
+      },
+      "comparison": {
+        "commonSuccess": true,
+        "savedExaminedNodes": 0,
+        "pathLengthDifference": 0
+      }
+    }
+  ],
+  "execution": {
+    "operator": "AI assistant CLI",
+    "executedAtUTC": "2026-10-28T16:00:50.796Z",
+    "sourceCommit": "e765e5b910c63bdfc5c2c38e35f3b482e74755e8",
+    "sourceInputsDirty": false,
+    "workspaceStatus": "M practice/02-planning-budget.mjs",
+    "sourceHashesGitBlobs": {
+      "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+      "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+      "scripts/compare-fixed-ties.mjs": "0af9ce44b2fb4113b5184fa3260fcf06c21f3c6d4aff6f83ca4bb7edef832028",
+      "experiments/goal-side-dead-end-04.scenario.json": "198985c7e962e4d24a5c641c4c2b1c9464c1666afbfe8f9e637f9c1cb5fe1e5c"
+    },
+    "inputFile": "experiments/goal-side-dead-end-04.scenario.json",
+    "inputWorkingBytesSha256": "198985c7e962e4d24a5c641c4c2b1c9464c1666afbfe8f9e637f9c1cb5fe1e5c",
+    "node": "v24.22.1",
+    "platform": "win32/x64",
+    "provenance": "Student supplied guided choices and forecast; this command is assistant-operated. No student execution or independent map sample is inferred."
+  }
+}
