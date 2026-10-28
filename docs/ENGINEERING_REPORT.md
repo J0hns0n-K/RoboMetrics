@@ -112,7 +112,7 @@ All 20 tests passed. AI-operated browser checks reproduced 15/30 A* successes fo
 
 After instructions to switch only to rule 1 at the same budget 120, Junmo reported **15(50%)** for A* successes. The guided self-reported comparison is therefore FIFO 15/30 versus closer-goal 30/30. Full settings and new raw exports were not independently observed. These reports remain separate from AI acceptance evidence, and no student explanation or universal superiority claim is inferred. The next guided check increases the budget to 300 while retaining rule 1 and the map settings.
 
-After the higher-budget instructions, Junmo reported **30(100%) -> 다음 할 것**. For the instructed FIFO/budget-300 condition, this is a guided self-report of 30/30 successes, compared with 15/30 at budget 120. Full settings and a new raw export were not independently observed. The budget is a ceiling; the student's actual mean examined-node reading is still pending. No student explanation is inferred from the count alone.
+After the higher-budget instructions, Junmo reported **30(100%) -> 다음 할 것**. For the instructed FIFO/budget-300 condition, this is a guided self-report of 30/30 successes, compared with 15/30 at budget 120. Full settings and a new raw export were not independently observed. The budget is a ceiling. Asked for actual mean examined nodes, Junmo first supplied the mean-moves row, then reported **118.77칸** after label/unit clarification. This reads a second metric from the same report and does not add an independent run or student-authored explanation. The next comparison switches to rule 2 at the same budget and map settings.
 
 ## Student report sections to complete later
 

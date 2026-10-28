@@ -109,6 +109,13 @@ Browser smoke export: `data/reference/browser-benchmark.json`, seed 20261027, de
 - Assistant interpretation: the reported higher budget allows all 30 routes to be found in this comparison. A budget of 300 is a ceiling, not a measurement that every map used 300 examined nodes. No general success probability or student-authored explanation is inferred.
 - Next task: retain the current report and read A*'s mean examined-node count across all maps, before changing the tie rule. Do not supply the expected value as a student observation.
 
+## 2026-10-28 Guided reading of actual search work
+
+- Asked for A* mean examined nodes in the existing rule-1/budget-300 report, Junmo initially supplied **26.07번 · 30장 기준**, the mean-moves row. After the assistant distinguished the labels and units, he replied **118.77칸**.
+- Record 118.77 as the self-reported mean examined-node count across all 30 maps in the instructed FIFO/budget-300 condition. This reads another metric from the same report; it is not an additional run or independent dataset. Full settings and a new raw export were not independently observed.
+- The assistant's explanation distinguishes actual mean work from the maximum allowance of 300 nodes. The student has not yet supplied a conceptual explanation in his own words.
+- Next guided task: retain budget 300 and all map settings, select rule 2, rerun the 30-map comparison and report A* mean examined nodes. Its outcome must not be attributed before the student's response.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
