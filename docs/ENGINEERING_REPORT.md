@@ -44,6 +44,8 @@ The student's path-length prediction agrees with the result. After seeing the re
 
 The separate computational interpretation is **AI-written**: path lengths match while examined-node counts differ; FIFO ties make A* examine additional equally scored candidates before the goal. This single guided example does not establish general algorithm superiority or an implementation improvement. No student-authored algorithm change has been made.
 
+On 2026-10-28 the student saved a guided budget edit from 5 to 8 in `practice/02-planning-budget.mjs` and expected A* to succeed before the rerun. AI executed clean source `d8ec3262379930eec7c0cc393fd766a3528fb02a`: both found four-move paths, A* examining 8 nodes and Greedy 5. Budget-5 and budget-8 transcripts/metadata under `data/learning/practice-02-budget-*` retain the unchanged core hash. This connects the student's saved parameter edits to a matched budget-failure/success comparison; outcomes had previously been explained, so this is a learning verification, not a blind new research prediction or student algorithm implementation.
+
 ## Guided exercise 02 — minimum distance increases on a matched obstacle map
 
 AI supplied a 5×3 detour map and explained the wall-free four-move baseline. Before execution, Junmo answered **8** for the obstacle map. Inputs and the prediction were committed in `9aed8478d02ac5ce0e08448333400cacfc375771`; both assistant-operated runs used that clean source. Raw records: `data/guided/task-02-open-run-01.json` and `data/guided/task-02-detour-run-01.json`.

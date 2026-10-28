@@ -21,3 +21,9 @@ AI interpretation: limiting examined nodes can change whether a policy finds a p
 The user reported **저장했어/성공하지 않을까**, expressing the expectation that A* would succeed before this rerun. The observed saved diff changes only `budget = 5` to **`budget = 8`**. The map, movement rules and engine are unchanged.
 
 Preserve the edit and response in a commit before execution. This is a guided expectation/check after earlier examples and an explanation of the same map, not a blind independent prediction. The student saved the parameter edit and supplied the tentative expectation; AI supplied the script, instructions and prior explanations, and operates the software.
+
+## Budget-8 rerun result
+
+AI executed the corrected budget on clean source `d8ec3262379930eec7c0cc393fd766a3528fb02a`. Both policies succeeded with verified four-move paths. A* examined 8 nodes; Greedy examined 5. The engine hash matches the recorded budget-5 run.
+
+Raw stdout and metadata are `data/learning/practice-02-budget-8.stdout.txt` and `data/learning/practice-02-budget-8.json`. The user's expectation agrees with this rerun. Comparing the same map at budget 5 and 8 shows A* changing from budget failure to success; Greedy succeeds in both. The response was elicited after the earlier same-map outcome had been explained, so it remains a guided learning check. No new student post-result interpretation has yet been recorded.
