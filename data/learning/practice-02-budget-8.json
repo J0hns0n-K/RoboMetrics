@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "label": "GUIDED BUDGET RERUN; AI-OPERATED SYNTHETIC GRID",
+  "timestampUtc": "2026-10-28T01:04:30.0825172+00:00",
+  "sourceCommit": "d8ec3262379930eec7c0cc393fd766a3528fb02a",
+  "workspaceDirtyAtExecution": false,
+  "sourceFile": "practice/02-planning-budget.mjs",
+  "sourceSha256": "5e3298ae0a19ffd5ba24fb25b034505a73822d7223c6c78fd0e49d506bdacbdf",
+  "coreSha256": "6efb7a36d4abde7c0ea82c5c9bc1aaf51eae01d53c4ed0365f9151d654fc1686",
+  "node": "v24.22.1",
+  "executedBy": "AI assistant",
+  "studentReport": "저장했어/성공하지 않을까",
+  "guidedExpectation": "A* would succeed",
+  "priorOutcomeAlreadyExplained": true,
+  "blindIndependentPrediction": false,
+  "studentEdit": "budget 5 to 8",
+  "budget": 8,
+  "rows": [
+    "S..",
+    ".#.",
+    "..G"
+  ],
+  "earlierBudgetRun": "data/learning/practice-02-budget-5.json",
+  "matchesPriorCoreHash": true,
+  "stdoutFile": "data/learning/practice-02-budget-8.stdout.txt"
+}

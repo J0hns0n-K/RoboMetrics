@@ -1,0 +1,10 @@
+{
+  "id": "task-01-center-obstacle",
+  "status": "ready",
+  "contributionType": "student-declared",
+  "contributor": "Junmo — scaffolded obstacle choice and prior path-length prediction in chat",
+  "assistance": "AI supplied the 3x3 template, explained four-neighbor movement, and offered obstacle-position and prediction choices. Junmo selected the center cell and 4 moves. AI transcribed this file, selected budgets 4/5/7/8 using the prior reference demonstration, committed the inputs, and will operate the runner. This is not student-authored algorithm code or independently operated software.",
+  "prediction": "Student response before execution: 4번 (minimum path length of 4 moves). No student prediction about algorithm success rates or expansion counts was supplied.",
+  "rows": ["S..", ".#.", "..G"],
+  "budgets": [4, 5, 7, 8]
+}

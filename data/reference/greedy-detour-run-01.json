@@ -1,0 +1,635 @@
+{
+  "schemaVersion": 1,
+  "label": "SYNTHETIC FIXED GRID — NOT PHYSICAL ROBOT DATA",
+  "scenario": {
+    "id": "ai-selected-greedy-detour-seed-260",
+    "status": "ready",
+    "contributionType": "ai-reference",
+    "contributor": "AI assistant — selected explanatory counterexample",
+    "assistance": "AI searched generated maps after seeing their outcomes, selecting the first 5x5 seed with a Greedy path at least four moves longer than A* while examining fewer nodes. Search order: sizes 5x5,6x5,6x6,7x6; seeds 1..5000 per size; density .28. Seed 260 at 5x5 was selected. Map, selection, tests, execution and initial explanation are AI support. No student hypothesis, map design, discovery or implementation is claimed. Budgets were chosen after inspecting the case.",
+    "prediction": "Post-selection reproduction check, not a blind prior prediction: sufficient-budget A* and Dijkstra paths are 8 moves; Greedy is 12. Both paths must be valid. At budget 14 Greedy succeeds and A* exhausts its budget; at 20 both succeed.",
+    "generator": {
+      "seed": 260,
+      "width": 5,
+      "height": 5,
+      "density": 0.28
+    },
+    "rows": [
+      "S....",
+      ".#...",
+      ".....",
+      "...##",
+      "##..G"
+    ],
+    "budgets": [
+      8,
+      14,
+      20,
+      25
+    ]
+  },
+  "authorship": {
+    "declaredType": "ai-reference",
+    "contributor": "AI assistant — selected explanatory counterexample",
+    "assistance": "AI searched generated maps after seeing their outcomes, selecting the first 5x5 seed with a Greedy path at least four moves longer than A* while examining fewer nodes. Search order: sizes 5x5,6x5,6x6,7x6; seeds 1..5000 per size; density .28. Seed 260 at 5x5 was selected. Map, selection, tests, execution and initial explanation are AI support. No student hypothesis, map design, discovery or implementation is claimed. Budgets were chosen after inspecting the case.",
+    "independentlyVerified": false
+  },
+  "conventions": {
+    "pathLength": "Number of moves; start is zero moves.",
+    "expanded": "Distinct nodes removed for examination, INCLUDING start and goal.",
+    "movement": "Four neighbors; unit cost; static fully known obstacles.",
+    "tieBreak": "FIFO insertion order at equal priority; neighbor order right, down, left, up.",
+    "reference": "Dijkstra shares the starter search engine; independent BFS is in test/audit.test.mjs."
+  },
+  "referenceLength": 8,
+  "unlimited": {
+    "astar": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "pathLength": 8,
+      "expanded": 20,
+      "relativeLength": 1
+    },
+    "greedy": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "pathLength": 12,
+      "expanded": 14,
+      "relativeLength": 1.5
+    },
+    "dijkstra": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "pathLength": 8,
+      "expanded": 20,
+      "relativeLength": 1
+    }
+  },
+  "trials": [
+    {
+      "budget": 8,
+      "results": {
+        "astar": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 8,
+          "relativeLength": null
+        },
+        "greedy": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 8,
+          "relativeLength": null
+        },
+        "dijkstra": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 8,
+          "relativeLength": null
+        }
+      }
+    },
+    {
+      "budget": 14,
+      "results": {
+        "astar": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 14,
+          "relativeLength": null
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "pathLength": 12,
+          "expanded": 14,
+          "relativeLength": 1.5
+        },
+        "dijkstra": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 14,
+          "relativeLength": null
+        }
+      }
+    },
+    {
+      "budget": 20,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "pathLength": 8,
+          "expanded": 20,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "pathLength": 12,
+          "expanded": 14,
+          "relativeLength": 1.5
+        },
+        "dijkstra": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "pathLength": 8,
+          "expanded": 20,
+          "relativeLength": 1
+        }
+      }
+    },
+    {
+      "budget": 25,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "pathLength": 8,
+          "expanded": 20,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "pathLength": 12,
+          "expanded": 14,
+          "relativeLength": 1.5
+        },
+        "dijkstra": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "pathLength": 8,
+          "expanded": 20,
+          "relativeLength": 1
+        }
+      }
+    }
+  ],
+  "execution": {
+    "executedBy": "Command operator; student execution is not inferred from a generated file.",
+    "timestamp": "2026-10-28T05:59:51.863Z",
+    "node": "v24.22.1",
+    "platform": "win32/x64",
+    "sourceCommit": "87ae90e391d36a72d62c78827664c6bf288172ee",
+    "workspaceDirty": false,
+    "inputFile": "experiments/reference-greedy-detour.json",
+    "inputSha256": "3e98020b9f048a0a2795fea136adca42e8233f221bc40c790979a46dde2ddf79",
+    "coreSha256": "6efb7a36d4abde7c0ea82c5c9bc1aaf51eae01d53c4ed0365f9151d654fc1686",
+    "runnerSha256": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc"
+  }
+}

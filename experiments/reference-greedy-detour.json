@@ -1,0 +1,11 @@
+{
+  "id": "ai-selected-greedy-detour-seed-260",
+  "status": "ready",
+  "contributionType": "ai-reference",
+  "contributor": "AI assistant — selected explanatory counterexample",
+  "assistance": "AI searched generated maps after seeing their outcomes, selecting the first 5x5 seed with a Greedy path at least four moves longer than A* while examining fewer nodes. Search order: sizes 5x5,6x5,6x6,7x6; seeds 1..5000 per size; density .28. Seed 260 at 5x5 was selected. Map, selection, tests, execution and initial explanation are AI support. No student hypothesis, map design, discovery or implementation is claimed. Budgets were chosen after inspecting the case.",
+  "prediction": "Post-selection reproduction check, not a blind prior prediction: sufficient-budget A* and Dijkstra paths are 8 moves; Greedy is 12. Both paths must be valid. At budget 14 Greedy succeeds and A* exhausts its budget; at 20 both succeed.",
+  "generator": {"seed": 260, "width": 5, "height": 5, "density": 0.28},
+  "rows": ["S....", ".#...", ".....", "...##", "##..G"],
+  "budgets": [8, 14, 20, 25]
+}

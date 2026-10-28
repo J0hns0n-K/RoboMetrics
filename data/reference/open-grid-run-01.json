@@ -1,0 +1,361 @@
+{
+  "schemaVersion": 1,
+  "label": "SYNTHETIC FIXED GRID — NOT PHYSICAL ROBOT DATA",
+  "scenario": {
+    "id": "reference-open-3x3",
+    "status": "ready",
+    "contributionType": "ai-reference",
+    "contributor": "AI assistant",
+    "assistance": "AI-authored scenario and runner. Junmo independently answered 4 moves for this grid in chat; that answer is separate from code authorship.",
+    "prediction": "All three algorithms should find a four-move path on this open grid. Check path length separately from expanded nodes.",
+    "rows": [
+      "S..",
+      "...",
+      "..G"
+    ],
+    "budgets": [
+      4,
+      5,
+      8,
+      9
+    ]
+  },
+  "authorship": {
+    "declaredType": "ai-reference",
+    "contributor": "AI assistant",
+    "assistance": "AI-authored scenario and runner. Junmo independently answered 4 moves for this grid in chat; that answer is separate from code authorship.",
+    "independentlyVerified": false
+  },
+  "conventions": {
+    "pathLength": "Number of moves; start is zero moves.",
+    "expanded": "Distinct nodes removed for examination, INCLUDING start and goal.",
+    "movement": "Four neighbors; unit cost; static fully known obstacles.",
+    "tieBreak": "FIFO insertion order at equal priority; neighbor order right, down, left, up.",
+    "reference": "Dijkstra shares the starter search engine; independent BFS is in test/audit.test.mjs."
+  },
+  "referenceLength": 4,
+  "unlimited": {
+    "astar": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "pathLength": 4,
+      "expanded": 9,
+      "relativeLength": 1
+    },
+    "greedy": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "pathLength": 4,
+      "expanded": 5,
+      "relativeLength": 1
+    },
+    "dijkstra": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "pathLength": 4,
+      "expanded": 9,
+      "relativeLength": 1
+    }
+  },
+  "trials": [
+    {
+      "budget": 4,
+      "results": {
+        "astar": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 4,
+          "relativeLength": null
+        },
+        "greedy": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 4,
+          "relativeLength": null
+        },
+        "dijkstra": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 4,
+          "relativeLength": null
+        }
+      }
+    },
+    {
+      "budget": 5,
+      "results": {
+        "astar": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 5,
+          "relativeLength": null
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "dijkstra": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 5,
+          "relativeLength": null
+        }
+      }
+    },
+    {
+      "budget": 8,
+      "results": {
+        "astar": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 8,
+          "relativeLength": null
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "dijkstra": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 8,
+          "relativeLength": null
+        }
+      }
+    },
+    {
+      "budget": 9,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 9,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5,
+          "relativeLength": 1
+        },
+        "dijkstra": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 9,
+          "relativeLength": 1
+        }
+      }
+    }
+  ],
+  "execution": {
+    "executedBy": "Command operator; student execution is not inferred from a generated file.",
+    "timestamp": "2026-10-27T09:58:22.316Z",
+    "node": "v24.22.1",
+    "platform": "win32/x64",
+    "sourceCommit": "10c99f0d4a1bb29b75e0f04b26333a61d3e72eaa",
+    "workspaceDirty": false,
+    "inputFile": "experiments/reference-open-grid.json",
+    "inputSha256": "edc34dbd6f573f796aa20e8e3eb2f66164a07a8d09b43d53d79c56b5b064c4fd",
+    "coreSha256": "6efb7a36d4abde7c0ea82c5c9bc1aaf51eae01d53c4ed0365f9151d654fc1686",
+    "runnerSha256": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc"
+  }
+}

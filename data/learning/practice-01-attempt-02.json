@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "label": "GUIDED ARITHMETIC CORRECTION; AI-OPERATED; NOT PATH-PLANNING DATA",
+  "timestampUtc": "2026-10-27T11:43:53.5486648+00:00",
+  "sourceCommit": "b49ce5334c7e0971788346906bc6ae5defc1818b",
+  "workspaceDirtyAtExecution": false,
+  "sourceFile": "practice/01-path-change.mjs",
+  "sourceSha256": "17977fdba2463c9433f9f718b6ba6fb3eb367925fcc4882a5975c6041c7bdf0f",
+  "node": "v24.22.1",
+  "executedBy": "AI assistant",
+  "studentReport": "저장했어",
+  "savedInputs": {
+    "before": 8,
+    "after": 10
+  },
+  "earlierUserAnswer": 2,
+  "newIndependentPredictionCollected": false,
+  "assistance": "Target input values, subtraction code and expected result had been explained before the student saved this correction.",
+  "actualChange": 2,
+  "matchesExplainedTarget": true,
+  "priorAttempt": "data/learning/practice-01-attempt-01.json",
+  "stdoutFile": "data/learning/practice-01-attempt-02.stdout.txt"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "task-03-remove-wall-1",
+  "status": "ready",
+  "contributionType": "student-declared",
+  "contributor": "Junmo — guided map-revision choice and prior path-length prediction",
+  "assistance": "AI provided the task-02 detour map, numbered its four walls, and asked which single wall to remove to shorten the route. Junmo answered 1번 벽/4번 before software execution, selecting wall 1 at coordinate (1,0) and predicting four moves. AI transcribed the revision, retained the prior budgets 5/8/9/15 and all other map conditions, and operates the runner. This is a guided environment revision; no student-authored algorithm change or independent software operation is claimed.",
+  "prediction": "Student's verbatim prior answer: 1번 벽/4번 (remove wall 1; minimum path length four moves).",
+  "rows": ["S...G", ".#.#.", "...#."],
+  "budgets": [5, 8, 9, 15]
+}

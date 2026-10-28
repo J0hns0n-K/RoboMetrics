@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "label": "GUIDED ARITHMETIC PRACTICE; AI-OPERATED; NOT PATH-PLANNING DATA",
+  "timestampUtc": "2026-10-27T11:06:27.8097425+00:00",
+  "sourceCommit": "472eafd05a36e2d123b857b1298baf3010ed47a4",
+  "workspaceDirtyAtExecution": false,
+  "sourceFile": "practice/01-path-change.mjs",
+  "sourceSha256": "da11894655025fe44dbd98d51da5159d936cab795178103e7dfac2ade8edf200",
+  "node": "v24.22.1",
+  "executedBy": "AI assistant",
+  "studentReport": "저장했어/2",
+  "savedInputs": {
+    "before": 10,
+    "after": -8
+  },
+  "targetInputs": {
+    "before": 8,
+    "after": 10
+  },
+  "studentPrediction": 2,
+  "actualChange": -18,
+  "predictionMatched": false,
+  "stdoutFile": "data/learning/practice-01-attempt-01.stdout.txt"
+}

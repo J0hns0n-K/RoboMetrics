@@ -1,0 +1,18 @@
+{
+  "label": "AI-SELECTED POST-HOC REFERENCE COUNTEREXAMPLE; NOT STUDENT DISCOVERY",
+  "dateSeoul": "2026-10-28",
+  "sourceCommit": "87ae90e391d36a72d62c78827664c6bf288172ee",
+  "scenarioWorkspaceDirty": false,
+  "coreSha256": "6efb7a36d4abde7c0ea82c5c9bc1aaf51eae01d53c4ed0365f9151d654fc1686",
+  "node": "v24.22.1",
+  "platform": "win32/x64",
+  "scenario": "experiments/reference-greedy-detour.json",
+  "rawRun": "data/reference/greedy-detour-run-01.json",
+  "rawTests": "data/reference/counterexample-tests.tap",
+  "tests": 13,
+  "passed": 13,
+  "failed": 0,
+  "selection": "First qualifying generated map in documented seed/size search; outcomes inspected before selection and reproduction",
+  "studentPriorPredictionCollected": false,
+  "operator": "AI assistant"
+}

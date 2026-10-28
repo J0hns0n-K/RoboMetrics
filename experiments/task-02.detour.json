@@ -1,0 +1,10 @@
+{
+  "id": "task-02-guided-detour",
+  "status": "ready",
+  "contributionType": "student-declared",
+  "contributor": "Junmo — prior path-length prediction only; map supplied by AI",
+  "assistance": "AI supplied the complete 5x3 obstacle map and stated that the wall-free route takes four moves. Before software execution, Junmo answered 8 in chat for this obstacle map. AI transcribed the input, selected teaching budgets 5/8/9/15, and operates the runner. No student map design, algorithm implementation, expansion-count prediction, or independent software operation is claimed.",
+  "prediction": "Student's verbatim response before execution: 8 (minimum path length of eight moves).",
+  "rows": ["S#..G", ".#.#.", "...#."],
+  "budgets": [5, 8, 9, 15]
+}

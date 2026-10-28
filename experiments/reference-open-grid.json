@@ -1,0 +1,10 @@
+{
+  "id": "reference-open-3x3",
+  "status": "ready",
+  "contributionType": "ai-reference",
+  "contributor": "AI assistant",
+  "assistance": "AI-authored scenario and runner. Junmo independently answered 4 moves for this grid in chat; that answer is separate from code authorship.",
+  "prediction": "All three algorithms should find a four-move path on this open grid. Check path length separately from expanded nodes.",
+  "rows": ["S..", "...", "..G"],
+  "budgets": [4, 5, 8, 9]
+}
