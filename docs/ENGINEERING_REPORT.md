@@ -114,6 +114,8 @@ After instructions to switch only to rule 1 at the same budget 120, Junmo report
 
 After the higher-budget instructions, Junmo reported **30(100%) -> 다음 할 것**. For the instructed FIFO/budget-300 condition, this is a guided self-report of 30/30 successes, compared with 15/30 at budget 120. Full settings and a new raw export were not independently observed. The budget is a ceiling. Asked for actual mean examined nodes, Junmo first supplied the mean-moves row, then reported **118.77칸** after label/unit clarification. This reads a second metric from the same report and does not add an independent run or student-authored explanation. The next comparison switches to rule 2 at the same budget and map settings.
 
+For the instructed rule-2/budget-300 rerun, Junmo subsequently reported **36.97칸** for mean examined nodes, compared with his prior rule-1 reading of 118.77. This is a guided self-reported comparison; full settings, current success count and a new export were not independently observed. The assistant's approximately 68.9% reduction calculation concerns node count only. Student interpretation and the next guided rule-2 mean-moves/denominator reading remain pending; no additional independent research dataset is inferred.
+
 ## Student report sections to complete later
 
 1. Student's own question and prior prediction, with timestamp/commit.

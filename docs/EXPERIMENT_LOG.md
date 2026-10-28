@@ -116,6 +116,13 @@ Browser smoke export: `data/reference/browser-benchmark.json`, seed 20261027, de
 - The assistant's explanation distinguishes actual mean work from the maximum allowance of 300 nodes. The student has not yet supplied a conceptual explanation in his own words.
 - Next guided task: retain budget 300 and all map settings, select rule 2, rerun the 30-map comparison and report A* mean examined nodes. Its outcome must not be attributed before the student's response.
 
+## 2026-10-28 Guided rule-2 search-work comparison
+
+- After instructions to select rule 2 while retaining budget 300 and all map settings, rerun and report A* mean examined nodes, Junmo supplied **36.97칸**.
+- This is a guided self-report for the instructed closer-goal/budget-300 condition, compared with the previous FIFO mean of 118.77. Full settings, the current success count and a new raw export were not independently observed. Do not count the report as a new independently verified dataset or infer a student explanation.
+- Assistant calculation from the displayed means: 81.80 fewer examined nodes on average, approximately 68.9% lower. This is a scoped node-count comparison, not measured speed, energy or universal improvement. Archived AI-operated study results remain separate.
+- Next guided task: keep the current settings/report, read A* mean moves and its successful-map denominator, and compare with the previously reported FIFO 26.07 moves across 30 successes. The new reading is pending.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
