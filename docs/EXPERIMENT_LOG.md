@@ -130,6 +130,16 @@ Browser smoke export: `data/reference/browser-benchmark.json`, seed 20261027, de
 - Assistant interpretation is scoped to the instructed cohort and displayed precision: the reported average route length is unchanged while examined nodes decrease. Equal means alone do not establish identical paths or map-by-map equality; the archived study has separate per-row checks.
 - Next task: ask for the student's own one-sentence interpretation referring to both mean route length and examined-node count, limited to these 30 maps. Do not attribute the assistant's explanation as student reasoning.
 
+## 2026-10-28 Student interpretation of paired metrics
+
+After guided metric reading, the assistant's comparison table and explanation, Junmo was asked to interpret both metrics in one sentence, scoped to these 30 maps. He wrote verbatim:
+
+> 1번 규칙 -> 2번 규칙으로 바꾸니까 길을 찾은 지도 수가 100%이고 평균 이동 횟수는 비슷한데 검토 칸 수가 확 줄었어
+
+This is an elicited post-result interpretation, not an independent discovery or pre-run hypothesis. It recognizes route discovery, route length and search work together. Assistant clarification, kept separate from the quote: at budget 300 both rules succeed on 30/30 and both displayed mean route lengths are 26.07, while reported mean examined nodes differ, 118.77 versus 36.97. The increase from 15/30 to 30/30 belongs to the earlier budget-120 comparison. Do not infer a general guarantee, measured runtime/energy improvement or student code authorship. Browser readings remain self-reported; no new export has been inspected.
+
+Next task: retain the current rule-2/budget-300 report and click JSON save to preserve its raw rows. No completed export is claimed before evidence arrives.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

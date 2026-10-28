@@ -50,3 +50,11 @@ When asked for that metric, Junmo first supplied the mean-moves row, **26.07번 
 After those rule-2/budget-300 instructions, Junmo reported **36.97칸**. The reported mean examined-node comparison is therefore FIFO 118.77 versus closer-goal 36.97. Full settings, current success count and a new raw export were not independently observed. The assistant calculates an approximately 68.9% reduction in this reported node-count metric; it is not a runtime/energy measurement or a student-authored interpretation. The next guided task reads mean moves and its denominator from the current report to check route quality alongside search work.
 
 Asked for mean moves and the successful-map denominator from that report, Junmo replied **26.07번 · 30장 기준**. Both rules' reported means are therefore 26.07 moves across 30 successes at the instructed budget 300, alongside reported examined-node means 118.77 and 36.97. This reads another metric from the same report; full settings and a new export were not independently observed. It does not prove identical paths or universal gains. The next task requests the student's own scoped interpretation of the two metrics; the assistant's explanation remains separately attributed.
+
+## Guided student interpretation
+
+After the assistant's table and explanation, Junmo wrote:
+
+> 1번 규칙 -> 2번 규칙으로 바꾸니까 길을 찾은 지도 수가 100%이고 평균 이동 횟수는 비슷한데 검토 칸 수가 확 줄었어
+
+This is his elicited post-result interpretation following guided assistance. It recognizes full success with rule 2, similar route lengths and lower examined-node counts; it is not an independent alternative proposal, pre-run prediction or code contribution. The assistant separately clarifies the scope: at budget 300 both rules succeed on 30/30, and both displayed mean route lengths equal 26.07. The success-count increase occurred at budget 120. The quote is preserved without rewriting that distinction into the student's words. The next task saves the current rule-2/budget-300 JSON; no new export has yet been inspected.
