@@ -1,0 +1,21 @@
+{
+  "id": "early-matrix-2026-10-28",
+  "dateSeoul": "2026-10-28",
+  "sourceProtocol": "docs/EXPERIMENT_PROTOCOL.md — reference protocol committed 2026-10-27",
+  "seed": 20261027,
+  "runs": 30,
+  "width": 16,
+  "height": 12,
+  "densities": [0.12, 0.19, 0.28],
+  "budgets": [75, 120, 180, 300],
+  "studentExpectation": {
+    "initialResponseVerbatim": "A*  / 이때까지 결과를 보면 주로 A* 이 Greedy보다 더 짧은 루트를 만들어줬어. 근데 더 자주 도착경로를 찾는다는게 뭔지 모르겠네",
+    "clarifiedSuccessExpectationVerbatim": "아직 모르겠어",
+    "pathLengthExpectation": "A* tends to provide shorter routes, based on the preceding guided examples.",
+    "budgetedSuccessPrediction": null,
+    "status": "After the assistant distinguished success frequency from route length, the student explicitly did not predict which policy would succeed on more maps. Do not score the initial A* answer as a rejected success-frequency hypothesis."
+  },
+  "attribution": "Original protocol, batch tooling, sampling audit and aggregate implementation are AI assistance. Actual student responses and interpretations are recorded separately. Current execution will be assistant-operated, not an independently student-run study.",
+  "analysisPlan": "Compare budgeted success out of 30 paired solvable maps per density/budget. Retain original success-conditioned means with explicit denominators; compare route length on common successes separately. Record rejected candidate seeds and counts. Within a density reuse maps across all budgets. Different-density cohorts can differ. Do not interpret 360 paired map/budget conditions as 360 independent maps.",
+  "knownPriorEvidence": "Earlier single-map examples and one AI-run density-.19 budget-180 30-map reference were already inspected. This is the first full 12-condition reproduction of the existing reference protocol, not a blind new preregistration of previously unknown methods."
+}
