@@ -88,6 +88,13 @@ Browser smoke export: `data/reference/browser-benchmark.json`, seed 20261027, de
 - Planned representative condition .19/budget 120: successes 15/30→30/30. At budget 300 both complete on the same 30 maps: mean examined nodes 118.7667→36.9667, same mean moves 26.0667. Small 3×3 control: both 4 moves, examined nodes 8→5.
 - Raw JSON/CSV, full paths for post-hoc first differing examples, TAP and artifact hash manifest are in `data/tie-break/`; all 12 conditions including gains/losses are in `docs/TIE_BREAK_RESULTS.md`. Effects are cohort-specific node counts, not runtime/energy, new algorithm invention or student code authorship. Student post-result interpretation pending.
 
+## 2026-10-28 Guided browser result report
+
+- After instructions to use the selected rule 2 with budget 120, click the 30-map comparison and report A*'s success count, Junmo replied verbatim: **30장(100%)**.
+- Record this as a student-reported A* success count of 30/30. The instructed setting was closer-goal/budget 120; the full current settings, button operation and a new raw export were not independently observed in this event.
+- Previously archived AI acceptance runs remain separate. This report does not create a new independently verified dataset or establish a general success probability.
+- Next guided action: select rule 1 (FIFO), keep the other settings fixed, rerun the 30-map comparison and report the A* success count. Do not supply the expected count as the student's observation.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

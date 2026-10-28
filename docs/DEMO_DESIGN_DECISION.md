@@ -28,3 +28,11 @@ AI browser acceptance checks are archived under `data/demo-choice/`. Their exact
 All 20 tests passed. On seed base 20261027, density .19, budget 120 and 30 maps, browser exports show FIFO A*=15/30 and closer-goal A*=30/30, with Greedy unchanged at 30/30. Both exports exactly match core execution for their recorded rule and share identical map seeds. Controls reset the old report and disable export until rerun; reloading restores rule 2. The UI is left ready at rule 2/budget 120, awaiting the student's own button click.
 
 The two browser runs and screenshot are AI verification, not student execution. Browser snapshots intentionally have no invented source SHA; the separate acceptance manifest binds these archived snapshots to the verified code. A future student-operated browser export is a separate event and must not be inferred from these checks.
+
+## Subsequent student report — 2026-10-28
+
+After instructions to set budget 120, run the 30-map comparison with the selected rule 2 and report A*'s success count, Junmo replied verbatim:
+
+> 30장(100%)
+
+This records a guided, self-reported A* result of 30/30. It is separate from the archived AI acceptance checks. The current button operation, full settings and a new raw export were not independently observed, and no independent replication, general success probability or student code authorship is inferred. The next guided comparison switches only the A* tie rule to rule 1 while holding the other settings fixed.
