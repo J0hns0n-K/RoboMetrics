@@ -12,13 +12,15 @@ The instructed conditions are base seed 20262027, 16×12, obstacle-generation pr
 
 | A* tie rule | Reported mean examined nodes | Success count | Mean moves and successful denominator | Raw export verification |
 |---|---:|---|---|---|
-| 1 — FIFO | 117.77 | Not yet reported | Not yet reported | Pending |
-| 2 — Closer-goal | Pending | Pending | Pending | Pending |
+| 1 — FIFO | 117.77 | 30/30, verified file | 26.00 moves over 30 successes, verified file | Archived and replay-checked |
+| 2 — Closer-goal | 33.80 | Not yet reported | Not yet reported | Pending |
 
-After the FIFO instructions, Junmo replied verbatim **117.77칸**. This is a guided self-reported reading. Full settings, actual accepted seeds, success count and raw rows have not yet been independently inspected. Do not infer an outcome for rule 2 or classify the prediction as supported before collecting its result. The assistant has not generated either new-cohort result during preparation of this note.
+After the FIFO instructions, Junmo replied verbatim **117.77칸**. After instructions to save FIFO, change only the tie rule and rerun, he reported **33.80칸** for rule 2. The reported direction agrees with his prior expectation; the assistant calculates approximately 71.3% fewer examined nodes from the displayed means. This preliminary comparison does not yet verify the paired raw files, rule-2 success count or route quality, and it is not a runtime or energy result.
+
+The expected FIFO download was subsequently located and preserved byte-for-byte as [raw JSON](../data/browser-reports/fifo-seed20262027-budget300-report-01.json), with a [validation record](../data/browser-reports/fifo-seed20262027-budget300-report-01.validation.json). It matches the registered configuration, reports 30 A* successes and mean moves 26, and exactly reproduces the current benchmark payload. AI replay verified all 30 reference rows, 30 A* metric rows and 30 Greedy metric rows, valid successful paths and shortest successful A* lengths. Sampling checked 32 candidates, accepting 30 and rejecting seeds 20262039 and 20262057. Registered core/UI source hashes still match. This is validation of the downloaded file, not additional independent trials or independently observed browser operation. The browser source revision remains null. Rule-2 raw contents have not been inspected or replayed yet.
 
 ## Collection and validation still required
 
-Preserve the current FIFO JSON before changing controls, then collect the rule-2 report and export at the same settings. Validate both files against the registered conditions, compare accepted seeds and unchanged Greedy rows, retain failures, and check path lengths on common successes. Record source/provenance limits separately from verified file contents. Disjoint seed identifiers alone do not establish independent or unique map layouts.
+Save the current rule-2 JSON before changing controls. Validate that file against the registered conditions and compare it with the archived FIFO file: accepted seeds, unchanged Greedy rows, successes/failures, and path lengths on common successes. Record source/provenance limits separately from verified file contents. Disjoint seed identifiers alone do not establish independent or unique map layouts. The registered protocol remains unchanged.
 
 The student supplied the prediction and reported reading; the cohort design, protocol and documentation are AI support. Node counts are not measured runtime, energy or physical robot performance.

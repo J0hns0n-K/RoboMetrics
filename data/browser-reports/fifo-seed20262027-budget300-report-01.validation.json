@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "label": "DOWNLOADED FIFO FILE FOR REGISTERED NEW-COHORT FOLLOW-UP; AI CONTENT VALIDATION",
+  "validatedAtUTC": "2026-10-28T12:02:21.394Z",
+  "downloadedFilename": "robometrics-fifo-seed-20262027-budget-300.json",
+  "artifact": "data/browser-reports/fifo-seed20262027-budget300-report-01.json",
+  "artifactSha256": "b56e61c5248746dbb6f79df7ad03f659c78b791c9cf490cb9c43542923668f3c",
+  "byteIdenticalCopy": true,
+  "browserExport": {
+    "generatedAtUTC": "2026-10-28T11:54:39.185Z",
+    "sourceCommit": null,
+    "provenance": "Browser demonstration; exact source revision and execution operator are not independently recorded here. Use the commit-bound CLI outputs for research provenance."
+  },
+  "configuration": {
+    "seed": 20262027,
+    "runs": 30,
+    "width": 16,
+    "height": 12,
+    "density": 0.19,
+    "maxExpansions": 300,
+    "astarTieBreak": "fifo",
+    "neighborMode": "4-neighbor",
+    "obstacles": "static / fully known",
+    "sampling": "solvable only; rejection sample",
+    "algorithms": [
+      "astar",
+      "greedy"
+    ]
+  },
+  "summary": {
+    "astar": {
+      "successRate": 1,
+      "meanPathLength": 26,
+      "meanRelativeLength": 1,
+      "meanExpanded": 117.76666666666667,
+      "successful": 30
+    },
+    "greedy": {
+      "successRate": 1,
+      "meanPathLength": 27.4,
+      "meanRelativeLength": 1.0538461538461537,
+      "meanExpanded": 31.3,
+      "successful": 30
+    }
+  },
+  "protocol": {
+    "path": "experiments/tie-break-validation-02.protocol.json",
+    "registrationCommit": "a859a3aa4c61abe804f92fb941222919e7a35220",
+    "sha256": "57f306b1dec48c564a8c2ae92f026052e3ad6645f7b5bc9e278e25fb19bd2ca7",
+    "studentPredictionVerbatim": "2가 적을 것 같아"
+  },
+  "validation": {
+    "operator": "AI assistant",
+    "sourceCommit": "5bfc72bf7b6bc54564c64d4d4f5162b47149fb0f",
+    "committedSourceHashes": {
+      "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+      "src/ui.mjs": "83449f56a4844bb877272fb8050d72bf7364df1214eb236b3420c5f3f8f71c38",
+      "index.html": "5b7e5bf5d6eb6692e4500a4d915e05bb79fa2405373dd967c234afb56b1ef09f",
+      "scripts/run-matrix.mjs": "ce5fd3ac918d7e69d6a9a7fc3965bc8d7d5622ba1ccefec97edac91a8ddf24a6"
+    },
+    "registeredCoreUiHashesMatch": true,
+    "sourceFilesDirty": false,
+    "workspaceStatus": "M practice/02-planning-budget.mjs",
+    "exactBenchmarkReplayMatch": true,
+    "referenceRowsChecked": 30,
+    "astarMetricRowsChecked": 30,
+    "greedyMetricRowsChecked": 30,
+    "successfulPathsVerified": true,
+    "allSuccessfulAstarLengthsEqualReference": true,
+    "acceptedSeedIdsBeyondPreviousMatrix": true
+  },
+  "sampling": {
+    "density": 0.19,
+    "candidatesExamined": 32,
+    "acceptedCount": 30,
+    "rejectedCount": 2,
+    "acceptedSeeds": [
+      20262028,
+      20262029,
+      20262030,
+      20262031,
+      20262032,
+      20262033,
+      20262034,
+      20262035,
+      20262036,
+      20262037,
+      20262038,
+      20262040,
+      20262041,
+      20262042,
+      20262043,
+      20262044,
+      20262045,
+      20262046,
+      20262047,
+      20262048,
+      20262049,
+      20262050,
+      20262051,
+      20262052,
+      20262053,
+      20262054,
+      20262055,
+      20262056,
+      20262058,
+      20262059
+    ],
+    "rejectedSeeds": [
+      20262039,
+      20262057
+    ],
+    "sampling": "Reachable-only rejection sample; candidate seed starts at base seed + 1"
+  },
+  "provenance": "User reported FIFO 117.77 and was instructed to save before switching to rule 2. Assistant located the expected download, preserved its bytes and validated its contents. Browser click/operator and original execution revision were not independently recorded; browser sourceCommit stays null. Validation is AI replay of the downloaded cohort, not another independent map sample. Rule-2 raw export and paired checks remain pending."
+}

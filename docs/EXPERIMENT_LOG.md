@@ -163,6 +163,14 @@ Next task: retain the current rule-2/budget-300 report and click JSON save to pr
 - The in-progress record is `docs/TIE_BREAK_VALIDATION_02_RESULTS.md`; the pre-run protocol remains unchanged in commit `a859a3aa4c61abe804f92fb941222919e7a35220`.
 - Next: save the current FIFO JSON before changing settings, then change only the tie rule to 2, rerun and report the same A* mean examined-node metric. Do not replace the cohort or provide a predicted numerical outcome.
 
+## 2026-10-28 Rule-2 follow-up reported; FIFO raw file verified
+
+- Junmo reported **33.80칸** after the rule-2 instructions on the registered new cohort. The displayed means are FIFO 117.77 and closer-goal 33.80, agreeing with his pre-run direction. The assistant's approximately 71.3% reduction calculation is preliminary and concerns examined-node counts only.
+- The assistant located the expected FIFO download and archived its exact bytes in `data/browser-reports/fifo-seed20262027-budget300-report-01.json`. Its separate validation record preserves hashes, replay revision, sampling and provenance limits.
+- Verified FIFO configuration matches the protocol: 20262027, .19, 16×12, 300, 30 maps. A* has 30 successes, mean moves 26 and mean examined nodes 117.76666666666667. Complete payload matches benchmark replay; all reference/metric rows and successful paths were checked. Sampling: 30 accepted out of 32 candidates, rejecting 20262039 and 20262057. Registered core/UI hashes match.
+- This is AI validation of the downloaded cohort, not additional trials or independently observed browser operation. Rule-2 raw contents have not been inspected or replayed; accepted-seed matching, unchanged Greedy rows, rule-2 success count and common-success lengths remain pending.
+- Next user action: retain the current rule-2 settings/report and click JSON save. Preserve that file before final paired validation. The registered protocol remains unchanged.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
