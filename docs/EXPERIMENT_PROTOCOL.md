@@ -32,5 +32,5 @@ Execution note, 2026-10-28: the original conditions below are retained. The firs
 - Honest: any reported difference is explicitly from synthetic grid experiments, not hardware.
 - Interpretive: student articulates which settings favor each algorithm and why.
 
-## Real-world RD protocol gate
+## Physical robotics protocol gate
 Physical tests become valid only when actual robot exists and hardware configuration is logged. Specify platform, wheel spacing/radius, surface, battery level, obstacle locations, start/goal, number of repeated trials, operator interventions, and collision/failure criteria. Do not treat simulation outputs as real-world data.

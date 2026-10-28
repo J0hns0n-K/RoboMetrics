@@ -22,7 +22,7 @@ Reading:
 - Experiment is *paired*: both tested algorithms see same preselected solvable maps and same budget. Rejection sampling of unsolvable maps is disclosed and limits generalization.
 - `meanPathLength` only across successes. If success rates differ, comparing raw mean lengths between algorithms can mislead; report success rates first, path ratio second, and conditional denominator.
 - Expanded nodes: implementation-specific proxy for computation, not CPU cycles, timing, battery usage or optimality in hardware.
-- Status: no **real physical experiments**, **measured collision rate**, or **sim-to-real study** in Early.
+- Status: no **real physical experiments**, **measured collision rate**, or **sim-to-real study** in the current grid benchmark.
 
 ## Threats to validity
 - Greedy and A* are not directly comparable as if both maximize the same objective; trade-off includes search cost and route optimality.
@@ -33,4 +33,4 @@ Reading:
 - Comparing '0 collisions' in planned grid paths would be misleading: path validity isn't executed collision avoidance.
 
 ## Developmental research arc
-Early: grid planning trade-offs → Nov: kinematics and sensor uncertainty in simulation → Dec: physical differential-drive robot and repeated trials → Jan (only before target deadlines): compare sim-to-real residuals and carry out controlled ablation. Keep the same benchmark goal and maps wherever meaningful.
+Grid planning trade-offs → kinematics and sensor uncertainty in simulation → physical differential-drive robot and repeated trials if hardware is available → compare simulation-to-reality residuals and carry out controlled ablation. Keep the same benchmark goal and maps wherever meaningful.

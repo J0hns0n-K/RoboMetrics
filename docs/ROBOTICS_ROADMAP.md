@@ -1,6 +1,6 @@
-# RoboMetrics RD — DEPTH, not feature count
+# RoboMetrics robotics research roadmap
 
-> Planned R&D; no hardware, money spent, sensors, physical tests, awards or real robot outcomes verified yet.
+> Planned research; physical robot experiments have not been performed.
 
 ## Nov 2026 — Model gap
 - Add robot body shape and differential-drive kinematics, orientation and steering constraints.
@@ -16,7 +16,7 @@
 - Record video and logs where consent/privacy permits; no bystanders' identities.
 - **Gate:** hardware actually runs and repeated results independently verify computed route length/time; discrepancies documented rather than hidden.
 
-## Dec 2026–Jan 2027 (subject to actual RD deadlines) — Research deliverable
+## Dec 2026–Jan 2027 — Research deliverable
 - Run matched simulated and physical courses; compare completion, path tracking error, duration, contact/failure rates *only if measurable*.
 - Calibrate one error source (e.g., wheel-radius mismatch) and run before/after ablation with same conditions and trials.
 - Stratify results by environment; confidence intervals/variation, not only best-case anecdotes.
@@ -26,5 +26,3 @@
 
 ## Decision rules
 - If hardware is not accessible, do not manufacture a sim-to-real study. Instead deepen physics-based simulator, run parameter sensitivity, document as simulation-only. A research report can be strong without claims of hardware, if it is careful.
-- If deadline is Jan 1, work after Jan 1 cannot be included in the submitted Jan 1 application. For previously submitted Early colleges, application changes require college-specific update channels and permission; Common App submitted version cannot simply be altered.
-- DormSense (CO₂/temp/humidity) is separate: do not stretch RoboMetrics to cover HVAC, and do not launch three shallow apps when one deep experiment is realistic.

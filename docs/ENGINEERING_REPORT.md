@@ -88,7 +88,7 @@ At density .19/budget 120, A* succeeds on 15/30 and Greedy 30/30. On the common 
 
 Raw rows, seed audits, CSV, TAP and SHA256 manifest are in `data/batch/`; the full table is `MATRIX_RESULTS.md`. Three post-hoc AI-selected reports preserve complete paths and show an A* budget failure, a longer Greedy route (40 vs 26), and a map where both exceed a tight budget despite reachability. Case reproduction matches recorded metrics; these replays are not additional independent samples.
 
-After seeing the results and receiving clarification of success frequency, Junmo stated: **그러네. 짧은 길을 찾는 것이랑 길을 많이 찾는 것은 다르네. 계산 제한이 있으면 아무리 짧은 루트라도 실패로 되니까 그렇네.** This is the student's guided post-result conceptual distinction between route length and budgeted route discovery. AI clarified the precise meaning: a short route may exist while the policy does not find it within budget; an already-found valid route is not reclassified as a failure. The statement is not a prior forecast or evidence of independent implementation/execution. Exact response and timing are in `MATRIX_RUN_KR.md`. This remains an AI-authored engineering record rather than a completed student-authored report or verified EC accomplishment.
+After seeing the results and receiving clarification of success frequency, Junmo stated: **그러네. 짧은 길을 찾는 것이랑 길을 많이 찾는 것은 다르네. 계산 제한이 있으면 아무리 짧은 루트라도 실패로 되니까 그렇네.** This is the student's guided post-result conceptual distinction between route length and budgeted route discovery. AI clarified the precise meaning: a short route may exist while the policy does not find it within budget; an already-found valid route is not reclassified as a failure. The statement is not a prior forecast or evidence of independent implementation/execution. Exact response and timing are in `MATRIX_RUN_KR.md`. This remains an AI-authored engineering record rather than a completed student-authored report.
 
 ## Optional equal-f tie-breaking comparison — 2026-10-28
 
@@ -119,12 +119,12 @@ All 20 tests passed. AI-operated browser checks reproduced 15/30 A* successes fo
 5. A documented revision and a rerun using controlled conditions.
 6. Contribution statement identifying mentor/AI assistance precisely.
 
-No completion, research improvement, or physical result is claimed here. Early EC wording remains pending actual student work. Existing handoff admissions drafts are conditional examples, not verified accomplishments.
+The sections above distinguish completed simulation checks from planned work and identify the operator and author of each contribution. Physical robot results have not been collected.
 
 ## Next gates
 
 - Oct 27: understand the model, complete a small student-owned design/analysis task, preserve evidence.
 - Oct 28: paired comparisons, fixed seeds and budgets, at least two failure/counterexample analyses; preserve unsuccessful attempts.
-- Oct 29: student interpretation, verified contribution ledger, report, then truthful EC drafting.
-- Nov–Dec: scoped kinematics/controller/uncertainty model; hardware only if obtained and actually tested. Follow `RD_ROADMAP.md`.
-- Early Jan: include only work completed by each target's actual submission/update deadline. Target colleges and deadlines have not been supplied or verified.
+- Oct 29: student interpretation, verified contribution ledger and technical report.
+- Nov–Dec: scoped kinematics/controller/uncertainty model; hardware only if obtained and actually tested. Follow `ROBOTICS_ROADMAP.md`.
+- Jan: compare simulation and physical outcomes if hardware trials are available; otherwise report simulation sensitivity and model limitations.
