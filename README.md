@@ -1,49 +1,59 @@
 # RoboMetrics
 
-A reproducible grid-path-planning benchmark comparing A* and Greedy Best-First Search under a limited node-expansion budget. Dijkstra provides a shortest-path reference.
+**How much search is enough to find a usable route?**
 
-## Run locally
+RoboMetrics investigates a practical planning trade-off: a method can find short routes yet fail to return any route within a fixed search budget. Using reproducible grid maps, the project separates three questions: whether a route is found, how long it is, and how much search was required. A* and Greedy Best-First Search provide contrasting policies; Dijkstra supplies a shortest-path reference.
 
-Requires Node.js 18 or later. No dependency installation is needed.
+The work has progressed from hand-checked maps to paired experiments and a controlled A* tie-breaking comparison. The current result is a simulation benchmark with traceable data and design decisions. Its longer-term question is how those decisions hold up when robot motion and sensing uncertainty enter the model.
+
+## How the investigation developed
+
+**Start with a path that can be checked by hand.** A guided center-obstacle exercise showed that adding a wall need not increase shortest-path length. Later, on an AI-selected map where Greedy returned 12 moves and A* returned 8, Junmo supplied a different valid eight-move route without removing any walls. Its length matches the Manhattan lower bound, providing a direct optimality check. [Route and verification](docs/COUNTEREXAMPLE_01_KR.md)
+
+**Separate route quality from finding a route within the budget.** The paired matrix varies obstacle density and examined-node limits while holding maps fixed within each density. Failed searches remain in the data; route-length comparisons identify their successful-map denominators. After reviewing results, Junmo articulated that shorter routes and more budgeted successes are different properties. [Method and recorded interpretation](docs/MATRIX_RUN_KR.md)
+
+**Test a detail hidden by the algorithm name.** A subsequent AI-designed comparison keeps A*'s primary score, f=g+h, unchanged and varies only how equal-score candidates are ordered. FIFO is compared with preferring the candidate nearer the goal. This isolates a concrete implementation choice rather than attributing every effect to A* as a whole. [Controlled comparison](docs/TIE_BREAK_STUDY_KR.md)
+
+## What the evidence currently shows
+
+One controlled slice uses the same 30 reachable 16×12 maps, base seed 20261027 and obstacle-generation probability .19:
+
+| Search policy | Routes found, budget 120 | Routes found, budget 300 | Mean moves, budget 300 | Mean examined nodes, budget 300 |
+|---|---:|---:|---:|---:|
+| A*, FIFO ties | 15/30 | 30/30 | 26.07 | 118.77 |
+| A*, closer-goal ties | 30/30 | 30/30 | 26.07 | 36.97 |
+| Greedy Best-First | 30/30 | 30/30 | 28.40 | 32.70 |
+
+At budget 300, all three policies finish on this cohort, so the route-length means compare the same maps. Changing A* tie order preserves shortest returned lengths here while reducing mean examined nodes. Greedy examines fewer nodes but returns longer routes on average. These are measured node counts, not runtime or energy measurements.
+
+The [full baseline matrix](docs/MATRIX_RESULTS.md) and [tie-rule results](docs/TIE_BREAK_RESULTS.md) report every tested density and budget, including failures. Each study reuses 90 density-specific map entries across 360 map/budget conditions; these are not 360 independent maps. Runs and implementation are AI-assisted as detailed below.
+
+## From evidence to a working design
+
+After the comparison, Junmo tentatively chose the closer-goal rule as the browser default. The demo exposes both rules, applies the selection to individual maps and the 30-map comparison, records it in JSON exports, and clears stale results when settings change. The library and CLI retain FIFO for compatibility with the original experiments. [Decision and acceptance evidence](docs/DEMO_DESIGN_DECISION.md)
+
+Guided browser reports subsequently gave 30/30 for rule 2 at budget 120, 15/30 for rule 1 at 120, and 30/30 for rule 1 at 300. Those user-reported observations are recorded separately from the archived AI-operated datasets; they are not counted as independently verified replications.
+
+## Reproducibility, scope and contributions
+
+- **Checks:** the archived demo acceptance suite passes 20 tests. Algorithm audits cover all 1,024 obstacle layouts of a small 4×3 grid against an independently written BFS; compatibility checks reproduce 720 historical A*/Greedy metrics.
+- **Evidence:** [protocol](docs/EXPERIMENT_PROTOCOL.md), [raw baseline data](data/batch/), [raw tie-rule data](data/tie-break/), source revisions, hash manifests and [experiment log](docs/EXPERIMENT_LOG.md) support the numerical claims.
+- **Attribution:** the initial scaffold and subsequent implementation, automated tests and archived batch execution are AI-authored or AI-operated. Junmo's documented contributions include guided choices, parameter edits, a manually supplied shortest route, interpretations and the demo-default choice. The [contribution log](docs/CONTRIBUTION_LOG.md) separates these roles; this overview is AI-assisted writing.
+- **Limits:** static, fully known, four-connected unit-cost grids; reachable-only sampling; fixed seed cohorts. Tie-breaking is established prior work. These results do not establish a universal winner or physical robot performance.
+
+## Next research step
+
+Compare actual examined-node counts when both tie rules finish, then challenge the finding with additional map families and failure cases. The planned robotics extension introduces body geometry, differential-drive motion, waypoint tracking and sensor/actuator uncertainty. Matched physical trials depend on obtaining and testing hardware; no physical measurements have been collected. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
+
+## Run and inspect
+
+Requires Node.js 18 or later; no dependency installation is needed.
 
 ```sh
 npm test
 npm start
 ```
 
-Open http://127.0.0.1:8080/ after starting the server.
+Open http://127.0.0.1:8080/ for the Korean demo. Source is in `src/`, inputs in `experiments/`, runners in `scripts/`, and tests in `test/`.
 
-The Korean browser interface supports obstacle density, map seed, expansion budget, A* tie-breaking selection, a paired 30-map comparison and JSON export. It initially selects the closer-goal tie rule; FIFO remains selectable. The library and CLI retain FIFO as their default.
-
-## Research question
-
-On the same maps and with the same search budget, how do the algorithms differ in finding a route, route length and examined-node count? How much does A* tie-breaking affect these results?
-
-The current model uses fully known static obstacles, four-connected movement and unit costs. Seeds reproduce synthetic maps. The batch benchmark uses reachable-only rejection sampling and records separate denominators for successful-route summaries. Examined nodes are a computation proxy, not measured runtime or energy.
-
-## Results and evidence
-
-- The original FIFO matrix covers three obstacle densities and four budgets: 90 density-specific map entries reused across 360 map/budget pairs and 720 A*/Greedy calls. These larger counts are not independent trials. See [matrix results](docs/MATRIX_RESULTS.md) and [raw data](data/batch/).
-- On the same .19-density, budget-120 cohort, A* successes changed from 15/30 with FIFO ties to 30/30 with closer-goal ties. See [tie-breaking study](docs/TIE_BREAK_STUDY_KR.md), [results](docs/TIE_BREAK_RESULTS.md) and [raw data](data/tie-break/). This does not establish universal superiority.
-- The browser default follows Junmo's tentative choice of rule 2. [Design decision and acceptance checks](docs/DEMO_DESIGN_DECISION.md) distinguish that choice from AI implementation and operation.
-- The current suite contains 20 tests, including an exhaustive comparison against an independently written BFS on 1,024 small-grid obstacle layouts.
-
-## Code and contributions
-
-The initial scaffold was AI-generated and is preserved in reference commit `43fa8ec965180532c1fcf4a553309ed350b25277`. Later AI-written helpers, tests and experiment runs are identified separately from Junmo's actual choices, parameter edits, route construction and interpretations in the [contribution log](docs/CONTRIBUTION_LOG.md). A* and Greedy are established algorithms.
-
-The [engineering record](docs/ENGINEERING_REPORT.md) links results to source commits and records limitations. The current work concerns simulation; physical robot measurements have not been collected.
-
-## Project guide
-
-- [Algorithm review, Korean](docs/ALGORITHM_REVIEW_KR.md)
-- [First guided task](docs/TASK_01_KR.md) and [practice exercises](practice/README.md)
-- [Research assumptions and limitations](docs/RESEARCH_ARGUMENT.md)
-- [Experiment protocol](docs/EXPERIMENT_PROTOCOL.md) and [execution guide](docs/MATRIX_RUN_KR.md)
-- [Experiment log](docs/EXPERIMENT_LOG.md) and [data guide](data/README.md)
-- [Future robotics research plan](docs/ROBOTICS_ROADMAP.md)
-- [Repository workflow](docs/GITHUB_KICKOFF.md)
-
-Source code lives in `src/`, reproducible inputs in `experiments/`, runners in `scripts/`, and tests in `test/`.
-
-Repository: [J0hns0n-K/RoboMetrics](https://github.com/J0hns0n-K/RoboMetrics).
+For deeper review: [algorithm notes](docs/ALGORITHM_REVIEW_KR.md), [engineering record](docs/ENGINEERING_REPORT.md), [assumptions and limitations](docs/RESEARCH_ARGUMENT.md), [data guide](data/README.md), and [repository workflow](docs/GITHUB_KICKOFF.md).

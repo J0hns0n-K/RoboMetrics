@@ -10,7 +10,8 @@ The repository is connected and development currently uses `main`. The original 
 2. Record the design choice, hypothesis or bug being addressed before running the relevant comparison.
 3. Run the relevant checks; preserve experimental inputs, source revision, raw results and failed cases.
 4. Commit focused changes with a meaningful message and accurate authorship. Identify AI assistance in the contribution log.
-5. Push and verify the remote revision. Use a pull request when a separate review is useful.
+5. Update the README when the evidence changes the research story, result table, design decision, limitations or next step. Reconcile it with the experiment log and contribution log; update linked result documents in the same change. Keep the overview connected and current rather than appending announcements. See `../AGENTS.md` for the documentation rules.
+6. Verify local links and source-backed figures, then push and verify the remote revision. Use a pull request when a separate review is useful.
 
 ## Research work items
 
