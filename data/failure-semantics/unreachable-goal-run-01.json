@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "label": "SYNTHETIC FIXED GRID — NOT PHYSICAL ROBOT DATA",
+  "scenario": {
+    "id": "unreachable-goal-failure-semantics-01",
+    "dateSeoul": "2026-10-29",
+    "status": "ready",
+    "contributionType": "ai-reference",
+    "contributor": "AI assistant — fixed demonstration for the student-formulated current question",
+    "assistance": "Student formulated the quoted current question after the earlier experiments. AI supplies the disconnected example, budget choices, expected API behavior and execution. This is not a student-designed map or a student pre-run outcome prediction.",
+    "studentQuestionVerbatim": "종착지까지 무슨 짓을 해도 갈 수 없을 때 결과값이 어떻게 나오는지 궁금해",
+    "studentOutcomePrediction": null,
+    "rows": [
+      "S..",
+      "..#",
+      ".#G"
+    ],
+    "budgets": [
+      2,
+      300
+    ],
+    "prediction": "AI reference expectation based on existing API semantics, not a student forecast: exhaustive search of this disconnected map returns UNREACHABLE with false success, empty path and null path length; budget 2 ends with BUDGET_EXCEEDED before exhausting the reachable component. Budget 300 is sufficient for all nine cells.",
+    "scope": "Fixed known obstacles; four-neighbor movement; walls cannot be crossed or changed during a run. The existing runner evaluates A* FIFO, Greedy and Dijkstra. Random 30-map benchmarks reject unreachable maps, so this is a separate fixed-case demonstration.",
+    "plannedChecks": [
+      "Goal is isolated by walls at (2,1) and (1,2) and map boundaries.",
+      "Independently flood-fill the start component without using the planner; compare exhaustive expanded counts and goal exclusion.",
+      "Check both failure reasons separately and preserve null pathLength versus a zero-length route.",
+      "Do not infer physical navigation impossibility or new student code authorship."
+    ]
+  },
+  "authorship": {
+    "declaredType": "ai-reference",
+    "contributor": "AI assistant — fixed demonstration for the student-formulated current question",
+    "assistance": "Student formulated the quoted current question after the earlier experiments. AI supplies the disconnected example, budget choices, expected API behavior and execution. This is not a student-designed map or a student pre-run outcome prediction.",
+    "independentlyVerified": false
+  },
+  "conventions": {
+    "pathLength": "Number of moves; start is zero moves.",
+    "expanded": "Distinct nodes removed for examination, INCLUDING start and goal.",
+    "movement": "Four neighbors; unit cost; static fully known obstacles.",
+    "tieBreak": "FIFO insertion order at equal priority; neighbor order right, down, left, up.",
+    "reference": "Dijkstra shares the starter search engine; independent BFS is in test/audit.test.mjs."
+  },
+  "referenceLength": null,
+  "unlimited": {
+    "astar": {
+      "success": false,
+      "reason": "UNREACHABLE",
+      "path": [],
+      "pathLength": null,
+      "expanded": 6,
+      "relativeLength": null
+    },
+    "greedy": {
+      "success": false,
+      "reason": "UNREACHABLE",
+      "path": [],
+      "pathLength": null,
+      "expanded": 6,
+      "relativeLength": null
+    },
+    "dijkstra": {
+      "success": false,
+      "reason": "UNREACHABLE",
+      "path": [],
+      "pathLength": null,
+      "expanded": 6,
+      "relativeLength": null
+    }
+  },
+  "trials": [
+    {
+      "budget": 2,
+      "results": {
+        "astar": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 2,
+          "relativeLength": null
+        },
+        "greedy": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 2,
+          "relativeLength": null
+        },
+        "dijkstra": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 2,
+          "relativeLength": null
+        }
+      }
+    },
+    {
+      "budget": 300,
+      "results": {
+        "astar": {
+          "success": false,
+          "reason": "UNREACHABLE",
+          "path": [],
+          "pathLength": null,
+          "expanded": 6,
+          "relativeLength": null
+        },
+        "greedy": {
+          "success": false,
+          "reason": "UNREACHABLE",
+          "path": [],
+          "pathLength": null,
+          "expanded": 6,
+          "relativeLength": null
+        },
+        "dijkstra": {
+          "success": false,
+          "reason": "UNREACHABLE",
+          "path": [],
+          "pathLength": null,
+          "expanded": 6,
+          "relativeLength": null
+        }
+      }
+    }
+  ],
+  "execution": {
+    "executedBy": "Command operator; student execution is not inferred from a generated file.",
+    "timestamp": "2026-10-29T01:24:38.212Z",
+    "node": "v24.22.1",
+    "platform": "win32/x64",
+    "sourceCommit": "d52a8ac2242c510d015e77b203b6a195d014dc53",
+    "workspaceDirty": true,
+    "inputFile": "experiments/unreachable-goal.scenario.json",
+    "inputSha256": "311ae01657b2c4e62353059d2242400b851111e7cecba7153f9c11c0e1b8c5f3",
+    "coreSha256": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "runnerSha256": "6a38ac0a5795c421bb658c90a8642731f517a602aa0234718ebe6c79a5f92c84"
+  }
+}

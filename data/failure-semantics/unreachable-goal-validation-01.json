@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "label": "AI DEMONSTRATION OF FAILURE SEMANTICS FOR STUDENT-FORMULATED QUESTION",
+  "dateSeoul": "2026-10-29",
+  "sourceCommit": "d52a8ac2242c510d015e77b203b6a195d014dc53",
+  "inputCommit": "d52a8ac2242c510d015e77b203b6a195d014dc53",
+  "studentQuestionVerbatim": "종착지까지 무슨 짓을 해도 갈 수 없을 때 결과값이 어떻게 나오는지 궁금해",
+  "studentOutcomePrediction": null,
+  "artifacts": {
+    "data/failure-semantics/unreachable-goal-run-01.json": "9f400f9faa8c9cc5af21471e6b6d7e5e74068f80008dc4828add74ab43887f92"
+  },
+  "sourceHashesGitBlobs": {
+    "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+    "experiments/unreachable-goal.scenario.json": "311ae01657b2c4e62353059d2242400b851111e7cecba7153f9c11c0e1b8c5f3"
+  },
+  "sourceInputsDirty": false,
+  "workspaceStatusAtValidation": "M practice/02-planning-budget.mjs\n?? data/failure-semantics/",
+  "independentFloodFill": {
+    "method": "Queue-based traversal over input grid characters using four-neighbor coordinates; no planner or makeMap call.",
+    "start": [
+      0,
+      0
+    ],
+    "goal": [
+      2,
+      2
+    ],
+    "startComponentSize": 6,
+    "visitedCoordinates": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "goalInStartComponent": false,
+    "goalAdjacentCells": {
+      "above": {
+        "coordinate": [
+          2,
+          1
+        ],
+        "blocked": true
+      },
+      "left": {
+        "coordinate": [
+          1,
+          2
+        ],
+        "blocked": true
+      },
+      "right": "outside grid",
+      "below": "outside grid"
+    }
+  },
+  "checks": {
+    "unlimitedPolicies": 3,
+    "budgetedPolicyRows": 6,
+    "allExhaustiveReasons": "UNREACHABLE",
+    "budget2Reasons": "BUDGET_EXCEEDED",
+    "allFailurePathsEmpty": true,
+    "allFailurePathLengthsNull": true,
+    "coreAndRunnerMatchPrior23TestSources": true
+  },
+  "priorTests": {
+    "total": 23,
+    "passed": 23,
+    "sourceCommit": "e765e5b910c63bdfc5c2c38e35f3b482e74755e8",
+    "report": "data/structured/fixed-tie-tests-01.tap",
+    "rerunForThisInputOnlyExample": false
+  },
+  "interpretation": "On this fixed disconnected map, exhaustive failure certifies no path under the declared movement and obstacle rules. Budget exhaustion reports failure to find a path before the cutoff and alone does not certify disconnection. Null path length denotes no returned route, not a zero-move route. Reachable-only random benchmarks exclude such maps.",
+  "provenance": "Student formulated the current question after earlier experiments. AI supplied this example, expected API behavior, budget choices, execution, independent flood-fill and initial explanation. It is not a student-designed map, outcome forecast or independent student execution, and does not describe physical robot performance."
+}

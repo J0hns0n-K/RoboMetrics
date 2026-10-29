@@ -286,6 +286,15 @@ In response to the open request for a current research question, Junmo wrote:
 
 Record this as a new question after earlier experiments, not a backdated hypothesis or a supplied outcome forecast. AI prepared `experiments/unreachable-goal.scenario.json`: a 3×3 map isolating G, with budgets 2 and 300 fixed before execution. AI's API expectations are labeled separately from the student's question. The normal 30-map benchmark selects reachable maps, so a separate fixed case is required. Verify exhaustive disconnection independently and distinguish UNREACHABLE from budget exhaustion; core and runner code remain unchanged.
 
+## 2026-10-29 Failure-output example executed and independently checked
+
+- AI committed the example and expectations in `d52a8ac2242c510d015e77b203b6a195d014dc53`, then ran the unchanged scenario helper. The student's question is not recorded as an outcome prediction.
+- For A* FIFO, Greedy and Dijkstra, unlimited and budget-300 runs return success=false, UNREACHABLE, empty paths and null path lengths after six examined nodes. Budget 2 instead returns BUDGET_EXCEEDED after two examined nodes for all three.
+- Independent queue traversal over the input grid characters, without calling the planner or makeMap, finds six start-connected cells and excludes G. Goal is isolated by two walls and boundaries. The original 23-test core/runner sources match; input/output fields and reachability were checked directly without a full test rerun.
+- Raw output and hashes/provenance: `data/failure-semantics/unreachable-goal-run-01.json` and `unreachable-goal-validation-01.json`. Full explanation: `docs/FAILURE_SEMANTICS_KR.md`.
+- Sufficiently exhaustive failure confirms no route under the declared fixed map/rules; budget exhaustion alone does not certify that. Null length means no returned route, not zero moves. This fixed negative case stays outside the random benchmark's reachable-only cohort.
+- Next task: student explains why the two failure reasons must be distinguished. No such student interpretation has yet been received.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
