@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Ask for pre-run expectation on the draft 30-map wall-removal comparison (all versus some shorter routes, uncertainty allowed). Do not run before freezing ready protocol with the forecast or explicit uncertainty.",
+  "nextTask": "Explicit student uncertainty recorded. Commit ready protocol/source and execute paired 30-map cohort, preserving counts, acquisition/policy accounting and immutable raw data.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -112,5 +112,6 @@
     "data/route-update-policy/keep-valid-compatibility-run-01.json",
     "data/route-update-policy/reoptimization-validation-01.json"
   ],
-  "reoptimizationBatchDraft": "experiments/route-reoptimization-batch.design.json"
+  "reoptimizationBatchDraft": "experiments/route-reoptimization-batch.design.json",
+  "reoptimizationBatchProtocol": "experiments/route-reoptimization-batch-01.protocol.json"
 }

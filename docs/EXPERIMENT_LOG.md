@@ -517,6 +517,13 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Full suite 47 passes before source commit; module/test/TAP hashes match. Drivers separately syntax/configured-run/output-guard checked; no suite repeated afterward. Student supplied default choice only, not fallback/API/code/tests/fixtures/forecast or operation. No universal improvement, runtime/energy or physical claim.
 - Next `experiments/route-reoptimization-batch.design.json`: AI-proposed unexecuted 30-map wall-removal matched comparison, student forecast pending. Freeze ready protocol before execution, separating theoretical shorter paths from improvements actually found within finite budget.
 
+## 2026-10-29 — Thirty-map comparison frozen with explicit uncertainty
+
+- Exact student pre-run response **모르겠어**, direction null, in `experiments/route-reoptimization-batch-01.protocol.json`. Earlier reoptimization choice is not an outcome forecast. AI supplies study method/code/operation.
+- Base seed 20264027, 16×12/.19, first 30 connected maps with walls; candidate BFS/audit and maximum 4500 checks. Remove row-major wall at seed modulo wall count. Matched keep-valid/reoptimize, A* FIFO budget 300 per invocation, start remains original corner.
+- Offline unlimited prior A* work recorded separately, checked against candidate BFS; edited-map BFS measures potential shortening, distinct from realized within-budget shortening/valid fallback. All map/policy denominators and failed optimization attempts retained.
+- Three new methodology controls, full suite 50 pass/zero failures in `data/route-update-policy/reoptimization-batch-tests-01.tap`; no registered cohort preview. Protocol/source commit required before configured execution.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
