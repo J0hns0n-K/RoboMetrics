@@ -575,6 +575,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Existing 55-test dependencies match, no repeat full suite. Comparator label fix is metadata-only; source diff and corrected derivative equivalence/parent hashes checked. Candidate/maps/edits/paths/BFS/proofs/costs/output immutability validated. New condition fixed before generation, but no statistical-independence or causal density claim. No runtime/energy/physical/browser result; budget300>192cells is not small-budget stress.
 - Next student task: one report sentence on what remains unchanged and what decreases. Student sentence pending; do not write AI wording as student-authored.
 
+## 2026-10-29 — Student report conclusion recorded
+
+- Exact post-result response **이미 최단루트를 찾았다면 굳이 더 재검토하지 않아도 됨. 그래서 검토량 확 줄임.** in `data/learning/dense-followup-conclusion-01.json`, tied to the dense validation/source context. Student interpretation follows AI results and writing prompt; not a pre-run hypothesis, independent proof/code or execution.
+- AI precision edit separately adds latest-map validity, lower-bound proof at the current position, preserved route and new planner-node counts. Original remains unchanged. Former shortestness alone cannot establish current feasibility/optimality. No new experiment or test run.
+- Next AI-proposed draft `experiments/bound-skip-budget-stress.design.json` changes only budget to offered 50/100 on the same known dense inputs. Separate usable path from optimization completion/budget failure; selection/results pending. Prior expansion counts are already known, so no blind/independent cohort claim.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

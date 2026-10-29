@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "status": "draft-awaiting-student-budget-choice",
+  "proposalAuthor": "AI assistant",
+  "question": "다음 작은 예산 검증은 50칸과 100칸 중 어느 쪽을 먼저 볼까?",
+  "options": {
+    "1": {
+      "label": "검토 예산 50칸",
+      "maxExpansions": 50
+    },
+    "2": {
+      "label": "검토 예산 100칸",
+      "maxExpansions": 100
+    }
+  },
+  "studentChoiceVerbatim": null,
+  "studentOutcomePrediction": null,
+  "parentBaseline": "data/route-update-policy/bound-skip-followup-dense-baseline-run-01.json",
+  "parentValidation": "data/route-update-policy/bound-skip-followup-dense-validation-01.json",
+  "proposedControls": "Reuse all 30 dense edited maps, prior valid routes, current starts/goals and A* FIFO; change only the per-call budget from 300 to the selected value. Compare forced reoptimization and guarded default on identical inputs. No sampling or wall reselection.",
+  "proposedMeasures": "Separate usable-route preservation from successful new optimization, bound proofs, search completions, budget-exceeded raw results/valid fallbacks, returned distance versus archived independent BFS, missed possible shortening and new node expansions. A budget failure must not be labeled UNREACHABLE.",
+  "knownPriorEvidence": "Same cohort and full-search expansion counts are already available, so this is a guided budget/fallback control, not blind new research or an independent map cohort.",
+  "results": null,
+  "scope": "Unexecuted draft. AI provides options/method/code; student budget selection pending. No new physical, runtime or energy measurement."
+}

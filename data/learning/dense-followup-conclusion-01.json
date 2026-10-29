@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "recordType": "guided post-result student report interpretation; not experiment output",
+  "recordedBy": "AI assistant from user chat",
+  "contextRevision": "179050c008adcafe5491a69957cad60d6c8a7a04",
+  "prompt": "이번 개선에서 무엇을 유지하면서 무엇을 줄였는지 네 말로 한 문장으로 써 줘.",
+  "evidence": "data/route-update-policy/bound-skip-followup-dense-validation-01.json",
+  "studentStatementVerbatim": "이미 최단루트를 찾았다면 굳이 더 재검토하지 않아도 됨. 그래서 검토량 확 줄임.",
+  "aiPrecisionEditedSentence": "이번 실험에서는 최신 지도에서 유효하며 이론적 최소 길이를 달성한 경로의 재탐색을 생략해, 강제 재탐색과 같은 경로를 유지하면서 새 노드 검토량을 줄였다.",
+  "precisionEditBy": "AI assistant",
+  "precisionEditScope": "Add latest-map route validity, a present proof of minimum length and node-expansion scope. A route that was shortest before a map change is not automatically proven shortest or valid afterward. Preserve the original separately; edited wording is not a literal student quote.",
+  "attributionLimits": "Student interpretation after AI proposal/implementation/execution/results and a writing prompt. Not a pre-run hypothesis, independent algorithm/proof/code contribution or independently observed execution. No new run or measured value."
+}

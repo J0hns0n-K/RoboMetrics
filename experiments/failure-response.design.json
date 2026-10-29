@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student writes one report interpretation sentence describing what stayed unchanged and what was reduced in the dense follow-up. Do not infer independent discovery or code authorship.",
+  "nextTask": "Student chooses budget 50 or 100 for a same-known-map fallback/optimization stress comparison. Report interpretation recorded; preserve original separately from AI conditions.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -139,5 +139,8 @@
     "data/route-update-policy/bound-skip-followup-dense-validation-01.json"
   ],
   "denseFollowupStudentConclusionPrompt": "이번 개선에서 무엇을 유지하면서 무엇을 줄였는지 네 말로 한 문장으로 써 줘.",
-  "denseFollowupStudentConclusion": null
+  "denseFollowupStudentConclusion": "이미 최단루트를 찾았다면 굳이 더 재검토하지 않아도 됨. 그래서 검토량 확 줄임.",
+  "denseFollowupStudentConclusionRecord": "data/learning/dense-followup-conclusion-01.json",
+  "denseFollowupConclusionAiPrecisionEdit": "이번 실험에서는 최신 지도에서 유효하며 이론적 최소 길이를 달성한 경로의 재탐색을 생략해, 강제 재탐색과 같은 경로를 유지하면서 새 노드 검토량을 줄였다.",
+  "budgetStressDraft": "experiments/bound-skip-budget-stress.design.json"
 }
