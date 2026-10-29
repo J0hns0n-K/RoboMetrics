@@ -473,6 +473,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Invalid old path is a validation status, not UNREACHABLE/BUDGET_EXCEEDED. Explicit snapshot change plus fresh static planning, not incremental state repair, sensing, motion control or physical measurement.
 - Next AI-authored draft `experiments/changed-map-second-wall.design.json`: student picks one bottom-row wall intended to remove the detour. Choice/results pending; retain parent and unsuccessful attempts.
 
+## 2026-10-29 — Three alternative wall choices registered
+
+- Exact student response **3, 4, 5 중에 아무거나** nominates each offered bottom-row position as sufficient for no route. No rationale or examined-node forecast. Config `experiments/changed-map-second-wall-choices.config.json` records the statement before execution.
+- Each case resets to the same parent and adds exactly one wall. AI-added controls 1/2 carry no student forecast. Same R/G, existing wall, unit-cost four-neighbor movement, A* FIFO and per-case budget 30. Reuse parent raw path without rerunning parent. Check its validity on each map, new search and separate BFS.
+- Thin orchestration `scripts/check-second-wall-choices.mjs` reuses unchanged core/parser/BFS with committed-input/source and immutable-output guards. Syntax and configured execution/row arithmetic will be checked; no full-suite rerun is required for this orchestration-only addition. Results pending source/input commit.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

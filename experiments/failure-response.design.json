@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student chooses one additional bottom-row wall (labels 1-5) intended to make current R-to-G unreachable; preserve parent and verify outcome only after recording choice.",
+  "nextTask": "Student nominated 3/4/5 as any sufficient extra wall. Commit config/runner and check separate one-wall variants plus AI controls 1/2; outcomes pending.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -91,5 +91,6 @@
     "data/map-updates/current-position-detour-run-01.json",
     "data/map-updates/current-position-detour-validation-01.json"
   ],
-  "secondWallDraft": "experiments/changed-map-second-wall.design.json"
+  "secondWallDraft": "experiments/changed-map-second-wall.design.json",
+  "secondWallReadyConfig": "experiments/changed-map-second-wall-choices.config.json"
 }

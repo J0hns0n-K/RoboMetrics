@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "changed-map-second-wall-choices-01",
+  "dateSeoul": "2026-10-29",
+  "status": "ready",
+  "parentScenario": "experiments/changed-map-current-position-detour-01.scenario.json",
+  "parentResult": "data/map-updates/current-position-detour-run-01.json",
+  "parentDraft": "experiments/changed-map-second-wall.design.json",
+  "studentResponseVerbatim": "3, 4, 5 중에 아무거나",
+  "studentPredictedUnreachableChoices": [3, 4, 5],
+  "studentReasonVerbatim": null,
+  "aiControlChoices": [1, 2],
+  "algorithm": "astar",
+  "tieBreak": "fifo",
+  "budgetPerCase": 30,
+  "controls": "Each case starts from the same parent, current R=(2,0), goal (4,0), original wall (3,0), four-neighbor unit cost. Add exactly ONE bottom-row wall at (choice-1,1). Cases 3/4/5 are separate, never cumulative.",
+  "method": "For each case, check the parent's returned route on the edited map, run fresh A* FIFO budget 30 and separate text-grid BFS. Compare outcomes to the student prediction only for choices 3/4/5. Parent raw data is reused, not rerun.",
+  "attribution": "Student nominated 3/4/5 as any sufficient wall choice on the offered map before execution; no reason or expansion count supplied. AI adds 1/2 as controls without inferring a student forecast for them, and supplies configuration, runner, operation and validation.",
+  "scope": "Five related single-wall variants of one synthetic parent, not independent random maps or physical robot trials. No incremental replanning or automatic obstacle detection."
+}
