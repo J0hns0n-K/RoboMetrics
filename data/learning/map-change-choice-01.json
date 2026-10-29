@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "recordType": "guided conceptual option choice; not experiment output",
+  "recordedBy": "AI assistant from the user's chat response",
+  "contextRevision": "a3da7e5da8b2c13f3e1eaa4dec60bcaed3cb652a",
+  "priorLearningRecord": "data/learning/resume-interpretation-01.json",
+  "question": "탐색을 잠깐 멈춘 사이 새 장애물이 통로를 막았다면 어떻게 해야 할까?",
+  "options": {
+    "1": "저장한 정보로 그대로 이어간다.",
+    "2": "바뀐 지도를 기준으로 다시 확인한다."
+  },
+  "studentResponseVerbatim": "2",
+  "selectedOption": 2,
+  "studentReasonVerbatim": null,
+  "scope": "Student selected the recheck option from AI-provided choices. No reason, exact validation/replanning procedure, code change, new experimental forecast or independent implementation supplied.",
+  "assessmentByAI": "Appropriate conceptual choice: information computed on the previous map must be checked against the changed map before relying on it.",
+  "sourceReviewByAI": {
+    "module": "src/resumable-astar.mjs",
+    "existingTest": "test/resumable-astar.test.mjs: session owns a fixed map snapshot despite later caller edits",
+    "existingValidation": "data/retry-policy/resume02-to08-validation-01.json",
+    "finding": "Session copies the initial map. Caller edits are intentionally not applied to the saved search. This is snapshot behavior, not automatic changed-map detection, validation or dynamic replanning.",
+    "verificationScope": "Source read and canonical source hashes checked against the existing manifest. No new planner execution, test rerun or changed-map experiment."
+  },
+  "nextTaskAuthor": "AI assistant",
+  "nextTask": "새 장애물이 예전 경로 위에 생겼는데 예전 계산을 그대로 믿고 움직이면 어떤 문제가 생길까? 한 문장으로 적어 줘.",
+  "studentResponseToNextTask": null
+}

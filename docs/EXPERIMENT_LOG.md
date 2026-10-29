@@ -441,6 +441,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Next AI-proposed conceptual question: whether saved information can be used unchanged if a new obstacle blocks a passage during the pause. Student response pending; no changed-map experiment or dynamic replanning result. Current session deliberately uses a fixed snapshot.
 - Documentation/learning-record change only; no algorithm or method change and no test rerun required.
 
+## 2026-10-29 — Guided map-change choice, no new run
+
+- Student replied **2** to the AI-provided options: retain old information unchanged or recheck against a map changed by a new obstacle. Selected rechecking; no reason, procedure or implementation supplied. Exact prompt/options/scope are in `data/learning/map-change-choice-01.json`.
+- AI source review confirms `createAStarSession` copies the initial map and intentionally ignores later caller edits. Existing regression and manifest support snapshot isolation, not automatic change detection or dynamic replanning. Canonical module/test hashes were checked against the prior manifest; no tests or planner runs repeated.
+- Next task requests the student's own reason for rechecking when an obstacle appears on the old route. No changed-map experiment, safety mechanism or physical result claimed. Historical raw outputs and learning records preserved.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
