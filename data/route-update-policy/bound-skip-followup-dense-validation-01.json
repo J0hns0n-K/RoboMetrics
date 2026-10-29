@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "validatedBy": "AI assistant CLI",
+  "validatedAtUTC": "2026-10-29T07:58:39.727Z",
+  "protocolFreezeCommit": "a6c5111869775f704895a12c91f8e51ba2b98688",
+  "numericComparisonCommit": "fd799ad5b645a605fb7cf269157fbd1203861623",
+  "metadataCorrectionCommit": "680ac3dbe843fedabdfd3ff65dd71e51daca7868",
+  "protocols": [
+    "experiments/bound-skip-dense-followup-acquisition-01.protocol.json",
+    "experiments/bound-skip-dense-followup-comparison-01.protocol.json"
+  ],
+  "rawFiles": [
+    {
+      "path": "data/route-update-policy/bound-skip-followup-dense-baseline-run-01.json",
+      "sha256": "92056b6f9df16ad582e0ab8e70d9aa92e66e9705df26cc9860765527c73aeecb"
+    },
+    {
+      "path": "data/route-update-policy/bound-skip-followup-dense-comparison-run-01.json",
+      "sha256": "a2edfc33938a7fcfb75f31a23317ed0829d8ec4996cd2da8dee4cd49df9b0821"
+    },
+    {
+      "path": "data/route-update-policy/bound-skip-followup-dense-comparison-label-corrected-01.json",
+      "sha256": "7933971516ca3337a0463d14e689cbb140c09ae577c729b0ca66313eff25d3e2"
+    }
+  ],
+  "primaryComparison": "data/route-update-policy/bound-skip-followup-dense-comparison-label-corrected-01.json",
+  "existingTests": {
+    "manifest": "data/route-update-policy/manhattan-bound-validation-01.json",
+    "path": "data/route-update-policy/manhattan-bound-tests-01.tap",
+    "sha256": "7aeb3ecdba0e1407b61c1a0a60722a7b16be3d6142720f4a26f192d9bacc52df",
+    "passed": 55,
+    "failed": 0,
+    "fullSuiteRerun": false,
+    "scope": "Core/policy/method/test dependencies unchanged. Comparator changed only a scope label after numeric execution; syntax and metadata-only equivalence checked, no planner/cohort rerun."
+  },
+  "sourceHashesAtCorrectionCommit": {
+    "package.json": "ed66c6f1dd768e55eabb04716249b1dbf8876f1e000ba083a78e742bbdd62011",
+    "scripts/build-learning-trace.mjs": "5430deb4b6a7b25cbbb7e28060554436b867961bb4a1b083a020ae204c519104",
+    "scripts/check-current-position-detour.mjs": "9bb2fad0a772d3fa41c37c8c21b068d44d7e946eb62524c9e50c41a183a9e12e",
+    "scripts/check-route-update-policy.mjs": "9eaa8d313e71781659a4b179fe634550bc7a0b0dc55a089f6ac05ebbc6368304",
+    "scripts/check-second-wall-choices.mjs": "ab0773fec4128dcd1d830699088cd82b4f78c6612ab136601b73dd64105e74c4",
+    "scripts/compare-fixed-ties.mjs": "0af9ce44b2fb4113b5184fa3260fcf06c21f3c6d4aff6f83ca4bb7edef832028",
+    "scripts/compare-manhattan-bound.mjs": "d149d9820fdf392203bbdc989fc5eda38ef602ed9b966fe6b2d346f4b7164331",
+    "scripts/compare-restart-cost.mjs": "ee8058045245122137a2fba4da699047e4daff34bffbba5440129e69c56efa28",
+    "scripts/compare-route-optimization.mjs": "0938f7695817282911692047bf2f3f4835a845e04e63dda6a7cebc0d3d0cba23",
+    "scripts/compare-ties.mjs": "7bf5c591d5646034798eddf84ea9e09480adf3b22f4d8c7b6e1c4293bddeecd1",
+    "scripts/run-matrix.mjs": "ce5fd3ac918d7e69d6a9a7fc3965bc8d7d5622ba1ccefec97edac91a8ddf24a6",
+    "scripts/run-resume-control.mjs": "a8090ca1296c0332d00903778bfc92f3c424d24faa4cc235a19007c9035bef88",
+    "scripts/run-retry-policy.mjs": "a1794489fca4e824bbc84a8ff184bf8875a05b57963193cb2290551c549b8614",
+    "scripts/run-route-reoptimization-batch.mjs": "1e6e0a1e776b8b17ee9212ef52c390b0f18b02b2fcc828516ef3edd3bd96a607",
+    "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+    "scripts/serve.mjs": "e040e1c5b14f83c645d345623711654921731c80835bf37067f2d0502b23b500",
+    "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "src/resumable-astar.mjs": "c43cc77c139446f50a4de02a1f315945e4406f760d4b631e5b905524a2769ed9",
+    "src/retry-policy.mjs": "72729cd2ce9fb2c93a94057a43ee6b9b29bfdf270b73418541adcf6b169e9576",
+    "src/route-update-policy.mjs": "4855291a88744b3cf2f29ba2d82c0641ea8e9ca666cb60b78d4d16d1b2b0846b",
+    "src/ui.mjs": "83449f56a4844bb877272fb8050d72bf7364df1214eb236b3420c5f3f8f71c38",
+    "test/audit.test.mjs": "2aaba9e05b6fa01ba0fbe5d7bfdefa82e8e1dce414fe00e477e09e1fd9b7be27",
+    "test/core.test.mjs": "b75b834a103758ffbd780d3c842be93189294d6e6600fa46fd0096b66510c795",
+    "test/counterexample.test.mjs": "fd020e579decc69a6ea99c69d1490c955b2d6ee3c562e62609d5bc5ae0f22265",
+    "test/current-position-detour.test.mjs": "3105108879cbce53fba1ed7c5f7a4d167da986f4c07c81771d2db51b1a41ca87",
+    "test/demo-rule.test.mjs": "74e8a2d7653ea6e0d108292ad8b57d3bff3272818c862d8a4bd7d151078a20e7",
+    "test/fixed-ties.test.mjs": "24bedf6106fae2cdab14006154a2a9c086befc305bd6d76f27c8fc1bc0201110",
+    "test/manhattan-bound-skip.test.mjs": "135a0746181905154df69af857a96badbd3479494daf477eb07e5a4cffbdcf01",
+    "test/matrix.test.mjs": "20d10863f15bb1bd713fce6914265254b7222376c60bfcb35672c13aefbe73ec",
+    "test/resumable-astar.test.mjs": "8c76a18e22a7607fe35a941ea61de5a9299127a781f07259df8b56d024279f9b",
+    "test/retry-policy.test.mjs": "8b3d8f20311854ecaae219d94438991d21b1bbf03dac4af3a0889fd2d3a22ccb",
+    "test/route-reoptimization-batch.test.mjs": "d37185657928fd5d0c3dc776f340484e9d098bd2b976c89d68daa7e001052f31",
+    "test/route-update-policy.test.mjs": "fd290b63176ac998fd40f45861676dedc3bfcefa63812a65e058f5b59790dbf5",
+    "test/tie-break.test.mjs": "7e4405e0f817c56ac6f7e8018193deaa80117f03d1b5077886bee52f2c05d256"
+  },
+  "checks": {
+    "studentConditionNotPerformanceForecast": true,
+    "bothProtocolsFrozenBeforeFollowupGeneration": true,
+    "ruleAlgorithmFixedBeforeCohort": true,
+    "first75CandidateAuditAnd30AcceptedSeedsReplay": true,
+    "onePrescribedWallRemovalAndSamePriorRoutePerPair": true,
+    "baselineOriginalFieldsReplay": true,
+    "allReturnedPathsValidAndBfsShortest": true,
+    "identicalForcedAndGuardedPathsAndLengths": true,
+    "twentyOneBoundProofsSeparateFromNineSearchCompletions": true,
+    "onePotentialImprovementNotSkipped": true,
+    "sourceAndExistingTestDependenciesVerified": true,
+    "oldRawAndCorrectedNumericDataIdentical": true,
+    "metadataLineageAndOriginalExecutionPreserved": true,
+    "outputGuardsAndBytesPreserved": true
+  },
+  "observations": {
+    "baseSeed": 20265027,
+    "width": 16,
+    "height": 12,
+    "wallGenerationProbability": 0.28,
+    "candidates": 75,
+    "acceptedMaps": 30,
+    "rejectedUnreachable": 45,
+    "budgetPerInvocation": 300,
+    "tieBreak": "fifo",
+    "usableRoutesEach": 30,
+    "meanReturnedMovesEach": 26.666666666666668,
+    "baselineCalls": 30,
+    "revisedCalls": 9,
+    "baselineExamined": 2690,
+    "revisedExamined": 844,
+    "meanExaminedBaseline": 89.66666666666667,
+    "meanExaminedRevised": 28.133333333333333,
+    "savedExpansions": 1846,
+    "expansionReductionFraction": 0.6862453531598512,
+    "boundProofs": 21,
+    "actualAStarCompletionsRevised": 9,
+    "budgetFailures": 0,
+    "potentiallyShorterMaps": 1,
+    "actuallyShorterMaps": 1,
+    "priorLengthHistogram": {
+      "26": 21,
+      "28": 7,
+      "30": 2
+    },
+    "improvements": [
+      {
+        "trial": 4,
+        "seed": 20265032,
+        "removedWall": [
+          15,
+          9
+        ],
+        "priorMoves": 28,
+        "returnedMoves": 26,
+        "decision": "SHORTER_ROUTE_FOUND"
+      }
+    ]
+  },
+  "executionAccounting": {
+    "acquisition": {
+      "offlinePriorPlannerCalls": 30,
+      "offlinePriorExamined": 2611,
+      "onlinePolicyEvaluations": 60,
+      "onlinePlannerCalls": 30,
+      "onlineExamined": 2690,
+      "candidateBfsCalls": 75,
+      "editedMapBfsCalls": 30
+    },
+    "comparison": {
+      "operator": "AI assistant CLI",
+      "executedAtUTC": "2026-10-29T07:47:26.559Z",
+      "sourceCommit": "fd799ad5b645a605fb7cf269157fbd1203861623",
+      "sourceInputsDirty": false,
+      "sourceHashesGitBlobs": {
+        "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+        "src/route-update-policy.mjs": "4855291a88744b3cf2f29ba2d82c0641ea8e9ca666cb60b78d4d16d1b2b0846b",
+        "scripts/compare-manhattan-bound.mjs": "2059badf882615d488b00e5e0d232619891f463aa66fab9abe5d78a82374a63d",
+        "test/manhattan-bound-skip.test.mjs": "135a0746181905154df69af857a96badbd3479494daf477eb07e5a4cffbdcf01",
+        "experiments/bound-skip-dense-followup-comparison-01.protocol.json": "85580d5e1bcf9595c1d8bf00674e040437273eecdf9f93be1d3ae5898113c9d5",
+        "data/route-update-policy/bound-skip-followup-dense-baseline-run-01.json": "92056b6f9df16ad582e0ab8e70d9aa92e66e9705df26cc9860765527c73aeecb",
+        "data/learning/bound-skip-followup-density-01.json": "1c4361c3f66d209e0a7396519c76867e037c8b133be005e0765ddf7308651580"
+      },
+      "workspaceStatus": "M practice/02-planning-budget.mjs",
+      "node": "v24.22.1",
+      "platform": "win32/x64",
+      "policyEvaluations": 60,
+      "newPlannerCalls": 39,
+      "newExaminedNodes": 3534,
+      "newPriorAcquisitionCalls": 0,
+      "newIndependentBfsCalls": 0,
+      "provenance": "Student selected the denser condition only, not an outcome prediction. Bound rule/code were fixed before generating this cohort. AI supplies protocol, execution/validation and initial analysis."
+    },
+    "metadataCorrection": {
+      "newPlannerCalls": 0,
+      "newBfsCalls": 0,
+      "newCohortGeneration": false
+    },
+    "validation": {
+      "additionalBfsChecks": 105,
+      "additionalPlannerCalls": 0
+    }
+  },
+  "metadataCorrectionNote": "Original raw label was inherited from the development replay utility and misdescribed cohort scope. Preserve original; primary derivative changes only label and adds lineage. Original numerical source/time/data remain intact. Current driver uses a protocol-scoped generic label.",
+  "attribution": "Student chose offered denser condition 1; .28 numeric option/method/code/execution/initial analysis supplied by AI. No student savings forecast, independent proof/code or operation inferred.",
+  "limitations": [
+    "Rule and protocols fixed before this unseen condition-specific cohort; deterministic seed changes do not prove statistical independence.",
+    "Density and seeds both differ from development cohort, so cross-study differences are not a causal density experiment.",
+    "Single-wall deterministic edit selection on reachable-only synthetic maps; no universal saving-rate guarantee.",
+    "Planner node counts exclude map copying/path validation/BFS/metadata handling, not runtime/energy or robot-motion measurements."
+  ],
+  "unrelatedLocalChangePreserved": "practice/02-planning-budget.mjs"
+}

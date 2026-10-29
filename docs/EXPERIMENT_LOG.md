@@ -566,6 +566,15 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Correct the driver label to direct readers to the frozen protocol for cohort scope. This is metadata-only; no guard, planner, sampling, input or output values change. Create a separately named label-corrected derivative, retaining original execution provenance plus explicit correction lineage; do not rerun planner/cohort or present the derivative as a replication.
 - The scope remains condition-specific unseen-at-freeze validation with no statistical-independence or causal density claim. Original development-cohort results retain their historical label.
 
+## 2026-10-29 — Dense follow-up validation complete
+
+- Frozen before generation `a6c5111869775f704895a12c91f8e51ba2b98688`; acquisition stored/committed then numeric comparison under `fd799ad5b645a605fb7cf269157fbd1203861623`. Corrected primary and original raw plus lineage in `data/route-update-policy/bound-skip-followup-dense-validation-01.json`.
+- Base 20265027/.28/16×12, candidate 75/accepted 30/rejected unreachable 45, prescribed one-wall edits. Same-current-map/prior-route forced vs guarded A* FIFO budget 300: identical BFS-optimal paths 30/30, mean moves 26.6667; calls 30→9, expansions 2,690→844, means 89.6667→28.1333, savings 1,846 (68.6245%). Bound proofs 21/search completions 9, no budget failures.
+- Original lengths 21×26/7×28/2×30. One potential and realized improvement: trial4/seed20265032/wall(15,9), 28→26; guard does not skip it. Student selected condition only, not performance/analysis.
+- Acquisition offline 30 calls/2,611 expansions; online baseline 30/2,690; BFS 75+30. Paired replay adds 39 calls/3,534 expansions and no new acquisition/BFS. Validation adds 105 BFS checks/zero planner calls; metadata correction adds no numerical work.
+- Existing 55-test dependencies match, no repeat full suite. Comparator label fix is metadata-only; source diff and corrected derivative equivalence/parent hashes checked. Candidate/maps/edits/paths/BFS/proofs/costs/output immutability validated. New condition fixed before generation, but no statistical-independence or causal density claim. No runtime/energy/physical/browser result; budget300>192cells is not small-budget stress.
+- Next student task: one report sentence on what remains unchanged and what decreases. Student sentence pending; do not write AI wording as student-authored.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
