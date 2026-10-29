@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "resolution-quality-replay-01",
+  "dateSeoul": "2026-10-29",
+  "status": "ready",
+  "studentChoiceRecord": "data/learning/resolution-path-quality-choice-01.json",
+  "sourceRaw": "data/footprint/resolution-policy-unfiltered-run-01.json",
+  "sourceValidation": "data/footprint/resolution-policy-unfiltered-validation-01.json",
+  "selectedModel": "experiments/disk-model-clearance015-01.config.json",
+  "count": 30,
+  "radius": 0.4,
+  "clearance": 0.15,
+  "coarseBudget": 100,
+  "fineBudget": 100,
+  "tieBreak": "fifo",
+  "rules": [
+    "Use the existing coarse-first policy for acquisition, preserving its raw outcomes and status behavior.",
+    "If no valid route is obtained, return that failure without optimization.",
+    "If acquisition already returns a completed fine-graph path, do not perform a third search.",
+    "If a valid coarse path equals abs(goalX-startX)+abs(goalY-startY) in original world units, skip finer search; this bound applies to the declared axis-aligned model.",
+    "Otherwise run one fresh fine-graph search with the declared fine budget. A completed result may shorten or confirm the route.",
+    "If that optimization exhausts its budget, preserve the valid coarse route, expose raw failed optimization with empty/null fields and mark optimization incomplete.",
+    "Sum actual work from both stages. Report returned route source/spacing separately from last attempted spacing, and route validity separately from optimality evidence."
+  ],
+  "caps": "At most two searches and coarseBudget+fineBudget=200 for quality-checked and original coarse-first; archived always-fine cap100. Known100-stage replay is not a general equal-total-budget comparison against always-fine.",
+  "replay": "Exactly the30 archived original rows/endpoints/labels, no generation, filtering, replacement or new samples. This is a development-cohort replay after its two longer cases motivated the rule.",
+  "fallbackControl": {"trial": 12, "seed": 20267039, "coarseBudget": 100, "fineBudget": 1, "scope": "Separate AI known-case control, outside30-map summary. Expect retained length8 and failed optimization, not completed optimality."},
+  "validation": "Full policy regressions; compare acquisition stages exactly to archived stages, new fine results to archived always-fine where budgets match, world geometry/masks/paths/BFS evidence and full cost accounting. Keep all raw prior failures immutable and distinguish fallback route success from optimization completion. Freeze source/protocol before replay.",
+  "attribution": "Student selects objective2 only. AI formulates lower bound, rules, exact budgets/control, implementation, tests, operation and analysis.",
+  "scope": "Known-cohort improvement/accounting, not held-out/generalization evidence, new cohort, actual workload, continuous global optimum, runtime/energy/storage or physical-robot result. Original baseline API/data/browser unchanged."
+}

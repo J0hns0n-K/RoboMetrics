@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "studentResponseVerbatim": "2",
+  "selectedObjective": "If a valid coarse route may be shortened, spend additional search checking a finer route.",
+  "studentRationale": null,
+  "studentNumericalPrediction": null,
+  "context": "Guided objective choice after AI reported two longer coarse-first paths in the known30-map cohort. No additional hypothesis, implementation or independent algorithm invention supplied.",
+  "attribution": "Student selects the offered objective only. AI supplies the axis-Manhattan skip, fine optimization trigger, budgets/fallback/evidence rules, code/tests/replay/analysis."
+}
