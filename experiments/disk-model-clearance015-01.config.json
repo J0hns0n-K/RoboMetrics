@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "assumed-disk-clearance015-01",
+  "dateSeoul": "2026-10-29",
+  "status": "selected-assumed-simulation-model",
+  "choiceRecord": "data/learning/disk-clearance-choice-01.json",
+  "hardwareContext": "data/learning/robot-hardware-context-01.json",
+  "shape": "disk",
+  "radius": 0.4,
+  "diameter": 0.8,
+  "clearance": 0.15,
+  "effectiveRadius": 0.55,
+  "requiredWidthStrictlyGreaterThan": 1.1,
+  "cellSide": 1,
+  "units": "virtual cell-side lengths, no physical calibration",
+  "contactIsCollision": true,
+  "attribution": "Student selected clearance0.15; shape/radius/units/representation/options/code are AI support. Geometry functions take the chosen margin explicitly; no global browser or old-protocol defaults changed.",
+  "scope": "No actual robot dimensions, sensor uncertainty calibration or physical safety validation."
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "recordType": "guided simulation-clearance parameter choice; not experiment output",
+  "recordedBy": "AI assistant from user chat",
+  "contextRevision": "c49348886d070839a1273ee2788acf6a5a53cad8",
+  "priorDraft": "experiments/disk-clearance-choice.design.json",
+  "options": {
+    "1": {
+      "clearance": 0.05
+    },
+    "2": {
+      "clearance": 0.15
+    }
+  },
+  "studentResponseVerbatim": "2",
+  "selectedClearance": 0.15,
+  "modelRadius": 0.4,
+  "studentReasonVerbatim": null,
+  "studentOutcomePrediction": null,
+  "context": "AI explained prior to choice that diameter0.8 plus two margins0.15 requires more than1.1 cell units and cannot pass a width1 opening under contact-forbidden convention.",
+  "attributionLimits": "Student selects an offered simulation margin after explanation, not a novel geometric prediction, physical safety requirement, measured dimension, independent model/code authorship or execution. AI supplies options/model/method/operation."
+}

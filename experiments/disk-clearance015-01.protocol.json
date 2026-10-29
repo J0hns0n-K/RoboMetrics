@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "id": "disk-clearance015-01",
+  "dateSeoul": "2026-10-29",
+  "status": "ready",
+  "hardwareContext": "data/learning/robot-hardware-context-01.json",
+  "units": "ASSUMED cell-side lengths, one square cell side=1. No centimeters/meters or measured robot dimensions.",
+  "geometry": "Rigid circular disk, closed unit-square obstacles, world rectangle [0,width]x[0,height]. Contact counts as collision. Centers restricted to cell centers and four-neighbor straight edges, no dynamics/orientation/controller/sensor model.",
+  "width": 9,
+  "height": 7,
+  "start": [
+    1,
+    3
+  ],
+  "goal": [
+    7,
+    3
+  ],
+  "barrierColumn": 4,
+  "openingCenterRow": 3,
+  "maxExpansions": 100,
+  "tieBreak": "fifo",
+  "cases": [
+    {
+      "id": "narrow-point",
+      "openingCells": 1,
+      "radius": 0,
+      "clearance": 0
+    },
+    {
+      "id": "narrow-body08-margin00",
+      "openingCells": 1,
+      "radius": 0.4,
+      "clearance": 0
+    },
+    {
+      "id": "narrow-body08-margin005",
+      "openingCells": 1,
+      "radius": 0.4,
+      "clearance": 0.05
+    },
+    {
+      "id": "narrow-body08-selected015",
+      "openingCells": 1,
+      "radius": 0.4,
+      "clearance": 0.15
+    },
+    {
+      "id": "wide-body08-selected015",
+      "openingCells": 3,
+      "radius": 0.4,
+      "clearance": 0.15
+    }
+  ],
+  "aiExpectedGeometry": "For these symmetric fixtures with valid endpoints and a barrier touching world boundaries, a straight center route exists iff opening width >2*(radius+clearance). Strict inequality reflects the contact rule. Where it exists, the route attains six horizontal moves. These are hand-known reference controls, not student forecasts.",
+  "validation": "Preserve original/effective rows and paths, endpoint status, A* result, swept-edge checks against original geometry, separate BFS on configuration graph and analytic width test. Compare radius0 old point path with larger-body validation; keep geometric no-path separate from budget or endpoint invalidity.",
+  "studentOutcomePrediction": null,
+  "attribution": "Student chose offered option2/margin0.15 after the geometric explanation; no outcome forecast or physical safety/code claim. AI supplies .05/zero/point/wider controls, protocol, source, execution and analysis.",
+  "scope": "Known geometric-control extension, no independent new random cohort or physical robot experiment. All dimensions/margins assumed. Existing tested source reused unchanged; freeze this input before execution.",
+  "studentChoiceRecord": "data/learning/disk-clearance-choice-01.json",
+  "selectedModel": "experiments/disk-model-clearance015-01.config.json",
+  "parentProtocol": "experiments/disk-footprint-corridor-01.protocol.json",
+  "controls": "Same two9x7 layouts/S(1,3)/G(7,3), four-neighbor cell centers/A* FIFO budget100/contact forbidden/virtual units. Compare margin0/.05/.15 at fixed diameter0.8; wide3 control changes two barrier cells, not body/margin. Point control is rerun by the existing runner."
+}

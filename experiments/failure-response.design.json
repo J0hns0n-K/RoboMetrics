@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student selects virtual clearance0.05 or0.15 for the assumed diameter0.8 disk. No hardware dimensions/safety requirement or student geometry invention inferred; freeze chosen case before its check.",
+  "nextTask": "Commit selected virtual model/protocol then execute fixed-margin/wider-opening controls; keep student parameter choice separate from already-explained outcomes and physical safety claims.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -166,5 +166,8 @@
     "data/footprint/disk-footprint-corridor-run-01.json",
     "data/footprint/disk-footprint-corridor-validation-01.json"
   ],
-  "diskClearanceChoiceDraft": "experiments/disk-clearance-choice.design.json"
+  "diskClearanceChoiceDraft": "experiments/disk-clearance-choice.design.json",
+  "studentDiskClearanceChoiceRecord": "data/learning/disk-clearance-choice-01.json",
+  "selectedAssumedDiskModel": "experiments/disk-model-clearance015-01.config.json",
+  "diskClearanceProtocol": "experiments/disk-clearance015-01.protocol.json"
 }

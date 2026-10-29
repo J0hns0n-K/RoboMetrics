@@ -627,6 +627,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Geometry checks share one distance primitive; no full independent collision-code, continuous-motion completeness, kinematics/controller/sensing/real robot/runtime-energy or safety certification claim. Original point core and browser untouched. Student supplies context only, not geometry choices/code or result forecasts.
 - Next AI draft `experiments/disk-clearance-choice.design.json`: student chooses virtual radial margin0.05/0.15 for body diameter0.8, narrow width1. No choice/new result yet.
 
+## 2026-10-29 — Student selects virtual margin0.15 after explanation
+
+- Exact choice **2** in `data/learning/disk-clearance-choice-01.json`: margin0.15, radius0.4/diameter0.8. AI had already explained required width>1.1 and width1 rejection, so no new student outcome forecast or independent discovery is inferred.
+- Immutable selected assumption `experiments/disk-model-clearance015-01.config.json`; ready controls `experiments/disk-clearance015-01.protocol.json`: point/zero/.05/selected.15 at width1, selected.15 at width3. Same9×7/S/G/A* FIFO/budget100/closed-contact/virtual units; AI supplies controls and execution.
+- Existing geometry module/runner/70-test dependencies reused with no source change or full-suite repeat. Commit input/choice before configured execution; preserve original geometry protocol/raw. No physical measurement/safety calibration claim.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
