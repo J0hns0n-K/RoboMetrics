@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "studentResponseVerbatim": "2",
+  "selectedOption": 2,
+  "selectedDirection": "Try unit-step first and retry once at half-step only when the coarse graph is exhausted UNREACHABLE.",
+  "studentRationale": null,
+  "studentNumericalPrediction": null,
+  "beforeConfiguredExecution": true,
+  "context": "Guided choice after AI explained empty-map fine-search cost and possible repeated work in staged refinement.",
+  "attribution": "Student selects the offered coarse-first direction only. AI supplies wrapper/code,100-node per-stage caps, status handling, known fixtures, tests, execution and analysis. No independent student invention, code or operation inferred."
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "resolution-policy-controls-01",
+  "dateSeoul": "2026-10-29",
+  "status": "ready",
+  "selectedModel": "experiments/disk-model-clearance015-01.config.json",
+  "studentChoiceRecord": "data/learning/resolution-policy-choice-01.json",
+  "parentRaw": {
+    "empty": "data/footprint/open-map-resolution-run-01.json",
+    "doorway": "data/footprint/disk-resolution-run-01.json"
+  },
+  "width": 9,
+  "height": 7,
+  "start": [1, 3],
+  "goal": [7, 3],
+  "radius": 0.4,
+  "clearance": 0.15,
+  "tieBreak": "fifo",
+  "coarseBudget": 100,
+  "fineBudget": 100,
+  "modes": ["always-fine", "coarse-first"],
+  "layouts": [
+    {"id": "empty", "blocked": []},
+    {"id": "doorway", "blocked": [[4,0],[4,1],[4,4],[4,5],[4,6]]}
+  ],
+  "geometry": "Same original9x7 world/body/obstacle units/endpoint centers/contact convention as parents. Each matched comparison differs only in resolution policy; origin0.5, spacings1/0.5, A* FIFO. No state reuse across graphs.",
+  "statusRules": "Coarse success stops. Only coarse UNREACHABLE triggers one fresh half-step search. Coarse BUDGET_EXCEEDED or INVALID_ENDPOINT_CLEARANCE stops. Fine result, including budget failure or graph exhaustion, is final. Retain stage raw results and sum all actual expansions.",
+  "budgets": "100 per stage, not100 total for the staged policy. Always-fine permits1 search/cap100, coarse-first at most2/cap200. These unequal maximum allowances are explicit; compare actual costs on known cases, not general success under equal total budgets.",
+  "aiExpectedKnownControls": "Empty: direct fine13 versus staged coarse7, world length6. Doorway: direct fine28 versus staged12+28=40, world length7. Expected counts derive from archived stages; this is policy integration/accounting on known fixtures, not new independent samples or student numerical forecasts.",
+  "validation": "Full regression suite for policy status/cost handling. Match every executed stage to archived core/world results, validate successful world segments and separate BFS, preserve failure stages and output immutability. Commit source/protocol/choice before configured execution.",
+  "attribution": "Student selected offered option2 only, no rationale/count or implementation supplied. AI supplies policy details/budgets/code/tests/operation/analysis.",
+  "scope": "Two known layouts/four paired-policy conditions. No population-weighted benefit, universal efficiency, continuous optimality, timing/energy/memory or physical robot claim. Historical raw data/core/browser unchanged."
+}
