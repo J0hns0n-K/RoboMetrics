@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "status": "awaiting-student-hypothetical-cost-calculation",
+  "proposalAuthor": "AI assistant",
+  "sourceValidation": "data/footprint/resolution-policy-controls-validation-01.json",
+  "hypotheticalVisits": {"empty": 1, "doorway": 1},
+  "question": "빈 지도와 통로 지도를 한 번씩 만난다면 총 검토량은 각각 몇 곳일까? 항상 반 칸:13+28, 먼저1칸:7+40. 합계 두 개를 적어 줘.",
+  "studentResponseVerbatim": null,
+  "studentCalculation": null,
+  "scope": "Guided arithmetic using two archived known controls and a hypothetical equal frequency. No new planner run, observed workload distribution, independent maps, population-level performance claim or student-authored policy proof."
+}

@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student strategy choice: always half-step or coarse-first/refine once only on exhausted UNREACHABLE, informed by known empty/doorway controls. No policy implementation/run or student mechanism explanation yet.",
+  "nextTask": "Student sums known costs for a hypothetical one-empty/one-doorway workload: direct fine13+28 versus coarse-first7+40. No new planner execution or observed workload distribution.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -196,5 +196,13 @@
     "data/footprint/open-map-resolution-run-01.json",
     "data/footprint/open-map-resolution-validation-01.json"
   ],
-  "resolutionPolicyChoiceDraft": "experiments/resolution-policy-choice.design.json"
+  "resolutionPolicyChoiceDraft": "experiments/resolution-policy-choice.design.json",
+  "resolutionPolicyChoiceRecord": "data/learning/resolution-policy-choice-01.json",
+  "resolutionPolicyProtocol": "experiments/resolution-policy-controls-01.protocol.json",
+  "resolutionPolicyArtifacts": [
+    "data/footprint/resolution-policy-controls-run-01.json",
+    "data/footprint/resolution-policy-controls-validation-01.json"
+  ],
+  "resolutionPolicyDefault": "coarse-first (new separate API only)",
+  "resolutionPolicyMixCalculationDraft": "experiments/resolution-policy-mix-calculation.design.json"
 }

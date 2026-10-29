@@ -280,7 +280,15 @@ Junmo's earlier **그러게** response is [preserved](../data/learning/disk-reso
 
 Source/input/prediction commit884e0c47ba981be9bc2c286701546201ea2a5e2f precedes execution. [Protocol/method](OPEN_MAP_RESOLUTION_KR.md) and [validation](../data/footprint/open-map-resolution-validation-01.json) use one empty9×7 original world/S(1,3)/G(7,3), diameter0.8/margin0.15, A* FIFO budget100 and spacing1/0.5. Both return world length6; original spacing uses6edges/7examined, half-step12edges/13examined. Candidate counts63/221 and unblocked candidates35/165 are distinct from actual expansions. Exact world paths, BFS and all18segments agree with the analytic straight-line reference. This supports the guided direction on this control only.
 
-Configured2planner calls/20expansions/2BFS/284point audits. Additional validation284boundary checks/2BFS/18segments/zero planner, source/archive bindings and immutable output verified. Core/disk/BFS/world-audit/relevant tests match prior79-test sources, no full-suite repeat. Candidate construction/audits/storage costs are not runtime/energy or memory-efficiency measurements. Next AI draft offers always-half-step versus coarse-first/one-half-step retry on exhausted UNREACHABLE; student choice and policy implementation/results pending.
+Configured2planner calls/20expansions/2BFS/284point audits. Additional validation284boundary checks/2BFS/18segments/zero planner, source/archive bindings and immutable output verified. Core/disk/BFS/world-audit/relevant tests match prior79-test sources, no full-suite repeat. Candidate construction/audits/storage costs are not runtime/energy or memory-efficiency measurements. The subsequent student selection and implemented coarse-first accounting control are recorded below.
+
+## Student-selected coarse-first policy: savings on one control, repeated work on another
+
+Student response **2** selects the AI-offered coarse-first/refine-on-UNREACHABLE direction, after explanation of potential easy-case savings and repeat costs. The [choice](../data/learning/resolution-policy-choice-01.json) contains no reason or numeric prediction. AI provides the new synchronous fixed-map wrapper, per-stage100 budgets, exact status rules, tests, execution and initial analysis. It defaults only the new API to coarse-first and leaves core/body/browser unchanged.
+
+[Protocol and method](RESOLUTION_POLICY_KR.md), [raw data](../data/footprint/resolution-policy-controls-run-01.json) and [validation](../data/footprint/resolution-policy-controls-validation-01.json) bind source/protocol/choice648550c4b27725ee1f756d42f3d813304e3b8714 before configured execution. Same original9×7 units/body0.8/margin0.15/endpoints/contact/A* FIFO; two archived layouts/four policy evaluations. Empty: direct fine13 versus coarse-first7, world length6. Doorway: direct fine28 versus coarse-first12+28=40, world length7. All five stages match parent raw outcomes/masks exactly and retain the coarse failed path[]/lengthnull. Coarse budget failure/invalid endpoints stop; fine result is final. Retry is fresh, not reused coarse state.
+
+Seven new controls bring the archived full suite to86 passes/zero failures. Configured4policy evaluations/5searches/88expansions/5BFS. Additional validation5BFS/46successful world segments/zero planner calls, source/TAP/cost/cap/output-preservation checks passed. Always-fine cap100 versus coarse-first cap200 are explicit; this is not a general success comparison at equal total budget. No universal work or route-quality equivalence: coarse early success can miss a shorter fine path. Timing/energy/storage and physical robot outcomes remain unmeasured. Next is a hypothetical equal-frequency cost calculation, not a new observed cohort or population-level policy benefit.
 
 ## Student report sections to complete later
 
@@ -295,7 +303,7 @@ The sections above distinguish completed simulation checks from planned work and
 
 ## Next engineering gates
 
-- Obtain a resolution-policy choice after the known doorway and empty-map controls; freeze its status handling, budgets and full cost accounting before implementation/execution.
+- Obtain a student hypothetical-workload calculation from the completed coarse-first controls; register a broader map distribution before claiming practical policy benefits.
 - Preserve obstacle/world/body units when adding samples; validate every returned swept path and distinguish geometric length from edge count and search work.
 - Add scoped kinematics, waypoint control and sensing uncertainty only with explicit assumptions and checks.
 - If hardware is obtained, measure its dimensions and repeat controlled trials; report simulation/physical differences and failed cases separately. Follow [the robotics roadmap](ROBOTICS_ROADMAP.md).

@@ -662,6 +662,13 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Raw/validation data/footprint/open-map-resolution-*.json, method docs/OPEN_MAP_RESOLUTION_KR.md. Configured2A*/20expansions/2BFS/284point audits; extra validation284boundary checks/2BFS/18segments/zero planner calls. Existing79-test runtime dependencies/relevant tests/archive hashes match, no full-suite rerun; new runner syntax/source/count/output guards checked.
 - Student direction supported here, not a universal fine-grid rule or independent cohort. AI supplies concrete map/method/code/operation/analysis, no physical/runtime-energy/storage result. Next AI draft experiments/resolution-policy-choice.design.json offers always-fine versus coarse-first/refine-on-UNREACHABLE; no answer/implementation/result yet.
 
+## 2026-10-29 — Selected coarse-first resolution policy checked on known layouts
+
+- Student **2** selects offered coarse-first/refine-on-exhausted-UNREACHABLE, no reason/count/code. Choice data/learning/resolution-policy-choice-01.json. AI supplies synchronous wrapper,100 per-stage budgets/status rules/tests/operation/analysis.
+- Source/protocol/choice648550c4b27725ee1f756d42f3d813304e3b8714 precedes run. Same original9×7/body0.8/margin0.15/world endpoints/contact/A* FIFO, two archived layouts: empty always-fine13 versus coarse-first7/world6; doorway fine28 versus coarse-first12+28=40/world7. Four evaluations, not independent samples. All5stages exactly match parent outcomes/masks; raw coarse failure retained. Coarse budget/invalid endpoint stops, fine result final, no third stage or coarse state reuse.
+- Protocol experiments/resolution-policy-controls-01.protocol.json, method docs/RESOLUTION_POLICY_KR.md, raw/validation data/footprint/resolution-policy-controls-*.json. Full86tests pass including7new policy controls. Configured4policy/5planner/88expansions/5BFS; validation5BFS/46segments/zero planner calls plus source/test/cost/cap/output checks. Caps100 direct versus200 staged explicit, not equal-total-budget success study.
+- No universal cost, fine-route-quality equivalence, continuous optimum, timing/energy/storage or physical result. Next experiments/resolution-policy-mix-calculation.design.json asks hypothetical one-empty/one-doorway totals; no student answer, observed workload or new planner run yet.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

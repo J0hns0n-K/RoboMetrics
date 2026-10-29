@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dateSeoul": "2026-10-29",
-  "status": "choice-recorded-ready-controls",
+  "status": "completed-known-controls",
   "proposalAuthor": "AI assistant",
   "parentValidations": [
     "data/footprint/disk-resolution-validation-01.json",
@@ -21,9 +21,12 @@
   "studentResponseVerbatim": "2",
   "studentRationale": null,
   "implementation": "AI reference src/resolution-policy.mjs; coarse-first default, explicit always-fine comparator, retry once only on coarse UNREACHABLE;100 per-stage budgets with unequal maximum caps200/100.",
-  "results": null,
+  "results": {
+    "raw": "data/footprint/resolution-policy-controls-run-01.json",
+    "validation": "data/footprint/resolution-policy-controls-validation-01.json"
+  },
   "futureControls": "Keep original body/world/obstacles/endpoints fixed, retain both stage outputs and sum actual examined work. Compare both known empty/doorway controls. Do not collapse BUDGET_EXCEEDED, UNREACHABLE and invalid endpoints; retry policy budgets/behavior require an explicit ready protocol before execution.",
-  "scope": "Student chose the offered coarse-first direction after AI explanation, with no rationale/count or independent invention. AI implementation/tests/controls prepared; configured results pending. No physical/general performance result.",
+  "scope": "Student selects offered direction only; AI wrapper/tests/known-control execution completed. No independent student invention/code/operation or general/physical benefit claim.",
   "studentChoiceRecord": "data/learning/resolution-policy-choice-01.json",
   "readyProtocol": "experiments/resolution-policy-controls-01.protocol.json"
 }

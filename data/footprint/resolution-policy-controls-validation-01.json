@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "validatedBy": "AI assistant CLI",
+  "validatedAtUTC": "2026-10-29T10:38:55.017Z",
+  "sourceCommit": "648550c4b27725ee1f756d42f3d813304e3b8714",
+  "protocol": "experiments/resolution-policy-controls-01.protocol.json",
+  "studentChoiceRecord": "data/learning/resolution-policy-choice-01.json",
+  "raw": {
+    "path": "data/footprint/resolution-policy-controls-run-01.json",
+    "sha256": "ba8352ff591095efd5b8da604844f50ac58c283a5e59554070274989e435ab00"
+  },
+  "sourceHashesGitBlobs": {
+    "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "src/disk-footprint.mjs": "d65440878eea0718b28c61357948e3e56e48227213a5ea2c732961cd156853e8",
+    "src/resolution-policy.mjs": "dc071ca5af42d67d5de1143c0166526ec1affe85f8cf064594aa2e190c139293",
+    "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+    "scripts/check-current-position-detour.mjs": "9bb2fad0a772d3fa41c37c8c21b068d44d7e946eb62524c9e50c41a183a9e12e",
+    "scripts/check-two-cell-doorway.mjs": "45765ff5e47d578a34b6df04d12555388ed04bb53387722be4a949c1d5755cad",
+    "scripts/check-resolution-policy.mjs": "68ab49fbe2d8f470aaab45e2474e5c05706503f2900241e1e94fb10279211ae7",
+    "test/resolution-policy.test.mjs": "7c6e38a73b4e68bc799d6648d1bfea5f03a10d980ce41fa9dc6d6e489a98abb0",
+    "data/footprint/resolution-policy-tests-01.tap": "602ea4ca41a5ae76fa5ae441e69b507eb52407e1ee1208bfb95182dc407a1e6e",
+    "experiments/resolution-policy-controls-01.protocol.json": "1c3fd8246b94265714318b7757228438ba3cde461b6eb7fc59d733024eb91367",
+    "experiments/disk-model-clearance015-01.config.json": "05eb114289bcc542081674dd9aa70a5cc9a362513d57d8e7b8e94f74dc8bf658",
+    "data/learning/resolution-policy-choice-01.json": "c0e3fc7971a10e5a4dca2be54b2f512b5d3478a48c6e91ba52a6e1682b8ee7e8",
+    "data/footprint/open-map-resolution-run-01.json": "2c7c6f19a82653df8e71c78db49ce3f18ec799d18247dc0c2fa02342eb3102d1",
+    "data/footprint/disk-resolution-run-01.json": "706d6adeaef8846eb0b493a4674c28bfc7101db36c8e4d6530ee96aabf0106a3"
+  },
+  "tests": {
+    "path": "data/footprint/resolution-policy-tests-01.tap",
+    "sha256": "602ea4ca41a5ae76fa5ae441e69b507eb52407e1ee1208bfb95182dc407a1e6e",
+    "passed": 86,
+    "failed": 0,
+    "newPolicyControls": 7,
+    "fullSuiteExecuted": true
+  },
+  "checks": {
+    "choiceRecordedBeforeConfiguredExecution": true,
+    "noStudentRationaleCountsOrCodeInvented": true,
+    "committedSourceProtocolAndTestBinding": true,
+    "allOriginalGeometryAndUnitsMatchParents": true,
+    "allFiveStagesExactlyMatchArchivedOutcomesAndMasks": true,
+    "coarseSuccessSkipsFine": true,
+    "coarseUnreachableRetainedAndTriggersExactlyOneFineStage": true,
+    "allActualStageExpansionsSummed": true,
+    "unequalMaximumPolicyAllowancesExplicit": true,
+    "allReturnedWorldPathsValidAndBfsMatched": true,
+    "suiteCoversBudgetEndpointAndFinalFineFailureStatuses": true,
+    "outputRejectedBeforeWorkAndBytesPreserved": true
+  },
+  "observations": {
+    "knownLayouts": 2,
+    "policyEvaluations": 4,
+    "bodyDiameter": 0.8,
+    "clearanceEachSide": 0.15,
+    "tieBreak": "fifo",
+    "budgetPerStage": 100,
+    "actualPolicyCaps": {
+      "alwaysFine": 100,
+      "coarseFirst": 200
+    },
+    "results": [
+      {
+        "layout": "empty",
+        "mode": "always-fine",
+        "status": "ROUTE_FOUND",
+        "stages": 1,
+        "plannerCalls": 1,
+        "examined": 13,
+        "stageExpansions": [
+          13
+        ],
+        "worldLength": 6
+      },
+      {
+        "layout": "empty",
+        "mode": "coarse-first",
+        "status": "ROUTE_FOUND",
+        "stages": 1,
+        "plannerCalls": 1,
+        "examined": 7,
+        "stageExpansions": [
+          7
+        ],
+        "worldLength": 6
+      },
+      {
+        "layout": "doorway",
+        "mode": "always-fine",
+        "status": "ROUTE_FOUND",
+        "stages": 1,
+        "plannerCalls": 1,
+        "examined": 28,
+        "stageExpansions": [
+          28
+        ],
+        "worldLength": 7
+      },
+      {
+        "layout": "doorway",
+        "mode": "coarse-first",
+        "status": "ROUTE_FOUND",
+        "stages": 2,
+        "plannerCalls": 2,
+        "examined": 40,
+        "stageExpansions": [
+          12,
+          28
+        ],
+        "worldLength": 7
+      }
+    ],
+    "configuredPolicyEvaluations": 4,
+    "configuredPlannerCalls": 5,
+    "configuredExaminedNodes": 88,
+    "configuredBfsCalls": 5,
+    "additionalValidationBfsCalls": 5,
+    "additionalValidationSweptSegments": 46,
+    "additionalValidationPlannerCalls": 0
+  },
+  "validationMethod": "All five executed stages matched archived raw outcomes/configuration masks exactly; separate BFS on each stage, explicit original-square/boundary distances on every returned axis-aligned world segment, counts/caps/source/TAP and no-overwrite guard checked.",
+  "attribution": "Student selected offered option2 only, no rationale/count or implementation supplied. AI supplies policy details/budgets/code/tests/operation/analysis.",
+  "limitations": [
+    "Two known layouts, not independent new research samples or evidence for a population-weighted policy advantage.",
+    "Always-fine cap100 versus coarse-first cap200: explicit per-stage100 allowances, not equal total-budget success comparison.",
+    "Coarse success stops without checking a possibly shorter fine-grid route; no universal path-quality equivalence or continuous optimum.",
+    "Retry starts a fresh finer graph, no state reuse; invalid endpoints and coarse budget failures do not trigger refinement.",
+    "Node counts exclude mask/validation/BFS/storage overhead; no runtime, energy, memory-efficiency, sensor/control or physical safety measurement."
+  ],
+  "unrelatedLocalChangePreserved": "practice/02-planning-budget.mjs"
+}
