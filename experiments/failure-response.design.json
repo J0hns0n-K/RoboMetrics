@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student chooses a proposed goal A(7,2) or B(7,4) on archived endpoint-invalid trial10/seed20268037, for body clearance only. Original map/start/body unchanged; route reachability not yet checked. Freeze new endpoint-variant protocol after choice, no new planner run yet.",
+  "nextTask": "Guided manual edit: change only practice/04-goal-placement.mjs goal [7,3] to [7,2], after AI explained/reference-tested A. Student has not edited/run yet; inspect actual diff after save, distinguish operator, do not claim independent design or new research data.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -239,5 +239,12 @@
   "resolutionBoundStopRecord": "data/learning/resolution-bound-stop-01.json",
   "resolutionBoundCheckDraft": "experiments/resolution-bound-check.design.json",
   "resolutionBoundScopeAnswerRecord": "data/learning/resolution-bound-scope-answer-01.json",
-  "endpointPlacementChoiceDraft": "experiments/endpoint-placement-choice-01.design.json"
+  "endpointPlacementChoiceDraft": "experiments/endpoint-placement-choice-01.design.json",
+  "endpointPlacementStudentUncertainty": "data/learning/endpoint-placement-uncertainty-01.json",
+  "endpointPlacementProtocol": "experiments/endpoint-placement-controls-01.protocol.json",
+  "endpointPlacementArtifacts": [
+    "data/footprint/endpoint-placement-controls-run-01.json",
+    "data/footprint/endpoint-placement-controls-validation-01.json"
+  ],
+  "endpointPlacementPractice": "practice/04-goal-placement.mjs"
 }

@@ -316,6 +316,12 @@ Both modes yield2ROUTE_FOUND/4UNREACHABLE/24INVALID_ENDPOINT_CLEARANCE/0BUDGET_E
 
 Four metric controls bring test/*.test.mjs to101passes/0failures. Tests cover length/work ordering, failure non-comparability, no-comparable null totals and unequal success denominators. Unrelated portfolio/ and practice changes preserved. Configured30newmaps/60policy/18planner/295nodes/66model/12BFS/8520point checks. Validation BigInt reconstructs30maps,8520points/12BFS/82stage+64returned segments/0planner and independently verifies fixed inputs/code hashes/prediction/summary/output preservation. These checks are not extra samples. Caps100/200 remain unequal; no timing/energy/storage or physical claim. Next AI-selected trial9 asks for the student's post-result stage-cost explanation, with no new experiment.
 
+## AI-reference endpoint control after student uncertainty
+
+The student said **몰라** to A/B placement and selected no goal. [Response](../data/learning/endpoint-placement-uncertainty-01.json) prevents attributing AI's A answer to student input design. AI source/protocol/response a7a80ab8357435011af8b8aacc5ef0b40c8de610 precedes the [known control](ENDPOINT_PLACEMENT_CONTROL_KR.md). Same archived prospective trial10/20268037 obstacles/start/body0.8/margin0.15/FIFO/stage100; only goal G(7,3)/A(7,2)/B(7,4) changes. No regeneration or wall removal, original30 unchanged. Endpoint center clearances0.5/sqrt0.5/0.5 are checked against effective radius0.55. G/B remain INVALID_ENDPOINT_CLEARANCE with no planner calls. A coarse graph remains UNREACHABLE after2examined while fine BFS18edges/world9 agrees with A*38examined; quality policy totals40.
+
+[Raw](../data/footprint/endpoint-placement-controls-run-01.json) and [validation](../data/footprint/endpoint-placement-controls-validation-01.json) bind one archived layout/3endpoint assignments/6policy evaluations, not independent maps. Configured3planner/78nodes/7model/2BFS/852point audits; additional validation852points/3goal distances/2BFS/36stage+36returned segments/zero planner, originalG/full-mask/source/old101TAP/output checks. Relevant algorithm/reference/test sources unchanged and full suite not repeated; new harness syntax/configured checks passed. Success followed an input change, not an algorithm improvement, runtime/energy or physical result. New practice/04-goal-placement.mjs is AI scaffolding for applying the explained A coordinate; no student edit/run yet. Future actual manual change and operator must be recorded separately.
+
 ## Student report sections to complete later
 
 1. Student's own question and prior prediction, with timestamp/commit.
@@ -329,7 +335,7 @@ The sections above distinguish completed simulation checks from planned work and
 
 ## Next engineering gates
 
-- Obtain the stage-cost interpretation of the completed prospective check. Define any larger cohort or endpoint-placement intervention in a new protocol before execution; retain current failures and distinguish new conditions from existing matched subsets.
+- Verify the guided coordinate edit if the student performs it; retain original endpoint failures and distinguish input changes from algorithm improvements. Define larger placement/generalization protocols before new inputs or interventions.
 - Preserve obstacle/world/body units when adding samples; validate every returned swept path and distinguish geometric length from edge count and search work.
 - Add scoped kinematics, waypoint control and sensing uncertainty only with explicit assumptions and checks.
 - If hardware is obtained, measure its dimensions and repeat controlled trials; report simulation/physical differences and failed cases separately. Follow [the robotics roadmap](ROBOTICS_ROADMAP.md).

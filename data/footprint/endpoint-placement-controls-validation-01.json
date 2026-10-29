@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "validatedBy": "AI assistant CLI",
+  "validatedAtUTC": "2026-10-29T14:13:18.701Z",
+  "sourceCommit": "a7a80ab8357435011af8b8aacc5ef0b40c8de610",
+  "protocol": "experiments/endpoint-placement-controls-01.protocol.json",
+  "studentResponseRecord": "data/learning/endpoint-placement-uncertainty-01.json",
+  "raw": {
+    "path": "data/footprint/endpoint-placement-controls-run-01.json",
+    "sha256": "cfced29a6a471ee463e6ad681f68638281e9110bed38d14324d5a7d42d5409c2"
+  },
+  "sourceHashesGitBlobs": {
+    "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "src/disk-footprint.mjs": "d65440878eea0718b28c61357948e3e56e48227213a5ea2c732961cd156853e8",
+    "src/resolution-policy.mjs": "dc071ca5af42d67d5de1143c0166526ec1affe85f8cf064594aa2e190c139293",
+    "src/resolution-quality-policy.mjs": "0f3b0627c830db00d07e55f09261ee1056ace7700e820dcab693b2b3d125baff",
+    "scripts/resolution-cohort.mjs": "3cec4d3fb5d48d2287794af191945987cb12bbf2729dbd5007631c59a8c675e1",
+    "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+    "scripts/check-current-position-detour.mjs": "9bb2fad0a772d3fa41c37c8c21b068d44d7e946eb62524c9e50c41a183a9e12e",
+    "scripts/check-two-cell-doorway.mjs": "45765ff5e47d578a34b6df04d12555388ed04bb53387722be4a949c1d5755cad",
+    "scripts/check-endpoint-placement.mjs": "6c4c352735a1320295a86d2bc28d63e105d9f890bab997e035763e3fd9101c5d",
+    "experiments/endpoint-placement-controls-01.protocol.json": "014b4df681356dde8e995820ad73881795630e00e4aa302dcdb22d815ea26b2c",
+    "data/learning/endpoint-placement-uncertainty-01.json": "37243e14328d234c4f65c42f5a6970e795696cf4d282ff3a0429bafc8e412bb8",
+    "data/footprint/resolution-quality-prospective-run-01.json": "839d229c4c12c0fbda9fb7eeb3645ca348827232a6c447041029332f76a2d9fc",
+    "data/footprint/resolution-quality-prospective-validation-01.json": "7fcf9e4736e951de9a90e5fac269aa309fd2e392a7241779c3d479e633e2bdd6",
+    "experiments/disk-model-clearance015-01.config.json": "05eb114289bcc542081674dd9aa70a5cc9a362513d57d8e7b8e94f74dc8bf658",
+    "data/footprint/resolution-prospective-tests-01.tap": "433fd556eb6d09e5fee7031297fbc67e03dfb4d616e3ecbfaa345cefd36f4637"
+  },
+  "existingTests": {
+    "manifest": "data/footprint/resolution-quality-prospective-validation-01.json",
+    "path": "data/footprint/resolution-prospective-tests-01.tap",
+    "sha256": "433fd556eb6d09e5fee7031297fbc67e03dfb4d616e3ecbfaa345cefd36f4637",
+    "passed": 101,
+    "failed": 0,
+    "fullSuiteRerun": false,
+    "scope": "Core/body/policy/reference hashes unchanged. New harness syntax, six configured evaluations, geometry/BFS/originalG/source/output checks validated, not a new full-suite run."
+  },
+  "checks": {
+    "studentUncertaintyNotRelabeledAsAChoice": true,
+    "aiReferenceProtocolCommittedBeforeExecution": true,
+    "exactArchivedMapNeverRegeneratedOrWallsCleared": true,
+    "onlyGoalChanged": true,
+    "originalGOutcomesExactlyReproduced": true,
+    "masksUnchangedAcrossAllGoalAssignments": true,
+    "independentPointAndGoalClearanceChecks": true,
+    "endpointValidityDistinctFromGraphReachability": true,
+    "bfsSkippedForInvalidEndpoints": true,
+    "successfulOriginalWorldSegmentsValid": true,
+    "allActualStageCostsIncluded": true,
+    "existingTestAndCodeHashesMatch": true,
+    "outputRefusedBeforeWorkAndBytesPreserved": true
+  },
+  "observations": {
+    "archivedLayouts": 1,
+    "endpointAssignments": 3,
+    "newMapsGenerated": 0,
+    "bodyRadius": 0.4,
+    "clearanceEachSide": 0.15,
+    "results": [
+      {
+        "goalId": "G-original",
+        "goal": [
+          7,
+          3
+        ],
+        "centerClearance": 0.5,
+        "endpointValid": false,
+        "coarseBfsEdges": null,
+        "fineBfsEdges": null,
+        "modes": {
+          "always-fine": {
+            "status": "INVALID_ENDPOINT_CLEARANCE",
+            "length": null,
+            "examined": 0,
+            "calls": 0
+          },
+          "quality-checked": {
+            "status": "INVALID_ENDPOINT_CLEARANCE",
+            "length": null,
+            "examined": 0,
+            "calls": 0
+          }
+        }
+      },
+      {
+        "goalId": "A-reference",
+        "goal": [
+          7,
+          2
+        ],
+        "centerClearance": 0.7071067811865476,
+        "endpointValid": true,
+        "coarseBfsEdges": null,
+        "fineBfsEdges": 18,
+        "modes": {
+          "always-fine": {
+            "status": "ROUTE_FOUND",
+            "length": 9,
+            "examined": 38,
+            "calls": 1
+          },
+          "quality-checked": {
+            "status": "ROUTE_FOUND",
+            "length": 9,
+            "examined": 40,
+            "calls": 2
+          }
+        }
+      },
+      {
+        "goalId": "B-control",
+        "goal": [
+          7,
+          4
+        ],
+        "centerClearance": 0.5,
+        "endpointValid": false,
+        "coarseBfsEdges": null,
+        "fineBfsEdges": null,
+        "modes": {
+          "always-fine": {
+            "status": "INVALID_ENDPOINT_CLEARANCE",
+            "length": null,
+            "examined": 0,
+            "calls": 0
+          },
+          "quality-checked": {
+            "status": "INVALID_ENDPOINT_CLEARANCE",
+            "length": null,
+            "examined": 0,
+            "calls": 0
+          }
+        }
+      }
+    ],
+    "configuredPolicyEvaluations": 6,
+    "configuredPlannerCalls": 3,
+    "configuredExaminedNodes": 78,
+    "configuredGeometryStages": 7,
+    "configuredBfsCalls": 2,
+    "configuredPointAudits": 852,
+    "additionalValidationPointChecks": 852,
+    "additionalValidationGoalChecks": 3,
+    "additionalValidationBfsCalls": 2,
+    "additionalValidationStageSweptSegments": 36,
+    "additionalValidationReturnedSweptSegments": 36,
+    "additionalValidationPlannerCalls": 0
+  },
+  "attribution": "Student said 몰라 and chose no goal. AI supplies A reference answer, protocol/options/source/operation/analysis. No student endpoint-design or independent discovery inferred.",
+  "limitations": [
+    "One post-result AI-selected archived layout with3goal assignments, not new independent maps or population-level evidence.",
+    "Student chose no goal; A answer, controls, operation and analysis are AI support, not student input design.",
+    "Moving the goal changes the planning problem, not algorithm behavior. Both originalG andB fail clearance before search; A valid clearance alone is not a universal reachability guarantee.",
+    "A coarse graph is still disconnected while fine graph finds length9 here. This is sample-graph geometry, not continuous-motion or physical-robot proof.",
+    "Unequal policy caps100/200; no runtime/energy/storage or real safety measurement. Historical raw/source maps and prior101-test record preserved."
+  ],
+  "unrelatedLocalChangesPreserved": [
+    "practice/02-planning-budget.mjs",
+    "portfolio/"
+  ]
+}

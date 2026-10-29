@@ -711,6 +711,13 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - AI selects archived prospective trial10/seed20268037, first goal-only invalid case with point-free upper/lower goal candidates and differing stored body-mask validity. experiments/endpoint-placement-choice-01.design.json preserves original rows/start/body/goal and source hash; A(7,2),B(7,4) are offered positions, not student designs yet. Source crop x6..8/y1..5 contains both candidates and adjacent walls.
 - Student placement/reason/protocol/run pending. Original cohort untouched; no endpoint actually moved and no new planner/BFS call. Body-fit validity does not imply route reachability.
 
+## 2026-10-29 — AI-reference G/A/B endpoint control after uncertainty
+
+- Student “몰라” selects no goal; AI supplies A explanation. Record data/learning/endpoint-placement-uncertainty-01.json. Source/protocol a7a80ab8357435011af8b8aacc5ef0b40c8de610 committed before control. Same archived trial10/20268037 map/start/body/margin/FIFO/budgets; only G(7,3),A(7,2),B(7,4) change, no regeneration or wall clearing.
+- Raw/validation data/footprint/endpoint-placement-controls-*.json; method docs/ENDPOINT_PLACEMENT_CONTROL_KR.md. Goal-center distances0.5/sqrt0.5/0.5 versus required>0.55; G/B no search/INVALID_ENDPOINT_CLEARANCE. A coarse UNREACHABLE2nodes, fine BFS18edges/A*world9/38nodes; quality40nodes. One layout/3assignments/6policy evals, not new cohort or algorithm improvement.
+- Configured3planner/78nodes/7model/2BFS/852point checks; validation852points/3goal distances/2BFS/36stage+36returned segments/zero planner, originalG/mask/source/TAP/output checks. Prior101tests preserved/not rerun, new harness syntax/configured checks passed. No physical/time-energy/storage claim.
+- Next practice/04-goal-placement.mjs is AI-provided guided coordinate edit after explanation; student edit/run pending. No student design/code/operation inferred and original30failures unchanged.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

@@ -1,0 +1,1851 @@
+{
+  "schemaVersion": 1,
+  "label": "AI REFERENCE ENDPOINT CONTROL; STUDENT DID NOT SELECT A GOAL",
+  "protocol": {
+    "schemaVersion": 1,
+    "id": "endpoint-placement-controls-01",
+    "dateSeoul": "2026-10-29",
+    "status": "ready",
+    "type": "AI known-input endpoint control after student uncertainty",
+    "taskDraft": "experiments/endpoint-placement-choice-01.design.json",
+    "studentResponseRecord": "data/learning/endpoint-placement-uncertainty-01.json",
+    "sourceRaw": "data/footprint/resolution-quality-prospective-run-01.json",
+    "sourceValidation": "data/footprint/resolution-quality-prospective-validation-01.json",
+    "selectedCase": {
+      "trial": 10,
+      "seed": 20268037
+    },
+    "selectedModel": "experiments/disk-model-clearance015-01.config.json",
+    "width": 9,
+    "height": 7,
+    "start": [
+      1,
+      3
+    ],
+    "goals": [
+      {
+        "id": "G-original",
+        "position": [
+          7,
+          3
+        ],
+        "aiExpectedEndpointValid": false
+      },
+      {
+        "id": "A-reference",
+        "position": [
+          7,
+          2
+        ],
+        "aiExpectedEndpointValid": true
+      },
+      {
+        "id": "B-control",
+        "position": [
+          7,
+          4
+        ],
+        "aiExpectedEndpointValid": false
+      }
+    ],
+    "radius": 0.4,
+    "clearance": 0.15,
+    "tieBreak": "fifo",
+    "coarseBudget": 100,
+    "fineBudget": 100,
+    "modes": [
+      "always-fine",
+      "quality-checked"
+    ],
+    "controls": "Use exact archived obstacle rows, not regeneration with a different endpoint. Start/world/body/margin/contact/policies fixed; only chosen goal changes. Point cells of G/A/B already free; do not remove any walls. Preserve original source and all three variants.",
+    "aiPriorKnowledge": "Endpoint-validity expectations come from the archived configuration mask. No expected route length/count or guaranteed route toA is asserted before execution. Valid endpoint and graph reachability are separate.",
+    "budgetScope": "100 per stage; direct fine cap100 versus quality-checked cap200, not equal total-budget performance comparison.",
+    "validation": "Bind unchanged validated policy/core/body/reference source hashes and prior101-test record without a full-suite repeat. Commit new protocol/runner/uncertainty before controls. Check exact original obstacle rows/masks, separate endpoint-gated BFS, original-world path segments, stage costs, originalG reproduction, point-to-square goal clearance and output no-overwrite guard.",
+    "attribution": "Student said 몰라 and chose no goal. AI supplies A reference answer, protocol/options/source/operation/analysis. No student endpoint-design or independent discovery inferred.",
+    "scope": "One archived map, three endpoint assignments, six policy evaluations, not three new maps or an independent cohort. Moving a goal changes the problem, not the planning algorithm. No physical movement, controller, sensor, safety, timing or energy measurement."
+  },
+  "records": [
+    {
+      "goalId": "G-original",
+      "goal": [
+        7,
+        3
+      ],
+      "goalCenterWorld": [
+        7.5,
+        3.5
+      ],
+      "goalCenterClearance": 0.5,
+      "originalRows": [
+        ".....#...",
+        ".##......",
+        "..#......",
+        "......#.#",
+        ".........",
+        "..#....#.",
+        ".....#..#"
+      ],
+      "references": {
+        "coarse": {
+          "spacing": 1,
+          "width": 9,
+          "height": 7,
+          "start": [
+            1,
+            3
+          ],
+          "goal": [
+            7,
+            3
+          ],
+          "rows": [
+            "#########",
+            "####.#..#",
+            "####..#.#",
+            "#.#..####",
+            "#.#...###",
+            "####.####",
+            "#########"
+          ],
+          "invalidEndpoints": [
+            "goal"
+          ],
+          "endpointValid": false,
+          "bfsPerformed": false,
+          "bfsEdgeDistance": null,
+          "graphReachable": null,
+          "candidatePointAudits": 63
+        },
+        "fine": {
+          "spacing": 0.5,
+          "width": 17,
+          "height": 13,
+          "start": [
+            2,
+            6
+          ],
+          "goal": [
+            14,
+            6
+          ],
+          "rows": [
+            "#################",
+            "#######.#####...#",
+            "#######..###....#",
+            "#######.........#",
+            "#######....###.##",
+            "#.#####...#######",
+            "#..###....#######",
+            "#.........#######",
+            "#..###.....######",
+            "#.#####.....#####",
+            "#.#####..########",
+            "#.#####.#########",
+            "#################"
+          ],
+          "invalidEndpoints": [
+            "goal"
+          ],
+          "endpointValid": false,
+          "bfsPerformed": false,
+          "bfsEdgeDistance": null,
+          "graphReachable": null,
+          "candidatePointAudits": 221
+        }
+      },
+      "policies": {
+        "always-fine": {
+          "status": "INVALID_ENDPOINT_CLEARANCE",
+          "worldPath": [],
+          "geometricLength": null,
+          "finalSpacing": 0.5,
+          "mode": "always-fine",
+          "refined": false,
+          "stages": [
+            {
+              "spacing": 0.5,
+              "maxExpansions": 100,
+              "outcome": {
+                "configurationSpace": {
+                  "width": 17,
+                  "height": 13,
+                  "start": [
+                    2,
+                    6
+                  ],
+                  "goal": [
+                    14,
+                    6
+                  ],
+                  "parameters": {
+                    "shape": "disk",
+                    "radius": 0.4,
+                    "diameter": 0.8,
+                    "clearance": 0.15,
+                    "effectiveRadius": 0.55,
+                    "cellSide": 1,
+                    "units": "original virtual cell-side lengths; not physical measurements",
+                    "contactIsCollision": true
+                  },
+                  "sampling": {
+                    "spacing": 0.5,
+                    "origin": [
+                      0.5,
+                      0.5
+                    ],
+                    "originalWorldSize": [
+                      9,
+                      7
+                    ],
+                    "graphEdgeLength": 0.5,
+                    "scope": "Nested four-neighbor candidate lattice; original obstacle squares/world/body unchanged."
+                  }
+                },
+                "worldPath": [],
+                "geometricLength": null,
+                "scope": "Sample-graph shortest edge count when completed; geometric length=edge count*spacing, not global continuous optimum or runtime.",
+                "status": "INVALID_ENDPOINT_CLEARANCE",
+                "invalidEndpoints": [
+                  "goal"
+                ],
+                "planningResult": null,
+                "sweptPathValidation": null
+              },
+              "referenceKey": "fine"
+            }
+          ],
+          "plannerCalls": 0,
+          "expanded": 0,
+          "maxExpansionsCap": 100,
+          "stageBudgets": {
+            "coarse": 100,
+            "fine": 100
+          },
+          "scope": "Fixed original virtual geometry; retry once only on coarse UNREACHABLE. Sum all stage expansions. No state reuse, global continuous optimality or physical/runtime claim.",
+          "returnedSpacing": null,
+          "returnedWorldAudit": null
+        },
+        "quality-checked": {
+          "status": "INVALID_ENDPOINT_CLEARANCE",
+          "worldPath": [],
+          "geometricLength": null,
+          "finalSpacing": 1,
+          "mode": "quality-checked",
+          "refined": false,
+          "stages": [
+            {
+              "spacing": 1,
+              "maxExpansions": 100,
+              "outcome": {
+                "configurationSpace": {
+                  "width": 9,
+                  "height": 7,
+                  "start": [
+                    1,
+                    3
+                  ],
+                  "goal": [
+                    7,
+                    3
+                  ],
+                  "parameters": {
+                    "shape": "disk",
+                    "radius": 0.4,
+                    "diameter": 0.8,
+                    "clearance": 0.15,
+                    "effectiveRadius": 0.55,
+                    "cellSide": 1,
+                    "units": "original virtual cell-side lengths; not physical measurements",
+                    "contactIsCollision": true
+                  },
+                  "sampling": {
+                    "spacing": 1,
+                    "origin": [
+                      0.5,
+                      0.5
+                    ],
+                    "originalWorldSize": [
+                      9,
+                      7
+                    ],
+                    "graphEdgeLength": 1,
+                    "scope": "Nested four-neighbor candidate lattice; original obstacle squares/world/body unchanged."
+                  }
+                },
+                "worldPath": [],
+                "geometricLength": null,
+                "scope": "Sample-graph shortest edge count when completed; geometric length=edge count*spacing, not global continuous optimum or runtime.",
+                "status": "INVALID_ENDPOINT_CLEARANCE",
+                "invalidEndpoints": [
+                  "goal"
+                ],
+                "planningResult": null,
+                "sweptPathValidation": null
+              },
+              "purpose": "ACQUISITION",
+              "referenceKey": "coarse"
+            }
+          ],
+          "plannerCalls": 0,
+          "expanded": 0,
+          "maxExpansionsCap": 200,
+          "stageBudgets": {
+            "coarse": 100,
+            "fine": 100
+          },
+          "scope": "Fixed world; coarse route at axis-Manhattan bound skips optimization. Otherwise at most one fine check, preserving valid fallback/raw failures and all actual work. Optimality refers to axis-aligned sample graphs, not global continuous motion.",
+          "axisManhattanLowerBound": 6,
+          "returnedSpacing": null,
+          "optimizationAttempted": false,
+          "optimizationImproved": false,
+          "optimalityEvidence": null,
+          "routeSource": "none",
+          "optimizationStatus": "NO_USABLE_ROUTE",
+          "returnedWorldAudit": null
+        }
+      }
+    },
+    {
+      "goalId": "A-reference",
+      "goal": [
+        7,
+        2
+      ],
+      "goalCenterWorld": [
+        7.5,
+        2.5
+      ],
+      "goalCenterClearance": 0.7071067811865476,
+      "originalRows": [
+        ".....#...",
+        ".##......",
+        "..#......",
+        "......#.#",
+        ".........",
+        "..#....#.",
+        ".....#..#"
+      ],
+      "references": {
+        "coarse": {
+          "spacing": 1,
+          "width": 9,
+          "height": 7,
+          "start": [
+            1,
+            3
+          ],
+          "goal": [
+            7,
+            2
+          ],
+          "rows": [
+            "#########",
+            "####.#..#",
+            "####..#.#",
+            "#.#..####",
+            "#.#...###",
+            "####.####",
+            "#########"
+          ],
+          "invalidEndpoints": [],
+          "endpointValid": true,
+          "bfsPerformed": true,
+          "bfsEdgeDistance": null,
+          "graphReachable": false,
+          "candidatePointAudits": 63
+        },
+        "fine": {
+          "spacing": 0.5,
+          "width": 17,
+          "height": 13,
+          "start": [
+            2,
+            6
+          ],
+          "goal": [
+            14,
+            4
+          ],
+          "rows": [
+            "#################",
+            "#######.#####...#",
+            "#######..###....#",
+            "#######.........#",
+            "#######....###.##",
+            "#.#####...#######",
+            "#..###....#######",
+            "#.........#######",
+            "#..###.....######",
+            "#.#####.....#####",
+            "#.#####..########",
+            "#.#####.#########",
+            "#################"
+          ],
+          "invalidEndpoints": [],
+          "endpointValid": true,
+          "bfsPerformed": true,
+          "bfsEdgeDistance": 18,
+          "graphReachable": true,
+          "candidatePointAudits": 221
+        }
+      },
+      "policies": {
+        "always-fine": {
+          "status": "ROUTE_FOUND",
+          "worldPath": [
+            [
+              1.5,
+              3.5
+            ],
+            [
+              1.5,
+              4
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2.5,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3.5,
+              4
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              4.5,
+              4
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              5,
+              3.5
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              5,
+              2.5
+            ],
+            [
+              5.5,
+              2.5
+            ],
+            [
+              5.5,
+              2
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              6.5,
+              2
+            ],
+            [
+              7,
+              2
+            ],
+            [
+              7.5,
+              2
+            ],
+            [
+              7.5,
+              2.5
+            ]
+          ],
+          "geometricLength": 9,
+          "finalSpacing": 0.5,
+          "mode": "always-fine",
+          "refined": false,
+          "stages": [
+            {
+              "spacing": 0.5,
+              "maxExpansions": 100,
+              "outcome": {
+                "configurationSpace": {
+                  "width": 17,
+                  "height": 13,
+                  "start": [
+                    2,
+                    6
+                  ],
+                  "goal": [
+                    14,
+                    4
+                  ],
+                  "parameters": {
+                    "shape": "disk",
+                    "radius": 0.4,
+                    "diameter": 0.8,
+                    "clearance": 0.15,
+                    "effectiveRadius": 0.55,
+                    "cellSide": 1,
+                    "units": "original virtual cell-side lengths; not physical measurements",
+                    "contactIsCollision": true
+                  },
+                  "sampling": {
+                    "spacing": 0.5,
+                    "origin": [
+                      0.5,
+                      0.5
+                    ],
+                    "originalWorldSize": [
+                      9,
+                      7
+                    ],
+                    "graphEdgeLength": 0.5,
+                    "scope": "Nested four-neighbor candidate lattice; original obstacle squares/world/body unchanged."
+                  }
+                },
+                "worldPath": [
+                  [
+                    1.5,
+                    3.5
+                  ],
+                  [
+                    1.5,
+                    4
+                  ],
+                  [
+                    2,
+                    4
+                  ],
+                  [
+                    2.5,
+                    4
+                  ],
+                  [
+                    3,
+                    4
+                  ],
+                  [
+                    3.5,
+                    4
+                  ],
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    4.5,
+                    4
+                  ],
+                  [
+                    5,
+                    4
+                  ],
+                  [
+                    5,
+                    3.5
+                  ],
+                  [
+                    5,
+                    3
+                  ],
+                  [
+                    5,
+                    2.5
+                  ],
+                  [
+                    5.5,
+                    2.5
+                  ],
+                  [
+                    5.5,
+                    2
+                  ],
+                  [
+                    6,
+                    2
+                  ],
+                  [
+                    6.5,
+                    2
+                  ],
+                  [
+                    7,
+                    2
+                  ],
+                  [
+                    7.5,
+                    2
+                  ],
+                  [
+                    7.5,
+                    2.5
+                  ]
+                ],
+                "geometricLength": 9,
+                "scope": "Sample-graph shortest edge count when completed; geometric length=edge count*spacing, not global continuous optimum or runtime.",
+                "status": "ROUTE_FOUND",
+                "invalidEndpoints": [],
+                "planningResult": {
+                  "success": true,
+                  "reason": null,
+                  "path": [
+                    [
+                      2,
+                      6
+                    ],
+                    [
+                      2,
+                      7
+                    ],
+                    [
+                      3,
+                      7
+                    ],
+                    [
+                      4,
+                      7
+                    ],
+                    [
+                      5,
+                      7
+                    ],
+                    [
+                      6,
+                      7
+                    ],
+                    [
+                      7,
+                      7
+                    ],
+                    [
+                      8,
+                      7
+                    ],
+                    [
+                      9,
+                      7
+                    ],
+                    [
+                      9,
+                      6
+                    ],
+                    [
+                      9,
+                      5
+                    ],
+                    [
+                      9,
+                      4
+                    ],
+                    [
+                      10,
+                      4
+                    ],
+                    [
+                      10,
+                      3
+                    ],
+                    [
+                      11,
+                      3
+                    ],
+                    [
+                      12,
+                      3
+                    ],
+                    [
+                      13,
+                      3
+                    ],
+                    [
+                      14,
+                      3
+                    ],
+                    [
+                      14,
+                      4
+                    ]
+                  ],
+                  "pathLength": 18,
+                  "expanded": 38
+                },
+                "sweptPathValidation": {
+                  "valid": true,
+                  "sweptSegmentsChecked": 18,
+                  "scope": "All axis-aligned world-center segments checked against original closed squares/boundary; no dynamics."
+                }
+              },
+              "referenceKey": "fine"
+            }
+          ],
+          "plannerCalls": 1,
+          "expanded": 38,
+          "maxExpansionsCap": 100,
+          "stageBudgets": {
+            "coarse": 100,
+            "fine": 100
+          },
+          "scope": "Fixed original virtual geometry; retry once only on coarse UNREACHABLE. Sum all stage expansions. No state reuse, global continuous optimality or physical/runtime claim.",
+          "returnedSpacing": 0.5,
+          "returnedWorldAudit": {
+            "valid": true,
+            "effectiveRadius": 0.55,
+            "contactIsCollision": true,
+            "minimumCenterClearance": 0.7071067811865476,
+            "geometricLength": 9,
+            "segments": [
+              {
+                "from": [
+                  1.5,
+                  3.5
+                ],
+                "to": [
+                  1.5,
+                  4
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 0.7071067811865476,
+                "valid": true
+              },
+              {
+                "from": [
+                  1.5,
+                  4
+                ],
+                "to": [
+                  2,
+                  4
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  2,
+                  4
+                ],
+                "to": [
+                  2.5,
+                  4
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  2.5,
+                  4
+                ],
+                "to": [
+                  3,
+                  4
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  3,
+                  4
+                ],
+                "to": [
+                  3.5,
+                  4
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  3.5,
+                  4
+                ],
+                "to": [
+                  4,
+                  4
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1.118033988749895,
+                "valid": true
+              },
+              {
+                "from": [
+                  4,
+                  4
+                ],
+                "to": [
+                  4.5,
+                  4
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1.4142135623730951,
+                "valid": true
+              },
+              {
+                "from": [
+                  4.5,
+                  4
+                ],
+                "to": [
+                  5,
+                  4
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  5,
+                  4
+                ],
+                "to": [
+                  5,
+                  3.5
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  5,
+                  3.5
+                ],
+                "to": [
+                  5,
+                  3
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  5,
+                  3
+                ],
+                "to": [
+                  5,
+                  2.5
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  5,
+                  2.5
+                ],
+                "to": [
+                  5.5,
+                  2.5
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 0.7071067811865476,
+                "valid": true
+              },
+              {
+                "from": [
+                  5.5,
+                  2.5
+                ],
+                "to": [
+                  5.5,
+                  2
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 0.7071067811865476,
+                "valid": true
+              },
+              {
+                "from": [
+                  5.5,
+                  2
+                ],
+                "to": [
+                  6,
+                  2
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  6,
+                  2
+                ],
+                "to": [
+                  6.5,
+                  2
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  6.5,
+                  2
+                ],
+                "to": [
+                  7,
+                  2
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  7,
+                  2
+                ],
+                "to": [
+                  7.5,
+                  2
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  7.5,
+                  2
+                ],
+                "to": [
+                  7.5,
+                  2.5
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 0.7071067811865476,
+                "valid": true
+              }
+            ],
+            "scope": "Exact axis-aligned segment/square and world-boundary distances for this assumed disk; no dynamics or global continuous optimality."
+          }
+        },
+        "quality-checked": {
+          "status": "ROUTE_FOUND",
+          "worldPath": [
+            [
+              1.5,
+              3.5
+            ],
+            [
+              1.5,
+              4
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2.5,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3.5,
+              4
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              4.5,
+              4
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              5,
+              3.5
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              5,
+              2.5
+            ],
+            [
+              5.5,
+              2.5
+            ],
+            [
+              5.5,
+              2
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              6.5,
+              2
+            ],
+            [
+              7,
+              2
+            ],
+            [
+              7.5,
+              2
+            ],
+            [
+              7.5,
+              2.5
+            ]
+          ],
+          "geometricLength": 9,
+          "finalSpacing": 0.5,
+          "mode": "quality-checked",
+          "refined": true,
+          "stages": [
+            {
+              "spacing": 1,
+              "maxExpansions": 100,
+              "outcome": {
+                "configurationSpace": {
+                  "width": 9,
+                  "height": 7,
+                  "start": [
+                    1,
+                    3
+                  ],
+                  "goal": [
+                    7,
+                    2
+                  ],
+                  "parameters": {
+                    "shape": "disk",
+                    "radius": 0.4,
+                    "diameter": 0.8,
+                    "clearance": 0.15,
+                    "effectiveRadius": 0.55,
+                    "cellSide": 1,
+                    "units": "original virtual cell-side lengths; not physical measurements",
+                    "contactIsCollision": true
+                  },
+                  "sampling": {
+                    "spacing": 1,
+                    "origin": [
+                      0.5,
+                      0.5
+                    ],
+                    "originalWorldSize": [
+                      9,
+                      7
+                    ],
+                    "graphEdgeLength": 1,
+                    "scope": "Nested four-neighbor candidate lattice; original obstacle squares/world/body unchanged."
+                  }
+                },
+                "worldPath": [],
+                "geometricLength": null,
+                "scope": "Sample-graph shortest edge count when completed; geometric length=edge count*spacing, not global continuous optimum or runtime.",
+                "status": "UNREACHABLE",
+                "invalidEndpoints": [],
+                "planningResult": {
+                  "success": false,
+                  "reason": "UNREACHABLE",
+                  "path": [],
+                  "pathLength": null,
+                  "expanded": 2
+                },
+                "sweptPathValidation": null
+              },
+              "purpose": "ACQUISITION",
+              "referenceKey": "coarse"
+            },
+            {
+              "spacing": 0.5,
+              "maxExpansions": 100,
+              "outcome": {
+                "configurationSpace": {
+                  "width": 17,
+                  "height": 13,
+                  "start": [
+                    2,
+                    6
+                  ],
+                  "goal": [
+                    14,
+                    4
+                  ],
+                  "parameters": {
+                    "shape": "disk",
+                    "radius": 0.4,
+                    "diameter": 0.8,
+                    "clearance": 0.15,
+                    "effectiveRadius": 0.55,
+                    "cellSide": 1,
+                    "units": "original virtual cell-side lengths; not physical measurements",
+                    "contactIsCollision": true
+                  },
+                  "sampling": {
+                    "spacing": 0.5,
+                    "origin": [
+                      0.5,
+                      0.5
+                    ],
+                    "originalWorldSize": [
+                      9,
+                      7
+                    ],
+                    "graphEdgeLength": 0.5,
+                    "scope": "Nested four-neighbor candidate lattice; original obstacle squares/world/body unchanged."
+                  }
+                },
+                "worldPath": [
+                  [
+                    1.5,
+                    3.5
+                  ],
+                  [
+                    1.5,
+                    4
+                  ],
+                  [
+                    2,
+                    4
+                  ],
+                  [
+                    2.5,
+                    4
+                  ],
+                  [
+                    3,
+                    4
+                  ],
+                  [
+                    3.5,
+                    4
+                  ],
+                  [
+                    4,
+                    4
+                  ],
+                  [
+                    4.5,
+                    4
+                  ],
+                  [
+                    5,
+                    4
+                  ],
+                  [
+                    5,
+                    3.5
+                  ],
+                  [
+                    5,
+                    3
+                  ],
+                  [
+                    5,
+                    2.5
+                  ],
+                  [
+                    5.5,
+                    2.5
+                  ],
+                  [
+                    5.5,
+                    2
+                  ],
+                  [
+                    6,
+                    2
+                  ],
+                  [
+                    6.5,
+                    2
+                  ],
+                  [
+                    7,
+                    2
+                  ],
+                  [
+                    7.5,
+                    2
+                  ],
+                  [
+                    7.5,
+                    2.5
+                  ]
+                ],
+                "geometricLength": 9,
+                "scope": "Sample-graph shortest edge count when completed; geometric length=edge count*spacing, not global continuous optimum or runtime.",
+                "status": "ROUTE_FOUND",
+                "invalidEndpoints": [],
+                "planningResult": {
+                  "success": true,
+                  "reason": null,
+                  "path": [
+                    [
+                      2,
+                      6
+                    ],
+                    [
+                      2,
+                      7
+                    ],
+                    [
+                      3,
+                      7
+                    ],
+                    [
+                      4,
+                      7
+                    ],
+                    [
+                      5,
+                      7
+                    ],
+                    [
+                      6,
+                      7
+                    ],
+                    [
+                      7,
+                      7
+                    ],
+                    [
+                      8,
+                      7
+                    ],
+                    [
+                      9,
+                      7
+                    ],
+                    [
+                      9,
+                      6
+                    ],
+                    [
+                      9,
+                      5
+                    ],
+                    [
+                      9,
+                      4
+                    ],
+                    [
+                      10,
+                      4
+                    ],
+                    [
+                      10,
+                      3
+                    ],
+                    [
+                      11,
+                      3
+                    ],
+                    [
+                      12,
+                      3
+                    ],
+                    [
+                      13,
+                      3
+                    ],
+                    [
+                      14,
+                      3
+                    ],
+                    [
+                      14,
+                      4
+                    ]
+                  ],
+                  "pathLength": 18,
+                  "expanded": 38
+                },
+                "sweptPathValidation": {
+                  "valid": true,
+                  "sweptSegmentsChecked": 18,
+                  "scope": "All axis-aligned world-center segments checked against original closed squares/boundary; no dynamics."
+                }
+              },
+              "purpose": "ACQUISITION",
+              "referenceKey": "fine"
+            }
+          ],
+          "plannerCalls": 2,
+          "expanded": 40,
+          "maxExpansionsCap": 200,
+          "stageBudgets": {
+            "coarse": 100,
+            "fine": 100
+          },
+          "scope": "Fixed world; coarse route at axis-Manhattan bound skips optimization. Otherwise at most one fine check, preserving valid fallback/raw failures and all actual work. Optimality refers to axis-aligned sample graphs, not global continuous motion.",
+          "axisManhattanLowerBound": 7,
+          "returnedSpacing": 0.5,
+          "optimizationAttempted": false,
+          "optimizationImproved": false,
+          "optimalityEvidence": "FINE_GRAPH_SEARCH",
+          "routeSource": "fine-acquisition",
+          "optimizationStatus": "NOT_NEEDED_FINE_GRAPH_RESULT",
+          "returnedWorldAudit": {
+            "valid": true,
+            "effectiveRadius": 0.55,
+            "contactIsCollision": true,
+            "minimumCenterClearance": 0.7071067811865476,
+            "geometricLength": 9,
+            "segments": [
+              {
+                "from": [
+                  1.5,
+                  3.5
+                ],
+                "to": [
+                  1.5,
+                  4
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 0.7071067811865476,
+                "valid": true
+              },
+              {
+                "from": [
+                  1.5,
+                  4
+                ],
+                "to": [
+                  2,
+                  4
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  2,
+                  4
+                ],
+                "to": [
+                  2.5,
+                  4
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  2.5,
+                  4
+                ],
+                "to": [
+                  3,
+                  4
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  3,
+                  4
+                ],
+                "to": [
+                  3.5,
+                  4
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  3.5,
+                  4
+                ],
+                "to": [
+                  4,
+                  4
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1.118033988749895,
+                "valid": true
+              },
+              {
+                "from": [
+                  4,
+                  4
+                ],
+                "to": [
+                  4.5,
+                  4
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1.4142135623730951,
+                "valid": true
+              },
+              {
+                "from": [
+                  4.5,
+                  4
+                ],
+                "to": [
+                  5,
+                  4
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  5,
+                  4
+                ],
+                "to": [
+                  5,
+                  3.5
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  5,
+                  3.5
+                ],
+                "to": [
+                  5,
+                  3
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  5,
+                  3
+                ],
+                "to": [
+                  5,
+                  2.5
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  5,
+                  2.5
+                ],
+                "to": [
+                  5.5,
+                  2.5
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 0.7071067811865476,
+                "valid": true
+              },
+              {
+                "from": [
+                  5.5,
+                  2.5
+                ],
+                "to": [
+                  5.5,
+                  2
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 0.7071067811865476,
+                "valid": true
+              },
+              {
+                "from": [
+                  5.5,
+                  2
+                ],
+                "to": [
+                  6,
+                  2
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  6,
+                  2
+                ],
+                "to": [
+                  6.5,
+                  2
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  6.5,
+                  2
+                ],
+                "to": [
+                  7,
+                  2
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  7,
+                  2
+                ],
+                "to": [
+                  7.5,
+                  2
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 1,
+                "valid": true
+              },
+              {
+                "from": [
+                  7.5,
+                  2
+                ],
+                "to": [
+                  7.5,
+                  2.5
+                ],
+                "length": 0.5,
+                "minimumCenterClearance": 0.7071067811865476,
+                "valid": true
+              }
+            ],
+            "scope": "Exact axis-aligned segment/square and world-boundary distances for this assumed disk; no dynamics or global continuous optimality."
+          }
+        }
+      }
+    },
+    {
+      "goalId": "B-control",
+      "goal": [
+        7,
+        4
+      ],
+      "goalCenterWorld": [
+        7.5,
+        4.5
+      ],
+      "goalCenterClearance": 0.5,
+      "originalRows": [
+        ".....#...",
+        ".##......",
+        "..#......",
+        "......#.#",
+        ".........",
+        "..#....#.",
+        ".....#..#"
+      ],
+      "references": {
+        "coarse": {
+          "spacing": 1,
+          "width": 9,
+          "height": 7,
+          "start": [
+            1,
+            3
+          ],
+          "goal": [
+            7,
+            4
+          ],
+          "rows": [
+            "#########",
+            "####.#..#",
+            "####..#.#",
+            "#.#..####",
+            "#.#...###",
+            "####.####",
+            "#########"
+          ],
+          "invalidEndpoints": [
+            "goal"
+          ],
+          "endpointValid": false,
+          "bfsPerformed": false,
+          "bfsEdgeDistance": null,
+          "graphReachable": null,
+          "candidatePointAudits": 63
+        },
+        "fine": {
+          "spacing": 0.5,
+          "width": 17,
+          "height": 13,
+          "start": [
+            2,
+            6
+          ],
+          "goal": [
+            14,
+            8
+          ],
+          "rows": [
+            "#################",
+            "#######.#####...#",
+            "#######..###....#",
+            "#######.........#",
+            "#######....###.##",
+            "#.#####...#######",
+            "#..###....#######",
+            "#.........#######",
+            "#..###.....######",
+            "#.#####.....#####",
+            "#.#####..########",
+            "#.#####.#########",
+            "#################"
+          ],
+          "invalidEndpoints": [
+            "goal"
+          ],
+          "endpointValid": false,
+          "bfsPerformed": false,
+          "bfsEdgeDistance": null,
+          "graphReachable": null,
+          "candidatePointAudits": 221
+        }
+      },
+      "policies": {
+        "always-fine": {
+          "status": "INVALID_ENDPOINT_CLEARANCE",
+          "worldPath": [],
+          "geometricLength": null,
+          "finalSpacing": 0.5,
+          "mode": "always-fine",
+          "refined": false,
+          "stages": [
+            {
+              "spacing": 0.5,
+              "maxExpansions": 100,
+              "outcome": {
+                "configurationSpace": {
+                  "width": 17,
+                  "height": 13,
+                  "start": [
+                    2,
+                    6
+                  ],
+                  "goal": [
+                    14,
+                    8
+                  ],
+                  "parameters": {
+                    "shape": "disk",
+                    "radius": 0.4,
+                    "diameter": 0.8,
+                    "clearance": 0.15,
+                    "effectiveRadius": 0.55,
+                    "cellSide": 1,
+                    "units": "original virtual cell-side lengths; not physical measurements",
+                    "contactIsCollision": true
+                  },
+                  "sampling": {
+                    "spacing": 0.5,
+                    "origin": [
+                      0.5,
+                      0.5
+                    ],
+                    "originalWorldSize": [
+                      9,
+                      7
+                    ],
+                    "graphEdgeLength": 0.5,
+                    "scope": "Nested four-neighbor candidate lattice; original obstacle squares/world/body unchanged."
+                  }
+                },
+                "worldPath": [],
+                "geometricLength": null,
+                "scope": "Sample-graph shortest edge count when completed; geometric length=edge count*spacing, not global continuous optimum or runtime.",
+                "status": "INVALID_ENDPOINT_CLEARANCE",
+                "invalidEndpoints": [
+                  "goal"
+                ],
+                "planningResult": null,
+                "sweptPathValidation": null
+              },
+              "referenceKey": "fine"
+            }
+          ],
+          "plannerCalls": 0,
+          "expanded": 0,
+          "maxExpansionsCap": 100,
+          "stageBudgets": {
+            "coarse": 100,
+            "fine": 100
+          },
+          "scope": "Fixed original virtual geometry; retry once only on coarse UNREACHABLE. Sum all stage expansions. No state reuse, global continuous optimality or physical/runtime claim.",
+          "returnedSpacing": null,
+          "returnedWorldAudit": null
+        },
+        "quality-checked": {
+          "status": "INVALID_ENDPOINT_CLEARANCE",
+          "worldPath": [],
+          "geometricLength": null,
+          "finalSpacing": 1,
+          "mode": "quality-checked",
+          "refined": false,
+          "stages": [
+            {
+              "spacing": 1,
+              "maxExpansions": 100,
+              "outcome": {
+                "configurationSpace": {
+                  "width": 9,
+                  "height": 7,
+                  "start": [
+                    1,
+                    3
+                  ],
+                  "goal": [
+                    7,
+                    4
+                  ],
+                  "parameters": {
+                    "shape": "disk",
+                    "radius": 0.4,
+                    "diameter": 0.8,
+                    "clearance": 0.15,
+                    "effectiveRadius": 0.55,
+                    "cellSide": 1,
+                    "units": "original virtual cell-side lengths; not physical measurements",
+                    "contactIsCollision": true
+                  },
+                  "sampling": {
+                    "spacing": 1,
+                    "origin": [
+                      0.5,
+                      0.5
+                    ],
+                    "originalWorldSize": [
+                      9,
+                      7
+                    ],
+                    "graphEdgeLength": 1,
+                    "scope": "Nested four-neighbor candidate lattice; original obstacle squares/world/body unchanged."
+                  }
+                },
+                "worldPath": [],
+                "geometricLength": null,
+                "scope": "Sample-graph shortest edge count when completed; geometric length=edge count*spacing, not global continuous optimum or runtime.",
+                "status": "INVALID_ENDPOINT_CLEARANCE",
+                "invalidEndpoints": [
+                  "goal"
+                ],
+                "planningResult": null,
+                "sweptPathValidation": null
+              },
+              "purpose": "ACQUISITION",
+              "referenceKey": "coarse"
+            }
+          ],
+          "plannerCalls": 0,
+          "expanded": 0,
+          "maxExpansionsCap": 200,
+          "stageBudgets": {
+            "coarse": 100,
+            "fine": 100
+          },
+          "scope": "Fixed world; coarse route at axis-Manhattan bound skips optimization. Otherwise at most one fine check, preserving valid fallback/raw failures and all actual work. Optimality refers to axis-aligned sample graphs, not global continuous motion.",
+          "axisManhattanLowerBound": 7,
+          "returnedSpacing": null,
+          "optimizationAttempted": false,
+          "optimizationImproved": false,
+          "optimalityEvidence": null,
+          "routeSource": "none",
+          "optimizationStatus": "NO_USABLE_ROUTE",
+          "returnedWorldAudit": null
+        }
+      }
+    }
+  ],
+  "execution": {
+    "operator": "AI assistant CLI",
+    "executedAtUTC": "2026-10-29T14:10:45.794Z",
+    "sourceCommit": "a7a80ab8357435011af8b8aacc5ef0b40c8de610",
+    "sourceInputsDirty": false,
+    "sourceHashesGitBlobs": {
+      "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+      "src/disk-footprint.mjs": "d65440878eea0718b28c61357948e3e56e48227213a5ea2c732961cd156853e8",
+      "src/resolution-policy.mjs": "dc071ca5af42d67d5de1143c0166526ec1affe85f8cf064594aa2e190c139293",
+      "src/resolution-quality-policy.mjs": "0f3b0627c830db00d07e55f09261ee1056ace7700e820dcab693b2b3d125baff",
+      "scripts/resolution-cohort.mjs": "3cec4d3fb5d48d2287794af191945987cb12bbf2729dbd5007631c59a8c675e1",
+      "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+      "scripts/check-current-position-detour.mjs": "9bb2fad0a772d3fa41c37c8c21b068d44d7e946eb62524c9e50c41a183a9e12e",
+      "scripts/check-two-cell-doorway.mjs": "45765ff5e47d578a34b6df04d12555388ed04bb53387722be4a949c1d5755cad",
+      "scripts/check-endpoint-placement.mjs": "6c4c352735a1320295a86d2bc28d63e105d9f890bab997e035763e3fd9101c5d",
+      "experiments/endpoint-placement-controls-01.protocol.json": "014b4df681356dde8e995820ad73881795630e00e4aa302dcdb22d815ea26b2c",
+      "data/learning/endpoint-placement-uncertainty-01.json": "37243e14328d234c4f65c42f5a6970e795696cf4d282ff3a0429bafc8e412bb8",
+      "data/footprint/resolution-quality-prospective-run-01.json": "839d229c4c12c0fbda9fb7eeb3645ca348827232a6c447041029332f76a2d9fc",
+      "data/footprint/resolution-quality-prospective-validation-01.json": "7fcf9e4736e951de9a90e5fac269aa309fd2e392a7241779c3d479e633e2bdd6",
+      "experiments/disk-model-clearance015-01.config.json": "05eb114289bcc542081674dd9aa70a5cc9a362513d57d8e7b8e94f74dc8bf658",
+      "data/footprint/resolution-prospective-tests-01.tap": "433fd556eb6d09e5fee7031297fbc67e03dfb4d616e3ecbfaa345cefd36f4637"
+    },
+    "workspaceStatus": "M practice/02-planning-budget.mjs\n?? portfolio/",
+    "node": "v24.22.1",
+    "platform": "win32/x64",
+    "newMapGeneration": 0,
+    "archivedLayouts": 1,
+    "endpointAssignments": 3,
+    "policyEvaluations": 6,
+    "plannerCalls": 3,
+    "examinedNodes": 78,
+    "geometryStages": 7,
+    "referenceBfsCalls": 2,
+    "referencePointAudits": 852,
+    "fullSuiteRerun": false,
+    "existingTests": {
+      "path": "data/footprint/resolution-prospective-tests-01.tap",
+      "sha256": "433fd556eb6d09e5fee7031297fbc67e03dfb4d616e3ecbfaa345cefd36f4637",
+      "passed": 101,
+      "failed": 0,
+      "newMetricControls": 4,
+      "scope": "All test/*.test.mjs files; unrelated untracked portfolio directory excluded from test discovery.",
+      "fullSuiteExecuted": true
+    },
+    "provenance": "Student said 몰라 and chose no goal. AI supplies A reference answer, protocol/options/source/operation/analysis. No student endpoint-design or independent discovery inferred."
+  }
+}
