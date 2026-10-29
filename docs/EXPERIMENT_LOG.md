@@ -311,6 +311,14 @@ AI prepared `experiments/reachable-goal-budget-control.scenario.json`: open only
 - Record BUDGET_EXCEEDED as the mapped status and commit the ready input before execution. No numerical route length was supplied. Geometry opens only (1,2), retaining the upper goal wall and budgets 2/300.
 - Use the unchanged existing runner and verify the single-cell comparison, independent connectivity, returned fields and successful paths. No code change or full-suite rerun is required for the input-only example.
 
+## 2026-10-29 Connected control executed; small-budget status matches
+
+- Ready input and **예산 초과** forecast were committed in `93491c1ef104df472356278820c2a937600388f5`, then AI ran the unchanged scenario helper. Raw result: `data/failure-semantics/reachable-goal-budget-control-run-01.json`; paired proof: `reachable-goal-budget-control-validation-01.json`.
+- At budget 2 the connected map returns BUDGET_EXCEEDED for A* FIFO, Greedy and Dijkstra, matching the student's scoped FIFO forecast. At 300 all return valid four-move paths; examined nodes are 8, 6 and 8 respectively. The original disconnected map returns BUDGET_EXCEEDED at 2 and UNREACHABLE at 300.
+- Verified only (1,2) opens, upper goal wall remains, endpoints/other cells, budgets and core/runner source hashes match. Independent grid BFS finds 8 connected cells including G and shortest goal distance 4. Failure paths remain empty/null and successful paths are valid. Original artifacts remain immutable.
+- No code change or full-suite rerun; prior 23-test source equivalence and new input/path/field checks are recorded. AI supplies the initial interpretation: a cutoff alone cannot certify disconnection because it occurs on both maps. This is not a student implementation, physical result or extra independent sample from validation.
+- Next student task: explain in one sentence, citing the successful high-budget run, why budget exhaustion alone cannot establish no route. That post-result interpretation is not yet supplied.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

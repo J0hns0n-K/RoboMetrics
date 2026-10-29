@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 1,
+  "label": "SYNTHETIC FIXED GRID — NOT PHYSICAL ROBOT DATA",
+  "scenario": {
+    "id": "reachable-goal-small-budget-control-01",
+    "dateSeoul": "2026-10-29",
+    "status": "ready",
+    "contributionType": "ai-reference",
+    "contributor": "AI assistant — matched connected-map control for failure semantics",
+    "assistance": "AI proposed the matched one-wall connected control, layout, budgets and method. Student supplied the quoted pre-run budget-2 status expectation for A* FIFO only. AI transcribes, executes and validates; no independent student map/code authorship or operation is inferred.",
+    "parentScenario": "experiments/unreachable-goal.scenario.json",
+    "parentResult": "data/failure-semantics/unreachable-goal-run-01.json",
+    "revision": {
+      "coordinate": [
+        1,
+        2
+      ],
+      "from": "#",
+      "to": ".",
+      "operation": "Open only the cell immediately left of G; keep its upper wall blocked."
+    },
+    "rows": [
+      "S..",
+      "..#",
+      "..G"
+    ],
+    "budgets": [
+      2,
+      300
+    ],
+    "prediction": "Student predicts budget exhaustion for A* FIFO at budget 2 on the connected control. This follows the API explanation and is a guided pre-run expectation, not an independent discovery. No route length or outcomes for other budgets/algorithms were supplied.",
+    "studentPredictionVerbatim": "예산 초과",
+    "predictionScope": "A* FIFO reason at budget 2 only. No numerical path length or forecasts for other policies/budgets inferred.",
+    "controls": "Same 3x3 grid, S/G, other walls, four-neighbor unit costs, planner source and budgets 2/300. Only (1,2) changes, connecting G to the bottom-row route.",
+    "executionNote": "Record this forecast and commit the ready input before execution. Preserve the disconnected parent; compare exactly the one opened goal-neighbor wall and fixed budgets/sources.",
+    "studentPredictedReasonAtBudget2": "BUDGET_EXCEEDED"
+  },
+  "authorship": {
+    "declaredType": "ai-reference",
+    "contributor": "AI assistant — matched connected-map control for failure semantics",
+    "assistance": "AI proposed the matched one-wall connected control, layout, budgets and method. Student supplied the quoted pre-run budget-2 status expectation for A* FIFO only. AI transcribes, executes and validates; no independent student map/code authorship or operation is inferred.",
+    "independentlyVerified": false
+  },
+  "conventions": {
+    "pathLength": "Number of moves; start is zero moves.",
+    "expanded": "Distinct nodes removed for examination, INCLUDING start and goal.",
+    "movement": "Four neighbors; unit cost; static fully known obstacles.",
+    "tieBreak": "FIFO insertion order at equal priority; neighbor order right, down, left, up.",
+    "reference": "Dijkstra shares the starter search engine; independent BFS is in test/audit.test.mjs."
+  },
+  "referenceLength": 4,
+  "unlimited": {
+    "astar": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "pathLength": 4,
+      "expanded": 8,
+      "relativeLength": 1
+    },
+    "greedy": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "pathLength": 4,
+      "expanded": 6,
+      "relativeLength": 1
+    },
+    "dijkstra": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "pathLength": 4,
+      "expanded": 8,
+      "relativeLength": 1
+    }
+  },
+  "trials": [
+    {
+      "budget": 2,
+      "results": {
+        "astar": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 2,
+          "relativeLength": null
+        },
+        "greedy": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 2,
+          "relativeLength": null
+        },
+        "dijkstra": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 2,
+          "relativeLength": null
+        }
+      }
+    },
+    {
+      "budget": 300,
+      "results": {
+        "astar": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 8,
+          "relativeLength": 1
+        },
+        "greedy": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 6,
+          "relativeLength": 1
+        },
+        "dijkstra": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 8,
+          "relativeLength": 1
+        }
+      }
+    }
+  ],
+  "execution": {
+    "executedBy": "Command operator; student execution is not inferred from a generated file.",
+    "timestamp": "2026-10-29T01:40:09.941Z",
+    "node": "v24.22.1",
+    "platform": "win32/x64",
+    "sourceCommit": "93491c1ef104df472356278820c2a937600388f5",
+    "workspaceDirty": true,
+    "inputFile": "experiments/reachable-goal-budget-control.scenario.json",
+    "inputSha256": "0f054d7efdcceb852c842e3b380d5c8eb6c1513082d56f15571666024c490e02",
+    "coreSha256": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "runnerSha256": "6a38ac0a5795c421bb658c90a8642731f517a602aa0234718ebe6c79a5f92c84"
+  }
+}

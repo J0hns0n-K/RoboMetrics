@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "label": "AI-OPERATED MATCHED CONNECTIVITY/BUDGET CONTROL",
+  "dateSeoul": "2026-10-29",
+  "forecastCommit": "93491c1ef104df472356278820c2a937600388f5",
+  "sourceCommit": "93491c1ef104df472356278820c2a937600388f5",
+  "studentPredictionVerbatim": "예산 초과",
+  "predictionCheck": {
+    "algorithm": "astar",
+    "tieBreak": "fifo",
+    "budget": 2,
+    "expectedReason": "BUDGET_EXCEEDED",
+    "observedReason": "BUDGET_EXCEEDED",
+    "matches": true
+  },
+  "artifacts": {
+    "data/failure-semantics/unreachable-goal-run-01.json": "9f400f9faa8c9cc5af21471e6b6d7e5e74068f80008dc4828add74ab43887f92",
+    "data/failure-semantics/reachable-goal-budget-control-run-01.json": "073f10f6feb46a0632da0d5525b2c3a8bceb94246c4c5ce0406df6d8fac5693f"
+  },
+  "sourceHashesGitBlobs": {
+    "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+    "experiments/reachable-goal-budget-control.scenario.json": "0f054d7efdcceb852c842e3b380d5c8eb6c1513082d56f15571666024c490e02"
+  },
+  "sourceInputsDirty": false,
+  "workspaceStatusAtValidation": "M practice/02-planning-budget.mjs\n?? data/failure-semantics/reachable-goal-budget-control-run-01.json",
+  "changedCells": [
+    {
+      "coordinate": [
+        1,
+        2
+      ],
+      "before": "#",
+      "after": "."
+    }
+  ],
+  "controls": {
+    "sameDimensions": true,
+    "sameEndpoints": true,
+    "sameOtherCells": true,
+    "sameBudgets": [
+      2,
+      300
+    ],
+    "sameCoreAndRunner": true,
+    "upperGoalNeighborStillBlocked": true
+  },
+  "independentFloodFill": {
+    "method": "Queue-based grid-character traversal without planner or makeMap; first-discovery distances on unit-cost four-neighbor grid.",
+    "visitedCoordinates": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "startComponentSize": 8,
+    "goalIncluded": true,
+    "shortestGoalDistance": 4
+  },
+  "comparisons": [
+    {
+      "budget": 2,
+      "policies": {
+        "astar": {
+          "disconnected": {
+            "success": false,
+            "reason": "BUDGET_EXCEEDED",
+            "moves": null,
+            "examined": 2
+          },
+          "connected": {
+            "success": false,
+            "reason": "BUDGET_EXCEEDED",
+            "moves": null,
+            "examined": 2
+          }
+        },
+        "greedy": {
+          "disconnected": {
+            "success": false,
+            "reason": "BUDGET_EXCEEDED",
+            "moves": null,
+            "examined": 2
+          },
+          "connected": {
+            "success": false,
+            "reason": "BUDGET_EXCEEDED",
+            "moves": null,
+            "examined": 2
+          }
+        },
+        "dijkstra": {
+          "disconnected": {
+            "success": false,
+            "reason": "BUDGET_EXCEEDED",
+            "moves": null,
+            "examined": 2
+          },
+          "connected": {
+            "success": false,
+            "reason": "BUDGET_EXCEEDED",
+            "moves": null,
+            "examined": 2
+          }
+        }
+      }
+    },
+    {
+      "budget": 300,
+      "policies": {
+        "astar": {
+          "disconnected": {
+            "success": false,
+            "reason": "UNREACHABLE",
+            "moves": null,
+            "examined": 6
+          },
+          "connected": {
+            "success": true,
+            "reason": null,
+            "moves": 4,
+            "examined": 8
+          }
+        },
+        "greedy": {
+          "disconnected": {
+            "success": false,
+            "reason": "UNREACHABLE",
+            "moves": null,
+            "examined": 6
+          },
+          "connected": {
+            "success": true,
+            "reason": null,
+            "moves": 4,
+            "examined": 6
+          }
+        },
+        "dijkstra": {
+          "disconnected": {
+            "success": false,
+            "reason": "UNREACHABLE",
+            "moves": null,
+            "examined": 6
+          },
+          "connected": {
+            "success": true,
+            "reason": null,
+            "moves": 4,
+            "examined": 8
+          }
+        }
+      }
+    }
+  ],
+  "validation": {
+    "operator": "AI assistant",
+    "allSuccessfulPathsValid": true,
+    "allSuccessfulExamplePathsMatchIndependentShortestLength": true,
+    "allFailuresHaveEmptyPathsAndNullLengths": true,
+    "prior23TestCoreAndRunnerHashesMatch": true,
+    "fullSuiteRerunForInputOnlyControl": false
+  },
+  "interpretation": "At budget 2, both the disconnected and connected map return BUDGET_EXCEEDED. At budget 300 they separate into UNREACHABLE versus success with four moves. A budget-exhausted outcome alone cannot establish no path. Null failure length is not a zero-move route. This result concerns fixed known maps and is outside the reachable-only random benchmark cohort.",
+  "provenance": "Student supplied a guided pre-run forecast for A* FIFO at budget 2 only. AI proposed the one-wall control, supplied code/method, operated the committed runner and performed independent reachability/path checks and initial analysis. No independent student execution, map/code authorship or forecasts for other outcomes are inferred."
+}
