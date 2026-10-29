@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "status": "awaiting-student-post-result-explanation",
+  "sourceRaw": "data/footprint/resolution-quality-prospective-run-01.json",
+  "sourceValidation": "data/footprint/resolution-quality-prospective-validation-01.json",
+  "selectedCase": {"trial": 9, "seed": 20268036},
+  "caseSelection": "AI selects first equal-length joint success after the fixed prospective run, as a known explanatory example, not a new independent experiment.",
+  "question": "이번에는 왜 먼저1칸＋추가 확인이 더 많이 검토했을까? trial9에서 항상 반 칸은37곳, 추가 확인은16+37=53곳이었어. 네 말로 한 문장으로 설명해 줘.",
+  "studentResponseVerbatim": null,
+  "scope": "Guided post-result interpretation of a prediction not supported on the matched2-map subset. Do not attribute AI stage-cost mechanism or an independent discovery to the student before an actual explanation. No new experiment required for this question."
+}

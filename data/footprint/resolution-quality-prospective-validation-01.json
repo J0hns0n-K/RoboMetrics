@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "validatedBy": "AI assistant CLI",
+  "validatedAtUTC": "2026-10-29T12:34:30.656Z",
+  "sourceCommit": "20f38f9520f1ec984e9eba0baa8e69574a5299ab",
+  "inputsFrozenCommit": "e3af5c129502ccef21549de826b83f344e54baa0",
+  "protocol": "experiments/resolution-quality-prospective-01.protocol.json",
+  "predictionRecord": "data/learning/resolution-prospective-prediction-01.json",
+  "criterionRecord": "data/learning/resolution-priority-criterion-01.json",
+  "raw": {
+    "path": "data/footprint/resolution-quality-prospective-run-01.json",
+    "sha256": "839d229c4c12c0fbda9fb7eeb3645ca348827232a6c447041029332f76a2d9fc"
+  },
+  "sourceHashesGitBlobs": {
+    "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "src/disk-footprint.mjs": "d65440878eea0718b28c61357948e3e56e48227213a5ea2c732961cd156853e8",
+    "src/resolution-policy.mjs": "dc071ca5af42d67d5de1143c0166526ec1affe85f8cf064594aa2e190c139293",
+    "src/resolution-quality-policy.mjs": "0f3b0627c830db00d07e55f09261ee1056ace7700e820dcab693b2b3d125baff",
+    "scripts/resolution-cohort.mjs": "3cec4d3fb5d48d2287794af191945987cb12bbf2729dbd5007631c59a8c675e1",
+    "scripts/resolution-comparison.mjs": "afa23289c8e0319f6472a6aa52aab3a93ef49a9257d2c538b9c3fd6c01d80431",
+    "scripts/run-resolution-prospective.mjs": "3c0ea37a994d83aeac0aa33e15223876f17c2d0e085178b7958a0ca5c7d111c8",
+    "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+    "scripts/check-current-position-detour.mjs": "9bb2fad0a772d3fa41c37c8c21b068d44d7e946eb62524c9e50c41a183a9e12e",
+    "scripts/check-two-cell-doorway.mjs": "45765ff5e47d578a34b6df04d12555388ed04bb53387722be4a949c1d5755cad",
+    "test/resolution-comparison.test.mjs": "3f59b63d4f970e68468ae5c81dafbe4b8b32b897dfdd5ade4ca0ca667c24af94",
+    "data/footprint/resolution-prospective-tests-01.tap": "433fd556eb6d09e5fee7031297fbc67e03dfb4d616e3ecbfaa345cefd36f4637",
+    "experiments/resolution-quality-prospective-01.protocol.json": "372dc02aced4c9ed746f9375c074b97f6bbfeb1afae31883e81d0c138bec73c9",
+    "data/learning/resolution-priority-criterion-01.json": "cadc1ba03e5b122e5a50232a37b589bd7732c4cc68181857989928a0df43151a",
+    "data/learning/resolution-prospective-prediction-01.json": "a1177aa6ebd50067c49513c116c0de671fdde17fbecb3954dc654560c96f4891",
+    "data/footprint/resolution-quality-replay-validation-01.json": "1181957b4db275d491ec91bb835256d6d390c200972dc859403662a203fd9275",
+    "experiments/disk-model-clearance015-01.config.json": "05eb114289bcc542081674dd9aa70a5cc9a362513d57d8e7b8e94f74dc8bf658"
+  },
+  "tests": {
+    "path": "data/footprint/resolution-prospective-tests-01.tap",
+    "sha256": "433fd556eb6d09e5fee7031297fbc67e03dfb4d616e3ecbfaa345cefd36f4637",
+    "passed": 101,
+    "failed": 0,
+    "newMetricControls": 4,
+    "scope": "All test/*.test.mjs files; unrelated untracked portfolio directory excluded from test discovery.",
+    "fullSuiteExecuted": true
+  },
+  "checks": {
+    "generationInputsUnchangedFromPriorFrozenCommit": true,
+    "policiesAndGeneratorHashesUnchanged": true,
+    "predictionCommittedBeforeTargets": true,
+    "exact30SeedsRetainedNoReplacement": true,
+    "independentBigIntGenerationReconstruction": true,
+    "all8520PointMasksAudited": true,
+    "bfsOnlyOnValidBodyEndpoints": true,
+    "allSuccessfulStageAndReturnedSegmentsValid": true,
+    "fullStageCostsAndCapsVerified": true,
+    "primaryAndJointAndEqualLengthDenominatorsVerified": true,
+    "failuresNotRankedAsCheapWins": true,
+    "predictionOutcomeScopedToComparableSubset": true,
+    "sourceTestsRawBound": true,
+    "existingOutputRejectedBeforeGenerationAndBytesPreserved": true
+  },
+  "observations": {
+    "newMaps": 30,
+    "seedRange": [
+      20268028,
+      20268057
+    ],
+    "grid": [
+      9,
+      7
+    ],
+    "density": 0.15,
+    "rejectedMaps": 0,
+    "endpointValidMaps": 6,
+    "endpointInvalidMaps": 24,
+    "summary": {
+      "mapCount": 30,
+      "endpointValidMaps": 6,
+      "endpointInvalidMaps": 24,
+      "fineGraph": {
+        "reachable": 2,
+        "unreachable": 4,
+        "notClassifiedInvalidEndpoints": 24
+      },
+      "modes": {
+        "always-fine": {
+          "denominator": 30,
+          "statusCounts": {
+            "ROUTE_FOUND": 2,
+            "BUDGET_EXCEEDED": 0,
+            "UNREACHABLE": 4,
+            "INVALID_ENDPOINT_CLEARANCE": 24
+          },
+          "successfulMaps": 2,
+          "totalExamined": 130,
+          "plannerCalls": 6,
+          "geometryStages": 30,
+          "endpointValidDenominator": 6,
+          "meanExaminedEndpointValid": 21.666666666666668,
+          "worldLength": {
+            "successfulMapDenominator": 2,
+            "mean": 8
+          }
+        },
+        "quality-checked": {
+          "denominator": 30,
+          "statusCounts": {
+            "ROUTE_FOUND": 2,
+            "BUDGET_EXCEEDED": 0,
+            "UNREACHABLE": 4,
+            "INVALID_ENDPOINT_CLEARANCE": 24
+          },
+          "successfulMaps": 2,
+          "totalExamined": 165,
+          "plannerCalls": 12,
+          "geometryStages": 36,
+          "endpointValidDenominator": 6,
+          "meanExaminedEndpointValid": 27.5,
+          "worldLength": {
+            "successfulMapDenominator": 2,
+            "mean": 8
+          }
+        }
+      },
+      "jointSuccess": {
+        "denominator": 2,
+        "trialIds": [
+          9,
+          26
+        ],
+        "worldLengthMeanByMode": {
+          "always-fine": 8,
+          "quality-checked": 8
+        },
+        "unequalLengthCases": []
+      },
+      "equalLengthWork": {
+        "denominator": 2,
+        "trialIds": [
+          9,
+          26
+        ],
+        "totals": {
+          "always-fine": 63,
+          "quality-checked": 89
+        },
+        "means": {
+          "always-fine": 31.5,
+          "quality-checked": 44.5
+        },
+        "lowerTotalMode": "always-fine"
+      },
+      "perMapCriterion": {
+        "firstMode": "always-fine",
+        "secondMode": "quality-checked",
+        "counts": {
+          "first": 2,
+          "second": 0,
+          "tie": 0,
+          "not-comparable": 28
+        },
+        "scope": "Only jointly valid routes are ranked; shorter world length first, lower full examined work on equal length. Failures are not cheap wins."
+      }
+    },
+    "matchedCases": [
+      {
+        "trial": 9,
+        "seed": 20268036,
+        "length": 9,
+        "fine": 37,
+        "quality": 53,
+        "qualityStages": [
+          16,
+          37
+        ]
+      },
+      {
+        "trial": 26,
+        "seed": 20268053,
+        "length": 7,
+        "fine": 26,
+        "quality": 36,
+        "qualityStages": [
+          10,
+          26
+        ]
+      }
+    ],
+    "predictionAssessment": {
+      "record": "data/learning/resolution-prospective-prediction-01.json",
+      "expectedMode": "quality-checked",
+      "equalLengthMapCount": 2,
+      "observedLowerTotalMode": "always-fine",
+      "outcome": "NOT_SUPPORTED_ON_THIS_CONDITION"
+    },
+    "configuredPolicyEvaluations": 60,
+    "configuredPlannerCalls": 18,
+    "configuredExaminedNodes": 295,
+    "configuredGeometryStages": 66,
+    "configuredBfsCalls": 12,
+    "configuredPointAudits": 8520,
+    "additionalValidationReconstructedMaps": 30,
+    "additionalValidationPointChecks": 8520,
+    "additionalValidationBfsCalls": 12,
+    "additionalValidationStageSweptSegments": 82,
+    "additionalValidationReturnedSweptSegments": 64,
+    "additionalValidationPlannerCalls": 0
+  },
+  "validationMethod": "Prior frozen-input field and policy/generator hash equality; BigInt reconstruction; original-square point distance audit, gated BFS, all world segments, independent statuses/work/paired-subset/criterion/prediction and output refusal. Reconstructed maps and repeated checks are not extra cohort samples.",
+  "attribution": "Student gave offered direction2 before generation, with no reason/count. AI supplies inputs/code/tests/operation/analysis; the directional prediction is not supported on the matched2-map subset.",
+  "limitations": [
+    "Single synthetic9x7/.15 fixed-seed condition with policies fixed before generation, not proof of statistical independence or real-workload representativeness.",
+    "24/30 endpoint-invalid maps remain in primary denominator; matched equal-length comparison has only2 maps. Do not generalize the observed advantage to all maps.",
+    "Primary all-map total work130/165 differs from forecast-relevant matched totals63/89. Each subset and failure denominator remains explicit.",
+    "Always-fine cap100 versus quality-checked200; no equal-total-budget success comparison. No budget failure observed here.",
+    "Node counts omit construction/audit/reference/storage overhead; no timing/energy/memory-efficiency/robot/sensor/control or physical safety result."
+  ],
+  "unrelatedLocalChangesPreserved": [
+    "practice/02-planning-budget.mjs",
+    "portfolio/"
+  ]
+}

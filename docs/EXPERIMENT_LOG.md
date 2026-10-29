@@ -698,6 +698,13 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - experiments/resolution-quality-prospective-01.protocol.json fixes30new seeds20268028–20268057, same9×7/.15/point-endpoint-only generator, body0.8/margin0.15/A* FIFO/stage100 and old policy rules. Modes always-fine/quality-checked; caps100/200 disclosed. All failures retained; matched valid lengths/work use explicit paired denominators.
 - Existing algorithm/generator hashes match the97-test replay source. New target maps/planner/BFS/test-suite executions0. Student prediction and runner/reference/summary validation remain pending before target generation. Earlier choice/rationale and all raw results remain unchanged.
 
+## 2026-10-29 — Prospective30-seed condition completed; direction not supported here
+
+- Student **2** predicts quality-checked lower work on equal-length joint successes, no rationale/count; record data/learning/resolution-prospective-prediction-01.json before generation. Inputs e3af5c129502ccef21549de826b83f344e54baa0, source/protocol/prediction20f38f9520f1ec984e9eba0baa8e69574a5299ab. Same fixed9×7/.15/body0.8/margin0.15/point endpoints/A* FIFO/stage100/policies, new30seeds20268028–20268057; no outcomes-based replacement/tuning. All30 retained.
+- Protocol experiments/resolution-quality-prospective-01.protocol.json; raw/validation data/footprint/resolution-quality-prospective-*.json; method docs/RESOLUTION_PROSPECTIVE_01_KR.md. Both2routes/4UNREACHABLE/24invalid-endpoints/0budget. Valid6fine-reference2reachable/4unreachable; primary nodes130/165 andcalls6/12. Equal-length joint2(trials9,26) lengths9/7, matched costs63/89 (fine/quality), forecast not supported on this condition. Case9quality16+37;case26quality10+26. Failures28not ranked as wins/ties.
+- Full test/*.test.mjs101pass including4metric guards, no target seeds. Configured30maps/60policy/18planner/295nodes/66model/12BFS/8520point checks. Validation BigInt30reconstructions/8520points/12BFS/82stage+64returned segments/zero planner plus fixedinput/hash/denominator/prediction/output checks. Unrelated portfolio/ and practice unchanged. Repeated checks not samples.
+- Primary30/valid6/matched2denominators distinct; caps100/200 unequal. Only2comparable successes, no independence/real-workload/general superiority/runtime-energy-storage/physical claim. Next experiments/resolution-prospective-interpretation.design.json asks guided stage-cost explanation; no answer/new experiment yet.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

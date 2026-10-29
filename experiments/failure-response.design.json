@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Obtain a pre-generation prediction (unknown allowed), then validate/commit the prospective runner before executing fixed30new seeds20268028..20268057. Compare always-fine and quality-checked with all failures retained and explicit paired denominators. No target maps generated yet.",
+  "nextTask": "Student post-result explanation: why did prior coarse work add to fine search on the matched new2 maps? Example trial9:37 versus16+37. Prediction not supported here, no universal inference or new experiment.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -229,5 +229,11 @@
   "resolutionQualityAssessmentRecord": "data/learning/resolution-quality-assessment-01.json",
   "resolutionQualityRationaleRecord": "data/learning/resolution-quality-rationale-01.json",
   "resolutionPriorityCriterionRecord": "data/learning/resolution-priority-criterion-01.json",
-  "resolutionProspectiveProtocol": "experiments/resolution-quality-prospective-01.protocol.json"
+  "resolutionProspectiveProtocol": "experiments/resolution-quality-prospective-01.protocol.json",
+  "resolutionProspectivePredictionRecord": "data/learning/resolution-prospective-prediction-01.json",
+  "resolutionProspectiveArtifacts": [
+    "data/footprint/resolution-quality-prospective-run-01.json",
+    "data/footprint/resolution-quality-prospective-validation-01.json"
+  ],
+  "resolutionProspectiveInterpretationDraft": "experiments/resolution-prospective-interpretation.design.json"
 }

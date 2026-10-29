@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dateSeoul": "2026-10-29",
-  "status": "criterion-accepted-prospective-prediction-next",
+  "status": "criterion-accepted-prospective-results-available",
   "proposalAuthor": "AI assistant",
   "sourceValidation": "data/footprint/resolution-quality-replay-validation-01.json",
   "question": "이번30장에서는 같은 성공7장의 경로 길이가 같고, 항상 반 칸은281곳, 먼저1칸+추가 확인은332곳을 검토했어. 이번 결과만 기준으로 고르면 어느 방식이 더 합리적일까? 1: 항상 반 칸, 2: 먼저1칸+추가 확인. 이유도 짧게 적어 줘.",
@@ -13,5 +13,10 @@
   "studentRationaleRecord": "data/learning/resolution-quality-rationale-01.json",
   "studentEqualLengthTieBreakResponse": "당연하지",
   "acceptedCriterionRecord": "data/learning/resolution-priority-criterion-01.json",
-  "prospectiveProtocol": "experiments/resolution-quality-prospective-01.protocol.json"
+  "prospectiveProtocol": "experiments/resolution-quality-prospective-01.protocol.json",
+  "prospectivePredictionRecord": "data/learning/resolution-prospective-prediction-01.json",
+  "prospectiveResults": {
+    "raw": "data/footprint/resolution-quality-prospective-run-01.json",
+    "validation": "data/footprint/resolution-quality-prospective-validation-01.json"
+  }
 }
