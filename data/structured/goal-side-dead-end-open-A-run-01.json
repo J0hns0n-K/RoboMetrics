@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "label": "AI-OPERATED FIXED-MAP A* TIE COMPARISON; SYNTHETIC GRID",
+  "scenario": {
+    "id": "goal-side-dead-end-open-A",
+    "dateSeoul": "2026-10-29",
+    "status": "ready",
+    "contributionType": "student-declared",
+    "contributor": "Junmo — guided wall-A removal choice and pre-run rationale",
+    "assistance": "Student chose wall A from AI-proposed edits, supplied the recorded route-based rationale and predicted 6 minimum moves. AI supplied the base layout/options, clarification and transcription and will operate the already-tested paired evaluator. No independent full-map design or student code authorship is inferred.",
+    "studentChoiceAndReasonVerbatim": "A를 없애는게 더 좋네. 왜냐하면 최단이동루트에는 A가 있고 B는 없어.",
+    "assistantClarification": "A blocks the straight endpoint row; opening it makes that potential route available. The original valid shortest path cannot pass through blocked A. This is an assistant clarification, not a rewrite of the student quote or a student prediction of search work.",
+    "parentScenario": "experiments/goal-side-dead-end-04.scenario.json",
+    "parentResult": "data/structured/goal-side-dead-end-04-run-01.json",
+    "revision": {
+      "operation": "Open exactly one existing wall",
+      "label": "A",
+      "coordinate": [
+        5,
+        0
+      ],
+      "from": "#",
+      "to": "."
+    },
+    "rows": [
+      "S.....G",
+      ".#####.",
+      "......."
+    ],
+    "budgets": [
+      300
+    ],
+    "variants": [
+      "fifo",
+      "closer-goal"
+    ],
+    "prediction": "Student predicts a minimum route length of 6 moves after opening A. The raw response includes a trailing backslash, interpreted as an extra character after the numeric answer. No prediction of examined nodes or relative tie-rule performance was supplied.",
+    "controls": "Only (5,0) changes from wall to open; dimensions, endpoints, all other cells, unit costs, heuristic, neighbor order, budget and planner source remain fixed. Compare each A* tie rule before/after and preserve full paths.",
+    "predictionScope": "Minimum number of moves on the revised map only. No examined-node forecast is supplied.",
+    "executionNote": "The 6-move forecast is recorded before the ready input is committed and executed. Preserve the original parent and compare unchanged planner sources and fixed budget.",
+    "studentPredictionVerbatim": "6\\",
+    "studentMinimumMovesPrediction": 6
+  },
+  "conventions": {
+    "primaryScore": "Both A* variants use g+h; only equal-f ordering differs.",
+    "examinedNodes": "Distinct examined nodes, including start and goal; not runtime or energy.",
+    "pathLength": "Number of moves, excluding the start cell.",
+    "reference": "Dijkstra shares the planner; independent BFS audit is in test/audit.test.mjs.",
+    "attribution": "Input retains guided student choices and forecast; evaluator and execution are AI support."
+  },
+  "reference": {
+    "success": true,
+    "reason": null,
+    "path": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        6,
+        0
+      ]
+    ],
+    "pathLength": 6,
+    "expanded": 12
+  },
+  "trials": [
+    {
+      "budget": 300,
+      "results": {
+        "fifo": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ]
+          ],
+          "pathLength": 6,
+          "expanded": 7,
+          "relativeLength": 1
+        },
+        "closer-goal": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ]
+          ],
+          "pathLength": 6,
+          "expanded": 7,
+          "relativeLength": 1
+        }
+      },
+      "comparison": {
+        "commonSuccess": true,
+        "savedExaminedNodes": 0,
+        "pathLengthDifference": 0
+      }
+    }
+  ],
+  "execution": {
+    "operator": "AI assistant CLI",
+    "executedAtUTC": "2026-10-29T00:12:09.118Z",
+    "sourceCommit": "2ab94f7a51bbf1e204252adc8b85cd76479a94a6",
+    "sourceInputsDirty": false,
+    "workspaceStatus": "M practice/02-planning-budget.mjs",
+    "sourceHashesGitBlobs": {
+      "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+      "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+      "scripts/compare-fixed-ties.mjs": "0af9ce44b2fb4113b5184fa3260fcf06c21f3c6d4aff6f83ca4bb7edef832028",
+      "experiments/goal-side-dead-end-open-A.scenario.json": "c7834ab710142c281248095e4f8bcb6fb46b8c94ba13650b0ba88804a96b415d"
+    },
+    "inputFile": "experiments/goal-side-dead-end-open-A.scenario.json",
+    "inputWorkingBytesSha256": "c7834ab710142c281248095e4f8bcb6fb46b8c94ba13650b0ba88804a96b415d",
+    "node": "v24.22.1",
+    "platform": "win32/x64",
+    "provenance": "Student supplied guided choices and forecast; this command is assistant-operated. No student execution or independent map sample is inferred."
+  }
+}

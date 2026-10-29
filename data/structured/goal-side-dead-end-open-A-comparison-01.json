@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "label": "AI-OPERATED CONTROLLED SINGLE-WALL BEFORE/AFTER COMPARISON",
+  "dateSeoul": "2026-10-29",
+  "forecastCommit": "2ab94f7a51bbf1e204252adc8b85cd76479a94a6",
+  "sourceCommit": "2ab94f7a51bbf1e204252adc8b85cd76479a94a6",
+  "studentPredictionVerbatim": "6\\",
+  "normalizedMinimumMovesPrediction": 6,
+  "normalizationNote": "Trailing backslash retained in raw response and interpreted as extra text after the numeric answer.",
+  "studentChoiceAndReasonVerbatim": "A를 없애는게 더 좋네. 왜냐하면 최단이동루트에는 A가 있고 B는 없어.",
+  "artifacts": {
+    "data/structured/goal-side-dead-end-04-run-01.json": "8376fda726ef98eac94ff5ab684978e8b643a8329513e476d8654f5f2100d862",
+    "data/structured/goal-side-dead-end-open-A-run-01.json": "87187e98da5f11aa0972485c7d59c91dde913e92419e8adda3c6e437be34177e"
+  },
+  "changedCells": [
+    {
+      "coordinate": [
+        5,
+        0
+      ],
+      "before": "#",
+      "after": "."
+    }
+  ],
+  "controls": {
+    "sameDimensions": true,
+    "sameEndpoints": true,
+    "sameBudget": 300,
+    "sameVariants": true,
+    "sameCoreAndRunners": true,
+    "allOtherCellsIdentical": true
+  },
+  "comparisons": [
+    {
+      "rule": "fifo",
+      "budget": 300,
+      "before": {
+        "success": true,
+        "moves": 10,
+        "examined": 15
+      },
+      "after": {
+        "success": true,
+        "moves": 6,
+        "examined": 7
+      },
+      "moveReduction": 4,
+      "examinedReduction": 8
+    },
+    {
+      "rule": "closer-goal",
+      "budget": 300,
+      "before": {
+        "success": true,
+        "moves": 10,
+        "examined": 15
+      },
+      "after": {
+        "success": true,
+        "moves": 6,
+        "examined": 7
+      },
+      "moveReduction": 4,
+      "examinedReduction": 8
+    }
+  ],
+  "geometricShortestPathCheck": {
+    "manhattanLowerBound": 6,
+    "validStraightPath": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        6,
+        0
+      ]
+    ],
+    "moves": 6,
+    "reachesLowerBound": true,
+    "note": "A valid path meeting the coordinate-distance lower bound establishes revised optimality independently of Dijkstra selection."
+  },
+  "priorTests": {
+    "sourceCommit": "e765e5b910c63bdfc5c2c38e35f3b482e74755e8",
+    "total": 23,
+    "passed": 23,
+    "failed": 0,
+    "report": "data/structured/fixed-tie-tests-01.tap",
+    "rerunForThisInputOnlyRevision": false,
+    "reason": "Core, parsers, evaluator and integration-test source unchanged; new geometry, parent comparison and paths checked directly."
+  },
+  "validation": {
+    "operator": "AI assistant",
+    "allRecordedSuccessfulPathsValid": true,
+    "forecastMatchesRevisedShortestLength": true,
+    "sourceInputsDirty": false,
+    "workspaceStatus": "M practice/02-planning-budget.mjs"
+  },
+  "interpretation": "Both rules improve after the single wall is opened. No planner rule or implementation changed, so this is an environment-edit effect in a controlled comparison, not evidence of a new algorithm improvement or a relative advantage of closer-goal. Student post-result interpretation is pending.",
+  "provenance": "Student selected A from AI options, supplied the stored rationale and predicted 6 moves before execution. AI transcribed, ran the committed paired evaluator, verified paths and authored the initial before/after analysis. One synthetic layout pair, not physical robot evidence or independent repeated trials."
+}

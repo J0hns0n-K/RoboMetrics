@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "goal-side-dead-end-one-wall-revision-design",
   "dateSeoul": "2026-10-29",
-  "status": "Wall A selected; 6-move expectation recorded; awaiting execution on committed inputs",
+  "status": "Selected wall-A revision executed after the committed 6-move forecast; before/after comparison archived",
   "parentScenario": "experiments/goal-side-dead-end-04.scenario.json",
   "parentResult": "data/structured/goal-side-dead-end-04-run-01.json",
   "parentRows": [
@@ -57,12 +57,16 @@
     "normalization": "Trailing backslash treated as an extra character; numeric expectation is 6. No other forecast inferred."
   },
   "attribution": "Student chose A from two AI-proposed wall edits and supplied the quoted pre-run rationale. AI supplied the labels/layout/options and transcribed the choice. No numerical path-length or examined-node forecast, independent full-map design or code authorship is inferred.",
-  "execution": "Prediction recorded before execution; commit the ready scenario and then compare with the unchanged parent artifact.",
+  "execution": "AI-operated run on committed source 2ab94f7a51bbf1e204252adc8b85cd76479a94a6; parent input/results preserved. Both rules return 6 moves and examine 7 nodes; post-result student interpretation is pending.",
   "studentChoiceAndReasonVerbatim": "A를 없애는게 더 좋네. 왜냐하면 최단이동루트에는 A가 있고 B는 없어.",
   "selectedRows": [
     "S.....G",
     ".#####.",
     "......."
   ],
-  "assistantClarification": "A blocks the straight endpoint row; opening it makes that potential route available. The original valid shortest path cannot pass through blocked A. This is an assistant clarification, not a rewrite of the student quote or a student prediction of search work."
+  "assistantClarification": "A blocks the straight endpoint row; opening it makes that potential route available. The original valid shortest path cannot pass through blocked A. This is an assistant clarification, not a rewrite of the student quote or a student prediction of search work.",
+  "resultArtifacts": [
+    "data/structured/goal-side-dead-end-open-A-run-01.json",
+    "data/structured/goal-side-dead-end-open-A-comparison-01.json"
+  ]
 }

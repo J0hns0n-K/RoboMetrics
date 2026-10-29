@@ -235,6 +235,14 @@ The draft and new `experiments/goal-side-dead-end-open-A.scenario.json` fix exac
 - Set the revised scenario ready only after recording that forecast. No examined-node count or tie-rule superiority expectation was supplied. Geometry, budget 300 and both A* options remain fixed.
 - Commit the input before AI execution, then compare it with the unchanged parent artifact. Planner and evaluator sources are unchanged from the archived 23-test suite, so no new code tests are needed for this input/document revision.
 
+## 2026-10-29 Committed wall-A revision executed and compared
+
+- Forecast and ready input were committed first in `2ab94f7a51bbf1e204252adc8b85cd76479a94a6`. AI ran the unchanged paired evaluator once on the revised map. Full paths are in `data/structured/goal-side-dead-end-open-A-run-01.json`.
+- Both rules succeed with 6 moves and 7 examined nodes, compared with the parent's 10 moves and 15 nodes. The normalized six-move forecast matches the result. Valid straight path meets the Manhattan lower bound of 6; source/path/geometry checks are in `goal-side-dead-end-open-A-comparison-01.json`.
+- Controlled checks: exactly (5,0) changes #→.; all other cells, endpoints, dimensions, variants, budget 300, core and runner source hashes match. Parent input/results/manifests are unchanged. No new code test run: prior 23-test sources match, and the new input/path comparison is verified directly.
+- AI interpretation distinguishes the environment edit from changing an algorithm rule: both improve under the same search policies. No measured runtime/energy, rule-2-specific gain or independently operated student experiment is inferred. Student post-result causal interpretation is pending.
+- Next student task: explain the reduced moves and examined-node counts in one sentence referring to the condition that actually changed.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
