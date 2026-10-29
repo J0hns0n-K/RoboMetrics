@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "status": "draft-awaiting-student-policy-choice",
+  "proposalAuthor": "AI assistant",
+  "sourceEvidence": "data/route-update-policy/reoptimization-batch-validation-01.json",
+  "observation": "28 of 30 old routes already had length 26, the fixed-endpoint Manhattan lower bound. This is post-result AI analysis, not a student forecast.",
+  "proposedRule": "If the remaining route is valid on the latest map and its length equals Manhattan(current, goal), skip fresh optimization because no shorter four-neighbor unit-cost route can exist. Otherwise retain the selected budgeted reoptimization behavior.",
+  "studentQuestion": "이미 이론적 최소 길이인 26번 경로는 재탐색을 생략하는 규칙을 추가할까?",
+  "studentChoiceVerbatim": null,
+  "implementationCompleted": false,
+  "comparisonResults": null,
+  "scope": "Only the current fully known static four-neighbor unit-cost model. Proposed and not yet implemented/tested; no measured performance benefit or student invention inferred."
+}

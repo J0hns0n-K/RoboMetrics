@@ -524,6 +524,14 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Offline unlimited prior A* work recorded separately, checked against candidate BFS; edited-map BFS measures potential shortening, distinct from realized within-budget shortening/valid fallback. All map/policy denominators and failed optimization attempts retained.
 - Three new methodology controls, full suite 50 pass/zero failures in `data/route-update-policy/reoptimization-batch-tests-01.tap`; no registered cohort preview. Protocol/source commit required before configured execution.
 
+## 2026-10-29 — Thirty-map null improvement preserved
+
+- Source/protocol/uncertainty commit `6cc390ac329808b6707e97292dc1db247cd11afd`; AI execution/validation in `data/route-update-policy/reoptimization-batch-*.json`, detailed record `docs/ROUTE_REOPTIMIZATION_BATCH_01_KR.md`. Candidate sequence 36 checked/6 unreachable/30 accepted, exactly one prescribed wall removed per accepted map. No reselection after results.
+- Same 30 parent/edited pairs, A* FIFO budget 300: theoretical/realized shorter paths 0/30, unchanged lengths 30/30; both mean moves 26.1333, all returned paths usable. All 30 optimizations complete with zero budget failures, online new expansions 3,733 (124.4333/map) versus retention zero. Thirty pairs reused by two policies, not 60 independent maps.
+- Separate offline prior acquisition 30 unlimited A* calls/3,650 expansions; online 60 policy evaluations/30 new calls/3,733 expansions. Cohort BFS 36 candidates+30 edited maps; validation adds 66 BFS checks/zero planner calls. Checks cover deterministic seeds/rejections/edits, prior/returned paths, summaries, 50-test/source hashes and output immutability; no full-suite rerun.
+- Post-result AI analysis: 28 original paths length 26 (Manhattan lower bound); two length 28 remain 28 after selected edits. Student supplied uncertainty only. Original all/some question omitted zero; zero was permitted in numeric protocol and is preserved. No universal claim about every edit or reoptimization.
+- Next AI proposal `experiments/manhattan-bound-skip.design.json`: skip optimization only if latest-map remaining route is valid and equals current-goal Manhattan bound. Student preference/implementation/comparison pending, not measured savings or student invention.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

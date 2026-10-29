@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Explicit student uncertainty recorded. Commit ready protocol/source and execute paired 30-map cohort, preserving counts, acquisition/policy accounting and immutable raw data.",
+  "nextTask": "Student decision on AI-proposed valid-route lower-bound skip after the preserved 0/30 shortening result. Rule unimplemented; do not attribute AI post-result insight to student.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -113,5 +113,10 @@
     "data/route-update-policy/reoptimization-validation-01.json"
   ],
   "reoptimizationBatchDraft": "experiments/route-reoptimization-batch.design.json",
-  "reoptimizationBatchProtocol": "experiments/route-reoptimization-batch-01.protocol.json"
+  "reoptimizationBatchProtocol": "experiments/route-reoptimization-batch-01.protocol.json",
+  "reoptimizationBatchArtifacts": [
+    "data/route-update-policy/reoptimization-batch-run-01.json",
+    "data/route-update-policy/reoptimization-batch-validation-01.json"
+  ],
+  "manhattanBoundSkipDraft": "experiments/manhattan-bound-skip.design.json"
 }
