@@ -259,6 +259,15 @@ AI proposed the next B-only control in `experiments/goal-side-dead-end-open-B.sc
 - No closer-goal or route-length expectation was supplied. B remains an AI-proposed follow-up control, not a newly student-selected wall.
 - Record the forecast and ready input before execution. The original map has A blocked; only B=(4,1) opens. Core/evaluator and budget 300 remain unchanged. Full-suite tests are not repeated for this input-only revision; new geometry/paths and before/after controls will be checked directly.
 
+## 2026-10-29 B-only control executed; unchanged-work expectation not observed
+
+- Ready input and forecast **같을 것 같아** were committed in `c7303a97b10fa0509ad004b0f3405381fce3ce6c` before AI execution. Raw result: `data/structured/goal-side-dead-end-open-B-run-01.json`; controlled comparison: `goal-side-dead-end-open-B-comparison-01.json`.
+- Both rules succeed with 10 moves. FIFO examines 16 rather than 15 nodes; closer-goal examines 12 rather than 15. The scoped unchanged-FIFO forecast is not borne out; no closer-goal or route-length forecast was supplied. These are not route-discovery failures.
+- Verified exactly B=(4,1) opens on the original map, A remains blocked, all other cells/endpoints, budget 300, variants, core and evaluator hashes match. Parent/A files remain unchanged. Successful paths are valid. A barrier-column lower bound of 10 plus a valid ten-step witness independently checks shortest length.
+- Core/parser/evaluator/test code is unchanged from the archived 23-test suite, so full-suite tests were not repeated. New geometry, paths, forecast commit and before/after controls were checked directly and recorded with provenance.
+- Initial interpretation is AI-authored: fewer walls do not guarantee fewer examined nodes for this FIFO implementation; unchanged shortest length does not force unchanged search work. One constructed map pair does not estimate general effects, runtime/energy or physical robot performance. Student post-result interpretation remains pending.
+- Next task: ask the student, using these counts, whether one can claim wall removal always reduces examined-node counts.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

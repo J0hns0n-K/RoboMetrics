@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "label": "AI-OPERATED FIXED-MAP A* TIE COMPARISON; SYNTHETIC GRID",
+  "scenario": {
+    "id": "goal-side-dead-end-open-B-control",
+    "dateSeoul": "2026-10-29",
+    "status": "ready",
+    "contributionType": "ai-reference",
+    "contributor": "AI assistant — proposed B-only follow-up control",
+    "assistance": "AI proposed the B-only control, layout and collection method. Student supplied a scoped pre-run unchanged-count expectation for FIFO only; prior selection of A is not selection of B. AI transcribes and operates the existing evaluator; no student code authorship or independent full-map design is inferred.",
+    "parentScenario": "experiments/goal-side-dead-end-04.scenario.json",
+    "parentResult": "data/structured/goal-side-dead-end-04-run-01.json",
+    "relatedAResult": "data/structured/goal-side-dead-end-open-A-run-01.json",
+    "revision": {
+      "operation": "Open exactly B from the original parent; keep A blocked",
+      "label": "B",
+      "coordinate": [
+        4,
+        1
+      ],
+      "from": "#",
+      "to": "."
+    },
+    "rows": [
+      "S....#G",
+      ".###.#.",
+      "......."
+    ],
+    "budgets": [
+      300
+    ],
+    "variants": [
+      "fifo",
+      "closer-goal"
+    ],
+    "prediction": "Student expects FIFO examined nodes to stay unchanged relative to the stated parent value of 15. The number 15 is the prompt-provided baseline, not an independently counted student result. No rationale or forecast for closer-goal or path length was supplied.",
+    "studentPredictionVerbatim": "같을 것 같아",
+    "predictionScope": "FIFO examined-node count compared with the original 15 only. No closer-goal or minimum-move forecast is inferred.",
+    "controls": "Compare to the original map, not the A-open map: only (4,1) changes; A at (5,0) remains blocked. Other cells, dimensions, endpoints, budget 300 and planner rules remain fixed.",
+    "executionNote": "Prediction recorded before committing this ready input and executing the B-only control. Keep A blocked and parent/A-open inputs/results unchanged.",
+    "studentExpectedFIFOExamined": 15
+  },
+  "conventions": {
+    "primaryScore": "Both A* variants use g+h; only equal-f ordering differs.",
+    "examinedNodes": "Distinct examined nodes, including start and goal; not runtime or energy.",
+    "pathLength": "Number of moves, excluding the start cell.",
+    "reference": "Dijkstra shares the planner; independent BFS audit is in test/audit.test.mjs.",
+    "attribution": "Input retains guided student choices and forecast; evaluator and execution are AI support."
+  },
+  "reference": {
+    "success": true,
+    "reason": null,
+    "path": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        6,
+        0
+      ]
+    ],
+    "pathLength": 10,
+    "expanded": 16
+  },
+  "trials": [
+    {
+      "budget": 300,
+      "results": {
+        "fifo": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              6,
+              0
+            ]
+          ],
+          "pathLength": 10,
+          "expanded": 16,
+          "relativeLength": 1
+        },
+        "closer-goal": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              6,
+              0
+            ]
+          ],
+          "pathLength": 10,
+          "expanded": 12,
+          "relativeLength": 1
+        }
+      },
+      "comparison": {
+        "commonSuccess": true,
+        "savedExaminedNodes": 4,
+        "pathLengthDifference": 0
+      }
+    }
+  ],
+  "execution": {
+    "operator": "AI assistant CLI",
+    "executedAtUTC": "2026-10-29T00:39:33.041Z",
+    "sourceCommit": "c7303a97b10fa0509ad004b0f3405381fce3ce6c",
+    "sourceInputsDirty": false,
+    "workspaceStatus": "M practice/02-planning-budget.mjs",
+    "sourceHashesGitBlobs": {
+      "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+      "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+      "scripts/compare-fixed-ties.mjs": "0af9ce44b2fb4113b5184fa3260fcf06c21f3c6d4aff6f83ca4bb7edef832028",
+      "experiments/goal-side-dead-end-open-B.scenario.json": "38b9c9fb29d28b269d399a7b6d60e51204fab8ae46a29d3e6f0bc636b266ef49"
+    },
+    "inputFile": "experiments/goal-side-dead-end-open-B.scenario.json",
+    "inputWorkingBytesSha256": "38b9c9fb29d28b269d399a7b6d60e51204fab8ae46a29d3e6f0bc636b266ef49",
+    "node": "v24.22.1",
+    "platform": "win32/x64",
+    "provenance": "Student supplied guided choices and forecast; this command is assistant-operated. No student execution or independent map sample is inferred."
+  }
+}

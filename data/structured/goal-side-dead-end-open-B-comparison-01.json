@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "label": "AI-OPERATED B-ONLY CONTROL WITH UNCHANGED SHORTEST LENGTH AND DIFFERENT SEARCH WORK",
+  "dateSeoul": "2026-10-29",
+  "forecastCommit": "c7303a97b10fa0509ad004b0f3405381fce3ce6c",
+  "sourceCommit": "c7303a97b10fa0509ad004b0f3405381fce3ce6c",
+  "studentPredictionVerbatim": "같을 것 같아",
+  "forecastScope": "Unchanged FIFO examined nodes relative to the prompt-provided 15; no independent count calculation, rationale or closer-goal/route-length forecast inferred.",
+  "forecastCheck": {
+    "expectedFIFOExamined": 15,
+    "observedFIFOExamined": 16,
+    "expectedUnchangedCountObserved": false
+  },
+  "artifacts": {
+    "data/structured/goal-side-dead-end-04-run-01.json": "8376fda726ef98eac94ff5ab684978e8b643a8329513e476d8654f5f2100d862",
+    "data/structured/goal-side-dead-end-open-B-run-01.json": "80835b105246ced019d5f4576877523973c21156a4270f6755e0e7e329ade1de"
+  },
+  "changedCells": [
+    {
+      "coordinate": [
+        4,
+        1
+      ],
+      "before": "#",
+      "after": "."
+    }
+  ],
+  "controls": {
+    "sameDimensions": true,
+    "sameEndpoints": true,
+    "sameBudget": 300,
+    "sameVariants": true,
+    "sameCoreAndRunners": true,
+    "allOtherCellsIdentical": true,
+    "wallARemainsBlocked": true,
+    "baselineIsOriginalMapNotAOpenMap": true
+  },
+  "comparisons": [
+    {
+      "rule": "fifo",
+      "budget": 300,
+      "before": {
+        "moves": 10,
+        "examined": 15,
+        "success": true
+      },
+      "after": {
+        "moves": 10,
+        "examined": 16,
+        "success": true
+      },
+      "moveChangeAfterMinusBefore": 0,
+      "examinedChangeAfterMinusBefore": 1
+    },
+    {
+      "rule": "closer-goal",
+      "budget": 300,
+      "before": {
+        "moves": 10,
+        "examined": 15,
+        "success": true
+      },
+      "after": {
+        "moves": 10,
+        "examined": 12,
+        "success": true
+      },
+      "moveChangeAfterMinusBefore": 0,
+      "examinedChangeAfterMinusBefore": -3
+    }
+  ],
+  "geometricShortestPathCheck": {
+    "columnToCross": 5,
+    "blockedCrossingRows": [
+      0,
+      1
+    ],
+    "firstAvailableCrossingRow": 2,
+    "minimumNetHorizontalMoves": 6,
+    "minimumDownAndUpMoves": 4,
+    "totalLowerBound": 10,
+    "validWitnessPath": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        6,
+        0
+      ]
+    ],
+    "witnessMoves": 10,
+    "reachesLowerBound": true,
+    "note": "A route from x=0 to x=6 must cross column 5. That column is blocked at y=0 and y=1, so a route must reach y=2 and return to y=0. A valid ten-move path meets this lower bound."
+  },
+  "priorTests": {
+    "sourceCommit": "e765e5b910c63bdfc5c2c38e35f3b482e74755e8",
+    "total": 23,
+    "passed": 23,
+    "failed": 0,
+    "report": "data/structured/fixed-tie-tests-01.tap",
+    "rerunForThisInputOnlyRevision": false,
+    "reason": "Core, parser, paired evaluator and integration-test source unchanged; new geometry/paths and the controlled comparison were checked directly."
+  },
+  "validation": {
+    "operator": "AI assistant",
+    "allSuccessfulPathsValid": true,
+    "sourceInputsDirty": false,
+    "workspaceStatus": "M practice/02-planning-budget.mjs"
+  },
+  "interpretation": "The unchanged FIFO prediction is not borne out in this case: work increases by one node while shortest length stays ten. Closer-goal work decreases by three nodes on the same B-only change. This distinguishes route length from search work and refutes a universal decrease of examined nodes under wall removal for this FIFO implementation. Both searches succeed; this is not an algorithm failure, measured runtime/energy claim or general effect-size estimate.",
+  "provenance": "Student supplied a scoped pre-run expectation for the AI-proposed B control. AI transcribed, operated the committed evaluator, validated the geometry/paths and authored the initial analysis. One synthetic layout pair; validation is not additional independent trials. Post-result student interpretation is pending."
+}

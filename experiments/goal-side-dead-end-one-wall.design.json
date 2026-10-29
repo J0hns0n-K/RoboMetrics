@@ -57,7 +57,7 @@
     "normalization": "Trailing backslash treated as an extra character; numeric expectation is 6. No other forecast inferred."
   },
   "attribution": "Student chose A from AI options, supplied the stored rationale, predicted 6 minimum moves and gave the quoted post-result interpretation. AI supplied the base layout/options, transcribed and operated/validated the comparison. No independent full-map design, student code authorship or prediction of examined nodes is inferred.",
-  "execution": "Wall-A comparison is complete and student post-result interpretation is recorded. The original raw files and inputs remain unchanged. A separate AI-proposed wall-B control is pending a new prediction.",
+  "execution": "Wall-A comparison and post-result interpretation are recorded. The separate AI-proposed B-only control was executed after its committed FIFO-unchanged expectation: FIFO changes 15 to 16 examined nodes and closer-goal 15 to 12, both retaining ten moves. No student selection of B is inferred.",
   "studentChoiceAndReasonVerbatim": "A를 없애는게 더 좋네. 왜냐하면 최단이동루트에는 A가 있고 B는 없어.",
   "selectedRows": [
     "S.....G",
@@ -69,5 +69,9 @@
     "data/structured/goal-side-dead-end-open-A-run-01.json",
     "data/structured/goal-side-dead-end-open-A-comparison-01.json"
   ],
-  "studentPostResultInterpretationVerbatim": "최소이동루트에 있는 장애물이 있었기 때문에 변화가 생길 수 밖에 없지"
+  "studentPostResultInterpretationVerbatim": "최소이동루트에 있는 장애물이 있었기 때문에 변화가 생길 수 밖에 없지",
+  "followUpBArtifacts": [
+    "data/structured/goal-side-dead-end-open-B-run-01.json",
+    "data/structured/goal-side-dead-end-open-B-comparison-01.json"
+  ]
 }
