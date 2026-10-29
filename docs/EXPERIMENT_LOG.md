@@ -502,6 +502,13 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Zero new expansions excludes map copying and path validation, not zero total cost. No elapsed-time/energy/hardware or automatic sensing/incremental search/browser integration. AI authored default KEEP_ROUTE policy, code, tests, operation and initial analysis.
 - Next AI-proposed engineering choice: keep a still-valid path versus spend new search work when a shorter route appears. `experiments/valid-route-optimization-choice.design.json` preserves pending student preference; this is not another isolation-explanation request.
 
+## 2026-10-29 — Student selects reoptimization as default
+
+- Exact response **2** to retaining a valid route versus seeking a shorter one. `data/learning/valid-route-optimization-choice-01.json` records objective/default only; no reason, forecast, code or operation inferred. Prior draft remains immutable.
+- AI changes resolveRouteUpdate default to reoptimize on each explicit invocation (except already at goal), retains explicit keep-valid. A bounded fresh search can find a shorter path or confirm equal optimum. AI fallback preserves a verified route if optimization exhausts its budget, exposing optimizationStatus and original failed planningResult separately. Invalid-route budget failure still returns no usable route. No automatic retries.
+- Four new controls plus adjusted explicit legacy cases: full suite 47 passes, zero failures; `data/route-update-policy/reoptimization-tests-01.tap`. Tests cover shorter path, equal optimum, valid fallback/raw failure, current suffix/tie rules and invalid modes. Historical integration driver explicitly selects keep-valid for old configs.
+- New `experiments/route-reoptimization-controls.config.json` specifies five AI-known controls on two small snapshots, with student outcome prediction null. Source/input commit precedes configured comparison and historical compatibility rerun.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "recordType": "guided engineering policy choice; not experiment output",
+  "recordedBy": "AI assistant from user chat",
+  "contextRevision": "3d02e8cf9d904f53bb63d65f88a389301d7bbb7e",
+  "priorDraft": "experiments/valid-route-optimization-choice.design.json",
+  "question": "기존 경로로 갈 수 있지만 더 짧은 길이 생겼다면 어느 쪽을 프로젝트의 기본 동작으로 하고 싶어?",
+  "options": {
+    "1": "기존 경로를 유지하며 계산을 아낀다.",
+    "2": "추가로 계산해서 더 짧은 길을 찾는다."
+  },
+  "studentResponseVerbatim": "2",
+  "selectedOption": 2,
+  "studentReasonVerbatim": null,
+  "studentOutcomePrediction": null,
+  "appliedDefault": "reoptimize",
+  "appliedScope": "Default of resolveRouteUpdate on an explicitly supplied latest map/current path index, not a browser control, automatic sensor trigger or physical actuation.",
+  "implementationBy": "AI assistant",
+  "operationalizationByAI": "Run one fresh budgeted A* even if the remaining route is valid, except already at goal. Retain explicit keep-valid as a comparison mode.",
+  "fallbackProposedByAI": "If optimization exhausts its budget while the prior remaining path is verified valid, preserve that usable path and expose optimizationStatus=BUDGET_EXCEEDED plus the original failed planningResult. This fallback was not specified by the student.",
+  "attributionLimits": "Student chose the objective/default only, with no rationale, numerical forecast, API/code/test authorship or independent execution. No claim of universal improvement."
+}

@@ -43,7 +43,9 @@ async function main() {
   const cases = [];
   const evaluate = (id, rows, priorPath, currentPathIndex, budget, expected, archivedResult = null) => {
     const map = parseScenario({...base.scenario, rows, budgets: [budget]});
-    const output = resolveRouteUpdate(map, priorPath, {currentPathIndex, maxExpansions: budget, tieBreak: config.tieBreak});
+    // Historical configs predate optimization modes; preserve their original keep-valid policy.
+    const output = resolveRouteUpdate(map, priorPath, {currentPathIndex, maxExpansions: budget,
+      tieBreak: config.tieBreak, optimization: config.optimization ?? 'keep-valid'});
     assert.equal(output.status, expected);
     if (output.path.length) assert.ok(verifyPath(map, output.path));
     if (archivedResult && output.planningResult) assert.deepEqual(output.planningResult, archivedResult);

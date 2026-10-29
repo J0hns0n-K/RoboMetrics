@@ -9,7 +9,7 @@ const changedMap = extra => makeMap(5, 2, [[3, 0], ...extra], [2, 0], [4, 0]);
 
 test('a blocked already-traveled prefix does not invalidate a valid remaining route', () => {
   const prior = [...straight.slice(0, 2), ...detour], saved = structuredClone(prior);
-  const result = resolveRouteUpdate(changedMap([[0, 0]]), prior, {currentPathIndex: 2, maxExpansions: 30});
+  const result = resolveRouteUpdate(changedMap([[0, 0]]), prior, {currentPathIndex: 2, maxExpansions: 30, optimization: 'keep-valid'});
   assert.equal(result.status, 'KEEP_ROUTE'); assert.equal(result.plannerCalls, 0);
   assert.equal(result.expanded, 0); assert.equal(result.planningResult, null);
   assert.deepEqual(result.path, detour); assert.deepEqual(prior, saved);
@@ -50,6 +50,7 @@ test('invalid budgets, tie rules, current indices and waypoints are rejected', (
     assert.throws(() => resolveRouteUpdate(changedMap([]), detour, {maxExpansions}));
   }
   assert.throws(() => resolveRouteUpdate(changedMap([]), detour, {maxExpansions: 30, tieBreak: 'unknown'}));
+  assert.throws(() => resolveRouteUpdate(changedMap([]), detour, {maxExpansions: 30, optimization: 'unknown'}));
   assert.throws(() => resolveRouteUpdate(changedMap([]), detour, {maxExpansions: 30, currentPathIndex: 1}));
   for (const path of [[], [[99, 0]], [[2.5, 0]], [[2, 0, 1]], [[2, 0], null]]) {
     assert.throws(() => resolveRouteUpdate(changedMap([]), path, {maxExpansions: 30}));
@@ -59,10 +60,54 @@ test('invalid budgets, tie rules, current indices and waypoints are rejected', (
 test('keeping a valid route does not promise shortestness; already at goal needs no search', () => {
   const map = makeMap(3, 2, [], [0, 0], [2, 0]);
   const longer = [[0, 0], [0, 1], [1, 1], [2, 1], [2, 0]];
-  const kept = resolveRouteUpdate(map, longer, {maxExpansions: 30});
+  const kept = resolveRouteUpdate(map, longer, {maxExpansions: 30, optimization: 'keep-valid'});
   assert.equal(kept.status, 'KEEP_ROUTE'); assert.equal(kept.pathLength, 4);
   assert.equal(kept.plannerCalls, 0); // A two-move direct route exists; this policy does not reoptimize.
   const atGoal = makeMap(2, 2, [[0, 0]], [1, 1], [1, 1]);
   const result = resolveRouteUpdate(atGoal, [[0, 0], [1, 0], [1, 1]], {currentPathIndex: 2, maxExpansions: 1});
   assert.equal(result.status, 'KEEP_ROUTE'); assert.equal(result.pathLength, 0); assert.equal(result.expanded, 0);
+  assert.equal(result.optimizationStatus, 'OPTIMAL');
+});
+
+test('student-selected default reoptimizes a valid four-move route to a two-move route', () => {
+  const map = makeMap(3, 2, [], [0, 0], [2, 0]);
+  const prior = [[0, 0], [0, 1], [1, 1], [2, 1], [2, 0]];
+  const result = resolveRouteUpdate(map, prior, {maxExpansions: 30});
+  assert.equal(result.optimization, 'reoptimize'); assert.equal(result.status, 'NEW_ROUTE_FOUND');
+  assert.equal(result.decisionReason, 'SHORTER_ROUTE_FOUND'); assert.equal(result.optimizationStatus, 'OPTIMAL');
+  assert.equal(result.priorRemainingPathValid, true); assert.equal(result.priorValidPathLength, 4);
+  assert.equal(result.pathLength, 2); assert.equal(result.plannerCalls, 1); assert.equal(result.expanded, 3);
+  assert.ok(verifyPath(map, result.path));
+});
+
+test('reoptimization can confirm an already shortest route while explicit retention skips search', () => {
+  const map = changedMap([]);
+  const result = resolveRouteUpdate(map, detour, {maxExpansions: 30});
+  assert.equal(result.status, 'KEEP_ROUTE'); assert.equal(result.decisionReason, 'OPTIMALITY_CONFIRMED');
+  assert.equal(result.optimizationStatus, 'OPTIMAL'); assert.equal(result.pathLength, 4);
+  assert.equal(result.plannerCalls, 1); assert.equal(result.expanded, 6);
+  const kept = resolveRouteUpdate(map, detour, {maxExpansions: 30, optimization: 'keep-valid'});
+  assert.equal(kept.plannerCalls, 0); assert.equal(kept.optimizationStatus, 'NOT_REQUESTED');
+});
+
+test('budget-limited optimization preserves a verified route and the separate failed search', () => {
+  const map = makeMap(3, 2, [], [0, 0], [2, 0]);
+  const prior = [[0, 0], [0, 1], [1, 1], [2, 1], [2, 0]];
+  const result = resolveRouteUpdate(map, prior, {maxExpansions: 1});
+  assert.equal(result.status, 'KEEP_ROUTE'); assert.equal(result.decisionReason, 'OPTIMIZATION_BUDGET_EXCEEDED');
+  assert.equal(result.optimizationStatus, 'BUDGET_EXCEEDED'); assert.equal(result.pathLength, 4);
+  assert.deepEqual(result.path, prior); assert.ok(verifyPath(map, result.path));
+  assert.equal(result.planningResult.success, false); assert.equal(result.planningResult.reason, 'BUDGET_EXCEEDED');
+  assert.deepEqual(result.planningResult.path, []); assert.equal(result.planningResult.pathLength, null);
+  assert.equal(result.plannerCalls, 1); assert.equal(result.expanded, 1);
+});
+
+test('reoptimization uses current suffix under both tie rules even if a past cell is blocked', () => {
+  const prior = [...straight.slice(0, 2), ...detour], map = changedMap([[0, 0]]);
+  for (const tieBreak of ['fifo', 'closer-goal']) {
+    const result = resolveRouteUpdate(map, prior, {currentPathIndex: 2, maxExpansions: 30, tieBreak});
+    assert.equal(result.priorRemainingPathValid, true); assert.equal(result.pathLength, 4);
+    assert.equal(result.plannerCalls, 1); assert.deepEqual(result.path[0], [2, 0]);
+    assert.ok(verifyPath(map, result.path));
+  }
 });

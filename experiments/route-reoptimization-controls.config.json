@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "route-reoptimization-known-controls-01",
+  "dateSeoul": "2026-10-29",
+  "status": "ready",
+  "studentChoiceRecord": "data/learning/valid-route-optimization-choice-01.json",
+  "studentOutcomePrediction": null,
+  "defaultOptimization": "reoptimize",
+  "tieBreak": "fifo",
+  "priorPath": [[0, 0], [0, 1], [1, 1], [2, 1], [2, 0]],
+  "maps": [
+    {"id": "wall-removed", "oldRows": ["S#G", "..."], "rows": ["S.G", "..."], "changes": [{"coordinate": [1, 0], "from": 1, "to": 0}]},
+    {"id": "unchanged", "oldRows": ["S#G", "..."], "rows": ["S#G", "..."], "changes": []}
+  ],
+  "cases": [
+    {"id": "removed-keep", "map": "wall-removed", "optimization": "keep-valid", "budget": 30, "expectedDecisionByAI": "VALID_ROUTE_RETAINED"},
+    {"id": "removed-default", "map": "wall-removed", "optimization": "default", "budget": 30, "expectedDecisionByAI": "SHORTER_ROUTE_FOUND"},
+    {"id": "unchanged-keep", "map": "unchanged", "optimization": "keep-valid", "budget": 30, "expectedDecisionByAI": "VALID_ROUTE_RETAINED"},
+    {"id": "unchanged-default", "map": "unchanged", "optimization": "default", "budget": 30, "expectedDecisionByAI": "OPTIMALITY_CONFIRMED"},
+    {"id": "removed-budget1", "map": "wall-removed", "optimization": "default", "budget": 1, "expectedDecisionByAI": "OPTIMIZATION_BUDGET_EXCEEDED"}
+  ],
+  "attribution": "Student chose option 2 (reoptimize) only. AI supplies these known reference fixtures, explicit retention controls, budgets, fallback semantics, code, expected decisions, execution and validation. No new student outcome prediction.",
+  "scope": "Two small related static snapshots and five policy controls, not independent research maps. Latest-map supply is explicit, not automatic sensing or physical motion."
+}
