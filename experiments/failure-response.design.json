@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student chooses timeout response when a verified route exists: finish the call with it or design separately bounded further optimization. Budget100 results complete; no extra budget/retry selected.",
+  "nextTask": "Commit bounded continuation source/protocol and replay retain/resume/restart on the same known dense inputs; preserve stopped100 cost, all failed stages and repeated restart work.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -149,5 +149,8 @@
     "data/route-update-policy/bound-skip-budget100-run-01.json",
     "data/route-update-policy/bound-skip-budget100-validation-01.json"
   ],
-  "optimizationTimeoutResponseDraft": "experiments/optimization-timeout-response.design.json"
+  "optimizationTimeoutResponseDraft": "experiments/optimization-timeout-response.design.json",
+  "optimizationTimeoutChoiceRecord": "data/learning/optimization-timeout-choice-01.json",
+  "continuationProtocol": "experiments/route-continuation-100-150-01.protocol.json",
+  "budget100ComparisonErratum": "data/route-update-policy/budget100-comparison-erratum-01.json"
 }

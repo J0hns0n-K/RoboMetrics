@@ -1,14 +1,20 @@
 // AI-authored reference policy for an explicitly supplied latest static map.
 // No sensor, motion command, incremental search-state repair or physical safety guarantee.
 import {makeMap, plan, verifyPath} from './core.mjs';
+import {createAStarSession} from './resumable-astar.mjs';
 
 export function resolveRouteUpdate(map, priorPath, {
-  currentPathIndex = 0, maxExpansions, tieBreak = 'fifo', optimization = 'reoptimize', skipProvenOptimal = true
+  currentPathIndex = 0, maxExpansions, tieBreak = 'fifo', optimization = 'reoptimize', skipProvenOptimal = true,
+  timeoutResponse = 'continue', additionalExpansions = 50, continuationStrategy = 'resume'
 } = {}) {
   if (!Number.isSafeInteger(maxExpansions) || maxExpansions < 1) throw new Error('Supply a finite positive safe integer search budget.');
   if (!['fifo', 'closer-goal'].includes(tieBreak)) throw new Error('Unknown tie-breaking rule.');
   if (!['keep-valid', 'reoptimize'].includes(optimization)) throw new Error('Unknown optimization policy.');
   if (typeof skipProvenOptimal !== 'boolean') throw new Error('skipProvenOptimal must be boolean.');
+  if (!['retain', 'continue'].includes(timeoutResponse)) throw new Error('Unknown timeout response.');
+  if (!['resume', 'restart'].includes(continuationStrategy)) throw new Error('Unknown continuation strategy.');
+  if (!Number.isSafeInteger(additionalExpansions) || additionalExpansions < 1
+    || (timeoutResponse === 'continue' && !Number.isSafeInteger(maxExpansions + additionalExpansions))) throw new Error('Invalid additional budget.');
   if (!Array.isArray(priorPath) || !priorPath.length || !Number.isSafeInteger(currentPathIndex)
     || currentPathIndex < 0 || currentPathIndex >= priorPath.length) throw new Error('Invalid prior path/index.');
   if (!Array.isArray(map.cells) && !ArrayBuffer.isView(map.cells)) throw new Error('Invalid cells.');
@@ -23,13 +29,20 @@ export function resolveRouteUpdate(map, priorPath, {
   const remaining = priorPath.slice(currentPathIndex).map(p => [...p]);
   const priorValid = verifyPath(snapshot, remaining);
   const lowerBound = Math.abs(snapshot.start[0] - snapshot.goal[0]) + Math.abs(snapshot.start[1] - snapshot.goal[1]);
+  const stages = [];
+  let searchSessions = 0, corePlanCalls = 0, resumeAdvanceCalls = 0;
+  const copyResult = result => ({...result, path: result.path.map(p => [...p])});
   const response = (status, path, decisionReason, optimizationStatus, result = null) => ({
     status, optimization, skipProvenOptimal, lowerBound, decisionReason, optimizationStatus,
+    timeoutResponse, additionalExpansions, continuationStrategy, continued: stages.length > 1,
+    continuationTarget: timeoutResponse === 'continue' ? maxExpansions + additionalExpansions : null,
+    maximumContinuationSteps: 1, searchSessions, corePlanCalls, resumeAdvanceCalls,
+    searchStages: stages.map(stage => ({...stage, result: copyResult(stage.result)})),
     optimalityEvidence: optimizationStatus === 'OPTIMAL' ? (result?.success ? 'ASTAR_COMPLETED' : 'MANHATTAN_BOUND') : null,
     priorRemainingPathValid: priorValid, priorValidPathLength: priorValid ? remaining.length - 1 : null,
     path: path.map(p => [...p]), pathLength: path.length ? path.length - 1 : null,
-    expanded: result?.expanded ?? 0, plannerCalls: result ? 1 : 0,
-    planningResult: result ? {...result, path: result.path.map(p => [...p])} : null
+    expanded: stages.reduce((sum, stage) => sum + stage.expandedThisStage, 0), plannerCalls: searchSessions,
+    planningResult: result ? copyResult(result) : null
   });
   if (priorValid && remaining.length === 1) {
     return response('KEEP_ROUTE', remaining, 'ALREADY_AT_GOAL', 'OPTIMAL');
@@ -41,7 +54,29 @@ export function resolveRouteUpdate(map, priorPath, {
   if (priorValid && skipProvenOptimal && remaining.length - 1 === lowerBound) {
     return response('KEEP_ROUTE', remaining, 'LOWER_BOUND_OPTIMAL', 'OPTIMAL');
   }
-  const result = plan(snapshot, 'astar', maxExpansions, {tieBreak});
+  // Continuation is authorized only for a verified fallback. Invalid-route failures remain one-shot.
+  const useSession = priorValid && timeoutResponse === 'continue' && continuationStrategy === 'resume';
+  const session = useSession ? createAStarSession(snapshot, {tieBreak}) : null;
+  const runStage = (budget, phase) => {
+    if (session) {
+      if (stages.length === 0) searchSessions++;
+      const step = session.advanceTo(budget); resumeAdvanceCalls++;
+      stages.push({phase, engine: 'resumable-astar', budgetType: 'cumulative target', budget,
+        searchSession: searchSessions, expandedThisStage: step.expandedThisCall,
+        searchCumulativeExpanded: step.cumulativeExpanded, result: step.result});
+      return step.result;
+    }
+    searchSessions++; corePlanCalls++;
+    const result = plan(snapshot, 'astar', budget, {tieBreak});
+    stages.push({phase, engine: 'one-shot-astar', budgetType: 'fresh-search limit', budget,
+      searchSession: searchSessions, expandedThisStage: result.expanded,
+      searchCumulativeExpanded: result.expanded, result});
+    return result;
+  };
+  let result = runStage(maxExpansions, 'initial');
+  if (priorValid && timeoutResponse === 'continue' && result.reason === 'BUDGET_EXCEEDED') {
+    result = runStage(maxExpansions + additionalExpansions, continuationStrategy === 'resume' ? 'resume' : 'restart');
+  }
   if (result.success && !verifyPath(snapshot, result.path)) throw new Error('Planner returned an invalid route.');
   if (result.success) {
     if (!priorValid) return response('NEW_ROUTE_FOUND', result.path, 'REPLACEMENT_FOUND', 'OPTIMAL', result);

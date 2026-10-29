@@ -94,7 +94,7 @@ test('reoptimization can confirm an already shortest route while explicit retent
 test('budget-limited optimization preserves a verified route and the separate failed search', () => {
   const map = makeMap(3, 2, [], [0, 0], [2, 0]);
   const prior = [[0, 0], [0, 1], [1, 1], [2, 1], [2, 0]];
-  const result = resolveRouteUpdate(map, prior, {maxExpansions: 1});
+  const result = resolveRouteUpdate(map, prior, {maxExpansions: 1, timeoutResponse: 'retain'});
   assert.equal(result.status, 'KEEP_ROUTE'); assert.equal(result.decisionReason, 'OPTIMIZATION_BUDGET_EXCEEDED');
   assert.equal(result.optimizationStatus, 'BUDGET_EXCEEDED'); assert.equal(result.pathLength, 4);
   assert.deepEqual(result.path, prior); assert.ok(verifyPath(map, result.path));

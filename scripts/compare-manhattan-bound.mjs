@@ -76,7 +76,8 @@ async function main() {
     });
     const map = makeMap(width, height, blocked, row.start, row.goal), prior = row.priorAcquisition.result.path;
     assert.ok(verifyPath(map, prior));
-    const options = {maxExpansions: protocol.maxExpansions, tieBreak: protocol.tieBreak, optimization: 'reoptimize'};
+    const options = {maxExpansions: protocol.maxExpansions, tieBreak: protocol.tieBreak, optimization: 'reoptimize',
+      timeoutResponse: protocol.timeoutResponse ?? 'retain'};
     const baseline = resolveRouteUpdate(map, prior, {...options, skipProvenOptimal: false});
     const revised = resolveRouteUpdate(map, prior, options);
     assert.equal(revised.skipProvenOptimal, true);

@@ -56,7 +56,7 @@ async function main() {
   const cases = config.cases.map(control => {
     const entry = maps.get(control.map); assert.ok(entry);
     assert.ok(['keep-valid', 'default'].includes(control.optimization));
-    const options = {maxExpansions: control.budget, tieBreak: config.tieBreak};
+    const options = {maxExpansions: control.budget, tieBreak: config.tieBreak, timeoutResponse: config.timeoutResponse ?? 'retain'};
     if (control.optimization !== 'default') options.optimization = control.optimization;
     const output = resolveRouteUpdate(entry.map, config.priorPath, options);
     assert.equal(output.decisionReason, control.expectedDecisionByAI);

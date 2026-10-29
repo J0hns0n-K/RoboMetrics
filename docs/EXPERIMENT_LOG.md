@@ -596,6 +596,13 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - New comparison work60 evaluations/39 planner calls/3,379 expansions, no new cohort/prior/BFS in driver. Validation adds30 BFS checks/zero planner calls. Full suite57 passes before run, exact source/TAP, reference fit/truncation, proof/failure/cost/denominator and immutable-output checks; no post-run suite repeat.
 - Next `experiments/optimization-timeout-response.design.json`: student chooses ending this call with the verified route or separately bounded further optimization. Current fallback is AI-proposed; no added budget/retry or motion command executed by this draft.
 
+## 2026-10-29 — Further optimization selected and bounded continuation implemented
+
+- Student exact **2** in `data/learning/optimization-timeout-choice-01.json`: continue optimization with valid fallback. AI operationalizes initial100 plus50 to cumulative150, one continuation only, same fixed snapshot; default resume, explicit retain/restart controls. No student numeric setting/code/forecast inferred.
+- AI API preserves every stage and charges resume deltas versus full fresh restart costs. Search-session counts are distinct from stage/core-plan/resume-advance calls. Only valid cached-route budget failures continue; invalid-route failures, initial success/bound proof and a second failure stop. No movement/sensor behavior.
+- Six new controls, full suite63 passed/zero failed; `data/route-update-policy/continuation-tests-01.tap`. Old study drivers explicitly select retain to preserve frozen protocols; no original raw files overwritten. Same-known-cohort protocol `experiments/route-continuation-100-150-01.protocol.json` frozen before replay.
+- Metadata erratum `data/route-update-policy/budget100-comparison-erratum-01.json` preserves old validation while correcting duplicate after-key summary names to explicit completion/failure/expansion fields. Primary raw/main counts remain correct; no numerical rerun.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

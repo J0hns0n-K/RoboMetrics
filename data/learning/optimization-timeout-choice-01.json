@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "recordType": "guided timeout-response choice; not experiment output",
+  "recordedBy": "AI assistant from user chat",
+  "contextRevision": "299a12363a97becc76b53b3926c0471a3ae59597",
+  "priorDraft": "experiments/optimization-timeout-response.design.json",
+  "options": {
+    "1": "기존 길을 유지하고 이번 계산을 끝낸다.",
+    "2": "추가 예산을 정해 더 짧은 길을 계속 찾는다."
+  },
+  "studentResponseVerbatim": "2",
+  "selectedResponse": "continue",
+  "studentReasonVerbatim": null,
+  "studentOutcomePrediction": null,
+  "appliedByAI": {
+    "initialBudget": 100,
+    "additionalExpansions": 50,
+    "cumulativeContinuationTarget": 150,
+    "maximumContinuations": 1,
+    "strategy": "resume",
+    "control": "restart at final search limit150, charging repeated initial work"
+  },
+  "attributionLimits": "Student selected further optimization with a valid fallback only, not numeric +50, a resume implementation, exact savings or code/tests/operation. AI chooses the finite operationalization and controls; no unbounded retries or physical action."
+}

@@ -8,7 +8,7 @@ import {validatePolicyResult, summarizePolicyRows} from '../scripts/compare-manh
 test('budget fallback remains usable without claiming shortestness or a completed optimization', () => {
   const map = makeMap(3, 2, [], [0, 0], [2, 0]);
   const prior = [[0, 0], [0, 1], [1, 1], [2, 1], [2, 0]];
-  const output = resolveRouteUpdate(map, prior, {maxExpansions: 1, skipProvenOptimal: false});
+  const output = resolveRouteUpdate(map, prior, {maxExpansions: 1, skipProvenOptimal: false, timeoutResponse: 'retain'});
   validatePolicyResult(map, prior, 2, output);
   const summary = summarizePolicyRows([{priorPath: prior, archivedBfsDistance: 2, baseline: output}], 'baseline');
   assert.equal(summary.usableRoutes, 1); assert.equal(summary.completedSearches, 0);
@@ -20,7 +20,7 @@ test('budget fallback remains usable without claiming shortestness or a complete
 
 test('a bound proof and a budget-limited already-shortest fallback are not counted as successful searches', () => {
   const map = makeMap(3, 2, [], [0, 0], [2, 0]), prior = [[0, 0], [1, 0], [2, 0]];
-  const baseline = resolveRouteUpdate(map, prior, {maxExpansions: 1, skipProvenOptimal: false});
+  const baseline = resolveRouteUpdate(map, prior, {maxExpansions: 1, skipProvenOptimal: false, timeoutResponse: 'retain'});
   const revised = resolveRouteUpdate(map, prior, {maxExpansions: 1});
   validatePolicyResult(map, prior, 2, baseline); validatePolicyResult(map, prior, 2, revised);
   const rows = [{priorPath: prior, archivedBfsDistance: 2, baseline, revised}];

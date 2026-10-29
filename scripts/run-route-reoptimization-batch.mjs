@@ -44,7 +44,8 @@ export function evaluateRemoval(map, candidate, budget, tieBreak = 'fifo') {
   const results = {};
   for (const optimization of ['keep-valid', 'reoptimize']) {
     // Preserve the frozen original study: it predates the later lower-bound skip rule.
-    const output = resolveRouteUpdate(edited, prior.path, {maxExpansions: budget, tieBreak, optimization, skipProvenOptimal: false});
+    const output = resolveRouteUpdate(edited, prior.path, {maxExpansions: budget, tieBreak, optimization,
+      skipProvenOptimal: false, timeoutResponse: 'retain'});
     assert.ok(verifyPath(edited, output.path)); assert.equal(output.priorRemainingPathValid, true);
     assert.ok(output.pathLength <= prior.pathLength && output.pathLength >= editedDistance);
     if (optimization === 'keep-valid') { assert.equal(output.plannerCalls, 0); assert.deepEqual(output.path, prior.path); }

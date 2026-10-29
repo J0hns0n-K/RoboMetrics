@@ -10,7 +10,7 @@ test('default skips a valid route at the bound, while disabled guard still spend
   assert.equal(guarded.decisionReason, 'LOWER_BOUND_OPTIMAL'); assert.equal(guarded.lowerBound, 2);
   assert.equal(guarded.optimalityEvidence, 'MANHATTAN_BOUND'); assert.equal(guarded.optimizationStatus, 'OPTIMAL');
   assert.equal(guarded.plannerCalls, 0); assert.equal(guarded.expanded, 0); assert.equal(guarded.planningResult, null);
-  const baseline = resolveRouteUpdate(map, path, {maxExpansions: 1, skipProvenOptimal: false});
+  const baseline = resolveRouteUpdate(map, path, {maxExpansions: 1, skipProvenOptimal: false, timeoutResponse: 'retain'});
   assert.equal(baseline.optimizationStatus, 'BUDGET_EXCEEDED'); assert.equal(baseline.plannerCalls, 1);
   assert.deepEqual(guarded.path, baseline.path);
 });

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "recordedBy": "AI assistant",
+  "originalManifest": "data/route-update-policy/bound-skip-budget100-validation-01.json",
+  "originalSha256": "7cfc0ebdcc92fb70a892ca6d08df5197a20c00d062aefb6c0ee2e904e2bf9f60",
+  "affectedPath": "observations.comparedWithBudget300",
+  "originalStoredSection": {
+    "revisedSearchCompletionsBefore": 9,
+    "after": 798,
+    "revisedBudgetFailuresBefore": 0,
+    "revisedExaminedBefore": 844
+  },
+  "issue": "Duplicate JavaScript key after overwrote separate after values while building the historical summary. Primary raw results and main baseline/revised counts are correct. Preserve the original manifest.",
+  "correctedSection": {
+    "revisedSearchCompletionsBefore": 9,
+    "revisedSearchCompletionsAfter": 6,
+    "revisedBudgetFailuresBefore": 0,
+    "revisedBudgetFailuresAfter": 3,
+    "revisedExaminedBefore": 844,
+    "revisedExaminedAfter": 798
+  },
+  "evidence": [
+    "data/route-update-policy/bound-skip-budget100-run-01.json",
+    "data/route-update-policy/bound-skip-followup-dense-comparison-label-corrected-01.json"
+  ],
+  "numericalDataRerun": false,
+  "changedRawFiles": false,
+  "scope": "Metadata erratum with explicit distinct field names; not a new experiment or a change to reported outcomes."
+}
