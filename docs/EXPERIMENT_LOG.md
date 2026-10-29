@@ -547,6 +547,13 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Full suite 55 passes, including 2,048 small-grid paired checks; source/TAP match. Thin driver syntax/actual replay, old fields, maps/paths, proof source, counts and existing-output/byte guards checked; no full-suite rerun afterward. Original baseline/protocol/raw files preserved.
 - Same development cohort that motivated rule, not held-out or independent validation. Next AI draft `experiments/bound-skip-followup.design.json` freezes a new seed/cohort only after student picks high/low generation probability. Choice/data not yet supplied or generated.
 
+## 2026-10-29 — Denser follow-up frozen before generation
+
+- Student selected **1**, the denser option. Exact context in `data/learning/bound-skip-followup-density-01.json`; probability .28 was the AI-offered operationalization, no student performance forecast.
+- Ready acquisition and comparison protocols: `experiments/bound-skip-dense-followup-*-01.protocol.json`. Both frozen before any new generation. Base seed 20265027, 16×12, first 30 connected maps with walls, deterministic one-wall removal, same prior routes per pair/A* FIFO budget 300. Guard fixed from development study.
+- Existing tested scripts/module reused without code changes; no repeat 55-test suite. Acquire/commit immutable baseline first, then run both comparison arms against identical inputs and validate new distances/costs/paths/proof versus search counts.
+- This is a new condition-specific cohort; differing density AND seeds prevent a causal density attribution versus prior study. New seed range alone is not statistical-independence proof. Results pending.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

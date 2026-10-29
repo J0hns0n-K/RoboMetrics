@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "recordType": "guided follow-up condition choice; not experiment output",
+  "recordedBy": "AI assistant from user chat",
+  "contextRevision": "f7e01f0e9ca255770c4ec095e8f67df4201bf171",
+  "priorDraft": "experiments/bound-skip-followup.design.json",
+  "question": "새 지도 30장의 검증 조건 중 어느 쪽을 먼저 볼까?",
+  "options": {
+    "1": "벽이 많은 조건 — 사전 제안된 벽 생성 확률 .28",
+    "2": "벽이 적은 조건 — 사전 제안된 벽 생성 확률 .12"
+  },
+  "studentResponseVerbatim": "1",
+  "selectedOption": 1,
+  "appliedWallGenerationProbability": 0.28,
+  "studentReasonVerbatim": null,
+  "studentPerformancePrediction": null,
+  "attributionLimits": "Student selected the offered denser condition only. The numeric probability was AI-specified in the prior option. No outcome/savings hypothesis, independent method/code authorship or execution inferred. Protocol/data generation and analysis are AI support."
+}

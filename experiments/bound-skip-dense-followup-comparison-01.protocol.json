@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "bound-skip-dense-followup-comparison-01",
+  "dateSeoul": "2026-10-29",
+  "status": "ready",
+  "studentChoiceRecord": "data/learning/bound-skip-followup-density-01.json",
+  "baselineRaw": "data/route-update-policy/bound-skip-followup-dense-baseline-run-01.json",
+  "baselineValidation": "data/route-update-policy/bound-skip-followup-dense-validation-01.json",
+  "runs": 30,
+  "tieBreak": "fifo",
+  "maxExpansions": 300,
+  "baselineMode": "reoptimize, skipProvenOptimal=false",
+  "revisedMode": "Default reoptimize with skipProvenOptimal=true; validate remaining route before bound test.",
+  "controls": "Freeze comparison before any follow-up map generation. Reuse all 30 maps/prior routes acquired under the paired acquisition protocol, no reselection. Run forced and default-guarded policies anew, A* FIFO budget 300, compare baseline original fields to acquired archive.",
+  "measurements": "Returned path/length/validity, bound proofs versus A* completions, planner calls/expansions per arm, equality to archived BFS distances, budget failures and original-field compatibility. Count fresh rerun costs separately; zero planner work does not mean zero validation work.",
+  "studentOutcomePrediction": null,
+  "attribution": "Student selected the denser condition only, not an outcome prediction. Bound rule/code were fixed before generating this cohort. AI supplies protocol, execution/validation and initial analysis.",
+  "scope": "Previously unseen condition-specific follow-up under a frozen rule. Not reuse of the .19 development cohort; deterministic sampling still does not establish statistical independence or a causal density comparison. Fully known static four-neighbor unit-cost simulation only.",
+  "acquisitionProtocol": "experiments/bound-skip-dense-followup-acquisition-01.protocol.json"
+}

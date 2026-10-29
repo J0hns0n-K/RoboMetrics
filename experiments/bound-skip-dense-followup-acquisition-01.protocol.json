@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "bound-skip-dense-followup-acquisition-01",
+  "dateSeoul": "2026-10-29",
+  "status": "ready",
+  "parentDraft": "experiments/bound-skip-followup.design.json",
+  "studentPredictionVerbatim": null,
+  "studentDirectionalPrediction": null,
+  "studentPredictionScope": "Condition selection only, not an outcome forecast.",
+  "baseSeed": 20265027,
+  "width": 16,
+  "height": 12,
+  "density": 0.28,
+  "runs": 30,
+  "maxCandidateChecks": 4500,
+  "sampling": "Seeds base+1 onward. Check connectivity with separate text-grid BFS. Accept connected maps with at least one wall; preserve candidate seeds, distances, wall counts and rejection reasons.",
+  "wallRemoval": "Blocked cells sorted row-major; remove index candidateSeed modulo blockedCount. Exactly one wall removed per accepted map. Deterministic selection, not uniform wall sampling.",
+  "priorRoute": "Offline unlimited A* FIFO on each original connected map; verify its path and length against candidate BFS. Record acquisition calls/expansions separately from online policy work.",
+  "tieBreak": "fifo",
+  "maxExpansions": 300,
+  "policies": [
+    "keep-valid",
+    "reoptimize"
+  ],
+  "measurements": "Same acquired prior route and same edited map per pair. Report usable routes, returned lengths over all 30 paired maps, planner expansions, optimization completions/budget failures, theoretical improvements from edited-map BFS, realized improvements within budget, retained fallbacks and potential missed improvements. No timing/energy measurement.",
+  "controls": "Fixed endpoints (0,0) and (15,11), four-neighbor unit costs, only one wall changes to open, current position remains the original start for this batch. Not a progressed/moving robot.",
+  "attribution": "Student selected the offered denser condition (.28 preset by AI), with no performance forecast. AI supplies sampling/edit/protocol, code, execution, validation and initial analysis.",
+  "scope": "New 30-map condition was not generated when protocol/rule were frozen. Paired maps reused across policies, not independent per-policy maps. Seed change alone does not prove statistical independence. Density AND cohort differ from the .19 development study, so their contrast does not isolate a density effect.",
+  "studentChoiceRecord": "data/learning/bound-skip-followup-density-01.json",
+  "studentChoiceVerbatim": "1",
+  "stage": "Acquire prior routes and an unguarded baseline before the separately frozen guarded comparison. Historical batch driver explicitly disables the later bound guard."
+}
