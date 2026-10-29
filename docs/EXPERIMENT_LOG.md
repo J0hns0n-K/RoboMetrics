@@ -494,6 +494,14 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Six new AI regression controls; full suite 43 passed/zero failed. TAP `data/route-update-policy/route-update-policy-tests-01.tap` includes known wall fixtures, current-position alignment, budget/no-route distinction, invalid inputs, detached paths and valid-but-longer/at-goal behavior.
 - Config `experiments/route-update-policy-controls.config.json` declares seven known archive-based integration cases, not new student predictions or independent research maps. Source/input commit precedes configured execution; results pending.
 
+## 2026-10-29 — Reference policy integration controls completed
+
+- Source/config `fdd817c0d6077cdbf5a34ba9e1ae829823c80e7a` committed before AI execution. Raw/validation: `data/route-update-policy/known-controls-*.json`; protocol `docs/ROUTE_UPDATE_POLICY_KR.md`.
+- Seven known controls: KEEP_ROUTE twice (zero new planner calls/expansions), NEW_ROUTE_FOUND once (6), UNREACHABLE three times (5/6/7), BUDGET_EXCEEDED once (2). Five new A* FIFO calls/26 examined nodes; normal budget 30, small budget 2. Shared-planner reruns are charged; no new BFS calls. No independent new maps or student forecasts.
+- Full suite 43 passes before source commit; exact tested module/dependency/TAP bytes match commit. New thin integration driver checked by syntax, actual committed run, output immutability, cost arithmetic and raw/archive comparisons, not retroactively treated as covered by prior test source or a repeated full suite.
+- Zero new expansions excludes map copying and path validation, not zero total cost. No elapsed-time/energy/hardware or automatic sensing/incremental search/browser integration. AI authored default KEEP_ROUTE policy, code, tests, operation and initial analysis.
+- Next AI-proposed engineering choice: keep a still-valid path versus spend new search work when a shorter route appears. `experiments/valid-route-optimization-choice.design.json` preserves pending student preference; this is not another isolation-explanation request.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
