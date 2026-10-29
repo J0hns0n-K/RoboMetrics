@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dateSeoul": "2026-10-29",
-  "status": "objective-selected-ready-development-replay",
+  "status": "completed-development-replay",
   "proposalAuthor": "AI assistant",
   "parentRaw": "data/footprint/resolution-policy-unfiltered-run-01.json",
   "parentValidation": "data/footprint/resolution-policy-unfiltered-validation-01.json",
@@ -25,8 +25,11 @@
   "studentRationale": null,
   "readyProtocol": "experiments/resolution-quality-replay-01.protocol.json",
   "implementation": "AI separate src/resolution-quality-policy.mjs; axis-bound skip, at most one fine optimization and valid fallback; baseline API unchanged.",
-  "results": null,
+  "results": {
+    "raw": "data/footprint/resolution-quality-replay-run-01.json",
+    "validation": "data/footprint/resolution-quality-replay-validation-01.json"
+  },
   "futureRequirements": "Define world-length lower-bound skip, exact triggers, stage/total budgets, preserved raw failures and fallback behavior before coding or replay. Keep historical cohort immutable and label any replay development-cohort reuse. Scope optimality to the selected graph, not continuous motion.",
-  "scope": "Student selects offered objective only, no reason/count or independent implementation. AI rules/tests and development-cohort replay prepared; configured results pending, no new maps.",
+  "scope": "Student objective only; AI policy/test/development replay completed, original baseline preserved. No new maps or independent generalization evidence.",
   "studentChoiceRecord": "data/learning/resolution-path-quality-choice-01.json"
 }

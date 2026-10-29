@@ -684,6 +684,14 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Full90tests pass including4new method checks without target seeds; original planner/body/policy unchanged. Configured30maps/60policy/67geometry/27planner/561nodes/20BFS/8520point audits. Validation reconstructs30maps with BigInt,8520points/20BFS/214segments/zero extra planner, independent counts/denominators/source/TAP/output preservation. Tests/reconstructions not new samples.
 - No real workload/independence/universal quality/runtime-energy-storage/physical claim. Next experiments/resolution-path-quality-choice.design.json selects an objective using first observed longer-case trial12 (AI post-result selection, not new evidence). No student choice/revision/replay yet.
 
+## 2026-10-29 — Selected path-shortening objective, development replay and fallback control
+
+- Student **2** selects offered additional-shortening objective, no rationale/count/code; choice data/learning/resolution-path-quality-choice-01.json. AI defines axis-Manhattan skip/fine check/budgets/valid fallback and implements separate src/resolution-quality-policy.mjs; old core/body/coarse API/browser unchanged.
+- Ready protocol/source/choice3aad7756ad163cea25122f2db39b72b9ea26e0f9 precedes replay. experiments/resolution-quality-replay-01.protocol.json; raw/validation data/footprint/resolution-quality-replay-*.json; method docs/RESOLUTION_QUALITY_REPLAY_KR.md. Exact prior30 maps, no generation/filtering/new cohort. Archived comparator arms reused, not rerun. Cases12/23 repair8→7; successes7/30andfailures3/20unchanged; main nodes280→332/calls17→19/model37→39, length sum60→58over7 matches archived fine (281nodes/10calls). Optimizations2completed/2improved, lowerbound skip1/fine acquisition4/unusable23.
+- Separate known trial12/fineBudget1 control outside primary30 returns coarse8 with top ROUTE_FOUND/optimizationBUDGET_EXCEEDED/raw[]/null/total13; returned spacing1 versus last attempted0.5, no fine-optimality claim. Full97tests pass including7new policy regressions.
+- All fresh execution31policy/21planner/345nodes/41model stages/new maps0/new BFS0. Validation20BFS/134stage+118returned segments/zero planner plus acquisition/reference/source/TAP/denominator/cap/output checks. Development-cohort reuse after observed losses, not independent/general/efficiency or physical evidence. Caps200quality/coarse versus100fine explicit.
+- Next experiments/resolution-quality-assessment.design.json asks guided cost-quality judgment on these known inputs; no student answer or new prospective validation yet.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

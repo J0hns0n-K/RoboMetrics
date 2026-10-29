@@ -52,4 +52,4 @@
 
 [앞선 가상 빈도 계산](../data/footprint/resolution-policy-mix-validation-01.json)은 알려진 두 지도만 재가중했다. 이번 새 조건의 평균이나 실제 사용 빈도를 예측하는 근거로 바꾸지 않는다. 이번에도 합성9×7/.15라는 한 조건이며 현실 분포·일반 정책 우위·물리 로봇·센서·제어·운동학·안전성은 검증하지 않았다.
 
-다음 [경로 품질 목표 선택](../experiments/resolution-path-quality-choice.design.json)은 첫 도착 경로를 바로 사용할지, 더 짧을 수 있는 경로도 추가 확인할지 묻는다. trial12는 결과를 본 뒤 AI가 고른 첫 길이 차이 사례로, 새로운 독립 검증이 아니다. 아직 학생 선택이나 정책 변경·후속 실행은 없다. 원래 실패 포함30장과 프로토콜은 보존한다.
+다음 [경로 품질 목표 선택](../experiments/resolution-path-quality-choice.design.json)은 첫 도착 경로를 바로 사용할지, 더 짧을 수 있는 경로도 추가 확인할지 묻는다. trial12는 결과를 본 뒤 AI가 고른 첫 길이 차이 사례로, 새로운 독립 검증이 아니다. 이후 학생은 [2번·추가 확인 목표](../data/learning/resolution-path-quality-choice-01.json)를 골랐고, [같은 개발30장 재실행](RESOLUTION_QUALITY_REPLAY_KR.md)은 두 경로를8→7로 줄이면서 총검토280→332를 기록했다. 원래 실패 포함30장과 프로토콜은 보존했으며 새 지도 검증으로 세지 않는다.

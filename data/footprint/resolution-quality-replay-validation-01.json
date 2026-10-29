@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "validatedBy": "AI assistant CLI",
+  "validatedAtUTC": "2026-10-29T11:23:17.306Z",
+  "sourceCommit": "3aad7756ad163cea25122f2db39b72b9ea26e0f9",
+  "protocol": "experiments/resolution-quality-replay-01.protocol.json",
+  "studentChoiceRecord": "data/learning/resolution-path-quality-choice-01.json",
+  "raw": {
+    "path": "data/footprint/resolution-quality-replay-run-01.json",
+    "sha256": "7f38d3d2d86d5a338c9dba3fc5ffeab4e74360ebc47c9fa4bd931b209c50c4a3"
+  },
+  "sourceHashesGitBlobs": {
+    "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "src/disk-footprint.mjs": "d65440878eea0718b28c61357948e3e56e48227213a5ea2c732961cd156853e8",
+    "src/resolution-policy.mjs": "dc071ca5af42d67d5de1143c0166526ec1affe85f8cf064594aa2e190c139293",
+    "src/resolution-quality-policy.mjs": "0f3b0627c830db00d07e55f09261ee1056ace7700e820dcab693b2b3d125baff",
+    "scripts/resolution-cohort.mjs": "3cec4d3fb5d48d2287794af191945987cb12bbf2729dbd5007631c59a8c675e1",
+    "scripts/replay-resolution-quality.mjs": "56550f2867d1efc1acdf564cc673422e770b96145cb7503a81828251bfbf74c8",
+    "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+    "scripts/check-current-position-detour.mjs": "9bb2fad0a772d3fa41c37c8c21b068d44d7e946eb62524c9e50c41a183a9e12e",
+    "scripts/check-two-cell-doorway.mjs": "45765ff5e47d578a34b6df04d12555388ed04bb53387722be4a949c1d5755cad",
+    "test/resolution-quality.test.mjs": "55d9ec378fab86b168dc29d9b84de70605dc95edec120fabaf108cbc81a65d7a",
+    "data/footprint/resolution-quality-tests-01.tap": "b7c12421600b8e13e8673bc7743050b9608e6f2adde2e4f6d10f80fa26b11347",
+    "experiments/resolution-quality-replay-01.protocol.json": "55a6c5321f8f1d1c8c1e0aeebdcb4073fe6945425a76c2dde347131b24531860",
+    "data/footprint/resolution-policy-unfiltered-run-01.json": "e15718dc1f9cb86a01548ce3d7d3dba38536b9a97e64ea88f65395ddbff4b104",
+    "data/footprint/resolution-policy-unfiltered-validation-01.json": "108cd44b6e9cb61b9f70d61617e4f466300d2757e3f99e1843f9411182a4816c",
+    "experiments/disk-model-clearance015-01.config.json": "05eb114289bcc542081674dd9aa70a5cc9a362513d57d8e7b8e94f74dc8bf658",
+    "data/learning/resolution-path-quality-choice-01.json": "cbf791b21095d1c48c9db293e29617f508f5ce8ebd35972d842ec6ee2f660a4c"
+  },
+  "tests": {
+    "path": "data/footprint/resolution-quality-tests-01.tap",
+    "sha256": "b7c12421600b8e13e8673bc7743050b9608e6f2adde2e4f6d10f80fa26b11347",
+    "passed": 97,
+    "failed": 0,
+    "newControls": 7,
+    "fullSuiteExecuted": true
+  },
+  "checks": {
+    "sourceAndRulesFrozenBeforeReplay": true,
+    "studentObjectiveSeparateFromAiRulesAndNumbers": true,
+    "exactArchived30InputsNoGenerationOrFiltering": true,
+    "baselineAcquisitionOutcomesUnchanged": true,
+    "fullBudgetFineOptimizationMatchesArchivedFineResults": true,
+    "axisBoundSkipAndFineEvidenceScopedToGraph": true,
+    "allReturnedAndStageWorldSegmentsValid": true,
+    "allActualStageCostsSummed": true,
+    "fallbackSuccessSeparateFromFailedOptimization": true,
+    "returnedSpacingSeparateFromLastAttemptSpacing": true,
+    "sourceAndBaselineAndTestHashesBound": true,
+    "existingOutputRejectedBeforeWorkAndBytesPreserved": true
+  },
+  "observations": {
+    "developmentMapsReplayed": 30,
+    "newMaps": 0,
+    "primaryStatusCounts": {
+      "ROUTE_FOUND": 7,
+      "BUDGET_EXCEEDED": 0,
+      "UNREACHABLE": 3,
+      "INVALID_ENDPOINT_CLEARANCE": 20
+    },
+    "mainReplay": {
+      "plannerCalls": 19,
+      "examined": 332,
+      "geometryStages": 39,
+      "successfulMaps": 7,
+      "worldLengthSum": 58,
+      "meanWorldLength": 8.285714285714286,
+      "improvedTrialIds": [
+        12,
+        23
+      ],
+      "optimizationAttempts": 2,
+      "completedOptimizations": 2,
+      "axisBoundSkips": 1,
+      "fineAcquisitionSuccesses": 4
+    },
+    "archivedComparators": {
+      "raw": "data/footprint/resolution-policy-unfiltered-run-01.json",
+      "alwaysFine": {
+        "examined": 281,
+        "calls": 10,
+        "lengthSum": 58,
+        "successfulMaps": 7
+      },
+      "coarseFirst": {
+        "examined": 280,
+        "calls": 17,
+        "lengthSum": 60,
+        "successfulMaps": 7
+      }
+    },
+    "separateFallbackControl": {
+      "trial": 12,
+      "status": "ROUTE_FOUND",
+      "optimizationStatus": "BUDGET_EXCEEDED",
+      "returnedLength": 8,
+      "returnedSpacing": 1,
+      "lastAttemptSpacing": 0.5,
+      "examined": 13,
+      "calls": 2,
+      "cap": 101
+    },
+    "configuredPolicyEvaluations": 31,
+    "configuredPlannerCalls": 21,
+    "configuredExaminedNodes": 345,
+    "configuredGeometryStages": 41,
+    "configuredNewBfsCalls": 0,
+    "additionalValidationBfsCalls": 20,
+    "additionalValidationStageSweptSegments": 134,
+    "additionalValidationReturnedSweptSegments": 118,
+    "additionalValidationPlannerCalls": 0
+  },
+  "validationMethod": "Archived input/reference hashes; acquisition-prefix equality; fine-budget100 outcome equality;20 independent BFS checks; every returned and raw successful axis segment against original squares/boundary; independent status/length/cost/fallback/evidence summaries and no-overwrite guard. Archived comparator arms reused rather than rerun.",
+  "attribution": "Student selects objective2 only. AI formulates lower bound, rules, exact budgets/control, implementation, tests, operation and analysis.",
+  "limitations": [
+    "Development-cohort replay after its two longer paths motivated the rule, not held-out validation or independent new maps.",
+    "Main replay preserves7/30 successes and fixes two lengths8to7 at cost280to332 examined; archived always-fine uses281 for the same successful lengths. No overall efficiency advantage.",
+    "Quality-checked/coarse-first caps200 versus archived always-fine100; not a general equal-total-budget success comparison.",
+    "The separate fine-budget1 fallback control is outside primary30-map summary; valid returned route does not mean completed optimization or fine optimality.",
+    "Axis-Manhattan bound and completed searches establish selected graph results, not global continuous motion.20invalid endpoints remain in primary denominator.",
+    "Node counts omit construction/validation/reference/storage costs; no timing/energy, sensor/control or physical robot measurements."
+  ],
+  "unrelatedLocalChangePreserved": "practice/02-planning-budget.mjs"
+}
