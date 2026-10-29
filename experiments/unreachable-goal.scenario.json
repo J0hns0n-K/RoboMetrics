@@ -1,0 +1,27 @@
+{
+  "id": "unreachable-goal-failure-semantics-01",
+  "dateSeoul": "2026-10-29",
+  "status": "ready",
+  "contributionType": "ai-reference",
+  "contributor": "AI assistant — fixed demonstration for the student-formulated current question",
+  "assistance": "Student formulated the quoted current question after the earlier experiments. AI supplies the disconnected example, budget choices, expected API behavior and execution. This is not a student-designed map or a student pre-run outcome prediction.",
+  "studentQuestionVerbatim": "종착지까지 무슨 짓을 해도 갈 수 없을 때 결과값이 어떻게 나오는지 궁금해",
+  "studentOutcomePrediction": null,
+  "rows": [
+    "S..",
+    "..#",
+    ".#G"
+  ],
+  "budgets": [
+    2,
+    300
+  ],
+  "prediction": "AI reference expectation based on existing API semantics, not a student forecast: exhaustive search of this disconnected map returns UNREACHABLE with false success, empty path and null path length; budget 2 ends with BUDGET_EXCEEDED before exhausting the reachable component. Budget 300 is sufficient for all nine cells.",
+  "scope": "Fixed known obstacles; four-neighbor movement; walls cannot be crossed or changed during a run. The existing runner evaluates A* FIFO, Greedy and Dijkstra. Random 30-map benchmarks reject unreachable maps, so this is a separate fixed-case demonstration.",
+  "plannedChecks": [
+    "Goal is isolated by walls at (2,1) and (1,2) and map boundaries.",
+    "Independently flood-fill the start component without using the planner; compare exhaustive expanded counts and goal exclusion.",
+    "Check both failure reasons separately and preserve null pathLength versus a zero-length route.",
+    "Do not infer physical navigation impossibility or new student code authorship."
+  ]
+}

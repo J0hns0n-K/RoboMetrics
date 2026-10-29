@@ -278,6 +278,14 @@ Retain the original wording. This is a prompted post-result interpretation that 
 
 AI prepared `docs/ENGINEERING_SUMMARY_KR.md`, linking both random cohorts, the original/A/B controlled cases, registered expectations and actual outcomes, including the unchanged-FIFO expectation that was not observed. It distinguishes student quotes from AI implementation, execution and editing. Next task: the student's current research-question sentence for the synthesis; any new wording is retrospective framing, not an original preregistered hypothesis.
 
+## 2026-10-29 Student-formulated failure-output question
+
+In response to the open request for a current research question, Junmo wrote:
+
+> 종착지까지 무슨 짓을 해도 갈 수 없을 때 결과값이 어떻게 나오는지 궁금해
+
+Record this as a new question after earlier experiments, not a backdated hypothesis or a supplied outcome forecast. AI prepared `experiments/unreachable-goal.scenario.json`: a 3×3 map isolating G, with budgets 2 and 300 fixed before execution. AI's API expectations are labeled separately from the student's question. The normal 30-map benchmark selects reachable maps, so a separate fixed case is required. Verify exhaustive disconnection independently and distinguish UNREACHABLE from budget exhaustion; core and runner code remain unchanged.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
