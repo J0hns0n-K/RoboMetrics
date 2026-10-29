@@ -406,6 +406,12 @@ AI adds guarded CLI display for final BUDGET_EXCEEDED only and checks it on the 
 - UserMessage is displayed only in the separate CLI prototype. Core, retry algorithm, benchmark, existing configs/artifacts and web demo remain unchanged. This repeat checks presentation, not independent samples or a student outcome forecast.
 - Next proposed accounting comparison: direct budget 8 versus an initial budget 2 followed by a budget-8 restart on the same known map. Student expectation and a separate configured comparison are pending; related regression outcomes are known and should not be called blind research.
 
+## 2026-10-29 Direct-versus-restart expectation recorded
+
+Junmo wrote **검토량은 처음부터 예산 8로 한 번 탐색한게 더 적지 않을까?**. Preserve this as a tentative lower-work expectation for direct budget 8 versus an initial 2 followed by a full restart at 8. No numerical totals/difference or rationale were supplied.
+
+AI configures the same known connected map and A* FIFO, with completion budget 8 and total cap 10 per strategy. Direct allocates 8; restart allocates 2+8 and does not reuse frontier state. Count all attempts within each strategy separately; comparison-wide total is not a single-policy budget. The known prior map/regression evidence prevents calling this a blind new map study. New CLI/configuration will be committed before evaluation, preserving source hashes and immutable outputs.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

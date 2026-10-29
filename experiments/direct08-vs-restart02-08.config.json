@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "direct08-versus-restart02-08",
+  "dateSeoul": "2026-10-29",
+  "status": "ready",
+  "mapScenario": "experiments/reachable-goal-budget-control.scenario.json",
+  "algorithm": "astar",
+  "tieBreak": "fifo",
+  "directBudget": 8,
+  "restartInitialBudget": 2,
+  "restartFinalBudget": 8,
+  "maxTotalExpansionsPerPolicy": 10,
+  "studentPredictionVerbatim": "검토량은 처음부터 예산 8로 한 번 탐색한게 더 적지 않을까?",
+  "studentExpectation": "Tentatively expects fewer cumulative examined nodes for the direct budget-8 attempt than an initial budget-2 failure followed by a budget-8 full restart.",
+  "predictionScope": "Direction only; no exact count, numerical difference or rationale supplied.",
+  "controls": "Same fixed map/endpoints, movement/cost/heuristic/neighbors, A* FIFO and completion-attempt budget 8; each strategy has total cap 10. Direct allocates 8, restart allocates 2+8. No search state is reused across restarts.",
+  "measurementRules": "Charge actual examined nodes from every attempt within each policy. Keep the initial failure and success statuses. Report both policies separately and do not treat the sum across comparison arms as one policy budget.",
+  "knownPriorEvidence": "This fixed map, direct success and related restart budgets are already known from prior outputs and AI regression tests. This is guided accounting verification, not a blind new research cohort or independent map sample.",
+  "attribution": "AI proposed/configured the comparison and supplies the runner, execution and validation. Student supplied the quoted tentative direction only; no method/code authorship or independent execution inferred."
+}
