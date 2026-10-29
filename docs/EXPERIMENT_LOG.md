@@ -337,6 +337,16 @@ AI prepared `practice/03-failure-reason.mjs`, an intentionally incomplete exerci
 - Student contribution is the guided one-field choice and actual save. Function, conditional branches, messages, file loading and execution/validation are AI support, not student implementation of a new classifier or algorithm. Production core and UI remain unchanged; unrelated practice-02 edit was not staged.
 - Next student task: explain why success=false alone cannot distinguish budget exhaustion from unreachable failure, whereas reading the failure-reason field can. That rationale is not yet received.
 
+## 2026-10-29 Student explains the reason-field choice
+
+Asked why the reason field is needed when both failure types have success=false, Junmo wrote:
+
+> 그게 예산 초과 때문인지 아니면 진짜 길이 없는 건지 알아야지
+
+Preserve this guided post-result rationale alongside the actual saved edit and four-case classification. It explains the need to identify failure cause without claiming independent API design, a full classifier implementation or new experiment operation. Inputs, transcripts and validation records stay unchanged.
+
+Next writing task is a two-sentence account of direct work and AI support in this coding exercise. Source evidence already separates the one-field choice/save from AI scaffold, branches, execution and checks; the student's own role statement has not yet been supplied.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
