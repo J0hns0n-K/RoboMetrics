@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "status": "draft-awaiting-hardware-context",
+  "proposalAuthor": "AI assistant",
+  "roadmap": "docs/ROBOTICS_ROADMAP.md",
+  "nextQuestion": "다음 로봇 크기·운동 모델 단계에 사용할 수 있는 실제 로봇이 있어? 있으면 모델명, 없으면 없음이라고 알려 줘.",
+  "studentHardwareAvailability": null,
+  "robotModel": null,
+  "measuredDimensions": null,
+  "plannedFirstStep": "Determine available hardware context before choosing physical units, footprint and motion constraints. If unavailable, explicitly begin with assumed simulation-only geometry; never label it physical measurement.",
+  "scope": "Unimplemented planning draft, not a purchase recommendation, hardware availability claim, robot experiment or completed milestone. Current planner/continuation remains fixed-snapshot simulation."
+}

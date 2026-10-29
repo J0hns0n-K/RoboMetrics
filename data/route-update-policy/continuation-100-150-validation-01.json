@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "validatedBy": "AI assistant CLI",
+  "validatedAtUTC": "2026-10-29T09:12:41.967Z",
+  "sourceCommit": "e84a92baef81d0be15ab937cb9969a75b4059a26",
+  "protocol": "experiments/route-continuation-100-150-01.protocol.json",
+  "raw": {
+    "path": "data/route-update-policy/continuation-100-150-run-01.json",
+    "sha256": "e6dd0211f6b7b2ffe901306deb2deb45e5bb04e8fd6e125ff19f93b483ab3a5d"
+  },
+  "tests": {
+    "path": "data/route-update-policy/continuation-tests-01.tap",
+    "sha256": "160370a731a96e8d24cb7b5d35b9e10cd224fe5f6cbee687bb30380519583d85",
+    "passed": 63,
+    "failed": 0,
+    "newTests": 6,
+    "provenance": "Final policy/dependency/tests passed before source/protocol commit; exact tested bytes/TAP match. Thin comparison driver syntax/configured run/output guard checked separately. No post-run full-suite repeat."
+  },
+  "sourceHashesGitBlobs": {
+    "package.json": "ed66c6f1dd768e55eabb04716249b1dbf8876f1e000ba083a78e742bbdd62011",
+    "scripts/build-learning-trace.mjs": "5430deb4b6a7b25cbbb7e28060554436b867961bb4a1b083a020ae204c519104",
+    "scripts/check-current-position-detour.mjs": "9bb2fad0a772d3fa41c37c8c21b068d44d7e946eb62524c9e50c41a183a9e12e",
+    "scripts/check-route-update-policy.mjs": "6f83089892f1b1b59ecb7dba11005b917e83999f642b4bb18f401a5f3ac7ae83",
+    "scripts/check-second-wall-choices.mjs": "ab0773fec4128dcd1d830699088cd82b4f78c6612ab136601b73dd64105e74c4",
+    "scripts/compare-fixed-ties.mjs": "0af9ce44b2fb4113b5184fa3260fcf06c21f3c6d4aff6f83ca4bb7edef832028",
+    "scripts/compare-manhattan-bound.mjs": "8d3305c5fb2cf799069010770c6d2cdb462ecb2ac29b547d839ad57c98e1ffaa",
+    "scripts/compare-restart-cost.mjs": "ee8058045245122137a2fba4da699047e4daff34bffbba5440129e69c56efa28",
+    "scripts/compare-route-continuation.mjs": "6bb93f35ef371ab81aeb53934b33df83e2abaa81dc52cd16b62d149a7462db5e",
+    "scripts/compare-route-optimization.mjs": "d7bd21c088e764d0808aaa20000284b3cc6f1c2c290c41e7e98cce4937df15e7",
+    "scripts/compare-ties.mjs": "7bf5c591d5646034798eddf84ea9e09480adf3b22f4d8c7b6e1c4293bddeecd1",
+    "scripts/run-matrix.mjs": "ce5fd3ac918d7e69d6a9a7fc3965bc8d7d5622ba1ccefec97edac91a8ddf24a6",
+    "scripts/run-resume-control.mjs": "a8090ca1296c0332d00903778bfc92f3c424d24faa4cc235a19007c9035bef88",
+    "scripts/run-retry-policy.mjs": "a1794489fca4e824bbc84a8ff184bf8875a05b57963193cb2290551c549b8614",
+    "scripts/run-route-reoptimization-batch.mjs": "025896f67996959b34a5fd0d1d6f87f37876f39fc3acbbdc78f19594f9d7c52a",
+    "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+    "scripts/serve.mjs": "e040e1c5b14f83c645d345623711654921731c80835bf37067f2d0502b23b500",
+    "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "src/resumable-astar.mjs": "c43cc77c139446f50a4de02a1f315945e4406f760d4b631e5b905524a2769ed9",
+    "src/retry-policy.mjs": "72729cd2ce9fb2c93a94057a43ee6b9b29bfdf270b73418541adcf6b169e9576",
+    "src/route-update-policy.mjs": "4d5e3b8de34bba367d9e08be26227bb03c46575494f4868ad732ac6f5550e5e6",
+    "src/ui.mjs": "83449f56a4844bb877272fb8050d72bf7364df1214eb236b3420c5f3f8f71c38",
+    "test/audit.test.mjs": "2aaba9e05b6fa01ba0fbe5d7bfdefa82e8e1dce414fe00e477e09e1fd9b7be27",
+    "test/bound-budget-stress.test.mjs": "970ae94c3735ce124d2d4159cccab55c0fa88150ead9e58e8474152ebea8a6a0",
+    "test/core.test.mjs": "b75b834a103758ffbd780d3c842be93189294d6e6600fa46fd0096b66510c795",
+    "test/counterexample.test.mjs": "fd020e579decc69a6ea99c69d1490c955b2d6ee3c562e62609d5bc5ae0f22265",
+    "test/current-position-detour.test.mjs": "3105108879cbce53fba1ed7c5f7a4d167da986f4c07c81771d2db51b1a41ca87",
+    "test/demo-rule.test.mjs": "74e8a2d7653ea6e0d108292ad8b57d3bff3272818c862d8a4bd7d151078a20e7",
+    "test/fixed-ties.test.mjs": "24bedf6106fae2cdab14006154a2a9c086befc305bd6d76f27c8fc1bc0201110",
+    "test/manhattan-bound-skip.test.mjs": "65d81ab70a8d8c45ce10386ed2711ad9866de8a97594c3e46dccd9baa2413a82",
+    "test/matrix.test.mjs": "20d10863f15bb1bd713fce6914265254b7222376c60bfcb35672c13aefbe73ec",
+    "test/resumable-astar.test.mjs": "8c76a18e22a7607fe35a941ea61de5a9299127a781f07259df8b56d024279f9b",
+    "test/retry-policy.test.mjs": "8b3d8f20311854ecaae219d94438991d21b1bbf03dac4af3a0889fd2d3a22ccb",
+    "test/route-continuation.test.mjs": "2032ef0e150373e21ed8b5fd61086207d60025b990774945809135011cbdc87e",
+    "test/route-reoptimization-batch.test.mjs": "d37185657928fd5d0c3dc776f340484e9d098bd2b976c89d68daa7e001052f31",
+    "test/route-update-policy.test.mjs": "a63e2793f1a508e3d06ba9a4302623615111c02c06d35147eaeb6c644a34bc95",
+    "test/tie-break.test.mjs": "7e4405e0f817c56ac6f7e8018193deaa80117f03d1b5077886bee52f2c05d256"
+  },
+  "checks": {
+    "studentResponseBeforeConfiguredRun": true,
+    "aiNumericOperationalizationDistinguished": true,
+    "sameThirtyKnownInputsAndPriorRoutes": true,
+    "initialStagesMatchArchived100": true,
+    "retainOriginalFieldsMatch": true,
+    "finalContinuationResultsMatch300Reference": true,
+    "allPathsValidAndSameBfsOptimalLengths": true,
+    "intermediateBudgetFailuresPreserved": true,
+    "atMostOneContinuation": true,
+    "resumeDeltasNotDoubleCounted": true,
+    "restartDuplicateWorkCharged": true,
+    "sessionStageAndEngineCallCountsSeparate": true,
+    "allWorkWithinDeclaredFiniteCaps": true,
+    "sourceAndTestBytesMatchCommit": true,
+    "outputGuardAndRawBytesPreserved": true,
+    "priorMetadataErratumMatchesEvidence": true
+  },
+  "observations": {
+    "cohort": "Same known dense30 edited maps/base20265027,16x12/.28",
+    "tieBreak": "fifo",
+    "initialBudget": 100,
+    "additionalResumeAllowance": 50,
+    "cumulativeResumeTarget": 150,
+    "maximumContinuationSteps": 1,
+    "declaredWorkCaps": {
+      "retain": 100,
+      "resume": 150,
+      "restart": 250
+    },
+    "commonComparisonCeilingPerCase": 250,
+    "arms": {
+      "retain": {
+        "work": 798,
+        "sessions": 9,
+        "stages": 9,
+        "continued": 0,
+        "completed": 6,
+        "failures": 3,
+        "proofs": 21
+      },
+      "resume": {
+        "work": 844,
+        "sessions": 9,
+        "stages": 12,
+        "continued": 3,
+        "completed": 9,
+        "failures": 0,
+        "proofs": 21
+      },
+      "restart": {
+        "work": 1144,
+        "sessions": 12,
+        "stages": 12,
+        "continued": 3,
+        "completed": 9,
+        "failures": 0,
+        "proofs": 21
+      }
+    },
+    "continuedCases": [
+      {
+        "seed": 20265033,
+        "initialExpanded": 100,
+        "resumeAdditional": 5,
+        "restartAdditional": 105,
+        "finalExpanded": 105
+      },
+      {
+        "seed": 20265057,
+        "initialExpanded": 100,
+        "resumeAdditional": 28,
+        "restartAdditional": 128,
+        "finalExpanded": 128
+      },
+      {
+        "seed": 20265059,
+        "initialExpanded": 100,
+        "resumeAdditional": 13,
+        "restartAdditional": 113,
+        "finalExpanded": 113
+      }
+    ],
+    "extraResumeWorkVersusStopping": 46,
+    "extraRestartWorkVersusStopping": 346,
+    "resumeSavesVersusRestart": 300,
+    "allPathsAndLengthsIdentical": true,
+    "meanReturnedMovesEach": 26.666666666666668,
+    "newPolicyEvaluations": 90,
+    "newAStarSearchSessions": 30,
+    "newCorePlanCalls": 21,
+    "newResumeAdvanceCalls": 12,
+    "newExaminedNodes": 2786,
+    "newPriorAcquisitionCalls": 0,
+    "newCohortBfsCalls": 0,
+    "additionalValidationBfsChecks": 30,
+    "additionalValidationPlannerCalls": 0
+  },
+  "attribution": "Student selected continuing optimization only. AI specifies +50/one continuation/resume default/restart control and supplies code/tests/operation/initial interpretation; not a student exact savings forecast or independent implementation.",
+  "limitations": [
+    "Same known cohort with full-search results already available, not blind or independent research.",
+    "Continuation completes the three formerly unfinished confirmations here without changing route length; stopping after100 still uses fewer expansions.",
+    "Restart shares the final fresh-search target150 but may spend100+150, unlike resumed cumulative cap150; caps and actual costs are explicit.",
+    "Fixed snapshot within one synchronous call; no map/pose update between stages, external sensing, physical movement, runtime/energy or memory-efficiency measurement.",
+    "63 tests cover bounded stop/fallback controls; one extra stage does not guarantee completion for arbitrary inputs."
+  ],
+  "historicalMetadataErratum": "data/route-update-policy/budget100-comparison-erratum-01.json",
+  "unrelatedLocalChangePreserved": "practice/02-planning-budget.mjs"
+}

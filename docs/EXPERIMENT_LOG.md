@@ -603,6 +603,15 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Six new controls, full suite63 passed/zero failed; `data/route-update-policy/continuation-tests-01.tap`. Old study drivers explicitly select retain to preserve frozen protocols; no original raw files overwritten. Same-known-cohort protocol `experiments/route-continuation-100-150-01.protocol.json` frozen before replay.
 - Metadata erratum `data/route-update-policy/budget100-comparison-erratum-01.json` preserves old validation while correcting duplicate after-key summary names to explicit completion/failure/expansion fields. Primary raw/main counts remain correct; no numerical rerun.
 
+## 2026-10-29 — Bounded continuation/accounting verified
+
+- Frozen source/protocol/student response `e84a92baef81d0be15ab937cb9969a75b4059a26`; raw/validation `data/route-update-policy/continuation-100-150-*.json`. Same known30 dense inputs/A* FIFO/bound proofs, no new sampling or student forecast.
+- Retain100:798 expansions,6 completed/3 final budget failures. Resume100→cumulative150:844 expansions,9 complete/0 final failures. Restart100→fresh150:1,144 expansions,9/0. All retain valid same paths/mean26.6667, bound proofs21. First failures3 preserved in each stage journal. Resume adds46 versus stopping, avoids300 rework versus restart; no returned-length gain here.
+- Explicit per-case maximum work100/150/250, common comparison ceiling250; restart not called50 extra actual work. Search sessions9/9/12, stages9/12/12; new whole-study90 evaluations/30 sessions (core calls21/resumable sessions9/advances12),2,786 expansions. Validation adds30 BFS checks/no planner calls; new cohort/prior/BFS in driver0.
+- Source/TAP63 tests, input/reference100/reference300 paths, all deltas/caps/stage counts/raw failures/detached outputs and immutable-output guards pass. No suite repeated after configured run. Known small controls retain a second-failure stop; no universal completion promise.
+- Original budget100 validation remains immutable; `budget100-comparison-erratum-01.json` repairs duplicated after-key names via explicit before/after fields, verified against raw300/100. No numerical rerun.
+- Next `experiments/robot-model-inputs.design.json`: hardware availability/model/dimensions pending before finite-body/motion modeling; no physical experiment claim.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
