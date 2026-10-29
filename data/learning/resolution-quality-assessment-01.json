@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "studentResponseVerbatim": "2",
+  "selectedOption": "first unit-step plus additional quality check",
+  "studentRationale": null,
+  "context": "Guided post-result question restricted to this known30-map cohort. Same7successful-map lengths; always-fine281 versus quality-checked332 examined positions.",
+  "sourceValidation": "data/footprint/resolution-quality-replay-validation-01.json",
+  "sourceReplayCommit": "3aad7756ad163cea25122f2db39b72b9ea26e0f9",
+  "givenComparison": {
+    "successfulMaps": 7,
+    "alwaysFineExamined": 281,
+    "qualityCheckedExamined": 332,
+    "qualityMinusFine": 51
+  },
+  "interpretation": "Preference recorded without an accompanying reason. Do not infer a numerical-efficiency justification, independent hypothesis, universal policy superiority or new deployment default.",
+  "aiClarification": "For equal returned lengths on these inputs, the measured examined-node criterion favors always-fine; ask what motivated option2 rather than inventing a rationale.",
+  "newExperiments": 0,
+  "scope": "Learning/decision record only. No code, default, dataset or test change. Student explanation pending."
+}

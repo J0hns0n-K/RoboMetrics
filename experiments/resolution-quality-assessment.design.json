@@ -1,11 +1,13 @@
 {
   "schemaVersion": 1,
   "dateSeoul": "2026-10-29",
-  "status": "awaiting-student-post-result-judgment",
+  "status": "choice-recorded-awaiting-student-rationale",
   "proposalAuthor": "AI assistant",
   "sourceValidation": "data/footprint/resolution-quality-replay-validation-01.json",
   "question": "이번30장에서는 같은 성공7장의 경로 길이가 같고, 항상 반 칸은281곳, 먼저1칸+추가 확인은332곳을 검토했어. 이번 결과만 기준으로 고르면 어느 방식이 더 합리적일까? 1: 항상 반 칸, 2: 먼저1칸+추가 확인. 이유도 짧게 적어 줘.",
-  "studentResponseVerbatim": null,
+  "studentResponseVerbatim": "2",
   "studentRationale": null,
-  "scope": "Guided post-result judgment about this known development cohort only, not an independent hypothesis, universal deployment decision or new validated default. A later prospective check must freeze new inputs before generation. No new experiment is part of this question."
+  "scope": "Guided post-result judgment about this known development cohort only, not an independent hypothesis, universal deployment decision or new validated default. A later prospective check must freeze new inputs before generation. No new experiment is part of this question.",
+  "studentResponseRecord": "data/learning/resolution-quality-assessment-01.json",
+  "followupQuestion": "2번은 먼저1칸+추가 확인 방식으로332곳을 검토했고, 항상 반 칸은 같은 길이에281곳을 검토했어. 2번을 고른 이유가 뭐야?"
 }
