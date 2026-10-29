@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "validatedBy": "AI assistant CLI",
+  "validatedAtUTC": "2026-10-29T09:38:09.431Z",
+  "sourceCommit": "eccd9ff479592bc287d38dcd5b1d95c4726fdaef",
+  "protocol": "experiments/disk-footprint-corridor-01.protocol.json",
+  "raw": {
+    "path": "data/footprint/disk-footprint-corridor-run-01.json",
+    "sha256": "85248ef5c83491929c08de6f1993f75edb856f4b1c755962d2c297ce127d621a"
+  },
+  "tests": {
+    "path": "data/footprint/disk-footprint-tests-01.tap",
+    "sha256": "dfd5ef4a07f3bc8a8fc9b8719506383a7f6c0238c13f1239156d6c76c99a7dbd",
+    "passed": 70,
+    "failed": 0,
+    "newTests": 7,
+    "provenance": "Final geometry module/tests passed before source/protocol commit. Exact tested dependencies/TAP match. Thin configured runner syntax/actual-case/guard checked separately; no post-run suite repeat."
+  },
+  "sourceHashesGitBlobs": {
+    "package.json": "ed66c6f1dd768e55eabb04716249b1dbf8876f1e000ba083a78e742bbdd62011",
+    "scripts/build-learning-trace.mjs": "5430deb4b6a7b25cbbb7e28060554436b867961bb4a1b083a020ae204c519104",
+    "scripts/check-current-position-detour.mjs": "9bb2fad0a772d3fa41c37c8c21b068d44d7e946eb62524c9e50c41a183a9e12e",
+    "scripts/check-disk-footprint.mjs": "e3df7f2bf4c8893c4226f0a35eee5e3c47028cabb8162556af36791197c9fc22",
+    "scripts/check-route-update-policy.mjs": "6f83089892f1b1b59ecb7dba11005b917e83999f642b4bb18f401a5f3ac7ae83",
+    "scripts/check-second-wall-choices.mjs": "ab0773fec4128dcd1d830699088cd82b4f78c6612ab136601b73dd64105e74c4",
+    "scripts/compare-fixed-ties.mjs": "0af9ce44b2fb4113b5184fa3260fcf06c21f3c6d4aff6f83ca4bb7edef832028",
+    "scripts/compare-manhattan-bound.mjs": "8d3305c5fb2cf799069010770c6d2cdb462ecb2ac29b547d839ad57c98e1ffaa",
+    "scripts/compare-restart-cost.mjs": "ee8058045245122137a2fba4da699047e4daff34bffbba5440129e69c56efa28",
+    "scripts/compare-route-continuation.mjs": "6bb93f35ef371ab81aeb53934b33df83e2abaa81dc52cd16b62d149a7462db5e",
+    "scripts/compare-route-optimization.mjs": "d7bd21c088e764d0808aaa20000284b3cc6f1c2c290c41e7e98cce4937df15e7",
+    "scripts/compare-ties.mjs": "7bf5c591d5646034798eddf84ea9e09480adf3b22f4d8c7b6e1c4293bddeecd1",
+    "scripts/run-matrix.mjs": "ce5fd3ac918d7e69d6a9a7fc3965bc8d7d5622ba1ccefec97edac91a8ddf24a6",
+    "scripts/run-resume-control.mjs": "a8090ca1296c0332d00903778bfc92f3c424d24faa4cc235a19007c9035bef88",
+    "scripts/run-retry-policy.mjs": "a1794489fca4e824bbc84a8ff184bf8875a05b57963193cb2290551c549b8614",
+    "scripts/run-route-reoptimization-batch.mjs": "025896f67996959b34a5fd0d1d6f87f37876f39fc3acbbdc78f19594f9d7c52a",
+    "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+    "scripts/serve.mjs": "e040e1c5b14f83c645d345623711654921731c80835bf37067f2d0502b23b500",
+    "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "src/disk-footprint.mjs": "c03c648eabb987b877289aaf6a274b14541100c18910d8d7cdd1bb909877a605",
+    "src/resumable-astar.mjs": "c43cc77c139446f50a4de02a1f315945e4406f760d4b631e5b905524a2769ed9",
+    "src/retry-policy.mjs": "72729cd2ce9fb2c93a94057a43ee6b9b29bfdf270b73418541adcf6b169e9576",
+    "src/route-update-policy.mjs": "4d5e3b8de34bba367d9e08be26227bb03c46575494f4868ad732ac6f5550e5e6",
+    "src/ui.mjs": "83449f56a4844bb877272fb8050d72bf7364df1214eb236b3420c5f3f8f71c38",
+    "test/audit.test.mjs": "2aaba9e05b6fa01ba0fbe5d7bfdefa82e8e1dce414fe00e477e09e1fd9b7be27",
+    "test/bound-budget-stress.test.mjs": "970ae94c3735ce124d2d4159cccab55c0fa88150ead9e58e8474152ebea8a6a0",
+    "test/core.test.mjs": "b75b834a103758ffbd780d3c842be93189294d6e6600fa46fd0096b66510c795",
+    "test/counterexample.test.mjs": "fd020e579decc69a6ea99c69d1490c955b2d6ee3c562e62609d5bc5ae0f22265",
+    "test/current-position-detour.test.mjs": "3105108879cbce53fba1ed7c5f7a4d167da986f4c07c81771d2db51b1a41ca87",
+    "test/demo-rule.test.mjs": "74e8a2d7653ea6e0d108292ad8b57d3bff3272818c862d8a4bd7d151078a20e7",
+    "test/disk-footprint.test.mjs": "829b226c84ea8cb7e2f2e173396666896c4e3cb9774b7830fcccb39b4dd2d509",
+    "test/fixed-ties.test.mjs": "24bedf6106fae2cdab14006154a2a9c086befc305bd6d76f27c8fc1bc0201110",
+    "test/manhattan-bound-skip.test.mjs": "65d81ab70a8d8c45ce10386ed2711ad9866de8a97594c3e46dccd9baa2413a82",
+    "test/matrix.test.mjs": "20d10863f15bb1bd713fce6914265254b7222376c60bfcb35672c13aefbe73ec",
+    "test/resumable-astar.test.mjs": "8c76a18e22a7607fe35a941ea61de5a9299127a781f07259df8b56d024279f9b",
+    "test/retry-policy.test.mjs": "8b3d8f20311854ecaae219d94438991d21b1bbf03dac4af3a0889fd2d3a22ccb",
+    "test/route-continuation.test.mjs": "2032ef0e150373e21ed8b5fd61086207d60025b990774945809135011cbdc87e",
+    "test/route-reoptimization-batch.test.mjs": "d37185657928fd5d0c3dc776f340484e9d098bd2b976c89d68daa7e001052f31",
+    "test/route-update-policy.test.mjs": "a63e2793f1a508e3d06ba9a4302623615111c02c06d35147eaeb6c644a34bc95",
+    "test/tie-break.test.mjs": "7e4405e0f817c56ac6f7e8018193deaa80117f03d1b5077886bee52f2c05d256"
+  },
+  "checks": {
+    "hardwareReportAndNoMeasurementScopePreserved": true,
+    "aiAssumptionsNotStudentDesign": true,
+    "protocolCommittedBeforeConfiguredExecution": true,
+    "allSixCasesOnDeclaredLayouts": true,
+    "allEndpointCentersHaveClearance": true,
+    "independentCenterMaskDistanceChecks": true,
+    "configurationBfsAgreesWithPlanner": true,
+    "analyticWidthAndContactConditionAgree": true,
+    "validReturnedPathsAreStraightSixMoves": true,
+    "originalGeometrySweptChecksPassedForReturnedPaths": true,
+    "oldPointPathInvalidForOversizedBodies": true,
+    "unreachableReasonsEmptyPathsNullLengthsPreserved": true,
+    "originalCoreHashUnchanged": true,
+    "sourceAndTestBytesMatchCommit": true,
+    "existingOutputRejectedBeforeSearch": true,
+    "rawBytesPreserved": true
+  },
+  "observations": {
+    "relatedLayouts": 2,
+    "configuredCases": 6,
+    "assumedGrid": [
+      9,
+      7
+    ],
+    "unitCellSide": 1,
+    "start": [
+      1,
+      3
+    ],
+    "goal": [
+      7,
+      3
+    ],
+    "tieBreak": "fifo",
+    "budgetPerCase": 100,
+    "results": [
+      {
+        "id": "narrow-point",
+        "opening": 1,
+        "radius": 0,
+        "clearance": 0,
+        "status": "ROUTE_FOUND",
+        "moves": 6,
+        "examined": 7,
+        "independentReachableCenters": 57
+      },
+      {
+        "id": "narrow-diameter08",
+        "opening": 1,
+        "radius": 0.4,
+        "clearance": 0,
+        "status": "ROUTE_FOUND",
+        "moves": 6,
+        "examined": 7,
+        "independentReachableCenters": 57
+      },
+      {
+        "id": "narrow-contact-diameter10",
+        "opening": 1,
+        "radius": 0.5,
+        "clearance": 0,
+        "status": "UNREACHABLE",
+        "moves": null,
+        "examined": 11,
+        "independentReachableCenters": 11
+      },
+      {
+        "id": "narrow-diameter12",
+        "opening": 1,
+        "radius": 0.6,
+        "clearance": 0,
+        "status": "UNREACHABLE",
+        "moves": null,
+        "examined": 11,
+        "independentReachableCenters": 11
+      },
+      {
+        "id": "wide-diameter12",
+        "opening": 3,
+        "radius": 0.6,
+        "clearance": 0,
+        "status": "ROUTE_FOUND",
+        "moves": 6,
+        "examined": 7,
+        "independentReachableCenters": 27
+      },
+      {
+        "id": "narrow-body08-margin02",
+        "opening": 1,
+        "radius": 0.4,
+        "clearance": 0.2,
+        "status": "UNREACHABLE",
+        "moves": null,
+        "examined": 11,
+        "independentReachableCenters": 11
+      }
+    ],
+    "configuredPlannerCalls": 6,
+    "configuredExaminedNodes": 54,
+    "configuredBfsCalls": 6,
+    "additionalValidationCenterChecks": 378,
+    "additionalValidationBfsChecks": 6,
+    "additionalValidationPlannerCalls": 0
+  },
+  "attribution": "Student supplied no-hardware context only; AI supplied shape/units/radii/margins/maps/contact rule/code/tests/configured operation/initial analysis. No student prediction or physical measurement.",
+  "limitations": [
+    "Assumed virtual cell-side lengths, not measured robot dimensions or calibrated physical units.",
+    "Disk model on closed square obstacles/world rectangle; tangency forbidden. Configuration graph restricts centers/edges and is not a complete continuous-motion planner.",
+    "Swept checks share a distance primitive with inflation; separate point-distance mask audit/BFS and analytic fixture width checks are validation, not two fully independent collision implementations.",
+    "No orientation, nonholonomic constraints, acceleration, controller, sensor uncertainty, wheel slip or physical robot experiment.",
+    "Six designed controls on two layouts, not independent random-map samples or a real-world safety certificate.",
+    "Planner expansion counts exclude geometry construction, path checks and BFS; no runtime/energy measurements."
+  ],
+  "unrelatedLocalChangePreserved": "practice/02-planning-budget.mjs"
+}

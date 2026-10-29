@@ -619,6 +619,14 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Seven new geometry controls/full suite70 passes, TAP `data/footprint/disk-footprint-tests-01.tap`. Zero-radius compatibility, narrow/wide passage, tangency, Euclidean corners, boundary/endpoints, swept edges and invalid inputs checked on known fixtures.
 - Ready `experiments/disk-footprint-corridor-01.protocol.json`: six related controls/two9×7 layouts, same S/G,A* FIFO budget100, disk radii0/.4/.5/.6 and margin0/.2. AI hand-known width expectations, no student forecast. Source/protocol commit required before configured execution.
 
+## 2026-10-29 — Assumed disk-body geometry controls completed
+
+- Source/protocol/hardware-context commit `eccd9ff479592bc287d38dcd5b1d95c4726fdaef`; AI raw/validation `data/footprint/disk-footprint-corridor-*.json`, method `docs/DISK_FOOTPRINT_KR.md`. No robot available yet, virtual cell units only.
+- Six cases/two9×7 layouts/S(1,3)/G(7,3), A* FIFO budget100: width1 point/diameter0.8 pass6moves/7examined; diameter1.0 contact/1.2 and0.8+margin0.2 fail graph connectivity11examined. Width3 restores1.2 pass6/7. Endpoints valid; null/empty failures and original geometry preserved.
+- Configured6 A* calls/54 expansions/6 BFS. Validation378 center-distance checks/6 BFS/zero planner calls, hand-width strict inequality and old-point-path body failure, valid swept edges and source/TAP70 tests/output bytes checked. No post-run suite repeat.
+- Geometry checks share one distance primitive; no full independent collision-code, continuous-motion completeness, kinematics/controller/sensing/real robot/runtime-energy or safety certification claim. Original point core and browser untouched. Student supplies context only, not geometry choices/code or result forecasts.
+- Next AI draft `experiments/disk-clearance-choice.design.json`: student chooses virtual radial margin0.05/0.15 for body diameter0.8, narrow width1. No choice/new result yet.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

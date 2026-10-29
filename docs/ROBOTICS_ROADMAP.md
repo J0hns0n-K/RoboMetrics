@@ -2,8 +2,12 @@
 
 > Planned research; physical robot experiments have not been performed.
 
+## Current checkpoint — assumed geometry only
+
+On 2026-10-29, Junmo reported that no robot is available yet. The first [circular-body geometry reference](DISK_FOOTPRINT_KR.md) now checks excluded center cells and swept straight edges in assumed cell-side units, with [source-bound controls](../data/footprint/disk-footprint-corridor-validation-01.json). This completes a limited geometric check, not robot motion, a controller, calibration or a physical trial. Shape, radii/margins, contact convention, code/tests and operation are AI support; the student's input at this stage is hardware context only.
+
 ## Nov 2026 — Model gap
-- Add robot body shape and differential-drive kinematics, orientation and steering constraints.
+- Extend the assumed circular-body reference with differential-drive kinematics, orientation and steering constraints; choose measured units only if hardware measurements become available.
 - Route paths through controller that tracks waypoints; report deviations, route completion and simulated contact events.
 - Test synthetic variations of slip, wheel imbalance, encoder error, obstacle map error and sensing delay one at a time.
 - Produce explicit schematic, equations, dimensional units and unit tests.

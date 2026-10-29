@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Commit/tested assumed geometry source/protocol, run known corridor body/clearance controls. No robot available yet and no physical-unit measurements.",
+  "nextTask": "Student selects virtual clearance0.05 or0.15 for the assumed diameter0.8 disk. No hardware dimensions/safety requirement or student geometry invention inferred; freeze chosen case before its check.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -161,5 +161,10 @@
   ],
   "robotModelInputsDraft": "experiments/robot-model-inputs.design.json",
   "hardwareContextRecord": "data/learning/robot-hardware-context-01.json",
-  "footprintProtocol": "experiments/disk-footprint-corridor-01.protocol.json"
+  "footprintProtocol": "experiments/disk-footprint-corridor-01.protocol.json",
+  "footprintArtifacts": [
+    "data/footprint/disk-footprint-corridor-run-01.json",
+    "data/footprint/disk-footprint-corridor-validation-01.json"
+  ],
+  "diskClearanceChoiceDraft": "experiments/disk-clearance-choice.design.json"
 }

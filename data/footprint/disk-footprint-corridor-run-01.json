@@ -1,0 +1,679 @@
+{
+  "schemaVersion": 1,
+  "label": "ASSUMED DISK GEOMETRY; NO PHYSICAL ROBOT OR MOTION MEASUREMENTS",
+  "protocol": {
+    "schemaVersion": 1,
+    "id": "disk-footprint-corridor-01",
+    "dateSeoul": "2026-10-29",
+    "status": "ready",
+    "hardwareContext": "data/learning/robot-hardware-context-01.json",
+    "units": "ASSUMED cell-side lengths, one square cell side=1. No centimeters/meters or measured robot dimensions.",
+    "geometry": "Rigid circular disk, closed unit-square obstacles, world rectangle [0,width]x[0,height]. Contact counts as collision. Centers restricted to cell centers and four-neighbor straight edges, no dynamics/orientation/controller/sensor model.",
+    "width": 9,
+    "height": 7,
+    "start": [
+      1,
+      3
+    ],
+    "goal": [
+      7,
+      3
+    ],
+    "barrierColumn": 4,
+    "openingCenterRow": 3,
+    "maxExpansions": 100,
+    "tieBreak": "fifo",
+    "cases": [
+      {
+        "id": "narrow-point",
+        "openingCells": 1,
+        "radius": 0,
+        "clearance": 0
+      },
+      {
+        "id": "narrow-diameter08",
+        "openingCells": 1,
+        "radius": 0.4,
+        "clearance": 0
+      },
+      {
+        "id": "narrow-contact-diameter10",
+        "openingCells": 1,
+        "radius": 0.5,
+        "clearance": 0
+      },
+      {
+        "id": "narrow-diameter12",
+        "openingCells": 1,
+        "radius": 0.6,
+        "clearance": 0
+      },
+      {
+        "id": "wide-diameter12",
+        "openingCells": 3,
+        "radius": 0.6,
+        "clearance": 0
+      },
+      {
+        "id": "narrow-body08-margin02",
+        "openingCells": 1,
+        "radius": 0.4,
+        "clearance": 0.2
+      }
+    ],
+    "aiExpectedGeometry": "For these symmetric fixtures with valid endpoints and a barrier touching world boundaries, a straight center route exists iff opening width >2*(radius+clearance). Strict inequality reflects the contact rule. Where it exists, the route attains six horizontal moves. These are hand-known reference controls, not student forecasts.",
+    "validation": "Preserve original/effective rows and paths, endpoint status, A* result, swept-edge checks against original geometry, separate BFS on configuration graph and analytic width test. Compare radius0 old point path with larger-body validation; keep geometric no-path separate from budget or endpoint invalidity.",
+    "studentOutcomePrediction": null,
+    "attribution": "Student reports no robot yet. AI supplies units, disk approximation, layouts, radii/margins/contact convention, code/tests/operation/analysis. No student geometry design, dimensional measurement, implementation or outcome prediction inferred.",
+    "scope": "Six related geometry controls on two layouts, not independent random maps, a physical experiment or a kinematic/dynamic robot simulator. UNREACHABLE concerns the discrete configuration graph; analytic width reasoning applies to these fixtures only. Commit protocol/source before configured execution."
+  },
+  "cases": [
+    {
+      "configuration": {
+        "id": "narrow-point",
+        "openingCells": 1,
+        "radius": 0,
+        "clearance": 0
+      },
+      "originalRows": [
+        "....#....",
+        "....#....",
+        "....#....",
+        ".........",
+        "....#....",
+        "....#....",
+        "....#...."
+      ],
+      "configurationRows": [
+        "....#....",
+        "....#....",
+        "....#....",
+        ".........",
+        "....#....",
+        "....#....",
+        "....#...."
+      ],
+      "outcome": {
+        "status": "ROUTE_FOUND",
+        "invalidEndpoints": [],
+        "configurationSpace": {
+          "width": 9,
+          "height": 7,
+          "start": [
+            1,
+            3
+          ],
+          "goal": [
+            7,
+            3
+          ],
+          "parameters": {
+            "shape": "disk",
+            "radius": 0,
+            "diameter": 0,
+            "clearance": 0,
+            "effectiveRadius": 0,
+            "cellSide": 1,
+            "units": "assumed grid-cell lengths; not physical measurements",
+            "contactIsCollision": true
+          },
+          "originalBlockedCount": 6,
+          "configurationBlockedCount": 6
+        },
+        "planningResult": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              6,
+              3
+            ],
+            [
+              7,
+              3
+            ]
+          ],
+          "pathLength": 6,
+          "expanded": 7
+        },
+        "sweptPathValidation": {
+          "valid": true,
+          "reason": null,
+          "sweptSegmentsChecked": 6,
+          "scope": "axis-aligned center segments against original closed squares/world boundary; no motion dynamics"
+        },
+        "scope": "Cell-center disk configuration graph; UNREACHABLE is not a claim about all continuous robot motions."
+      },
+      "independentConfigurationBfsDistance": 6,
+      "analyticWidthCheck": {
+        "openingWidth": 1,
+        "effectiveDiameter": 0,
+        "contactForbidden": true,
+        "canPassTheseFixtures": true
+      }
+    },
+    {
+      "configuration": {
+        "id": "narrow-diameter08",
+        "openingCells": 1,
+        "radius": 0.4,
+        "clearance": 0
+      },
+      "originalRows": [
+        "....#....",
+        "....#....",
+        "....#....",
+        ".........",
+        "....#....",
+        "....#....",
+        "....#...."
+      ],
+      "configurationRows": [
+        "....#....",
+        "....#....",
+        "....#....",
+        ".........",
+        "....#....",
+        "....#....",
+        "....#...."
+      ],
+      "outcome": {
+        "status": "ROUTE_FOUND",
+        "invalidEndpoints": [],
+        "configurationSpace": {
+          "width": 9,
+          "height": 7,
+          "start": [
+            1,
+            3
+          ],
+          "goal": [
+            7,
+            3
+          ],
+          "parameters": {
+            "shape": "disk",
+            "radius": 0.4,
+            "diameter": 0.8,
+            "clearance": 0,
+            "effectiveRadius": 0.4,
+            "cellSide": 1,
+            "units": "assumed grid-cell lengths; not physical measurements",
+            "contactIsCollision": true
+          },
+          "originalBlockedCount": 6,
+          "configurationBlockedCount": 6
+        },
+        "planningResult": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              6,
+              3
+            ],
+            [
+              7,
+              3
+            ]
+          ],
+          "pathLength": 6,
+          "expanded": 7
+        },
+        "sweptPathValidation": {
+          "valid": true,
+          "reason": null,
+          "sweptSegmentsChecked": 6,
+          "scope": "axis-aligned center segments against original closed squares/world boundary; no motion dynamics"
+        },
+        "scope": "Cell-center disk configuration graph; UNREACHABLE is not a claim about all continuous robot motions."
+      },
+      "independentConfigurationBfsDistance": 6,
+      "analyticWidthCheck": {
+        "openingWidth": 1,
+        "effectiveDiameter": 0.8,
+        "contactForbidden": true,
+        "canPassTheseFixtures": true
+      }
+    },
+    {
+      "configuration": {
+        "id": "narrow-contact-diameter10",
+        "openingCells": 1,
+        "radius": 0.5,
+        "clearance": 0
+      },
+      "originalRows": [
+        "....#....",
+        "....#....",
+        "....#....",
+        ".........",
+        "....#....",
+        "....#....",
+        "....#...."
+      ],
+      "configurationRows": [
+        "#########",
+        "#..###..#",
+        "#..###..#",
+        "#...#...#",
+        "#..###..#",
+        "#..###..#",
+        "#########"
+      ],
+      "outcome": {
+        "status": "UNREACHABLE",
+        "invalidEndpoints": [],
+        "configurationSpace": {
+          "width": 9,
+          "height": 7,
+          "start": [
+            1,
+            3
+          ],
+          "goal": [
+            7,
+            3
+          ],
+          "parameters": {
+            "shape": "disk",
+            "radius": 0.5,
+            "diameter": 1,
+            "clearance": 0,
+            "effectiveRadius": 0.5,
+            "cellSide": 1,
+            "units": "assumed grid-cell lengths; not physical measurements",
+            "contactIsCollision": true
+          },
+          "originalBlockedCount": 6,
+          "configurationBlockedCount": 41
+        },
+        "planningResult": {
+          "success": false,
+          "reason": "UNREACHABLE",
+          "path": [],
+          "pathLength": null,
+          "expanded": 11
+        },
+        "sweptPathValidation": null,
+        "scope": "Cell-center disk configuration graph; UNREACHABLE is not a claim about all continuous robot motions."
+      },
+      "independentConfigurationBfsDistance": null,
+      "analyticWidthCheck": {
+        "openingWidth": 1,
+        "effectiveDiameter": 1,
+        "contactForbidden": true,
+        "canPassTheseFixtures": false
+      }
+    },
+    {
+      "configuration": {
+        "id": "narrow-diameter12",
+        "openingCells": 1,
+        "radius": 0.6,
+        "clearance": 0
+      },
+      "originalRows": [
+        "....#....",
+        "....#....",
+        "....#....",
+        ".........",
+        "....#....",
+        "....#....",
+        "....#...."
+      ],
+      "configurationRows": [
+        "#########",
+        "#..###..#",
+        "#..###..#",
+        "#...#...#",
+        "#..###..#",
+        "#..###..#",
+        "#########"
+      ],
+      "outcome": {
+        "status": "UNREACHABLE",
+        "invalidEndpoints": [],
+        "configurationSpace": {
+          "width": 9,
+          "height": 7,
+          "start": [
+            1,
+            3
+          ],
+          "goal": [
+            7,
+            3
+          ],
+          "parameters": {
+            "shape": "disk",
+            "radius": 0.6,
+            "diameter": 1.2,
+            "clearance": 0,
+            "effectiveRadius": 0.6,
+            "cellSide": 1,
+            "units": "assumed grid-cell lengths; not physical measurements",
+            "contactIsCollision": true
+          },
+          "originalBlockedCount": 6,
+          "configurationBlockedCount": 41
+        },
+        "planningResult": {
+          "success": false,
+          "reason": "UNREACHABLE",
+          "path": [],
+          "pathLength": null,
+          "expanded": 11
+        },
+        "sweptPathValidation": null,
+        "scope": "Cell-center disk configuration graph; UNREACHABLE is not a claim about all continuous robot motions."
+      },
+      "independentConfigurationBfsDistance": null,
+      "analyticWidthCheck": {
+        "openingWidth": 1,
+        "effectiveDiameter": 1.2,
+        "contactForbidden": true,
+        "canPassTheseFixtures": false
+      }
+    },
+    {
+      "configuration": {
+        "id": "wide-diameter12",
+        "openingCells": 3,
+        "radius": 0.6,
+        "clearance": 0
+      },
+      "originalRows": [
+        "....#....",
+        "....#....",
+        ".........",
+        ".........",
+        ".........",
+        "....#....",
+        "....#...."
+      ],
+      "configurationRows": [
+        "#########",
+        "#..###..#",
+        "#...#...#",
+        "#.......#",
+        "#...#...#",
+        "#..###..#",
+        "#########"
+      ],
+      "outcome": {
+        "status": "ROUTE_FOUND",
+        "invalidEndpoints": [],
+        "configurationSpace": {
+          "width": 9,
+          "height": 7,
+          "start": [
+            1,
+            3
+          ],
+          "goal": [
+            7,
+            3
+          ],
+          "parameters": {
+            "shape": "disk",
+            "radius": 0.6,
+            "diameter": 1.2,
+            "clearance": 0,
+            "effectiveRadius": 0.6,
+            "cellSide": 1,
+            "units": "assumed grid-cell lengths; not physical measurements",
+            "contactIsCollision": true
+          },
+          "originalBlockedCount": 4,
+          "configurationBlockedCount": 36
+        },
+        "planningResult": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              6,
+              3
+            ],
+            [
+              7,
+              3
+            ]
+          ],
+          "pathLength": 6,
+          "expanded": 7
+        },
+        "sweptPathValidation": {
+          "valid": true,
+          "reason": null,
+          "sweptSegmentsChecked": 6,
+          "scope": "axis-aligned center segments against original closed squares/world boundary; no motion dynamics"
+        },
+        "scope": "Cell-center disk configuration graph; UNREACHABLE is not a claim about all continuous robot motions."
+      },
+      "independentConfigurationBfsDistance": 6,
+      "analyticWidthCheck": {
+        "openingWidth": 3,
+        "effectiveDiameter": 1.2,
+        "contactForbidden": true,
+        "canPassTheseFixtures": true
+      }
+    },
+    {
+      "configuration": {
+        "id": "narrow-body08-margin02",
+        "openingCells": 1,
+        "radius": 0.4,
+        "clearance": 0.2
+      },
+      "originalRows": [
+        "....#....",
+        "....#....",
+        "....#....",
+        ".........",
+        "....#....",
+        "....#....",
+        "....#...."
+      ],
+      "configurationRows": [
+        "#########",
+        "#..###..#",
+        "#..###..#",
+        "#...#...#",
+        "#..###..#",
+        "#..###..#",
+        "#########"
+      ],
+      "outcome": {
+        "status": "UNREACHABLE",
+        "invalidEndpoints": [],
+        "configurationSpace": {
+          "width": 9,
+          "height": 7,
+          "start": [
+            1,
+            3
+          ],
+          "goal": [
+            7,
+            3
+          ],
+          "parameters": {
+            "shape": "disk",
+            "radius": 0.4,
+            "diameter": 0.8,
+            "clearance": 0.2,
+            "effectiveRadius": 0.6000000000000001,
+            "cellSide": 1,
+            "units": "assumed grid-cell lengths; not physical measurements",
+            "contactIsCollision": true
+          },
+          "originalBlockedCount": 6,
+          "configurationBlockedCount": 41
+        },
+        "planningResult": {
+          "success": false,
+          "reason": "UNREACHABLE",
+          "path": [],
+          "pathLength": null,
+          "expanded": 11
+        },
+        "sweptPathValidation": null,
+        "scope": "Cell-center disk configuration graph; UNREACHABLE is not a claim about all continuous robot motions."
+      },
+      "independentConfigurationBfsDistance": null,
+      "analyticWidthCheck": {
+        "openingWidth": 1,
+        "effectiveDiameter": 1.2000000000000002,
+        "contactForbidden": true,
+        "canPassTheseFixtures": false
+      }
+    }
+  ],
+  "oldPointPathChecks": [
+    {
+      "caseId": "narrow-point",
+      "validation": {
+        "valid": true,
+        "reason": null,
+        "sweptSegmentsChecked": 6,
+        "scope": "axis-aligned center segments against original closed squares/world boundary; no motion dynamics"
+      }
+    },
+    {
+      "caseId": "narrow-diameter08",
+      "validation": {
+        "valid": true,
+        "reason": null,
+        "sweptSegmentsChecked": 6,
+        "scope": "axis-aligned center segments against original closed squares/world boundary; no motion dynamics"
+      }
+    },
+    {
+      "caseId": "narrow-contact-diameter10",
+      "validation": {
+        "valid": false,
+        "reason": "OBSTACLE_CLEARANCE",
+        "waypointIndex": 3,
+        "kind": "OBSTACLE_CLEARANCE",
+        "obstacle": [
+          4,
+          2
+        ],
+        "centerClearance": 0.5
+      }
+    },
+    {
+      "caseId": "narrow-diameter12",
+      "validation": {
+        "valid": false,
+        "reason": "OBSTACLE_CLEARANCE",
+        "waypointIndex": 3,
+        "kind": "OBSTACLE_CLEARANCE",
+        "obstacle": [
+          4,
+          2
+        ],
+        "centerClearance": 0.5
+      }
+    },
+    {
+      "caseId": "narrow-body08-margin02",
+      "validation": {
+        "valid": false,
+        "reason": "OBSTACLE_CLEARANCE",
+        "waypointIndex": 3,
+        "kind": "OBSTACLE_CLEARANCE",
+        "obstacle": [
+          4,
+          2
+        ],
+        "centerClearance": 0.5
+      }
+    }
+  ],
+  "execution": {
+    "operator": "AI assistant CLI",
+    "executedAtUTC": "2026-10-29T09:35:49.237Z",
+    "sourceCommit": "eccd9ff479592bc287d38dcd5b1d95c4726fdaef",
+    "sourceInputsDirty": false,
+    "sourceHashesGitBlobs": {
+      "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+      "src/disk-footprint.mjs": "c03c648eabb987b877289aaf6a274b14541100c18910d8d7cdd1bb909877a605",
+      "scripts/check-current-position-detour.mjs": "9bb2fad0a772d3fa41c37c8c21b068d44d7e946eb62524c9e50c41a183a9e12e",
+      "scripts/check-disk-footprint.mjs": "e3df7f2bf4c8893c4226f0a35eee5e3c47028cabb8162556af36791197c9fc22",
+      "test/disk-footprint.test.mjs": "829b226c84ea8cb7e2f2e173396666896c4e3cb9774b7830fcccb39b4dd2d509",
+      "experiments/disk-footprint-corridor-01.protocol.json": "f1c6645280c6c0e1f5818fa0cebbf6a5b502c95c7ec64ba9cdb1148cd0236d5f",
+      "data/learning/robot-hardware-context-01.json": "4a7464430c9c0a32721c6cc26cd595d47dac89f11621f73e9e2c5362f0ac14d5"
+    },
+    "workspaceStatus": "M practice/02-planning-budget.mjs",
+    "node": "v24.22.1",
+    "platform": "win32/x64",
+    "configuredCases": 6,
+    "sharedPlannerCalls": 6,
+    "newExaminedNodes": 54,
+    "independentBfsCalls": 6,
+    "provenance": "Student reports no robot yet. AI supplies units, disk approximation, layouts, radii/margins/contact convention, code/tests/operation/analysis. No student geometry design, dimensional measurement, implementation or outcome prediction inferred."
+  }
+}

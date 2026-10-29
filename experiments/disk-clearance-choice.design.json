@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "status": "draft-awaiting-student-clearance-choice",
+  "proposalAuthor": "AI assistant",
+  "sourceEvidence": "data/footprint/disk-footprint-corridor-validation-01.json",
+  "question": "지름0.8칸인 원형 모델에 벽과의 여유폭을 얼마로 둘까?",
+  "options": {"1": {"clearance": 0.05}, "2": {"clearance": 0.15}},
+  "modelRadius": 0.4,
+  "openingWidth": 1,
+  "definition": "Extra radial exclusion c around the body; required corridor width is strictly greater than diameter+2c because contact is forbidden. Virtual cell units only.",
+  "studentChoiceVerbatim": null,
+  "studentOutcomePrediction": null,
+  "results": null,
+  "scope": "Unexecuted guided simulation-model choice. Options/model/method are AI-proposed; neither value is a measured robot requirement or a real-world safety recommendation. No hardware available yet."
+}
