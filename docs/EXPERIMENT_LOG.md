@@ -420,6 +420,13 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Verified successful paths, original failure, cumulative arithmetic, prior-case equality, unchanged 29-test core/retry/parser hashes, source integrity and new CLI output refusal. No full-suite rerun or independent new map sample is claimed. This is a known-case accounting check, not a blind research cohort or a judgment of every adaptive/resumable planner.
 - The 2→8 comparison does not replace the earlier 2→4 preference/configuration. Next task: ask how first-attempt information could be handled to reduce repeated work; no student state-reuse design or new implementation is inferred yet.
 
+## 2026-10-29 — AI reference for preserving paused A* state
+
+- Student response to the repeated-work design question: **모르겠네**. No design or forecast supplied; AI proposed state preservation and implemented the module, six checks and configured control runner.
+- Separate module keeps frontier/distances/parents/closed/tie order on a fixed snapshot. Cumulative budgets never decrease; pauses retain valid unexamined candidates, exact frontier exhaustion is UNREACHABLE, terminal calls add no work, input/output mutation cannot alter saved state.
+- Full suite: 35 passed, zero failures, archived in `data/retry-policy/resumable-astar-tests-01.tap`. Small-layout parity covers 1,024 obstacle layouts × two rules × 12 budgets = 24,576 full-result comparisons to original A*. These are AI regression controls, not student research trials or independent samples. A final boundary check also covers start already at goal.
+- `experiments/resume02-to08.config.json` records the AI expected behavior before configured execution. Known fixed map/A* FIFO; resume from cumulative 2 to 8 and reuse historical direct/restart arms without rerunning them. Source/configuration must be committed before the demonstration. Original core, retry, benchmark, demo and student's 2→4 choice are unchanged.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

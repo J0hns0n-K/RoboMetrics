@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "resume02-to08-known-control",
+  "dateSeoul": "2026-10-29",
+  "status": "ready",
+  "mapScenario": "experiments/reachable-goal-budget-control.scenario.json",
+  "priorComparison": "data/retry-policy/direct08-vs-restart02-08-run-01.json",
+  "algorithm": "astar",
+  "tieBreak": "fifo",
+  "cumulativeBudgets": [2, 8],
+  "studentResponseVerbatim": "모르겠네",
+  "studentStateReuseDesign": null,
+  "studentOutcomePrediction": null,
+  "proposalAuthor": "AI assistant",
+  "proposal": "Keep frontier, distances, parents, closed nodes and tie order after pausing; continue on a fixed snapshot rather than restarting.",
+  "aiExpectedBehavior": "Same final result as direct budget 8; first 2 expansions remain saved, so only 6 additional expansions should be needed. This is expected reference behavior, not a student prediction or blind discovery.",
+  "measurementRules": "8 is the cumulative target, not 8 additional expansions. Sum expandedThisCall; compare with archived direct/restart arms rather than rerunning them. Keep prior raw files immutable.",
+  "scope": "One previously studied static map, four-neighbor unit cost, A* FIFO. Not dynamic replanning, runtime/energy measurement, novel search research or a replacement of the student's 2-to-4 restart choice.",
+  "attribution": "State-reuse proposal, module, test fixtures, runner, execution and analysis are AI support. Student supplied no design or prediction in the quoted response."
+}
