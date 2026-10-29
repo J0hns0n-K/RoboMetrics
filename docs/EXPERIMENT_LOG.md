@@ -209,6 +209,16 @@ Next task: retain the current rule-2/budget-300 report and click JSON save to pr
 - Artifacts: `data/structured/goal-side-dead-end-04-run-01.json`, `fixed-tie-tests-01.tap`, `goal-side-dead-end-04-validation-01.json`. Full paths, forecast/source commits, canonical Git-blob hashes and roles are preserved. This is AI-operated synthetic validation, not student-run hardware work or a representative random sample.
 - Next task: ask the student whether one may now claim rule 2 reduces examined nodes on every map, with a short reason scoped to the observed equal-count case.
 
+## 2026-10-29 Student limits the universal improvement claim
+
+After the result and AI explanation, Junmo responded to the universal-claim question:
+
+> 2번은 모든 지도에서 검토 칸 수를 줄인다고는 못한다. 그 이유는 직전의 실험만 보더라도 칸수의 변화는 없었기 때문이다.
+
+This is a guided post-result interpretation using the observed equal-count case to limit an always-fewer-nodes statement. Do not infer independent discovery, a worse-case example for rule 2 or universal equivalence. The original map, raw results and validation manifest remain unchanged.
+
+AI prepared `experiments/goal-side-dead-end-one-wall.design.json`: choose wall A at (5,0) or B at (4,1), opening exactly one cell with dimensions, endpoints, other walls, budget 300 and search settings fixed. Student choice and a new prediction remain null. Neither revised candidate was evaluated; next action is the student's A/B selection before a separately committed scenario and forecast.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

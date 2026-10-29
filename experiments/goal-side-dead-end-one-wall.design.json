@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "goal-side-dead-end-one-wall-revision-design",
+  "dateSeoul": "2026-10-29",
+  "status": "awaiting student wall choice and a scoped pre-run prediction",
+  "parentScenario": "experiments/goal-side-dead-end-04.scenario.json",
+  "parentResult": "data/structured/goal-side-dead-end-04-run-01.json",
+  "parentRows": [
+    "S....#G",
+    ".#####.",
+    "......."
+  ],
+  "parentConclusionStudentVerbatim": "2번은 모든 지도에서 검토 칸 수를 줄인다고는 못한다. 그 이유는 직전의 실험만 보더라도 칸수의 변화는 없었기 때문이다.",
+  "operation": "Open exactly one existing wall cell; hold every other cell, endpoints, dimensions, budget and planner settings fixed.",
+  "budget": 300,
+  "variants": [
+    "fifo",
+    "closer-goal"
+  ],
+  "wallLabelRows": [
+    "S....AG",
+    ".###B#.",
+    "......."
+  ],
+  "aiProposedWallChoices": [
+    {
+      "label": "A",
+      "coordinate": [
+        5,
+        0
+      ],
+      "description": "Top-row wall at the end of the four-cell branch.",
+      "rows": [
+        "S.....G",
+        ".#####.",
+        "......."
+      ]
+    },
+    {
+      "label": "B",
+      "coordinate": [
+        4,
+        1
+      ],
+      "description": "Second-row wall directly below the branch end.",
+      "rows": [
+        "S....#G",
+        ".###.#.",
+        "......."
+      ]
+    }
+  ],
+  "studentWallChoice": null,
+  "studentPrediction": null,
+  "attribution": "Student supplied the quoted scoped post-result interpretation after a prompt. AI proposes two single-wall edits as the next guided task. No wall choice, revision prediction, independent map design, code authorship or revised outcome is attributed yet.",
+  "execution": "No planner invoked for either revision during preparation. Record a student choice and new scoped prediction, then commit a separate ready scenario before running the comparison. Keep the parent input/results unchanged."
+}

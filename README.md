@@ -49,11 +49,11 @@ Junmo predicted before execution that rule 2 would again examine fewer nodes. Th
 
 ## Where the reduction did not appear
 
-Junmo selected a goal-side dead end, chose a four-cell branch in the AI-proposed 7×3 layout, and predicted similar examined-node counts before execution. After that forecast was committed, AI implemented and operated a paired fixed-map evaluator. Both rules found a shortest ten-move route and examined 15 nodes at budget 300: no reduction in this case. This is compatible with the qualitative expectation and limits an assertion that the alternative always examines fewer nodes; it does not show that the alternative is worse. The [structured-case record](docs/STRUCTURED_MAP_TASK_KR.md) links full paths, source revisions, tests and attribution.
+Junmo selected a goal-side dead end, chose a four-cell branch in the AI-proposed 7×3 layout, and predicted similar examined-node counts before execution. After that forecast was committed, AI implemented and operated a paired fixed-map evaluator. Both rules found a shortest ten-move route and examined 15 nodes at budget 300: no reduction in this case. In a guided post-result interpretation, Junmo concluded that rule 2 cannot be said to reduce examined nodes on every map because the latest case showed no change. This limits an always-fewer-nodes assertion without showing that the alternative is worse. The [structured-case record](docs/STRUCTURED_MAP_TASK_KR.md) preserves his exact statement, full paths, source revisions, tests and attribution.
 
 ## Next research step
 
-Explain the structured result and refine the conditions under which a different tie order helps, retaining equal or unfavorable cases alongside gains. The planned robotics extension introduces body geometry, differential-drive motion, waypoint tracking and sensor/actuator uncertainty. Matched physical trials depend on obtaining and testing hardware; no physical measurements have been collected. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
+Refine the structured case through a single-wall edit while holding the remaining map and search settings fixed. Two AI-proposed wall choices are ready for a student selection and pre-run prediction; neither revision has been executed. This tests how a controlled layout change affects route length and search work, retaining equal or unfavorable cases alongside gains. The planned robotics extension introduces body geometry, differential-drive motion, waypoint tracking and sensor/actuator uncertainty. Matched physical trials depend on obtaining and testing hardware; no physical measurements have been collected. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
 
 ## Run and inspect
 
