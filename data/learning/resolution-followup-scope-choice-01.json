@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "studentResponseVerbatim": "1",
+  "selectedOption": 1,
+  "selectedScope": "Include all generated maps, including failures, rather than retaining only fine-graph-reachable maps.",
+  "studentRationale": null,
+  "studentOutcomePrediction": null,
+  "beforeGeneration": true,
+  "attribution": "Student selects the offered unfiltered scope only. AI supplies30 maps,9x7,.15 density,seeds,endpoints/body/budgets, generation/reference/summary code, tests, operation and analysis. No student map generation/code/run or statistical independence claim."
+}
