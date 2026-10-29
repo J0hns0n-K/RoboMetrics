@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dateSeoul": "2026-10-29",
-  "status": "awaiting-student-goal-placement-choice",
+  "status": "student-uncertain-ai-reference-controls-ready",
   "proposalAuthor": "AI assistant",
   "sourceRaw": {
     "path": "data/footprint/resolution-quality-prospective-run-01.json",
@@ -68,10 +68,13 @@
     "A": "valid body-clearance center",
     "B": "invalid body-clearance center"
   },
-  "studentResponseVerbatim": null,
+  "studentResponseVerbatim": "몰라",
   "studentRationale": null,
-  "readyProtocol": null,
+  "readyProtocol": "experiments/endpoint-placement-controls-01.protocol.json",
   "configuredResults": null,
   "futureRequirements": "After choice, freeze a new protocol before executing endpoint variants. Keep original obstacles/start/body/margin unchanged; change goal only, preserve parent raw, distinguish endpoint validity from route reachability/budget. No guarantee of route success from a valid endpoint alone.",
-  "scope": "AI-provided known fixture/options after observed24/30 endpoint-invalid outcomes. Student placement choice pending. No original map edited, endpoint moved, new A*/BFS call or physical result."
+  "scope": "Student expressed uncertainty and selected no endpoint. AI supplies A as the explained reference and runs originalG/A/B known controls after protocol/source commit. No independent student placement design or new cohort.",
+  "studentSelectedGoal": null,
+  "studentResponseRecord": "data/learning/endpoint-placement-uncertainty-01.json",
+  "aiReferenceGoal": "A"
 }

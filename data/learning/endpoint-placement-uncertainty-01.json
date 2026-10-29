@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "questionRecord": "experiments/endpoint-placement-choice-01.design.json",
+  "studentResponseVerbatim": "몰라",
+  "studentSelectedGoal": null,
+  "studentRationale": null,
+  "aiExplanation": "A satisfies the declared virtual disk-clearance model; B is too close to the wall immediately below. This answer is AI support, not a student placement decision.",
+  "nextOperationAuthor": "AI assistant: known-case G/A/B endpoint control, with no student route forecast.",
+  "scope": "Do not relabel uncertainty or the subsequent AI reference answer as student-designed input, independent discovery, code or operation."
+}

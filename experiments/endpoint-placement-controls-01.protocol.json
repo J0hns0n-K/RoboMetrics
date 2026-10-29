@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "endpoint-placement-controls-01",
+  "dateSeoul": "2026-10-29",
+  "status": "ready",
+  "type": "AI known-input endpoint control after student uncertainty",
+  "taskDraft": "experiments/endpoint-placement-choice-01.design.json",
+  "studentResponseRecord": "data/learning/endpoint-placement-uncertainty-01.json",
+  "sourceRaw": "data/footprint/resolution-quality-prospective-run-01.json",
+  "sourceValidation": "data/footprint/resolution-quality-prospective-validation-01.json",
+  "selectedCase": {"trial": 10, "seed": 20268037},
+  "selectedModel": "experiments/disk-model-clearance015-01.config.json",
+  "width": 9,
+  "height": 7,
+  "start": [1, 3],
+  "goals": [
+    {"id": "G-original", "position": [7, 3], "aiExpectedEndpointValid": false},
+    {"id": "A-reference", "position": [7, 2], "aiExpectedEndpointValid": true},
+    {"id": "B-control", "position": [7, 4], "aiExpectedEndpointValid": false}
+  ],
+  "radius": 0.4,
+  "clearance": 0.15,
+  "tieBreak": "fifo",
+  "coarseBudget": 100,
+  "fineBudget": 100,
+  "modes": ["always-fine", "quality-checked"],
+  "controls": "Use exact archived obstacle rows, not regeneration with a different endpoint. Start/world/body/margin/contact/policies fixed; only chosen goal changes. Point cells of G/A/B already free; do not remove any walls. Preserve original source and all three variants.",
+  "aiPriorKnowledge": "Endpoint-validity expectations come from the archived configuration mask. No expected route length/count or guaranteed route toA is asserted before execution. Valid endpoint and graph reachability are separate.",
+  "budgetScope": "100 per stage; direct fine cap100 versus quality-checked cap200, not equal total-budget performance comparison.",
+  "validation": "Bind unchanged validated policy/core/body/reference source hashes and prior101-test record without a full-suite repeat. Commit new protocol/runner/uncertainty before controls. Check exact original obstacle rows/masks, separate endpoint-gated BFS, original-world path segments, stage costs, originalG reproduction, point-to-square goal clearance and output no-overwrite guard.",
+  "attribution": "Student said 몰라 and chose no goal. AI supplies A reference answer, protocol/options/source/operation/analysis. No student endpoint-design or independent discovery inferred.",
+  "scope": "One archived map, three endpoint assignments, six policy evaluations, not three new maps or an independent cohort. Moving a goal changes the problem, not the planning algorithm. No physical movement, controller, sensor, safety, timing or energy measurement."
+}
