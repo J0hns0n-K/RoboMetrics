@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "studentResponseVerbatim": "2",
+  "interpretedPrediction": "First unit-step plus additional quality check will have lower total examined work on equal-length jointly successful maps in the new30-map condition.",
+  "studentRationale": null,
+  "studentNumericalPrediction": null,
+  "beforeTargetGeneration": true,
+  "protocol": "experiments/resolution-quality-prospective-01.protocol.json",
+  "context": "Offered directional prediction after development-cohort evidence and guided adoption of shorter-route priority/equal-length work tie-break. Not a blind independent method invention or a forecast of success counts.",
+  "attribution": "Student supplies the pre-generation direction only. AI supplies seeds/generator/rules/metrics, implementation, tests, operation and interpretation."
+}

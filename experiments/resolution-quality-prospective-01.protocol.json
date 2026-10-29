@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "resolution-quality-prospective-01",
   "dateSeoul": "2026-10-29",
-  "status": "inputs-frozen-awaiting-prediction-and-runner-validation",
+  "status": "ready",
   "criterionRecord": "data/learning/resolution-priority-criterion-01.json",
   "priorCodeValidation": "data/footprint/resolution-quality-replay-validation-01.json",
   "selectedModel": "experiments/disk-model-clearance015-01.config.json",
@@ -36,7 +36,7 @@
   "budgetScope": "100 per stage, always-fine maximum100 versus quality-checked maximum200; not an equal-total-budget success comparison.",
   "metrics": "Primary30-map status counts, success and actual full-stage work/calls/model stages; endpoint-valid subset separately. Compare world lengths only on jointly successful maps. Apply shorter-world-length then lower-examined-work criterion per comparable map. Report incomparable failure cases separately, never as cheap efficiency wins.",
   "predictionQuestion": "새30장에서 두 방식이 같은 길이를 찾은 지도들을 비교하면, 어느 쪽의 총검토량이 더 적을 것 같아? 1: 항상 반 칸, 2: 먼저1칸+추가 확인, 3: 아직 모르겠어.",
-  "studentPredictionRecord": null,
+  "studentPredictionRecord": "data/learning/resolution-prospective-prediction-01.json",
   "comparisonDenominators": "The prediction concerns the equal-length jointly successful subset, not pre-filtered inputs. Report its trial IDs/count and matched totals/means; if none, mark comparison unavailable. Also report all failures and any unequal route lengths.",
   "validationBeforeExecution": "Implement/validate a new runner and comparison analysis without target seeds, retain unchanged generator/core/disk/policy hashes, and commit code/protocol/prediction before generating targets. Audit original-world masks, endpoint-valid BFS gate, successful path segments, fallback versus completed optimization, full work and denominator summaries. Exclusive output names, no old raw replacement.",
   "plannedResult": null,
@@ -48,5 +48,7 @@
     "src/resolution-policy.mjs": "dc071ca5af42d67d5de1143c0166526ec1affe85f8cf064594aa2e190c139293",
     "src/resolution-quality-policy.mjs": "0f3b0627c830db00d07e55f09261ee1056ace7700e820dcab693b2b3d125baff",
     "scripts/resolution-cohort.mjs": "3cec4d3fb5d48d2287794af191945987cb12bbf2729dbd5007631c59a8c675e1"
-  }
+  },
+  "inputsFrozenCommit": "e3af5c129502ccef21549de826b83f344e54baa0",
+  "predictionAttribution": "Student selects2, quality-checked lower total work on equal-length joint successes, without reason/count. Preserved before target generation."
 }
