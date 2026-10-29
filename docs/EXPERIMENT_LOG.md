@@ -554,6 +554,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Existing tested scripts/module reused without code changes; no repeat 55-test suite. Acquire/commit immutable baseline first, then run both comparison arms against identical inputs and validate new distances/costs/paths/proof versus search counts.
 - This is a new condition-specific cohort; differing density AND seeds prevent a causal density attribution versus prior study. New seed range alone is not statistical-independence proof. Results pending.
 
+## 2026-10-29 — Dense baseline acquired and frozen before paired replay
+
+- Acquisition source/protocol commit `a6c5111869775f704895a12c91f8e51ba2b98688`, existing unchanged driver. New raw `data/route-update-policy/bound-skip-followup-dense-baseline-run-01.json` will be committed as input to the already frozen comparison.
+- Candidate checks 75/accepted 30. Offline prior A* calls 30/2,611 expansions; unguarded online reoptimization calls 30/2,690 expansions. Separate candidate/edited BFS counts 75/30. One selected edit admits and realizes a two-move improvement; other 29 lengths unchanged. No student forecast.
+- Bound comparison pending; no baseline reselection or source-rule change after acquisition. This is a staged acquisition artifact, not the final guarded result or a fresh full-suite run.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
