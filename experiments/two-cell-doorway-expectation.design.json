@@ -1,14 +1,33 @@
 {
   "schemaVersion": 1,
   "dateSeoul": "2026-10-29",
-  "status": "draft-awaiting-student-geometric-expectation",
+  "status": "ready-student-geometric-expectation-recorded",
   "proposalAuthor": "AI assistant",
   "selectedModel": "experiments/disk-model-clearance015-01.config.json",
   "question": "지름0.8에 양쪽 여유0.15를 요구하는 모델은, 폭이2칸인 통로를 기하학적으로 지나갈 수 있을 것 같아?",
   "questionScope": "Width-based continuous geometric expectation, not a prediction that the current cell-center A* representation necessarily succeeds.",
-  "studentResponseVerbatim": null,
-  "plannedFixture": {"width": 9, "height": 7, "barrierColumn": 4, "openingRows": [2, 3], "start": [1, 3], "goal": [7, 3], "units": "virtual cell-side lengths"},
+  "studentResponseVerbatim": "통과 하지 않을까? 몸 지름이 0.8칸이고 통로가 2칸인데",
+  "plannedFixture": {
+    "width": 9,
+    "height": 7,
+    "barrierColumn": 4,
+    "openingRows": [
+      2,
+      3
+    ],
+    "start": [
+      1,
+      3
+    ],
+    "goal": [
+      7,
+      3
+    ],
+    "units": "virtual cell-side lengths"
+  },
   "aiResearchQuestion": "Can cell-center-only sampling reject a geometrically feasible passage? Distinguish a continuous clearance certificate from reachability on a chosen sample lattice; investigate resolution before calling planner failure physical impossibility.",
   "results": null,
-  "scope": "Unexecuted AI-proposed modeling-limit investigation. No new code/refinement, student discovery or physical passage result yet. Freeze the ready cases before future execution."
+  "scope": "AI-proposed model-limit control ready before configured execution. Student supplies tentative width-based yes and diameter/width reason only; no current-planner outcome forecast, code, operation or physical result. No refinement implemented.",
+  "studentExpectationRecord": "data/learning/two-cell-doorway-expectation-01.json",
+  "readyProtocol": "experiments/two-cell-doorway-01.protocol.json"
 }

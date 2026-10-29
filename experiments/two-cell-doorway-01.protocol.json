@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "two-cell-doorway-01",
+  "dateSeoul": "2026-10-29",
+  "status": "ready",
+  "selectedModel": "experiments/disk-model-clearance015-01.config.json",
+  "studentExpectationRecord": "data/learning/two-cell-doorway-expectation-01.json",
+  "question": "Can the original cell-center graph report UNREACHABLE for a geometrically feasible assumed disk passage?",
+  "width": 9,
+  "height": 7,
+  "barrierColumn": 4,
+  "openingRows": [2, 3],
+  "start": [1, 3],
+  "goal": [7, 3],
+  "maxExpansions": 100,
+  "tieBreak": "fifo",
+  "cases": [
+    {"id": "smaller-margin-control", "radius": 0.4, "clearance": 0.05},
+    {"id": "selected-margin", "radius": 0.4, "clearance": 0.15}
+  ],
+  "geometry": "Original closed unit-square obstacles and rectangle [0,9]x[0,7], virtual units, contact forbidden. Original planner samples centers (x+0.5,y+0.5), four-neighbor unit edges. No physical dimensions or motion dynamics.",
+  "continuousWitnessWorld": [[1.5,3.5], [1.5,3], [7.5,3], [7.5,3.5]],
+  "aiPriorExpectedChecks": "Both disks fit the 2-wide opening geometrically. The two original gap-center samples y=2.5/3.5 each have only0.5 clearance; selected effective radius0.55 blocks both, control0.45 does not. A supplied midpoint y=3 world polyline should certify feasibility for both with length7 and minimum center clearance1. It is not a continuous shortest-path claim or a sampled-planner output.",
+  "validation": "Compare A* with separate BFS on each configuration mask; audit every center and all world witness segments against original squares/boundary. Preserve failure reason/null/empty path, exact raw result, source hashes and no-overwrite guard. Budget100 exceeds the63-cell graph, separating graph exhaustion from budget failure.",
+  "scope": "Two related cases on one hand-known map, not independent samples; no refinement implementation or physical trial. World geometric length and original grid-move count are distinct quantities.",
+  "attribution": "Student supplies tentative geometric yes and diameter-versus-width rationale before execution. AI proposes modeling-limit question, map, smaller-margin control, witness, protocol, checker, tests, operation and initial interpretation."
+}
