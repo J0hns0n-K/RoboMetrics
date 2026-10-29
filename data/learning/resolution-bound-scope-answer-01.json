@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "questionRecord": "experiments/resolution-bound-check.design.json",
+  "studentResponseVerbatim": "아니",
+  "interpretation": "Guided rejection of inferring fine-graph optimality from an8-unit coarse route alone.",
+  "studentReasonOrProof": null,
+  "notImplied": "Does not assert that a shorter feasible route necessarily exists; no independent proof/code or new experiment.",
+  "scope": "Concept answer following AI lower-bound explanation. Existing algorithms, results and defaults unchanged."
+}

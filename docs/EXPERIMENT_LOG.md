@@ -705,6 +705,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Full test/*.test.mjs101pass including4metric guards, no target seeds. Configured30maps/60policy/18planner/295nodes/66model/12BFS/8520point checks. Validation BigInt30reconstructions/8520points/12BFS/82stage+64returned segments/zero planner plus fixedinput/hash/denominator/prediction/output checks. Unrelated portfolio/ and practice unchanged. Repeated checks not samples.
 - Primary30/valid6/matched2denominators distinct; caps100/200 unequal. Only2comparable successes, no independence/real-workload/general superiority/runtime-energy-storage/physical claim. Next experiments/resolution-prospective-interpretation.design.json asks guided stage-cost explanation; no answer/new experiment yet.
 
+## 2026-10-29 — Bound-scope answer; endpoint-placement task prepared, not executed
+
+- Student **아니** rejects inferring finer-graph optimality from an8-unit coarse route alone; no reason/proof/code supplied. data/learning/resolution-bound-scope-answer-01.json. No new algorithm/result/default/test.
+- AI selects archived prospective trial10/seed20268037, first goal-only invalid case with point-free upper/lower goal candidates and differing stored body-mask validity. experiments/endpoint-placement-choice-01.design.json preserves original rows/start/body/goal and source hash; A(7,2),B(7,4) are offered positions, not student designs yet. Source crop x6..8/y1..5 contains both candidates and adjacent walls.
+- Student placement/reason/protocol/run pending. Original cohort untouched; no endpoint actually moved and no new planner/BFS call. Body-fit validity does not imply route reachability.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

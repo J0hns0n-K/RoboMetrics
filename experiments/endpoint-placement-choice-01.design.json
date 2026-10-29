@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "status": "awaiting-student-goal-placement-choice",
+  "proposalAuthor": "AI assistant",
+  "sourceRaw": {
+    "path": "data/footprint/resolution-quality-prospective-run-01.json",
+    "sha256": "839d229c4c12c0fbda9fb7eeb3645ca348827232a6c447041029332f76a2d9fc"
+  },
+  "sourceValidation": "data/footprint/resolution-quality-prospective-validation-01.json",
+  "sourceCommit": "20f38f9520f1ec984e9eba0baa8e69574a5299ab",
+  "selectedCase": {
+    "trial": 10,
+    "seed": 20268037
+  },
+  "selectionRule": "First archived goal-only-clearance failure with point-free upper/lower neighboring goals and different archived coarse-mask validity; selected by AI after outcomes for a known instructional control.",
+  "originalRows": [
+    ".....#...",
+    ".##......",
+    "..#......",
+    "......#.#",
+    ".........",
+    "..#....#.",
+    ".....#..#"
+  ],
+  "originalStart": [
+    1,
+    3
+  ],
+  "originalGoal": [
+    7,
+    3
+  ],
+  "crop": {
+    "origin": [
+      6,
+      1
+    ],
+    "width": 3,
+    "height": 5,
+    "rowsWithLabels": [
+      "...",
+      ".A.",
+      "#G#",
+      ".B.",
+      ".#."
+    ]
+  },
+  "candidateGoals": {
+    "A": [
+      7,
+      2
+    ],
+    "B": [
+      7,
+      4
+    ]
+  },
+  "body": {
+    "radius": 0.4,
+    "clearance": 0.15,
+    "effectiveRadius": 0.55,
+    "units": "virtual cell-side lengths, not measured hardware"
+  },
+  "question": "도착점을 A와 B 중 어디로 옮기면 몸체와 여유폭 조건을 만족할 것 같아? 가능하면 이유도 한 문장으로 적어 줘.",
+  "aiKnownPlacementReference": {
+    "sourceMask": "sourceRaw.records[9].references.coarse.rows; same world geometry, not a new planner run",
+    "A": "valid body-clearance center",
+    "B": "invalid body-clearance center"
+  },
+  "studentResponseVerbatim": null,
+  "studentRationale": null,
+  "readyProtocol": null,
+  "configuredResults": null,
+  "futureRequirements": "After choice, freeze a new protocol before executing endpoint variants. Keep original obstacles/start/body/margin unchanged; change goal only, preserve parent raw, distinguish endpoint validity from route reachability/budget. No guarantee of route success from a valid endpoint alone.",
+  "scope": "AI-provided known fixture/options after observed24/30 endpoint-invalid outcomes. Student placement choice pending. No original map edited, endpoint moved, new A*/BFS call or physical result."
+}
