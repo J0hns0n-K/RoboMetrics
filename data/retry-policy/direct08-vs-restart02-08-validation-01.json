@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "label": "GUIDED DIRECT-VERSUS-RESTART ACCOUNTING COMPARISON; AI EXECUTION",
+  "dateSeoul": "2026-10-29",
+  "configurationAndSourceCommit": "eaecbdcb2a31f7373f43bb0d1c04cce7af7bf842",
+  "studentPredictionVerbatim": "검토량은 처음부터 예산 8로 한 번 탐색한게 더 적지 않을까?",
+  "forecastScope": "Tentative direct-lower-work expectation only; no exact count, difference or rationale supplied. Known map and regression outcomes were previously available.",
+  "artifacts": {
+    "data/retry-policy/direct08-vs-restart02-08-run-01.json": "3c698d5449b3ec382861d6b4846b0c183ec0878d21b9192d5c75e589a72f2591"
+  },
+  "knownEvidence": {
+    "path": "data/failure-semantics/reachable-goal-budget-control-run-01.json",
+    "sha256": "073f10f6feb46a0632da0d5525b2c3a8bceb94246c4c5ce0406df6d8fac5693f",
+    "directOutcomeMatchesPriorSufficientBudgetCase": true,
+    "firstRestartAttemptMatchesPriorBudget2Failure": true
+  },
+  "checks": {
+    "bothSuccess": true,
+    "sameShortestMoves": 4,
+    "finalSearchResultsIdentical": true,
+    "directAttempts": 1,
+    "restartAttempts": 2,
+    "directExpanded": 8,
+    "restartExpanded": 10,
+    "extraExpandedForRestart": 2,
+    "perPolicyTotalCap": 10,
+    "eachPolicyWithinCap": true,
+    "comparisonStudyExpanded": 18,
+    "studyTotalIsNotOnePolicyBudget": true,
+    "originalBudget2FailurePreserved": true,
+    "fullRestartWithoutStateReuse": true,
+    "registeredDirectionSupportedOnThisCase": true,
+    "existingOutputGuardRejectsBeforePlanning": true,
+    "coreRetryParserMatchPrior29TestSources": true,
+    "fullSuiteRerunForOrchestration": false
+  },
+  "validation": {
+    "operator": "AI assistant",
+    "sourceInputsDirty": false,
+    "workspaceStatus": "M practice/02-planning-budget.mjs",
+    "method": "Committed comparison smoke execution; valid/equal paths, attempt and cumulative-cost arithmetic, prior-case equality, source hashes and immutable-output check. No extra planner calls during validation."
+  },
+  "interpretation": "Direct budget 8 uses 8 examined nodes; a budget-2 failure plus a fresh budget-8 search costs 10, including repeated examination. The direct result equals the final restart result. Supports the student direction on this known deterministic case, not a general claim about all adaptive/resumable or changing-environment planners. The comparison arm 2-to-8 does not replace the earlier chosen 2-to-4 example.",
+  "provenance": "Student supplied a tentative direction within an AI-proposed known-map accounting task. AI supplied method, configuration, runner, execution, validation and initial explanation. One map, two policy arms and three planner calls; no independent new samples or student implementation authorship inferred."
+}

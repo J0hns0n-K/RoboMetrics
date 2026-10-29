@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "label": "AI-OPERATED DIRECT VERSUS RESTART ACCOUNTING; KNOWN FIXED MAP",
+  "configuration": {
+    "schemaVersion": 1,
+    "id": "direct08-versus-restart02-08",
+    "dateSeoul": "2026-10-29",
+    "status": "ready",
+    "mapScenario": "experiments/reachable-goal-budget-control.scenario.json",
+    "algorithm": "astar",
+    "tieBreak": "fifo",
+    "directBudget": 8,
+    "restartInitialBudget": 2,
+    "restartFinalBudget": 8,
+    "maxTotalExpansionsPerPolicy": 10,
+    "studentPredictionVerbatim": "검토량은 처음부터 예산 8로 한 번 탐색한게 더 적지 않을까?",
+    "studentExpectation": "Tentatively expects fewer cumulative examined nodes for the direct budget-8 attempt than an initial budget-2 failure followed by a budget-8 full restart.",
+    "predictionScope": "Direction only; no exact count, numerical difference or rationale supplied.",
+    "controls": "Same fixed map/endpoints, movement/cost/heuristic/neighbors, A* FIFO and completion-attempt budget 8; each strategy has total cap 10. Direct allocates 8, restart allocates 2+8. No search state is reused across restarts.",
+    "measurementRules": "Charge actual examined nodes from every attempt within each policy. Keep the initial failure and success statuses. Report both policies separately and do not treat the sum across comparison arms as one policy budget.",
+    "knownPriorEvidence": "This fixed map, direct success and related restart budgets are already known from prior outputs and AI regression tests. This is guided accounting verification, not a blind new research cohort or independent map sample.",
+    "attribution": "AI proposed/configured the comparison and supplies the runner, execution and validation. Student supplied the quoted tentative direction only; no method/code authorship or independent execution inferred."
+  },
+  "map": {
+    "source": "experiments/reachable-goal-budget-control.scenario.json",
+    "rows": [
+      "S..",
+      "..#",
+      "..G"
+    ]
+  },
+  "direct": {
+    "budget": 8,
+    "result": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "pathLength": 4,
+      "expanded": 8
+    },
+    "totalExpanded": 8
+  },
+  "restart": {
+    "label": "SEPARATE A* RESPONSE POLICY; NOT A FIXED-BUDGET BENCHMARK ROW",
+    "policy": {
+      "initialBudget": 2,
+      "retryBudget": 8,
+      "maxTotalExpansions": 10,
+      "maximumRetries": 1,
+      "tieBreak": "fifo"
+    },
+    "initialBudgetSuccess": false,
+    "retried": true,
+    "attempts": [
+      {
+        "number": 1,
+        "budget": 2,
+        "result": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 2
+        }
+      },
+      {
+        "number": 2,
+        "budget": 8,
+        "result": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 8
+        }
+      }
+    ],
+    "totalExpanded": 10,
+    "totalBudgetAllocated": 10,
+    "finalResult": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "pathLength": 4,
+      "expanded": 8
+    }
+  },
+  "comparison": {
+    "bothSuccess": true,
+    "sameReturnedLength": true,
+    "extraExpandedForRestart": 2,
+    "directUsesLessWork": true,
+    "comparisonStudyTotalExpanded": 18
+  },
+  "execution": {
+    "operator": "AI assistant CLI",
+    "executedAtUTC": "2026-10-29T04:14:36.130Z",
+    "sourceCommit": "eaecbdcb2a31f7373f43bb0d1c04cce7af7bf842",
+    "sourceInputsDirty": false,
+    "sourceHashesGitBlobs": {
+      "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+      "src/retry-policy.mjs": "72729cd2ce9fb2c93a94057a43ee6b9b29bfdf270b73418541adcf6b169e9576",
+      "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+      "scripts/compare-restart-cost.mjs": "ee8058045245122137a2fba4da699047e4daff34bffbba5440129e69c56efa28",
+      "experiments/direct08-vs-restart02-08.config.json": "88488896333c6adbd60862c6d4573f374f8ae258b7a4a14729b924596d8cf5f2",
+      "experiments/reachable-goal-budget-control.scenario.json": "0f054d7efdcceb852c842e3b380d5c8eb6c1513082d56f15571666024c490e02"
+    },
+    "workspaceStatus": "M practice/02-planning-budget.mjs",
+    "node": "v24.22.1",
+    "platform": "win32/x64",
+    "provenance": "Student supplied a tentative direction after seeing prior evidence. AI supplied configuration/method and execution. Costs are per policy; study total is not one policy budget. No new independent map sample."
+  }
+}

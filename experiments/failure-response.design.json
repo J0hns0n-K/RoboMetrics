@@ -62,11 +62,16 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "After message verification, compare cumulative cost of a direct budget-8 attempt and a 2-to-8 restart policy on the known map; obtain the student expectation before that configured comparison.",
+  "nextTask": "Ask for an idea to reduce repeated work across attempts; no state-reuse/resumable implementation choice or mechanism is yet attributed to the student.",
   "assistantEditedDisplayMessage": "예산을 초과했지만 길이 없다는 뜻은 아닙니다. 더 큰 예산으로 다시 탐색하면 길을 찾을 수도 있습니다.",
   "messageEditingScope": "Preserve the meaning while clarifying finding an existing route rather than budget creating a route; no guarantee of success.",
   "messageArtifacts": [
     "data/retry-policy/retry-connected-02-to-04-message-run-01.json",
     "data/retry-policy/retry-connected-02-to-04-message-validation-01.json"
+  ],
+  "studentRestartCostPredictionVerbatim": "검토량은 처음부터 예산 8로 한 번 탐색한게 더 적지 않을까?",
+  "restartCostComparisonArtifacts": [
+    "data/retry-policy/direct08-vs-restart02-08-run-01.json",
+    "data/retry-policy/direct08-vs-restart02-08-validation-01.json"
   ]
 }

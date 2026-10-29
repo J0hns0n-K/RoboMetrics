@@ -412,6 +412,14 @@ Junmo wrote **검토량은 처음부터 예산 8로 한 번 탐색한게 더 적
 
 AI configures the same known connected map and A* FIFO, with completion budget 8 and total cap 10 per strategy. Direct allocates 8; restart allocates 2+8 and does not reuse frontier state. Count all attempts within each strategy separately; comparison-wide total is not a single-policy budget. The known prior map/regression evidence prevents calling this a blind new map study. New CLI/configuration will be committed before evaluation, preserving source hashes and immutable outputs.
 
+## 2026-10-29 Direct/restart configured comparison executed
+
+- AI committed the student tentative direction, configuration and runner in `eaecbdcb2a31f7373f43bb0d1c04cce7af7bf842` before execution. Raw/validation files are `data/retry-policy/direct08-vs-restart02-08-run-01.json` and `direct08-vs-restart02-08-validation-01.json`.
+- Same known map, A* FIFO and completion budget 8: direct succeeds with four moves/8 examined nodes; restart retains a budget-2 failure and then succeeds with four moves/8 more nodes, total 10. Final results/paths are identical. The student's lower-work direction is supported here; no exact count/difference or rationale was supplied.
+- Total cap 10 applies independently to each method. Allocated allowances are 8 versus 2+8; actual comparison-wide study work is 18, not one policy's cost. No auxiliary planner calls were used in validation. All three observed policy calls and their costs remain separate.
+- Verified successful paths, original failure, cumulative arithmetic, prior-case equality, unchanged 29-test core/retry/parser hashes, source integrity and new CLI output refusal. No full-suite rerun or independent new map sample is claimed. This is a known-case accounting check, not a blind research cohort or a judgment of every adaptive/resumable planner.
+- The 2→8 comparison does not replace the earlier 2→4 preference/configuration. Next task: ask how first-attempt information could be handled to reduce repeated work; no student state-reuse design or new implementation is inferred yet.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
