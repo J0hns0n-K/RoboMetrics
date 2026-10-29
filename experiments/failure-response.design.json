@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "bounded-failure-response-guided-design-01",
   "dateSeoul": "2026-10-29",
-  "status": "Student selected one higher-budget retry; concrete retry budget still pending",
+  "status": "Smaller offered increment applied as 2 to 4 for one retry; configuration awaiting committed execution",
   "scope": "Separate single-map learning prototype. Do not change the fixed-budget benchmark or relabel a later retry success as success under the original budget.",
   "inputFields": [
     "success",
@@ -17,8 +17,8 @@
       "id": "retry-once",
       "label": "Increase the budget and make one additional attempt",
       "maximumAdditionalAttempts": 1,
-      "retryBudget": null,
-      "budgetStillToBeChosen": true
+      "retryBudget": 4,
+      "budgetStillToBeChosen": false
     },
     {
       "id": "report-and-wait",
@@ -40,19 +40,21 @@
     "Record total examined nodes across both independent restart attempts; enforce the sum of allocated budgets within a declared total cap."
   ],
   "implementationStatus": "AI implemented src/retry-policy.mjs and six known-map integration controls; all 29 tests pass. Student-configured example awaits retry-budget choice. Existing demo and fixed-budget benchmark are unchanged.",
-  "attribution": "AI supplied the task/options. Student selected one higher-budget retry only; retry budget and a separate rationale are not yet supplied. AI will implement and verify the wrapper. No student code authorship or algorithm improvement is inferred.",
+  "attribution": "Student selected one higher-budget retry and expressed a small-increment preference. AI operationalizes the offered smaller retry budget as 4 while retaining one retry and cap 10. No exact numeric quote, additional retry permission, outcome prediction or student code authorship is inferred.",
   "studentModeChoiceVerbatim": "그럼 예산을 느려 한 번 더 시도하는게 맞는 거 같아",
   "modeNormalization": "Interpreted 느려 as 늘려 in the context of the offered higher-budget retry option; no literal slowdown or retry-budget amount inferred.",
   "proposedExampleParameters": {
     "initialBudget": 2,
-    "retryBudget": null,
+    "retryBudget": 4,
     "maxTotalExpansions": 10,
     "retryBudgetChoices": [
       4,
       8
     ],
-    "proposedBy": "AI-proposed known connected-map learning example; student has not chosen a retry budget.",
+    "proposedBy": "AI proposed initial 2, total cap 10 and options 4/8; user preferred small increments, operationalized as 4 in this context.",
     "mapSource": "experiments/reachable-goal-budget-control.scenario.json"
   },
-  "validationRecord": "data/retry-policy/validation-01.json"
+  "validationRecord": "data/retry-policy/validation-01.json",
+  "studentBudgetStatementVerbatim": "조금씩 늘리자",
+  "budgetOperationalization": "In the immediately preceding 4-or-8 choice, interpret this as the smaller increment, retry budget 4. This is an explicit assistant interpretation, not a literal numeric student response or authorization of repeated retries."
 }

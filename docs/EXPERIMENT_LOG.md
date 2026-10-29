@@ -373,6 +373,12 @@ AI will implement a separate A* wrapper that restarts the same map at most once,
 - The wrapper is separate from core/benchmark and not integrated into the current browser. Each attempt restarts and retains its own budget/result; initial-budget success remains visible and actual work is summed under a declared total cap.
 - Updated `experiments/failure-response.design.json` leaves the retry budget null. Next student choice: 4 or 8 for an AI-proposed initial-2, total-cap-10 example. No example configured by the student's budget choice has been run yet.
 
+## 2026-10-29 Small-increment preference operationalized before execution
+
+- Junmo wrote **조금씩 늘리자** after the immediately preceding 4-or-8 retry-budget choice. Interpret this as the smaller offered increment, 2→4, while retaining one retry and total cap 10. Preserve the phrase; do not turn it into an explicit numerical response or permission for indefinite escalation.
+- New ready configuration: `experiments/retry-connected-02-to-04.config.json`. No student outcome prediction was supplied. The map and related outcomes are previously known regression/example material, so this is a configured demonstration rather than blind new research data.
+- AI added a reproducible CLI that requires committed inputs/sources and a new output name. Existing planner and retry wrapper are unchanged. Record config/source before execution and preserve each attempt and total cost.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

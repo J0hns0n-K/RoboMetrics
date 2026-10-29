@@ -1,0 +1,19 @@
+{
+  "id": "retry-connected-02-to-04",
+  "dateSeoul": "2026-10-29",
+  "status": "ready",
+  "mapScenario": "experiments/reachable-goal-budget-control.scenario.json",
+  "policy": {
+    "initialBudget": 2,
+    "retryBudget": 4,
+    "maxTotalExpansions": 10,
+    "tieBreak": "fifo"
+  },
+  "studentModeChoiceVerbatim": "그럼 예산을 느려 한 번 더 시도하는게 맞는 거 같아",
+  "studentBudgetStatementVerbatim": "조금씩 늘리자",
+  "assistantOperationalization": "In the immediately preceding 4-or-8 choice, interpret this as the smaller increment, retry budget 4. This is an explicit assistant interpretation, not a literal numeric student response or authorization of repeated retries.",
+  "studentOutcomePrediction": null,
+  "knownPriorEvidence": "The same map and related budget outcomes already appear in API demonstrations and AI regression tests. This is a configured policy demonstration, not a blind new research forecast or independent map sample.",
+  "attribution": "Student selected one higher-budget retry and expressed a small-increment preference. AI operationalizes the offered smaller retry budget as 4 while retaining one retry and cap 10. No exact numeric quote, additional retry permission, outcome prediction or student code authorship is inferred.",
+  "measurementRules": "Preserve both attempt outcomes and sum their actual examined nodes. Retain initial-budget success separately. Stop after at most one additional attempt even if the total cap has unused allowance. Do not modify fixed-budget benchmark rows or the original datasets."
+}
