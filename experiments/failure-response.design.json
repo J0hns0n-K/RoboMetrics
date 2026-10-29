@@ -39,7 +39,7 @@
     "Bound any automatic retry; do not invent an unchosen retry budget or guarantee success.",
     "Record total examined nodes across both independent restart attempts; enforce the sum of allocated budgets within a declared total cap."
   ],
-  "implementationStatus": "Not implemented or executed; no current demo behavior has changed.",
+  "implementationStatus": "AI implemented src/retry-policy.mjs and six known-map integration controls; all 29 tests pass. Student-configured example awaits retry-budget choice. Existing demo and fixed-budget benchmark are unchanged.",
   "attribution": "AI supplied the task/options. Student selected one higher-budget retry only; retry budget and a separate rationale are not yet supplied. AI will implement and verify the wrapper. No student code authorship or algorithm improvement is inferred.",
   "studentModeChoiceVerbatim": "그럼 예산을 느려 한 번 더 시도하는게 맞는 거 같아",
   "modeNormalization": "Interpreted 느려 as 늘려 in the context of the offered higher-budget retry option; no literal slowdown or retry-budget amount inferred.",
@@ -53,5 +53,6 @@
     ],
     "proposedBy": "AI-proposed known connected-map learning example; student has not chosen a retry budget.",
     "mapSource": "experiments/reachable-goal-budget-control.scenario.json"
-  }
+  },
+  "validationRecord": "data/retry-policy/validation-01.json"
 }

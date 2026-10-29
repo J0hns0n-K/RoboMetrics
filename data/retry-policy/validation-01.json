@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "label": "AI IMPLEMENTATION AND REGRESSION VALIDATION OF STUDENT-SELECTED RETRY MODE",
+  "dateSeoul": "2026-10-29",
+  "validatedSourceCommit": "c9ec36cca7b0e86d6c55fd0445cd6a01a88a73b5",
+  "modeChoiceCommit": "f37ed356e5dc9a9d2863f537b832384670e63aa8",
+  "studentModeChoiceVerbatim": "그럼 예산을 느려 한 번 더 시도하는게 맞는 거 같아",
+  "normalizedMode": "retry-once",
+  "studentRetryBudget": null,
+  "implementation": {
+    "module": "src/retry-policy.mjs",
+    "test": "test/retry-policy.test.mjs",
+    "operator": "AI assistant",
+    "maximumAdditionalAttempts": 1,
+    "totalCapRequired": true,
+    "attemptAccounting": "Preserve each plan result, per-attempt budget and initial-budget success; sum actual examined nodes across independent restarts.",
+    "fixedBudgetBenchmarkModified": false,
+    "demoIntegrated": false,
+    "studentConfiguredExampleExecuted": false
+  },
+  "tests": {
+    "total": 29,
+    "passed": 29,
+    "failed": 0,
+    "newIntegrationTests": 6,
+    "knownFixtureChecks": [
+      "Stop on initial success",
+      "Do not retry UNREACHABLE",
+      "Retain original failure and sum cost on retry success",
+      "Stop after exactly one failed retry",
+      "Reject nonfinite/nonincreasing/over-cap budgets",
+      "Apply chosen A* tie rule on first attempt and retry"
+    ],
+    "note": "Known-map regression fixtures are AI-selected and are not student-configured experiments or new independent samples. TAP was captured before committing sources; normalized working files were verified identical to committed Git blobs before archiving."
+  },
+  "sourceInputsDirty": false,
+  "workspaceStatus": "M practice/02-planning-budget.mjs\n?? data/retry-policy/",
+  "sourceHashesGitBlobs": {
+    "scripts/build-learning-trace.mjs": "5430deb4b6a7b25cbbb7e28060554436b867961bb4a1b083a020ae204c519104",
+    "scripts/compare-fixed-ties.mjs": "0af9ce44b2fb4113b5184fa3260fcf06c21f3c6d4aff6f83ca4bb7edef832028",
+    "scripts/compare-ties.mjs": "7bf5c591d5646034798eddf84ea9e09480adf3b22f4d8c7b6e1c4293bddeecd1",
+    "scripts/run-matrix.mjs": "ce5fd3ac918d7e69d6a9a7fc3965bc8d7d5622ba1ccefec97edac91a8ddf24a6",
+    "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+    "scripts/serve.mjs": "e040e1c5b14f83c645d345623711654921731c80835bf37067f2d0502b23b500",
+    "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "src/retry-policy.mjs": "72729cd2ce9fb2c93a94057a43ee6b9b29bfdf270b73418541adcf6b169e9576",
+    "src/ui.mjs": "83449f56a4844bb877272fb8050d72bf7364df1214eb236b3420c5f3f8f71c38",
+    "test/audit.test.mjs": "2aaba9e05b6fa01ba0fbe5d7bfdefa82e8e1dce414fe00e477e09e1fd9b7be27",
+    "test/core.test.mjs": "b75b834a103758ffbd780d3c842be93189294d6e6600fa46fd0096b66510c795",
+    "test/counterexample.test.mjs": "fd020e579decc69a6ea99c69d1490c955b2d6ee3c562e62609d5bc5ae0f22265",
+    "test/demo-rule.test.mjs": "74e8a2d7653ea6e0d108292ad8b57d3bff3272818c862d8a4bd7d151078a20e7",
+    "test/fixed-ties.test.mjs": "24bedf6106fae2cdab14006154a2a9c086befc305bd6d76f27c8fc1bc0201110",
+    "test/matrix.test.mjs": "20d10863f15bb1bd713fce6914265254b7222376c60bfcb35672c13aefbe73ec",
+    "test/retry-policy.test.mjs": "8b3d8f20311854ecaae219d94438991d21b1bbf03dac4af3a0889fd2d3a22ccb",
+    "test/tie-break.test.mjs": "7e4405e0f817c56ac6f7e8018193deaa80117f03d1b5077886bee52f2c05d256"
+  },
+  "artifacts": {
+    "data/retry-policy/retry-policy-tests-01.tap": "ef2df8e6a2a3f17e1879a8574e6014e3d4412ade177e4530e5d504001534b77d"
+  },
+  "provenance": "Student selected one higher-budget retry from AI-proposed options. AI implemented the wrapper and tests and ran validation. No student module/test authorship or numeric retry-budget choice is inferred. The concrete example awaits the student budget choice, outside the unchanged fixed-budget benchmark."
+}

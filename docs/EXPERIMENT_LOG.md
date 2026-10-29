@@ -365,6 +365,14 @@ Junmo wrote **그럼 예산을 느려 한 번 더 시도하는게 맞는 거 같
 
 AI will implement a separate A* wrapper that restarts the same map at most once, only after BUDGET_EXCEEDED; first-attempt success and each attempt's budget/result remain visible, with cumulative work bounded and recorded. It must not retry an already proven UNREACHABLE outcome or modify the fixed-budget benchmark. Known-map regression settings are AI test fixtures, not student-selected experiment parameters. For the next concrete example, AI proposes initial budget 2, retry 4 or 8 and total cap 10; the student's retry value is still pending.
 
+## 2026-10-29 Separate retry module implemented and regression-checked
+
+- AI implemented `src/retry-policy.mjs` and six known-map integration controls, committed as `c9ec36cca7b0e86d6c55fd0445cd6a01a88a73b5`. The student-selected response mode is the only new student design choice; no numeric retry budget or code authorship is inferred.
+- All 29 tests pass. Controls verify first-success stop, no retry after exhaustive UNREACHABLE, original failure retention, summed actual work on retry success, termination after one failed retry, budget validation and consistent tie mode on both attempts.
+- TAP and canonical source hashes are archived in `data/retry-policy/`. Regression code was checked identical to committed blobs before archiving. Test budgets/layouts are AI-selected known controls, not a student-configured new experiment or independent map samples.
+- The wrapper is separate from core/benchmark and not integrated into the current browser. Each attempt restarts and retains its own budget/result; initial-budget success remains visible and actual work is summed under a declared total cap.
+- Updated `experiments/failure-response.design.json` leaves the retry budget null. Next student choice: 4 or 8 for an AI-proposed initial-2, total-cap-10 example. No example configured by the student's budget choice has been run yet.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
