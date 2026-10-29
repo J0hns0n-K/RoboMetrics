@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "label": "AI-OPERATED CHECK OF GUIDED STUDENT ONE-FIELD EDIT; ARCHIVED RESULTS ONLY",
+  "dateSeoul": "2026-10-29",
+  "executedAtUTC": "2026-10-29T01:49:27.736Z",
+  "sourceCommit": "3bd0cf1828c0f4855a7a58e378b94086bcae8863",
+  "scaffoldCommit": "2d99d225c8f3e168d8d14bad9b9af62b4aadc2db",
+  "studentSaveReport": "저장됨",
+  "studentChange": {
+    "file": "practice/03-failure-reason.mjs",
+    "line": 8,
+    "from": "____",
+    "to": "reason",
+    "onlyChangeAgainstScaffold": true,
+    "scope": "Guided selection and manual saving of one field name; AI wrote the function, branches, messages and loading harness."
+  },
+  "execution": {
+    "operator": "AI assistant",
+    "node": "v24.22.1",
+    "platform": "win32/x64",
+    "exitCode": 0,
+    "sourceInputsDirty": false,
+    "workspaceStatus": "M practice/02-planning-budget.mjs\n?? data/learning/practice-03-run-01.stdout.txt",
+    "plannerCalled": false,
+    "fullTestSuiteRerun": false
+  },
+  "sourceHashesGitBlobs": {
+    "practice/03-failure-reason.mjs": "493dd6c4f12efb02041e9d758ca1bbf065c53c99d9e2da7c192593818eb133fd"
+  },
+  "originalDataHashes": {
+    "data/failure-semantics/unreachable-goal-run-01.json": "9f400f9faa8c9cc5af21471e6b6d7e5e74068f80008dc4828add74ab43887f92",
+    "data/failure-semantics/reachable-goal-budget-control-run-01.json": "073f10f6feb46a0632da0d5525b2c3a8bceb94246c4c5ce0406df6d8fac5693f"
+  },
+  "artifacts": {
+    "data/learning/practice-03-run-01.stdout.txt": "f6e245df16461aa49009de43011581f70b047314bd501911b98af50de286e13b"
+  },
+  "cases": [
+    {
+      "map": "목표가 고립된 지도",
+      "budget": 2,
+      "result": {
+        "success": false,
+        "reason": "BUDGET_EXCEEDED",
+        "path": [],
+        "pathLength": null,
+        "expanded": 2,
+        "relativeLength": null
+      },
+      "classification": "예산 제한으로 아직 길의 유무를 모름"
+    },
+    {
+      "map": "목표에 연결된 지도",
+      "budget": 2,
+      "result": {
+        "success": false,
+        "reason": "BUDGET_EXCEEDED",
+        "path": [],
+        "pathLength": null,
+        "expanded": 2,
+        "relativeLength": null
+      },
+      "classification": "예산 제한으로 아직 길의 유무를 모름"
+    },
+    {
+      "map": "목표가 고립된 지도",
+      "budget": 300,
+      "result": {
+        "success": false,
+        "reason": "UNREACHABLE",
+        "path": [],
+        "pathLength": null,
+        "expanded": 6,
+        "relativeLength": null
+      },
+      "classification": "현재 지도와 이동 규칙에서 길이 없음"
+    },
+    {
+      "map": "목표에 연결된 지도",
+      "budget": 300,
+      "result": {
+        "success": true,
+        "reason": null,
+        "path": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "pathLength": 4,
+        "expanded": 8,
+        "relativeLength": 1
+      },
+      "classification": "경로 찾음"
+    }
+  ],
+  "checks": {
+    "classifiedCases": 4,
+    "unclassifiedCases": 0,
+    "sameBudgetFailuresAcrossConnectivityShareClassification": true,
+    "unreachableAndBudgetFailuresAreDistinct": true,
+    "successIsDistinctFromBothFailures": true
+  },
+  "provenance": "User reported saving and the working diff confirms only the one field changed from the AI scaffold. AI recorded the edit before operating the exercise and checking the existing four cases. No independent classifier/algorithm authorship, student execution, production fix, new map sample or new planning experiment is inferred."
+}

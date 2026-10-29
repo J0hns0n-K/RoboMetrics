@@ -329,6 +329,14 @@ Record this as a guided post-result interpretation supported by the connected ma
 
 AI prepared `practice/03-failure-reason.mjs`, an intentionally incomplete exercise reading the four archived A* map/budget cases without invoking a planner. Student task: choose the failure-reason field name in one placeholder and save. Function branches, messages and file loading are AI-authored. No student edit, save or exercise execution is yet confirmed; the prospective one-field edit must not be labeled an independent classifier implementation.
 
+## 2026-10-29 Guided field edit observed, committed and exercised
+
+- User reported **저장됨**; direct diff confirms only `const fieldName = '____';`→`const fieldName = 'reason';` in `practice/03-failure-reason.mjs`. All other scaffold code matches the AI-provided version. The edit was recorded first in `3bd0cf1828c0f4855a7a58e378b94086bcae8863` by the AI recorder.
+- AI executed the committed practice file and read the four archived A* results, without invoking a planner. Both budget-exceeded cases, despite different map connectivity, share a classification; unreachable and success have their own classifications. No unclassified result remains.
+- Record: `data/learning/practice-03-run-01.json`; exact output: `.stdout.txt`. Source/blob/data/output hashes, actual diff scope, operator and checks are retained. Existing source datasets are unchanged and no new independent map trial or full-suite test run is claimed.
+- Student contribution is the guided one-field choice and actual save. Function, conditional branches, messages, file loading and execution/validation are AI support, not student implementation of a new classifier or algorithm. Production core and UI remain unchanged; unrelated practice-02 edit was not staged.
+- Next student task: explain why success=false alone cannot distinguish budget exhaustion from unreachable failure, whereas reading the failure-reason field can. That rationale is not yet received.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
