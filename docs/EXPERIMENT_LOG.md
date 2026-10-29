@@ -669,6 +669,13 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Protocol experiments/resolution-policy-controls-01.protocol.json, method docs/RESOLUTION_POLICY_KR.md, raw/validation data/footprint/resolution-policy-controls-*.json. Full86tests pass including7new policy controls. Configured4policy/5planner/88expansions/5BFS; validation5BFS/46segments/zero planner calls plus source/test/cost/cap/output checks. Caps100 direct versus200 staged explicit, not equal-total-budget success study.
 - No universal cost, fine-route-quality equivalence, continuous optimum, timing/energy/storage or physical result. Next experiments/resolution-policy-mix-calculation.design.json asks hypothetical one-empty/one-doorway totals; no student answer, observed workload or new planner run yet.
 
+## 2026-10-29 — Hypothetical mix accounting, no new planner experiment
+
+- Student “몰라” supplies no equal-mix arithmetic; AI provided41/47. Student then “어” affirmed the guided direction that more empty visits favors coarse-first, with no reason/count/proof. Exact context data/learning/resolution-mix-direction-01.json.
+- Analysis inputs committed in fe06c5b before weighting archived control648550c4b27725ee1f756d42f3d813304e3b8714. Protocol experiments/resolution-policy-mix-01.analysis.json; derived/validation data/footprint/resolution-policy-mix-*.json. Hypothetical empty:doorway1:1 gives always-fine/coarse-first41/47;2:1 gives54/54;3:1 gives67/61. Difference12D−6E implies lower coarse-first total iff E>2D for these exact two costs only.
+- Weighted products checked by repeated addition and three hand-known pairs; source/raw/manifest and unchanged code hashes bound. New maps/planner/BFS/full-suite executions0. No additional samples or measured environment distribution; original unequal policy caps100/200 remain explicit.
+- AI supplies weights/calculation/algebra/validation, student directional answer only. Next experiments/resolution-policy-followup.design.json asks unfiltered versus fine-graph-reachable-only new-cohort scope; no answer, new seeds/maps or results yet.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

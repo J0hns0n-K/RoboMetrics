@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "label": "HYPOTHETICAL REWEIGHTING OF TWO ARCHIVED KNOWN LAYOUTS; NO NEW PLANNER EXPERIMENT",
+  "analysisInput": "experiments/resolution-policy-mix-01.analysis.json",
+  "analysisProtocol": {
+    "schemaVersion": 1,
+    "id": "resolution-policy-mix-01",
+    "dateSeoul": "2026-10-29",
+    "status": "ready",
+    "type": "deterministic weighted arithmetic on archived known controls, not a planner experiment",
+    "sourceProtocol": "experiments/resolution-policy-controls-01.protocol.json",
+    "sourceRaw": "data/footprint/resolution-policy-controls-run-01.json",
+    "sourceValidation": "data/footprint/resolution-policy-controls-validation-01.json",
+    "studentResponseRecord": "data/learning/resolution-mix-direction-01.json",
+    "hypotheticalVisits": [
+      {
+        "empty": 1,
+        "doorway": 1
+      },
+      {
+        "empty": 2,
+        "doorway": 1
+      },
+      {
+        "empty": 3,
+        "doorway": 1
+      }
+    ],
+    "formulas": {
+      "alwaysFine": "13*empty + 28*doorway",
+      "coarseFirst": "7*empty + 40*doorway",
+      "coarseMinusFine": "12*doorway - 6*empty"
+    },
+    "validation": "Use per-layout counts from the exact archived raw records and verify their manifest hash and source commit. Independently check weighted sums/differences, preserve hypothetical labels, bind analysis inputs and source bytes. No new A*/BFS calls or full-suite repeat.",
+    "attribution": "Student gave affirmative directional response after AI equal-mix explanation, without reason/count. AI selects these frequencies and supplies all arithmetic/formulas/threshold/validation.",
+    "scope": "Reweight two known layouts only. No new maps, sampled workload, independent trials, measured practical benefit, equal-total-budget success comparison or physical/runtime-energy claim."
+  },
+  "sourceControlCommit": "648550c4b27725ee1f756d42f3d813304e3b8714",
+  "sourceRaw": {
+    "path": "data/footprint/resolution-policy-controls-run-01.json",
+    "sha256": "ba8352ff591095efd5b8da604844f50ac58c283a5e59554070274989e435ab00"
+  },
+  "sourceValidation": "data/footprint/resolution-policy-controls-validation-01.json",
+  "perLayoutExaminedCosts": {
+    "empty": {
+      "always-fine": 13,
+      "coarse-first": 7
+    },
+    "doorway": {
+      "always-fine": 28,
+      "coarse-first": 40
+    }
+  },
+  "scenarios": [
+    {
+      "hypotheticalVisits": {
+        "empty": 1,
+        "doorway": 1
+      },
+      "totalVisits": 2,
+      "emptyFraction": 0.5,
+      "totals": {
+        "always-fine": 41,
+        "coarse-first": 47
+      },
+      "coarseMinusFine": 6,
+      "lowerExaminedTotal": "always-fine"
+    },
+    {
+      "hypotheticalVisits": {
+        "empty": 2,
+        "doorway": 1
+      },
+      "totalVisits": 3,
+      "emptyFraction": 0.6666666666666666,
+      "totals": {
+        "always-fine": 54,
+        "coarse-first": 54
+      },
+      "coarseMinusFine": 0,
+      "lowerExaminedTotal": "tie"
+    },
+    {
+      "hypotheticalVisits": {
+        "empty": 3,
+        "doorway": 1
+      },
+      "totalVisits": 4,
+      "emptyFraction": 0.75,
+      "totals": {
+        "always-fine": 67,
+        "coarse-first": 61
+      },
+      "coarseMinusFine": -6,
+      "lowerExaminedTotal": "coarse-first"
+    }
+  ],
+  "conditionalAlgebra": {
+    "alwaysFine": "13*E+28*D",
+    "coarseFirst": "7*E+40*D",
+    "coarseMinusFine": "12*D-6*E",
+    "coarseFirstLowerCost": "E>2*D",
+    "tie": "E=2*D",
+    "scope": "Only reweighting these exact two layout costs, with hypothetical visit counts E,D. Not a measured or universal map-distribution threshold."
+  },
+  "execution": {
+    "operator": "AI assistant CLI",
+    "calculatedAtUTC": "2026-10-29T10:47:53.587Z",
+    "sourceCommit": "fe06c5bfcadef48536447588109c9175503c7061",
+    "sourceHashesGitBlobs": {
+      "experiments/resolution-policy-mix-01.analysis.json": "e729930c89f3401777a0bd9a686eb89f19b4d2ad564c07f57df1e722428fcda5",
+      "experiments/resolution-policy-controls-01.protocol.json": "1c3fd8246b94265714318b7757228438ba3cde461b6eb7fc59d733024eb91367",
+      "data/footprint/resolution-policy-controls-run-01.json": "ba8352ff591095efd5b8da604844f50ac58c283a5e59554070274989e435ab00",
+      "data/footprint/resolution-policy-controls-validation-01.json": "561ddf1e71a8368fccbd6e06ec92157b8c2e802c3bdde4c1d0ff49c04b102511",
+      "data/learning/resolution-mix-direction-01.json": "40886799b794db72789c4d8664317cd3c19a24f47627a60a0de3721ad3fd15ae"
+    },
+    "node": "v24.22.1",
+    "newPlannerCalls": 0,
+    "newBfsCalls": 0,
+    "newMaps": 0,
+    "fullSuiteRerun": false,
+    "method": "Exact weighted integer sums, differences and independent repeated-addition check using saved counts; no planning modules executed."
+  },
+  "attribution": "Student gave affirmative directional response after AI equal-mix explanation, without reason/count. AI selects these frequencies and supplies all arithmetic/formulas/threshold/validation.",
+  "scope": "Reweight two known layouts only. No new maps, sampled workload, independent trials, measured practical benefit, equal-total-budget success comparison or physical/runtime-energy claim."
+}

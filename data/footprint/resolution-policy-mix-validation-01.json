@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "validatedBy": "AI assistant CLI",
+  "validatedAtUTC": "2026-10-29T10:47:53.859Z",
+  "sourceCommit": "fe06c5bfcadef48536447588109c9175503c7061",
+  "analysisInput": "experiments/resolution-policy-mix-01.analysis.json",
+  "derived": {
+    "path": "data/footprint/resolution-policy-mix-derived-01.json",
+    "sha256": "a683b414ad2ffa70ae23025c8228d7f79bb7e0bf9b0ea49f1e2ff35ad3055109"
+  },
+  "sourceControlCommit": "648550c4b27725ee1f756d42f3d813304e3b8714",
+  "sourceHashesGitBlobs": {
+    "experiments/resolution-policy-mix-01.analysis.json": "e729930c89f3401777a0bd9a686eb89f19b4d2ad564c07f57df1e722428fcda5",
+    "experiments/resolution-policy-controls-01.protocol.json": "1c3fd8246b94265714318b7757228438ba3cde461b6eb7fc59d733024eb91367",
+    "data/footprint/resolution-policy-controls-run-01.json": "ba8352ff591095efd5b8da604844f50ac58c283a5e59554070274989e435ab00",
+    "data/footprint/resolution-policy-controls-validation-01.json": "561ddf1e71a8368fccbd6e06ec92157b8c2e802c3bdde4c1d0ff49c04b102511",
+    "data/learning/resolution-mix-direction-01.json": "40886799b794db72789c4d8664317cd3c19a24f47627a60a0de3721ad3fd15ae"
+  },
+  "checks": {
+    "archivedRawMatchesOriginalValidationHash": true,
+    "sourceInputsCommittedBeforeCalculation": true,
+    "underlyingPolicyCoreAndGeometryHashesUnchanged": true,
+    "allInputsFromVerifiedFullStageCosts": true,
+    "exactWeightedSumsMatchRepeatedAddition": true,
+    "handComputedThreePairsMatch": true,
+    "conditionalDifferenceAndThresholdAgree": true,
+    "studentDirectionSeparateFromAssistantArithmetic": true,
+    "hypotheticalCountsNotClaimedObserved": true,
+    "noNewPlannerBfsOrMapGeneration": true,
+    "newOutputNamesPreflightedAndExclusiveWrites": true
+  },
+  "results": [
+    {
+      "hypotheticalVisits": {
+        "empty": 1,
+        "doorway": 1
+      },
+      "totals": {
+        "always-fine": 41,
+        "coarse-first": 47
+      },
+      "coarseMinusFine": 6
+    },
+    {
+      "hypotheticalVisits": {
+        "empty": 2,
+        "doorway": 1
+      },
+      "totals": {
+        "always-fine": 54,
+        "coarse-first": 54
+      },
+      "coarseMinusFine": 0
+    },
+    {
+      "hypotheticalVisits": {
+        "empty": 3,
+        "doorway": 1
+      },
+      "totals": {
+        "always-fine": 67,
+        "coarse-first": 61
+      },
+      "coarseMinusFine": -6
+    }
+  ],
+  "newPlannerCalls": 0,
+  "newBfsCalls": 0,
+  "newMaps": 0,
+  "fullSuiteRerun": false,
+  "existingCodeTests": {
+    "manifest": "data/footprint/resolution-policy-controls-validation-01.json",
+    "passed": 86,
+    "rerun": false,
+    "scope": "Original control source/protocol and86-test record retained; arithmetic-only analysis, no new test-suite execution."
+  },
+  "limitations": [
+    "Only two archived known layouts; changing weights is not a new independent cohort or observed workload distribution.",
+    "Conditional E>2D threshold follows fixed13/7/28/40 costs only; no general deployment threshold or universal policy advantage.",
+    "Original per-stage100 allowances and maximum caps100/200 remain unequal; no equal-total-budget success comparison.",
+    "Node counts exclude construction, validation, BFS, storage and elapsed time/energy; no physical experiment.",
+    "Student supplied guided affirmative direction only; equal-mix and subsequent arithmetic/algebra are AI support."
+  ],
+  "unrelatedLocalChangePreserved": "practice/02-planning-budget.mjs"
+}
