@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "executedAtUTC": "2026-10-29T15:41:49.849Z",
+  "userRetryRequestVerbatim": "다시해",
+  "operator": "AI assistant CLI",
+  "sourceCommit": "624e0de131136a584e88eae85b704c8cd37a86aa",
+  "practiceFile": {
+    "path": "practice/04-goal-placement.mjs",
+    "sha256GitBlob": "275de0f6afe49d6756053f5fd0aae4f49760644d1908fde0adb12342b91d005b",
+    "committedAtRun": true
+  },
+  "baselineInput": {
+    "goal": [
+      7,
+      3
+    ],
+    "mapSource": "data/footprint/resolution-quality-prospective-run-01.json",
+    "trial": 10,
+    "bodyModel": "experiments/disk-model-clearance015-01.config.json"
+  },
+  "baselineOutput": "도착점만 바꾸는 안내된 연습입니다. 원래 실험 자료는 수정하거나 덮어쓰지 않습니다.\n┌─────────┬───────┬──────────────────────────────┬─────────────┬──────────┐\n│ (index) │ goal  │ result                       │ worldLength │ examined │\n├─────────┼───────┼──────────────────────────────┼─────────────┼──────────┤\n│ 0       │ '7,3' │ 'INVALID_ENDPOINT_CLEARANCE' │ null        │ 0        │\n└─────────┴───────┴──────────────────────────────┴─────────────┴──────────┘\n",
+  "referenceValidation": "data/footprint/endpoint-placement-controls-validation-01.json",
+  "purpose": "Verify the default originalG exercise before opening it for a guided manual coordinate edit.",
+  "studentEditVerified": false,
+  "studentExecutionVerified": false,
+  "nextGuidedEdit": {
+    "from": [
+      7,
+      3
+    ],
+    "to": [
+      7,
+      2
+    ]
+  },
+  "fullSuiteRerun": false,
+  "scope": "AI setup check, not new research maps/data or student execution. A was previously explained and tested by AI; a later manual edit is guided parameter transcription, not independent algorithm or location discovery."
+}

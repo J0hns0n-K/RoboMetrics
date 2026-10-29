@@ -718,6 +718,11 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Configured3planner/78nodes/7model/2BFS/852point checks; validation852points/3goal distances/2BFS/36stage+36returned segments/zero planner, originalG/mask/source/TAP/output checks. Prior101tests preserved/not rerun, new harness syntax/configured checks passed. No physical/time-energy/storage claim.
 - Next practice/04-goal-placement.mjs is AI-provided guided coordinate edit after explanation; student edit/run pending. No student design/code/operation inferred and original30failures unchanged.
 
+## 2026-10-30 — Guided practice04 setup resumed, not a new research experiment
+
+- User requested 다시해. AI checked prior raw/test hashes and links, preserved Oct29G/A/B raw evidence, and ran the now-committed practice04 baseline with original goal[7,3]. Output INVALID_ENDPOINT_CLEARANCE is expected. Record data/learning/practice-04-setup-01.json includes source/hash/operator/stdout.
+- Student edit/run not yet verified; next guided change is goal[7,2] after AI provided A reference. No algorithm/default/new-map or full-suite change. Local practice02/portfolio work preserved.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
