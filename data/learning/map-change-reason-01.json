@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "recordType": "guided conceptual response; not experiment output",
+  "recordedBy": "AI assistant from user chat",
+  "contextRevision": "97b3ec407244581b1574cfe1bb1c6812aff372ea",
+  "priorRecord": "data/learning/map-change-choice-01.json",
+  "question": "새 장애물이 예전 경로 위에 생겼는데, 그 경로를 그대로 따라가면 어떤 문제가 생길까?",
+  "studentResponseVerbatim": "이미 간 예전 경로에 장애물이 생기면 오류가 생길거야",
+  "assessmentByAI": "Student anticipates an unspecified error, but says already traversed route. Do not silently rewrite this as a precise account of a future-path blockage, collision or observed software failure.",
+  "clarificationByAI": "For a robot continuing toward the goal without backtracking, a new obstacle behind it need not block the remaining route. An obstacle on a future segment can invalidate that segment. Current position and remaining path matter; this is conceptual guidance, not physical evidence.",
+  "attributionLimits": "AI supplied the question and clarification. Student supplied the quoted concern only, not a concrete revalidation algorithm, implementation or independently observed failure.",
+  "nextTask": {
+    "author": "AI assistant",
+    "scenario": "출발 — A — 로봇 → B — 목표",
+    "assumptions": "The robot moves toward the goal on the right and does not return along its already traveled route.",
+    "question": "A와 B 중 어느 곳에 새 벽이 생기면 앞으로 갈 길을 직접 막을까?",
+    "studentResponse": null
+  },
+  "newExperimentPerformed": false,
+  "codeChanged": false
+}

@@ -447,6 +447,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - AI source review confirms `createAStarSession` copies the initial map and intentionally ignores later caller edits. Existing regression and manifest support snapshot isolation, not automatic change detection or dynamic replanning. Canonical module/test hashes were checked against the prior manifest; no tests or planner runs repeated.
 - Next task requests the student's own reason for rechecking when an obstacle appears on the old route. No changed-map experiment, safety mechanism or physical result claimed. Historical raw outputs and learning records preserved.
 
+## 2026-10-29 — Clarifying already-traveled versus remaining route
+
+- Student reason response: **이미 간 예전 경로에 장애물이 생기면 오류가 생길거야**. `data/learning/map-change-reason-01.json` preserves the exact statement, prompt, source context and ambiguity. Unspecified error is a conceptual concern, not a measured software error or collision.
+- AI clarified the distinction: for a robot continuing forward without returning, a wall behind it need not block the remaining route; an obstacle on a future segment can invalidate that segment. Do not attribute this clarification to the student.
+- Next AI-proposed conceptual exercise: departure — A — robot → B — goal, forward only; ask which new wall directly blocks the remaining route. Student response pending; no experiment, code/method change or test rerun. Prior raw records/manifests remain immutable.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

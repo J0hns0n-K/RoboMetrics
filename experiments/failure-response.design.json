@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student selected rechecking the changed map (option 2); ask for a one-sentence reason about relying on an old route after a new obstacle appears. Reason pending; no changed-map experiment or implementation yet.",
+  "nextTask": "Clarify already-traversed versus remaining route using departure-A-robot-B-goal and forward-only motion; student A/B choice pending. No changed-map experiment or implementation.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -82,5 +82,6 @@
   "restartCostComparisonArtifacts": [
     "data/retry-policy/direct08-vs-restart02-08-run-01.json",
     "data/retry-policy/direct08-vs-restart02-08-validation-01.json"
-  ]
+  ],
+  "studentMapChangeReasonRecord": "data/learning/map-change-reason-01.json"
 }
