@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student chose B in the forward-only location exercise; ask for minimum remaining moves from R on the AI-proposed 5x2 changed-map detour. Prediction and run pending.",
+  "nextTask": "Student predicted 4 remaining moves from current R. Commit ready scenario/source and verify old remaining-path invalidation plus fresh static-map planning; result pending.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -85,5 +85,6 @@
   ],
   "studentMapChangeReasonRecord": "data/learning/map-change-reason-01.json",
   "studentRemainingRouteLocationRecord": "data/learning/remaining-route-location-01.json",
-  "changedMapDraft": "experiments/changed-map-remaining-route.design.json"
+  "changedMapDraft": "experiments/changed-map-remaining-route.design.json",
+  "changedMapReadyScenario": "experiments/changed-map-current-position-detour-01.scenario.json"
 }

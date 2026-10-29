@@ -459,6 +459,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - AI prepared `experiments/changed-map-remaining-route.design.json`: two-row 5×2 grid, original S behind current R, new wall on the old remaining route and G ahead. Four-neighbor movement permits a detour; the next forecast concerns minimum moves from R, not original S. Draft status, student prediction and results remain pending.
 - Proposed later check: old remaining-path validation on the changed map and fresh A* from the current position. No new execution, dynamic incremental planner, motion controller or physical measurement. Documentation/input-only change; historical evidence preserved.
 
+## 2026-10-29 — Remaining-length forecast registered before execution
+
+- Student replied **4번** to minimum remaining moves from current R to G. Ready input: `experiments/changed-map-current-position-detour-01.scenario.json`, derived from the preserved draft. Prediction concerns length only, not an explicit route, search work or method/code authorship.
+- AI map/control: 5×2, original departure (0,0), current position (2,0), G (4,0); only (3,0) changes to blocked. Four-neighbor unit cost. Fresh A* FIFO budget 30 starts at R. Validate the old remaining path separately from planner failure reasons and check fresh distance with separate BFS. Protocol in `docs/CURRENT_POSITION_REPLAN_KR.md`.
+- AI runner source syntax checked. Two hand-known BFS controls plus full suite pass: 37 tests, zero failures; TAP in `data/map-updates/current-position-detour-tests-01.tap`. Core/parser/resume algorithms unchanged. This archive precedes configured execution; source and ready input will be committed first. No changed-map outcome claimed yet.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
