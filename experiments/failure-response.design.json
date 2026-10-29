@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student post-result explanation: why did prior coarse work add to fine search on the matched new2 maps? Example trial9:37 versus16+37. Prediction not supported here, no universal inference or new experiment.",
+  "nextTask": "Guided bound-scope question: with axis lower bound6, does an8-unit coarse route alone prove no shorter fine-grid route? Student response pending; no new map/path/planner experiment. Existing skip implementation unchanged.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -235,5 +235,7 @@
     "data/footprint/resolution-quality-prospective-run-01.json",
     "data/footprint/resolution-quality-prospective-validation-01.json"
   ],
-  "resolutionProspectiveInterpretationDraft": "experiments/resolution-prospective-interpretation.design.json"
+  "resolutionProspectiveInterpretationDraft": "experiments/resolution-prospective-interpretation.design.json",
+  "resolutionBoundStopRecord": "data/learning/resolution-bound-stop-01.json",
+  "resolutionBoundCheckDraft": "experiments/resolution-bound-check.design.json"
 }

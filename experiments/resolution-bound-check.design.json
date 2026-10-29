@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "status": "awaiting-student-bound-scope-answer",
+  "proposalAuthor": "AI assistant",
+  "responseRecord": "data/learning/resolution-bound-stop-01.json",
+  "referenceProtocol": "experiments/resolution-quality-prospective-01.protocol.json",
+  "originalStart": [
+    1,
+    3
+  ],
+  "originalGoal": [
+    7,
+    3
+  ],
+  "axisManhattanLowerBound": 6,
+  "givenRouteLengthHypothetical": 8,
+  "question": "가로로6칸 떨어진 같은 출발·도착에서, 거친 격자로8칸짜리 길을 찾았다는 사실만으로 반 칸 격자에서도 더 짧은 길이 없다고 확신할 수 있을까?",
+  "studentResponseVerbatim": null,
+  "scope": "AI hypothetical reasoning exercise, no new map/path/run or verified8-unit shortest route. Axis lower bound is6; failure to attain it does not prove a shorter feasible route exists. Distinguish coarse-graph optimality from finer-graph and continuous-motion claims."
+}
