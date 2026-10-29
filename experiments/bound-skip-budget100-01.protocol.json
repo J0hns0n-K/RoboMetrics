@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "bound-skip-budget100-01",
+  "dateSeoul": "2026-10-29",
+  "status": "ready",
+  "studentChoiceRecord": "data/learning/bound-skip-budget-choice-01.json",
+  "parentDraft": "experiments/bound-skip-budget-stress.design.json",
+  "baselineRaw": "data/route-update-policy/bound-skip-followup-dense-baseline-run-01.json",
+  "baselineValidation": "data/route-update-policy/bound-skip-followup-dense-validation-01.json",
+  "referenceComparison": "data/route-update-policy/bound-skip-followup-dense-comparison-label-corrected-01.json",
+  "runs": 30,
+  "tieBreak": "fifo",
+  "maxExpansions": 100,
+  "referenceMaxExpansions": 300,
+  "baselineMode": "reoptimize, skipProvenOptimal=false",
+  "revisedMode": "default reoptimize with bound skip; both arms receive budget 100",
+  "controls": "Exactly the same 30 dense edited maps/current starts/goals/prior valid routes/order. Only per-call budget changes from 300 to 100. No sampling, editing, reference-route acquisition or method/policy change.",
+  "measurements": "Separate usable routes from completed new A*, bound proofs and raw optimization budget failures. Preserve valid fallback and failed empty/null planningResult. Compare returned length to archived independent BFS, shorter-than-prior and missed potential shortening, work/call counts. Do not infer all usable routes mean all optimizations completed.",
+  "referenceChecks": "If archived full search expanded <=100, original result fields should match. If >100, expect budget failure at exactly 100 and retain the prior valid route. Raw 300-budget results are not overwritten.",
+  "studentOutcomePrediction": null,
+  "attribution": "Student selected option 2 (offered 100 budget) only. AI supplies comparison analysis/tests/method/code/operation and initial interpretation.",
+  "scope": "Same-known-cohort budget/fallback control; prior full-search counts are already available, not blind or an independent dataset. Static fully known four-neighbor unit cost, no motion/sensor/runtime/energy claim. Commit protocol/source before the budget-100 run."
+}

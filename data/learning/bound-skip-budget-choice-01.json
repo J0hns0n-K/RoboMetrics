@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "recordType": "guided budget-parameter choice; not experiment output",
+  "recordedBy": "AI assistant from user chat",
+  "contextRevision": "ecfb3874bb3f07454c2b9b8bfc3b891c13b47a7a",
+  "priorDraft": "experiments/bound-skip-budget-stress.design.json",
+  "options": {
+    "1": "검토 예산 50칸",
+    "2": "검토 예산 100칸"
+  },
+  "studentResponseVerbatim": "2",
+  "selectedBudget": 100,
+  "studentReasonVerbatim": null,
+  "studentOutcomePrediction": null,
+  "attributionLimits": "Student chose the offered budget condition only; no completion-rate/path/count hypothesis, code/method authorship or execution supplied. AI prepares comparison handling, tests, protocol, execution and initial analysis."
+}

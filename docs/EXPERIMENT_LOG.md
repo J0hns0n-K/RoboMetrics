@@ -581,6 +581,13 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - AI precision edit separately adds latest-map validity, lower-bound proof at the current position, preserved route and new planner-node counts. Original remains unchanged. Former shortestness alone cannot establish current feasibility/optimality. No new experiment or test run.
 - Next AI-proposed draft `experiments/bound-skip-budget-stress.design.json` changes only budget to offered 50/100 on the same known dense inputs. Separate usable path from optimization completion/budget failure; selection/results pending. Prior expansion counts are already known, so no blind/independent cohort claim.
 
+## 2026-10-29 — Budget 100 selected and analysis controls registered
+
+- Student exact **2**, mapping to the offered 100-node budget, in `data/learning/bound-skip-budget-choice-01.json`. No performance forecast/reason/code supplied. Ready protocol `experiments/bound-skip-budget100-01.protocol.json` changes only the budget from 300 on the same 30 dense inputs.
+- AI updates the comparison analysis, not core/policy: permit a valid cached path longer than latest BFS after optimization timeout, retain original failed planningResult, separate new-search completion from usable/optimal-returned route counts and bound proofs. Reference300 matching applies only when full work fits100; otherwise failure at100 is expected.
+- Two new controls bring full suite to57 passed/zero failed; TAP `data/route-update-policy/bound-budget-stress-tests-01.tap`. Controls distinguish suboptimal valid fallback and already-shortest fallback from completed searches/proofs, reject corrupted failure/optimality claims.
+- Protocol/source commit precedes the configured budget100 replay. Same known cohort, full counts already available; not blind research/new independent maps. Results pending.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

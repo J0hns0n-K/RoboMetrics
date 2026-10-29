@@ -8,6 +8,35 @@ import {fileURLToPath} from 'node:url';
 import {makeMap, verifyPath} from '../src/core.mjs';
 import {resolveRouteUpdate} from '../src/route-update-policy.mjs';
 
+export function validatePolicyResult(map, prior, shortestDistance, result) {
+  assert.ok(verifyPath(map, result.path));
+  assert.ok(result.pathLength >= shortestDistance);
+  if (result.optimizationStatus === 'OPTIMAL') {
+    assert.equal(result.pathLength, shortestDistance);
+  } else {
+    assert.equal(result.optimizationStatus, 'BUDGET_EXCEEDED');
+    assert.equal(result.status, 'KEEP_ROUTE'); assert.deepEqual(result.path, prior);
+    assert.equal(result.planningResult.success, false);
+    assert.equal(result.planningResult.reason, 'BUDGET_EXCEEDED');
+    assert.deepEqual(result.planningResult.path, []); assert.equal(result.planningResult.pathLength, null);
+  }
+}
+
+export function summarizePolicyRows(rows, key) {
+  assert.ok(rows.length > 0);
+  return {denominator: rows.length, usableRoutes: rows.filter(r => r[key].path.length > 0).length,
+    meanReturnedMoves: rows.reduce((s, r) => s + r[key].pathLength, 0) / rows.length,
+    plannerCalls: rows.reduce((s, r) => s + r[key].plannerCalls, 0),
+    totalExamined: rows.reduce((s, r) => s + r[key].expanded, 0),
+    meanExamined: rows.reduce((s, r) => s + r[key].expanded, 0) / rows.length,
+    boundProofs: rows.filter(r => r[key].optimalityEvidence === 'MANHATTAN_BOUND').length,
+    completedSearches: rows.filter(r => r[key].planningResult?.success).length,
+    optimizationBudgetExceeded: rows.filter(r => r[key].optimizationStatus === 'BUDGET_EXCEEDED').length,
+    returnedLengthEqualsBfs: rows.filter(r => r[key].pathLength === r.archivedBfsDistance).length,
+    shorterThanPriorMaps: rows.filter(r => r[key].pathLength < r.priorPath.length - 1).length,
+    missedPotentialShorteningMaps: rows.filter(r => r.priorPath.length - 1 > r.archivedBfsDistance && r[key].pathLength > r.archivedBfsDistance).length};
+}
+
 async function main() {
   const [inputPath, outputPath] = process.argv.slice(2);
   if (!inputPath || !outputPath?.endsWith('.json')) throw new Error('Usage: node scripts/compare-manhattan-bound.mjs PROTOCOL.json NEW-OUTPUT.json');
@@ -25,7 +54,7 @@ async function main() {
   assert.ok(Number.isSafeInteger(protocol.maxExpansions) && protocol.maxExpansions > 0);
   const baselineFile = local(resolve(root, protocol.baselineRaw)), choiceFile = local(resolve(root, protocol.studentChoiceRecord));
   const sources = ['src/core.mjs', 'src/route-update-policy.mjs', 'scripts/compare-manhattan-bound.mjs',
-    'test/manhattan-bound-skip.test.mjs', protocolFile, baselineFile, choiceFile];
+    'test/manhattan-bound-skip.test.mjs', 'test/bound-budget-stress.test.mjs', protocolFile, baselineFile, choiceFile];
   const git = args => execFileSync('git', args, {cwd: root, encoding: 'utf8'}).trim();
   if (git(['status', '--porcelain', '--', ...sources])) throw new Error('Commit inputs and source first.');
   const sha = b => createHash('sha256').update(b).digest('hex'), hashes = {};
@@ -36,7 +65,7 @@ async function main() {
   }
   const archived = JSON.parse(await readFile(resolve(root, baselineFile), 'utf8'));
   assert.equal(archived.rows.length, protocol.runs);
-  assert.equal(archived.protocol.maxExpansions, protocol.maxExpansions);
+  assert.equal(archived.protocol.maxExpansions, protocol.referenceMaxExpansions ?? protocol.maxExpansions);
   assert.equal(archived.protocol.tieBreak, protocol.tieBreak);
   assert.equal(archived.execution.sourceHashesGitBlobs['src/core.mjs'], hashes['src/core.mjs']);
   const rows = archived.rows.map(row => {
@@ -51,9 +80,16 @@ async function main() {
     const baseline = resolveRouteUpdate(map, prior, {...options, skipProvenOptimal: false});
     const revised = resolveRouteUpdate(map, prior, options);
     assert.equal(revised.skipProvenOptimal, true);
-    for (const key of Object.keys(row.results.reoptimize)) assert.deepEqual(baseline[key], row.results.reoptimize[key]);
+    const fullReferenceFitsBudget = row.results.reoptimize.planningResult.success
+      && row.results.reoptimize.expanded <= protocol.maxExpansions;
+    if (archived.protocol.maxExpansions === protocol.maxExpansions || fullReferenceFitsBudget) {
+      for (const key of Object.keys(row.results.reoptimize)) assert.deepEqual(baseline[key], row.results.reoptimize[key]);
+    } else {
+      assert.equal(baseline.optimizationStatus, 'BUDGET_EXCEEDED');
+      assert.equal(baseline.expanded, protocol.maxExpansions);
+    }
     for (const result of [baseline, revised]) {
-      assert.ok(verifyPath(map, result.path)); assert.equal(result.pathLength, row.editedBfsDistance);
+      validatePolicyResult(map, prior, row.editedBfsDistance, result);
     }
     assert.deepEqual(revised.path, baseline.path);
     if (revised.decisionReason === 'LOWER_BOUND_OPTIMAL') {
@@ -61,21 +97,18 @@ async function main() {
       assert.equal(revised.expanded, 0); assert.equal(revised.planningResult, null);
       assert.equal(revised.optimalityEvidence, 'MANHATTAN_BOUND');
     } else {
-      assert.equal(revised.plannerCalls, 1); assert.equal(revised.optimalityEvidence, 'ASTAR_COMPLETED');
+      assert.equal(revised.plannerCalls, 1);
+      assert.equal(revised.optimalityEvidence, revised.planningResult.success ? 'ASTAR_COMPLETED' : null);
       assert.equal(revised.expanded, baseline.expanded);
     }
     return {trial: row.trial, seed: row.seed, editedRows: row.editedRows, start: row.start, goal: row.goal,
-      priorPath: prior, archivedBfsDistance: row.editedBfsDistance, baselineOriginalFieldsMatched: true, baseline, revised};
+      priorPath: prior, archivedBfsDistance: row.editedBfsDistance,
+      referenceBudget: archived.protocol.maxExpansions, fullReferenceExpanded: row.results.reoptimize.expanded,
+      fullReferenceFitsBudget,
+      baselineOriginalFieldsMatched: archived.protocol.maxExpansions === protocol.maxExpansions || fullReferenceFitsBudget ? true : null,
+      baseline, revised};
   });
-  const summarize = key => ({denominator: rows.length, usableRoutes: rows.filter(r => r[key].path.length > 0).length,
-    meanReturnedMoves: rows.reduce((s, r) => s + r[key].pathLength, 0) / rows.length,
-    plannerCalls: rows.reduce((s, r) => s + r[key].plannerCalls, 0),
-    totalExamined: rows.reduce((s, r) => s + r[key].expanded, 0),
-    meanExamined: rows.reduce((s, r) => s + r[key].expanded, 0) / rows.length,
-    boundProofs: rows.filter(r => r[key].optimalityEvidence === 'MANHATTAN_BOUND').length,
-    completedSearches: rows.filter(r => r[key].planningResult?.success).length,
-    optimizationBudgetExceeded: rows.filter(r => r[key].optimizationStatus === 'BUDGET_EXCEEDED').length});
-  const baseline = summarize('baseline'), revised = summarize('revised');
+  const baseline = summarizePolicyRows(rows, 'baseline'), revised = summarizePolicyRows(rows, 'revised');
   const output = {schemaVersion: 1, label: 'AI PAIRED BOUND-CHECK COMPARISON; COHORT SCOPE IS DEFINED BY THE FROZEN PROTOCOL', protocol,
     archivedSource: {path: baselineFile, sha256GitBlob: hashes[baselineFile], sourceCommit: archived.execution.sourceCommit},
     summary: {baseline, revised, sameReturnedLengthMaps: rows.length, sameReturnedPathMaps: rows.length,
@@ -92,4 +125,6 @@ async function main() {
   console.log(`Saved ${outputFile}; source ${output.execution.sourceCommit}`);
 }
 
-main().catch(error => { console.error(error.message); process.exitCode = 1; });
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main().catch(error => { console.error(error.message); process.exitCode = 1; });
+}
