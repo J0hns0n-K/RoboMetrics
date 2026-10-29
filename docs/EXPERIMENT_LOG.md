@@ -319,6 +319,16 @@ AI prepared `experiments/reachable-goal-budget-control.scenario.json`: open only
 - No code change or full-suite rerun; prior 23-test source equivalence and new input/path/field checks are recorded. AI supplies the initial interpretation: a cutoff alone cannot certify disconnection because it occurs on both maps. This is not a student implementation, physical result or extra independent sample from validation.
 - Next student task: explain in one sentence, citing the successful high-budget run, why budget exhaustion alone cannot establish no route. That post-result interpretation is not yet supplied.
 
+## 2026-10-29 Student explains why a cutoff does not certify no path
+
+After the matched results and explanation, Junmo wrote:
+
+> 길이 있는데도 검토 예산을 줄이면 예산 초과가 떠 버리니까 그것만 보고 길이 없다고 단정하면 안되지
+
+Record this as a guided post-result interpretation supported by the connected map's budget-2 failure and budget-300 success. It is not independent API design, algorithm implementation or experiment operation. Raw results, source revisions and predictions remain unchanged.
+
+AI prepared `practice/03-failure-reason.mjs`, an intentionally incomplete exercise reading the four archived A* map/budget cases without invoking a planner. Student task: choose the failure-reason field name in one placeholder and save. Function branches, messages and file loading are AI-authored. No student edit, save or exercise execution is yet confirmed; the prospective one-field edit must not be labeled an independent classifier implementation.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
