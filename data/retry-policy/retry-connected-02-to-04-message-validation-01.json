@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "label": "STUDENT-PROPOSED NOTICE WITH AI PRECISION EDIT; GUARDED CLI DISPLAY",
+  "dateSeoul": "2026-10-29",
+  "sourceCommit": "770745032620f5ca71a7e77548ff68009e7ee5c7",
+  "studentOriginal": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
+  "displayText": "예산을 초과했지만 길이 없다는 뜻은 아닙니다. 더 큰 예산으로 다시 탐색하면 길을 찾을 수도 있습니다.",
+  "editedBy": "AI assistant",
+  "editingScope": "Preserve the meaning while clarifying finding an existing route rather than budget creating a route; no guarantee of success.",
+  "artifacts": {
+    "data/retry-policy/retry-connected-02-to-04-message-run-01.json": "03a4ddb96b9d7d9b39307a429e0dae0ddc7f9f8936c7592fdc4909e21ceaec93",
+    "data/retry-policy/retry-connected-02-to-04-run-01.json": "23d644cf0ee7a1274ca6c56ef12ea8e74e8f18e8bbc93b1cdf5e59f6f11b2cf4"
+  },
+  "checks": {
+    "identicalPolicyAttemptsAndOutcomeToParent": true,
+    "totalExpanded": 6,
+    "noExtraRetry": true,
+    "coreRetryAndParserUnchanged": true,
+    "sourceInputsDirty": false,
+    "messageMatchesConfiguredDisplayText": true,
+    "messageOnlyOnFinalBudgetFailure": true,
+    "archivedOutcomeGuardCasesChecked": 4,
+    "observedGuardOutputs": [
+      "configured display text",
+      "configured display text",
+      null,
+      null
+    ],
+    "missingDefinitionReturnsNull": true,
+    "guardCheckTiming": "Syntax/archived-outcome display checks completed before source commit; runtime working sources matched committed Git blobs before the configured smoke execution."
+  },
+  "validation": {
+    "operator": "AI assistant",
+    "fullSuiteRerunForMessageEdit": false,
+    "method": "CLI syntax and four archived outcome checks, committed same-policy smoke run, exact result equality, source and immutable artifact hashes."
+  },
+  "scope": "Output copy for the separate CLI prototype only; no browser demo integration, fixed-budget benchmark change or new independent map sample. User notice is not an instruction authorizing another attempt. Upcoming direct-versus-restart cost comparison is proposed but has not been configured/executed as a new demonstration.",
+  "provenance": "Student authored the quoted notice in response to a prompt. AI made the explicit semantic precision edit, implemented display guarding and ran verification. Do not attribute the final edited wording or source implementation as wholly student-authored."
+}

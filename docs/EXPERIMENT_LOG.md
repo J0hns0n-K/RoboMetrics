@@ -398,6 +398,14 @@ Retain the original. AI edits the display to **예산을 초과했지만 길이 
 
 AI adds guarded CLI display for final BUDGET_EXCEEDED only and checks it on the four archived outcomes. Original config/raw outputs remain immutable; the same known-map run with message is a presentation smoke check, not a new independent sample or blind research trial.
 
+## 2026-10-29 Budget-only notice displayed and verified
+
+- Student's original two-sentence notice and the separately credited AI precision edit were committed with the optional CLI display guard in `770745032620f5ca71a7e77548ff68009e7ee5c7` before the same-policy smoke run.
+- Actual four-case checks display configured text for both archived budget failures and no text for unreachable/success; absent message definition returns null. Syntax and guard checks preceded the commit, and runtime sources matched committed blobs. No new full-suite run was claimed for this presentation edit.
+- New raw/validation records: `data/retry-policy/retry-connected-02-to-04-message-run-01.json` and `retry-connected-02-to-04-message-validation-01.json`. Policy result is exactly equal to the prior 2→4 record, including initial failure, both attempts, final budget status and total work 6.
+- UserMessage is displayed only in the separate CLI prototype. Core, retry algorithm, benchmark, existing configs/artifacts and web demo remain unchanged. This repeat checks presentation, not independent samples or a student outcome forecast.
+- Next proposed accounting comparison: direct budget 8 versus an initial budget 2 followed by a budget-8 restart on the same known map. Student expectation and a separate configured comparison are pending; related regression outcomes are known and should not be called blind research.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
