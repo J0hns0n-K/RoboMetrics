@@ -560,6 +560,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Candidate checks 75/accepted 30. Offline prior A* calls 30/2,611 expansions; unguarded online reoptimization calls 30/2,690 expansions. Separate candidate/edited BFS counts 75/30. One selected edit admits and realizes a two-move improvement; other 29 lengths unchanged. No student forecast.
 - Bound comparison pending; no baseline reselection or source-rule change after acquisition. This is a staged acquisition artifact, not the final guarded result or a fresh full-suite run.
 
+## 2026-10-29 — Dense comparison scope-label correction
+
+- The first new-condition run `data/route-update-policy/bound-skip-followup-dense-comparison-run-01.json` executed under source `fd799ad5b645a605fb7cf269157fbd1203861623`. Its protocol is the new frozen dense follow-up, but the reused driver label incorrectly retained the old same-development-cohort wording. Numeric results and protocol remain valid; preserve this original raw output.
+- Correct the driver label to direct readers to the frozen protocol for cohort scope. This is metadata-only; no guard, planner, sampling, input or output values change. Create a separately named label-corrected derivative, retaining original execution provenance plus explicit correction lineage; do not rerun planner/cohort or present the derivative as a replication.
+- The scope remains condition-specific unseen-at-freeze validation with no statistical-independence or causal density claim. Original development-cohort results retain their historical label.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

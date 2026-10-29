@@ -76,7 +76,7 @@ async function main() {
     completedSearches: rows.filter(r => r[key].planningResult?.success).length,
     optimizationBudgetExceeded: rows.filter(r => r[key].optimizationStatus === 'BUDGET_EXCEEDED').length});
   const baseline = summarize('baseline'), revised = summarize('revised');
-  const output = {schemaVersion: 1, label: 'AI SAME-DEVELOPMENT-COHORT BOUND-CHECK REPLAY; NOT HELD-OUT VALIDATION', protocol,
+  const output = {schemaVersion: 1, label: 'AI PAIRED BOUND-CHECK COMPARISON; COHORT SCOPE IS DEFINED BY THE FROZEN PROTOCOL', protocol,
     archivedSource: {path: baselineFile, sha256GitBlob: hashes[baselineFile], sourceCommit: archived.execution.sourceCommit},
     summary: {baseline, revised, sameReturnedLengthMaps: rows.length, sameReturnedPathMaps: rows.length,
       savedExpansions: baseline.totalExamined - revised.totalExamined,
