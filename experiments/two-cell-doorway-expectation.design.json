@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dateSeoul": "2026-10-29",
-  "status": "ready-student-geometric-expectation-recorded",
+  "status": "completed-known-control",
   "proposalAuthor": "AI assistant",
   "selectedModel": "experiments/disk-model-clearance015-01.config.json",
   "question": "지름0.8에 양쪽 여유0.15를 요구하는 모델은, 폭이2칸인 통로를 기하학적으로 지나갈 수 있을 것 같아?",
@@ -26,8 +26,11 @@
     "units": "virtual cell-side lengths"
   },
   "aiResearchQuestion": "Can cell-center-only sampling reject a geometrically feasible passage? Distinguish a continuous clearance certificate from reachability on a chosen sample lattice; investigate resolution before calling planner failure physical impossibility.",
-  "results": null,
-  "scope": "AI-proposed model-limit control ready before configured execution. Student supplies tentative width-based yes and diameter/width reason only; no current-planner outcome forecast, code, operation or physical result. No refinement implemented.",
+  "results": {
+    "raw": "data/footprint/two-cell-doorway-run-01.json",
+    "validation": "data/footprint/two-cell-doorway-validation-01.json"
+  },
+  "scope": "Known AI-proposed/operated model-limit control completed. Student supplies pre-run tentative geometric yes and diameter-versus-width reason only. No finer-grid implementation or physical trial.",
   "studentExpectationRecord": "data/learning/two-cell-doorway-expectation-01.json",
   "readyProtocol": "experiments/two-cell-doorway-01.protocol.json"
 }

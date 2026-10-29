@@ -640,6 +640,14 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Five configured A* calls/39 expansions/5 BFS, independent validation315 center checks/5 BFS/zero planner calls. Selected-model/input equality, old70-test/source/TAP hashes, paths/swept checks/failure fields/output immutability checked; no full-suite rerun. Student selected margin after explanation, not a result forecast, code or physical safety requirement.
 - Next AI draft `experiments/two-cell-doorway-expectation.design.json`: width2 opening at rows2/3, investigate width-based continuous feasibility versus cell-center sampling. Question asks geometric expectation only; no student answer, new data or resolution code yet.
 
+## 2026-10-29 — Width2 geometry versus center-grid reachability
+
+- Student pre-run tentative yes and body0.8-versus-width2 rationale preserved in data/learning/two-cell-doorway-expectation-01.json; no current-planner forecast or explicit margin arithmetic. AI supplies counterexample question/map/witness/method/code/tests/operation/analysis.
+- Ready protocol/source/input6de807ba7239b8cd97aa1fa65b7467671f670ec9 precedes configured run. One9×7 map, barrierx4/open rows2/3, S(1,3)/G(7,3), diameter0.8, A* FIFO budget100: margin0.05 succeeds6moves/7examined; selected0.15 graph-exhausts UNREACHABLE/12examined with null/empty failure. Separate BFS agrees.
+- Both admit supplied world witness length7 throughy3, segment clearances1.5/1/1.5; current centersy2.5/3.5 clear only0.5 versus selected effective radius0.55. Witness proves existence, not continuous optimum or planner output. Geometry expectation supported despite discrete search failure.
+- Raw/validation data/footprint/two-cell-doorway-*.json, method docs/TWO_CELL_DOORWAY_KR.md. Four new checker tests/full suite74 passed, spec-format archive tests-01.txt; archive-path-only source correction after tests is recorded. Configured2A*/19expansions/2BFS/126center checks; validation126point checks/2BFS/zero additional planner, source/masks/known segment distance/output guards checked.
+- No physical measurements, dynamics, timing/energy, student-discovered counterexample or refined-grid result. Next draft experiments/two-cell-doorway-resolution-choice.design.json asks budget increase versus intermediate sample locations; answer/implementation/results pending.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

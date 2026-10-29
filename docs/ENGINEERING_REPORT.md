@@ -256,7 +256,15 @@ After AI explained the width arithmetic, student response **2** selects offered 
 
 Ready input/model/source commit `30aca9375c32a3dae6a2319804eff9dfe217f4b9` precedes execution. [Protocol/results](DISK_CLEARANCE_015_KR.md) and [validation](../data/footprint/disk-clearance015-validation-01.json) preserve five related controls on the same two9×7 layouts/S(1,3)/G(7,3), A* FIFO budget100. Width1 point, body0.8/margin0 and margin0.05 pass6moves/7examined; selected0.15 fails configuration connectivity after11examined with valid endpoints. Width3 at the same selected margin passes6/7. Configured work5 A*/39 expansions/5 BFS, validation315 center checks/5 BFS/no planner calls. Existing70-test dependency hashes unchanged, no repeat suite.
 
-No physical dimensions, sensor uncertainty, real safety threshold, dynamics or continuous-motion completeness claim. Next AI draft proposes an even two-cell opening to separate width-based feasibility from possible cell-center sampling limitations. Student geometric expectation, new execution and resolution changes are not yet supplied/implemented.
+No physical dimensions, sensor uncertainty, real safety threshold, dynamics or continuous-motion completeness claim. The subsequent two-cell control separates geometric feasibility from center-grid reachability, as recorded below.
+
+## Model-limit control: a feasible width2 passage missed by center sampling
+
+Before configured execution Junmo wrote **통과 하지 않을까? 몸 지름이 0.8칸이고 통로가 2칸인데**. The [record](../data/learning/two-cell-doorway-expectation-01.json) preserves a tentative width-based expectation, without a current-planner forecast or explicit margin arithmetic. AI supplies the correction0.8+2×0.15=1.1<2, fixture, counterexample question, witness, protocol, checker, tests, operation and analysis.
+
+[Protocol and method](TWO_CELL_DOORWAY_KR.md), [raw result](../data/footprint/two-cell-doorway-run-01.json) and [validation](../data/footprint/two-cell-doorway-validation-01.json) bind source/input commit6de807ba7239b8cd97aa1fa65b7467671f670ec9. One9×7 map, barrierx4/open rows2/3, S(1,3)/G(7,3), body diameter0.8, A* FIFO budget100: smaller margin0.05 succeeds6moves/7examined; selected0.15 exhausts the configuration graph after12examined, empty path/null length. Separate BFS agrees. Both have a valid supplied axis-aligned world witness of length7, with segment minimum clearances1.5/1/1.5. Thus the student's geometry expectation is supported; planner failure does not establish continuous impossibility. The witness is not a shortest-path claim or an A* output.
+
+Four new swept-geometry checker controls bring the archived suite to74 passes/zero failures. The archive is Node default spec text, with the runner archive-path-only correction after testing explicitly recorded in validation. Configured work2A*/19expansions/2BFS/126center checks; additional validation126point projections/2BFS/zero planner calls, source hashes/known segment clearances/immutable-output guard checked. Original disk/core code remains unchanged. No physical trial, runtime/energy improvement, continuous completeness or finer-grid result is claimed. Next student choice contrasts a larger budget with sampling positions between original centers while keeping original geometry fixed.
 
 ## Student report sections to complete later
 
@@ -269,10 +277,9 @@ No physical dimensions, sensor uncertainty, real safety threshold, dynamics or c
 
 The sections above distinguish completed simulation checks from planned work and identify the operator and author of each contribution. Physical robot results have not been collected.
 
-## Next gates
+## Next engineering gates
 
-- Oct 27: understand the model, complete a small student-owned design/analysis task, preserve evidence.
-- Oct 28: paired comparisons, fixed seeds and budgets, at least two failure/counterexample analyses; preserve unsuccessful attempts.
-- Oct 29: student interpretation, verified contribution ledger and technical report.
-- Nov–Dec: scoped kinematics/controller/uncertainty model; hardware only if obtained and actually tested. Follow `ROBOTICS_ROADMAP.md`.
-- Jan: compare simulation and physical outcomes if hardware trials are available; otherwise report simulation sensitivity and model limitations.
+- Decide how to represent the feasible width2 passage; freeze a resolution comparison before implementation/execution.
+- Preserve obstacle/world/body units when adding samples; validate every returned swept path and distinguish geometric length from edge count and search work.
+- Add scoped kinematics, waypoint control and sensing uncertainty only with explicit assumptions and checks.
+- If hardware is obtained, measure its dimensions and repeat controlled trials; report simulation/physical differences and failed cases separately. Follow [the robotics roadmap](ROBOTICS_ROADMAP.md).

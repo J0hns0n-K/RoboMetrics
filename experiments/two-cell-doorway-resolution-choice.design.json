@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "status": "draft-awaiting-student-choice",
+  "proposalAuthor": "AI assistant",
+  "parentProtocol": "experiments/two-cell-doorway-01.protocol.json",
+  "parentValidation": "data/footprint/two-cell-doorway-validation-01.json",
+  "question": "통로 한가운데를 후보로 잡지 못한 이 문제에는 무엇을 바꾸는 것이 맞을까? 1: 검토 예산만 늘리기, 2: 칸 중심 사이도 이동 후보로 넣기.",
+  "choices": [
+    {"id": 1, "change": "Budget only:100 to200, original center graph unchanged"},
+    {"id": 2, "change": "Sample world centers every0.5 virtual unit, keep original obstacle squares and radius0.4/clearance0.15 unchanged"}
+  ],
+  "studentResponseVerbatim": null,
+  "studentRationale": null,
+  "implementation": null,
+  "results": null,
+  "controlsForFutureProtocol": "Do not scale down the physical model or obstacle squares when refining samples. Distinguish world distance from number of edges and planner expansions; validate swept paths against original geometry. Freeze a ready protocol/source before any configured comparison.",
+  "scope": "AI-proposed design choice after an AI-explained model-limit result, not an independent student discovery. No resolution variant implemented or executed yet. No physical model, timing or performance claim."
+}

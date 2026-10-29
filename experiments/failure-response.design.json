@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Ask student for width-based geometric expectation of selected body/margin in a width2 opening. Distinguish that expectation from coarse cell-center A* success; no new data yet.",
+  "nextTask": "Choose whether increased budget or intermediate world-center sampling addresses the observed width2 representation failure; preserve original geometry and selected margin. No refinement implementation/run yet.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -174,5 +174,12 @@
     "data/footprint/disk-clearance015-run-01.json",
     "data/footprint/disk-clearance015-validation-01.json"
   ],
-  "twoCellDoorwayDraft": "experiments/two-cell-doorway-expectation.design.json"
+  "twoCellDoorwayDraft": "experiments/two-cell-doorway-expectation.design.json",
+  "twoCellDoorwayExpectationRecord": "data/learning/two-cell-doorway-expectation-01.json",
+  "twoCellDoorwayProtocol": "experiments/two-cell-doorway-01.protocol.json",
+  "twoCellDoorwayArtifacts": [
+    "data/footprint/two-cell-doorway-run-01.json",
+    "data/footprint/two-cell-doorway-validation-01.json"
+  ],
+  "twoCellDoorwayResolutionDraft": "experiments/two-cell-doorway-resolution-choice.design.json"
 }
