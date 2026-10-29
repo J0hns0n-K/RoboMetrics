@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "bounded-failure-response-guided-design-01",
   "dateSeoul": "2026-10-29",
-  "status": "AI-proposed next task; awaiting student response-mode choice",
+  "status": "Student selected one higher-budget retry; concrete retry budget still pending",
   "scope": "Separate single-map learning prototype. Do not change the fixed-budget benchmark or relabel a later retry success as success under the original budget.",
   "inputFields": [
     "success",
@@ -26,7 +26,7 @@
       "automaticAdditionalAttempts": 0
     }
   ],
-  "studentModeChoice": null,
+  "studentModeChoice": "retry-once",
   "studentReason": null,
   "otherOutcomes": {
     "success": "Return the recorded route.",
@@ -36,8 +36,22 @@
   "recordingRequirements": [
     "Log every attempt budget, status, moves and examined nodes separately.",
     "Preserve original fixed-budget measurements and raw artifacts.",
-    "Bound any automatic retry; do not invent an unchosen retry budget or guarantee success."
+    "Bound any automatic retry; do not invent an unchosen retry budget or guarantee success.",
+    "Record total examined nodes across both independent restart attempts; enforce the sum of allocated budgets within a declared total cap."
   ],
   "implementationStatus": "Not implemented or executed; no current demo behavior has changed.",
-  "attribution": "AI proposes the task and options. Student has not yet selected a mode, budget or rationale. Previous guided reason-field edit does not imply authorship of this future policy."
+  "attribution": "AI supplied the task/options. Student selected one higher-budget retry only; retry budget and a separate rationale are not yet supplied. AI will implement and verify the wrapper. No student code authorship or algorithm improvement is inferred.",
+  "studentModeChoiceVerbatim": "그럼 예산을 느려 한 번 더 시도하는게 맞는 거 같아",
+  "modeNormalization": "Interpreted 느려 as 늘려 in the context of the offered higher-budget retry option; no literal slowdown or retry-budget amount inferred.",
+  "proposedExampleParameters": {
+    "initialBudget": 2,
+    "retryBudget": null,
+    "maxTotalExpansions": 10,
+    "retryBudgetChoices": [
+      4,
+      8
+    ],
+    "proposedBy": "AI-proposed known connected-map learning example; student has not chosen a retry budget.",
+    "mapSource": "experiments/reachable-goal-budget-control.scenario.json"
+  }
 }

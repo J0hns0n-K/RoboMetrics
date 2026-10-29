@@ -359,6 +359,12 @@ Preserve the exact lines. Supplement, rather than silently rewrite, with observe
 
 AI prepared a next-task design draft, `experiments/failure-response.design.json`, offering one bounded higher-budget retry versus report-and-wait after budget exhaustion. No mode, retry budget or rationale is attributed to the student, and no implementation or execution occurred. This is separate from the fixed-budget benchmark; any retries must preserve attempt-level budgets and outcomes rather than relabel later success as original-budget success.
 
+## 2026-10-29 Higher-budget retry selected
+
+Junmo wrote **그럼 예산을 느려 한 번 더 시도하는게 맞는 거 같아**. Preserve the response and interpret 느려 as 늘려 in the context of the offered option. Record mode retry-once, not a numeric retry budget or independent code/method authorship.
+
+AI will implement a separate A* wrapper that restarts the same map at most once, only after BUDGET_EXCEEDED; first-attempt success and each attempt's budget/result remain visible, with cumulative work bounded and recorded. It must not retry an already proven UNREACHABLE outcome or modify the fixed-budget benchmark. Known-map regression settings are AI test fixtures, not student-selected experiment parameters. For the next concrete example, AI proposes initial budget 2, retry 4 or 8 and total cap 10; the student's retry value is still pending.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
