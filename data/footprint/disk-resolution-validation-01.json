@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "validatedBy": "AI assistant CLI",
+  "validatedAtUTC": "2026-10-29T10:18:31.551Z",
+  "sourceCommit": "a1edbde743d23ca8f645c20f5c28f04158d23748",
+  "protocol": "experiments/two-cell-doorway-resolution-01.protocol.json",
+  "studentChoiceRecord": "data/learning/two-cell-doorway-resolution-choice-01.json",
+  "raw": {
+    "path": "data/footprint/disk-resolution-run-01.json",
+    "sha256": "706d6adeaef8846eb0b493a4674c28bfc7101db36c8e4d6530ee96aabf0106a3"
+  },
+  "sourceHashesGitBlobs": {
+    "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "src/disk-footprint.mjs": "d65440878eea0718b28c61357948e3e56e48227213a5ea2c732961cd156853e8",
+    "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+    "scripts/check-current-position-detour.mjs": "9bb2fad0a772d3fa41c37c8c21b068d44d7e946eb62524c9e50c41a183a9e12e",
+    "scripts/check-two-cell-doorway.mjs": "45765ff5e47d578a34b6df04d12555388ed04bb53387722be4a949c1d5755cad",
+    "scripts/check-disk-resolution.mjs": "513c1bfecd6aff1c712db200a091beca60233286cf684d88f9632a3e630e6698",
+    "test/disk-footprint.test.mjs": "829b226c84ea8cb7e2f2e173396666896c4e3cb9774b7830fcccb39b4dd2d509",
+    "test/sampled-disk.test.mjs": "be4204cdc04bb89c35def036b1ef6d12d89ee2078f058bc27312a61c6b8f79a6",
+    "test/two-cell-doorway.test.mjs": "29b5719a9556dcf9e0f24288e459dfffcca53d97f3e6c74d903889d301a316c0",
+    "data/footprint/disk-resolution-tests-01.tap": "22dea5ff7f13c54221eb8312e9e26f4d29829889546315f3a1e97e62f29f9577",
+    "experiments/two-cell-doorway-resolution-01.protocol.json": "2c2bd6bb2b2e7246f77e9e1a567a30c24ae730449aed8e7cc4f3804f3d36f857",
+    "experiments/disk-model-clearance015-01.config.json": "05eb114289bcc542081674dd9aa70a5cc9a362513d57d8e7b8e94f74dc8bf658",
+    "data/learning/two-cell-doorway-resolution-choice-01.json": "0b242822339c96262a451e1fc5f7994a8509294541909d9e273c0f11452e07aa",
+    "experiments/two-cell-doorway-01.protocol.json": "98e27142095747ec07be620ca2d860d27131819cfbaa9561487378e5883d8427",
+    "data/footprint/two-cell-doorway-run-01.json": "2e9d31e78414a500bc0617d0d17eafd74517ce57e666b5c344139a5aff9031e1"
+  },
+  "tests": {
+    "path": "data/footprint/disk-resolution-tests-01.tap",
+    "sha256": "22dea5ff7f13c54221eb8312e9e26f4d29829889546315f3a1e97e62f29f9577",
+    "passed": 79,
+    "failed": 0,
+    "format": "TAP",
+    "newControls": 5,
+    "fullSuiteExecuted": true
+  },
+  "checks": {
+    "choiceRecordedBeforeConfiguredRun": true,
+    "noStudentRationaleOrNumericPredictionInvented": true,
+    "sourceAndProtocolCommittedBeforeRun": true,
+    "originalWorldObstaclesBodyMarginAndEndpointsFixed": true,
+    "oldDiskFunctionsTextuallyUnchanged": true,
+    "coarseCoreResultMatchesArchivedParent": true,
+    "increasedBudgetCannotRepairExhaustedCoarseGraph": true,
+    "candidatePointOccupancyAuditedAgainstOriginalSquares": true,
+    "separateBfsChecksGraphShortestEdgeCount": true,
+    "successfulWorldPathAndEverySweptSegmentValid": true,
+    "worldLengthNotConfusedWithGraphEdgeCount": true,
+    "failurePathsEmptyAndLengthsNull": true,
+    "sourceAndTestHashesBound": true,
+    "existingOutputRejectedBeforeWorkAndBytesPreserved": true
+  },
+  "observations": {
+    "mapLayouts": 1,
+    "relatedConditions": 3,
+    "originalWorldSize": [
+      9,
+      7
+    ],
+    "openingWidth": 2,
+    "startWorld": [
+      1.5,
+      3.5
+    ],
+    "goalWorld": [
+      7.5,
+      3.5
+    ],
+    "radius": 0.4,
+    "clearance": 0.15,
+    "tieBreak": "fifo",
+    "results": [
+      {
+        "id": "coarse-budget100",
+        "spacing": 1,
+        "budget": 100,
+        "graph": [
+          9,
+          7
+        ],
+        "candidateCount": 63,
+        "status": "UNREACHABLE",
+        "edges": null,
+        "geometricLength": null,
+        "examined": 12
+      },
+      {
+        "id": "coarse-budget200",
+        "spacing": 1,
+        "budget": 200,
+        "graph": [
+          9,
+          7
+        ],
+        "candidateCount": 63,
+        "status": "UNREACHABLE",
+        "edges": null,
+        "geometricLength": null,
+        "examined": 12
+      },
+      {
+        "id": "half-step-budget100",
+        "spacing": 0.5,
+        "budget": 100,
+        "graph": [
+          17,
+          13
+        ],
+        "candidateCount": 221,
+        "status": "ROUTE_FOUND",
+        "edges": 14,
+        "geometricLength": 7,
+        "examined": 28
+      }
+    ],
+    "configuredPlannerCalls": 3,
+    "configuredExaminedNodes": 52,
+    "configuredBfsCalls": 3,
+    "configuredPointAudits": 347,
+    "additionalValidationPointChecks": 347,
+    "additionalValidationBfsCalls": 3,
+    "additionalValidationSweptSegments": 14,
+    "additionalValidationPlannerCalls": 0
+  },
+  "validationMethod": "Independent point-to-square clamping of all347 candidate centers, separate BFS on each graph and explicit world-coordinate checks of14 returned axis segments against original closed squares/world boundary. Same Euclidean assumptions, not a physical validator or continuous planner.",
+  "attribution": "Student chose offered option2 after AI explanation, no rationale or numeric outcome forecast. AI chooses0.5 spacing and100/200 budgets, implements/checks/operates and writes initial interpretation.",
+  "limitations": [
+    "One hand-known map/three related conditions after an AI-supplied continuous witness; no independent cohort or blind generalization test.",
+    "A* optimality is on the selected four-neighbor sample graph, not all continuous disk motions.",
+    "Sampling supports1/.5 only, origin0.5, graph axes at most80; finer graphs can require more work. No universal success or efficiency claim.",
+    "Node counts omit configuration building, swept validation, BFS and storage costs; no runtime, memory efficiency or energy improvement measured.",
+    "No robot, physical safety, kinematics, controller or sensor measurements; browser and historical datasets unchanged."
+  ],
+  "unrelatedLocalChangePreserved": "practice/02-planning-budget.mjs"
+}

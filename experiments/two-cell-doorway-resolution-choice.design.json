@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "dateSeoul": "2026-10-29",
-  "status": "choice-recorded-ready-control",
+  "status": "completed-known-control",
   "proposalAuthor": "AI assistant",
   "parentProtocol": "experiments/two-cell-doorway-01.protocol.json",
   "parentValidation": "data/footprint/two-cell-doorway-validation-01.json",
@@ -18,8 +18,11 @@
   ],
   "studentResponseVerbatim": "2",
   "studentRationale": null,
-  "implementation": "AI reference buildSampledDiskConfigurationSpace/planSampledDiskPath, spacing1 or0.5, original world geometry fixed; configured results pending.",
-  "results": null,
+  "implementation": "AI reference buildSampledDiskConfigurationSpace/planSampledDiskPath, nested spacing1/0.5, original world/body/obstacles fixed.",
+  "results": {
+    "raw": "data/footprint/disk-resolution-run-01.json",
+    "validation": "data/footprint/disk-resolution-validation-01.json"
+  },
   "controlsForFutureProtocol": "Do not scale down the physical model or obstacle squares when refining samples. Distinguish world distance from number of edges and planner expansions; validate swept paths against original geometry. Freeze a ready protocol/source before any configured comparison.",
   "scope": "Student selects offered intermediate candidates after AI explanation, without rationale/numeric forecast. AI supplies0.5 spacing, implementation, tests and controls. No physical trial or independent student invention.",
   "studentChoiceRecord": "data/learning/two-cell-doorway-resolution-choice-01.json",

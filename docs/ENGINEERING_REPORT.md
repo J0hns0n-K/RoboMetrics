@@ -264,7 +264,15 @@ Before configured execution Junmo wrote **통과 하지 않을까? 몸 지름이
 
 [Protocol and method](TWO_CELL_DOORWAY_KR.md), [raw result](../data/footprint/two-cell-doorway-run-01.json) and [validation](../data/footprint/two-cell-doorway-validation-01.json) bind source/input commit6de807ba7239b8cd97aa1fa65b7467671f670ec9. One9×7 map, barrierx4/open rows2/3, S(1,3)/G(7,3), body diameter0.8, A* FIFO budget100: smaller margin0.05 succeeds6moves/7examined; selected0.15 exhausts the configuration graph after12examined, empty path/null length. Separate BFS agrees. Both have a valid supplied axis-aligned world witness of length7, with segment minimum clearances1.5/1/1.5. Thus the student's geometry expectation is supported; planner failure does not establish continuous impossibility. The witness is not a shortest-path claim or an A* output.
 
-Four new swept-geometry checker controls bring the archived suite to74 passes/zero failures. The archive is Node default spec text, with the runner archive-path-only correction after testing explicitly recorded in validation. Configured work2A*/19expansions/2BFS/126center checks; additional validation126point projections/2BFS/zero planner calls, source hashes/known segment clearances/immutable-output guard checked. Original disk/core code remains unchanged. No physical trial, runtime/energy improvement, continuous completeness or finer-grid result is claimed. Next student choice contrasts a larger budget with sampling positions between original centers while keeping original geometry fixed.
+Four new swept-geometry checker controls bring the archived suite to74 passes/zero failures. The archive is Node default spec text, with the runner archive-path-only correction after testing explicitly recorded in validation. Configured work2A*/19expansions/2BFS/126center checks; additional validation126point projections/2BFS/zero planner calls, source hashes/known segment clearances/immutable-output guard checked. At that stage the disk/core source was unchanged, and the control made no physical, efficiency, continuous-completeness or finer-grid claim. The subsequent student choice and half-step implementation are recorded below.
+
+## Student-selected intermediate candidates: same-geometry half-step control
+
+The [choice record](../data/learning/two-cell-doorway-resolution-choice-01.json) preserves **2**, selecting offered intermediate candidates after AI explained the missed midpoint. No rationale or numeric forecast was supplied. AI chooses spacing0.5, adds sample-center adapters to the disk module and supplies controls, tests, operation and analysis. The original disk functions remain textually unchanged; the core planner/browser/historical raw files remain unchanged.
+
+Source/protocol/choice commit a1edbde743d23ca8f645c20f5c28f04158d23748 precedes configured execution. [Method](DISK_RESOLUTION_KR.md), [raw data](../data/footprint/disk-resolution-run-01.json) and [validation](../data/footprint/disk-resolution-validation-01.json) hold original9×7 world/barrier/open rows2/3/world endpoints/diameter0.8/clearance0.15/contact convention/A* FIFO fixed. Three related conditions on one known map: spacing1 budget100 and200 both reproduce UNREACHABLE/12expansions; spacing0.5 budget100 uses17×13 candidates and returns14edges/world length7 after28expansions. BFS agrees and all14 world path segments pass original-geometry clearance. Finer candidates recover the feasible path, not lower measured work or continuous global optimality.
+
+Five new regression controls bring the full archived suite to79 passes/zero failures, committed before configured execution. Tests check coarse compatibility, body/world units, half-step passage, status separation, small-layout BFS/swept paths and parameter/size guards. Configured work3A*/52expansions/3BFS/347point audits. Additional validation347point projections/3BFS/14swept segments/zero planner calls checks source/test binding, original failure reproduction and immutable output. Not independent new samples, student code/operation, runtime/energy or physical robot evidence. Next task asks the student's post-result explanation of what changed while geometry stayed fixed.
 
 ## Student report sections to complete later
 
@@ -279,7 +287,7 @@ The sections above distinguish completed simulation checks from planned work and
 
 ## Next engineering gates
 
-- Decide how to represent the feasible width2 passage; freeze a resolution comparison before implementation/execution.
+- Obtain the student interpretation of the completed half-step control; register a separate new-map or resolution-cost comparison before further execution.
 - Preserve obstacle/world/body units when adding samples; validate every returned swept path and distinguish geometric length from edge count and search work.
 - Add scoped kinematics, waypoint control and sensing uncertainty only with explicit assumptions and checks.
 - If hardware is obtained, measure its dimensions and repeat controlled trials; report simulation/physical differences and failed cases separately. Follow [the robotics roadmap](ROBOTICS_ROADMAP.md).

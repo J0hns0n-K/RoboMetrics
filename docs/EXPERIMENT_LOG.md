@@ -648,6 +648,13 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Raw/validation data/footprint/two-cell-doorway-*.json, method docs/TWO_CELL_DOORWAY_KR.md. Four new checker tests/full suite74 passed, spec-format archive tests-01.txt; archive-path-only source correction after tests is recorded. Configured2A*/19expansions/2BFS/126center checks; validation126point checks/2BFS/zero additional planner, source/masks/known segment distance/output guards checked.
 - No physical measurements, dynamics, timing/energy, student-discovered counterexample or refined-grid result. Next draft experiments/two-cell-doorway-resolution-choice.design.json asks budget increase versus intermediate sample locations; answer/implementation/results pending.
 
+## 2026-10-29 — Intermediate candidates selected and same-world resolution control completed
+
+- Student **2** selects offered intermediate candidates after AI explained the width2 sampling failure; no rationale or numeric forecast. Choice data/learning/two-cell-doorway-resolution-choice-01.json. AI supplies0.5 spacing, code, controls, tests, execution/analysis.
+- Ready protocol experiments/two-cell-doorway-resolution-01.protocol.json and source/choice commit a1edbde743d23ca8f645c20f5c28f04158d23748 precede run. Same original9×7/barrierx4/open rows2/3/world endpoints/diameter0.8/margin0.15/contact rule/A* FIFO: spacing1 budget100 and200 both UNREACHABLE/12nodes, matching archived parent. Spacing0.5 budget100 has17×13 candidates and succeeds14edges/world7/28nodes with original-geometry swept checks and BFS agreement.
+- Raw/validation data/footprint/disk-resolution-*.json, method docs/DISK_RESOLUTION_KR.md;79-test TAP passes all, five new controls. Configured3A*/52nodes/3BFS/347point audits. Validation347point projections/3BFS/14segments/zero extra planner; source/test hashes, original disk function text, parent raw equality and immutable output checked.
+- One known map/three related conditions, no new independent cohort, continuous optimum, time/energy/memory efficiency, student implementation or physical robot evidence. More candidate positions recover this path; no lower-work claim. Next student interpretation pending in experiments/disk-resolution-interpretation.design.json.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
