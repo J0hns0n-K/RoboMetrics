@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Clarify the two comparisons using archived trial12; ask whether lower examined work should break a tie between equally long valid paths. Student priority for shorter paths is recorded; equal-length tie-break response pending. No new experiment/default/code change.",
+  "nextTask": "Obtain a pre-generation prediction (unknown allowed), then validate/commit the prospective runner before executing fixed30new seeds20268028..20268057. Compare always-fine and quality-checked with all failures retained and explicit paired denominators. No target maps generated yet.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -227,5 +227,7 @@
   ],
   "resolutionQualityAssessmentDraft": "experiments/resolution-quality-assessment.design.json",
   "resolutionQualityAssessmentRecord": "data/learning/resolution-quality-assessment-01.json",
-  "resolutionQualityRationaleRecord": "data/learning/resolution-quality-rationale-01.json"
+  "resolutionQualityRationaleRecord": "data/learning/resolution-quality-rationale-01.json",
+  "resolutionPriorityCriterionRecord": "data/learning/resolution-priority-criterion-01.json",
+  "resolutionProspectiveProtocol": "experiments/resolution-quality-prospective-01.protocol.json"
 }

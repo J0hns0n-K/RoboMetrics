@@ -692,6 +692,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - All fresh execution31policy/21planner/345nodes/41model stages/new maps0/new BFS0. Validation20BFS/134stage+118returned segments/zero planner plus acquisition/reference/source/TAP/denominator/cap/output checks. Development-cohort reuse after observed losses, not independent/general/efficiency or physical evidence. Caps200quality/coarse versus100fine explicit.
 - Next experiments/resolution-quality-assessment.design.json asks guided cost-quality judgment on these known inputs; no student answer or new prospective validation yet.
 
+## 2026-10-29 — Guided criterion adopted; prospective inputs fixed, not executed
+
+- Student **당연하지** accepts the AI-offered lower-work tie-break at equal valid path length, following his shorter-route priority. Record data/learning/resolution-priority-criterion-01.json; no new outcome forecast or independent method/code/default change inferred.
+- experiments/resolution-quality-prospective-01.protocol.json fixes30new seeds20268028–20268057, same9×7/.15/point-endpoint-only generator, body0.8/margin0.15/A* FIFO/stage100 and old policy rules. Modes always-fine/quality-checked; caps100/200 disclosed. All failures retained; matched valid lengths/work use explicit paired denominators.
+- Existing algorithm/generator hashes match the97-test replay source. New target maps/planner/BFS/test-suite executions0. Student prediction and runner/reference/summary validation remain pending before target generation. Earlier choice/rationale and all raw results remain unchanged.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

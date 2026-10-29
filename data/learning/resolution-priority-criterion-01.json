@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "questionVerbatim": "길이가 같을 때는 검토량이 적은 쪽을 고르는 것도 네 기준에 맞을까?",
+  "studentResponseVerbatim": "당연하지",
+  "previousPriorityRecord": "data/learning/resolution-quality-rationale-01.json",
+  "studentAcceptedEqualLengthTieBreak": true,
+  "formalizationByAI": "For comparable valid returned routes, prefer shorter world length; at equal length prefer fewer actually examined nodes, including all search stages.",
+  "notSpecifiedByStudent": ["No new-map outcome forecast", "No universal policy winner or named-policy default change", "No mathematical formula, code or independent method invention"],
+  "context": "Guided agreement after AI distinguished coarse-only from quality-checked and direct-fine on trial12. Earlier option2 preference remains in its original record; this agreement supplies an evaluation criterion rather than silently replacing that response.",
+  "attribution": "Student earlier prioritized shorter routes and now explicitly accepts the offered equal-length cost tie-break. AI formalizes the criterion and prepares prospective input conditions. No new experiment or test run in this record."
+}
