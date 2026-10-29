@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "two-cell-doorway-resolution-01",
+  "dateSeoul": "2026-10-29",
+  "status": "ready",
+  "selectedModel": "experiments/disk-model-clearance015-01.config.json",
+  "studentChoiceRecord": "data/learning/two-cell-doorway-resolution-choice-01.json",
+  "parentProtocol": "experiments/two-cell-doorway-01.protocol.json",
+  "parentRaw": "data/footprint/two-cell-doorway-run-01.json",
+  "width": 9,
+  "height": 7,
+  "barrierColumn": 4,
+  "openingRows": [2, 3],
+  "start": [1, 3],
+  "goal": [7, 3],
+  "radius": 0.4,
+  "clearance": 0.15,
+  "tieBreak": "fifo",
+  "cases": [
+    {"id": "coarse-budget100", "spacing": 1, "maxExpansions": 100},
+    {"id": "coarse-budget200", "spacing": 1, "maxExpansions": 200},
+    {"id": "half-step-budget100", "spacing": 0.5, "maxExpansions": 100}
+  ],
+  "geometry": "Same original closed unit squares/world9x7 and contact forbidden; diameter0.8 plus each-side margin0.15, effective radius0.55. Sample origin(0.5,0.5) and original world endpoints fixed. Nested spacings1 and0.5 do not scale body, original obstacle squares or world.",
+  "measurements": "Record graph dimensions/candidate count, raw A* status and path edge count, examined nodes, world coordinates, geometric length=edge count*spacing and swept clearance against original squares. Separate BFS checks shortest paths only on the selected graph.",
+  "aiExpectedKnownControls": "Coarse-budget100 must reproduce parent selected-margin core result. Budget200 cannot repair a graph already exhausted below100. Half-step includes worldy=3 and a feasible world-length7/14-edge path. These are AI-designed known implementation controls after a supplied continuous witness, not a blind new cohort or student result forecast.",
+  "validation": "Full regression suite; separate BFS and original-world swept audit for successful paths; every candidate point occupancy audit; preserve invalid endpoint/budget/exhausted outcomes and original input bytes. Freeze source/protocol/choice before configured run and refuse overwrites before computation.",
+  "attribution": "Student chose offered option2 after AI explanation, no rationale or numeric outcome forecast. AI chooses0.5 spacing and100/200 budgets, implements/checks/operates and writes initial interpretation.",
+  "scope": "Three related conditions on the same known map, not independent samples. No general resolution superiority, continuous optimum, runtime/energy, robot motion or physical safety claim. Browser and historical raw files unchanged."
+}

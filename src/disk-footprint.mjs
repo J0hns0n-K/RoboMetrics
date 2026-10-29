@@ -75,3 +75,50 @@ export function planDiskPath(map, {radius, clearance = 0, maxExpansions = 100, t
     configurationSpace: space, planningResult: result, sweptPathValidation: swept,
     scope: 'Cell-center disk configuration graph; UNREACHABLE is not a claim about all continuous robot motions.'};
 }
+
+// AI reference extension: refine candidate centers, keeping ORIGINAL unit squares/body/world units.
+// Only nested 1/.5 lattices are supported here; one graph edge costs one in core A*.
+export function buildSampledDiskConfigurationSpace(map, {radius, clearance = 0, spacing = .5} = {}) {
+  if (![1, .5].includes(spacing)) throw new Error('Supported sample spacings are 1 and 0.5.');
+  const geometry = model(map, radius, clearance), m = geometry.snapshot;
+  const width = (m.width - 1) / spacing + 1, height = (m.height - 1) / spacing + 1;
+  if (width > 80 || height > 80) throw new Error('Sample graph exceeds core limit80; world is not resized.');
+  const cells = new Uint8Array(width * height);
+  for (let y = 0; y < height; y++) for (let x = 0; x < width; x++) {
+    const wx = .5 + x * spacing, wy = .5 + y * spacing;
+    cells[y * width + x] = violation({x0: wx, x1: wx, y0: wy, y1: wy}, geometry) ? 1 : 0;
+  }
+  return {width, height, cells, start: m.start.map(v => v / spacing), goal: m.goal.map(v => v / spacing),
+    parameters: {shape: 'disk', radius, diameter: 2 * radius, clearance, effectiveRadius: geometry.effectiveRadius,
+      cellSide: 1, units: 'original virtual cell-side lengths; not physical measurements', contactIsCollision: true},
+    sampling: {spacing, origin: [.5, .5], originalWorldSize: [m.width, m.height],
+      graphEdgeLength: spacing, scope: 'Nested four-neighbor candidate lattice; original obstacle squares/world/body unchanged.'}};
+}
+
+export function planSampledDiskPath(map, {radius, clearance = 0, spacing = .5, maxExpansions = 100, tieBreak = 'fifo'} = {}) {
+  if (!Number.isSafeInteger(maxExpansions) || maxExpansions < 1) throw new Error('Use a finite positive expansion budget.');
+  if (!['fifo', 'closer-goal'].includes(tieBreak)) throw new Error('Unknown tie rule.');
+  const space = buildSampledDiskConfigurationSpace(map, {radius, clearance, spacing});
+  const invalidEndpoints = ['start', 'goal'].filter(name => space.cells[space[name][1] * space.width + space[name][0]]);
+  const base = {configurationSpace: space, worldPath: [], geometricLength: null,
+    scope: 'Sample-graph shortest edge count when completed; geometric length=edge count*spacing, not global continuous optimum or runtime.'};
+  if (invalidEndpoints.length) return {...base, status: 'INVALID_ENDPOINT_CLEARANCE', invalidEndpoints,
+    planningResult: null, sweptPathValidation: null};
+  const blocked = [];
+  for (let k = 0; k < space.cells.length; k++) if (space.cells[k]) blocked.push([k % space.width, Math.floor(k / space.width)]);
+  const sampled = makeMap(space.width, space.height, blocked, space.start, space.goal);
+  const result = plan(sampled, 'astar', maxExpansions, {tieBreak});
+  if (!result.success) return {...base, status: result.reason, invalidEndpoints: [], planningResult: result, sweptPathValidation: null};
+  if (!verifyPath(sampled, result.path)) throw new Error('Invalid sampled-grid path.');
+  const worldPath = result.path.map(p => p.map(v => .5 + v * spacing));
+  const geometry = model(map, radius, clearance);
+  for (let i = 0; i < worldPath.length; i++) {
+    const a = worldPath[Math.max(0, i - 1)], b = worldPath[i];
+    if (violation({x0: Math.min(a[0], b[0]), x1: Math.max(a[0], b[0]),
+      y0: Math.min(a[1], b[1]), y1: Math.max(a[1], b[1])}, geometry)) throw new Error('Sampled edge violates original geometry.');
+  }
+  return {...base, status: 'ROUTE_FOUND', invalidEndpoints: [], planningResult: result, worldPath,
+    geometricLength: result.pathLength * spacing,
+    sweptPathValidation: {valid: true, sweptSegmentsChecked: worldPath.length - 1,
+      scope: 'All axis-aligned world-center segments checked against original closed squares/boundary; no dynamics.'}};
+}
