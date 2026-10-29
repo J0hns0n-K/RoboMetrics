@@ -305,6 +305,12 @@ Preserve this wording and distinguish the assistant's clarification: no successf
 
 AI prepared `experiments/reachable-goal-budget-control.scenario.json`: open only (1,2), immediately left of G, keep the upper goal wall blocked and hold endpoints, other cells, code and budgets 2/300 fixed. This makes a connected contrast to the disconnected example. No planner called for this control; input awaits a student prediction for A* FIFO's budget-2 status only. Parent input/raw output and validation remain unchanged.
 
+## 2026-10-29 Connected-control status forecast recorded
+
+- Junmo answered **예산 초과** for A* FIFO at budget 2 on the connected map. This is a guided pre-run status prediction after API explanation, not an independent discovery or a forecast for the other algorithms/budgets.
+- Record BUDGET_EXCEEDED as the mapped status and commit the ready input before execution. No numerical route length was supplied. Geometry opens only (1,2), retaining the upper goal wall and budgets 2/300.
+- Use the unchanged existing runner and verify the single-cell comparison, independent connectivity, returned fields and successful paths. No code change or full-suite rerun is required for the input-only example.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

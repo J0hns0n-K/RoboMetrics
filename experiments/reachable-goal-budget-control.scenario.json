@@ -1,10 +1,10 @@
 {
   "id": "reachable-goal-small-budget-control-01",
   "dateSeoul": "2026-10-29",
-  "status": "awaiting-prediction",
+  "status": "ready",
   "contributionType": "ai-reference",
   "contributor": "AI assistant — matched connected-map control for failure semantics",
-  "assistance": "AI proposes opening one goal-neighbor wall on the prior disconnected example. Student interpretation is preserved separately; no new outcome forecast or map choice is attributed yet. AI supplies layout, budgets, method and any later execution.",
+  "assistance": "AI proposed the matched one-wall connected control, layout, budgets and method. Student supplied the quoted pre-run budget-2 status expectation for A* FIFO only. AI transcribes, executes and validates; no independent student map/code authorship or operation is inferred.",
   "parentScenario": "experiments/unreachable-goal.scenario.json",
   "parentResult": "data/failure-semantics/unreachable-goal-run-01.json",
   "revision": {
@@ -25,9 +25,10 @@
     2,
     300
   ],
-  "prediction": null,
-  "studentPredictionVerbatim": null,
-  "predictionScope": "Next ask which outcome A* FIFO returns at budget 2: success, unreachable or budget exceeded. Do not infer a numeric route length or forecasts for other algorithms/budgets.",
+  "prediction": "Student predicts budget exhaustion for A* FIFO at budget 2 on the connected control. This follows the API explanation and is a guided pre-run expectation, not an independent discovery. No route length or outcomes for other budgets/algorithms were supplied.",
+  "studentPredictionVerbatim": "예산 초과",
+  "predictionScope": "A* FIFO reason at budget 2 only. No numerical path length or forecasts for other policies/budgets inferred.",
   "controls": "Same 3x3 grid, S/G, other walls, four-neighbor unit costs, planner source and budgets 2/300. Only (1,2) changes, connecting G to the bottom-row route.",
-  "executionNote": "No planner called for this connected control during preparation. Record a new student expectation and commit a ready scenario before execution; keep the disconnected input/output immutable."
+  "executionNote": "Record this forecast and commit the ready input before execution. Preserve the disconnected parent; compare exactly the one opened goal-neighbor wall and fixed budgets/sources.",
+  "studentPredictedReasonAtBudget2": "BUDGET_EXCEEDED"
 }
