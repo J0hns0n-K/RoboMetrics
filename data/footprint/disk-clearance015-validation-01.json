@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "validatedBy": "AI assistant CLI",
+  "validatedAtUTC": "2026-10-29T09:50:44.908Z",
+  "sourceCommit": "30aca9375c32a3dae6a2319804eff9dfe217f4b9",
+  "protocol": "experiments/disk-clearance015-01.protocol.json",
+  "selectedModel": "experiments/disk-model-clearance015-01.config.json",
+  "studentChoice": "data/learning/disk-clearance-choice-01.json",
+  "raw": {
+    "path": "data/footprint/disk-clearance015-run-01.json",
+    "sha256": "f5921f5474ed48dcb7dd5ef5dc1026a78436390f2530a89706af2676cd9ff876"
+  },
+  "existingTests": {
+    "manifest": "data/footprint/disk-footprint-corridor-validation-01.json",
+    "path": "data/footprint/disk-footprint-tests-01.tap",
+    "sha256": "dfd5ef4a07f3bc8a8fc9b8719506383a7f6c0238c13f1239156d6c76c99a7dbd",
+    "passed": 70,
+    "failed": 0,
+    "fullSuiteRerun": false,
+    "scope": "Geometry/core/runner/BFS/test source hashes unchanged. Parameter-only configured run and independent geometry/BFS/output checks performed; not a new full-suite execution."
+  },
+  "sourceHashesGitBlobs": {
+    "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "src/disk-footprint.mjs": "c03c648eabb987b877289aaf6a274b14541100c18910d8d7cdd1bb909877a605",
+    "scripts/check-current-position-detour.mjs": "9bb2fad0a772d3fa41c37c8c21b068d44d7e946eb62524c9e50c41a183a9e12e",
+    "scripts/check-disk-footprint.mjs": "e3df7f2bf4c8893c4226f0a35eee5e3c47028cabb8162556af36791197c9fc22",
+    "test/disk-footprint.test.mjs": "829b226c84ea8cb7e2f2e173396666896c4e3cb9774b7830fcccb39b4dd2d509",
+    "experiments/disk-clearance015-01.protocol.json": "ddc333100a5d583b41ee33b73bacf74c2f25909012c017c7b2c988e0122674bf",
+    "data/learning/robot-hardware-context-01.json": "4a7464430c9c0a32721c6cc26cd595d47dac89f11621f73e9e2c5362f0ac14d5",
+    "experiments/disk-model-clearance015-01.config.json": "05eb114289bcc542081674dd9aa70a5cc9a362513d57d8e7b8e94f74dc8bf658",
+    "data/learning/disk-clearance-choice-01.json": "45fde4d5fc2f8e6f4a789381bf1464f27cff74324c706db1281368cf29d1a10d"
+  },
+  "checks": {
+    "choiceAndAssumedModelCommittedBeforeExecution": true,
+    "noStudentOutcomeForecastAfterExplanation": true,
+    "selectedMargin015UsedExplicitly": true,
+    "allModelUnitsVirtualNotMeasured": true,
+    "allFiveCasesKeepDeclaredMapsEndpointsBudget": true,
+    "allEndpointsHaveClearance": true,
+    "centerDistanceMasksAndBfsChecked": true,
+    "analyticWidthAndContactChecksAgree": true,
+    "selectedMarginBlocksNarrowAndPassesWide": true,
+    "smallerMarginControlPassesNarrow": true,
+    "returnedPathsValidAndSweptChecksPass": true,
+    "unreachableNullEmptyResultPreserved": true,
+    "sourceAndExistingTestHashesMatch": true,
+    "outputRejectedBeforeSearchAndBytesPreserved": true
+  },
+  "observations": {
+    "relatedLayouts": 2,
+    "configuredCases": 5,
+    "grid": [
+      9,
+      7
+    ],
+    "start": [
+      1,
+      3
+    ],
+    "goal": [
+      7,
+      3
+    ],
+    "budgetPerCase": 100,
+    "tieBreak": "fifo",
+    "selectedBodyDiameter": 0.8,
+    "selectedMarginEachSide": 0.15,
+    "selectedEffectiveRadius": 0.55,
+    "requiredWidthStrictlyGreaterThan": 1.1,
+    "results": [
+      {
+        "id": "narrow-point",
+        "opening": 1,
+        "radius": 0,
+        "clearance": 0,
+        "status": "ROUTE_FOUND",
+        "moves": 6,
+        "examined": 7
+      },
+      {
+        "id": "narrow-body08-margin00",
+        "opening": 1,
+        "radius": 0.4,
+        "clearance": 0,
+        "status": "ROUTE_FOUND",
+        "moves": 6,
+        "examined": 7
+      },
+      {
+        "id": "narrow-body08-margin005",
+        "opening": 1,
+        "radius": 0.4,
+        "clearance": 0.05,
+        "status": "ROUTE_FOUND",
+        "moves": 6,
+        "examined": 7
+      },
+      {
+        "id": "narrow-body08-selected015",
+        "opening": 1,
+        "radius": 0.4,
+        "clearance": 0.15,
+        "status": "UNREACHABLE",
+        "moves": null,
+        "examined": 11
+      },
+      {
+        "id": "wide-body08-selected015",
+        "opening": 3,
+        "radius": 0.4,
+        "clearance": 0.15,
+        "status": "ROUTE_FOUND",
+        "moves": 6,
+        "examined": 7
+      }
+    ],
+    "configuredPlannerCalls": 5,
+    "configuredExaminedNodes": 39,
+    "configuredBfsCalls": 5,
+    "additionalValidationCenterChecks": 315,
+    "additionalValidationBfsChecks": 5,
+    "additionalValidationPlannerCalls": 0
+  },
+  "attribution": "Student chose offered margin0.15 after AI explanation, not a new hypothesis or safety calibration. Model/controls/units/code/operation/initial analysis are AI support.",
+  "limitations": [
+    "Virtual geometry assumptions, no hardware or physical safety requirement, sensor uncertainty or actual motion measurement.",
+    "Cell-center graph restricted to four-neighbor unit edges; UNREACHABLE is not proof about all continuous motions.",
+    "Contact forbidden, so required width must be strictly greater than diameter+2clearance.",
+    "Five related known controls on two layouts, not independent new research samples.",
+    "Node counts omit geometry/mask/path-check/BFS overhead, no runtime/energy claim."
+  ],
+  "unrelatedLocalChangePreserved": "practice/02-planning-budget.mjs"
+}

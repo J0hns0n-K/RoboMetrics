@@ -633,6 +633,13 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Immutable selected assumption `experiments/disk-model-clearance015-01.config.json`; ready controls `experiments/disk-clearance015-01.protocol.json`: point/zero/.05/selected.15 at width1, selected.15 at width3. Same9×7/S/G/A* FIFO/budget100/closed-contact/virtual units; AI supplies controls and execution.
 - Existing geometry module/runner/70-test dependencies reused with no source change or full-suite repeat. Commit input/choice before configured execution; preserve original geometry protocol/raw. No physical measurement/safety calibration claim.
 
+## 2026-10-29 — Selected margin0.15 controls completed
+
+- Choice/model/input commit `30aca9375c32a3dae6a2319804eff9dfe217f4b9`; configured raw/validation `data/footprint/disk-clearance015-*.json`, method `docs/DISK_CLEARANCE_015_KR.md`. Existing geometry/runner/test source unchanged.
+- Same two9×7 layouts/S/G, A* FIFO budget100: width1 selected diameter0.8+margin0.15 fails graph connectivity11examined; width3 selected case succeeds6moves/7examined. Zero/.05 margins and point controls pass width1. All endpoints valid, analytic strict width and configuration BFS agree.
+- Five configured A* calls/39 expansions/5 BFS, independent validation315 center checks/5 BFS/zero planner calls. Selected-model/input equality, old70-test/source/TAP hashes, paths/swept checks/failure fields/output immutability checked; no full-suite rerun. Student selected margin after explanation, not a result forecast, code or physical safety requirement.
+- Next AI draft `experiments/two-cell-doorway-expectation.design.json`: width2 opening at rows2/3, investigate width-based continuous feasibility versus cell-center sampling. Question asks geometric expectation only; no student answer, new data or resolution code yet.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

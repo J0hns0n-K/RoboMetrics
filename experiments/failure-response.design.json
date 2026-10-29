@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Commit selected virtual model/protocol then execute fixed-margin/wider-opening controls; keep student parameter choice separate from already-explained outcomes and physical safety claims.",
+  "nextTask": "Ask student for width-based geometric expectation of selected body/margin in a width2 opening. Distinguish that expectation from coarse cell-center A* success; no new data yet.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -169,5 +169,10 @@
   "diskClearanceChoiceDraft": "experiments/disk-clearance-choice.design.json",
   "studentDiskClearanceChoiceRecord": "data/learning/disk-clearance-choice-01.json",
   "selectedAssumedDiskModel": "experiments/disk-model-clearance015-01.config.json",
-  "diskClearanceProtocol": "experiments/disk-clearance015-01.protocol.json"
+  "diskClearanceProtocol": "experiments/disk-clearance015-01.protocol.json",
+  "diskClearanceArtifacts": [
+    "data/footprint/disk-clearance015-run-01.json",
+    "data/footprint/disk-clearance015-validation-01.json"
+  ],
+  "twoCellDoorwayDraft": "experiments/two-cell-doorway-expectation.design.json"
 }
