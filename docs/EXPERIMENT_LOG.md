@@ -229,6 +229,12 @@ Record wall A at (5,0) as the selected edit and retain the original rationale. A
 
 The draft and new `experiments/goal-side-dead-end-open-A.scenario.json` fix exactly one #→. edit. Other cells/endpoints, budget 300 and planning rules remain unchanged. The new input awaits a scoped numerical path-length expectation and has not been executed. Parent input, result and manifests stay unchanged. Next student task: predict the minimum number of moves after opening A.
 
+## 2026-10-29 Six-move revision forecast recorded before execution
+
+- Junmo answered with the number 6 followed by a backslash. The exact raw response is retained in the scenario; the trailing character is treated as extra text after the numeric minimum-move forecast of 6.
+- Set the revised scenario ready only after recording that forecast. No examined-node count or tie-rule superiority expectation was supplied. Geometry, budget 300 and both A* options remain fixed.
+- Commit the input before AI execution, then compare it with the unchanged parent artifact. Planner and evaluator sources are unchanged from the archived 23-test suite, so no new code tests are needed for this input/document revision.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

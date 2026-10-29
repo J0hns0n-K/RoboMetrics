@@ -1,10 +1,10 @@
 {
   "id": "goal-side-dead-end-open-A",
   "dateSeoul": "2026-10-29",
-  "status": "awaiting-prediction",
+  "status": "ready",
   "contributionType": "student-declared",
   "contributor": "Junmo — guided wall-A removal choice and pre-run rationale",
-  "assistance": "Student chose A from two AI-proposed wall edits and supplied the quoted pre-run rationale. AI supplied the labels/layout/options and transcribed the choice. No numerical path-length or examined-node forecast, independent full-map design or code authorship is inferred.",
+  "assistance": "Student chose wall A from AI-proposed edits, supplied the recorded route-based rationale and predicted 6 minimum moves. AI supplied the base layout/options, clarification and transcription and will operate the already-tested paired evaluator. No independent full-map design or student code authorship is inferred.",
   "studentChoiceAndReasonVerbatim": "A를 없애는게 더 좋네. 왜냐하면 최단이동루트에는 A가 있고 B는 없어.",
   "assistantClarification": "A blocks the straight endpoint row; opening it makes that potential route available. The original valid shortest path cannot pass through blocked A. This is an assistant clarification, not a rewrite of the student quote or a student prediction of search work.",
   "parentScenario": "experiments/goal-side-dead-end-04.scenario.json",
@@ -31,8 +31,10 @@
     "fifo",
     "closer-goal"
   ],
-  "prediction": null,
+  "prediction": "Student predicts a minimum route length of 6 moves after opening A. The raw response includes a trailing backslash, interpreted as an extra character after the numeric answer. No prediction of examined nodes or relative tie-rule performance was supplied.",
   "controls": "Only (5,0) changes from wall to open; dimensions, endpoints, all other cells, unit costs, heuristic, neighbor order, budget and planner source remain fixed. Compare each A* tie rule before/after and preserve full paths.",
-  "predictionScope": "Next ask for the minimum number of moves after opening A. The student has not supplied a numerical value or a prediction of examined-node counts.",
-  "executionNote": "Do not execute before the new scoped prediction is recorded and the scenario is committed as ready. Compare with the existing parent artifact, not an edited or overwritten baseline."
+  "predictionScope": "Minimum number of moves on the revised map only. No examined-node forecast is supplied.",
+  "executionNote": "The 6-move forecast is recorded before the ready input is committed and executed. Preserve the original parent and compare unchanged planner sources and fixed budget.",
+  "studentPredictionVerbatim": "6\\",
+  "studentMinimumMovesPrediction": 6
 }
