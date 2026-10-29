@@ -479,6 +479,14 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Each case resets to the same parent and adds exactly one wall. AI-added controls 1/2 carry no student forecast. Same R/G, existing wall, unit-cost four-neighbor movement, A* FIFO and per-case budget 30. Reuse parent raw path without rerunning parent. Check its validity on each map, new search and separate BFS.
 - Thin orchestration `scripts/check-second-wall-choices.mjs` reuses unchanged core/parser/BFS with committed-input/source and immutable-output guards. Syntax and configured execution/row arithmetic will be checked; no full-suite rerun is required for this orchestration-only addition. Results pending source/input commit.
 
+## 2026-10-29 — Separate wall-choice outcomes verified
+
+- Forecast/config/source commit `928e81b0ca8ab1f4f0d76e53b57d418a7580de82`. AI ran `scripts/check-second-wall-choices.mjs`; raw/validation: `data/map-updates/second-wall-choices-*.json`.
+- Student-selected cases 3/4/5 each add one different wall to the same parent. A* FIFO budget 30 per case: all UNREACHABLE, examined 5/6/7 respectively; null lengths/empty paths and separate BFS null distance preserved. No budget failures. AI controls 1/2: success/four moves/six examined each, BFS four; not student forecasts.
+- Parent path remains valid for 1/2 and is blocked for 3/4/5. Parent raw result reused, not rerun. New shared planner calls 5 and independent BFS calls 5. Five related variants of one parent, not independent random maps.
+- Verified one changed cell per case, fixed start/goal/existing wall, exact prediction, outcome fields, source/input hashes, previous 37-test core/parser/BFS equivalence and existing-output refusal/byte preservation. Thin CLI syntax and real configured execution checked; no full-suite rerun or inclusion in previous suite source claimed.
+- Student supplied no rationale/count/code/operation. Next task asks why 1/2 retain the route while any of 3/4/5 cuts it; explanation pending. No physical/dynamic incremental result.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

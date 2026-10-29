@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "validatedBy": "AI assistant CLI",
+  "validatedAtUTC": "2026-10-29T05:47:41.729Z",
+  "sourceCommit": "928e81b0ca8ab1f4f0d76e53b57d418a7580de82",
+  "protocol": "experiments/changed-map-second-wall-choices.config.json",
+  "raw": {
+    "path": "data/map-updates/second-wall-choices-run-01.json",
+    "sha256": "18fae48837af280b28319d2997f4fd3c7505430362af627239a0f4f935e5e4c9"
+  },
+  "parent": {
+    "raw": "data/map-updates/current-position-detour-run-01.json",
+    "sha256GitBlob": "dfe09d959a25b13f1e13e13e33c866f449b08951d97803e97f100946b9b44e19",
+    "rerun": false
+  },
+  "checks": {
+    "studentChoiceCommittedBeforeExecution": true,
+    "threeSeparateStudentVariants": true,
+    "aiControlsNotAttributedToStudent": true,
+    "oneAddedWallPerCase": true,
+    "sameCurrentPositionGoalAndExistingWall": true,
+    "threeUnreachablePredictionsMatched": true,
+    "controlsKeepFourMoveRoute": true,
+    "parentRouteValidityChangesOnlyForStudentChoices": true,
+    "noBudgetExhaustion": true,
+    "unreachableNullLengthsAndEmptyPathsPreserved": true,
+    "independentBfsAgrees": true,
+    "sourceHashesMatchCommittedInputs": true,
+    "existingOutputRejectedBeforeSearch": true,
+    "existingRawBytesUnchanged": true
+  },
+  "executionScope": {
+    "relatedParentLayouts": 1,
+    "studentSelectedVariants": 3,
+    "aiControlVariants": 2,
+    "sharedPlannerCalls": 5,
+    "independentBfsCalls": 5,
+    "budgetPerCase": 30,
+    "tieBreak": "fifo",
+    "parentReusedNotRerun": true
+  },
+  "results": [
+    {
+      "choice": 3,
+      "role": "student-selected prediction case",
+      "success": false,
+      "reason": "UNREACHABLE",
+      "pathLength": null,
+      "examined": 5,
+      "independentBfsDistance": null
+    },
+    {
+      "choice": 4,
+      "role": "student-selected prediction case",
+      "success": false,
+      "reason": "UNREACHABLE",
+      "pathLength": null,
+      "examined": 6,
+      "independentBfsDistance": null
+    },
+    {
+      "choice": 5,
+      "role": "student-selected prediction case",
+      "success": false,
+      "reason": "UNREACHABLE",
+      "pathLength": null,
+      "examined": 7,
+      "independentBfsDistance": null
+    },
+    {
+      "choice": 1,
+      "role": "AI-added control; no student prediction",
+      "success": true,
+      "reason": null,
+      "pathLength": 4,
+      "examined": 6,
+      "independentBfsDistance": 4
+    },
+    {
+      "choice": 2,
+      "role": "AI-added control; no student prediction",
+      "success": true,
+      "reason": null,
+      "pathLength": 4,
+      "examined": 6,
+      "independentBfsDistance": 4
+    }
+  ],
+  "testProvenance": {
+    "existingManifest": "data/map-updates/current-position-detour-validation-01.json",
+    "existingTap": "data/map-updates/current-position-detour-tests-01.tap",
+    "sha256": "e984ca8bc25844a890e16fcb1d00b318aaebaddf95df413ee2a01f8e57d23fac",
+    "priorPassed": 37,
+    "priorFailed": 0,
+    "fullSuiteRerun": false,
+    "scope": "Existing core/parser/BFS hashes match the 37-test manifest. New thin CLI was syntax checked and validated on the committed five-case run and immutable-output guard; it was not part of the prior full-suite source."
+  },
+  "attribution": "Student nominated 3/4/5 as any sufficient single wall before run, with no rationale/count/code. AI supplied controls 1/2, config, runner, execution, independent checking and documentation.",
+  "limitations": [
+    "Five related variants of one synthetic layout, not independent random-map samples or a universal result.",
+    "Fresh fixed-map planning only; no automatic sensing, incremental state repair, robot motion, collision, runtime/energy or hardware measurement.",
+    "Per-case examined-node counts exclude separate BFS/validation computation."
+  ],
+  "unrelatedLocalChangePreserved": "practice/02-planning-budget.mjs"
+}

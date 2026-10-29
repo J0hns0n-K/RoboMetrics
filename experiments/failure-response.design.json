@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student nominated 3/4/5 as any sufficient extra wall. Commit config/runner and check separate one-wall variants plus AI controls 1/2; outcomes pending.",
+  "nextTask": "Ask student why positions 1/2 retain the route whereas each of 3/4/5 disconnects it on this layout; rationale pending after AI validation of the pre-run wall choices.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -92,5 +92,9 @@
     "data/map-updates/current-position-detour-validation-01.json"
   ],
   "secondWallDraft": "experiments/changed-map-second-wall.design.json",
-  "secondWallReadyConfig": "experiments/changed-map-second-wall-choices.config.json"
+  "secondWallReadyConfig": "experiments/changed-map-second-wall-choices.config.json",
+  "secondWallOutcomeArtifacts": [
+    "data/map-updates/second-wall-choices-run-01.json",
+    "data/map-updates/second-wall-choices-validation-01.json"
+  ]
 }
