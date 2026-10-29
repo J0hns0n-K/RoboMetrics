@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "studentResponseVerbatim": "그래도 더 짧고 유리한 루트를 얻기 위해서는 검토량이 많더라도 그걸 선택하는 게 맞는 것 같은데",
+  "relatedAssessment": "data/learning/resolution-quality-assessment-01.json",
+  "studentStatedPriority": "Willing to spend more examined work to obtain a shorter/more advantageous route.",
+  "qualification": "This states a value priority, not evidence that quality-checked returns shorter paths than always-fine on the known cohort. Earlier coarse-only versus quality-checked and current always-fine versus quality-checked are different comparisons.",
+  "sourceValidation": "data/footprint/resolution-quality-replay-validation-01.json",
+  "sourceReplayCommit": "3aad7756ad163cea25122f2db39b72b9ea26e0f9",
+  "baselineRaw": "data/footprint/resolution-policy-unfiltered-run-01.json",
+  "example": {
+    "trial": 12,
+    "seed": 20267039,
+    "coarseOnly": {
+      "length": 8,
+      "examined": 12
+    },
+    "qualityChecked": {
+      "length": 7,
+      "examined": 36
+    },
+    "alwaysFine": {
+      "length": 7,
+      "examined": 24
+    }
+  },
+  "aiProposedTieBreak": "Among valid routes of equal length, prefer less examined work in the stated comparison; this is an AI clarification/proposal, not yet a student-accepted general rule.",
+  "studentTieBreakResponseVerbatim": null,
+  "newExperiments": 0,
+  "scope": "Student reasoning after observed results; no new hypothesis/code/operation/default or validated universal superiority. Original raw results/manifests and earlier response records remain immutable."
+}
