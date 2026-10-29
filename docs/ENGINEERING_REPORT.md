@@ -274,6 +274,14 @@ Source/protocol/choice commit a1edbde743d23ca8f645c20f5c28f04158d23748 precedes 
 
 Five new regression controls bring the full archived suite to79 passes/zero failures, committed before configured execution. Tests check coarse compatibility, body/world units, half-step passage, status separation, small-layout BFS/swept paths and parameter/size guards. Configured work3A*/52expansions/3BFS/347point audits. Additional validation347point projections/3BFS/14swept segments/zero planner calls checks source/test binding, original failure reproduction and immutable output. Not independent new samples, student code/operation, runtime/energy or physical robot evidence. Next task asks the student's post-result explanation of what changed while geometry stayed fixed.
 
+## Empty-map cost control: equal world length with more half-step positions examined
+
+Junmo's earlier **그러게** response is [preserved](../data/learning/disk-resolution-interpretation-response-01.json) without claiming a mechanism explanation. After AI clarification he selected **2** for a separate pre-run question: half-step sampling would examine more positions when both methods reach the goal on an empty map. The [prediction](../data/learning/open-map-resolution-prediction-01.json) supplies a direction only; AI chooses the concrete map, endpoints, controls, numeric references, runner, execution and analysis.
+
+Source/input/prediction commit884e0c47ba981be9bc2c286701546201ea2a5e2f precedes execution. [Protocol/method](OPEN_MAP_RESOLUTION_KR.md) and [validation](../data/footprint/open-map-resolution-validation-01.json) use one empty9×7 original world/S(1,3)/G(7,3), diameter0.8/margin0.15, A* FIFO budget100 and spacing1/0.5. Both return world length6; original spacing uses6edges/7examined, half-step12edges/13examined. Candidate counts63/221 and unblocked candidates35/165 are distinct from actual expansions. Exact world paths, BFS and all18segments agree with the analytic straight-line reference. This supports the guided direction on this control only.
+
+Configured2planner calls/20expansions/2BFS/284point audits. Additional validation284boundary checks/2BFS/18segments/zero planner, source/archive bindings and immutable output verified. Core/disk/BFS/world-audit/relevant tests match prior79-test sources, no full-suite repeat. Candidate construction/audits/storage costs are not runtime/energy or memory-efficiency measurements. Next AI draft offers always-half-step versus coarse-first/one-half-step retry on exhausted UNREACHABLE; student choice and policy implementation/results pending.
+
 ## Student report sections to complete later
 
 1. Student's own question and prior prediction, with timestamp/commit.
@@ -287,7 +295,7 @@ The sections above distinguish completed simulation checks from planned work and
 
 ## Next engineering gates
 
-- Obtain the student interpretation of the completed half-step control; register a separate new-map or resolution-cost comparison before further execution.
+- Obtain a resolution-policy choice after the known doorway and empty-map controls; freeze its status handling, budgets and full cost accounting before implementation/execution.
 - Preserve obstacle/world/body units when adding samples; validate every returned swept path and distinguish geometric length from edge count and search work.
 - Add scoped kinematics, waypoint control and sensing uncertainty only with explicit assumptions and checks.
 - If hardware is obtained, measure its dimensions and repeat controlled trials; report simulation/physical differences and failed cases separately. Follow [the robotics roadmap](ROBOTICS_ROADMAP.md).

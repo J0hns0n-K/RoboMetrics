@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "validatedBy": "AI assistant CLI",
+  "validatedAtUTC": "2026-10-29T10:26:02.075Z",
+  "sourceCommit": "884e0c47ba981be9bc2c286701546201ea2a5e2f",
+  "protocol": "experiments/open-map-disk-resolution-01.protocol.json",
+  "studentPredictionRecord": "data/learning/open-map-resolution-prediction-01.json",
+  "raw": {
+    "path": "data/footprint/open-map-resolution-run-01.json",
+    "sha256": "2c7c6f19a82653df8e71c78db49ce3f18ec799d18247dc0c2fa02342eb3102d1"
+  },
+  "sourceHashesGitBlobs": {
+    "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "src/disk-footprint.mjs": "d65440878eea0718b28c61357948e3e56e48227213a5ea2c732961cd156853e8",
+    "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+    "scripts/check-current-position-detour.mjs": "9bb2fad0a772d3fa41c37c8c21b068d44d7e946eb62524c9e50c41a183a9e12e",
+    "scripts/check-two-cell-doorway.mjs": "45765ff5e47d578a34b6df04d12555388ed04bb53387722be4a949c1d5755cad",
+    "test/disk-footprint.test.mjs": "829b226c84ea8cb7e2f2e173396666896c4e3cb9774b7830fcccb39b4dd2d509",
+    "test/sampled-disk.test.mjs": "be4204cdc04bb89c35def036b1ef6d12d89ee2078f058bc27312a61c6b8f79a6",
+    "test/two-cell-doorway.test.mjs": "29b5719a9556dcf9e0f24288e459dfffcca53d97f3e6c74d903889d301a316c0",
+    "data/footprint/disk-resolution-tests-01.tap": "22dea5ff7f13c54221eb8312e9e26f4d29829889546315f3a1e97e62f29f9577",
+    "data/footprint/disk-resolution-validation-01.json": "5766689a514129dc7c70fa677075f1ef2ab9be72eaf9d4e306151919d93ee465",
+    "experiments/disk-model-clearance015-01.config.json": "05eb114289bcc542081674dd9aa70a5cc9a362513d57d8e7b8e94f74dc8bf658",
+    "data/learning/open-map-resolution-prediction-01.json": "c990d6a636823daaf7c9e13dacc233bd05be67346639d9ca5eeadd6fce175f02",
+    "experiments/open-map-disk-resolution-01.protocol.json": "143e9914f2eebe5fe87aa7132721c06208e541130c36c7b40537dd809b8de494",
+    "scripts/check-open-disk-resolution.mjs": "7e608f3ac34e4870d9af2c03aa6e5824ad28e3b8155f56f79b6861105fc92842"
+  },
+  "existingTests": {
+    "manifest": "data/footprint/disk-resolution-validation-01.json",
+    "path": "data/footprint/disk-resolution-tests-01.tap",
+    "sha256": "22dea5ff7f13c54221eb8312e9e26f4d29829889546315f3a1e97e62f29f9577",
+    "passed": 79,
+    "failed": 0,
+    "fullSuiteRerun": false,
+    "scope": "Core/disk/BFS/world-audit and relevant test sources match the prior79-test validation. New configured runner syntax/analytic/output/source checks and configured execution validated; not a new full-suite run."
+  },
+  "checks": {
+    "studentDirectionalPredictionRecordedBeforeRun": true,
+    "noReasonOrCountsAttributedToStudent": true,
+    "sourceAndInputsCommittedBeforeExecution": true,
+    "fixedEmptyWorldEndpointsBodyMarginBudgetTieRule": true,
+    "onlyCandidateSpacingDiffersWithinPair": true,
+    "candidatePointAuditMatchesBoundaryClearance": true,
+    "separateBfsAgreesWithEachPath": true,
+    "worldPathSegmentsAndEndpointsValid": true,
+    "graphEdgesConvertedToOriginalWorldUnits": true,
+    "bothReachGoalWithSameWorldLength": true,
+    "halfStepExaminesMorePositionsInThisMap": true,
+    "candidateConstructionCountSeparateFromActualExpansions": true,
+    "existing79TestSourceHashesMatch": true,
+    "existingOutputRejectedBeforeWorkAndBytesPreserved": true
+  },
+  "observations": {
+    "mapLayouts": 1,
+    "relatedConditions": 2,
+    "originalWorldSize": [
+      9,
+      7
+    ],
+    "obstacles": 0,
+    "startWorld": [
+      1.5,
+      3.5
+    ],
+    "goalWorld": [
+      7.5,
+      3.5
+    ],
+    "radius": 0.4,
+    "clearance": 0.15,
+    "budgetPerCase": 100,
+    "tieBreak": "fifo",
+    "results": [
+      {
+        "id": "unit-step",
+        "spacing": 1,
+        "candidateCount": 63,
+        "unblockedCandidates": 35,
+        "status": "ROUTE_FOUND",
+        "graphEdges": 6,
+        "worldLength": 6,
+        "examined": 7
+      },
+      {
+        "id": "half-step",
+        "spacing": 0.5,
+        "candidateCount": 221,
+        "unblockedCandidates": 165,
+        "status": "ROUTE_FOUND",
+        "graphEdges": 12,
+        "worldLength": 6,
+        "examined": 13
+      }
+    ],
+    "configuredPlannerCalls": 2,
+    "configuredExaminedNodes": 20,
+    "configuredBfsCalls": 2,
+    "configuredPointAudits": 284,
+    "additionalValidationPointChecks": 284,
+    "additionalValidationBfsCalls": 2,
+    "additionalValidationSweptSegments": 18,
+    "additionalValidationPlannerCalls": 0
+  },
+  "validationMethod": "All284 center samples independently checked against empty-world boundary clearance, BFS on both graphs,18 straight world segments and analytic6-unit endpoint displacement. Complete raw path/count agreement, source hashes and output immutability checked.",
+  "attribution": "Student predicts half-step examines more positions, without numerical count or rationale. AI selects this concrete map/endpoints, methods, counts, code, operation and analysis.",
+  "limitations": [
+    "One AI-designed empty known map/two related conditions, no new random cohort or universal finer-grid cost/success result.",
+    "Candidate count is not actual examined-node count. Examined nodes omit configuration-building, swept-audit/BFS/storage costs.",
+    "Directional prediction follows AI guidance; no independent student map/code/operation or authored mechanism explanation.",
+    "Virtual geometry only; no physical, timing, energy, memory-efficiency, sensing or controller measurements."
+  ],
+  "unrelatedLocalChangePreserved": "practice/02-planning-budget.mjs"
+}

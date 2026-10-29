@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student post-result interpretation: explain why intermediate candidates found a route while original world, obstacles, body and margin stayed fixed. No additional configured run until a new protocol.",
+  "nextTask": "Student strategy choice: always half-step or coarse-first/refine once only on exhausted UNREACHABLE, informed by known empty/doorway controls. No policy implementation/run or student mechanism explanation yet.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -188,5 +188,13 @@
     "data/footprint/disk-resolution-run-01.json",
     "data/footprint/disk-resolution-validation-01.json"
   ],
-  "diskResolutionInterpretationDraft": "experiments/disk-resolution-interpretation.design.json"
+  "diskResolutionInterpretationDraft": "experiments/disk-resolution-interpretation.design.json",
+  "diskResolutionInterpretationResponse": "data/learning/disk-resolution-interpretation-response-01.json",
+  "openMapResolutionPrediction": "data/learning/open-map-resolution-prediction-01.json",
+  "openMapResolutionProtocol": "experiments/open-map-disk-resolution-01.protocol.json",
+  "openMapResolutionArtifacts": [
+    "data/footprint/open-map-resolution-run-01.json",
+    "data/footprint/open-map-resolution-validation-01.json"
+  ],
+  "resolutionPolicyChoiceDraft": "experiments/resolution-policy-choice.design.json"
 }

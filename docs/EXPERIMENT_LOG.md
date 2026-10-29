@@ -655,6 +655,13 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Raw/validation data/footprint/disk-resolution-*.json, method docs/DISK_RESOLUTION_KR.md;79-test TAP passes all, five new controls. Configured3A*/52nodes/3BFS/347point audits. Validation347point projections/3BFS/14segments/zero extra planner; source/test hashes, original disk function text, parent raw equality and immutable output checked.
 - One known map/three related conditions, no new independent cohort, continuous optimum, time/energy/memory efficiency, student implementation or physical robot evidence. More candidate positions recover this path; no lower-work claim. Next student interpretation pending in experiments/disk-resolution-interpretation.design.json.
 
+## 2026-10-29 — Empty-map resolution cost prediction checked
+
+- Earlier “그러게” preserved as a non-explanatory response, not a student-authored mechanism. Following AI clarification, student **2** predicted more half-step examined positions on an empty map, with no rationale or count. Prediction data/learning/open-map-resolution-prediction-01.json precedes configured execution.
+- Protocol/source/prediction commit884e0c47ba981be9bc2c286701546201ea2a5e2f: one empty original9×7/S(1,3)/G(7,3), diameter0.8/margin0.15/contact forbidden/A* FIFO/budget100. Spacing1 succeeds6edges/world6/7examined;0.5 succeeds12edges/world6/13examined. Candidate counts63/221 are separate from actual expansions. Exact straight paths/BFS/swept clearance agree.
+- Raw/validation data/footprint/open-map-resolution-*.json, method docs/OPEN_MAP_RESOLUTION_KR.md. Configured2A*/20expansions/2BFS/284point audits; extra validation284boundary checks/2BFS/18segments/zero planner calls. Existing79-test runtime dependencies/relevant tests/archive hashes match, no full-suite rerun; new runner syntax/source/count/output guards checked.
+- Student direction supported here, not a universal fine-grid rule or independent cohort. AI supplies concrete map/method/code/operation/analysis, no physical/runtime-energy/storage result. Next AI draft experiments/resolution-policy-choice.design.json offers always-fine versus coarse-first/refine-on-UNREACHABLE; no answer/implementation/result yet.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

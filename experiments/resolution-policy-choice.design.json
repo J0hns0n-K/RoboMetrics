@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "status": "draft-awaiting-student-design-choice",
+  "proposalAuthor": "AI assistant",
+  "parentValidations": [
+    "data/footprint/disk-resolution-validation-01.json",
+    "data/footprint/open-map-resolution-validation-01.json"
+  ],
+  "question": "1: 항상 반 칸 간격으로 탐색하기, 2: 먼저1칸 간격으로 탐색하고 그 후보 그래프에 길이 없다고 끝나면 반 칸 간격으로 다시 탐색하기. 어느 방식을 선택하고 싶어?",
+  "choices": [
+    {"id": 1, "direction": "Always spacing0.5"},
+    {"id": 2, "direction": "Try spacing1; only on exhausted UNREACHABLE retry once at spacing0.5"}
+  ],
+  "studentResponseVerbatim": null,
+  "studentRationale": null,
+  "implementation": null,
+  "results": null,
+  "futureControls": "Keep original body/world/obstacles/endpoints fixed, retain both stage outputs and sum actual examined work. Compare both known empty/doorway controls. Do not collapse BUDGET_EXCEEDED, UNREACHABLE and invalid endpoints; retry policy budgets/behavior require an explicit ready protocol before execution.",
+  "scope": "AI-proposed policy choice after explained known-map results, not an independently invented student algorithm. No policy implementation, new experiment or general performance conclusion yet."
+}
