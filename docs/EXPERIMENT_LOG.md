@@ -295,6 +295,16 @@ Record this as a new question after earlier experiments, not a backdated hypothe
 - Sufficiently exhaustive failure confirms no route under the declared fixed map/rules; budget exhaustion alone does not certify that. Null length means no returned route, not zero moves. This fixed negative case stays outside the random benchmark's reachable-only cohort.
 - Next task: student explains why the two failure reasons must be distinguished. No such student interpretation has yet been received.
 
+## 2026-10-29 Student interpretation; connected control prepared
+
+After the failure explanation, Junmo wrote:
+
+> 도착 불가는 예산 초과가 없더라도 절대 값이 나올 수 없어.
+
+Preserve this wording and distinguish the assistant's clarification: no successful route exists under the fixed map/rules, but the API still returns a failure object. Do not infer that the student fully distinguished successful-path output from any return value or already explained the budget-exhausted case.
+
+AI prepared `experiments/reachable-goal-budget-control.scenario.json`: open only (1,2), immediately left of G, keep the upper goal wall blocked and hold endpoints, other cells, code and budgets 2/300 fixed. This makes a connected contrast to the disconnected example. No planner called for this control; input awaits a student prediction for A* FIFO's budget-2 status only. Parent input/raw output and validation remain unchanged.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

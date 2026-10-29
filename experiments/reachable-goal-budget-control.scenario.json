@@ -1,0 +1,33 @@
+{
+  "id": "reachable-goal-small-budget-control-01",
+  "dateSeoul": "2026-10-29",
+  "status": "awaiting-prediction",
+  "contributionType": "ai-reference",
+  "contributor": "AI assistant — matched connected-map control for failure semantics",
+  "assistance": "AI proposes opening one goal-neighbor wall on the prior disconnected example. Student interpretation is preserved separately; no new outcome forecast or map choice is attributed yet. AI supplies layout, budgets, method and any later execution.",
+  "parentScenario": "experiments/unreachable-goal.scenario.json",
+  "parentResult": "data/failure-semantics/unreachable-goal-run-01.json",
+  "revision": {
+    "coordinate": [
+      1,
+      2
+    ],
+    "from": "#",
+    "to": ".",
+    "operation": "Open only the cell immediately left of G; keep its upper wall blocked."
+  },
+  "rows": [
+    "S..",
+    "..#",
+    "..G"
+  ],
+  "budgets": [
+    2,
+    300
+  ],
+  "prediction": null,
+  "studentPredictionVerbatim": null,
+  "predictionScope": "Next ask which outcome A* FIFO returns at budget 2: success, unreachable or budget exceeded. Do not infer a numeric route length or forecasts for other algorithms/budgets.",
+  "controls": "Same 3x3 grid, S/G, other walls, four-neighbor unit costs, planner source and budgets 2/300. Only (1,2) changes, connecting G to the bottom-row route.",
+  "executionNote": "No planner called for this connected control during preparation. Record a new student expectation and commit a ready scenario before execution; keep the disconnected input/output immutable."
+}

@@ -69,7 +69,7 @@ When asked to formulate his current question, Junmo wanted to know what is retur
 
 ## Next research step
 
-Explain the two failure reasons in the student's own words and incorporate their limits into the [Korean engineering summary](docs/ENGINEERING_SUMMARY_KR.md), an explicitly AI-edited draft that separates student statements from implementation and analysis support. The planned robotics extension introduces body geometry, differential-drive motion, waypoint tracking and sensor/actuator uncertainty. Matched physical trials depend on obtaining and testing hardware; no physical measurements have been collected. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
+Compare the disconnected example with a matched connected control created by opening one goal-neighbor wall. Keep both budgets fixed and obtain a pre-run forecast for the connected map's small-budget outcome; this control has not been executed. This checks why a missing route and a returned failure object must be distinguished, and why a cutoff alone does not certify disconnection. Student wording and AI clarifications remain separate in the [Korean engineering summary](docs/ENGINEERING_SUMMARY_KR.md). The planned robotics extension introduces body geometry, differential-drive motion, waypoint tracking and sensor/actuator uncertainty. Matched physical trials depend on obtaining and testing hardware; no physical measurements have been collected. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
 
 ## Run and inspect
 
