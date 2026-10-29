@@ -434,6 +434,13 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Verified same map, core hash, sum of call deltas, final path, all reported checks, existing-output refusal and byte preservation. Full 35-test archive and source hashes are linked in manifest; tests include 24,576 small-layout result comparisons, not independent new samples.
 - Memory is retained, not measured; no timing/energy/physical result or changing-map reuse claim. No core/browser/selected 2→4 change. Next: student explanation of restart versus continuation, pending.
 
+## 2026-10-29 — Student interpretation after the resume explanation
+
+- Exact response: **재시작은 이미 계산한 내용을 다시 탐색하는데 이어가기는 처음 계산한 내용을 저장하고 멈춘 곳부터 이어서 탐색하는 거야.** Context and scope are preserved in `data/learning/resume-interpretation-01.json` against evidence revision `db5a36dc61d3bbe4e7da740249f94e8b71e09359`.
+- Correct guided post-explanation interpretation; AI had already supplied the proposal, reference code, execution, results and explanation. No independent invention, prior prediction, student implementation or new run is inferred. Historical raw outputs/manifests remain unchanged.
+- Next AI-proposed conceptual question: whether saved information can be used unchanged if a new obstacle blocks a passage during the pause. Student response pending; no changed-map experiment or dynamic replanning result. Current session deliberately uses a fixed snapshot.
+- Documentation/learning-record change only; no algorithm or method change and no test rerun required.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

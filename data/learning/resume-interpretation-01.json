@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "recordType": "guided post-explanation student interpretation; not experiment output",
+  "recordedBy": "AI assistant from the user's chat response",
+  "context": {
+    "referenceEvidenceCommit": "db5a36dc61d3bbe4e7da740249f94e8b71e09359",
+    "priorExplanationBy": "AI assistant",
+    "priorTask": "재시작과 이어가기의 차이를 네 말로 한 문장만 적어 줘.",
+    "rawControl": "data/retry-policy/resume02-to08-run-01.json",
+    "validation": "data/retry-policy/resume02-to08-validation-01.json"
+  },
+  "studentStatementVerbatim": "재시작은 이미 계산한 내용을 다시 탐색하는데 이어가기는 처음 계산한 내용을 저장하고 멈춘 곳부터 이어서 탐색하는 거야.",
+  "assessmentByAI": "Correctly distinguishes repeated search on restart from retaining prior calculations and continuing after a pause in the demonstrated fixed-map setting.",
+  "attributionLimits": "Post-explanation paraphrase after AI proposal, code, execution and result presentation. Not a pre-run forecast, independent state-reuse invention, student implementation or independently observed execution. No new experiment or numerical result.",
+  "nextGuidedQuestion": "탐색을 멈춘 사이 새 장애물이 통로를 막았다면, 예전 정보를 그대로 써도 될까, 바뀐 지도를 기준으로 다시 확인해야 할까?",
+  "nextQuestionAuthor": "AI assistant",
+  "studentResponseToNextQuestion": null,
+  "nextQuestionScope": "Conceptual question only; no changed-map experiment, dynamic replanning implementation or result claimed. Current reference session intentionally retains a fixed snapshot."
+}

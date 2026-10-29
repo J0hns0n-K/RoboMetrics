@@ -62,7 +62,8 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Ask student to explain restart versus continuation in his own words after the AI reference demonstration; interpretation pending.",
+  "nextTask": "Ask whether saved search information should be rechecked when a new obstacle changes the map during a pause; conceptual student response pending, no changed-map experiment yet.",
+  "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
   "stateReuseProposalAuthor": "AI assistant; no student design or outcome prediction supplied",
   "stateReuseReferenceArtifacts": [
