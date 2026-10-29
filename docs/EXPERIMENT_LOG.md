@@ -612,6 +612,13 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Original budget100 validation remains immutable; `budget100-comparison-erratum-01.json` repairs duplicated after-key names via explicit before/after fields, verified against raw300/100. No numerical rerun.
 - Next `experiments/robot-model-inputs.design.json`: hardware availability/model/dimensions pending before finite-body/motion modeling; no physical experiment claim.
 
+## 2026-10-29 — No hardware reported; assumed body geometry registered
+
+- Exact user **아직 없는데** in `data/learning/robot-hardware-context-01.json`. No measured dimensions/model or hardware execution inferred. AI begins simulation-only geometry, not a purchase recommendation.
+- New `src/disk-footprint.mjs`: circular disk against closed unit-square obstacles/world boundary, centers at grid centers, four-neighbor straight edges, contact forbidden. Assumed cell-side units, radius+clearance. Configuration graph and original-geometry swept-edge checks, explicit invalid endpoint status; no kinematics/control/sensing. Core point planner unchanged.
+- Seven new geometry controls/full suite70 passes, TAP `data/footprint/disk-footprint-tests-01.tap`. Zero-radius compatibility, narrow/wide passage, tangency, Euclidean corners, boundary/endpoints, swept edges and invalid inputs checked on known fixtures.
+- Ready `experiments/disk-footprint-corridor-01.protocol.json`: six related controls/two9×7 layouts, same S/G,A* FIFO budget100, disk radii0/.4/.5/.6 and margin0/.2. AI hand-known width expectations, no student forecast. Source/protocol commit required before configured execution.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

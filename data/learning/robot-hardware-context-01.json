@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "recordType": "user-reported hardware context; not a measurement",
+  "recordedBy": "AI assistant from user chat",
+  "contextRevision": "15e2a3306b7acf2c0bc9247ff1c168552b8c0448",
+  "priorDraft": "experiments/robot-model-inputs.design.json",
+  "question": "사용할 수 있는 실제 로봇이 있어? 있으면 모델명, 없으면 없음이라고 알려 줘.",
+  "studentResponseVerbatim": "아직 없는데",
+  "hardwareAvailability": "not available yet, per user report",
+  "robotModel": null,
+  "measuredDimensions": null,
+  "simulationDecisionByAI": "Begin assumed disk geometry in cell-side units; no inferred physical dimensions, kinematics or robot trials.",
+  "attributionLimits": "Student supplied availability context only. AI supplies shape, units, radii/clearance, layouts, code/tests/operation/analysis. Not a student geometry design or physical experiment."
+}
