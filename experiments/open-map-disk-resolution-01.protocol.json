@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "open-map-disk-resolution-01",
+  "dateSeoul": "2026-10-29",
+  "status": "ready",
+  "selectedModel": "experiments/disk-model-clearance015-01.config.json",
+  "studentPredictionRecord": "data/learning/open-map-resolution-prediction-01.json",
+  "priorValidation": "data/footprint/disk-resolution-validation-01.json",
+  "width": 9,
+  "height": 7,
+  "blocked": [],
+  "start": [1, 3],
+  "goal": [7, 3],
+  "radius": 0.4,
+  "clearance": 0.15,
+  "tieBreak": "fifo",
+  "maxExpansions": 100,
+  "cases": [
+    {"id": "unit-step", "spacing": 1},
+    {"id": "half-step", "spacing": 0.5}
+  ],
+  "controls": "Within this pair only candidate spacing changes. Same empty original9x7 world, virtual units, startWorld(1.5,3.5),goalWorld(7.5,3.5), diameter0.8/each-side margin0.15/contact forbidden/A* FIFO/budget100. This map removes the barrier from the earlier doorway but is a separate control, not an independent random sample.",
+  "aiAnalyticReference": "Horizontal world displacement6 is a lower bound and straight path is feasible. Expected graph edge counts6/12; world length6 for both. With these endpoints and A* primary score, off-row steps have higher f, so expected examined counts7/13 including endpoints. These numeric expectations are AI controls, not student predictions.",
+  "measurements": "Candidate counts, actual examined nodes, graph edges, world-length conversion, exact paths and original-world clearance; separate BFS for each graph. Distinguish candidates constructed from nodes actually examined.",
+  "validation": "Bind unchanged79-test dependencies without rerunning the full suite. Commit protocol/source/prediction before execution; compare separate BFS and analytic straight-line length/counts, audit every candidate and each returned world segment, reject existing outputs before computation.",
+  "attribution": "Student predicts half-step examines more positions, without numerical count or rationale. AI selects this concrete map/endpoints, methods, counts, code, operation and analysis.",
+  "scope": "Two related conditions on one empty known map. No universal resolution cost/success claim, physical measurement or runtime/energy/storage performance inference. Existing engine/browser/historical data unchanged."
+}

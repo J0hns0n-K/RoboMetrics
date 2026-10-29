@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "questionVerbatim": "장애물이 없는 같은 지도에서 둘 다 도착한다면, 어느 쪽이 더 많은 위치를 검토할 것 같아? 1. 1칸 간격 2. 반 칸 간격 3. 아직 모르겠어",
+  "studentResponseVerbatim": "2",
+  "interpretedPrediction": "Half-step sampling will examine more positions than unit-step sampling on the offered empty-map comparison.",
+  "studentRationale": null,
+  "studentNumericalPrediction": null,
+  "beforeConfiguredExecution": true,
+  "context": "Guided directional prediction after AI explained intermediate samples and their increased candidate count. Student has not supplied a general proof or independent fixture/method.",
+  "attribution": "Student supplies offered pre-run directional prediction only. AI supplies map/endpoints/budget, analytic reference, protocol, implementation, execution and validation."
+}
