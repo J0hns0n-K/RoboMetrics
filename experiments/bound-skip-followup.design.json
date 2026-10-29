@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "status": "draft-awaiting-student-density-choice",
+  "proposalAuthor": "AI assistant",
+  "question": "다음 새 지도 검증은 벽이 많은 조건과 적은 조건 중 어느 쪽을 먼저 볼까?",
+  "options": {"1": {"label": "벽이 많은 조건", "wallGenerationProbability": 0.28}, "2": {"label": "벽이 적은 조건", "wallGenerationProbability": 0.12}},
+  "studentChoiceVerbatim": null,
+  "studentPerformancePrediction": null,
+  "proposedBaseSeed": 20265027,
+  "proposedRuns": 30,
+  "proposedGrid": [16, 12],
+  "proposedControls": "Before generating any follow-up map, freeze the selected density and protocol. Preserve first-connected-map sampling/audit, deterministic single-wall removal, paired same prior routes, A* FIFO budget 300, forced versus guarded reoptimization and independent distances. Prior-route acquisition remains offline and separately charged.",
+  "scope": "Unexecuted, unseen follow-up condition proposal; no new data generated. New seed range alone does not establish statistical independence. AI supplies methods/code; student condition choice is pending."
+}

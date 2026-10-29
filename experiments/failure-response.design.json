@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student adopted lower-bound skip. Commit tested source/protocol and replay guarded versus forced reoptimization on the same archived 30 inputs, preserving baseline and not calling it held-out validation.",
+  "nextTask": "Student chooses a denser (.28) or sparser (.12) unseen follow-up condition before freezing/generating its protocol/cohort. Current guard tested; same-cohort performance replay complete.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -120,5 +120,11 @@
   ],
   "manhattanBoundSkipDraft": "experiments/manhattan-bound-skip.design.json",
   "studentBoundSkipChoiceRecord": "data/learning/manhattan-bound-choice-01.json",
-  "boundSkipComparisonProtocol": "experiments/manhattan-bound-comparison-01.protocol.json"
+  "boundSkipComparisonProtocol": "experiments/manhattan-bound-comparison-01.protocol.json",
+  "boundSkipDefault": true,
+  "boundSkipArtifacts": [
+    "data/route-update-policy/manhattan-bound-comparison-run-01.json",
+    "data/route-update-policy/manhattan-bound-validation-01.json"
+  ],
+  "boundSkipFollowupDraft": "experiments/bound-skip-followup.design.json"
 }

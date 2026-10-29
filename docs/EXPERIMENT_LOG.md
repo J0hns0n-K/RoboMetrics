@@ -539,6 +539,14 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Five new tests bring suite to 55 passed/zero failed. Includes invalid old bound-length path, current suffix/past blocked cell, valid above-bound detour and 1,024 layouts × two rules =2,048 guarded/unguarded route checks. AI tests, not independent research samples. TAP `data/route-update-policy/manhattan-bound-tests-01.tap`.
 - New protocol `experiments/manhattan-bound-comparison-01.protocol.json` reuses all prior 30 inputs/paths, runs both arms anew, checks baseline original fields against archive and separates bound proofs from actual search completions. Same development cohort, not held-out validation. Source/protocol commit precedes replay.
 
+## 2026-10-29 — Bound-check development-cohort replay completed
+
+- Source/protocol/student adoption commit `e3cd5f6fada5e43b594f6ba998118eea8370ce90`; raw and validation `data/route-update-policy/manhattan-bound-*.json`. AI operated/validated, student selected rule only.
+- Same 30 archived edited maps/base 20264027/16×12/.19/current corner starts/prior paths, A* FIFO budget 300. All baseline original fields replay exactly and revised returned paths/lengths match 30/30; both mean moves 26.1333. Calls 30→2, expansions 3,733→201, means 124.4333→6.70, saved 3,532 (94.6156%). 28 valid-route bound proofs, two actual A* completions, no budget failures.
+- Comparison-wide fresh work: 60 policy evaluations/32 A* calls/3,934 expansions, no new sampling/prior acquisition/BFS in driver. Validation adds 30 BFS checks/zero planner calls. Costs exclude copying/path validation/independent checks; no timing/energy/physical claim.
+- Full suite 55 passes, including 2,048 small-grid paired checks; source/TAP match. Thin driver syntax/actual replay, old fields, maps/paths, proof source, counts and existing-output/byte guards checked; no full-suite rerun afterward. Original baseline/protocol/raw files preserved.
+- Same development cohort that motivated rule, not held-out or independent validation. Next AI draft `experiments/bound-skip-followup.design.json` freezes a new seed/cohort only after student picks high/low generation probability. Choice/data not yet supplied or generated.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
