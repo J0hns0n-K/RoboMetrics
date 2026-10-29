@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "recordType": "guided conceptual option choice; not experiment output",
+  "recordedBy": "AI assistant from user chat",
+  "contextRevision": "fb2dd077788ee63d597a1f09ca4b7afcef485057",
+  "priorRecord": "data/learning/map-change-reason-01.json",
+  "scenario": "출발 — A — 로봇 → B — 목표",
+  "assumptions": "Robot continues toward the goal on the right without backtracking.",
+  "question": "A와 B 중 어디에 새 벽이 생겼을 때 앞으로 갈 길을 직접 막을까?",
+  "studentResponseVerbatim": "b",
+  "normalizedChoice": "B",
+  "normalization": "Letter case only.",
+  "assessmentByAI": "Correctly identifies the future segment in the offered diagram after the AI distinction between past and remaining route.",
+  "attributionLimits": "Guided location choice only; no reason, revalidation procedure, algorithm implementation, execution or numerical prediction supplied. Does not prove a general policy for changing maps.",
+  "nextTaskDesign": "experiments/changed-map-remaining-route.design.json",
+  "newExperimentPerformed": false
+}

@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "id": "changed-map-current-position-detour-01",
+  "dateSeoul": "2026-10-29",
+  "status": "draft-awaiting-student-prediction",
+  "author": "AI assistant",
+  "motivation": "Follow up guided B choice with a remaining-route detour from the current robot position.",
+  "priorLearningRecord": "data/learning/remaining-route-location-01.json",
+  "displayRows": [
+    "S.R#G",
+    "....."
+  ],
+  "legend": {
+    "S": "Original departure, already left behind",
+    "R": "Current robot position and start for the next search",
+    "#": "New wall on the old remaining route",
+    "G": "Goal",
+    ".": "Open cell"
+  },
+  "width": 5,
+  "height": 2,
+  "originalDeparture": [
+    0,
+    0
+  ],
+  "currentPosition": [
+    2,
+    0
+  ],
+  "goal": [
+    4,
+    0
+  ],
+  "oldPlannedRoute": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      4,
+      0
+    ]
+  ],
+  "currentPathIndex": 2,
+  "newObstacle": [
+    3,
+    0
+  ],
+  "plannerRowsAfterChange": [
+    "..S#G",
+    "....."
+  ],
+  "plannerStartMeaning": "S in plannerRowsAfterChange denotes current R, not the original departure.",
+  "movement": "Four-neighbor, unit cost; no diagonal movement. Unlike the earlier line diagram, this new grid permits a vertical detour.",
+  "studentPredictionQuestion": "지금 R에서 G까지 가려면 최소 몇 번 움직여야 할까?",
+  "studentPrediction": null,
+  "proposedValidation": "After recording the prediction, validate the old remaining path on the changed map and run a fresh fixed-map A* FIFO search from R; verify the returned route on that map. Not incremental reuse or physical motion control.",
+  "proposedSearchBudget": 30,
+  "attribution": "AI supplied map, choices and method. Student previously chose B only. No student map/code authorship or new result inferred.",
+  "results": null
+}

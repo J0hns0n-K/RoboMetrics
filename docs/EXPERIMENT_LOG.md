@@ -453,6 +453,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - AI clarified the distinction: for a robot continuing forward without returning, a wall behind it need not block the remaining route; an obstacle on a future segment can invalidate that segment. Do not attribute this clarification to the student.
 - Next AI-proposed conceptual exercise: departure — A — robot → B — goal, forward only; ask which new wall directly blocks the remaining route. Student response pending; no experiment, code/method change or test rerun. Prior raw records/manifests remain immutable.
 
+## 2026-10-29 — Future-segment choice and next detour draft
+
+- Student answered **b** to the forward-only A/B diagram after AI clarification. Record `data/learning/remaining-route-location-01.json` preserves lowercase input and case-only normalization to B. Correct guided location choice, not a numerical forecast, independent method or implementation.
+- AI prepared `experiments/changed-map-remaining-route.design.json`: two-row 5×2 grid, original S behind current R, new wall on the old remaining route and G ahead. Four-neighbor movement permits a detour; the next forecast concerns minimum moves from R, not original S. Draft status, student prediction and results remain pending.
+- Proposed later check: old remaining-path validation on the changed map and fresh A* from the current position. No new execution, dynamic incremental planner, motion controller or physical measurement. Documentation/input-only change; historical evidence preserved.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
