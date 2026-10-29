@@ -56,8 +56,8 @@
     "minimumMoves": 6,
     "normalization": "Trailing backslash treated as an extra character; numeric expectation is 6. No other forecast inferred."
   },
-  "attribution": "Student chose A from two AI-proposed wall edits and supplied the quoted pre-run rationale. AI supplied the labels/layout/options and transcribed the choice. No numerical path-length or examined-node forecast, independent full-map design or code authorship is inferred.",
-  "execution": "AI-operated run on committed source 2ab94f7a51bbf1e204252adc8b85cd76479a94a6; parent input/results preserved. Both rules return 6 moves and examine 7 nodes; post-result student interpretation is pending.",
+  "attribution": "Student chose A from AI options, supplied the stored rationale, predicted 6 minimum moves and gave the quoted post-result interpretation. AI supplied the base layout/options, transcribed and operated/validated the comparison. No independent full-map design, student code authorship or prediction of examined nodes is inferred.",
+  "execution": "Wall-A comparison is complete and student post-result interpretation is recorded. The original raw files and inputs remain unchanged. A separate AI-proposed wall-B control is pending a new prediction.",
   "studentChoiceAndReasonVerbatim": "A를 없애는게 더 좋네. 왜냐하면 최단이동루트에는 A가 있고 B는 없어.",
   "selectedRows": [
     "S.....G",
@@ -68,5 +68,6 @@
   "resultArtifacts": [
     "data/structured/goal-side-dead-end-open-A-run-01.json",
     "data/structured/goal-side-dead-end-open-A-comparison-01.json"
-  ]
+  ],
+  "studentPostResultInterpretationVerbatim": "최소이동루트에 있는 장애물이 있었기 때문에 변화가 생길 수 밖에 없지"
 }

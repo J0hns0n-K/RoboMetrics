@@ -1,0 +1,38 @@
+{
+  "id": "goal-side-dead-end-open-B-control",
+  "dateSeoul": "2026-10-29",
+  "status": "awaiting-prediction",
+  "contributionType": "ai-reference",
+  "contributor": "AI assistant — proposed B-only follow-up control",
+  "assistance": "AI proposes opening B on the original parent map to compare wall positions. Student previously selected A; do not attribute selection of B or a new forecast to the student before a response. Original layout, labels, evaluator and operation are AI support.",
+  "parentScenario": "experiments/goal-side-dead-end-04.scenario.json",
+  "parentResult": "data/structured/goal-side-dead-end-04-run-01.json",
+  "relatedAResult": "data/structured/goal-side-dead-end-open-A-run-01.json",
+  "revision": {
+    "operation": "Open exactly B from the original parent; keep A blocked",
+    "label": "B",
+    "coordinate": [
+      4,
+      1
+    ],
+    "from": "#",
+    "to": "."
+  },
+  "rows": [
+    "S....#G",
+    ".###.#.",
+    "......."
+  ],
+  "budgets": [
+    300
+  ],
+  "variants": [
+    "fifo",
+    "closer-goal"
+  ],
+  "prediction": null,
+  "studentPredictionVerbatim": null,
+  "predictionScope": "Next ask whether FIFO examined nodes will be fewer than, equal to, or greater than its original 15 nodes, or unknown. Do not infer a closer-goal or route-length prediction.",
+  "controls": "Compare to the original map, not the A-open map: only (4,1) changes; A at (5,0) remains blocked. Other cells, dimensions, endpoints, budget 300 and planner rules remain fixed.",
+  "executionNote": "No planner called for this B-only control during preparation. Record a scoped pre-run expectation and commit a ready input before execution; preserve all parent and A-open artifacts."
+}

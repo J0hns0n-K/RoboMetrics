@@ -243,6 +243,16 @@ The draft and new `experiments/goal-side-dead-end-open-A.scenario.json` fix exac
 - AI interpretation distinguishes the environment edit from changing an algorithm rule: both improve under the same search policies. No measured runtime/energy, rule-2-specific gain or independently operated student experiment is inferred. Student post-result causal interpretation is pending.
 - Next student task: explain the reduced moves and examined-node counts in one sentence referring to the condition that actually changed.
 
+## 2026-10-29 Student explains A-removal change; B-only control prepared
+
+After the results and AI explanation, Junmo answered the changed-condition question:
+
+> 최소이동루트에 있는 장애물이 있었기 때문에 변화가 생길 수 밖에 없지
+
+This is an elicited post-result explanation attributing the change to the obstacle. Preserve the wording separately from the assistant's clarification: A blocked a potential straight route, not a cell on the original valid path. The statement is scoped to this case, not a proof that any wall removal must reduce path length or examined nodes, and not a detailed explanation of search order.
+
+AI proposed the next B-only control in `experiments/goal-side-dead-end-open-B.scenario.json`: return to the original parent with A blocked and open only (4,1). Budget 300 and other cells/rules remain fixed. This is not a cumulative A+B opening and is not attributed as a new student wall selection. No planner was called for this control. The next forecast concerns FIFO examined nodes relative to the original 15; no closer-goal or route-length forecast is inferred.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
