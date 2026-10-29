@@ -1,0 +1,340 @@
+TAP version 13
+# Subtest: all 1024 obstacle configurations of a 4x3 grid agree with independent BFS
+ok 1 - all 1024 obstacle configurations of a 4x3 grid agree with independent BFS
+  ---
+  duration_ms: 16.8689
+  type: 'test'
+  ...
+# Subtest: exact expansion budget includes examining the goal
+ok 2 - exact expansion budget includes examining the goal
+  ---
+  duration_ms: 0.8996
+  type: 'test'
+  ...
+# Subtest: fixed-map runner distinguishes path length from computation budget
+ok 3 - fixed-map runner distinguishes path length from computation budget
+  ---
+  duration_ms: 1.1315
+  type: 'test'
+  ...
+# Subtest: scenario parser rejects unfinished attribution, malformed maps, and invalid budgets
+ok 4 - scenario parser rejects unfinished attribution, malformed maps, and invalid budgets
+  ---
+  duration_ms: 0.335
+  type: 'test'
+  ...
+# Subtest: unreachable scenarios preserve failure reason and null length ratios
+ok 5 - unreachable scenarios preserve failure reason and null length ratios
+  ---
+  duration_ms: 0.2113
+  type: 'test'
+  ...
+# Subtest: open 3x3 grid: shortest path is Manhattan distance 4
+ok 6 - open 3x3 grid: shortest path is Manhattan distance 4
+  ---
+  duration_ms: 2.601
+  type: 'test'
+  ...
+# Subtest: blocked goal is unreachable and explicit
+ok 7 - blocked goal is unreachable and explicit
+  ---
+  duration_ms: 0.247
+  type: 'test'
+  ...
+# Subtest: budget limit is distinguishable from unreachable
+ok 8 - budget limit is distinguishable from unreachable
+  ---
+  duration_ms: 0.1633
+  type: 'test'
+  ...
+# Subtest: deterministic map and deterministic search
+ok 9 - deterministic map and deterministic search
+  ---
+  duration_ms: 2.6373
+  type: 'test'
+  ...
+# Subtest: A* path is optimal on sampled solvable static grids
+ok 10 - A* path is optimal on sampled solvable static grids
+  ---
+  duration_ms: 9.847
+  type: 'test'
+  ...
+# Subtest: paired benchmark reproducible and metrics within bounds
+ok 11 - paired benchmark reproducible and metrics within bounds
+  ---
+  duration_ms: 4.0125
+  type: 'test'
+  ...
+# Subtest: selected seed-260 case gives valid Greedy path longer than a proven shortest path
+ok 12 - selected seed-260 case gives valid Greedy path longer than a proven shortest path
+  ---
+  duration_ms: 3.7749
+  type: 'test'
+  ...
+# Subtest: same counterexample separates budgeted success from path quality
+ok 13 - same counterexample separates budgeted success from path quality
+  ---
+  duration_ms: 0.2969
+  type: 'test'
+  ...
+# Subtest: separate text-grid BFS preserves hand-known reachable, unreachable and zero-distance cases
+ok 14 - separate text-grid BFS preserves hand-known reachable, unreachable and zero-distance cases
+  ---
+  duration_ms: 1.0483
+  type: 'test'
+  ...
+# Subtest: separate BFS uses supplied current position on a rectangular grid in both directions
+ok 15 - separate BFS uses supplied current position on a rectangular grid in both directions
+  ---
+  duration_ms: 0.1715
+  type: 'test'
+  ...
+# Subtest: benchmark exports the selected A* tie rule and applies it without changing paired maps or Greedy
+ok 16 - benchmark exports the selected A* tie rule and applies it without changing paired maps or Greedy
+  ---
+  duration_ms: 7.9992
+  type: 'test'
+  ...
+# Subtest: paired evaluator applies both distinct rules on the known center-obstacle control
+ok 17 - paired evaluator applies both distinct rules on the known center-obstacle control
+  ---
+  duration_ms: 3.4679
+  type: 'test'
+  ...
+# Subtest: paired evaluator preserves exact goal-in-budget boundaries separately for each rule
+ok 18 - paired evaluator preserves exact goal-in-budget boundaries separately for each rule
+  ---
+  duration_ms: 0.259
+  type: 'test'
+  ...
+# Subtest: paired evaluator retains unreachable outcomes rather than treating them as budget failures
+ok 19 - paired evaluator retains unreachable outcomes rather than treating them as budget failures
+  ---
+  duration_ms: 0.1589
+  type: 'test'
+  ...
+# Subtest: default skips a valid route at the bound, while disabled guard still spends its budget
+ok 20 - default skips a valid route at the bound, while disabled guard still spends its budget
+  ---
+  duration_ms: 2.8378
+  type: 'test'
+  ...
+# Subtest: a blocked old route with bound length is rejected before considering the shortcut
+ok 21 - a blocked old route with bound length is rejected before considering the shortcut
+  ---
+  duration_ms: 0.9185
+  type: 'test'
+  ...
+# Subtest: bound uses the current suffix, ignoring a blocked already-traveled prefix
+ok 22 - bound uses the current suffix, ignoring a blocked already-traveled prefix
+  ---
+  duration_ms: 0.2004
+  type: 'test'
+  ...
+# Subtest: a valid optimal detour above the geometric bound still triggers reoptimization
+ok 23 - a valid optimal detour above the geometric bound still triggers reoptimization
+  ---
+  duration_ms: 0.1445
+  type: 'test'
+  ...
+# Subtest: all 1024 small layouts and both tie rules preserve guarded/unguarded route outcomes
+ok 24 - all 1024 small layouts and both tie rules preserve guarded/unguarded route outcomes
+  ---
+  duration_ms: 18.5267
+  type: 'test'
+  ...
+# Subtest: matrix preserves matched maps, original benchmark rows and deterministic sampling audit
+ok 25 - matrix preserves matched maps, original benchmark rows and deterministic sampling audit
+  ---
+  duration_ms: 11.504
+  type: 'test'
+  ...
+# Subtest: common-success lengths avoid comparing different success subsets on known counterexample
+ok 26 - common-success lengths avoid comparing different success subsets on known counterexample
+  ---
+  duration_ms: 0.3754
+  type: 'test'
+  ...
+# Subtest: sampling audit detects a substituted map seed rather than accepting an unpaired cohort
+ok 27 - sampling audit detects a substituted map seed rather than accepting an unpaired cohort
+  ---
+  duration_ms: 1.4707
+  type: 'test'
+  ...
+# Subtest: resuming retains the unexamined candidate and previous returned results
+ok 28 - resuming retains the unexamined candidate and previous returned results
+  ---
+  duration_ms: 2.8075
+  type: 'test'
+  ...
+# Subtest: all 1024 small layouts match original A* at each of 12 budgets for both tie rules
+ok 29 - all 1024 small layouts match original A* at each of 12 budgets for both tie rules
+  ---
+  duration_ms: 44.8498
+  type: 'test'
+  ...
+# Subtest: exact exhaustion reports unreachable, then performs no further work
+ok 30 - exact exhaustion reports unreachable, then performs no further work
+  ---
+  duration_ms: 0.188
+  type: 'test'
+  ...
+# Subtest: terminal success is stable and returned paths cannot mutate session state
+ok 31 - terminal success is stable and returned paths cannot mutate session state
+  ---
+  duration_ms: 0.1403
+  type: 'test'
+  ...
+# Subtest: cumulative budgets are finite positive safe integers, nondecreasing and idempotent
+ok 32 - cumulative budgets are finite positive safe integers, nondecreasing and idempotent
+  ---
+  duration_ms: 0.357
+  type: 'test'
+  ...
+# Subtest: session owns a fixed map snapshot despite later caller edits
+ok 33 - session owns a fixed map snapshot despite later caller edits
+  ---
+  duration_ms: 0.1267
+  type: 'test'
+  ...
+# Subtest: response policy stops after initial success without spending the retry allowance
+ok 34 - response policy stops after initial success without spending the retry allowance
+  ---
+  duration_ms: 1.9391
+  type: 'test'
+  ...
+# Subtest: response policy does not retry an exhausted unreachable search
+ok 35 - response policy does not retry an exhausted unreachable search
+  ---
+  duration_ms: 0.1672
+  type: 'test'
+  ...
+# Subtest: retry success retains the original failure and charges both attempts
+ok 36 - retry success retains the original failure and charges both attempts
+  ---
+  duration_ms: 0.6874
+  type: 'test'
+  ...
+# Subtest: a second budget failure stops after one retry rather than silently escalating
+ok 37 - a second budget failure stops after one retry rather than silently escalating
+  ---
+  duration_ms: 0.147
+  type: 'test'
+  ...
+# Subtest: invalid or unbounded budget configurations are rejected before searching
+ok 38 - invalid or unbounded budget configurations are rejected before searching
+  ---
+  duration_ms: 0.355
+  type: 'test'
+  ...
+# Subtest: the selected A* tie rule applies on the initial search and the retry
+ok 39 - the selected A* tie rule applies on the initial search and the retry
+  ---
+  duration_ms: 0.1839
+  type: 'test'
+  ...
+# Subtest: seeded row-major removal changes exactly one wall and preserves its parent
+ok 40 - seeded row-major removal changes exactly one wall and preserves its parent
+  ---
+  duration_ms: 1.1798
+  type: 'test'
+  ...
+# Subtest: candidate audit distinguishes disconnected, no-wall and accepted maps
+ok 41 - candidate audit distinguishes disconnected, no-wall and accepted maps
+  ---
+  duration_ms: 0.3506
+  type: 'test'
+  ...
+# Subtest: paired summary separates potential shortening, realized shortening and budget fallback
+ok 42 - paired summary separates potential shortening, realized shortening and budget fallback
+  ---
+  duration_ms: 2.2602
+  type: 'test'
+  ...
+# Subtest: a blocked already-traveled prefix does not invalidate a valid remaining route
+ok 43 - a blocked already-traveled prefix does not invalidate a valid remaining route
+  ---
+  duration_ms: 1.4448
+  type: 'test'
+  ...
+# Subtest: blocked remaining route triggers fresh planning from current position and a valid detour
+ok 44 - blocked remaining route triggers fresh planning from current position and a valid detour
+  ---
+  duration_ms: 0.4627
+  type: 'test'
+  ...
+# Subtest: each known student wall choice exhausts its reachable region and preserves unreachable semantics
+ok 45 - each known student wall choice exhausts its reachable region and preserves unreachable semantics
+  ---
+  duration_ms: 0.2599
+  type: 'test'
+  ...
+# Subtest: budget exhaustion stays distinct from no route even when a known alternative exists
+ok 46 - budget exhaustion stays distinct from no route even when a known alternative exists
+  ---
+  duration_ms: 0.1624
+  type: 'test'
+  ...
+# Subtest: invalid budgets, tie rules, current indices and waypoints are rejected
+ok 47 - invalid budgets, tie rules, current indices and waypoints are rejected
+  ---
+  duration_ms: 0.4118
+  type: 'test'
+  ...
+# Subtest: keeping a valid route does not promise shortestness; already at goal needs no search
+ok 48 - keeping a valid route does not promise shortestness; already at goal needs no search
+  ---
+  duration_ms: 0.1105
+  type: 'test'
+  ...
+# Subtest: student-selected default reoptimizes a valid four-move route to a two-move route
+ok 49 - student-selected default reoptimizes a valid four-move route to a two-move route
+  ---
+  duration_ms: 0.113
+  type: 'test'
+  ...
+# Subtest: reoptimization can confirm an already shortest route while explicit retention skips search
+ok 50 - reoptimization can confirm an already shortest route while explicit retention skips search
+  ---
+  duration_ms: 0.1103
+  type: 'test'
+  ...
+# Subtest: budget-limited optimization preserves a verified route and the separate failed search
+ok 51 - budget-limited optimization preserves a verified route and the separate failed search
+  ---
+  duration_ms: 0.1287
+  type: 'test'
+  ...
+# Subtest: reoptimization uses current suffix under both tie rules even if a past cell is blocked
+ok 52 - reoptimization uses current suffix under both tie rules even if a past cell is blocked
+  ---
+  duration_ms: 0.8131
+  type: 'test'
+  ...
+# Subtest: optional tie-break preserves all 720 recorded default A*/Greedy policy metrics
+ok 53 - optional tie-break preserves all 720 recorded default A*/Greedy policy metrics
+  ---
+  duration_ms: 45.81
+  type: 'test'
+  ...
+# Subtest: goal-directed ties retain optimality and reachability on every 4x3 obstacle layout
+ok 54 - goal-directed ties retain optimality and reachability on every 4x3 obstacle layout
+  ---
+  duration_ms: 5.9696
+  type: 'test'
+  ...
+# Subtest: small control can keep the same optimal route length with different examined-node counts
+ok 55 - small control can keep the same optimal route length with different examined-node counts
+  ---
+  duration_ms: 0.1839
+  type: 'test'
+  ...
+1..55
+# tests 55
+# suites 0
+# pass 55
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 415.6241

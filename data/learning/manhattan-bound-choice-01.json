@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "recordType": "guided adoption of AI-proposed optimization rule; not experiment output",
+  "recordedBy": "AI assistant from user chat",
+  "contextRevision": "a097e94d88ccc511de04880cdbc24a8cc1d5fd43",
+  "priorDraft": "experiments/manhattan-bound-skip.design.json",
+  "question": "이미 최소 길이를 달성한 경로라면?",
+  "options": {
+    "1": "재탐색을 생략한다.",
+    "2": "그래도 재탐색한다."
+  },
+  "studentResponseVerbatim": "1",
+  "selectedOption": 1,
+  "studentReasonVerbatim": null,
+  "studentNumericalPrediction": null,
+  "adoptedRule": "Validate the remaining path on the latest map; if its length equals Manhattan(current,goal), skip optimization. Otherwise keep budgeted reoptimization.",
+  "attributionLimits": "Student adopted the AI-proposed rule after the 30-map result; no independent proof/invention, API/code/tests, exact savings forecast or execution inferred.",
+  "implementedBy": "AI assistant",
+  "scope": "Current static fully known four-neighbor unit-cost model; default skipProvenOptimal=true in route-update API, not browser/robot integration."
+}

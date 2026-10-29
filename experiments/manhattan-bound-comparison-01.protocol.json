@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "manhattan-bound-comparison-01",
+  "dateSeoul": "2026-10-29",
+  "status": "ready",
+  "studentChoiceRecord": "data/learning/manhattan-bound-choice-01.json",
+  "baselineRaw": "data/route-update-policy/reoptimization-batch-run-01.json",
+  "baselineValidation": "data/route-update-policy/reoptimization-batch-validation-01.json",
+  "runs": 30,
+  "tieBreak": "fifo",
+  "maxExpansions": 300,
+  "baselineMode": "reoptimize, skipProvenOptimal=false",
+  "revisedMode": "Default reoptimize with skipProvenOptimal=true; validate remaining route before bound test.",
+  "controls": "Reuse all 30 archived edited maps, current starts, goals, prior routes and order. No new sampling, wall choice, prior-route acquisition or reference search. Run both policy arms anew under current source; compare original baseline output fields to the immutable archive.",
+  "measurements": "Returned path/length/validity, bound proofs versus A* completions, planner calls/expansions per arm, equality to archived BFS distances, budget failures and original-field compatibility. Count fresh rerun costs separately; zero planner work does not mean zero validation work.",
+  "studentOutcomePrediction": null,
+  "attribution": "Student selected option 1 to adopt the AI-proposed skip rule after seeing the original cohort. No independent algorithm invention, code/test authorship, numerical forecast or operation inferred. AI supplies implementation, controls, execution and analysis.",
+  "scope": "Replay on the same development cohort that motivated the rule, not held-out validation, an independent new cohort or a physical robot result. Rule is restricted to valid paths in known static four-neighbor unit-cost grids."
+}

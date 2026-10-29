@@ -51,6 +51,7 @@ test('invalid budgets, tie rules, current indices and waypoints are rejected', (
   }
   assert.throws(() => resolveRouteUpdate(changedMap([]), detour, {maxExpansions: 30, tieBreak: 'unknown'}));
   assert.throws(() => resolveRouteUpdate(changedMap([]), detour, {maxExpansions: 30, optimization: 'unknown'}));
+  assert.throws(() => resolveRouteUpdate(changedMap([]), detour, {maxExpansions: 30, skipProvenOptimal: 'yes'}));
   assert.throws(() => resolveRouteUpdate(changedMap([]), detour, {maxExpansions: 30, currentPathIndex: 1}));
   for (const path of [[], [[99, 0]], [[2.5, 0]], [[2, 0, 1]], [[2, 0], null]]) {
     assert.throws(() => resolveRouteUpdate(changedMap([]), path, {maxExpansions: 30}));

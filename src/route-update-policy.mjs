@@ -3,11 +3,12 @@
 import {makeMap, plan, verifyPath} from './core.mjs';
 
 export function resolveRouteUpdate(map, priorPath, {
-  currentPathIndex = 0, maxExpansions, tieBreak = 'fifo', optimization = 'reoptimize'
+  currentPathIndex = 0, maxExpansions, tieBreak = 'fifo', optimization = 'reoptimize', skipProvenOptimal = true
 } = {}) {
   if (!Number.isSafeInteger(maxExpansions) || maxExpansions < 1) throw new Error('Supply a finite positive safe integer search budget.');
   if (!['fifo', 'closer-goal'].includes(tieBreak)) throw new Error('Unknown tie-breaking rule.');
   if (!['keep-valid', 'reoptimize'].includes(optimization)) throw new Error('Unknown optimization policy.');
+  if (typeof skipProvenOptimal !== 'boolean') throw new Error('skipProvenOptimal must be boolean.');
   if (!Array.isArray(priorPath) || !priorPath.length || !Number.isSafeInteger(currentPathIndex)
     || currentPathIndex < 0 || currentPathIndex >= priorPath.length) throw new Error('Invalid prior path/index.');
   if (!Array.isArray(map.cells) && !ArrayBuffer.isView(map.cells)) throw new Error('Invalid cells.');
@@ -21,8 +22,10 @@ export function resolveRouteUpdate(map, priorPath, {
   if (current[0] !== snapshot.start[0] || current[1] !== snapshot.start[1]) throw new Error('Current index must match the supplied current start.');
   const remaining = priorPath.slice(currentPathIndex).map(p => [...p]);
   const priorValid = verifyPath(snapshot, remaining);
+  const lowerBound = Math.abs(snapshot.start[0] - snapshot.goal[0]) + Math.abs(snapshot.start[1] - snapshot.goal[1]);
   const response = (status, path, decisionReason, optimizationStatus, result = null) => ({
-    status, optimization, decisionReason, optimizationStatus,
+    status, optimization, skipProvenOptimal, lowerBound, decisionReason, optimizationStatus,
+    optimalityEvidence: optimizationStatus === 'OPTIMAL' ? (result?.success ? 'ASTAR_COMPLETED' : 'MANHATTAN_BOUND') : null,
     priorRemainingPathValid: priorValid, priorValidPathLength: priorValid ? remaining.length - 1 : null,
     path: path.map(p => [...p]), pathLength: path.length ? path.length - 1 : null,
     expanded: result?.expanded ?? 0, plannerCalls: result ? 1 : 0,
@@ -33,6 +36,10 @@ export function resolveRouteUpdate(map, priorPath, {
   }
   if (priorValid && optimization === 'keep-valid') {
     return response('KEEP_ROUTE', remaining, 'VALID_ROUTE_RETAINED', 'NOT_REQUESTED');
+  }
+  // Student adopted this AI-proposed rule: only a verified route attaining the bound can skip.
+  if (priorValid && skipProvenOptimal && remaining.length - 1 === lowerBound) {
+    return response('KEEP_ROUTE', remaining, 'LOWER_BOUND_OPTIMAL', 'OPTIMAL');
   }
   const result = plan(snapshot, 'astar', maxExpansions, {tieBreak});
   if (result.success && !verifyPath(snapshot, result.path)) throw new Error('Planner returned an invalid route.');

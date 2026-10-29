@@ -532,6 +532,13 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Post-result AI analysis: 28 original paths length 26 (Manhattan lower bound); two length 28 remain 28 after selected edits. Student supplied uncertainty only. Original all/some question omitted zero; zero was permitted in numeric protocol and is preserved. No universal claim about every edit or reoptimization.
 - Next AI proposal `experiments/manhattan-bound-skip.design.json`: skip optimization only if latest-map remaining route is valid and equals current-goal Manhattan bound. Student preference/implementation/comparison pending, not measured savings or student invention.
 
+## 2026-10-29 — Lower-bound skip adopted before replay
+
+- Student chose **1**; exact context/scope in `data/learning/manhattan-bound-choice-01.json`. Adoption of AI proposal only, after original cohort analysis; no independent invention/code/proof or numeric savings prediction.
+- AI default skipProvenOptimal=true: verify latest-map remaining suffix first, skip only when its length equals current-goal Manhattan bound. Expose bound versus A* optimality evidence. Explicit false forces prior reoptimization; old batch runner pins false to preserve its frozen protocol.
+- Five new tests bring suite to 55 passed/zero failed. Includes invalid old bound-length path, current suffix/past blocked cell, valid above-bound detour and 1,024 layouts × two rules =2,048 guarded/unguarded route checks. AI tests, not independent research samples. TAP `data/route-update-policy/manhattan-bound-tests-01.tap`.
+- New protocol `experiments/manhattan-bound-comparison-01.protocol.json` reuses all prior 30 inputs/paths, runs both arms anew, checks baseline original fields against archive and separates bound proofs from actual search completions. Same development cohort, not held-out validation. Source/protocol commit precedes replay.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
