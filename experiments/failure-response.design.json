@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Commit tested analysis/protocol then run selected budget100 on same dense cohort, preserving usable-route versus optimization-completion and raw-budget distinctions.",
+  "nextTask": "Student chooses timeout response when a verified route exists: finish the call with it or design separately bounded further optimization. Budget100 results complete; no extra budget/retry selected.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -144,5 +144,10 @@
   "denseFollowupConclusionAiPrecisionEdit": "이번 실험에서는 최신 지도에서 유효하며 이론적 최소 길이를 달성한 경로의 재탐색을 생략해, 강제 재탐색과 같은 경로를 유지하면서 새 노드 검토량을 줄였다.",
   "budgetStressDraft": "experiments/bound-skip-budget-stress.design.json",
   "budgetStressChoiceRecord": "data/learning/bound-skip-budget-choice-01.json",
-  "budgetStressProtocol": "experiments/bound-skip-budget100-01.protocol.json"
+  "budgetStressProtocol": "experiments/bound-skip-budget100-01.protocol.json",
+  "budget100Artifacts": [
+    "data/route-update-policy/bound-skip-budget100-run-01.json",
+    "data/route-update-policy/bound-skip-budget100-validation-01.json"
+  ],
+  "optimizationTimeoutResponseDraft": "experiments/optimization-timeout-response.design.json"
 }

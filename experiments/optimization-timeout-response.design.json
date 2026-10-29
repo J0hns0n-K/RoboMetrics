@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "status": "draft-awaiting-student-response-choice",
+  "proposalAuthor": "AI assistant",
+  "evidence": "data/route-update-policy/bound-skip-budget100-validation-01.json",
+  "question": "재탐색 예산이 끝났지만 기존 길은 유효하다면 기본 동작을 어떻게 할까?",
+  "options": {
+    "1": "기존의 유효한 길을 결과로 유지하고 이번 계산을 끝낸다.",
+    "2": "추가 계산 예산을 정해 더 짧은 길 탐색을 이어간다."
+  },
+  "currentAiReferenceBehavior": "Option 1, verified fallback plus visible failed optimization record. Student has not selected this timeout response yet.",
+  "studentChoiceVerbatim": null,
+  "additionalBudget": null,
+  "scope": "Engineering response choice under a known valid fallback, distinct from an invalid old route or physical movement commands. Option 2 would require a separately bounded design; no automatic extra work authorized by this draft. No new run or policy change yet."
+}

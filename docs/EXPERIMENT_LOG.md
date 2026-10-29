@@ -588,6 +588,14 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Two new controls bring full suite to57 passed/zero failed; TAP `data/route-update-policy/bound-budget-stress-tests-01.tap`. Controls distinguish suboptimal valid fallback and already-shortest fallback from completed searches/proofs, reject corrupted failure/optimality claims.
 - Protocol/source commit precedes the configured budget100 replay. Same known cohort, full counts already available; not blind research/new independent maps. Results pending.
 
+## 2026-10-29 — Budget100 results preserve route/optimization distinction
+
+- Source/protocol/student parameter commit `4c78f0aafdfab6babb4bcf5b11fa204b0ef8a022`; raw/validation `data/route-update-policy/bound-skip-budget100-*.json`. Same known30 dense inputs/current starts/prior paths/A* FIFO, budget only300→100. No new student hypothesis or independent cohort.
+- Guard:21 bound proofs+6 search completions+3 optimization budget failures;9 calls/798 expansions. Forced:21 completions+9 failures;30 calls/2,581 expansions. Both keep valid usable routes30/30 and identical paths/reference300; all returned lengths match offline BFS, mean26.6667, one shortening retained. Guarded policy optimality evidence27/30 versus external validation30/30; do not count the three budget failures as completed searches or unreachable.
+- Original raw failed planningResult remains BUDGET_EXCEEDED/empty path/null length at100; separate top fallback remains valid. Other regression fixtures retain valid-but-suboptimal fallbacks, so no universal shortest-fallback claim. Compared to guarded300:completions9→6/failures0→3/expansions844→798.
+- New comparison work60 evaluations/39 planner calls/3,379 expansions, no new cohort/prior/BFS in driver. Validation adds30 BFS checks/zero planner calls. Full suite57 passes before run, exact source/TAP, reference fit/truncation, proof/failure/cost/denominator and immutable-output checks; no post-run suite repeat.
+- Next `experiments/optimization-timeout-response.design.json`: student chooses ending this call with the verified route or separately bounded further optimization. Current fallback is AI-proposed; no added budget/retry or motion command executed by this draft.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
