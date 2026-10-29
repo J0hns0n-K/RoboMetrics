@@ -388,6 +388,16 @@ AI will implement a separate A* wrapper that restarts the same map at most once,
 - Student chose small increments in a 4/8 context, not a literal numeric answer or indefinite retries. Configured demonstration on an already studied map is not a blind forecast test or independent sample. AI provides code/execution/analysis.
 - Next task: student writes a user-facing sentence for the final budget-exceeded outcome after the allowed retry, without asserting no path. No message has yet been supplied.
 
+## 2026-10-29 Student-authored budget-ending notice recorded
+
+Asked for a user-facing notice after the retry also exceeds budget, Junmo wrote:
+
+> 예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.
+
+Retain the original. AI edits the display to **예산을 초과했지만 길이 없다는 뜻은 아닙니다. 더 큰 예산으로 다시 탐색하면 길을 찾을 수도 있습니다.** This clarifies finding a route already permitted by the map, not budget creating connectivity; it makes no success guarantee. The new message configuration retains original policy settings and source config. The statement is notice text, not an instruction to execute another retry.
+
+AI adds guarded CLI display for final BUDGET_EXCEEDED only and checks it on the four archived outcomes. Original config/raw outputs remain immutable; the same known-map run with message is a presentation smoke check, not a new independent sample or blind research trial.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

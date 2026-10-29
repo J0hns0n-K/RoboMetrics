@@ -8,6 +8,12 @@ import {fileURLToPath} from 'node:url';
 import {parseScenario} from './run-scenario.mjs';
 import {planAStarWithOneRetry} from '../src/retry-policy.mjs';
 
+export function getFinalBudgetMessage(finalResult, definition) {
+  if (finalResult.success || finalResult.reason !== 'BUDGET_EXCEEDED') return null;
+  if (typeof definition?.displayText !== 'string' || !definition.displayText.trim()) return null;
+  return definition.displayText;
+}
+
 async function main() {
   const [configPath, outputPath] = process.argv.slice(2);
   if (!configPath || !outputPath?.endsWith('.json')) {
@@ -45,9 +51,10 @@ async function main() {
   const mapScenario = JSON.parse(await readFile(resolve(root, mapFile), 'utf8'));
   const map = parseScenario(mapScenario);
   const result = planAStarWithOneRetry(map, config.policy);
+  const userMessage = getFinalBudgetMessage(result.finalResult, config.finalBudgetMessage);
   const output = {
     schemaVersion: 1, label: 'AI-OPERATED CONFIGURED RETRY DEMONSTRATION; NOT FIXED-BUDGET BENCHMARK DATA',
-    configuration: config, map: {source: mapFile, rows: mapScenario.rows}, result,
+    configuration: config, map: {source: mapFile, rows: mapScenario.rows}, result, userMessage,
     execution: {
       operator: 'AI assistant CLI', executedAtUTC: new Date().toISOString(),
       sourceCommit: git(['rev-parse', 'HEAD']), sourceInputsDirty: false,
@@ -62,6 +69,9 @@ async function main() {
   console.table(result.attempts.map(a => ({attempt: a.number, budget: a.budget,
     success: a.result.success, reason: a.result.reason, moves: a.result.pathLength, examined: a.result.expanded})));
   console.log(`Total examined: ${result.totalExpanded}; cap: ${config.policy.maxTotalExpansions}`);
+  if (userMessage) console.log(userMessage);
 }
 
-main().catch(error => { console.error(error.message); process.exitCode = 1; });
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main().catch(error => { console.error(error.message); process.exitCode = 1; });
+}

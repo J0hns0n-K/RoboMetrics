@@ -1,0 +1,27 @@
+{
+  "id": "retry-connected-02-to-04-with-budget-message",
+  "dateSeoul": "2026-10-29",
+  "status": "ready",
+  "mapScenario": "experiments/reachable-goal-budget-control.scenario.json",
+  "policy": {
+    "initialBudget": 2,
+    "retryBudget": 4,
+    "maxTotalExpansions": 10,
+    "tieBreak": "fifo"
+  },
+  "studentModeChoiceVerbatim": "그럼 예산을 느려 한 번 더 시도하는게 맞는 거 같아",
+  "studentBudgetStatementVerbatim": "조금씩 늘리자",
+  "assistantOperationalization": "In the immediately preceding 4-or-8 choice, interpret this as the smaller increment, retry budget 4. This is an explicit assistant interpretation, not a literal numeric student response or authorization of repeated retries.",
+  "studentOutcomePrediction": null,
+  "knownPriorEvidence": "The same map and related budget outcomes already appear in API demonstrations and AI regression tests. This is a configured policy demonstration, not a blind new research forecast or independent map sample.",
+  "attribution": "Student selected one higher-budget retry and expressed a small-increment preference. AI operationalizes the offered smaller retry budget as 4 while retaining one retry and cap 10. No exact numeric quote, additional retry permission, outcome prediction or student code authorship is inferred.",
+  "measurementRules": "Preserve both attempt outcomes and sum their actual examined nodes. Retain initial-budget success separately. Stop after at most one additional attempt even if the total cap has unused allowance. Do not modify fixed-budget benchmark rows or the original datasets.",
+  "parentConfig": "experiments/retry-connected-02-to-04.config.json",
+  "finalBudgetMessage": {
+    "studentOriginal": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
+    "displayText": "예산을 초과했지만 길이 없다는 뜻은 아닙니다. 더 큰 예산으로 다시 탐색하면 길을 찾을 수도 있습니다.",
+    "editedBy": "AI assistant",
+    "editingScope": "Preserve the meaning while clarifying finding an existing route rather than budget creating a route; no guarantee of success."
+  },
+  "messageScope": "User supplied a requested failure notice, not authorization to increase the budget again or change the one-retry policy. Display only on final BUDGET_EXCEEDED, never on success or UNREACHABLE."
+}
