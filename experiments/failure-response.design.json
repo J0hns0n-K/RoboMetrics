@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student predicted 4 remaining moves from current R. Commit ready scenario/source and verify old remaining-path invalidation plus fresh static-map planning; result pending.",
+  "nextTask": "Student chooses one additional bottom-row wall (labels 1-5) intended to make current R-to-G unreachable; preserve parent and verify outcome only after recording choice.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -86,5 +86,10 @@
   "studentMapChangeReasonRecord": "data/learning/map-change-reason-01.json",
   "studentRemainingRouteLocationRecord": "data/learning/remaining-route-location-01.json",
   "changedMapDraft": "experiments/changed-map-remaining-route.design.json",
-  "changedMapReadyScenario": "experiments/changed-map-current-position-detour-01.scenario.json"
+  "changedMapReadyScenario": "experiments/changed-map-current-position-detour-01.scenario.json",
+  "changedMapOutcomeArtifacts": [
+    "data/map-updates/current-position-detour-run-01.json",
+    "data/map-updates/current-position-detour-validation-01.json"
+  ],
+  "secondWallDraft": "experiments/changed-map-second-wall.design.json"
 }

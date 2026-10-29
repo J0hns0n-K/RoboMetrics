@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "validatedBy": "AI assistant CLI",
+  "validatedAtUTC": "2026-10-29T05:06:21.527Z",
+  "sourceCommit": "922b3b96b6da020f4a55e754651860da82d66cac",
+  "protocol": "docs/CURRENT_POSITION_REPLAN_KR.md",
+  "scenario": "experiments/changed-map-current-position-detour-01.scenario.json",
+  "raw": {
+    "path": "data/map-updates/current-position-detour-run-01.json",
+    "sha256": "dfe09d959a25b13f1e13e13e33c866f449b08951d97803e97f100946b9b44e19"
+  },
+  "tests": {
+    "path": "data/map-updates/current-position-detour-tests-01.tap",
+    "sha256": "e984ca8bc25844a890e16fcb1d00b318aaebaddf95df413ee2a01f8e57d23fac",
+    "passed": 37,
+    "failed": 0,
+    "newTests": 2,
+    "provenance": "Final full suite ran before source commit; normalized source bytes and archived TAP match committed revision. No suite rerun after configured execution."
+  },
+  "sourceHashesGitBlobs": {
+    "package.json": "ed66c6f1dd768e55eabb04716249b1dbf8876f1e000ba083a78e742bbdd62011",
+    "scripts/build-learning-trace.mjs": "5430deb4b6a7b25cbbb7e28060554436b867961bb4a1b083a020ae204c519104",
+    "scripts/check-current-position-detour.mjs": "9bb2fad0a772d3fa41c37c8c21b068d44d7e946eb62524c9e50c41a183a9e12e",
+    "scripts/compare-fixed-ties.mjs": "0af9ce44b2fb4113b5184fa3260fcf06c21f3c6d4aff6f83ca4bb7edef832028",
+    "scripts/compare-restart-cost.mjs": "ee8058045245122137a2fba4da699047e4daff34bffbba5440129e69c56efa28",
+    "scripts/compare-ties.mjs": "7bf5c591d5646034798eddf84ea9e09480adf3b22f4d8c7b6e1c4293bddeecd1",
+    "scripts/run-matrix.mjs": "ce5fd3ac918d7e69d6a9a7fc3965bc8d7d5622ba1ccefec97edac91a8ddf24a6",
+    "scripts/run-resume-control.mjs": "a8090ca1296c0332d00903778bfc92f3c424d24faa4cc235a19007c9035bef88",
+    "scripts/run-retry-policy.mjs": "a1794489fca4e824bbc84a8ff184bf8875a05b57963193cb2290551c549b8614",
+    "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+    "scripts/serve.mjs": "e040e1c5b14f83c645d345623711654921731c80835bf37067f2d0502b23b500",
+    "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "src/resumable-astar.mjs": "c43cc77c139446f50a4de02a1f315945e4406f760d4b631e5b905524a2769ed9",
+    "src/retry-policy.mjs": "72729cd2ce9fb2c93a94057a43ee6b9b29bfdf270b73418541adcf6b169e9576",
+    "src/ui.mjs": "83449f56a4844bb877272fb8050d72bf7364df1214eb236b3420c5f3f8f71c38",
+    "test/audit.test.mjs": "2aaba9e05b6fa01ba0fbe5d7bfdefa82e8e1dce414fe00e477e09e1fd9b7be27",
+    "test/core.test.mjs": "b75b834a103758ffbd780d3c842be93189294d6e6600fa46fd0096b66510c795",
+    "test/counterexample.test.mjs": "fd020e579decc69a6ea99c69d1490c955b2d6ee3c562e62609d5bc5ae0f22265",
+    "test/current-position-detour.test.mjs": "3105108879cbce53fba1ed7c5f7a4d167da986f4c07c81771d2db51b1a41ca87",
+    "test/demo-rule.test.mjs": "74e8a2d7653ea6e0d108292ad8b57d3bff3272818c862d8a4bd7d151078a20e7",
+    "test/fixed-ties.test.mjs": "24bedf6106fae2cdab14006154a2a9c086befc305bd6d76f27c8fc1bc0201110",
+    "test/matrix.test.mjs": "20d10863f15bb1bd713fce6914265254b7222376c60bfcb35672c13aefbe73ec",
+    "test/resumable-astar.test.mjs": "8c76a18e22a7607fe35a941ea61de5a9299127a781f07259df8b56d024279f9b",
+    "test/retry-policy.test.mjs": "8b3d8f20311854ecaae219d94438991d21b1bbf03dac4af3a0889fd2d3a22ccb",
+    "test/tie-break.test.mjs": "7e4405e0f817c56ac6f7e8018193deaa80117f03d1b5077886bee52f2c05d256"
+  },
+  "checks": {
+    "studentPredictionCommittedBeforeConfiguredRun": true,
+    "onlyOneWallChanged": true,
+    "currentPositionUsedAsNewStart": true,
+    "oldFullAndRemainingPathsValidBeforeChange": true,
+    "oldRemainingPathBlockedByNewWall": true,
+    "newPathValidOnChangedMap": true,
+    "newPathMatchesIndependentBfs": true,
+    "studentRemainingLengthPredictionMatched": true,
+    "coreAndParserUnchangedFromPriorManifest": true,
+    "existingOutputRejectedBeforeSearch": true,
+    "existingOutputBytesPreserved": true
+  },
+  "observations": {
+    "cohort": "One AI-proposed 5x2 map update",
+    "budget": 30,
+    "variant": "A* FIFO; fresh static-map plan",
+    "newSharedPlannerCalls": 1,
+    "independentBfsCalls": 1,
+    "success": true,
+    "remainingMoves": 4,
+    "examinedNodes": 6,
+    "originalDeparture": [
+      0,
+      0
+    ],
+    "currentStart": [
+      2,
+      0
+    ],
+    "goal": [
+      4,
+      0
+    ],
+    "newObstacle": [
+      3,
+      0
+    ],
+    "oldRemainingMovesBeforeChange": 2,
+    "oldPathStatusAfterChange": "OLD_REMAINING_PATH_INVALID"
+  },
+  "optimality": "Changed top-row wall forces any route from (2,0) to (4,0) into row 1 and back: at least two vertical and two horizontal moves. Returned route attains four; separate BFS agrees.",
+  "attribution": "Student forecast 4번 only; no explicit route, examined count, code, method or execution supplied. AI supplied map, implementation, operation and validation.",
+  "limitations": [
+    "Explicit old/new snapshot comparison followed by fresh planning, not saved-state incremental replanning or automatic obstacle detection.",
+    "Single synthetic map update; no physical robot movement, sensor noise, collision, elapsed-time, energy or memory measurement.",
+    "Invalid old path alone does not prove no alternative route. Validation status is separate from UNREACHABLE/BUDGET_EXCEEDED."
+  ],
+  "unrelatedLocalChangePreserved": "practice/02-planning-budget.mjs"
+}

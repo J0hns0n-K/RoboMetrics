@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "changed-map-second-wall-choice-01",
+  "dateSeoul": "2026-10-29",
+  "status": "draft-awaiting-student-wall-choice",
+  "author": "AI assistant",
+  "parentScenario": "experiments/changed-map-current-position-detour-01.scenario.json",
+  "parentRawResult": "data/map-updates/current-position-detour-run-01.json",
+  "displayRows": ["S.R#G", "12345"],
+  "legend": "Numbers 1 through 5 label currently open bottom-row cells from left to right; they are choices, not walls or costs. S is original departure; R is current start.",
+  "choices": {"1": [0, 1], "2": [1, 1], "3": [2, 1], "4": [3, 1], "5": [4, 1]},
+  "studentTask": "아래 줄 빈칸 하나를 벽으로 바꿔 R에서 G로 갈 수 없게 만들어 봐. 왼쪽부터 1~5 중 어느 칸을 막겠어?",
+  "studentChoiceVerbatim": null,
+  "studentChosenCoordinate": null,
+  "controls": "Retain current R=(2,0), G=(4,0), existing wall (3,0), other cells and four-neighbor unit costs. Add one selected bottom-row wall only. A future validation must preserve this parent and retain unsuccessful design attempts too.",
+  "proposedLaterCheck": "After recording a choice, create a separate ready input and compare old remaining-route validity, fresh A* FIFO budget 30 and independent connectivity/distance. Do not infer that the chosen wall necessarily disconnects the goal.",
+  "results": null,
+  "attribution": "AI proposes objective, options and method. Student wall choice and outcome are pending; no student design or new execution yet."
+}

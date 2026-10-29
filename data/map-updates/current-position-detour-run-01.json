@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "label": "AI-OPERATED SYNTHETIC MAP UPDATE; FRESH STATIC PLANNING FROM CURRENT POSITION",
+  "scenario": {
+    "schemaVersion": 1,
+    "id": "changed-map-current-position-detour-01",
+    "dateSeoul": "2026-10-29",
+    "status": "ready",
+    "contributionType": "ai-reference",
+    "contributor": "AI assistant (map/method/code); Junmo (guided pre-run remaining-length prediction)",
+    "assistance": "AI supplied diagram, current-position distinction, layout and validation method. Student predicted four remaining moves only; no route, examined-node count, code authorship or independent execution inferred.",
+    "parentDraft": "experiments/changed-map-remaining-route.design.json",
+    "displayRows": [
+      "S.R#G",
+      "....."
+    ],
+    "rows": [
+      "..S#G",
+      "....."
+    ],
+    "oldRows": [
+      "..S.G",
+      "....."
+    ],
+    "originalDeparture": [
+      0,
+      0
+    ],
+    "currentPosition": [
+      2,
+      0
+    ],
+    "goal": [
+      4,
+      0
+    ],
+    "oldPlannedRoute": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        4,
+        0
+      ]
+    ],
+    "currentPathIndex": 2,
+    "newObstacle": [
+      3,
+      0
+    ],
+    "budgets": [
+      30
+    ],
+    "algorithm": "astar",
+    "tieBreak": "fifo",
+    "prediction": "Student predicts minimum remaining route length 4 from current R to G after the new obstacle, before configured execution. No explicit route or search-work forecast supplied.",
+    "studentPredictionVerbatim": "4번",
+    "studentPredictedRemainingMoves": 4,
+    "controls": "One 5x2 grid update; only (3,0) changes from open to wall. S in parser rows is current R=(2,0), not original departure (0,0). Four-neighbor unit costs. Old remaining route is sliced at currentPathIndex. Fresh A* FIFO budget 30, separate from saved search state.",
+    "validation": "Check old full route on original map, old remaining route on both maps, new path on changed map, and shortest remaining distance with independently implemented BFS. Preserve failed old-path validation separately from planner failure codes.",
+    "scope": "Synthetic map-update validation followed by fresh static-map planning. Not an incremental replanner, automatic sensing, a moving-robot simulation or a physical measurement. No prior source result for this configured map was shown to the student."
+  },
+  "changes": [
+    {
+      "coordinate": [
+        3,
+        0
+      ],
+      "from": 0,
+      "to": 1
+    }
+  ],
+  "oldRouteValidation": {
+    "fullRouteOnOldMapValid": true,
+    "currentPathIndex": 2,
+    "remainingPath": [
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        4,
+        0
+      ]
+    ],
+    "remainingOnOldMapValid": true,
+    "remainingOnChangedMapValid": false,
+    "blockedWaypoints": [
+      [
+        3,
+        0
+      ]
+    ],
+    "status": "OLD_REMAINING_PATH_INVALID",
+    "semantics": "Path validation status, not BUDGET_EXCEEDED or UNREACHABLE; says nothing alone about alternative routes."
+  },
+  "freshPlan": {
+    "algorithm": "astar",
+    "tieBreak": "fifo",
+    "budget": 30,
+    "result": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "pathLength": 4,
+      "expanded": 6
+    }
+  },
+  "independentCheck": {
+    "method": "Separate BFS on text-grid rows",
+    "shortestRemainingDistance": 4
+  },
+  "predictionComparison": {
+    "predictedRemainingMoves": 4,
+    "matchesShortestDistance": true
+  },
+  "execution": {
+    "operator": "AI assistant CLI",
+    "executedAtUTC": "2026-10-29T05:05:28.657Z",
+    "sourceCommit": "922b3b96b6da020f4a55e754651860da82d66cac",
+    "sourceInputsDirty": false,
+    "sourceHashesGitBlobs": {
+      "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+      "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+      "scripts/check-current-position-detour.mjs": "9bb2fad0a772d3fa41c37c8c21b068d44d7e946eb62524c9e50c41a183a9e12e",
+      "experiments/changed-map-current-position-detour-01.scenario.json": "7db32d7ad12bb5c7e6d234512306334511964e9491ea8100a9269ff946894e58"
+    },
+    "workspaceStatus": "M practice/02-planning-budget.mjs",
+    "node": "v24.22.1",
+    "platform": "win32/x64",
+    "sharedPlannerCalls": 1,
+    "independentBfsCalls": 1,
+    "attribution": "Student supplied the quoted remaining-length prediction only. AI supplied map, method, source, execution and validation. No saved session was updated or reused."
+  }
+}

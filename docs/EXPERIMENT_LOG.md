@@ -465,6 +465,14 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - AI map/control: 5×2, original departure (0,0), current position (2,0), G (4,0); only (3,0) changes to blocked. Four-neighbor unit cost. Fresh A* FIFO budget 30 starts at R. Validate the old remaining path separately from planner failure reasons and check fresh distance with separate BFS. Protocol in `docs/CURRENT_POSITION_REPLAN_KR.md`.
 - AI runner source syntax checked. Two hand-known BFS controls plus full suite pass: 37 tests, zero failures; TAP in `data/map-updates/current-position-detour-tests-01.tap`. Core/parser/resume algorithms unchanged. This archive precedes configured execution; source and ready input will be committed first. No changed-map outcome claimed yet.
 
+## 2026-10-29 — Current-position detour control completed
+
+- Source/forecast/input commit `922b3b96b6da020f4a55e754651860da82d66cac`; AI executed `scripts/check-current-position-detour.mjs`. Raw/validation under `data/map-updates/current-position-detour-*.json`; protocol in `docs/CURRENT_POSITION_REPLAN_KR.md`.
+- One map update (3,0) open→wall; old remaining path valid before and invalid after. Fresh A* FIFO budget 30 starts at current (2,0), succeeds with four moves/six examined nodes. Separate BFS four; student pre-run remaining-length forecast **4번** matches. Returned route/proof/counts/operation are AI support, not student-supplied.
+- Full suite 37 passes before configured execution; source/TAP hashes bind committed revision. Checked current start, only one changed cell, full/remaining original path, new route, independent shortest distance, prior core/parser equivalence and existing-output rejection/byte preservation. No extra planner calls in validation or full-suite rerun afterward.
+- Invalid old path is a validation status, not UNREACHABLE/BUDGET_EXCEEDED. Explicit snapshot change plus fresh static planning, not incremental state repair, sensing, motion control or physical measurement.
+- Next AI-authored draft `experiments/changed-map-second-wall.design.json`: student picks one bottom-row wall intended to remove the detour. Choice/results pending; retain parent and unsuccessful attempts.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
