@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "route-update-policy-known-controls-01",
+  "dateSeoul": "2026-10-29",
+  "status": "ready",
+  "baselineRaw": "data/map-updates/current-position-detour-run-01.json",
+  "wallChoicesRaw": "data/map-updates/second-wall-choices-run-01.json",
+  "tieBreak": "fifo",
+  "budget": 30,
+  "smallBudget": 2,
+  "cases": "Known parent map with the original blocked route; five archived one-wall variants with the previously valid detour; parent again with budget 2. Seven policy evaluations, not new research maps.",
+  "policyProposedBy": "AI assistant",
+  "validRouteRule": "Keep a valid remaining route without replanning; this default is an AI reference choice, not a student-selected optimization policy. It need not be the shortest route after changes.",
+  "studentOutcomePrediction": null,
+  "attribution": "Student supplied prior wall choices and an isolation interpretation, not this four-status API, code, tests, integration cases, execution or a new prediction.",
+  "scope": "Explicit latest fully known static map and current path index. No new sensing, incremental search-state repair, physical movement or browser integration."
+}

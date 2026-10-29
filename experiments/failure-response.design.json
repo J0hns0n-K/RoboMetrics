@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Ask student why positions 1/2 retain the route whereas each of 3/4/5 disconnects it on this layout; rationale pending after AI validation of the pre-run wall choices.",
+  "nextTask": "AI reference policy implemented/tested; commit source/config and run known integration controls. Next student design choice concerns retaining any valid route versus reoptimizing after map changes, not another isolation explanation.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -96,5 +96,7 @@
   "secondWallOutcomeArtifacts": [
     "data/map-updates/second-wall-choices-run-01.json",
     "data/map-updates/second-wall-choices-validation-01.json"
-  ]
+  ],
+  "studentIsolationInterpretationRecord": "data/learning/second-wall-isolation-01.json",
+  "routeUpdatePolicyConfig": "experiments/route-update-policy-controls.config.json"
 }

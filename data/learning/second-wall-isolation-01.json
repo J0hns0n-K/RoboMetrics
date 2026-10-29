@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "recordType": "guided post-result isolation interpretation; not experiment output",
+  "recordedBy": "AI assistant from user chat",
+  "contextRevision": "7f88b88c07fc6ac9aeca498dffa8e0f25d5ecd73",
+  "evidence": "data/map-updates/second-wall-choices-validation-01.json",
+  "priorQuestion": "왜 1·2는 막아도 갈 수 있는데, 3·4·5는 하나만 막아도 못 갈까?",
+  "studentResponseVerbatim": "어디를 막아도 도착지로 못 가. 이유랄게 있나? 그냥 도착지 앞에 장애물 하나 있고 나머지 하나 더 막아버리면 고립되니까",
+  "interpretationByAI": "Student offers isolation as the reason an additional wall removes connectivity. In the preceding 3/4/5 context this supports the nominated alternatives; do not silently extend anywhere to all five labels.",
+  "scopeUncertainty": "The user did not explicitly delimit 어디. AI clarified conditionally that any of 3/4/5 disconnects R and G, while archived controls 1/2 retain routes. Do not attribute this full distinction or a formal graph proof to the student.",
+  "attributionLimits": "Post-result explanation after AI options, run and displayed outcomes. No prior rationale, independent discovery, code or new execution inferred.",
+  "newExperimentPerformed": false
+}

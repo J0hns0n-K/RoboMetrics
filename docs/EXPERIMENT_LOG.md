@@ -487,6 +487,13 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Verified one changed cell per case, fixed start/goal/existing wall, exact prediction, outcome fields, source/input hashes, previous 37-test core/parser/BFS equivalence and existing-output refusal/byte preservation. Thin CLI syntax and real configured execution checked; no full-suite rerun or inclusion in previous suite source claimed.
 - Student supplied no rationale/count/code/operation. Next task asks why 1/2 retain the route while any of 3/4/5 cuts it; explanation pending. No physical/dynamic incremental result.
 
+## 2026-10-29 — Isolation interpretation and AI reference policy
+
+- Student post-result statement and ambiguous 어디 preserved in `data/learning/second-wall-isolation-01.json`. AI conditionally scopes the isolation rationale to nominated 3/4/5; controls 1/2 remain reachable. No formal proof or code attributed to the student.
+- AI implements `src/route-update-policy.mjs`: validate only the remaining suffix from an explicit current index on the supplied latest static map; KEEP_ROUTE without planning if valid, otherwise fresh A* yielding NEW_ROUTE_FOUND, UNREACHABLE or BUDGET_EXCEEDED. Prefix walls do not invalidate an unaffected suffix. KEEP_ROUTE need not be shortest after changes. No sensor, actuator or incremental state repair.
+- Six new AI regression controls; full suite 43 passed/zero failed. TAP `data/route-update-policy/route-update-policy-tests-01.tap` includes known wall fixtures, current-position alignment, budget/no-route distinction, invalid inputs, detached paths and valid-but-longer/at-goal behavior.
+- Config `experiments/route-update-policy-controls.config.json` declares seven known archive-based integration cases, not new student predictions or independent research maps. Source/input commit precedes configured execution; results pending.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
