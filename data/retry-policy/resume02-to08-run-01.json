@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "label": "AI REFERENCE RESUME CONTROL; ONE PREVIOUSLY STUDIED STATIC MAP",
+  "configuration": {
+    "schemaVersion": 1,
+    "id": "resume02-to08-known-control",
+    "dateSeoul": "2026-10-29",
+    "status": "ready",
+    "mapScenario": "experiments/reachable-goal-budget-control.scenario.json",
+    "priorComparison": "data/retry-policy/direct08-vs-restart02-08-run-01.json",
+    "algorithm": "astar",
+    "tieBreak": "fifo",
+    "cumulativeBudgets": [
+      2,
+      8
+    ],
+    "studentResponseVerbatim": "모르겠네",
+    "studentStateReuseDesign": null,
+    "studentOutcomePrediction": null,
+    "proposalAuthor": "AI assistant",
+    "proposal": "Keep frontier, distances, parents, closed nodes and tie order after pausing; continue on a fixed snapshot rather than restarting.",
+    "aiExpectedBehavior": "Same final result as direct budget 8; first 2 expansions remain saved, so only 6 additional expansions should be needed. This is expected reference behavior, not a student prediction or blind discovery.",
+    "measurementRules": "8 is the cumulative target, not 8 additional expansions. Sum expandedThisCall; compare with archived direct/restart arms rather than rerunning them. Keep prior raw files immutable.",
+    "scope": "One previously studied static map, four-neighbor unit cost, A* FIFO. Not dynamic replanning, runtime/energy measurement, novel search research or a replacement of the student's 2-to-4 restart choice.",
+    "attribution": "State-reuse proposal, module, test fixtures, runner, execution and analysis are AI support. Student supplied no design or prediction in the quoted response."
+  },
+  "map": {
+    "source": "experiments/reachable-goal-budget-control.scenario.json",
+    "rows": [
+      "S..",
+      "..#",
+      "..G"
+    ]
+  },
+  "resume": {
+    "calls": [
+      {
+        "state": "paused",
+        "cumulativeBudget": 2,
+        "expandedThisCall": 2,
+        "cumulativeExpanded": 2,
+        "result": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 2
+        }
+      },
+      {
+        "state": "complete",
+        "cumulativeBudget": 8,
+        "expandedThisCall": 6,
+        "cumulativeExpanded": 8,
+        "result": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 8
+        }
+      }
+    ],
+    "totalExpanded": 8,
+    "finalResult": {
+      "success": true,
+      "reason": null,
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "pathLength": 4,
+      "expanded": 8
+    }
+  },
+  "archivedComparison": {
+    "source": "data/retry-policy/direct08-vs-restart02-08-run-01.json",
+    "sha256GitBlob": "3c698d5449b3ec382861d6b4846b0c183ec0878d21b9192d5c75e589a72f2591",
+    "sourceCommit": "eaecbdcb2a31f7373f43bb0d1c04cce7af7bf842",
+    "directExpanded": 8,
+    "restartExpanded": 10
+  },
+  "checks": {
+    "sameMapAndCoreSource": true,
+    "firstPauseMatchesArchivedFailure": true,
+    "finalResultAndPathMatchBothArchivedArms": true,
+    "successfulPathValid": true,
+    "summedCallDeltasEqualCumulativeWork": true,
+    "resumeWorkEqualsDirectWork": true,
+    "fewerExpansionsThanArchivedRestart": true
+  },
+  "execution": {
+    "operator": "AI assistant CLI",
+    "executedAtUTC": "2026-10-29T04:41:12.480Z",
+    "sourceCommit": "dfa80ee0dbabadf9f3b6dad3ddf77530e2123bb7",
+    "sourceInputsDirty": false,
+    "sourceHashesGitBlobs": {
+      "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+      "src/resumable-astar.mjs": "c43cc77c139446f50a4de02a1f315945e4406f760d4b631e5b905524a2769ed9",
+      "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+      "scripts/run-resume-control.mjs": "a8090ca1296c0332d00903778bfc92f3c424d24faa4cc235a19007c9035bef88",
+      "test/resumable-astar.test.mjs": "8c76a18e22a7607fe35a941ea61de5a9299127a781f07259df8b56d024279f9b",
+      "experiments/resume02-to08.config.json": "bd3064b07707a85f7967ac83517bcb323b952c19ae9ec1c657d2927220a32eeb",
+      "experiments/reachable-goal-budget-control.scenario.json": "0f054d7efdcceb852c842e3b380d5c8eb6c1513082d56f15571666024c490e02",
+      "data/retry-policy/direct08-vs-restart02-08-run-01.json": "3c698d5449b3ec382861d6b4846b0c183ec0878d21b9192d5c75e589a72f2591"
+    },
+    "workspaceStatus": "M practice/02-planning-budget.mjs",
+    "node": "v24.22.1",
+    "platform": "win32/x64",
+    "newSearchSessions": 1,
+    "advanceCalls": 2,
+    "archivedArmsRerun": false,
+    "provenance": "AI supplied the state-reuse idea and all implementation/operation. Student response supplied no design or forecast. Node counts exclude sorting, memory and serialization costs."
+  }
+}

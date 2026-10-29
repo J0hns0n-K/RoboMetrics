@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "validatedBy": "AI assistant CLI",
+  "validatedAtUTC": "2026-10-29T04:41:41.621Z",
+  "sourceCommit": "dfa80ee0dbabadf9f3b6dad3ddf77530e2123bb7",
+  "raw": {
+    "path": "data/retry-policy/resume02-to08-run-01.json",
+    "sha256": "fae9f77584614af4b085e9b0c3b7717eb0f35f8db49510fc06d77cc8a3fe56a6"
+  },
+  "protocol": "experiments/resume02-to08.config.json",
+  "tests": {
+    "path": "data/retry-policy/resumable-astar-tests-01.tap",
+    "sha256": "4459dfcfe24290e5e84a05fcc638f58091e6c6d641e874aadf75f8e9a1fced08",
+    "passed": 35,
+    "failed": 0,
+    "newTests": 6,
+    "fullResultParityComparisons": 24576,
+    "provenance": "Final suite captured after the start-at-goal boundary assertion; exact working source bytes (LF normalized) verified against the subsequent source commit. An earlier unarchived pass preceded that final assertion."
+  },
+  "sourceHashesGitBlobs": {
+    "package.json": "ed66c6f1dd768e55eabb04716249b1dbf8876f1e000ba083a78e742bbdd62011",
+    "scripts/build-learning-trace.mjs": "5430deb4b6a7b25cbbb7e28060554436b867961bb4a1b083a020ae204c519104",
+    "scripts/compare-fixed-ties.mjs": "0af9ce44b2fb4113b5184fa3260fcf06c21f3c6d4aff6f83ca4bb7edef832028",
+    "scripts/compare-restart-cost.mjs": "ee8058045245122137a2fba4da699047e4daff34bffbba5440129e69c56efa28",
+    "scripts/compare-ties.mjs": "7bf5c591d5646034798eddf84ea9e09480adf3b22f4d8c7b6e1c4293bddeecd1",
+    "scripts/run-matrix.mjs": "ce5fd3ac918d7e69d6a9a7fc3965bc8d7d5622ba1ccefec97edac91a8ddf24a6",
+    "scripts/run-resume-control.mjs": "a8090ca1296c0332d00903778bfc92f3c424d24faa4cc235a19007c9035bef88",
+    "scripts/run-retry-policy.mjs": "a1794489fca4e824bbc84a8ff184bf8875a05b57963193cb2290551c549b8614",
+    "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+    "scripts/serve.mjs": "e040e1c5b14f83c645d345623711654921731c80835bf37067f2d0502b23b500",
+    "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "src/resumable-astar.mjs": "c43cc77c139446f50a4de02a1f315945e4406f760d4b631e5b905524a2769ed9",
+    "src/retry-policy.mjs": "72729cd2ce9fb2c93a94057a43ee6b9b29bfdf270b73418541adcf6b169e9576",
+    "src/ui.mjs": "83449f56a4844bb877272fb8050d72bf7364df1214eb236b3420c5f3f8f71c38",
+    "test/audit.test.mjs": "2aaba9e05b6fa01ba0fbe5d7bfdefa82e8e1dce414fe00e477e09e1fd9b7be27",
+    "test/core.test.mjs": "b75b834a103758ffbd780d3c842be93189294d6e6600fa46fd0096b66510c795",
+    "test/counterexample.test.mjs": "fd020e579decc69a6ea99c69d1490c955b2d6ee3c562e62609d5bc5ae0f22265",
+    "test/demo-rule.test.mjs": "74e8a2d7653ea6e0d108292ad8b57d3bff3272818c862d8a4bd7d151078a20e7",
+    "test/fixed-ties.test.mjs": "24bedf6106fae2cdab14006154a2a9c086befc305bd6d76f27c8fc1bc0201110",
+    "test/matrix.test.mjs": "20d10863f15bb1bd713fce6914265254b7222376c60bfcb35672c13aefbe73ec",
+    "test/resumable-astar.test.mjs": "8c76a18e22a7607fe35a941ea61de5a9299127a781f07259df8b56d024279f9b",
+    "test/retry-policy.test.mjs": "8b3d8f20311854ecaae219d94438991d21b1bbf03dac4af3a0889fd2d3a22ccb",
+    "test/tie-break.test.mjs": "7e4405e0f817c56ac6f7e8018193deaa80117f03d1b5077886bee52f2c05d256"
+  },
+  "checks": {
+    "sameMapAndCoreSource": true,
+    "firstPauseMatchesArchivedFailure": true,
+    "finalResultAndPathMatchBothArchivedArms": true,
+    "successfulPathValid": true,
+    "summedCallDeltasEqualCumulativeWork": true,
+    "resumeWorkEqualsDirectWork": true,
+    "fewerExpansionsThanArchivedRestart": true,
+    "existingOutputRejectedBeforeSearch": true,
+    "existingOutputBytesUnchanged": true,
+    "finalTestSourcesMatchCommittedRevision": true
+  },
+  "observations": {
+    "mapLayouts": 1,
+    "newSearchSessions": 1,
+    "advanceCalls": 2,
+    "newExaminedNodes": 8,
+    "firstPauseExamined": 2,
+    "additionalExamined": 6,
+    "directArchivedExamined": 8,
+    "restartArchivedExamined": 10,
+    "finalMovesAllArms": 4,
+    "cumulativeTarget": 8,
+    "additionalAllowanceAfterPause": 6,
+    "archivedArmsRerun": false,
+    "failureAtPause": "BUDGET_EXCEEDED",
+    "finalSuccess": true
+  },
+  "limitations": [
+    "Known fixed map/reference behavior, not a blind sample or student forecast.",
+    "AI proposed and implemented state retention after student replied 모르겠네; no student design/code attribution.",
+    "Node counts exclude elapsed time, queue sorting, memory retention and serialization; no hardware measurements.",
+    "Parity checks on small fixtures do not prove all maps; snapshot is static and does not update with caller changes.",
+    "Earlier 2-to-4 restart selection and all published baselines remain intact; no browser integration."
+  ],
+  "unrelatedWorkspaceChange": "practice/02-planning-budget.mjs preserved unstaged"
+}

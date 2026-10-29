@@ -427,6 +427,13 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Full suite: 35 passed, zero failures, archived in `data/retry-policy/resumable-astar-tests-01.tap`. Small-layout parity covers 1,024 obstacle layouts × two rules × 12 budgets = 24,576 full-result comparisons to original A*. These are AI regression controls, not student research trials or independent samples. A final boundary check also covers start already at goal.
 - `experiments/resume02-to08.config.json` records the AI expected behavior before configured execution. Known fixed map/A* FIFO; resume from cumulative 2 to 8 and reuse historical direct/restart arms without rerunning them. Source/configuration must be committed before the demonstration. Original core, retry, benchmark, demo and student's 2→4 choice are unchanged.
 
+## 2026-10-29 — Configured resume control completed
+
+- Source/configuration committed before execution: `dfa80ee0dbabadf9f3b6dad3ddf77530e2123bb7`; `experiments/resume02-to08.config.json`. AI proposed, coded, operated and validated; student's **모르겠네** remains no design/forecast supplied.
+- New artifacts: `data/retry-policy/resume02-to08-run-01.json`, `resume02-to08-validation-01.json`. Known connected 3×3 map, A* FIFO, cumulative targets 2 and 8: pause after 2, then add 6, total 8, success/four moves. Exact first failure and final paths/results match archived arms. Direct 8 and restart 10 are reused historical observations, not reruns. New work: one session/two calls/8 examined nodes, separate from prior study work 18.
+- Verified same map, core hash, sum of call deltas, final path, all reported checks, existing-output refusal and byte preservation. Full 35-test archive and source hashes are linked in manifest; tests include 24,576 small-layout result comparisons, not independent new samples.
+- Memory is retained, not measured; no timing/energy/physical result or changing-map reuse claim. No core/browser/selected 2→4 change. Next: student explanation of restart versus continuation, pending.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
