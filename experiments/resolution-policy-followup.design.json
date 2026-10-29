@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "status": "draft-awaiting-student-cohort-scope-choice",
+  "proposalAuthor": "AI assistant",
+  "question": "다음 새 지도 검증에 길이 없는 지도도 포함할까? 1: 포함해서 실패 처리도 비교, 2: 반 칸 후보 그래프에서 길이 있는 지도만 골라 경로 발견 비용 비교.",
+  "choices": [
+    {"id": 1, "scope": "Unfiltered generated maps, preserving invalid endpoints, unreachable graphs and budget failures with separate denominators"},
+    {"id": 2, "scope": "Pre-filter by independent fine-graph BFS reachability, preserving every rejection audit; restrict conclusions to that conditional cohort"}
+  ],
+  "studentResponseVerbatim": null,
+  "studentRationale": null,
+  "readyProtocol": null,
+  "results": null,
+  "futureRequirements": "Freeze generation seeds/grid/density/endpoints/acquisition count or acceptance target, inclusion/rejection rule, selected body/margin, equal matched inputs, explicit policy stage/total caps and outcome definitions before generation. Compare success, world length and full actual work separately; validate original-geometry paths and preserve all failures. Candidate graph axes must remain at most80. No parameters or samples selected from outcomes.",
+  "scope": "AI-proposed generalization check beyond the two known layouts. No new maps generated, predicate implemented, cohort accepted or outcomes observed yet. Hypothetical reweighting is not a substitute for this validation."
+}
