@@ -253,6 +253,12 @@ This is an elicited post-result explanation attributing the change to the obstac
 
 AI proposed the next B-only control in `experiments/goal-side-dead-end-open-B.scenario.json`: return to the original parent with A blocked and open only (4,1). Budget 300 and other cells/rules remain fixed. This is not a cumulative A+B opening and is not attributed as a new student wall selection. No planner was called for this control. The next forecast concerns FIFO examined nodes relative to the original 15; no closer-goal or route-length forecast is inferred.
 
+## 2026-10-29 B-control forecast recorded before execution
+
+- Asked about FIFO examined nodes relative to the original 15, Junmo replied **같을 것 같아**. Interpret this as unchanged relative to the prompt-provided 15; do not claim an independent numerical calculation or infer a reason.
+- No closer-goal or route-length expectation was supplied. B remains an AI-proposed follow-up control, not a newly student-selected wall.
+- Record the forecast and ready input before execution. The original map has A blocked; only B=(4,1) opens. Core/evaluator and budget 300 remain unchanged. Full-suite tests are not repeated for this input-only revision; new geometry/paths and before/after controls will be checked directly.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

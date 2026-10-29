@@ -1,10 +1,10 @@
 {
   "id": "goal-side-dead-end-open-B-control",
   "dateSeoul": "2026-10-29",
-  "status": "awaiting-prediction",
+  "status": "ready",
   "contributionType": "ai-reference",
   "contributor": "AI assistant — proposed B-only follow-up control",
-  "assistance": "AI proposes opening B on the original parent map to compare wall positions. Student previously selected A; do not attribute selection of B or a new forecast to the student before a response. Original layout, labels, evaluator and operation are AI support.",
+  "assistance": "AI proposed the B-only control, layout and collection method. Student supplied a scoped pre-run unchanged-count expectation for FIFO only; prior selection of A is not selection of B. AI transcribes and operates the existing evaluator; no student code authorship or independent full-map design is inferred.",
   "parentScenario": "experiments/goal-side-dead-end-04.scenario.json",
   "parentResult": "data/structured/goal-side-dead-end-04-run-01.json",
   "relatedAResult": "data/structured/goal-side-dead-end-open-A-run-01.json",
@@ -30,9 +30,10 @@
     "fifo",
     "closer-goal"
   ],
-  "prediction": null,
-  "studentPredictionVerbatim": null,
-  "predictionScope": "Next ask whether FIFO examined nodes will be fewer than, equal to, or greater than its original 15 nodes, or unknown. Do not infer a closer-goal or route-length prediction.",
+  "prediction": "Student expects FIFO examined nodes to stay unchanged relative to the stated parent value of 15. The number 15 is the prompt-provided baseline, not an independently counted student result. No rationale or forecast for closer-goal or path length was supplied.",
+  "studentPredictionVerbatim": "같을 것 같아",
+  "predictionScope": "FIFO examined-node count compared with the original 15 only. No closer-goal or minimum-move forecast is inferred.",
   "controls": "Compare to the original map, not the A-open map: only (4,1) changes; A at (5,0) remains blocked. Other cells, dimensions, endpoints, budget 300 and planner rules remain fixed.",
-  "executionNote": "No planner called for this B-only control during preparation. Record a scoped pre-run expectation and commit a ready input before execution; preserve all parent and A-open artifacts."
+  "executionNote": "Prediction recorded before committing this ready input and executing the B-only control. Keep A blocked and parent/A-open inputs/results unchanged.",
+  "studentExpectedFIFOExamined": 15
 }
