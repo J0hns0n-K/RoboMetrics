@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "bounded-failure-response-guided-design-01",
+  "dateSeoul": "2026-10-29",
+  "status": "AI-proposed next task; awaiting student response-mode choice",
+  "scope": "Separate single-map learning prototype. Do not change the fixed-budget benchmark or relabel a later retry success as success under the original budget.",
+  "inputFields": [
+    "success",
+    "reason"
+  ],
+  "knownStatuses": [
+    "BUDGET_EXCEEDED",
+    "UNREACHABLE"
+  ],
+  "aiProposedBudgetExceededModes": [
+    {
+      "id": "retry-once",
+      "label": "Increase the budget and make one additional attempt",
+      "maximumAdditionalAttempts": 1,
+      "retryBudget": null,
+      "budgetStillToBeChosen": true
+    },
+    {
+      "id": "report-and-wait",
+      "label": "Show the result and let the user decide whether to retry",
+      "automaticAdditionalAttempts": 0
+    }
+  ],
+  "studentModeChoice": null,
+  "studentReason": null,
+  "otherOutcomes": {
+    "success": "Return the recorded route.",
+    "unreachable": "Report no route under the current fixed map/rules; do not retry the identical exhausted search merely by raising its budget.",
+    "unknownReason": "Report an unrecognized failure; do not silently classify it as unreachable."
+  },
+  "recordingRequirements": [
+    "Log every attempt budget, status, moves and examined nodes separately.",
+    "Preserve original fixed-budget measurements and raw artifacts.",
+    "Bound any automatic retry; do not invent an unchosen retry budget or guarantee success."
+  ],
+  "implementationStatus": "Not implemented or executed; no current demo behavior has changed.",
+  "attribution": "AI proposes the task and options. Student has not yet selected a mode, budget or rationale. Previous guided reason-field edit does not imply authorship of this future policy."
+}

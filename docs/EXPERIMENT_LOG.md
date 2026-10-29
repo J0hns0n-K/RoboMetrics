@@ -347,6 +347,18 @@ Preserve this guided post-result rationale alongside the actual saved edit and f
 
 Next writing task is a two-sentence account of direct work and AI support in this coding exercise. Source evidence already separates the one-field choice/save from AI scaffold, branches, execution and checks; the student's own role statement has not yet been supplied.
 
+## 2026-10-29 Student role statement and summary v1
+
+Asked to describe direct work and assistance for the code exercise, Junmo instead gave a broader experimental role account:
+
+> 내가 직접 한 일:실험에 대한 값 예측/방안 설정
+>
+> AI가 도와준 일:어떤 실험을 할지
+
+Preserve the exact lines. Supplement, rather than silently rewrite, with observed scope: student guided choices, forecasts, interpretations and saved edits; AI code/scaffolds, proposed methods/options, tests, CLI operation, file validation, initial analysis and writing. The AI-help line is not an exhaustive attribution and planning is not independently designing the full method. The evidence-linked Korean summary is now version 1, still explicitly AI-edited and not independently student-authored.
+
+AI prepared a next-task design draft, `experiments/failure-response.design.json`, offering one bounded higher-budget retry versus report-and-wait after budget exhaustion. No mode, retry budget or rationale is attributed to the student, and no implementation or execution occurred. This is separate from the fixed-budget benchmark; any retries must preserve attempt-level budgets and outcomes rather than relabel later success as original-budget success.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
