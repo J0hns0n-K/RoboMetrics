@@ -268,6 +268,16 @@ AI proposed the next B-only control in `experiments/goal-side-dead-end-open-B.sc
 - Initial interpretation is AI-authored: fewer walls do not guarantee fewer examined nodes for this FIFO implementation; unchanged shortest length does not force unchanged search work. One constructed map pair does not estimate general effects, runtime/energy or physical robot performance. Student post-result interpretation remains pending.
 - Next task: ask the student, using these counts, whether one can claim wall removal always reduces examined-node counts.
 
+## 2026-10-29 Student interprets both directions; evidence synthesis begins
+
+After the B-control results and assistant explanation, Junmo replied:
+
+> 반드시 주는 건 아닌 것 같아. 아까 실험을 보면 오히려 증가한 칸 수도 있고 너 말대로 줄어든 것도 있고
+
+Retain the original wording. This is a prompted post-result interpretation that wall removal does not necessarily reduce examined nodes, reflecting FIFO's increase and closer-goal's decrease. The reference to the assistant's explanation is retained; do not infer independent counterexample discovery or a detailed mechanism explanation. Predictions and raw results stay unchanged.
+
+AI prepared `docs/ENGINEERING_SUMMARY_KR.md`, linking both random cohorts, the original/A/B controlled cases, registered expectations and actual outcomes, including the unchanged-FIFO expectation that was not observed. It distinguishes student quotes from AI implementation, execution and editing. Next task: the student's current research-question sentence for the synthesis; any new wording is retrospective framing, not an original preregistered hypothesis.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
