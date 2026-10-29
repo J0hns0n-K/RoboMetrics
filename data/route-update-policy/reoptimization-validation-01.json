@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "validatedBy": "AI assistant CLI",
+  "validatedAtUTC": "2026-10-29T07:19:25.646Z",
+  "sourceCommit": "1c48e39b3e8b89b32523ce3a931bcb8df7bb8d08",
+  "protocol": "experiments/route-reoptimization-controls.config.json",
+  "rawFiles": [
+    {
+      "path": "data/route-update-policy/reoptimization-comparison-run-01.json",
+      "sha256": "29dedd86158980e478b6980f3ede28f3d646b3d985441d762b8942189f82d4b8"
+    },
+    {
+      "path": "data/route-update-policy/keep-valid-compatibility-run-01.json",
+      "sha256": "ffefe0ae61a7578d18158c14327d9333d38a60d8810d671d2371ac719e105274"
+    }
+  ],
+  "tests": {
+    "path": "data/route-update-policy/reoptimization-tests-01.tap",
+    "sha256": "0c18c3ee796f10a554e3d8bb18cde6d86dd578b27e1e9d62f585423d69baeb0c",
+    "passed": 47,
+    "failed": 0,
+    "newTests": 4,
+    "provenance": "Final module and tests passed before source commit; canonical source/TAP hashes match. New comparison driver and adjusted compatibility driver separately syntax/actual-run/overwrite checked. No repeat suite after integrations."
+  },
+  "sourceHashesGitBlobs": {
+    "package.json": "ed66c6f1dd768e55eabb04716249b1dbf8876f1e000ba083a78e742bbdd62011",
+    "scripts/build-learning-trace.mjs": "5430deb4b6a7b25cbbb7e28060554436b867961bb4a1b083a020ae204c519104",
+    "scripts/check-current-position-detour.mjs": "9bb2fad0a772d3fa41c37c8c21b068d44d7e946eb62524c9e50c41a183a9e12e",
+    "scripts/check-route-update-policy.mjs": "9eaa8d313e71781659a4b179fe634550bc7a0b0dc55a089f6ac05ebbc6368304",
+    "scripts/check-second-wall-choices.mjs": "ab0773fec4128dcd1d830699088cd82b4f78c6612ab136601b73dd64105e74c4",
+    "scripts/compare-fixed-ties.mjs": "0af9ce44b2fb4113b5184fa3260fcf06c21f3c6d4aff6f83ca4bb7edef832028",
+    "scripts/compare-restart-cost.mjs": "ee8058045245122137a2fba4da699047e4daff34bffbba5440129e69c56efa28",
+    "scripts/compare-route-optimization.mjs": "0938f7695817282911692047bf2f3f4835a845e04e63dda6a7cebc0d3d0cba23",
+    "scripts/compare-ties.mjs": "7bf5c591d5646034798eddf84ea9e09480adf3b22f4d8c7b6e1c4293bddeecd1",
+    "scripts/run-matrix.mjs": "ce5fd3ac918d7e69d6a9a7fc3965bc8d7d5622ba1ccefec97edac91a8ddf24a6",
+    "scripts/run-resume-control.mjs": "a8090ca1296c0332d00903778bfc92f3c424d24faa4cc235a19007c9035bef88",
+    "scripts/run-retry-policy.mjs": "a1794489fca4e824bbc84a8ff184bf8875a05b57963193cb2290551c549b8614",
+    "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+    "scripts/serve.mjs": "e040e1c5b14f83c645d345623711654921731c80835bf37067f2d0502b23b500",
+    "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "src/resumable-astar.mjs": "c43cc77c139446f50a4de02a1f315945e4406f760d4b631e5b905524a2769ed9",
+    "src/retry-policy.mjs": "72729cd2ce9fb2c93a94057a43ee6b9b29bfdf270b73418541adcf6b169e9576",
+    "src/route-update-policy.mjs": "78091c6bceaed191e504aa8c61eba96ad2699a1455d13b0839d21f0ae193c87d",
+    "src/ui.mjs": "83449f56a4844bb877272fb8050d72bf7364df1214eb236b3420c5f3f8f71c38",
+    "test/audit.test.mjs": "2aaba9e05b6fa01ba0fbe5d7bfdefa82e8e1dce414fe00e477e09e1fd9b7be27",
+    "test/core.test.mjs": "b75b834a103758ffbd780d3c842be93189294d6e6600fa46fd0096b66510c795",
+    "test/counterexample.test.mjs": "fd020e579decc69a6ea99c69d1490c955b2d6ee3c562e62609d5bc5ae0f22265",
+    "test/current-position-detour.test.mjs": "3105108879cbce53fba1ed7c5f7a4d167da986f4c07c81771d2db51b1a41ca87",
+    "test/demo-rule.test.mjs": "74e8a2d7653ea6e0d108292ad8b57d3bff3272818c862d8a4bd7d151078a20e7",
+    "test/fixed-ties.test.mjs": "24bedf6106fae2cdab14006154a2a9c086befc305bd6d76f27c8fc1bc0201110",
+    "test/matrix.test.mjs": "20d10863f15bb1bd713fce6914265254b7222376c60bfcb35672c13aefbe73ec",
+    "test/resumable-astar.test.mjs": "8c76a18e22a7607fe35a941ea61de5a9299127a781f07259df8b56d024279f9b",
+    "test/retry-policy.test.mjs": "8b3d8f20311854ecaae219d94438991d21b1bbf03dac4af3a0889fd2d3a22ccb",
+    "test/route-update-policy.test.mjs": "930850ec7d8726d3b8a5c5c22e96a7f4078c8c619481e60a331d2b88e8ac8a66",
+    "test/tie-break.test.mjs": "7e4405e0f817c56ac6f7e8018193deaa80117f03d1b5077886bee52f2c05d256"
+  },
+  "checks": {
+    "studentChoiceRecordedBeforeConfiguredExecution": true,
+    "reoptimizationIsDefault": true,
+    "explicitKeepValidRetained": true,
+    "wallRemovalShortensFourToTwo": true,
+    "unchangedMapConfirmsFourWithExtraSearch": true,
+    "smallBudgetPreservesValidRouteAndRawFailure": true,
+    "bfsConfirmsShortestLengths": true,
+    "legacyOriginalOutputFieldsAndCostsMatch": true,
+    "enrichedMetadataDistinguished": true,
+    "bothExistingOutputsRejectedBeforeSearch": true,
+    "bothRawOutputsUnchanged": true,
+    "sourceAndTestBytesMatchCommit": true
+  },
+  "observations": {
+    "comparison": {
+      "policyCases": 5,
+      "staticMaps": 2,
+      "newPlannerCalls": 3,
+      "newExaminedNodes": 9,
+      "independentBfsCalls": 2,
+      "budgets": [
+        30,
+        1
+      ],
+      "variant": "A* FIFO"
+    },
+    "legacyCompatibility": {
+      "policyCases": 7,
+      "newPlannerCalls": 5,
+      "newExaminedNodes": 26,
+      "originalResultFieldsMatched": 7,
+      "mode": "keep-valid",
+      "rerunNotNewCohort": true
+    }
+  },
+  "attribution": "Student selected option 2/objective/default only. AI supplied API, fallback, comparison fixtures, expected outcomes, code, tests, execution and validation; no student numerical forecast.",
+  "limitations": [
+    "Known small reference controls, not evidence that all map changes produce shorter routes.",
+    "KEEP_ROUTE can now mean a validated fallback after budget exhaustion; optimizationStatus and planningResult preserve that failure.",
+    "Planner expansion counts exclude map copying, route validation, independent BFS and comparison overhead; no runtime/energy measurements.",
+    "Default changes the route-update API only; no automatic sensing, incremental state repair, browser integration or physical movement."
+  ],
+  "unrelatedLocalChangePreserved": "practice/02-planning-budget.mjs"
+}

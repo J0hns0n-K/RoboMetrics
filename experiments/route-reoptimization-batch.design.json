@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "status": "draft-awaiting-student-prediction",
+  "author": "AI assistant",
+  "question": "벽 하나를 없앤 지도 30장에서 재탐색하면, 30장 모두 더 짧은 길을 찾을까, 일부 지도에서만 찾을까?",
+  "studentPredictionVerbatim": null,
+  "proposedCohort": {
+    "baseSeed": 20264027, "width": 16, "height": 12, "density": 0.19,
+    "acceptedMaps": 30,
+    "sampling": "Candidate seed base+1 onward; accept connected maps with at least one wall, record all rejection reasons. Check candidate connectivity with separate BFS."
+  },
+  "proposedEdit": "Sort blocked cells in row-major order; remove exactly one at index candidateSeed modulo blockedCount. Deterministic selection, not an asserted uniform wall sample. Keep start/goal/other cells fixed.",
+  "proposedPriorRoute": "Offline unlimited A* FIFO on each original connected map, path-validated and shortest-distance checked with BFS. Archive acquisition work separately from finite-budget policy evaluation.",
+  "proposedPolicies": "Same acquired route on each edited map: explicit keep-valid versus default reoptimize, A* FIFO budget 300 per invocation. Preserve valid fallback and failed optimization separately.",
+  "proposedMeasures": "Usable route, returned length, new planner expansions, optimization completion/budget exhaustion, potential reduction from latest-map BFS and realized reduction within budget. Report 30-map denominators and matched/reused maps honestly.",
+  "results": null,
+  "scope": "Unexecuted draft. Freeze ready protocol after student forecast or explicit uncertainty. AI proposes maps/edit/method; no student method/code or physical result inferred."
+}

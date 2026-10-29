@@ -509,6 +509,14 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Four new controls plus adjusted explicit legacy cases: full suite 47 passes, zero failures; `data/route-update-policy/reoptimization-tests-01.tap`. Tests cover shorter path, equal optimum, valid fallback/raw failure, current suffix/tie rules and invalid modes. Historical integration driver explicitly selects keep-valid for old configs.
 - New `experiments/route-reoptimization-controls.config.json` specifies five AI-known controls on two small snapshots, with student outcome prediction null. Source/input commit precedes configured comparison and historical compatibility rerun.
 
+## 2026-10-29 — Reoptimization comparison and legacy replay verified
+
+- Student default choice/source/config committed as `1c48e39b3e8b89b32523ce3a931bcb8df7bb8d08`. AI ran `reoptimization-comparison-run-01.json` and `keep-valid-compatibility-run-01.json`; joint source/TAP/result checks in `data/route-update-policy/reoptimization-validation-01.json`.
+- Comparison: five known controls/two 3×2 snapshots/A* FIFO. Budget 30: removed wall, keep length 4/0 expansions versus default length 2/3; unchanged, keep length 4/0 versus default length 4/5. Budget 1 after removal: keep verified old length 4 while raw optimization fails budget. Comparison totals 3 planner calls/9 expansions and 2 independent BFS calls, separate from validation work.
+- Compatibility: seven known old controls rerun with explicit keep-valid; original output fields/path/calls/costs match prior archive (5 calls/26 expansions). Enriched new metadata is not called byte-identical; old raw files unchanged.
+- Full suite 47 passes before source commit; module/test/TAP hashes match. Drivers separately syntax/configured-run/output-guard checked; no suite repeated afterward. Student supplied default choice only, not fallback/API/code/tests/fixtures/forecast or operation. No universal improvement, runtime/energy or physical claim.
+- Next `experiments/route-reoptimization-batch.design.json`: AI-proposed unexecuted 30-map wall-removal matched comparison, student forecast pending. Freeze ready protocol before execution, separating theoretical shorter paths from improvements actually found within finite budget.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

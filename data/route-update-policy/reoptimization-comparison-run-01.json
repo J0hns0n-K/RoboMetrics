@@ -1,0 +1,410 @@
+{
+  "schemaVersion": 1,
+  "label": "AI KNOWN-CONTROL REOPTIMIZATION COMPARISON; NOT PHYSICAL DATA",
+  "configuration": {
+    "schemaVersion": 1,
+    "id": "route-reoptimization-known-controls-01",
+    "dateSeoul": "2026-10-29",
+    "status": "ready",
+    "studentChoiceRecord": "data/learning/valid-route-optimization-choice-01.json",
+    "studentOutcomePrediction": null,
+    "defaultOptimization": "reoptimize",
+    "tieBreak": "fifo",
+    "priorPath": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "maps": [
+      {
+        "id": "wall-removed",
+        "oldRows": [
+          "S#G",
+          "..."
+        ],
+        "rows": [
+          "S.G",
+          "..."
+        ],
+        "changes": [
+          {
+            "coordinate": [
+              1,
+              0
+            ],
+            "from": 1,
+            "to": 0
+          }
+        ]
+      },
+      {
+        "id": "unchanged",
+        "oldRows": [
+          "S#G",
+          "..."
+        ],
+        "rows": [
+          "S#G",
+          "..."
+        ],
+        "changes": []
+      }
+    ],
+    "cases": [
+      {
+        "id": "removed-keep",
+        "map": "wall-removed",
+        "optimization": "keep-valid",
+        "budget": 30,
+        "expectedDecisionByAI": "VALID_ROUTE_RETAINED"
+      },
+      {
+        "id": "removed-default",
+        "map": "wall-removed",
+        "optimization": "default",
+        "budget": 30,
+        "expectedDecisionByAI": "SHORTER_ROUTE_FOUND"
+      },
+      {
+        "id": "unchanged-keep",
+        "map": "unchanged",
+        "optimization": "keep-valid",
+        "budget": 30,
+        "expectedDecisionByAI": "VALID_ROUTE_RETAINED"
+      },
+      {
+        "id": "unchanged-default",
+        "map": "unchanged",
+        "optimization": "default",
+        "budget": 30,
+        "expectedDecisionByAI": "OPTIMALITY_CONFIRMED"
+      },
+      {
+        "id": "removed-budget1",
+        "map": "wall-removed",
+        "optimization": "default",
+        "budget": 1,
+        "expectedDecisionByAI": "OPTIMIZATION_BUDGET_EXCEEDED"
+      }
+    ],
+    "attribution": "Student chose option 2 (reoptimize) only. AI supplies these known reference fixtures, explicit retention controls, budgets, fallback semantics, code, expected decisions, execution and validation. No new student outcome prediction.",
+    "scope": "Two small related static snapshots and five policy controls, not independent research maps. Latest-map supply is explicit, not automatic sensing or physical motion."
+  },
+  "cases": [
+    {
+      "id": "removed-keep",
+      "map": "wall-removed",
+      "optimization": "keep-valid",
+      "budget": 30,
+      "expectedDecisionByAI": "VALID_ROUTE_RETAINED",
+      "rows": [
+        "S.G",
+        "..."
+      ],
+      "independentShortestDistance": 2,
+      "output": {
+        "status": "KEEP_ROUTE",
+        "optimization": "keep-valid",
+        "decisionReason": "VALID_ROUTE_RETAINED",
+        "optimizationStatus": "NOT_REQUESTED",
+        "priorRemainingPathValid": true,
+        "priorValidPathLength": 4,
+        "path": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "pathLength": 4,
+        "expanded": 0,
+        "plannerCalls": 0,
+        "planningResult": null
+      }
+    },
+    {
+      "id": "removed-default",
+      "map": "wall-removed",
+      "optimization": "default",
+      "budget": 30,
+      "expectedDecisionByAI": "SHORTER_ROUTE_FOUND",
+      "rows": [
+        "S.G",
+        "..."
+      ],
+      "independentShortestDistance": 2,
+      "output": {
+        "status": "NEW_ROUTE_FOUND",
+        "optimization": "reoptimize",
+        "decisionReason": "SHORTER_ROUTE_FOUND",
+        "optimizationStatus": "OPTIMAL",
+        "priorRemainingPathValid": true,
+        "priorValidPathLength": 4,
+        "path": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "pathLength": 2,
+        "expanded": 3,
+        "plannerCalls": 1,
+        "planningResult": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "pathLength": 2,
+          "expanded": 3
+        }
+      }
+    },
+    {
+      "id": "unchanged-keep",
+      "map": "unchanged",
+      "optimization": "keep-valid",
+      "budget": 30,
+      "expectedDecisionByAI": "VALID_ROUTE_RETAINED",
+      "rows": [
+        "S#G",
+        "..."
+      ],
+      "independentShortestDistance": 4,
+      "output": {
+        "status": "KEEP_ROUTE",
+        "optimization": "keep-valid",
+        "decisionReason": "VALID_ROUTE_RETAINED",
+        "optimizationStatus": "NOT_REQUESTED",
+        "priorRemainingPathValid": true,
+        "priorValidPathLength": 4,
+        "path": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "pathLength": 4,
+        "expanded": 0,
+        "plannerCalls": 0,
+        "planningResult": null
+      }
+    },
+    {
+      "id": "unchanged-default",
+      "map": "unchanged",
+      "optimization": "default",
+      "budget": 30,
+      "expectedDecisionByAI": "OPTIMALITY_CONFIRMED",
+      "rows": [
+        "S#G",
+        "..."
+      ],
+      "independentShortestDistance": 4,
+      "output": {
+        "status": "KEEP_ROUTE",
+        "optimization": "reoptimize",
+        "decisionReason": "OPTIMALITY_CONFIRMED",
+        "optimizationStatus": "OPTIMAL",
+        "priorRemainingPathValid": true,
+        "priorValidPathLength": 4,
+        "path": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "pathLength": 4,
+        "expanded": 5,
+        "plannerCalls": 1,
+        "planningResult": {
+          "success": true,
+          "reason": null,
+          "path": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "pathLength": 4,
+          "expanded": 5
+        }
+      }
+    },
+    {
+      "id": "removed-budget1",
+      "map": "wall-removed",
+      "optimization": "default",
+      "budget": 1,
+      "expectedDecisionByAI": "OPTIMIZATION_BUDGET_EXCEEDED",
+      "rows": [
+        "S.G",
+        "..."
+      ],
+      "independentShortestDistance": 2,
+      "output": {
+        "status": "KEEP_ROUTE",
+        "optimization": "reoptimize",
+        "decisionReason": "OPTIMIZATION_BUDGET_EXCEEDED",
+        "optimizationStatus": "BUDGET_EXCEEDED",
+        "priorRemainingPathValid": true,
+        "priorValidPathLength": 4,
+        "path": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "pathLength": 4,
+        "expanded": 1,
+        "plannerCalls": 1,
+        "planningResult": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 1
+        }
+      }
+    }
+  ],
+  "execution": {
+    "operator": "AI assistant CLI",
+    "executedAtUTC": "2026-10-29T07:17:55.643Z",
+    "sourceCommit": "1c48e39b3e8b89b32523ce3a931bcb8df7bb8d08",
+    "sourceInputsDirty": false,
+    "sourceHashesGitBlobs": {
+      "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+      "src/route-update-policy.mjs": "78091c6bceaed191e504aa8c61eba96ad2699a1455d13b0839d21f0ae193c87d",
+      "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+      "scripts/check-current-position-detour.mjs": "9bb2fad0a772d3fa41c37c8c21b068d44d7e946eb62524c9e50c41a183a9e12e",
+      "scripts/compare-route-optimization.mjs": "0938f7695817282911692047bf2f3f4835a845e04e63dda6a7cebc0d3d0cba23",
+      "test/route-update-policy.test.mjs": "930850ec7d8726d3b8a5c5c22e96a7f4078c8c619481e60a331d2b88e8ac8a66",
+      "experiments/route-reoptimization-controls.config.json": "2f302525038c8ff8e5032ff3f3aab87c8bed1bb4199c4397d72c1b0345a3bb9f",
+      "data/learning/valid-route-optimization-choice-01.json": "8552f7d18a27944d18154397c74d376bcf5dc77bce05189d86d0c864d4245735"
+    },
+    "workspaceStatus": "M practice/02-planning-budget.mjs",
+    "node": "v24.22.1",
+    "platform": "win32/x64",
+    "policyEvaluations": 5,
+    "newPlannerCalls": 3,
+    "newExaminedNodes": 9,
+    "independentBfsCalls": 2,
+    "provenance": "Student chose option 2 (reoptimize) only. AI supplies these known reference fixtures, explicit retention controls, budgets, fallback semantics, code, expected decisions, execution and validation. No new student outcome prediction."
+  }
+}
