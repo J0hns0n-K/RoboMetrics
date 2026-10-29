@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "bounded-failure-response-guided-design-01",
   "dateSeoul": "2026-10-29",
-  "status": "Smaller offered increment applied as 2 to 4 for one retry; configuration awaiting committed execution",
+  "status": "Small-increment preference applied as 2 to 4; configured one-retry demonstration executed and archived",
   "scope": "Separate single-map learning prototype. Do not change the fixed-budget benchmark or relabel a later retry success as success under the original budget.",
   "inputFields": [
     "success",
@@ -39,7 +39,7 @@
     "Bound any automatic retry; do not invent an unchosen retry budget or guarantee success.",
     "Record total examined nodes across both independent restart attempts; enforce the sum of allocated budgets within a declared total cap."
   ],
-  "implementationStatus": "AI implemented src/retry-policy.mjs and six known-map integration controls; all 29 tests pass. Student-configured example awaits retry-budget choice. Existing demo and fixed-budget benchmark are unchanged.",
+  "implementationStatus": "Separate wrapper passed its prior 29-test regression. AI executed committed configuration 2 to 4 once: both attempts budget-exceeded, total work 6 including repeated cells across restarts, cap 10. CLI smoke/overwrite checks pass. Existing demo and fixed benchmark remain unchanged.",
   "attribution": "Student selected one higher-budget retry and expressed a small-increment preference. AI operationalizes the offered smaller retry budget as 4 while retaining one retry and cap 10. No exact numeric quote, additional retry permission, outcome prediction or student code authorship is inferred.",
   "studentModeChoiceVerbatim": "그럼 예산을 느려 한 번 더 시도하는게 맞는 거 같아",
   "modeNormalization": "Interpreted 느려 as 늘려 in the context of the offered higher-budget retry option; no literal slowdown or retry-budget amount inferred.",
@@ -56,5 +56,11 @@
   },
   "validationRecord": "data/retry-policy/validation-01.json",
   "studentBudgetStatementVerbatim": "조금씩 늘리자",
-  "budgetOperationalization": "In the immediately preceding 4-or-8 choice, interpret this as the smaller increment, retry budget 4. This is an explicit assistant interpretation, not a literal numeric student response or authorization of repeated retries."
+  "budgetOperationalization": "In the immediately preceding 4-or-8 choice, interpret this as the smaller increment, retry budget 4. This is an explicit assistant interpretation, not a literal numeric student response or authorization of repeated retries.",
+  "configuredRunArtifacts": [
+    "data/retry-policy/retry-connected-02-to-04-run-01.json",
+    "data/retry-policy/retry-connected-02-to-04-validation-01.json"
+  ],
+  "studentFinalBudgetMessage": null,
+  "nextTask": "Student writes one user-facing sentence for a final budget-exceeded result after the allowed retry, without claiming the map has no route."
 }

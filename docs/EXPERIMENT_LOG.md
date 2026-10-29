@@ -379,6 +379,15 @@ AI will implement a separate A* wrapper that restarts the same map at most once,
 - New ready configuration: `experiments/retry-connected-02-to-04.config.json`. No student outcome prediction was supplied. The map and related outcomes are previously known regression/example material, so this is a configured demonstration rather than blind new research data.
 - AI added a reproducible CLI that requires committed inputs/sources and a new output name. Existing planner and retry wrapper are unchanged. Record config/source before execution and preserve each attempt and total cost.
 
+## 2026-10-29 Committed 2→4 policy demonstration executed
+
+- AI committed the numeric interpretation/config and reproducible CLI in `f3ff64957a80563517af46822eadd4dd9b6a9453`, then ran the known connected map. First budget 2 and retry budget 4 both return BUDGET_EXCEEDED, empty path and null length. Initial-budget success remains false; no extra retry is added.
+- Cumulative work and allocated allowance are 6, below total cap 10. This sums re-examinations across independent restarts, not unique cells. The cap is an upper bound, not a requirement to use the remaining 4.
+- Raw/validation records: `data/retry-policy/retry-connected-02-to-04-run-01.json` and `retry-connected-02-to-04-validation-01.json`. The earlier valid route remains a witness that this map is reachable; final budget exhaustion is not relabeled UNREACHABLE.
+- CLI syntax, committed input/source integrity, actual-run fields/cost and rejection of existing output without searching or overwrite were checked. Core/retry/parser hashes match prior 29-test sources; no full-suite rerun. Fixed-budget benchmark and current demo remain unchanged.
+- Student chose small increments in a 4/8 context, not a literal numeric answer or indefinite retries. Configured demonstration on an already studied map is not a blind forecast test or independent sample. AI provides code/execution/analysis.
+- Next task: student writes a user-facing sentence for the final budget-exceeded outcome after the allowed retry, without asserting no path. No message has yet been supplied.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

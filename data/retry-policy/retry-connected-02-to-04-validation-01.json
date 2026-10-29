@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "label": "CONFIGURED SMALL-INCREMENT RETRY DEMONSTRATION; AI EXECUTION",
+  "dateSeoul": "2026-10-29",
+  "configurationCommit": "f3ff64957a80563517af46822eadd4dd9b6a9453",
+  "studentPreferenceVerbatim": "조금씩 늘리자",
+  "assistantOperationalization": "In the immediately preceding 4-or-8 choice, interpret this as the smaller increment, retry budget 4. This is an explicit assistant interpretation, not a literal numeric student response or authorization of repeated retries.",
+  "studentOutcomePrediction": null,
+  "artifacts": {
+    "data/retry-policy/retry-connected-02-to-04-run-01.json": "23d644cf0ee7a1274ca6c56ef12ea8e74e8f18e8bbc93b1cdf5e59f6f11b2cf4"
+  },
+  "knownReachableMapEvidence": {
+    "source": "data/failure-semantics/reachable-goal-budget-control-run-01.json",
+    "sha256": "073f10f6feb46a0632da0d5525b2c3a8bceb94246c4c5ce0406df6d8fac5693f",
+    "validPreviouslyRecordedPath": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "moves": 4
+  },
+  "checks": {
+    "attemptBudgets": [
+      2,
+      4
+    ],
+    "maximumAdditionalAttempts": 1,
+    "actualAdditionalAttempts": 1,
+    "bothAttemptsBudgetExceeded": true,
+    "totalExpandedIncludingRepeatedCellsAcrossRestarts": 6,
+    "totalBudgetAllocated": 6,
+    "totalCap": 10,
+    "unusedCap": 4,
+    "finalStatusIsNotUnreachable": true,
+    "existingOutputRejectedWithoutSearchingOrOverwrite": true,
+    "coreRetryAndParserMatchPrior29TestSources": true,
+    "initialBudgetSuccess": false,
+    "initialAttemptFailureRecordRetained": true
+  },
+  "validation": {
+    "operator": "AI assistant",
+    "sourceCommit": "f3ff64957a80563517af46822eadd4dd9b6a9453",
+    "sourceInputsDirty": false,
+    "workspaceStatus": "M practice/02-planning-budget.mjs",
+    "newCliChecks": "Syntax, actual committed-configuration smoke run, immutable output and field/cost validation; no policy-code change or full-suite rerun.",
+    "priorPolicyTests": 29,
+    "priorPolicyValidation": "data/retry-policy/validation-01.json"
+  },
+  "interpretation": "The smaller offered retry budget was operationalized as 4 from the user preference. Both attempts exhaust their budgets and the one-retry policy stops. The total cap is an upper bound, not a requirement to spend remaining allowance. Sum of actual work includes re-examination across restarted attempts. A previously validated route still exists, so final budget exhaustion must not be relabeled no-path. No outcome forecast or independent new map sample is inferred.",
+  "provenance": "Student selected retry-once and expressed small-increment preference. AI chose the explicit numeric interpretation within the immediately offered options and supplied configuration transcription, runner and execution/validation. Current benchmark and demo behavior are unchanged."
+}

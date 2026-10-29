@@ -25,6 +25,24 @@
 
 [TAP](../data/retry-policy/retry-policy-tests-01.tap)과 [검증 기록](../data/retry-policy/validation-01.json)에 소스 해시와 역할을 보존했다. 조건과 수치는 AI가 선택한 기존 지도 회귀 테스트이며 학생이 정한 새 실험 예산이나 독립 표본이 아니다. 테스트 출력은 커밋 전에 수집했고, 보관 전에 실행한 파일과 커밋된 파일이 같은지 확인했다.
 
-## 학생이 다음에 정할 값
+## 작은 증가 선호를 적용한 예제
 
-[설계 초안](../experiments/failure-response.design.json)에는 AI가 제안한 연결 지도 예제를 준비했다. 첫 예산은 2, 전체 한도는 10이고 재시도 예산 후보는 4 또는 8이다. 아직 학생이 재시도 값을 고르지 않았으며 그 설정으로 별도 예제를 실행한 것으로 기록하지 않는다. 예산 후보·전체 한도·기존 지도는 AI 제안임을 유지한다. 다음 학생 과제는 재시도 예산을 선택하는 것이다.
+[설계](../experiments/failure-response.design.json)에서 AI가 제안한 첫 예산은 2, 전체 한도는 10이고 재시도 후보는 4 또는 8이었다. 학생은 **조금씩 늘리자**라고 답했다. AI는 바로 앞 선택지 중 작은 증가인 4로 적용했으며, 이를 학생이 숫자 4를 직접 말했거나 여러 번 재시도를 허용한 것으로 기록하지 않는다. 별도 결과 예상은 받지 않았다. 같은 지도와 관련 수치는 이미 알려진 검증 자료이므로 새 맹검 실험으로 취급하지 않는다.
+
+[설정](../experiments/retry-connected-02-to-04.config.json)과 [재현 도구](../scripts/run-retry-policy.mjs)를 `f3ff64957a80563517af46822eadd4dd9b6a9453`에 커밋한 뒤 AI가 실행했다.
+
+| 시도 | 허용 예산 | 실제 검토량 | 결과 |
+|---|---:|---:|---|
+| 처음 | 2 | 2 | BUDGET_EXCEEDED |
+| 한 번의 재시도 | 4 | 4 | BUDGET_EXCEEDED |
+| 합계 | 6 | 6 | 정한 재시도 횟수 뒤 종료 |
+
+누적 검토량 6은 재시작하면서 같은 칸을 다시 검토한 것도 센 계산량이다. 서로 다른 칸 6개를 방문했다는 뜻이 아니다. 전체 한도 10은 반드시 모두 써야 하는 목표가 아니므로 남은 4를 자동으로 추가 사용하지 않았다. 처음부터 정한 한 번의 재시도 제한을 유지했다.
+
+[원시 결과](../data/retry-policy/retry-connected-02-to-04-run-01.json)와 [검증 기록](../data/retry-policy/retry-connected-02-to-04-validation-01.json)은 두 실패와 누적 비용, 소스·설정 커밋, 원문과 수치 적용을 구분해 보존한다. 이 지도에는 [이전의 유효한 경로](../data/failure-semantics/reachable-goal-budget-control-run-01.json)가 있으므로 마지막 예산 초과를 도착 불가로 바꾸지 않았다. 원래 모듈·코어는 29개 테스트 소스와 같고, 새 CLI의 문법·실제 실행·기존 출력 거부를 별도로 검사했다. 전체 테스트를 다시 실행한 것으로 표시하지 않는다.
+
+```sh
+node scripts/run-retry-policy.mjs experiments/retry-connected-02-to-04.config.json data/retry-policy/retry-connected-02-to-04-run-02.json
+```
+
+새 이름으로만 저장하며 기존 출력은 계산을 시작하기 전에 거부한다. 다음 학생 과제는 재시도도 예산 초과로 끝났을 때 사용자에게 보여줄 문장을 작성하는 것이다. 아직 안내문 원문이나 새 UI 구현은 없다.

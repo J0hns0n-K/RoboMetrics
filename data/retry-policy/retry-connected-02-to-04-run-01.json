@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "label": "AI-OPERATED CONFIGURED RETRY DEMONSTRATION; NOT FIXED-BUDGET BENCHMARK DATA",
+  "configuration": {
+    "id": "retry-connected-02-to-04",
+    "dateSeoul": "2026-10-29",
+    "status": "ready",
+    "mapScenario": "experiments/reachable-goal-budget-control.scenario.json",
+    "policy": {
+      "initialBudget": 2,
+      "retryBudget": 4,
+      "maxTotalExpansions": 10,
+      "tieBreak": "fifo"
+    },
+    "studentModeChoiceVerbatim": "그럼 예산을 느려 한 번 더 시도하는게 맞는 거 같아",
+    "studentBudgetStatementVerbatim": "조금씩 늘리자",
+    "assistantOperationalization": "In the immediately preceding 4-or-8 choice, interpret this as the smaller increment, retry budget 4. This is an explicit assistant interpretation, not a literal numeric student response or authorization of repeated retries.",
+    "studentOutcomePrediction": null,
+    "knownPriorEvidence": "The same map and related budget outcomes already appear in API demonstrations and AI regression tests. This is a configured policy demonstration, not a blind new research forecast or independent map sample.",
+    "attribution": "Student selected one higher-budget retry and expressed a small-increment preference. AI operationalizes the offered smaller retry budget as 4 while retaining one retry and cap 10. No exact numeric quote, additional retry permission, outcome prediction or student code authorship is inferred.",
+    "measurementRules": "Preserve both attempt outcomes and sum their actual examined nodes. Retain initial-budget success separately. Stop after at most one additional attempt even if the total cap has unused allowance. Do not modify fixed-budget benchmark rows or the original datasets."
+  },
+  "map": {
+    "source": "experiments/reachable-goal-budget-control.scenario.json",
+    "rows": [
+      "S..",
+      "..#",
+      "..G"
+    ]
+  },
+  "result": {
+    "label": "SEPARATE A* RESPONSE POLICY; NOT A FIXED-BUDGET BENCHMARK ROW",
+    "policy": {
+      "initialBudget": 2,
+      "retryBudget": 4,
+      "maxTotalExpansions": 10,
+      "maximumRetries": 1,
+      "tieBreak": "fifo"
+    },
+    "initialBudgetSuccess": false,
+    "retried": true,
+    "attempts": [
+      {
+        "number": 1,
+        "budget": 2,
+        "result": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 2
+        }
+      },
+      {
+        "number": 2,
+        "budget": 4,
+        "result": {
+          "success": false,
+          "reason": "BUDGET_EXCEEDED",
+          "path": [],
+          "pathLength": null,
+          "expanded": 4
+        }
+      }
+    ],
+    "totalExpanded": 6,
+    "totalBudgetAllocated": 6,
+    "finalResult": {
+      "success": false,
+      "reason": "BUDGET_EXCEEDED",
+      "path": [],
+      "pathLength": null,
+      "expanded": 4
+    }
+  },
+  "execution": {
+    "operator": "AI assistant CLI",
+    "executedAtUTC": "2026-10-29T03:04:48.058Z",
+    "sourceCommit": "f3ff64957a80563517af46822eadd4dd9b6a9453",
+    "sourceInputsDirty": false,
+    "sourceHashesGitBlobs": {
+      "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+      "src/retry-policy.mjs": "72729cd2ce9fb2c93a94057a43ee6b9b29bfdf270b73418541adcf6b169e9576",
+      "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+      "scripts/run-retry-policy.mjs": "f75575985fd624486c6ca195316b12f5f717ccd6408b34246d8be3279d9b92be",
+      "experiments/retry-connected-02-to-04.config.json": "97619336cb8a999ff64555eb8af1db1f26a987b74f9351c36cb22dacf4367d97",
+      "experiments/reachable-goal-budget-control.scenario.json": "0f054d7efdcceb852c842e3b380d5c8eb6c1513082d56f15571666024c490e02"
+    },
+    "workspaceStatus": "M practice/02-planning-budget.mjs",
+    "node": "v24.22.1",
+    "platform": "win32/x64",
+    "provenance": "Student mode/preference and assistant numeric interpretation are retained in configuration. AI supplies code and execution; prior map forecasts are not new retry-outcome predictions."
+  }
+}
