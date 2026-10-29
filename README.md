@@ -53,7 +53,7 @@ Junmo selected a goal-side dead end, chose a four-cell branch in the AI-proposed
 
 ## Next research step
 
-Refine the structured case through a single-wall edit while holding the remaining map and search settings fixed. Two AI-proposed wall choices are ready for a student selection and pre-run prediction; neither revision has been executed. This tests how a controlled layout change affects route length and search work, retaining equal or unfavorable cases alongside gains. The planned robotics extension introduces body geometry, differential-drive motion, waypoint tracking and sensor/actuator uncertainty. Matched physical trials depend on obtaining and testing hardware; no physical measurements have been collected. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
+Refine the structured case through a single-wall edit while holding the remaining map and search settings fixed. Junmo chose wall A from two proposed edits and gave a route-position rationale; opening A connects the top-row route. His exact wording and an explicit clarification about the original blocked path are preserved in the [design record](docs/STRUCTURED_MAP_TASK_KR.md). A numerical route-length forecast and the revised experiment remain pending. This tests how a controlled layout change affects route length and search work, retaining equal or unfavorable cases alongside gains. The planned robotics extension introduces body geometry, differential-drive motion, waypoint tracking and sensor/actuator uncertainty. Matched physical trials depend on obtaining and testing hardware; no physical measurements have been collected. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
 
 ## Run and inspect
 

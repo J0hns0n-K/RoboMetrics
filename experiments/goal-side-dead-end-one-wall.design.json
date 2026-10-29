@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "goal-side-dead-end-one-wall-revision-design",
   "dateSeoul": "2026-10-29",
-  "status": "awaiting student wall choice and a scoped pre-run prediction",
+  "status": "Wall A selected with route-based rationale; awaiting a scoped numerical path-length prediction",
   "parentScenario": "experiments/goal-side-dead-end-04.scenario.json",
   "parentResult": "data/structured/goal-side-dead-end-04-run-01.json",
   "parentRows": [
@@ -50,8 +50,15 @@
       ]
     }
   ],
-  "studentWallChoice": null,
+  "studentWallChoice": "A",
   "studentPrediction": null,
-  "attribution": "Student supplied the quoted scoped post-result interpretation after a prompt. AI proposes two single-wall edits as the next guided task. No wall choice, revision prediction, independent map design, code authorship or revised outcome is attributed yet.",
-  "execution": "No planner invoked for either revision during preparation. Record a student choice and new scoped prediction, then commit a separate ready scenario before running the comparison. Keep the parent input/results unchanged."
+  "attribution": "Student chose A from two AI-proposed wall edits and supplied the quoted pre-run rationale. AI supplied the labels/layout/options and transcribed the choice. No numerical path-length or examined-node forecast, independent full-map design or code authorship is inferred.",
+  "execution": "No planner invoked for either revision during this update. Record a scoped numerical path-length expectation, then commit a separate ready scenario before comparison; keep the parent inputs/results unchanged.",
+  "studentChoiceAndReasonVerbatim": "A를 없애는게 더 좋네. 왜냐하면 최단이동루트에는 A가 있고 B는 없어.",
+  "selectedRows": [
+    "S.....G",
+    ".#####.",
+    "......."
+  ],
+  "assistantClarification": "A blocks the straight endpoint row; opening it makes that potential route available. The original valid shortest path cannot pass through blocked A. This is an assistant clarification, not a rewrite of the student quote or a student prediction of search work."
 }

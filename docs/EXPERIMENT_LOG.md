@@ -219,6 +219,16 @@ This is a guided post-result interpretation using the observed equal-count case 
 
 AI prepared `experiments/goal-side-dead-end-one-wall.design.json`: choose wall A at (5,0) or B at (4,1), opening exactly one cell with dimensions, endpoints, other walls, budget 300 and search settings fixed. Student choice and a new prediction remain null. Neither revised candidate was evaluated; next action is the student's A/B selection before a separately committed scenario and forecast.
 
+## 2026-10-29 Wall A chosen with a pre-run rationale
+
+Junmo wrote:
+
+> A를 없애는게 더 좋네. 왜냐하면 최단이동루트에는 A가 있고 B는 없어.
+
+Record wall A at (5,0) as the selected edit and retain the original rationale. Assistant clarification is separate: A blocks the straight endpoint row and opening it creates that possible route; the original valid shortest path cannot pass through a wall. Do not silently rewrite this precision into the student's words or infer a numerical move-count/search-work forecast.
+
+The draft and new `experiments/goal-side-dead-end-open-A.scenario.json` fix exactly one #→. edit. Other cells/endpoints, budget 300 and planning rules remain unchanged. The new input awaits a scoped numerical path-length expectation and has not been executed. Parent input, result and manifests stay unchanged. Next student task: predict the minimum number of moves after opening A.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

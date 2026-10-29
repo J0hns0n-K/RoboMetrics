@@ -1,0 +1,38 @@
+{
+  "id": "goal-side-dead-end-open-A",
+  "dateSeoul": "2026-10-29",
+  "status": "awaiting-prediction",
+  "contributionType": "student-declared",
+  "contributor": "Junmo — guided wall-A removal choice and pre-run rationale",
+  "assistance": "Student chose A from two AI-proposed wall edits and supplied the quoted pre-run rationale. AI supplied the labels/layout/options and transcribed the choice. No numerical path-length or examined-node forecast, independent full-map design or code authorship is inferred.",
+  "studentChoiceAndReasonVerbatim": "A를 없애는게 더 좋네. 왜냐하면 최단이동루트에는 A가 있고 B는 없어.",
+  "assistantClarification": "A blocks the straight endpoint row; opening it makes that potential route available. The original valid shortest path cannot pass through blocked A. This is an assistant clarification, not a rewrite of the student quote or a student prediction of search work.",
+  "parentScenario": "experiments/goal-side-dead-end-04.scenario.json",
+  "parentResult": "data/structured/goal-side-dead-end-04-run-01.json",
+  "revision": {
+    "operation": "Open exactly one existing wall",
+    "label": "A",
+    "coordinate": [
+      5,
+      0
+    ],
+    "from": "#",
+    "to": "."
+  },
+  "rows": [
+    "S.....G",
+    ".#####.",
+    "......."
+  ],
+  "budgets": [
+    300
+  ],
+  "variants": [
+    "fifo",
+    "closer-goal"
+  ],
+  "prediction": null,
+  "controls": "Only (5,0) changes from wall to open; dimensions, endpoints, all other cells, unit costs, heuristic, neighbor order, budget and planner source remain fixed. Compare each A* tie rule before/after and preserve full paths.",
+  "predictionScope": "Next ask for the minimum number of moves after opening A. The student has not supplied a numerical value or a prediction of examined-node counts.",
+  "executionNote": "Do not execute before the new scoped prediction is recorded and the scenario is committed as ready. Compare with the existing parent artifact, not an edited or overwritten baseline."
+}
