@@ -676,6 +676,14 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Weighted products checked by repeated addition and three hand-known pairs; source/raw/manifest and unchanged code hashes bound. New maps/planner/BFS/full-suite executions0. No additional samples or measured environment distribution; original unequal policy caps100/200 remain explicit.
 - AI supplies weights/calculation/algebra/validation, student directional answer only. Next experiments/resolution-policy-followup.design.json asks unfiltered versus fine-graph-reachable-only new-cohort scope; no answer, new seeds/maps or results yet.
 
+## 2026-10-29 — Unfiltered new30-map resolution-policy condition completed
+
+- Student **1** chose retaining failures, no rationale/forecast/code. Choice data/learning/resolution-followup-scope-choice-01.json. AI fixes30maps/9×7/.15/seeds20267028–20267057/S(1,3)/G(7,3) and body0.8/margin0.15/A* FIFO/stage100 before target generation in71a37c47fafd9f4ec9fb6001870f2f5a6a54dc91. Skip draws only at point endpoints; no neighbor clearing/filter/replacement/refill. All30 retained.
+- Protocol experiments/resolution-policy-unfiltered-01.protocol.json; raw/validation data/footprint/resolution-policy-unfiltered-*.json; method docs/RESOLUTION_UNFILTERED_01_KR.md. Both7ROUTE_FOUND/3UNREACHABLE/20INVALID_ENDPOINT_CLEARANCE/0BUDGET_EXCEEDED. Fine-reference BFS on10valid-endpoint maps:7reachable/3unreachable; invalids have null reachability and0BFS/search. Primary denominator30 preserved.
+- Fine281examined/10calls versus coarse-first280/17; valid-endpoint means28.1/28.0. Joint success7 length means58/7 versus60/7,5same/2coarse-longer:trial12/20267039 and23/20267050 both fine7/coarse8. Tiny node savings plus extra calls/longer paths do not establish advantage. Caps100/200 explicit.
+- Full90tests pass including4new method checks without target seeds; original planner/body/policy unchanged. Configured30maps/60policy/67geometry/27planner/561nodes/20BFS/8520point audits. Validation reconstructs30maps with BigInt,8520points/20BFS/214segments/zero extra planner, independent counts/denominators/source/TAP/output preservation. Tests/reconstructions not new samples.
+- No real workload/independence/universal quality/runtime-energy-storage/physical claim. Next experiments/resolution-path-quality-choice.design.json selects an objective using first observed longer-case trial12 (AI post-result selection, not new evidence). No student choice/revision/replay yet.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

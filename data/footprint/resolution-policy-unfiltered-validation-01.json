@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "validatedBy": "AI assistant CLI",
+  "validatedAtUTC": "2026-10-29T11:01:23.148Z",
+  "sourceCommit": "71a37c47fafd9f4ec9fb6001870f2f5a6a54dc91",
+  "protocol": "experiments/resolution-policy-unfiltered-01.protocol.json",
+  "studentChoiceRecord": "data/learning/resolution-followup-scope-choice-01.json",
+  "raw": {
+    "path": "data/footprint/resolution-policy-unfiltered-run-01.json",
+    "sha256": "e15718dc1f9cb86a01548ce3d7d3dba38536b9a97e64ea88f65395ddbff4b104"
+  },
+  "sourceHashesGitBlobs": {
+    "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+    "src/disk-footprint.mjs": "d65440878eea0718b28c61357948e3e56e48227213a5ea2c732961cd156853e8",
+    "src/resolution-policy.mjs": "dc071ca5af42d67d5de1143c0166526ec1affe85f8cf064594aa2e190c139293",
+    "scripts/resolution-cohort.mjs": "3cec4d3fb5d48d2287794af191945987cb12bbf2729dbd5007631c59a8c675e1",
+    "scripts/run-resolution-cohort.mjs": "e8420fdca45c9f3967f6d8ee696c86d87e1137966a2dd630e00164b6242ce72e",
+    "scripts/run-scenario.mjs": "2fdb04a8e1cff8df5923c5417318de0326500ba35cb5ef8e087f64f6906143fc",
+    "scripts/check-current-position-detour.mjs": "9bb2fad0a772d3fa41c37c8c21b068d44d7e946eb62524c9e50c41a183a9e12e",
+    "scripts/check-two-cell-doorway.mjs": "45765ff5e47d578a34b6df04d12555388ed04bb53387722be4a949c1d5755cad",
+    "test/resolution-cohort.test.mjs": "ffd23e674941897a30757bc959a27a45561222a72a3dee0d8acfbf9b7f92afb6",
+    "data/footprint/resolution-cohort-tests-01.tap": "7f45df801a0916a398e7e62bbc29bff5337b88acf29513b58b7d1797a3a71f1a",
+    "experiments/resolution-policy-unfiltered-01.protocol.json": "782b55ba52113e8f9dbadee897ce0e3d2fddd7868b9349947126cfa3dd8ced3a",
+    "experiments/disk-model-clearance015-01.config.json": "05eb114289bcc542081674dd9aa70a5cc9a362513d57d8e7b8e94f74dc8bf658",
+    "data/learning/resolution-followup-scope-choice-01.json": "61fd9832def658989153e344fd3eec1a4a48488547ba3087bf3056e285103f0a",
+    "data/footprint/resolution-policy-controls-validation-01.json": "561ddf1e71a8368fccbd6e06ec92157b8c2e802c3bdde4c1d0ff49c04b102511"
+  },
+  "tests": {
+    "path": "data/footprint/resolution-cohort-tests-01.tap",
+    "sha256": "7f45df801a0916a398e7e62bbc29bff5337b88acf29513b58b7d1797a3a71f1a",
+    "passed": 90,
+    "failed": 0,
+    "newMethodControls": 4,
+    "fullSuiteExecuted": true
+  },
+  "checks": {
+    "scopeAndSourceFrozenBeforeTargetGeneration": true,
+    "exact30SeedsNoFilteringReplacementOrRefill": true,
+    "independentBigIntGeneratorReconstructsAllMaps": true,
+    "all8520CandidatePointsMatchOriginalSquareGeometry": true,
+    "invalidBodyEndpointsRetainedAndExcludedFromBfsCalls": true,
+    "separateReferenceBfsLabelsAllValidEndpoints": true,
+    "allStatusesPathsStageCostsCapsAndRefinementRulesVerified": true,
+    "allSuccessfulWorldSegmentsValid": true,
+    "repeatedFineStagesMatchDirectFineOutcomesExactly": true,
+    "summaryDenominatorsIndependentlyRecomputed": true,
+    "allFailuresKeptInPrimary30MapDenominator": true,
+    "unequalPolicyMaximumBudgetsExplicit": true,
+    "sourceTestAndRawHashBound": true,
+    "existingOutputRejectedBeforeGenerationAndBytesPreserved": true
+  },
+  "observations": {
+    "generatedMaps": 30,
+    "seedRange": [
+      20267028,
+      20267057
+    ],
+    "grid": [
+      9,
+      7
+    ],
+    "density": 0.15,
+    "rejectedMaps": 0,
+    "endpointValidMaps": 10,
+    "endpointInvalidMaps": 20,
+    "fineGraphReachable": 7,
+    "fineGraphUnreachableValidEndpoints": 3,
+    "summary": {
+      "mapCount": 30,
+      "endpointValidMaps": 10,
+      "endpointInvalidMaps": 20,
+      "fineGraph": {
+        "reachable": 7,
+        "unreachable": 3,
+        "notClassifiedInvalidEndpoints": 20
+      },
+      "modes": {
+        "always-fine": {
+          "statusCounts": {
+            "ROUTE_FOUND": 7,
+            "BUDGET_EXCEEDED": 0,
+            "UNREACHABLE": 3,
+            "INVALID_ENDPOINT_CLEARANCE": 20
+          },
+          "denominator": 30,
+          "successfulMaps": 7,
+          "successRate": 0.23333333333333334,
+          "plannerCalls": 10,
+          "geometryStages": 30,
+          "totalExamined": 281,
+          "meanExaminedAllMaps": 9.366666666666667,
+          "endpointValidDenominator": 10,
+          "meanExaminedEndpointValidMaps": 28.1,
+          "worldLength": {
+            "successfulMapDenominator": 7,
+            "mean": 8.285714285714286
+          }
+        },
+        "coarse-first": {
+          "statusCounts": {
+            "ROUTE_FOUND": 7,
+            "BUDGET_EXCEEDED": 0,
+            "UNREACHABLE": 3,
+            "INVALID_ENDPOINT_CLEARANCE": 20
+          },
+          "denominator": 30,
+          "successfulMaps": 7,
+          "successRate": 0.23333333333333334,
+          "plannerCalls": 17,
+          "geometryStages": 37,
+          "totalExamined": 280,
+          "meanExaminedAllMaps": 9.333333333333334,
+          "endpointValidDenominator": 10,
+          "meanExaminedEndpointValidMaps": 28,
+          "worldLength": {
+            "successfulMapDenominator": 7,
+            "mean": 8.571428571428571
+          }
+        }
+      },
+      "jointSuccess": {
+        "denominator": 7,
+        "trialIds": [
+          1,
+          7,
+          11,
+          12,
+          20,
+          23,
+          26
+        ],
+        "worldLengthMeanByMode": {
+          "always-fine": 8.285714285714286,
+          "coarse-first": 8.571428571428571
+        },
+        "equalWorldLengthCount": 5
+      },
+      "refinedMaps": 7,
+      "scope": "Paired fixed synthetic inputs, all failures retained; length comparisons use joint-success denominator. Cheap failures/invalid endpoints are not efficiency wins."
+    },
+    "pairedDifferentLengthCases": [
+      {
+        "trial": 12,
+        "seed": 20267039,
+        "alwaysFine": 7,
+        "coarseFirst": 8,
+        "alwaysFineExamined": 24,
+        "coarseFirstExamined": 12
+      },
+      {
+        "trial": 23,
+        "seed": 20267050,
+        "alwaysFine": 7,
+        "coarseFirst": 8,
+        "alwaysFineExamined": 28,
+        "coarseFirstExamined": 15
+      }
+    ],
+    "configuredPolicyEvaluations": 60,
+    "configuredPlannerCalls": 27,
+    "configuredExaminedNodes": 561,
+    "configuredGeometryStages": 67,
+    "configuredBfsCalls": 20,
+    "configuredReferencePointAudits": 8520,
+    "additionalValidationReconstructedMaps": 30,
+    "additionalValidationPointChecks": 8520,
+    "additionalValidationBfsCalls": 20,
+    "additionalValidationSuccessfulSweptSegments": 214,
+    "additionalValidationPlannerCalls": 0
+  },
+  "validationMethod": "BigInt LCG reconstruction of all30 maps, independent point-to-original-square distance audit at8520 centers,20 BFS checks with endpoint-valid gate, world/grid path and all returned segment checks, independent status/cost/length denominator summaries and output refusal. Reconstructions and method tests are not additional cohort samples.",
+  "attribution": "Student selects offered inclusion of failures, no rationale or outcome forecast. AI supplies exact count/seed/density/generator/analysis/validation, operates code and writes initial interpretation.",
+  "limitations": [
+    "One preregistered synthetic9x7/.15 fixed-seed condition, not a measured workload or proof of statistical independence/general superiority.",
+    "20/30 chosen endpoints fail assumed body clearance: they remain in primary denominator; do not substitute7/10 for7/30 or count zero-work failures as efficiency wins.",
+    "Both modes succeed7/30, valid-endpoint subset7/10. No budget failures occurred; selected fine-graph UNREACHABLE is not continuous physical impossibility.",
+    "Only1node separates total281/280; staged uses17 versus10 planner calls and returns longer lengths in2of7 jointly successful maps. No overall efficiency/quality superiority claim.",
+    "Unequal maximum caps100/200, same per-stage100, not equal-total-budget success comparison. Node counts exclude mask/swept/reference/storage/time overhead.",
+    "Virtual disk only, no robot, sensor, controller, kinematic, energy, runtime or physical safety measurement."
+  ],
+  "unrelatedLocalChangePreserved": "practice/02-planning-budget.mjs"
+}

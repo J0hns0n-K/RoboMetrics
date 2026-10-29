@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student chooses whether broader validation includes all generated maps with failure statuses or only independently fine-graph-reachable maps with rejection audit. Freeze all generation/inclusion/budget rules before any new maps; no follow-up generated yet.",
+  "nextTask": "Student objective choice: use valid coarse route immediately or consider extra fine-graph shortening checks. AI selects observed trial12/seed20267039 as first longer coarse case; no new protocol/implementation/replay yet. Preserve original unfiltered30-map data.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -211,5 +211,12 @@
     "data/footprint/resolution-policy-mix-derived-01.json",
     "data/footprint/resolution-policy-mix-validation-01.json"
   ],
-  "resolutionPolicyFollowupDraft": "experiments/resolution-policy-followup.design.json"
+  "resolutionPolicyFollowupDraft": "experiments/resolution-policy-followup.design.json",
+  "resolutionPolicyFollowupChoiceRecord": "data/learning/resolution-followup-scope-choice-01.json",
+  "resolutionPolicyUnfilteredProtocol": "experiments/resolution-policy-unfiltered-01.protocol.json",
+  "resolutionPolicyUnfilteredArtifacts": [
+    "data/footprint/resolution-policy-unfiltered-run-01.json",
+    "data/footprint/resolution-policy-unfiltered-validation-01.json"
+  ],
+  "resolutionPathQualityDraft": "experiments/resolution-path-quality-choice.design.json"
 }

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "dateSeoul": "2026-10-29",
+  "status": "awaiting-student-objective-choice",
+  "proposalAuthor": "AI assistant",
+  "parentRaw": "data/footprint/resolution-policy-unfiltered-run-01.json",
+  "parentValidation": "data/footprint/resolution-policy-unfiltered-validation-01.json",
+  "selectedCase": {"trial": 12, "seed": 20267039},
+  "caseSelection": "AI selects the first observed jointly successful trial where coarse-first world length exceeds always-fine, after the cohort run; not independent new evidence or a student-discovered case.",
+  "question": "길을 찾은 뒤의 목표를 골라 줘. 1: 찾은 경로를 바로 사용, 2: 더 짧을 가능성이 있으면 반 칸 탐색으로 추가 확인.",
+  "choices": [
+    {"id": 1, "objective": "Return the first valid coarse path without further optimization"},
+    {"id": 2, "objective": "Consider fine-graph optimization when a valid coarse route may be shortened; retain valid fallback on optimization failure"}
+  ],
+  "studentResponseVerbatim": null,
+  "studentRationale": null,
+  "readyProtocol": null,
+  "implementation": null,
+  "results": null,
+  "futureRequirements": "Define world-length lower-bound skip, exact triggers, stage/total budgets, preserved raw failures and fallback behavior before coding or replay. Keep historical cohort immutable and label any replay development-cohort reuse. Scope optimality to the selected graph, not continuous motion.",
+  "scope": "AI-proposed objective choice based on a known counterexample. No policy revision, student reasoning, new maps or configured follow-up result yet."
+}
