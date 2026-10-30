@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "`X: 12초 / Y: 10초`  ",
+  "studentNominalSeconds": {"X": 12, "Y": 10},
+  "studentChoice": null,
+  "studentRationale": null,
+  "task": "experiments/path-nominal-time-01.design.json",
+  "givenConditions": {"initialHeading": "down", "linearSpeed": 1, "linearSpeedUnits": "virtual cells per second", "angularSpeedDegrees": 90, "angularSpeedUnits": "degrees per second", "sequentialTranslationAndRotation": true},
+  "context": "AI supplied the ideal rates and fixed X length6/rotation540degrees and Y length8/rotation180degrees, asking for total nominal seconds before implementing the duration helper.",
+  "roles": {
+    "student": "Correctly calculated both offered nominal times. No route choice, additional rationale or measured timing was supplied.",
+    "ai": "Supplied paths, geometric totals, rates, model assumptions and task; subsequent code/tests/operation are AI assistance."
+  },
+  "scope": "Guided ideal-model hand calculation, not physical travel-time data, calibration, independently chosen motion parameters, code or simulator operation."
+}

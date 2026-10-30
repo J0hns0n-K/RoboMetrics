@@ -1,20 +1,39 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "awaiting-student-nominal-time-calculation",
+  "status": "student-times-recorded-ai-duration-check-pending",
   "proposalAuthor": "AI assistant",
   "geometrySource": "data/learning/path-rotation-run-02.json",
   "fixtures": "experiments/path-turn-score-01.config.json",
   "initialHeading": "down",
   "givenGeometry": {
-    "X": {"worldLength": 6, "totalRotationDegrees": 540},
-    "Y": {"worldLength": 8, "totalRotationDegrees": 180}
+    "X": {
+      "worldLength": 6,
+      "totalRotationDegrees": 540
+    },
+    "Y": {
+      "worldLength": 8,
+      "totalRotationDegrees": 180
+    }
   },
-  "assumedRates": {"linearSpeed": 1, "linearSpeedUnits": "virtual cells per second", "angularSpeed": 90, "angularSpeedUnits": "degrees per second", "author": "AI assistant", "calibratedFromHardware": false},
+  "assumedRates": {
+    "linearSpeed": 1,
+    "linearSpeedUnits": "virtual cells per second",
+    "angularSpeed": 90,
+    "angularSpeedUnits": "degrees per second",
+    "author": "AI assistant",
+    "calibratedFromHardware": false
+  },
   "model": "Ideal forward-only stop-and-turn path execution. Translation and minimum in-place alignment occur sequentially at the declared constant rates. Include initial alignment, no final-heading target, instantaneous rate changes, no acceleration/deceleration/slip/tracking/dwell/sensing effects.",
   "formula": "nominal seconds = worldLength / linearSpeed + totalRotationDegrees / angularSpeed",
   "studentTask": "Calculate X and Y nominal total times under these explicitly assumed rates. They are model calculations, not observed physical travel times.",
-  "studentNominalSeconds": null,
+  "studentNominalSeconds": {
+    "X": 12,
+    "Y": 10
+  },
   "studentRationale": null,
-  "scope": "Pending hand calculation on schematic paths. No timing function, timed simulator/controller, differential-drive equations, calibration, motion/collision feasibility check or physical trial has been completed. No new planner, route or measured runtime claim."
+  "scope": "Student correctly calculated X12/Y10 under supplied ideal rates, with no route choice or rationale supplied. AI authored a nominal-duration helper and exercise; checks pending. No timed simulator/controller, differential-drive dynamics, calibration, physical trial or measured runtime/energy claim.",
+  "studentAnswerRecord": "data/learning/path-nominal-time-answer-01.json",
+  "durationProtocol": "experiments/path-nominal-time-01.protocol.json",
+  "nextTask": "experiments/path-nominal-time-angular-speed-01.design.json"
 }

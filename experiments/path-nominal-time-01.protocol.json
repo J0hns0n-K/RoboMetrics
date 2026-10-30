@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "ready-before-nominal-duration-cli-check",
+  "methodAuthor": "AI assistant",
+  "studentAnswer": "data/learning/path-nominal-time-answer-01.json",
+  "geometrySource": "data/learning/path-rotation-run-02.json",
+  "fixtures": "experiments/path-turn-score-01.config.json",
+  "module": "src/nominal-path-time.mjs",
+  "cli": "practice/07-path-time.mjs",
+  "inputs": {"initialHeading":"down", "linearSpeed":1, "linearSpeedUnits":"virtual cells per second", "angularSpeedDegrees":90, "angularSpeedUnits":"degrees per second"},
+  "equation": "nominalSeconds = worldLength / linearSpeed + totalRotationDegrees / angularSpeedDegrees",
+  "assumptions": "Forward-only path travel and minimum unsigned in-place alignment, initial alignment included, no required final heading. Translation and rotation sequential at constant declared rates; instantaneous rate changes, no acceleration/deceleration/slip/dwell/tracking/sensing effects. Rates AI-assumed and uncalibrated.",
+  "plannedChecks": "Archive six new duration tests plus six relevant existing rotation tests. Import the committed practice CLI once and record exported components/totals. Independently reconstruct path lengths/headings/angles and divide by the declared rates, compare student answers and prior geometric artifacts. Verify old source/fixture/evidence hashes. No elapsed-time benchmark, timed simulator, physical command, planner/BFS/new maps or old101-suite repetition.",
+  "scope": "Ideal nominal-duration proxy only, not differential-drive dynamics, a tracking controller, timed trajectory simulation, collision/motion feasibility, measured runtime/energy or a globally fastest route. Do not configure/run the future180-degree-per-second X/Y condition before the student response."
+}
