@@ -809,6 +809,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - [New run and paired comparison](../data/learning/path-rotation-run-02.json): fixed X5changes/internal450 and Y2/internal180; initial-down alignments90/0 yield totals540/180degrees versus right-heading450/270. Student supplied only initial angles and saved input; full totals/operation/audit are AI support. Independent Python geometry agrees, baseline bytes unchanged, prior module/fixture/test/eleven-test archive hashes match. No tests repeated for input-only change, one CLI run/zero planner/BFS/maps.
 - Geometry only, no dynamics/collision/control/time calibration or physical result. Next [nominal-time exercise](../experiments/path-nominal-time-01.design.json) explicitly assumes1virtualcell/s and90degrees/s, sequential stop-and-turn, instantaneous rate changes; hand answer and timing code pending.
 
+## 2026-10-30 — Ideal nominal-duration proxy confirms student hand calculation
+
+- Student supplied **X: 12초 / Y: 10초**, no route choice or rationale. [Answer](../data/learning/path-nominal-time-answer-01.json) recorded before AI implementation/checks. Source65416771e93d4085c860ccb000b7a8603e220145 freezes helper/practice07/tests/protocol. Assumed initial down, linear1virtualcell/s, angular90degrees/s; T=L/v+Theta/omega, sequential forward travel/in-place rotation, instantaneous rate changes and no final alignment.
+- [Run](../data/learning/path-nominal-time-run-01.json): twelve focused tests (six new duration/six existing rotation), one CLI computation. X L6/Theta540degrees gives translation6s/rotation6s/nominal12s; Y8/180 gives8s/2s/10s. Python reconstructs geometry and rates, agreeing with prior geometric results, exported fields and student times. Prior source/fixture/evidence hashes match; zero planner/BFS/maps and no old101-suite repetition. AI derives Y lower among the offered paths, not a student choice or global optimum.
+- Nominal model seconds, not actual elapsed runtime/travel measurement, timed trajectory simulation, differential-drive dynamics, tracking control or collision/energy validation. Next [angular180 exercise](../experiments/path-nominal-time-angular-speed-01.design.json) awaits actual student answer before that X/Y condition is edited/run.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

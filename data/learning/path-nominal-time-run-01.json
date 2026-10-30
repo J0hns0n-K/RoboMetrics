@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "executedAtUTC": "2026-10-30T07:53:26.161550+00:00",
+  "sourceCommit": "65416771e93d4085c860ccb000b7a8603e220145",
+  "operator": "AI assistant CLI",
+  "protocol": "experiments/path-nominal-time-01.protocol.json",
+  "fixtures": "experiments/path-turn-score-01.config.json",
+  "geometrySource": "data/learning/path-rotation-run-02.json",
+  "studentAnswer": "data/learning/path-nominal-time-answer-01.json",
+  "tests": {
+    "command": "node --test --test-reporter=tap test/path-rotation.test.mjs test/nominal-path-time.test.mjs",
+    "passed": 12,
+    "failed": 0,
+    "newDurationTests": 6,
+    "existingRotationTestsRerun": 6,
+    "old101SuiteRerun": false,
+    "archive": "data/learning/path-nominal-time-tests-01.tap",
+    "sha256Bytes": "1f8b7628da3cf4bfaf85fff05c1b9ebf8f059912c270cdf67943087d50e0c3ec",
+    "exitCode": 0,
+    "stderr": ""
+  },
+  "configuredRun": {
+    "commandSource": "const {results}=await import('./practice/07-path-time.mjs');process.stderr.write(JSON.stringify(results));",
+    "exitCode": 0,
+    "stdout": "가정한 속도: 1칸/초, 90도/초. 직진과 회전을 순서대로 계산합니다.\n┌─────────┬───────┬─────────────┬──────────────────────┬────────────────────┬─────────────────┬────────────────┐\n│ (index) │ route │ worldLength │ totalRotationDegrees │ translationSeconds │ rotationSeconds │ nominalSeconds │\n├─────────┼───────┼─────────────┼──────────────────────┼────────────────────┼─────────────────┼────────────────┤\n│ 0       │ 'X'   │ 6           │ 540                  │ 6                  │ 6               │ 12             │\n│ 1       │ 'Y'   │ 8           │ 180                  │ 8                  │ 2               │ 10             │\n└─────────┴───────┴─────────────┴──────────────────────┴────────────────────┴─────────────────┴────────────────┘\n",
+    "diagnosticStreamPurpose": "stderr carries exported calculation results, not errors; avoid repeat CLI execution.",
+    "initialHeading": "down",
+    "linearSpeed": 1,
+    "linearSpeedUnits": "virtual cells per second",
+    "angularSpeedDegrees": 90,
+    "angularSpeedUnits": "degrees per second",
+    "results": [
+      {
+        "route": "X",
+        "worldLength": 6,
+        "initialHeading": "down",
+        "initialAlignmentDegrees": 90,
+        "pathRotationDegrees": 450,
+        "totalRotationDegrees": 540,
+        "linearSpeed": 1,
+        "angularSpeedDegrees": 90,
+        "translationSeconds": 6,
+        "rotationSeconds": 6,
+        "nominalSeconds": 12
+      },
+      {
+        "route": "Y",
+        "worldLength": 8,
+        "initialHeading": "down",
+        "initialAlignmentDegrees": 0,
+        "pathRotationDegrees": 180,
+        "totalRotationDegrees": 180,
+        "linearSpeed": 1,
+        "angularSpeedDegrees": 90,
+        "translationSeconds": 8,
+        "rotationSeconds": 2,
+        "nominalSeconds": 10
+      }
+    ],
+    "lowerOfferedNominalTimeRoutesCalculatedByAi": [
+      "Y"
+    ],
+    "measuredElapsedTime": false
+  },
+  "validation": {
+    "independentPythonAudits": [
+      {
+        "route": "X",
+        "worldLength": 6,
+        "initialAlignmentDegrees": 90,
+        "pathRotationDegrees": 450,
+        "totalRotationDegrees": 540,
+        "translationSeconds": 6.0,
+        "rotationSeconds": 6.0,
+        "nominalSeconds": 12.0,
+        "directGeometryAndRateArithmeticMatches": true,
+        "studentTimeAnswerMatches": true
+      },
+      {
+        "route": "Y",
+        "worldLength": 8,
+        "initialAlignmentDegrees": 0,
+        "pathRotationDegrees": 180,
+        "totalRotationDegrees": 180,
+        "translationSeconds": 8.0,
+        "rotationSeconds": 2.0,
+        "nominalSeconds": 10.0,
+        "directGeometryAndRateArithmeticMatches": true,
+        "studentTimeAnswerMatches": true
+      }
+    ],
+    "priorGeometricResultsMatch": true,
+    "studentTimesMatch": true,
+    "sourceFixtureAndAnswerBytesUnchanged": true,
+    "sha256Bytes": {
+      "src/nominal-path-time.mjs": "2037bf50b8f0b4e7eeffd1239b15ed04ae4ccbce6dbab66cc7b9a77328015195",
+      "src/path-rotation.mjs": "e2b388168713b7dc42028e7b9199a782bf45b216fa7487cfa4a076b9c608d84b",
+      "src/path-metrics.mjs": "9813941430e2fa6c8f1096032108d5572e350f6889923ce49c8212b26390af58",
+      "test/nominal-path-time.test.mjs": "d4d2bf7f54f566e90e2d5f88ac5841ce8488767460529f743f9e78f28483402d",
+      "test/path-rotation.test.mjs": "41866fc48ec2b6cf4b1673c8465f9b93acc76356c004f5a8d85233c03d9e2279",
+      "practice/07-path-time.mjs": "c6b49ffcecd357f679fca218d49bc1a32cd4b379209477a0eb2853a5daa99f63",
+      "experiments/path-turn-score-01.config.json": "6959b179884c81e06eed7ac54e416c022616fd0a0957f40c831557fe6ad31237",
+      "experiments/path-nominal-time-01.protocol.json": "fd47af699133b6089d04ce23895af14f9e501e3b80754751fb51e598288fa881",
+      "data/learning/path-nominal-time-answer-01.json": "89e86060e11ab767ef587c27a6eb586314a9bc18a6ed18480561df25fd8fcebd"
+    },
+    "priorAngleEventAndResearchHashesMatch": true,
+    "configuredCliExecutions": 1,
+    "newPlannerCalls": 0,
+    "newBfsCalls": 0,
+    "newIndependentMaps": 0,
+    "angularSpeed180XYConditionExecuted": false
+  },
+  "roles": {
+    "student": "Calculated offered X12/Y10 nominal times only; did not supply a route choice or additional rationale, rate design, code or operation.",
+    "ai": "Paths/geometric totals/assumed rates/model framing, duration code/tests/exercise, execution, independent arithmetic and records; AI derives Y as lower under this model."
+  },
+  "scope": "Ideal arithmetic T=L/v+Theta/omega with sequential forward travel/in-place rotation and instantaneous rate changes. Nominal seconds are not actual elapsed program time, timed simulation or measured travel duration, differential-drive dynamics, calibration, collision feasibility, energy or global-optimality evidence. Existing score/planner semantics unchanged.",
+  "nextTask": "Await student nominal-time recalculation at angularSpeedDegrees180 with other inputs fixed before editing/running that condition."
+}

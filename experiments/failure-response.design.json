@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Verified student starting-heading edit and new AI run in data/learning/path-rotation-run-02.json confirm initial-down X90+450=540degrees/Y0+180=180, fixed paths and right baseline. Next experiments/path-nominal-time-01.design.json asks nominal X/Y times at explicitly AI-assumed1virtualcell/s and90degrees/s, sequential translation/rotation. Student timing answers and timing code pending; not physical data/calibration or dynamic control.",
+  "nextTask": "Student X12/Y10 nominal hand times confirmed by AI proxy/checks in data/learning/path-nominal-time-run-01.json at initial down/linear1virtualcell/s/angular90degrees/s. Next experiments/path-nominal-time-angular-speed-01.design.json asks new X/Y nominal times/comparison at angular180, others fixed. Await answer before editing/running; no student choice inferred or measured/simulated-control claim.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -283,5 +283,8 @@
   "pathRotationInitialHeadingAnswer": "data/learning/path-rotation-initial-heading-answer-01.json",
   "pathRotationStudentEdit": "data/learning/path-rotation-edit-01.json",
   "pathRotationInitialDownRun": "data/learning/path-rotation-run-02.json",
-  "pathNominalTimeDraft": "experiments/path-nominal-time-01.design.json"
+  "pathNominalTimeDraft": "experiments/path-nominal-time-01.design.json",
+  "pathNominalTimeAnswer": "data/learning/path-nominal-time-answer-01.json",
+  "pathNominalTimeRun": "data/learning/path-nominal-time-run-01.json",
+  "pathNominalAngularSpeedDraft": "experiments/path-nominal-time-angular-speed-01.design.json"
 }

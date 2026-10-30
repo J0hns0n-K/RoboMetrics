@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "student-times-recorded-ai-duration-check-pending",
+  "status": "student-times-confirmed-ai-nominal-duration-checked",
   "proposalAuthor": "AI assistant",
   "geometrySource": "data/learning/path-rotation-run-02.json",
   "fixtures": "experiments/path-turn-score-01.config.json",
@@ -32,8 +32,9 @@
     "Y": 10
   },
   "studentRationale": null,
-  "scope": "Student correctly calculated X12/Y10 under supplied ideal rates, with no route choice or rationale supplied. AI authored a nominal-duration helper and exercise; checks pending. No timed simulator/controller, differential-drive dynamics, calibration, physical trial or measured runtime/energy claim.",
+  "scope": "Student calculated X12/Y10 under AI-supplied ideal rates, no choice/rationale supplied. AI implemented/checked a nominal-duration proxy; not timed simulation, measured runtime/travel time, differential-drive dynamics, calibration or collision/control feasibility. Next angular180 hand response pending.",
   "studentAnswerRecord": "data/learning/path-nominal-time-answer-01.json",
   "durationProtocol": "experiments/path-nominal-time-01.protocol.json",
-  "nextTask": "experiments/path-nominal-time-angular-speed-01.design.json"
+  "nextTask": "experiments/path-nominal-time-angular-speed-01.design.json",
+  "durationRun": "data/learning/path-nominal-time-run-01.json"
 }

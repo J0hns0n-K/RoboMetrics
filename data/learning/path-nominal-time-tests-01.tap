@@ -1,0 +1,82 @@
+TAP version 13
+# Subtest: the offered X/Y paths give twelve and ten nominal seconds under the declared rates
+ok 1 - the offered X/Y paths give twelve and ten nominal seconds under the declared rates
+  ---
+  duration_ms: 2.399
+  type: 'test'
+  ...
+# Subtest: translation and rotation add sequentially, including initial alignment
+ok 2 - translation and rotation add sequentially, including initial alignment
+  ---
+  duration_ms: 0.1825
+  type: 'test'
+  ...
+# Subtest: subdividing straight movement preserves world distance and nominal duration
+ok 3 - subdividing straight movement preserves world distance and nominal duration
+  ---
+  duration_ms: 0.1993
+  type: 'test'
+  ...
+# Subtest: changing one rate affects only its duration component
+ok 4 - changing one rate affects only its duration component
+  ---
+  duration_ms: 0.1536
+  type: 'test'
+  ...
+# Subtest: a singleton is stationary; missing and nonpositive or nonfinite speeds are rejected
+ok 5 - a singleton is stationary; missing and nonpositive or nonfinite speeds are rejected
+  ---
+  duration_ms: 0.5215
+  type: 'test'
+  ...
+# Subtest: invalid paths or headings and overflowing distances or duration are rejected
+ok 6 - invalid paths or headings and overflowing distances or duration are rejected
+  ---
+  duration_ms: 0.237
+  type: 'test'
+  ...
+# Subtest: the offered right-to-down and right-to-left cases need ninety and one-eighty degrees
+ok 7 - the offered right-to-down and right-to-left cases need ninety and one-eighty degrees
+  ---
+  duration_ms: 1.4696
+  type: 'test'
+  ...
+# Subtest: all cardinal pairs use unsigned shortest angles, including wraparound
+ok 8 - all cardinal pairs use unsigned shortest angles, including wraparound
+  ---
+  duration_ms: 0.1734
+  type: 'test'
+  ...
+# Subtest: initial alignment is separate from internal path turns and stationary paths add none
+ok 9 - initial alignment is separate from internal path turns and stationary paths add none
+  ---
+  duration_ms: 0.7958
+  type: 'test'
+  ...
+# Subtest: a reversal is one existing change event but requires one-eighty in the forward-heading model
+ok 10 - a reversal is one existing change event but requires one-eighty in the forward-heading model
+  ---
+  duration_ms: 0.1372
+  type: 'test'
+  ...
+# Subtest: straight-segment subdivision preserves angle totals, which are not net heading differences
+ok 11 - straight-segment subdivision preserves angle totals, which are not net heading differences
+  ---
+  duration_ms: 0.1479
+  type: 'test'
+  ...
+# Subtest: missing or unsupported headings and invalid paths are rejected
+ok 12 - missing or unsupported headings and invalid paths are rejected
+  ---
+  duration_ms: 0.4631
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 152.0552
