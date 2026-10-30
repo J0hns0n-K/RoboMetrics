@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "awaiting-student-sequence-before-evaluation",
+  "proposalAuthor": "AI assistant",
+  "priorInput": "data/learning/linear-accel-route-design-01.json",
+  "priorResult": "data/learning/linear-accel-route-run-01.json",
+  "question": "In the same obstacle-free schematic plane, use exactly three right and three down unit moves, retaining start (0,0), goal (3,3), six-move length and all previous motion limits. Design a new sequence with exactly one internal direction change. Send six arrows. Initial heading remains down; initial alignment is separate from internal changes.",
+  "studentSequenceVerbatim": null,
+  "studentNumericForecast": null,
+  "scope": "Pending constrained student route design, not an evaluated route, planner improvement, physical trial or global optimum."
+}

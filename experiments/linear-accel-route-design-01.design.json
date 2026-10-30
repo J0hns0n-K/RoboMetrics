@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "awaiting-student-route-sequence-before-evaluation",
+  "status": "student-sequence-recorded-and-ai-model-check-complete",
   "proposalAuthor": "AI assistant",
   "motivation": "data/learning/linear-accel-path-interpretation-01.json",
   "question": "Redesign X in an obstacle-free schematic plane, retaining start (0,0), goal (3,3), and six unit moves. Rearrange exactly three right and three down moves to reduce required stops under turns-only. Send the six arrows; the student route has not yet been supplied or evaluated.",
@@ -18,11 +18,15 @@
     "sameEndpoints": true,
     "obstacles": "none; schematic route only"
   },
-  "studentSequenceVerbatim": null,
+  "studentSequenceVerbatim": "`→`  `↓` `↓` `→` `↓` `→`   ",
   "plannedChecks": [
     "Validate six unit moves, three right and three down, and identical endpoints before timing.",
     "Freeze student input and a new protocol/source revision before a new configured run.",
     "Compare required stops, rotation and model time against the immutable X baseline; preserve all previous raw artifacts."
   ],
-  "scope": "Future controlled path-shape comparison under fixed analytic limits. Not a completed redesign, planner change, body-validity test, hardware run or global fastest-path proof."
+  "scope": "Completed AI-operated analytic check of student schematic route design at fixed endpoints/length/limits; not planner/body/hardware/global-optimality evidence. Student did not provide a numeric forecast.",
+  "studentInput": "data/learning/linear-accel-route-design-01.json",
+  "runRecord": "data/learning/linear-accel-route-run-01.json",
+  "sourceCommit": "108261e3c363ca2af1cfd7f172d4fc8fd1de14c5",
+  "nextTask": "experiments/linear-accel-route-design-02.design.json"
 }

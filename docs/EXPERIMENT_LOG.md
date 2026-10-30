@@ -839,6 +839,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - [Exact student explanation](../data/learning/linear-accel-path-interpretation-01.json) attributes X's unchanged time to repeated direction changes preventing the benefit of straight continuation. Guided post-result reasoning, consistent with the declared rest-before-turn assumption; not a new forecast, timing derivation or physical measurement. AI clarifies the fixed speed cap and retains the existing [source-bound run](../data/learning/linear-accel-path-run-01.json) unchanged.
 - Documentation only; no new model/test/planner/hardware execution. Next [student design](../experiments/linear-accel-route-design-01.design.json) rearranges exactly three right and three down moves in an obstacle-free schematic plane at fixed endpoints, length and model limits. No student route or new result yet.
 
+## 2026-10-30 — Student route shape changes at fixed endpoints and length
+
+- [Student arrows](../data/learning/linear-accel-route-design-01.json): right/down/down/right/down/right. AI transcribed coordinates and froze [config](../experiments/linear-accel-route-01.config.json), [protocol](../experiments/linear-accel-route-01.protocol.json) and wrapper at source108261e3c363ca2af1cfd7f172d4fc8fd1de14c5 before running. Same schematic endpoints0,0to3,3, length6, initial down, turns-only, v1/a1/angular180 virtual units; no obstacles. No student numeric forecast supplied.
+- [New raw check](../data/learning/linear-accel-route-run-01.json) and [TAP](../data/learning/linear-accel-route-tests-01.tap): twelve existing model tests pass; two configured evaluations. Intermediate stops5to4, translation12to11s, rotation3to2.5s, total15to13.5modelseconds. Independent Python arrow/coordinate/unit-length/endpoints/run/angle/duration/profile-cap/rest/integral checks agree. Baseline result and all recorded source/input/historical hashes unchanged.
+- Prior full141-test evidence retained, not rerun. No planner/BFS/new independent maps/hardware; model seconds not measured travel/runtime/energy. Student owns sequence design, AI owns wrapper/operation/audit. No optimum claim. Next [one-internal-change route task](../experiments/linear-accel-route-design-02.design.json) pending.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
