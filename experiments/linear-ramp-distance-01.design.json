@@ -18,7 +18,7 @@
   "formulaHint": "For this linear-speed ramp only: averageSpeed=(initialSpeed+finalSpeed)/2; distance=averageSpeed*duration.",
   "studentDistance": 1,
   "studentRationale": null,
-  "scope": "Student first answer1 preserved; AI worked example gives0.5 from the declared1s linear ramp. No student correction/rationale inferred. Next guided2s transfer calculation pending; acceleration code, timed simulation, controller and physical tests not implemented.",
+  "scope": "Original first distance1 and AI worked-example0.5 preserved; child2s partial answer and guided qualitative explanation recorded separately, no new student numeric correction inferred. AI standalone analytic ramp reference checked, but full-path acceleration/control/physical validation not implemented.",
   "studentFirstAttemptRecord": "data/learning/linear-ramp-distance-attempt-01.json",
   "studentCorrectionReceived": false,
   "nextTask": "experiments/linear-ramp-duration-01.design.json"

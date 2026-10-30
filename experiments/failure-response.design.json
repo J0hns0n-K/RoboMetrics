@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student2s ramp answer average1/distance1 preserved in data/learning/linear-ramp-duration-attempt-01.json: distance correct, average should0.5 under declared model. AI supplies terminal-versus-average diagram and distance/time review. Ask one-sentence student explanation why the whole-interval mean is below terminal speed; do not infer a correction or cause not stated. No production acceleration code, CLI/planner/test run or physical data.",
+  "nextTask": "Student qualitative low-start-speed explanation recorded, prior numerical attempts unchanged. AI analytic1D reference and six tests checked in data/learning/linear-speed-ramp-run-01.json. Next experiments/stop-turn-policy-choice-01.design.json asks whether the virtual model stops at every supplied interior waypoint or only at direction changes, with start/goal at rest. Await actual choice/reason before composing finite-acceleration path timing; no path-wide acceleration code or physical validation yet.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -293,5 +293,8 @@
   "linearRampDistanceDraft": "experiments/linear-ramp-distance-01.design.json",
   "linearRampFirstAttempt": "data/learning/linear-ramp-distance-attempt-01.json",
   "linearRampDurationDraft": "experiments/linear-ramp-duration-01.design.json",
-  "linearRampDurationFirstAttempt": "data/learning/linear-ramp-duration-attempt-01.json"
+  "linearRampDurationFirstAttempt": "data/learning/linear-ramp-duration-attempt-01.json",
+  "linearRampMeanExplanation": "data/learning/linear-ramp-mean-explanation-01.json",
+  "linearSpeedRampRun": "data/learning/linear-speed-ramp-run-01.json",
+  "stopTurnPolicyChoiceDraft": "experiments/stop-turn-policy-choice-01.design.json"
 }

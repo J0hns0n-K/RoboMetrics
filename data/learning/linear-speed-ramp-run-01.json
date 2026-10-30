@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "executedAtUTC": "2026-10-30T10:15:56.947173+00:00",
+  "sourceCommit": "56a4e0b361d1e2c233ce7660421e4a45a35670ae",
+  "operator": "AI assistant CLI",
+  "protocol": "experiments/linear-speed-ramp-01.protocol.json",
+  "fixtures": "experiments/linear-speed-ramp-01.config.json",
+  "studentExplanation": "data/learning/linear-ramp-mean-explanation-01.json",
+  "priorAttempts": [
+    "data/learning/linear-ramp-distance-attempt-01.json",
+    "data/learning/linear-ramp-duration-attempt-01.json"
+  ],
+  "tests": {
+    "command": "node --test --test-reporter=tap test/linear-speed-ramp.test.mjs",
+    "passed": 6,
+    "failed": 0,
+    "newRampTests": 6,
+    "oldSuitesRerun": false,
+    "archive": "data/learning/linear-speed-ramp-tests-01.tap",
+    "sha256Bytes": "28c5f9d13176a5b8acead28747155d3fbca0d720820e86da5d41831024b11ca7",
+    "exitCode": 0,
+    "stderr": ""
+  },
+  "configuredRun": {
+    "commandSource": "const {results}=await import('./practice/08-linear-ramp.mjs');process.stderr.write(JSON.stringify(results));",
+    "exitCode": 0,
+    "stdout": "가상 1차원 속도 변화의 해석적 계산입니다. 시간: 초, 속도: 칸/초, 변위: 칸.\n┌─────────┬───────────┬────────────────┬──────────────┬──────────────────────┬──────────────┐\n│ (index) │ profile   │ elapsedSeconds │ currentSpeed │ fullRampAverageSpeed │ displacement │\n├─────────┼───────────┼────────────────┼──────────────┼──────────────────────┼──────────────┤\n│ 0       │ 'ramp-1s' │ 0              │ 0            │ 0.5                  │ 0            │\n│ 1       │ 'ramp-1s' │ 0.5            │ 0.5          │ 0.5                  │ 0.125        │\n│ 2       │ 'ramp-1s' │ 1              │ 1            │ 0.5                  │ 0.5          │\n│ 3       │ 'ramp-2s' │ 0              │ 0            │ 0.5                  │ 0            │\n│ 4       │ 'ramp-2s' │ 1              │ 0.5          │ 0.5                  │ 0.25         │\n│ 5       │ 'ramp-2s' │ 2              │ 1            │ 0.5                  │ 1            │\n└─────────┴───────────┴────────────────┴──────────────┴──────────────────────┴──────────────┘\n",
+    "diagnosticStreamPurpose": "stderr contains exported analytic states, not errors; no duplicate CLI run.",
+    "results": [
+      {
+        "id": "ramp-1s",
+        "input": {
+          "id": "ramp-1s",
+          "initialSpeed": 0,
+          "finalSpeed": 1,
+          "duration": 1
+        },
+        "samples": [
+          {
+            "initialSpeed": 0,
+            "finalSpeed": 1,
+            "duration": 1,
+            "elapsed": 0,
+            "acceleration": 1,
+            "fullRampAverageSpeed": 0.5,
+            "fullRampDistance": 0.5,
+            "currentSpeed": 0,
+            "displacement": 0
+          },
+          {
+            "initialSpeed": 0,
+            "finalSpeed": 1,
+            "duration": 1,
+            "elapsed": 0.5,
+            "acceleration": 1,
+            "fullRampAverageSpeed": 0.5,
+            "fullRampDistance": 0.5,
+            "currentSpeed": 0.5,
+            "displacement": 0.125
+          },
+          {
+            "initialSpeed": 0,
+            "finalSpeed": 1,
+            "duration": 1,
+            "elapsed": 1,
+            "acceleration": 1,
+            "fullRampAverageSpeed": 0.5,
+            "fullRampDistance": 0.5,
+            "currentSpeed": 1,
+            "displacement": 0.5
+          }
+        ]
+      },
+      {
+        "id": "ramp-2s",
+        "input": {
+          "id": "ramp-2s",
+          "initialSpeed": 0,
+          "finalSpeed": 1,
+          "duration": 2
+        },
+        "samples": [
+          {
+            "initialSpeed": 0,
+            "finalSpeed": 1,
+            "duration": 2,
+            "elapsed": 0,
+            "acceleration": 0.5,
+            "fullRampAverageSpeed": 0.5,
+            "fullRampDistance": 1,
+            "currentSpeed": 0,
+            "displacement": 0
+          },
+          {
+            "initialSpeed": 0,
+            "finalSpeed": 1,
+            "duration": 2,
+            "elapsed": 1,
+            "acceleration": 0.5,
+            "fullRampAverageSpeed": 0.5,
+            "fullRampDistance": 1,
+            "currentSpeed": 0.5,
+            "displacement": 0.25
+          },
+          {
+            "initialSpeed": 0,
+            "finalSpeed": 1,
+            "duration": 2,
+            "elapsed": 2,
+            "acceleration": 0.5,
+            "fullRampAverageSpeed": 0.5,
+            "fullRampDistance": 1,
+            "currentSpeed": 1,
+            "displacement": 1
+          }
+        ]
+      }
+    ],
+    "units": {
+      "speed": "virtual cells per second",
+      "time": "seconds",
+      "displacement": "virtual cells",
+      "acceleration": "virtual cells per second squared"
+    },
+    "timedSimulationExecuted": false,
+    "measuredMotion": false
+  },
+  "validation": {
+    "independentPythonAudits": [
+      {
+        "profile": "ramp-1s",
+        "duration": 1,
+        "acceleration": 1.0,
+        "fullRampAverageSpeed": 0.5,
+        "fullRampDistance": 0.5,
+        "directKinematicStateChecksMatch": true,
+        "independentVelocityIntegral": 0.5,
+        "integrationPanels": 64,
+        "constantFinalSpeedComparisonDistance": 1,
+        "comparisonScope": "Same duration at terminal speed throughout is a different prescribed speed profile, not a measured robot comparison."
+      },
+      {
+        "profile": "ramp-2s",
+        "duration": 2,
+        "acceleration": 0.5,
+        "fullRampAverageSpeed": 0.5,
+        "fullRampDistance": 1.0,
+        "directKinematicStateChecksMatch": true,
+        "independentVelocityIntegral": 1.0,
+        "integrationPanels": 64,
+        "constantFinalSpeedComparisonDistance": 2,
+        "comparisonScope": "Same duration at terminal speed throughout is a different prescribed speed profile, not a measured robot comparison."
+      }
+    ],
+    "sourceFixtureAndPriorAttemptBytesUnchanged": true,
+    "sha256Bytes": {
+      "src/linear-speed-ramp.mjs": "ae39ded0fa31c17bb5580539436a595ee8b02940b34c6984d0bc73171e248d9d",
+      "test/linear-speed-ramp.test.mjs": "50df92c581296b858b3322121711b11492dab0e4bda74b0107c8933bd9d21cd7",
+      "practice/08-linear-ramp.mjs": "1ebbe801f97990b0444687c77f00583ef4517d70cddae08bd19200088ac71892",
+      "experiments/linear-speed-ramp-01.config.json": "ac4b7844b79d03dbdc72804f7dfc39393e5205a42fb3b112aba43a65bf010260",
+      "experiments/linear-speed-ramp-01.protocol.json": "8c2eb59281da8fe000e34c8f0669c73c1a28528a0d192da55d87fff790e33a22",
+      "data/learning/linear-ramp-mean-explanation-01.json": "a89bfe699f868b2f24be519d77e9dfa897fef8e0b2538f728089329f3698b4b1",
+      "data/learning/linear-ramp-distance-attempt-01.json": "528dc1f9b41a38e889dd62c668be6124c7b47a28436f66de1218f03bbab2b251",
+      "data/learning/linear-ramp-duration-attempt-01.json": "43a0547a9840b3d2981d5190098b7061b250d3fc70e485d3479d36d0c34767be"
+    },
+    "priorNominalArtifact": "data/learning/path-nominal-time-run-02.json",
+    "priorNominalArtifactSha256Bytes": "477413c7bf9c26e7c94762ff9d56819f3b7a33b291c194bc7d1961c841c1920c",
+    "priorConstantRateCodeAndEvidenceHashesMatch": true,
+    "configuredCliExecutions": 1,
+    "configuredAnalyticStateSamples": 6,
+    "knownControlProfiles": 2,
+    "newPlannerCalls": 0,
+    "newBfsCalls": 0,
+    "newIndependentMaps": 0
+  },
+  "roles": {
+    "student": "Explained qualitatively, after correction and diagram, that the low starting speed lowers the interval average in the given increasing profile. Earlier numerical attempts remain unchanged; no new numeric correction supplied.",
+    "ai": "Framing/worked examples/visual, analytic module, known control profiles, tests/CLI, execution, independent kinematic/integral checks and documentation."
+  },
+  "scope": "Standalone analytic forward1D linear-speed reference, not path-wide finite-acceleration timing, a real-time numerical simulator, differential-drive controller, calibration, collision/hardware validation or student-authored code. Known worked-example controls, not blind research predictions or new independent samples. Existing X/Y instantaneous nominal-time results remain unchanged.",
+  "nextTask": "experiments/stop-turn-policy-choice-01.design.json"
+}

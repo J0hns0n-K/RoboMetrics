@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "guided-qualitative-explanation-recorded-ai-ramp-check-pending",
+  "status": "guided-explanation-recorded-ai-analytic-reference-checked",
   "proposalAuthor": "AI assistant",
   "parentTask": "experiments/linear-ramp-distance-01.design.json",
   "priorWorkedExample": "data/learning/linear-ramp-distance-attempt-01.json",
@@ -19,7 +19,7 @@
   "studentAverageSpeed": 1,
   "studentDistance": 1,
   "studentRationale": null,
-  "scope": "Original reported average1/distance1 preserved: only distance correct under the declared2s profile. After AI correction/visual, student gave a qualitative explanation referring to the low start speed; no new numeric average correction. AI analytic 1D reference code/check pending, not student code or physical validation.",
+  "scope": "Original mean1/distance1 partial answer preserved; guided qualitative explanation recorded separately, no numeric correction inferred. AI standalone analytic1D reference/check completed. No student code or physical validation; composing path-wide acceleration time awaits stop-rule choice.",
   "studentFirstAttemptRecord": "data/learning/linear-ramp-duration-attempt-01.json",
   "assessmentByAi": {
     "averageSpeedCorrect": false,
@@ -30,5 +30,6 @@
   "studentExplanationVerbatim": "처음 시작이 0이었으니까 당연한 거 아니야",
   "studentExplanationRecord": "data/learning/linear-ramp-mean-explanation-01.json",
   "analyticReferenceProtocol": "experiments/linear-speed-ramp-01.protocol.json",
-  "nextTask": "experiments/stop-turn-policy-choice-01.design.json"
+  "nextTask": "experiments/stop-turn-policy-choice-01.design.json",
+  "analyticReferenceRun": "data/learning/linear-speed-ramp-run-01.json"
 }

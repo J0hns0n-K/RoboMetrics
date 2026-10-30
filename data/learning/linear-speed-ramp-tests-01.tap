@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: the taught one- and two-second profiles share mean speed but differ in distance and acceleration
+ok 1 - the taught one- and two-second profiles share mean speed but differ in distance and acceleration
+  ---
+  duration_ms: 0.9508
+  type: 'test'
+  ...
+# Subtest: instantaneous speed, full-interval mean and partial displacement are separate
+ok 2 - instantaneous speed, full-interval mean and partial displacement are separate
+  ---
+  duration_ms: 0.7716
+  type: 'test'
+  ...
+# Subtest: constant, stationary and decelerating nonnegative profiles remain supported
+ok 3 - constant, stationary and decelerating nonnegative profiles remain supported
+  ---
+  duration_ms: 0.2602
+  type: 'test'
+  ...
+# Subtest: sampled velocity integrals and independent constant-acceleration displacement agree
+ok 4 - sampled velocity integrals and independent constant-acceleration displacement agree
+  ---
+  duration_ms: 0.2533
+  type: 'test'
+  ...
+# Subtest: invalid endpoint speeds, durations and out-of-range sample times are rejected
+ok 5 - invalid endpoint speeds, durations and out-of-range sample times are rejected
+  ---
+  duration_ms: 0.4312
+  type: 'test'
+  ...
+# Subtest: finite large means avoid addition overflow, but unrepresentable state is rejected
+ok 6 - finite large means avoid addition overflow, but unrepresentable state is rejected
+  ---
+  duration_ms: 0.1294
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 134.1104

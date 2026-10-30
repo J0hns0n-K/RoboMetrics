@@ -821,6 +821,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - [New run/paired comparison](../data/learning/path-nominal-time-run-02.json): same X/Y geometry, initial down, linear1virtualcell/s and ideal sequential-rate model. Xtranslation6s/rotation3s/nominal9s, Y8s/1s/9s; direct Python geometry/rate arithmetic and student tie agree. Original angular90 bytes unchanged. Translation stays fixed; only rotation duration halves. Module/fixture/test and prior twelve-test TAP hashes match; no unit-test repeat for parameter-only change. One CLI calculation, zero planner/BFS/new maps.
 - No measured elapsed/travel time, physical actuation/calibration, timed controller/dynamics/collision or global-optimality result. Next [linear-ramp distance task](../experiments/linear-ramp-distance-01.design.json) examines the instantaneous-speed assumption with an explicit0-to1virtualcell/s over1s profile; student answer and acceleration code pending.
 
+## 2026-10-30 — Analytic1D speed ramp follows guided mean-speed explanation
+
+- Student [qualitative response](../data/learning/linear-ramp-mean-explanation-01.json) after AI correction/diagram refers to the low start speed in the declared monotonic profile. Preserve earlier distance/mean attempts; no new student numeric correction or code inferred. AI source56a4e0b361d1e2c233ce7660421e4a45a35670ae freezes reference module, fixtures, practice08 and protocol before checks.
+- [Run](../data/learning/linear-speed-ramp-run-01.json): six new passing tests; older suites not repeated. Known0-to1virtualcell/s profiles T1/T2 give full mean0.5, distances0.5/1 and accelerations1/0.5virtualcell/s^2. One CLI evaluation records six analytic states; Python position equations and64-panel trapezoidal velocity integration agree. Test controls also cover partial displacement, constant/decelerating/stationary motion, bounds and overflow. Prior nominal-code/research/attempt hashes unchanged; zero planner/BFS/maps.
+- Standalone analytic forward1D reference, not timed numerical simulation, physical motor calibration, controller, collision validation or full-path finite-acceleration timing. Existing X/Y9s/9s artifact/code unchanged. Next [student stop-rule choice](../experiments/stop-turn-policy-choice-01.design.json) pending before path composition.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
