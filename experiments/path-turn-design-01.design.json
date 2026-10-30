@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "awaiting-student-sequence",
+  "proposalAuthor": "AI assistant",
+  "parent": "experiments/path-turn-count-01.design.json",
+  "task": "Design a schematic sequence of six arrows containing exactly three right and three down moves, with exactly two heading changes. Initial alignment excluded.",
+  "start": [0, 0],
+  "goal": [3, 3],
+  "totalMoves": 6,
+  "requiredHeadingChanges": 2,
+  "studentSequenceVerbatim": null,
+  "studentRationale": null,
+  "plannedCheck": "Record the student's literal sequence before checking it. Then compare move counts, endpoint and heading-change count using the new metric and direct arithmetic; preserve an incorrect attempt rather than silently replacing it.",
+  "scope": "Schematic path-design exercise, not a path claimed feasible on the current obstacle/body model, a new map sample, motion planning objective or measured robotic trajectory."
+}

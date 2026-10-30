@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: same six-step displacement can have one or five direction changes
+ok 1 - same six-step displacement can have one or five direction changes
+  ---
+  duration_ms: 0.5387
+  type: 'test'
+  ...
+# Subtest: a stationary singleton or straight path has no heading change; initial heading is excluded
+ok 2 - a stationary singleton or straight path has no heading change; initial heading is excluded
+  ---
+  duration_ms: 0.0844
+  type: 'test'
+  ...
+# Subtest: subdividing a straight segment into half-steps does not add changes
+ok 3 - subdividing a straight segment into half-steps does not add changes
+  ---
+  duration_ms: 0.5621
+  type: 'test'
+  ...
+# Subtest: a reversal is one change event rather than a ninety-degree rotation count
+ok 4 - a reversal is one change event rather than a ninety-degree rotation count
+  ---
+  duration_ms: 0.091
+  type: 'test'
+  ...
+# Subtest: missing, empty, malformed, diagonal, repeated or overflowing segments are rejected
+ok 5 - missing, empty, malformed, diagonal, repeated or overflowing segments are rejected
+  ---
+  duration_ms: 0.3105
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 105.9221

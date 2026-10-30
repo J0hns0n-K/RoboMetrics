@@ -773,6 +773,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - One known archived trial10, two goal inputs, same body/always-fine/FIFO/budget200. User reports are not independent process capture; wording/code remain AI-authored. No new AI planner/test execution, independent map, algorithm or physical result.
 - Feature checkpoint complete for the two known cases. Next [schematic turn-count task](../experiments/path-turn-count-01.design.json) asks counts before any new metric implementation. Initial orientation alignment excluded; no duration/energy/kinematic claim.
 
+## 2026-10-30 — Direction-change descriptor added after correct hand counts
+
+- Student answered **A: 1번 / B: 5번** on AI-supplied schematic six-step sequences, initial alignment excluded. [Answer](../data/learning/path-turn-count-answer-01.json) recorded before code. AI implemented descriptor/tests/CLI column; search priorities/body/budgets unchanged. Source2f4f3cc2999d9795323f7dc471a42b00bd64c62b and protocol committed before functional checks.
+- [Run](../data/learning/path-direction-metric-run-01.json) archives five new passing tests and two known-input controls: archived trial10/start1,3/body0.4+0.15/always-fine/FIFO/budget200, goal6,1 world8/31examined/6changes; invalid8,4 null/0/null with warning. Saved valid input and in-memory invalid goal/URL substitutions, no tracked input change. Exported path recorded on diagnostic stream without duplicate search; Python vector recount and world-length sum agree. Prior full path unavailable, so no historical full-path equality claim; numeric references and old core/body/raw hashes agree.
+- Two CLI evaluations/one planner call31expansions/zero extra BFS/new maps; old101 suite not repeated. Direction changes are geometric events, not measured turn duration/energy, yaw-aware planning or physical feasibility. Next [student sequence design](../experiments/path-turn-design-01.design.json) remains pending.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

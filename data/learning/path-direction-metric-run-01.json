@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "executedAtUTC": "2026-10-30T02:35:12.229624+00:00",
+  "sourceCommit": "2f4f3cc2999d9795323f7dc471a42b00bd64c62b",
+  "operator": "AI assistant CLI",
+  "protocol": "experiments/path-direction-metric-01.protocol.json",
+  "studentAnswer": "data/learning/path-turn-count-answer-01.json",
+  "tests": {
+    "command": "node --test --test-reporter=tap test/path-metrics.test.mjs",
+    "passed": 5,
+    "failed": 0,
+    "exitCode": 0,
+    "archive": "data/learning/path-direction-tests-01.tap",
+    "sha256Bytes": "8bb9078fc4f4378debd597a4f76ba59126932211fca8be0e7c4969eff25be0e9",
+    "stderr": "",
+    "old101SuiteRerun": false
+  },
+  "cases": [
+    {
+      "case": "valid-saved-input",
+      "goal": [
+        6,
+        1
+      ],
+      "moduleMethod": "Committed practice module",
+      "stdout": "도착점만 바꾸는 안내된 연습입니다. 원래 실험 자료는 수정하거나 덮어쓰지 않습니다.\n┌─────────┬───────┬───────────────┬─────────────┬──────────┬──────────────────┐\n│ (index) │ goal  │ result        │ worldLength │ examined │ directionChanges │\n├─────────┼───────┼───────────────┼─────────────┼──────────┼──────────────────┤\n│ 0       │ '6,1' │ 'ROUTE_FOUND' │ 8           │ 31       │ 6                │\n└─────────┴───────┴───────────────┴─────────────┴──────────┴──────────────────┘\n",
+      "exportedResult": {
+        "status": "ROUTE_FOUND",
+        "worldPath": [
+          [
+            1.5,
+            3.5
+          ],
+          [
+            1.5,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2.5,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3.5,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4.5,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            3.5
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            2.5
+          ],
+          [
+            5.5,
+            2.5
+          ],
+          [
+            5.5,
+            2
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6.5,
+            2
+          ],
+          [
+            6.5,
+            1.5
+          ]
+        ],
+        "geometricLength": 8,
+        "expanded": 31,
+        "plannerCalls": 1
+      },
+      "directionChangesInTable": 6,
+      "independentPythonHeadingRecount": 6,
+      "independentWorldLengthSum": 8.0,
+      "priorNumericReference": "data/learning/endpoint-student-choice-run-02.json",
+      "priorNumericFieldsMatch": true
+    },
+    {
+      "case": "invalid-goal-in-memory",
+      "goal": [
+        8,
+        4
+      ],
+      "moduleMethod": "In-memory goal-only variant with resolved original URLs; tracked file untouched",
+      "stdout": "도착점만 바꾸는 안내된 연습입니다. 원래 실험 자료는 수정하거나 덮어쓰지 않습니다.\n┌─────────┬───────┬──────────────────────────────┬─────────────┬──────────┬──────────────────┐\n│ (index) │ goal  │ result                       │ worldLength │ examined │ directionChanges │\n├─────────┼───────┼──────────────────────────────┼─────────────┼──────────┼──────────────────┤\n│ 0       │ '8,4' │ 'INVALID_ENDPOINT_CLEARANCE' │ null        │ 0        │ null             │\n└─────────┴───────┴──────────────────────────────┴─────────────┴──────────┴──────────────────┘\n로봇 몸체와 여유폭을 확보할 공간이 부족하니, 벽과 지도 경계에서 더 떨어진 위치를 선택하세요.\n",
+      "exportedResult": {
+        "status": "INVALID_ENDPOINT_CLEARANCE",
+        "worldPath": [],
+        "geometricLength": null,
+        "expanded": 0,
+        "plannerCalls": 0
+      },
+      "directionChangesInTable": null,
+      "independentPythonHeadingRecount": null,
+      "independentWorldLengthSum": null,
+      "priorNumericReference": "data/learning/endpoint-student-choice-run-01.json",
+      "priorNumericFieldsMatch": true
+    }
+  ],
+  "invalidControlSubstitutions": [
+    [
+      "const goal = [6, 1];",
+      "const goal = [8, 4];"
+    ],
+    [
+      "'../src/core.mjs'",
+      "\"file:///C:/Users/User/Documents/ChatGPT/Robometrics/src/core.mjs\""
+    ],
+    [
+      "'../src/resolution-policy.mjs'",
+      "\"file:///C:/Users/User/Documents/ChatGPT/Robometrics/src/resolution-policy.mjs\""
+    ],
+    [
+      "'../src/path-metrics.mjs'",
+      "\"file:///C:/Users/User/Documents/ChatGPT/Robometrics/src/path-metrics.mjs\""
+    ],
+    [
+      "new URL('../data/footprint/resolution-quality-prospective-run-01.json', import.meta.url)",
+      "new URL(\"file:///C:/Users/User/Documents/ChatGPT/Robometrics/data/footprint/resolution-quality-prospective-run-01.json\")"
+    ],
+    [
+      "new URL('../experiments/disk-model-clearance015-01.config.json', import.meta.url)",
+      "new URL(\"file:///C:/Users/User/Documents/ChatGPT/Robometrics/experiments/disk-model-clearance015-01.config.json\")"
+    ]
+  ],
+  "validation": {
+    "sha256Bytes": {
+      "src/path-metrics.mjs": "9813941430e2fa6c8f1096032108d5572e350f6889923ce49c8212b26390af58",
+      "test/path-metrics.test.mjs": "4fc2a9e44b3d16d4525af61d6c11d2408e3f146ea59406d165c6a5f5ea724256",
+      "practice/04-goal-placement.mjs": "79bbf929e461b0591f0e966a3e240094346e291b2afb93702c0196ee64d71478",
+      "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+      "src/disk-footprint.mjs": "d65440878eea0718b28c61357948e3e56e48227213a5ea2c732961cd156853e8",
+      "src/resolution-policy.mjs": "dc071ca5af42d67d5de1143c0166526ec1affe85f8cf064594aa2e190c139293",
+      "data/footprint/resolution-quality-prospective-run-01.json": "839d229c4c12c0fbda9fb7eeb3645ca348827232a6c447041029332f76a2d9fc",
+      "experiments/disk-model-clearance015-01.config.json": "05eb114289bcc542081674dd9aa70a5cc9a362513d57d8e7b8e94f74dc8bf658",
+      "experiments/path-direction-metric-01.protocol.json": "5c31a30131590cde6c543e88f85b9c14ad8f308c6e078523ec16a36f5c219477"
+    },
+    "sourceAndResearchArtifactBytesUnchanged": true,
+    "coreAndBodySourceHashesMatchPriorValidation": true,
+    "directHeadingRecountsMatch": true,
+    "worldLengthSumsMatch": true,
+    "failureDescriptorNull": true,
+    "knownClearanceMessageBehaviorPreserved": true,
+    "historicalFullPathEqualityChecked": false,
+    "historicalFullPathNote": "Prior practice numeric record did not archive its full path. Compare unchanged source/input and prior numeric fields, and record/recount the current returned path instead.",
+    "newCliEvaluations": 2,
+    "newPlannerCalls": 1,
+    "newExpanded": 31,
+    "additionalBfsCalls": 0,
+    "newIndependentMaps": 0
+  },
+  "roles": {
+    "student": "Counted schematic A1/B5; did not implement metric or operate these checks.",
+    "ai": "Metric code, CLI integration, tests, configured execution, recording and independent vector recount."
+  },
+  "scope": "Direction-change descriptor on axis-aligned world paths, not optimization, initial-heading alignment, a rotation-duration model, measured energy or physical validation. Same known map and two goal controls, no new research cohort.",
+  "nextTask": "Student designs a six-step sequence with three right and three down moves and exactly two heading changes; response pending."
+}

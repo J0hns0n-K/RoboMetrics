@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "student-counts-recorded-automatic-metric-pending",
+  "status": "student-counts-recorded-ai-metric-checked",
   "proposalAuthor": "AI assistant",
   "question": "Introduce direction changes as a separate path descriptor alongside length before any future motion/control model.",
   "exampleType": "Schematic movement sequences, not paths claimed valid on the current obstacle map or physical robot trajectories.",
@@ -38,7 +38,9 @@
     "B": 5
   },
   "studentRationale": null,
-  "nextTask": "AI implements the direction-change descriptor and relevant checks, keeping search/body/budgets unchanged. Student supplied counts only, no code or reason.",
-  "scope": "AI-framed hand-count exercise introducing a future geometric descriptor. Not a new search algorithm, shortest-time optimization, tested kinematics or physical performance result.",
-  "studentAnswerRecord": "data/learning/path-turn-count-answer-01.json"
+  "nextTask": "experiments/path-turn-design-01.design.json",
+  "scope": "Student correctly hand-counted A1/B5 under AI definition. AI then implemented and checked a separate path descriptor; student did not implement it. No new search objective, measured duration/energy or physical claim. Next schematic sequence design pending.",
+  "studentAnswerRecord": "data/learning/path-turn-count-answer-01.json",
+  "metricProtocol": "experiments/path-direction-metric-01.protocol.json",
+  "metricRun": "data/learning/path-direction-metric-run-01.json"
 }

@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Known-case message checkpoint completed: invalid8,4 warning appearance and valid6,1 warning absence are guided user reports, with restored goal edit verified. Next experiments/path-turn-count-01.design.json introduces direction-change counting on schematic A/B sequences before any metric code or motion model. Student counts pending; no new AI planner/test execution.",
+  "nextTask": "Student counted A1/B5; AI metric and five new tests/known-input checks recorded in data/learning/path-direction-metric-run-01.json. Next experiments/path-turn-design-01.design.json asks student to create six moves (three right/three down) with exactly two heading changes. Initial alignment excluded; preserve literal response before checking. No student sequence yet or motion/energy claim.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -261,5 +261,8 @@
   "endpointFeedbackValidation": "data/learning/endpoint-feedback-validation-01.json",
   "endpointFeedbackStudentInvalidReport": "data/learning/endpoint-feedback-student-report-01.json",
   "endpointFeedbackStudentValidReport": "data/learning/endpoint-feedback-student-report-02.json",
-  "pathTurnCountDraft": "experiments/path-turn-count-01.design.json"
+  "pathTurnCountDraft": "experiments/path-turn-count-01.design.json",
+  "pathTurnCountAnswer": "data/learning/path-turn-count-answer-01.json",
+  "pathDirectionMetricRun": "data/learning/path-direction-metric-run-01.json",
+  "pathTurnSequenceDraft": "experiments/path-turn-design-01.design.json"
 }
