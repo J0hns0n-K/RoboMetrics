@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "frozen-before-second-student-route-check",
+  "methodAuthor": "AI assistant",
+  "config": "experiments/linear-accel-route-02.config.json",
+  "studentInput": "data/learning/linear-accel-route-design-02.json",
+  "baselineRun": "data/learning/linear-accel-route-run-01.json",
+  "checks": [
+    "Commit new student input, coordinate config and comparison wrapper before configured execution.",
+    "Verify unchanged timing module/dependencies/tests and previous 12-pass TAP hashes. Reuse that existing test evidence without repeating tests for this input-only comparison; the wrapper is checked by its configured run and independent arithmetic.",
+    "Import practice11 once to capture three route evaluations. Independently derive arrows/coordinates, six unit moves, same endpoints, exactly one internal change for the new route, translation runs, initial alignment, rotation and time formulas in Python. Check phase distances, speed/acceleration bounds and rest endpoints.",
+    "Compare re-evaluated controls with immutable prior output; preserve source/input and historical artifact byte hashes. Store new evidence under new names."
+  ],
+  "scope": "AI-operated analytic controls on three schematic routes, not a fresh map cohort, planner change, physical trial, measured runtime/energy, calibrated control/collision model or global fastest-path proof. Finite linear acceleration/braking, instantaneous angular-rate changes."
+}

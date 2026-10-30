@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "`↓ `  `↓ `  `↓ `  `→ `  `→ `  `→ `  ",
+  "normalizedSequence": ["down", "down", "down", "right", "right", "right"],
+  "task": "experiments/linear-accel-route-design-02.design.json",
+  "roles": {
+    "student": "Designed a six-move sequence in response to the exactly-one-internal-direction-change constraint.",
+    "ai": "Provided constraints, transcribes arrows to coordinates, authors comparison wrapper and operates analytic checks."
+  },
+  "scope": "Student constrained schematic sequence design. No numerical time forecast, student code/execution, physical measurement or optimality claim."
+}
