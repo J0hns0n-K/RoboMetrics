@@ -4,7 +4,7 @@ import {makeMap} from '../src/core.mjs';
 import {resolveDiskResolution} from '../src/resolution-policy.mjs';
 
 // Change only this goal from [7, 3] (original G) to [7, 2] (AI-explained A), then save.
-const goal = [7, 2];
+const goal = [7, 3];
 
 const source = JSON.parse(await readFile(new URL('../data/footprint/resolution-quality-prospective-run-01.json', import.meta.url), 'utf8'));
 const model = JSON.parse(await readFile(new URL('../experiments/disk-model-clearance015-01.config.json', import.meta.url), 'utf8'));
