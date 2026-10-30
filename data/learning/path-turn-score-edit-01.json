@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "저장함",
+  "priorAnswer": "data/learning/path-turn-cost-sensitivity-answer-01.json",
+  "editVerification": {
+    "file": "practice/05-path-score.mjs",
+    "actualDiffInspected": true,
+    "before": "const perDirectionChange = 2;",
+    "after": "const perDirectionChange = 0.5;",
+    "changedLines": 1,
+    "onlyParameterChanged": true
+  },
+  "roles": {
+    "student": "Reported saving and made the matching guided one-line parameter edit, verified on disk, after hand-calculating the new scores.",
+    "ai": "Provided coefficient/task/editor instructions, code, inspection and recording; subsequent AI execution is not student operation."
+  },
+  "scope": "Guided parameter edit, not score-function authorship or a student-executed run. Input and record will be committed before a new AI CLI check."
+}

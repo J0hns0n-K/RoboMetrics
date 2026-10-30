@@ -3,7 +3,7 @@ import {readFile} from 'node:fs/promises';
 import {scoreAxisPath} from '../src/virtual-path-score.mjs';
 
 // Arbitrary score points per direction-change event, not seconds or energy.
-const perDirectionChange = 2;
+const perDirectionChange = 0.5;
 
 const fixtures = JSON.parse(await readFile(new URL('../experiments/path-turn-score-01.config.json', import.meta.url), 'utf8'));
 export const results = fixtures.routes.map(({id, path}) => ({route: id,

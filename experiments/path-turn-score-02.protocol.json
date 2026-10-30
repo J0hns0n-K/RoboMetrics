@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "ready-before-half-penalty-cli-run",
+  "methodAuthor": "AI assistant",
+  "parentProtocol": "experiments/path-turn-score-01.protocol.json",
+  "baseline": "data/learning/path-turn-score-run-01.json",
+  "fixtures": "experiments/path-turn-score-01.config.json",
+  "studentRecalculation": "data/learning/path-turn-cost-sensitivity-answer-01.json",
+  "studentEdit": "data/learning/path-turn-score-edit-01.json",
+  "changedParameter": {"perDirectionChange": {"from": 2, "to": 0.5}},
+  "heldFixed": "Exact X/Y paths, endpoints, world-distance weight1, count/score functions and exercise logic. Only practice05's direction-change coefficient changes. No planner is called.",
+  "commandMethod": "Import committed practice05 once, record console table and exported results on a diagnostic stream. Independently calculate lengths, heading changes and scores from fixed paths, compare student answer and preserve original weight2 bytes.",
+  "plannedChecks": "Check actual saved one-line diff and commit before AI execution; verify unchanged module/fixture/test hashes against prior ten-test record. No test rerun for this input-only change; run new CLI condition and direct arithmetic. Preserve weight2 record and create a new weight0.5 artifact, with comparison limited to the two offered paths.",
+  "scope": "Guided parameter sensitivity with AI-supplied arbitrary coefficients and student hand calculation/edit. Not a new independent route cohort, calibrated time/energy, changed planner objective or globally optimal path claim."
+}
