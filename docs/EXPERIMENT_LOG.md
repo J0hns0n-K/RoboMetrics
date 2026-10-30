@@ -791,6 +791,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - [Run](../data/learning/path-turn-score-run-01.json) records ten focused tests (five new score/five existing direction), one CLI execution and independently checked endpoints/lengths/heading changes/scores. X6/5/16;Y8/2/12. Original-world length rather than sampled edge count is charged; no initial orientation alignment. Core/body/descriptor/research bytes unchanged, zero planner/BFS/maps and no old101-suite repeat.
 - Only two offered schematic paths and arbitrary points; not calibrated seconds/energy, obstacle/physical feasibility, global optimality or changed search objective. Next [weight0.5 task](../experiments/path-turn-cost-sensitivity-01.design.json) awaits student answer before that condition is edited/run; do not overwrite the weight2 artifact.
 
+## 2026-10-30 — Verified coefficient edit reverses offered-route ranking
+
+- Student previously hand-calculated X8.5/Y9 and choseX, then reported saving. Actual diff only practice05 perDirectionChange2 to0.5, recorded in [edit](../data/learning/path-turn-score-edit-01.json). Input/new protocol committed as6437536b438b76aab4243032c5ef56b7c95f4d2d before AI execution. Student hand arithmetic/edit separate from AI task/code/operation.
+- [New run and paired comparison](../data/learning/path-turn-score-run-02.json): same fixed schematic X6length/5changes and Y8/2, world-distance weight1, lower-score choice changes fromY at weight2(X16/Y12) toX at weight0.5(X8.5/Y9). Prior artifact byte hash unchanged; independent endpoint/length/heading/score arithmetic and student answer agree. Source/fixture/test hashes and prior ten-test TAP verified; no test repeat for input-only condition.
+- One new CLI execution, zero planner/BFS/new independent maps. Arbitrary coefficient sensitivity, not physical timing/energy, changed planner, new route or global optimum. Next [student post-result explanation](../experiments/path-turn-cost-interpretation-01.design.json) pending.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

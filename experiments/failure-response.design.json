@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student hand-calculated X8.5/Y9 and chose X at AI-given coefficient0.5; record data/learning/path-turn-cost-sensitivity-answer-01.json. practice05 inspected still2. Next open editable Notepad, ask student to change only perDirectionChange2 to0.5 and save; inspect actual diff and preserve source before new AI execution. No configured0.5 run or student edit yet verified, do not overwrite weight2 artifacts.",
+  "nextTask": "Verified student input2-to0.5 and new AI run in data/learning/path-turn-score-run-02.json confirm X8.5/Y9/choiceX versus preserved weight2 choiceY, fixed paths/descriptors. Next experiments/path-turn-cost-interpretation-01.design.json asks one-sentence student explanation for the ranking reversal. No student explanation yet; arbitrary score, not calibrated time/energy or changed planner.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -271,5 +271,8 @@
   "pathTurnCostAnswer": "data/learning/path-turn-cost-answer-01.json",
   "pathTurnScoreRun": "data/learning/path-turn-score-run-01.json",
   "pathTurnCostSensitivityDraft": "experiments/path-turn-cost-sensitivity-01.design.json",
-  "pathTurnCostSensitivityAnswer": "data/learning/path-turn-cost-sensitivity-answer-01.json"
+  "pathTurnCostSensitivityAnswer": "data/learning/path-turn-cost-sensitivity-answer-01.json",
+  "pathTurnScoreStudentEdit": "data/learning/path-turn-score-edit-01.json",
+  "pathTurnScoreSensitivityRun": "data/learning/path-turn-score-run-02.json",
+  "pathTurnCostInterpretationDraft": "experiments/path-turn-cost-interpretation-01.design.json"
 }

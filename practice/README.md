@@ -105,3 +105,5 @@ const fieldName = '____';
 세계 길이를 쓰므로 반 칸으로 나눈 구간 수를 이동 거리로 오인하지 않는다. 점수는 임의 단위이며 초·에너지나 실제 로봇 보정값이 아니다. 자동 길찾기 규칙도 바꾸지 않는다. 점수 검사5개와 기존 방향 검사5개, 총10개가 통과했고 이전101개 전체 검사는 반복하지 않았다. 다음은 전환 계수만0.5로 낮춘 경우의 X/Y 점수와 선택을 먼저 계산하는 [과제](../experiments/path-turn-cost-sensitivity-01.design.json)다. 해당 조건을 아직 실행하지 않았다. 학생 답을 받은 뒤에만 파일의 `perDirectionChange`를2→0.5로 바꿔 저장·실행하는 단계로 진행한다.
 
 학생은 전환 계수0.5에서 **X: 8.5, Y: 9, X**라고 답했다. [원문·계산과 실행의 구분](../data/learning/path-turn-cost-sensitivity-answer-01.json)을 보존한다. 확인 당시 파일은 여전히 `const perDirectionChange = 2;`였으므로 다음은 메모장에서 이 한 줄만 `const perDirectionChange = 0.5;`로 바꾸고 저장하는 단계다. 실제 차이·실행 주체·출력은 이후 확인하며 기존2점 결과는 유지한다.
+
+사용자가 저장을 보고했고 실제로 `perDirectionChange = 2`→`0.5` 한 줄만 달라진 것을 확인했다. [입력 기록](../data/learning/path-turn-score-edit-01.json)과 소스 `6437536b438b76aab4243032c5ef56b7c95f4d2d`를 먼저 보존한 뒤 AI가 실행했다. [새 결과·짝 비교](../data/learning/path-turn-score-run-02.json)는 X8.5/Y9와 X선택을 확인하며, 기존2점의 X16/Y12·Y선택 결과는 덮어쓰지 않았다. 새 알고리즘이나 경로가 아니라 가정한 점수 계수의 민감도 확인이다. 학생의 계산·수정과 AI 실행을 구분한다. 다음은 두 경로가 그대로인데 선택이 바뀐 이유를 학생이 한 문장으로 설명하는 단계다.

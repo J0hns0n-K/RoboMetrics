@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "executedAtUTC": "2026-10-30T06:57:01.101675+00:00",
+  "sourceCommit": "6437536b438b76aab4243032c5ef56b7c95f4d2d",
+  "operator": "AI assistant CLI",
+  "protocol": "experiments/path-turn-score-02.protocol.json",
+  "fixtures": "experiments/path-turn-score-01.config.json",
+  "studentAnswer": "data/learning/path-turn-cost-sensitivity-answer-01.json",
+  "verifiedStudentEdit": "data/learning/path-turn-score-edit-01.json",
+  "configuredRun": {
+    "commandSource": "const {results}=await import('./practice/05-path-score.mjs');process.stderr.write(JSON.stringify(results));",
+    "exitCode": 0,
+    "stdout": "가상 점수 = 세계 길이 × 1 + 방향 전환 횟수 × 0.5\n┌─────────┬───────┬─────────────┬──────────────────┬──────────────┐\n│ (index) │ route │ worldLength │ directionChanges │ virtualScore │\n├─────────┼───────┼─────────────┼──────────────────┼──────────────┤\n│ 0       │ 'X'   │ 6           │ 5                │ 8.5          │\n│ 1       │ 'Y'   │ 8           │ 2                │ 9            │\n└─────────┴───────┴─────────────┴──────────────────┴──────────────┘\n",
+    "diagnosticStreamPurpose": "stderr contains exported results JSON, not an error capture; avoids a second execution.",
+    "results": [
+      {
+        "route": "X",
+        "worldLength": 6,
+        "directionChanges": 5,
+        "virtualScore": 8.5,
+        "weights": {
+          "perWorldUnit": 1,
+          "perDirectionChange": 0.5
+        }
+      },
+      {
+        "route": "Y",
+        "worldLength": 8,
+        "directionChanges": 2,
+        "virtualScore": 9,
+        "weights": {
+          "perWorldUnit": 1,
+          "perDirectionChange": 0.5
+        }
+      }
+    ],
+    "lowerOfferedScoreRoutes": [
+      "X"
+    ],
+    "units": "arbitrary score points"
+  },
+  "pairedComparison": {
+    "baseline": "data/learning/path-turn-score-run-01.json",
+    "baselineSha256Bytes": "c70e862dc9ade3788869fb9c4c0d50078aadcad96e81b416e0882d9dd38e2a07",
+    "heldFixed": "Exact X/Y paths/endpoints, world-distance weight1, score/descriptor code and exercise logic.",
+    "conditions": [
+      {
+        "perDirectionChange": 2,
+        "scores": {
+          "X": 16,
+          "Y": 12
+        },
+        "lowerOfferedScoreRoutes": [
+          "Y"
+        ]
+      },
+      {
+        "perDirectionChange": 0.5,
+        "scores": {
+          "X": 8.5,
+          "Y": 9
+        },
+        "lowerOfferedScoreRoutes": [
+          "X"
+        ]
+      }
+    ],
+    "interpretationByAi": "Lowering the assumed direction-change weight reverses this offered-route ranking while the paths and their descriptors stay fixed. This does not identify a correct physical coefficient or global optimum."
+  },
+  "validation": {
+    "independentPythonAudits": [
+      {
+        "route": "X",
+        "endpoint": [
+          3,
+          3
+        ],
+        "worldLength": 6,
+        "directionChanges": 5,
+        "virtualScore": 8.5,
+        "fixedGeometryAndStudentAnswerMatch": true
+      },
+      {
+        "route": "Y",
+        "endpoint": [
+          3,
+          3
+        ],
+        "worldLength": 8,
+        "directionChanges": 2,
+        "virtualScore": 9.0,
+        "fixedGeometryAndStudentAnswerMatch": true
+      }
+    ],
+    "studentScoresAndChoiceMatch": true,
+    "baselineBytesUnchanged": true,
+    "sourceFixtureAndAnswerBytesUnchanged": true,
+    "sha256Bytes": {
+      "practice/05-path-score.mjs": "15057261393c8c31b171e3c2f1b2b248bc31ba33b79382a1724c40c3122d7c17",
+      "src/virtual-path-score.mjs": "a0e0b25c2178d6ea1a3a80b1513603ae013fe6b89f8c0286b9d36c7c40379285",
+      "src/path-metrics.mjs": "9813941430e2fa6c8f1096032108d5572e350f6889923ce49c8212b26390af58",
+      "experiments/path-turn-score-01.config.json": "6959b179884c81e06eed7ac54e416c022616fd0a0957f40c831557fe6ad31237",
+      "experiments/path-turn-score-02.protocol.json": "7cc2f794cc05544717d09df58948c466c380e90eb888349b62b5e848c760cc8e",
+      "data/learning/path-turn-cost-sensitivity-answer-01.json": "9adf2e0020242a6aa6bb4809da99465f545d2a264d35fdee6d057fa340780567",
+      "data/learning/path-turn-score-edit-01.json": "08c4ec9e095d7d535a455c3f1215f0fdc2ea1607119e39e550c8df0e28ead850"
+    },
+    "unchangedModuleFixtureTestHashesMatchBaseline": true,
+    "priorTenTestArchiveHashesVerified": true,
+    "testsRerun": false,
+    "configuredCliExecutions": 1,
+    "newPlannerCalls": 0,
+    "newBfsCalls": 0,
+    "newIndependentMaps": 0
+  },
+  "roles": {
+    "student": "Hand-recalculated X8.5/Y9 and chose X, then saved the guided coefficient2-to0.5 edit.",
+    "ai": "Provided paths/coefficients/task/code, inspected/froze input, operated this run and independent arithmetic, and wrote records. Student execution or written interpretation not inferred."
+  },
+  "scope": "Controlled arbitrary-score sensitivity on the same two schematic offered paths, not new routes, calibrated travel time/energy, a blind research cohort, global-optimality proof or changed planner objective.",
+  "nextTask": "Ask student to explain in one sentence why the lower-score offered choice changed while the routes stayed fixed. Student post-result interpretation pending."
+}

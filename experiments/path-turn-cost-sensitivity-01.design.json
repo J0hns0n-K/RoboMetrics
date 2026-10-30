@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "student-recalculation-recorded-manual-parameter-edit-pending",
+  "status": "guided-edit-and-ai-run-completed-interpretation-pending",
   "proposalAuthor": "AI assistant",
   "parentTask": "experiments/path-turn-cost-01.design.json",
   "fixtures": "experiments/path-turn-score-01.config.json",
@@ -19,6 +19,10 @@
   },
   "studentChoice": "X",
   "nextGuidedEditAfterAnswer": "Change only practice/05-path-score.mjs perDirectionChange from2 to0.5, inspect the actual saved diff and record operator/output. Do not overwrite the weight2 result.",
-  "scope": "Student correctly hand-recalculated X8.5/Y9 and chose X at AI-given coefficient0.5. Practice value still2 when inspected; no student parameter edit or configured0.5 run verified. Same offered schematic paths/arbitrary units, not calibrated physics, independent research forecast or changed planner.",
-  "studentAnswerRecord": "data/learning/path-turn-cost-sensitivity-answer-01.json"
+  "scope": "Student hand-recalculated X8.5/Y9 and choseX, then saved verified coefficient2-to0.5 input. AI froze source and executed/audited the new condition, preserving baseline2 bytes. Same two schematic paths/arbitrary points, no new maps or calibrated cost/planner gain. Student post-result interpretation pending.",
+  "studentAnswerRecord": "data/learning/path-turn-cost-sensitivity-answer-01.json",
+  "studentEditRecord": "data/learning/path-turn-score-edit-01.json",
+  "runProtocol": "experiments/path-turn-score-02.protocol.json",
+  "runRecord": "data/learning/path-turn-score-run-02.json",
+  "nextTask": "experiments/path-turn-cost-interpretation-01.design.json"
 }

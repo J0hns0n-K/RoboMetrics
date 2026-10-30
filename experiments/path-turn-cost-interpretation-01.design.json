@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "awaiting-student-post-result-interpretation",
+  "proposalAuthor": "AI assistant",
+  "source": "data/learning/path-turn-score-run-02.json",
+  "question": "Explain in one sentence why the lower-score offered route changed from Y to X even though the X/Y paths, lengths and direction-change counts stayed the same.",
+  "studentExplanationVerbatim": null,
+  "scope": "Guided post-result explanation of arbitrary-score sensitivity, not a new prior forecast, independently derived physical model or change in the paths/planner."
+}
