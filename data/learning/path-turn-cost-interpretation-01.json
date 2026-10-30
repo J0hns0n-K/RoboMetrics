@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "방향 전환을 그리 중요하게 보지 않았어",
+  "promptContext": "After seeing the same X/Y paths ranked Y at coefficient2 and X at coefficient0.5, the student was asked why the offered-route choice changed while the paths stayed fixed.",
+  "evidenceType": "guided-post-result-student-interpretation",
+  "contextualReading": "Explains that direction changes were given less importance under the lower penalty. This is an interpretation of the AI-supplied coefficient change, not independent student selection of a physically meaningful weight.",
+  "aiClarification": "Reducing the assumed direction-change penalty reduces X's disadvantage from its extra changes, allowing its shorter world length to yield the lower offered score. Coefficients are arbitrary; no measured robot cost is established.",
+  "source": "data/learning/path-turn-score-run-02.json",
+  "task": "experiments/path-turn-cost-interpretation-01.design.json",
+  "scope": "Post-result interpretation, not a prior prediction, coefficient calibration, new route/code, independent discovery or physical measurement.",
+  "nextTask": "experiments/heading-angle-01.design.json"
+}

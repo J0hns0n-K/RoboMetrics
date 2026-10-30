@@ -107,3 +107,5 @@ const fieldName = '____';
 학생은 전환 계수0.5에서 **X: 8.5, Y: 9, X**라고 답했다. [원문·계산과 실행의 구분](../data/learning/path-turn-cost-sensitivity-answer-01.json)을 보존한다. 확인 당시 파일은 여전히 `const perDirectionChange = 2;`였으므로 다음은 메모장에서 이 한 줄만 `const perDirectionChange = 0.5;`로 바꾸고 저장하는 단계다. 실제 차이·실행 주체·출력은 이후 확인하며 기존2점 결과는 유지한다.
 
 사용자가 저장을 보고했고 실제로 `perDirectionChange = 2`→`0.5` 한 줄만 달라진 것을 확인했다. [입력 기록](../data/learning/path-turn-score-edit-01.json)과 소스 `6437536b438b76aab4243032c5ef56b7c95f4d2d`를 먼저 보존한 뒤 AI가 실행했다. [새 결과·짝 비교](../data/learning/path-turn-score-run-02.json)는 X8.5/Y9와 X선택을 확인하며, 기존2점의 X16/Y12·Y선택 결과는 덮어쓰지 않았다. 새 알고리즘이나 경로가 아니라 가정한 점수 계수의 민감도 확인이다. 학생의 계산·수정과 AI 실행을 구분한다. 다음은 두 경로가 그대로인데 선택이 바뀐 이유를 학생이 한 문장으로 설명하는 단계다.
+
+학생의 사후 설명은 **방향 전환을 그리 중요하게 보지 않았어**였다. [원문과 맥락](../data/learning/path-turn-cost-interpretation-01.json)은 낮아진 전환 계수의 영향에 대한 안내된 해석으로 기록한다. 다음 [각도 과제](../experiments/heading-angle-01.design.json)는 처음 오른쪽을 보는 상태에서 아래 또는 왼쪽을 보려면 최소 몇 도 돌아야 하는지 묻는다. 기존 변경 횟수 지표의 출발 정렬 제외 규칙은 그대로이며, 이 별도 설명에서 출발 방향을 명시적으로 도입한다.

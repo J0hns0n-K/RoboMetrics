@@ -1,10 +1,12 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "awaiting-student-post-result-interpretation",
+  "status": "student-post-result-interpretation-recorded",
   "proposalAuthor": "AI assistant",
   "source": "data/learning/path-turn-score-run-02.json",
   "question": "Explain in one sentence why the lower-score offered route changed from Y to X even though the X/Y paths, lengths and direction-change counts stayed the same.",
-  "studentExplanationVerbatim": null,
-  "scope": "Guided post-result explanation of arbitrary-score sensitivity, not a new prior forecast, independently derived physical model or change in the paths/planner."
+  "studentExplanationVerbatim": "방향 전환을 그리 중요하게 보지 않았어",
+  "scope": "Guided post-result explanation of arbitrary-score sensitivity, not a new prior forecast, independently derived physical model or change in the paths/planner.",
+  "studentExplanationRecord": "data/learning/path-turn-cost-interpretation-01.json",
+  "nextTask": "experiments/heading-angle-01.design.json"
 }
