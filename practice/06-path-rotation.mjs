@@ -3,7 +3,7 @@ import {readFile} from 'node:fs/promises';
 import {countDirectionChanges} from '../src/path-metrics.mjs';
 import {measureAxisPathRotation} from '../src/path-rotation.mjs';
 
-const initialHeading = 'right';
+const initialHeading = 'down';
 
 const fixtures = JSON.parse(await readFile(new URL('../experiments/path-turn-score-01.config.json', import.meta.url), 'utf8'));
 export const results = fixtures.routes.map(({id, path}) => ({route: id,

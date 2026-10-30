@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "저장했어",
+  "priorAnswer": "data/learning/path-rotation-initial-heading-answer-01.json",
+  "editVerification": {
+    "file": "practice/06-path-rotation.mjs",
+    "actualDiffInspected": true,
+    "before": "const initialHeading = 'right';",
+    "after": "const initialHeading = 'down';",
+    "changedLines": 1,
+    "onlyInitialHeadingChanged": true
+  },
+  "roles": {
+    "student": "Reported saving and made the matching guided one-line starting-heading edit, verified on disk, after answering initial alignment X90/Y0.",
+    "ai": "Provided task, heading condition, code and instructions; inspected/preserved the input and will operate a separate configured check."
+  },
+  "scope": "Guided input edit, not student descriptor code, physical motion or user-executed output. Input is committed before new AI execution."
+}

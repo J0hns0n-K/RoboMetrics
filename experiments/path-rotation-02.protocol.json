@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "ready-before-initial-down-cli-run",
+  "methodAuthor": "AI assistant",
+  "parentProtocol": "experiments/path-rotation-01.protocol.json",
+  "baseline": "data/learning/path-rotation-run-01.json",
+  "fixtures": "experiments/path-turn-score-01.config.json",
+  "studentAnswer": "data/learning/path-rotation-initial-heading-answer-01.json",
+  "studentEdit": "data/learning/path-rotation-edit-01.json",
+  "changedInput": {"initialHeading": {"from": "right", "to": "down"}},
+  "heldFixed": "Exact schematic X/Y paths, endpoints, event counts, score/angle code and forward-only stop-and-align convention. Internal path angles must stay unchanged; only initial alignment and total rotation can change.",
+  "method": "Import committed practice06 once and record console/exported rotation descriptors. Reconstruct headings and unsigned minimum angles from fixed coordinates in an independent arithmetic check. Compare first alignment with student's X90/Y0, and preserve original right-heading bytes.",
+  "checks": "Commit verified one-line input before AI run, match unchanged module/fixture/test hashes and prior eleven-test archive. No test repeat for input-only change, planner, BFS or new map. Use a new initial-down artifact instead of replacing baseline.",
+  "scope": "Geometric initial-condition sensitivity, not physical actuation, motion/dynamics/collision feasibility, calibrated turn duration or energy, new paths or changed planner objective."
+}
