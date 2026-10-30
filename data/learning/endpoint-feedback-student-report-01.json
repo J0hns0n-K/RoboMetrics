@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "evidenceType": "guided-user-pasted-output-and-message-confirmation",
+  "userTableVerbatim": "┌─────────┬───────┬──────────────────────────────┬─────────────┬──────────┐\n│ (index) │ goal  │ result                       │ worldLength │ examined │\n├─────────┼───────┼──────────────────────────────┼─────────────┼──────────┤\n│ 0       │ '8,4' │ 'INVALID_ENDPOINT_CLEARANCE' │ null        │ 0        │",
+  "userMessageConfirmationVerbatim": "로봇 몸체와 여유폭을 확보할 공간이 부족하니, 벽과 지도 경계에서 더 떨어진 위치를 선택하세요. 있어",
+  "context": "User first pasted only the table. After AI specifically asked whether Korean guidance appeared below it, user pasted the guidance and confirmed its presence. These are separate chat reports, not an independently captured complete stdout stream.",
+  "reportedFields": {
+    "goal": [
+      8,
+      4
+    ],
+    "status": "INVALID_ENDPOINT_CLEARANCE",
+    "geometricLength": null,
+    "expanded": 0,
+    "clearanceMessageShown": true
+  },
+  "configuredContext": {
+    "archivedTrial": 10,
+    "mode": "always-fine",
+    "fineBudget": 200,
+    "tieBreak": "fifo",
+    "radius": 0.4,
+    "clearance": 0.15
+  },
+  "references": {
+    "verifiedGoalEdit": "data/learning/endpoint-feedback-guided-edit-01.json",
+    "aiFunctionalControls": "data/learning/endpoint-feedback-validation-01.json",
+    "wordingAuthorship": "data/learning/endpoint-message-uncertainty-01.json"
+  },
+  "currentFileCheck": {
+    "revisionAtRecording": "c5a9a9dbf035b1817b70901d4063e0948a18c1c8",
+    "sha256BytesAtRecording": "f4b073c6bb35ce4a6c0ff33e73e97673783e7488640de7aa99253001b56c3d66",
+    "userProcessIndependentlyObserved": false,
+    "userExecutionSourceHashCaptured": false
+  },
+  "roles": {
+    "student": "Saved guided goal edit and shared terminal table, then explicitly reported seeing the message.",
+    "ai": "Provided target, scaffold, full message, conditional code, operation guidance and documentation."
+  },
+  "scope": "Guided user report of the known-invalid UI case, not independent process evidence, student-authored wording/code, a new map or algorithm improvement. Configured context comes from the inspected exercise; the table itself does not attest all settings.",
+  "nextTask": "Student restores goal6,1 in Notepad, saves and reruns the same command, then shares the table and whether any clearance warning appears. Valid-case user inspection not reported yet."
+}

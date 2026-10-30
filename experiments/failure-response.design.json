@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "After student uncertainty, AI wrote the actionable clearance message and conditional practice04 display, checked in data/learning/endpoint-feedback-validation-01.json. Next student changes only goal6,1 to8,4, saves and reruns the known command to inspect/share guidance. No student-authored wording/code, raw-result or algorithm change.",
+  "nextTask": "User reports guidance appeared for invalid8,4 in data/learning/endpoint-feedback-student-report-01.json. Next restore only goal6,1 in Notepad, save and rerun known command; share table and whether a clearance warning appears. Valid-case user inspection still pending; AI wording/code, no independent process capture or new algorithm/data claim.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -258,5 +258,6 @@
   "endpointPlacementStudentInterpretation": "data/learning/endpoint-student-interpretation-01.json",
   "endpointFeedbackMessageDraft": "experiments/endpoint-feedback-message-01.design.json",
   "endpointFeedbackAssistance": "data/learning/endpoint-message-uncertainty-01.json",
-  "endpointFeedbackValidation": "data/learning/endpoint-feedback-validation-01.json"
+  "endpointFeedbackValidation": "data/learning/endpoint-feedback-validation-01.json",
+  "endpointFeedbackStudentInvalidReport": "data/learning/endpoint-feedback-student-report-01.json"
 }
