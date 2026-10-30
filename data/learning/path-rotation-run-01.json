@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "executedAtUTC": "2026-10-30T07:28:12.581326+00:00",
+  "sourceCommit": "1b7b6205e61c0ce9fbf9149b605207582e7beb90",
+  "operator": "AI assistant CLI",
+  "protocol": "experiments/path-rotation-01.protocol.json",
+  "fixtures": "experiments/path-turn-score-01.config.json",
+  "studentAnswer": "data/learning/heading-angle-answer-01.json",
+  "tests": {
+    "command": "node --test --test-reporter=tap test/path-metrics.test.mjs test/path-rotation.test.mjs",
+    "passed": 11,
+    "failed": 0,
+    "newRotationTests": 6,
+    "existingDescriptorTestsRerun": 5,
+    "old101SuiteRerun": false,
+    "archive": "data/learning/path-rotation-tests-01.tap",
+    "sha256Bytes": "302396e3fde59c2cf24f559f8b1043e79bf4e68e6ebdf789dc860b81ec7c6f9c",
+    "exitCode": 0,
+    "stderr": ""
+  },
+  "configuredRun": {
+    "commandSource": "const {results}=await import('./practice/06-path-rotation.mjs'); const {minimumTurnDegrees}=await import('./src/path-rotation.mjs'); process.stderr.write(JSON.stringify({simpleCases:{A:minimumTurnDegrees('right','down'),B:minimumTurnDegrees('right','left')},results}));",
+    "exitCode": 0,
+    "stdout": "설명용 경로의 최소 회전 각도 합계입니다. 처음 방향: right\n┌─────────┬───────┬──────────────────┬─────────────────────────┬─────────────────────┬──────────────────────┐\n│ (index) │ route │ directionChanges │ initialAlignmentDegrees │ pathRotationDegrees │ totalRotationDegrees │\n├─────────┼───────┼──────────────────┼─────────────────────────┼─────────────────────┼──────────────────────┤\n│ 0       │ 'X'   │ 5                │ 0                       │ 450                 │ 450                  │\n│ 1       │ 'Y'   │ 2                │ 90                      │ 180                 │ 270                  │\n└─────────┴───────┴──────────────────┴─────────────────────────┴─────────────────────┴──────────────────────┘\n",
+    "diagnosticStreamPurpose": "stderr carries computed/exported JSON, not an error; avoid duplicate CLI execution.",
+    "initialHeading": "right",
+    "computedSimpleCasesDegrees": {
+      "A": 90,
+      "B": 180
+    },
+    "results": [
+      {
+        "route": "X",
+        "directionChanges": 5,
+        "initialHeading": "right",
+        "initialAlignmentDegrees": 0,
+        "pathRotationDegrees": 450,
+        "totalRotationDegrees": 450
+      },
+      {
+        "route": "Y",
+        "directionChanges": 2,
+        "initialHeading": "right",
+        "initialAlignmentDegrees": 90,
+        "pathRotationDegrees": 180,
+        "totalRotationDegrees": 270
+      }
+    ]
+  },
+  "validation": {
+    "independentPythonHeadingAudits": [
+      {
+        "route": "X",
+        "segmentHeadings": [
+          "right",
+          "down",
+          "right",
+          "down",
+          "right",
+          "down"
+        ],
+        "internalMinimumAnglesDegrees": [
+          90,
+          90,
+          90,
+          90,
+          90
+        ],
+        "initialAlignmentDegrees": 0,
+        "pathRotationDegrees": 450,
+        "totalRotationDegrees": 450,
+        "directPythonAuditMatches": true
+      },
+      {
+        "route": "Y",
+        "segmentHeadings": [
+          "down",
+          "down",
+          "down",
+          "down",
+          "right",
+          "right",
+          "right",
+          "up"
+        ],
+        "internalMinimumAnglesDegrees": [
+          0,
+          0,
+          0,
+          90,
+          0,
+          0,
+          90
+        ],
+        "initialAlignmentDegrees": 90,
+        "pathRotationDegrees": 180,
+        "totalRotationDegrees": 270,
+        "directPythonAuditMatches": true
+      }
+    ],
+    "studentSimpleAnglesMatch": true,
+    "sourceFixtureAndAnswerBytesUnchanged": true,
+    "sha256Bytes": {
+      "src/path-rotation.mjs": "e2b388168713b7dc42028e7b9199a782bf45b216fa7487cfa4a076b9c608d84b",
+      "src/path-metrics.mjs": "9813941430e2fa6c8f1096032108d5572e350f6889923ce49c8212b26390af58",
+      "test/path-rotation.test.mjs": "41866fc48ec2b6cf4b1673c8465f9b93acc76356c004f5a8d85233c03d9e2279",
+      "test/path-metrics.test.mjs": "4fc2a9e44b3d16d4525af61d6c11d2408e3f146ea59406d165c6a5f5ea724256",
+      "practice/06-path-rotation.mjs": "f929f34e1e0960f537c697fabe06837613a3fbbad8808f15884609840f01b5f4",
+      "experiments/path-turn-score-01.config.json": "6959b179884c81e06eed7ac54e416c022616fd0a0957f40c831557fe6ad31237",
+      "experiments/path-rotation-01.protocol.json": "5909f9bcc6b0900f3a48d9720a38cdb0bd24cd8a504232dc26829be9301708b0",
+      "data/learning/heading-angle-answer-01.json": "ac153856ef730107f8541e8f71910acac31798901956e299e8789886c4ef200d"
+    },
+    "priorScoreAndDescriptorArtifactsAndSourceHashesMatch": true,
+    "configuredCliExecutions": 1,
+    "configuredSimpleAngleCases": 2,
+    "configuredPathDescriptorCases": 2,
+    "newPlannerCalls": 0,
+    "newBfsCalls": 0,
+    "newIndependentMaps": 0,
+    "configuredInitialDownXYConditionExecuted": false
+  },
+  "roles": {
+    "student": "Answered A90/B180 for offered starting/target headings, no code or model design.",
+    "ai": "Framing, geometric convention, forward-only alignment assumption, functions, tests, CLI operation, independent audit and records."
+  },
+  "scope": "Sum of minimum unsigned in-place heading alignments for fixed forward-travel paths, not net orientation change, dynamic/control feasibility, turning-radius/collision validation, measured/estimated turn duration or energy. Existing count/score/planner semantics unchanged.",
+  "nextTask": "Ask student for initial alignment of X(first right) and Y(first down) when the starting heading is down, before editing/running that condition."
+}

@@ -797,6 +797,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - [New run and paired comparison](../data/learning/path-turn-score-run-02.json): same fixed schematic X6length/5changes and Y8/2, world-distance weight1, lower-score choice changes fromY at weight2(X16/Y12) toX at weight0.5(X8.5/Y9). Prior artifact byte hash unchanged; independent endpoint/length/heading/score arithmetic and student answer agree. Source/fixture/test hashes and prior ten-test TAP verified; no test repeat for input-only condition.
 - One new CLI execution, zero planner/BFS/new independent maps. Arbitrary coefficient sensitivity, not physical timing/energy, changed planner, new route or global optimum. Next [student post-result explanation](../experiments/path-turn-cost-interpretation-01.design.json) pending.
 
+## 2026-10-30 — Geometric rotation descriptor adds explicit initial heading
+
+- Student answered **A: 90도 / B: 180도** to the offered minimum-angle cases. [Answer](../data/learning/heading-angle-answer-01.json) saved before code/checks; source1b7b6205e61c0ce9fbf9149b605207582e7beb90 freezes module/tests/practice06/protocol. AI assumes forward-only segment travel with shortest unsigned in-place alignment, separated initial/internal angles, no final-heading constraint. Old event/score/planner definitions unchanged.
+- [Run](../data/learning/path-rotation-run-01.json) records eleven focused tests (six new/five existing), one CLI execution, simple A90/B180 plus fixed schematic X5changes/initial0/internal450/total450degrees and Y2/90/180/270 at initial right. Python reconstructs headings/quarter-index angles and agrees. Prior score/descriptor/research hashes match. No old101-suite repeat, planner/BFS/new maps.
+- Cumulative absolute geometry, not net angle, measured/estimated turn time/energy, motion/collision feasibility, dynamic controller or turn-aware search. Next [initial-down alignment task](../experiments/path-rotation-initial-heading-01.design.json) awaits student answers before a new configured condition.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

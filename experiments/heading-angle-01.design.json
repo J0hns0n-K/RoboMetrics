@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "student-angle-answers-recorded-ai-descriptor-check-pending",
+  "status": "student-angle-answers-confirmed-ai-descriptor-checked",
   "proposalAuthor": "AI assistant",
   "parentInterpretation": "data/learning/path-turn-cost-interpretation-01.json",
   "question": "A schematic robot initially faces right. What minimum absolute rotation angle is needed to face down in case A, or left in case B? Answer A/B in degrees.",
@@ -21,8 +21,9 @@
   },
   "studentRationale": null,
   "motivation": "A heading-change event count does not specify how large the turn is. The existing path descriptor excludes initial alignment; this separate conceptual task explicitly introduces an initial heading. No existing metric semantics or code is changed yet.",
-  "scope": "Student correctly answered minimum angles A90/B180 under the AI-supplied starting heading/convention. AI authored a separate orientation descriptor with validation pending; old event metric unchanged. No physical timing, motion feasibility or student code claim.",
+  "scope": "Student answered offered minimum angles A90/B180. AI implemented and checked a separate geometric initial-alignment descriptor, leaving old event count/score/planner unchanged. No physical timing, dynamics/collision feasibility or student code claim. Next initial-down answers pending.",
   "studentAnswerRecord": "data/learning/heading-angle-answer-01.json",
   "descriptorProtocol": "experiments/path-rotation-01.protocol.json",
-  "nextTask": "experiments/path-rotation-initial-heading-01.design.json"
+  "nextTask": "experiments/path-rotation-initial-heading-01.design.json",
+  "descriptorRun": "data/learning/path-rotation-run-01.json"
 }
