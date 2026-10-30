@@ -827,6 +827,13 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - [Run](../data/learning/linear-speed-ramp-run-01.json): six new passing tests; older suites not repeated. Known0-to1virtualcell/s profiles T1/T2 give full mean0.5, distances0.5/1 and accelerations1/0.5virtualcell/s^2. One CLI evaluation records six analytic states; Python position equations and64-panel trapezoidal velocity integration agree. Test controls also cover partial displacement, constant/decelerating/stationary motion, bounds and overflow. Prior nominal-code/research/attempt hashes unchanged; zero planner/BFS/maps.
 - Standalone analytic forward1D reference, not timed numerical simulation, physical motor calibration, controller, collision validation or full-path finite-acceleration timing. Existing X/Y9s/9s artifact/code unchanged. Next [student stop-rule choice](../experiments/stop-turn-policy-choice-01.design.json) pending before path composition.
 
+## 2026-10-30 — Student turns-only choice composed with bounded linear profiles
+
+- Student **2/ 더 빠르잖아** [choice/reason](../data/learning/stop-turn-policy-choice-01.json) recorded before sourcebcb4eaeddff127185abc9cdceb21218460b89aca. AI supplied v1/a1virtual units and angular180degrees/s, profile equations and control design. New API turns-only default, every-waypoint explicit control; legacy nominal/score/search/browser untouched.
+- [Run](../data/learning/linear-accel-path-run-01.json) records full tracked-directory regression:141pass/0fail,28files,12new model tests. Includes legacy planner/generator calls as regression only. One practice09 import yields eight configured analytic evaluations, zero configured planner/BFS/new independent maps. Python reconstructs runs/headings/durations and audits34scalar profiles/72phases, each with64-panel velocity integration, rest/caps/continuity/distance/schedule checks.
+- Fixed schematic X/Y, initial down, v1/a1/angular180: every-waypoint/turns-only timesX15/15s,Y17/12s. SelectedYtranslation16to11s, rotation1s fixed; Xfive intermediate stops unchanged. Straight length3/initial right: selected4s for unit/half-step sampling, alternate6s/about8.49s intentionally requests more stops on refinement. Legacy instantaneous9/9 bytes and old source/fixtures preserved.
+- Conditional analytic model result, not measured time/energy, hardware calibration, timed dynamics/controller/collision validation or global route optimum. Linear acceleration finite, angular-rate changes still instantaneous and jerk unbounded. Student rationale not promoted to a universal claim. Next [X countercase explanation](../experiments/linear-accel-path-interpretation-01.design.json) pending.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

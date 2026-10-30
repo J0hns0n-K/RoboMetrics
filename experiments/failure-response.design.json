@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student qualitative low-start-speed explanation recorded, prior numerical attempts unchanged. AI analytic1D reference and six tests checked in data/learning/linear-speed-ramp-run-01.json. Next experiments/stop-turn-policy-choice-01.design.json asks whether the virtual model stops at every supplied interior waypoint or only at direction changes, with start/goal at rest. Await actual choice/reason before composing finite-acceleration path timing; no path-wide acceleration code or physical validation yet.",
+  "nextTask": "Student turns-only choice/reason implemented in separate bounded-linear-acceleration API, checked in data/learning/linear-accel-path-run-01.json with141full tracked tests and eight analytic controls. Fixed X15/15s,Y17/12s under every-waypoint/turns-only. Next experiments/linear-accel-path-interpretation-01.design.json asks why X has no reduction using its alternating directions. Student explanation pending; model seconds not measured time, angular acceleration still omitted.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -296,5 +296,8 @@
   "linearRampDurationFirstAttempt": "data/learning/linear-ramp-duration-attempt-01.json",
   "linearRampMeanExplanation": "data/learning/linear-ramp-mean-explanation-01.json",
   "linearSpeedRampRun": "data/learning/linear-speed-ramp-run-01.json",
-  "stopTurnPolicyChoiceDraft": "experiments/stop-turn-policy-choice-01.design.json"
+  "stopTurnPolicyChoiceDraft": "experiments/stop-turn-policy-choice-01.design.json",
+  "stopTurnPolicyStudentChoice": "data/learning/stop-turn-policy-choice-01.json",
+  "linearAccelPathRun": "data/learning/linear-accel-path-run-01.json",
+  "linearAccelPathInterpretationDraft": "experiments/linear-accel-path-interpretation-01.design.json"
 }

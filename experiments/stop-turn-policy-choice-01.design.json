@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "student-choice-recorded-ai-linear-acceleration-check-pending",
+  "status": "student-choice-implemented-and-analytic-controls-checked",
   "proposalAuthor": "AI assistant",
   "motivation": "Before composing finite acceleration/braking into path duration, explicitly choose where the model requires rest.",
   "straightExample": {
@@ -37,8 +37,10 @@
   },
   "studentChoice": "2",
   "studentRationale": "더 빠르잖아",
-  "implementationStatus": "AI added a separate finite-linear-acceleration timing reference with turns-only default and explicit every-waypoint control; validation pending. Angular-rate changes remain instantaneous. Legacy nominal model unchanged.",
-  "scope": "Student chose the offered turns-only rule expecting faster travel, no numeric or universal proof. AI supplied virtual limits/equations/code/controls; no physical behavior or calibration established. Configured checks pending.",
+  "implementationStatus": "Separate finite-linear-acceleration API uses selected turns-only default with every-waypoint control. Full tracked tests141pass and known analytic controls checked; angular-rate changes remain instantaneous. Legacy nominal/score/search/browser unchanged.",
+  "scope": "Student selected offered stop policy2 and qualitative speed rationale; AI supplied limits/equations/code/controls/tests/operation. Y reduces under tested limits, X ties; no universal strict-improvement or physical-performance claim. Next post-result countercase explanation pending.",
   "studentChoiceRecord": "data/learning/stop-turn-policy-choice-01.json",
-  "runProtocol": "experiments/linear-accel-path-01.protocol.json"
+  "runProtocol": "experiments/linear-accel-path-01.protocol.json",
+  "runRecord": "data/learning/linear-accel-path-run-01.json",
+  "nextTask": "experiments/linear-accel-path-interpretation-01.design.json"
 }

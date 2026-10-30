@@ -133,3 +133,7 @@ const fieldName = '____';
 ## 여덟 번째 파일 — 1차원 선형 속도 참고 계산
 
 학생은 안내 뒤 **처음 시작이 0이었으니까 당연한 거 아니야**라고 [질적으로 설명](../data/learning/linear-ramp-mean-explanation-01.json)했다. 원래 숫자 답은 그대로 두고 새 숫자 수정 답으로 취급하지 않는다. AI가 [08-linear-ramp.mjs](08-linear-ramp.mjs)와 해석적 상태 함수를 추가했다. [방법·근거](../docs/LINEAR_SPEED_RAMP_KR.md)는0→1가상칸/초의1초/2초 구간에서 전체 평균0.5, 거리0.5/1과 중간 시점 상태를 확인한다. 새 검사6개와 별도 위치식·속도 적분 확인은 통과했고 기존 검사 묶음은 반복하지 않았다. 코드·검사·실행은 AI 지원이며 실제 로봇이나 경로 전체의 가속 시간 검증은 아니다. 다음은 [모델의 정지 규칙 선택](../experiments/stop-turn-policy-choice-01.design.json)으로, 출발·도착 정지는 공통으로 두고 중간 모든 점에서 정지할지 방향 변경 때만 정지할지 학생이 고른다. 아직 선택은 받지 않았다.
+
+## 아홉 번째 파일 — 정지 규칙과 직진 가속·감속
+
+학생은 **2/ 더 빠르잖아**라고 [모델 규칙과 이유](../data/learning/stop-turn-policy-choice-01.json)를 골랐다. AI가 [09-acceleration-stops.mjs](09-acceleration-stops.mjs)와 별도 참고 API를 구현해2번을 새 API 기본값으로 두고1번을 비교용으로 유지했다. 기존07·점수·탐색·브라우저 기본값은 그대로다. [방법·근거](../docs/LINEAR_ACCEL_PATH_TIME_KR.md)는 같은 X/Y와 출발down·직진속도1·직진가속/감속크기1·각속도180에서1번/2번 모델 시간을X15/15초, Y17/12초로 확인한다. 직선 길이3의 출발right 제어는2번4초/1번6초다. 주어진 가상 한계의 해석적 계산이며 실측이 아니다. 전체 추적 검사141개(새12개 포함)가 통과했고 구성된 모델 평가8개는 새 지도나 독립 시행이 아니다. 다음은X가 왜 단축되지 않았는지 설명하는 [과제](../experiments/linear-accel-path-interpretation-01.design.json)다.

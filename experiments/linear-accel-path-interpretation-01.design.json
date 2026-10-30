@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "awaiting-student-post-result-countercase-explanation",
+  "proposalAuthor": "AI assistant",
+  "source": "data/learning/linear-accel-path-run-01.json",
+  "studentPriorChoice": "data/learning/stop-turn-policy-choice-01.json",
+  "question": "Under identical declared model limits, X takes15seconds for either stop rule while Y changes17to12. X's sequence is right/down/right/down/right/down. Why does X get no reduction when collinear points may be passed without stopping?",
+  "studentExplanationVerbatim": null,
+  "scope": "Guided post-result interpretation of a known analytic countercase, not a new prior forecast or physical performance conclusion. The student's original speed rationale is not treated as an explicit universal claim."
+}
