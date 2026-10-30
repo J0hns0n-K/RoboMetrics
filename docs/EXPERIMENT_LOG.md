@@ -739,6 +739,11 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Actual diff restores only goal[7,2] to[7,3]; preserved ef61be711d051d2cda68620ecf24ab192551ee71 after user shared output. [User report](../data/learning/practice-04-student-report-02.json) retains INVALID_ENDPOINT_CLEARANCE/null/0, matching the old AI baseline; user process/source-at-run not independently observed. Same archived trial10/always-fine/FIFO/budget100/body0.4+0.15 in the committed exercise.
 - AI explains rejection before search, not budget failure or an exhaustive no-route proof. No student explanation inferred, new cohort, code-method change, AI planner run or full-suite rerun. Old raw/manifests unchanged. Next known-case guided check changes only fineBudget100 to200 at original goal.
 
+## 2026-10-30 — Guided budget increase leaves reported endpoint rejection unchanged
+
+- Actual practice04 diff changes only fineBudget100 to200, keeping goal7,3/map/body/FIFO fixed. Input preserved after report as e3dcbaecbbc71a014be6fd6c8b272e7ab2c20dbf. [Report](../data/learning/practice-04-student-report-03.json) preserves the full user table: INVALID_ENDPOINT_CLEARANCE/null/0, same as the budget100 report. User process/source-at-run not independently captured; table itself does not attest the budget.
+- AI interprets known pre-search geometric rejection as unaffected by extra search budget; no student explanation inferred. No new AI planner/test execution, new map or method change; historical raw/manifests unchanged. Next [student goal-choice task](../experiments/endpoint-placement-student-01.design.json) fixes the same map/body/budgets and leaves choice/reason unset.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

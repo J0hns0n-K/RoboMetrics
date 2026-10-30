@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Original goal[7,3] restoration verified and output reported in data/learning/practice-04-student-report-02.json; user process not independently observed. Next keep goal and all other inputs fixed, change only fineBudget100 to200 in practice04, save and rerun the same command, then share output. Known-case guided endpoint-vs-budget check, not a new independent prediction/cohort.",
+  "nextTask": "Budget100-to200 edit verified; unchanged original-goal rejection reported in data/learning/practice-04-student-report-03.json. Next invite a different student-chosen goal and optional rationale on the same archived map using experiments/endpoint-placement-student-01.design.json; record before execution and keep body, world and budget200 fixed. No student choice yet.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -248,5 +248,7 @@
   ],
   "endpointPlacementPractice": "practice/04-goal-placement.mjs",
   "endpointPlacementPracticeStudentReport": "data/learning/practice-04-student-report-01.json",
-  "endpointPlacementPracticeReturnReport": "data/learning/practice-04-student-report-02.json"
+  "endpointPlacementPracticeReturnReport": "data/learning/practice-04-student-report-02.json",
+  "endpointPlacementPracticeBudgetReport": "data/learning/practice-04-student-report-03.json",
+  "endpointPlacementStudentGoalDraft": "experiments/endpoint-placement-student-01.design.json"
 }

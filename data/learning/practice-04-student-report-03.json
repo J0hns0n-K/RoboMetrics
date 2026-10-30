@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "evidenceType": "guided-user-pasted-terminal-output",
+  "verbatimUserOutput": "│ (index) │ goal  │ result                       │ worldLength │ examined │\n├─────────┼───────┼──────────────────────────────┼─────────────┼──────────┤\n│ 0       │ '7,3' │ 'INVALID_ENDPOINT_CLEARANCE' │ null        │ 0        │\n└─────────┴───────┴──────────────────────────────┴─────────────┴──────────┘",
+  "reportedFields": {
+    "goal": [7, 3],
+    "status": "INVALID_ENDPOINT_CLEARANCE",
+    "geometricLength": null,
+    "expanded": 0
+  },
+  "editVerification": {
+    "file": "practice/04-goal-placement.mjs",
+    "parameter": "fineBudget",
+    "before": 100,
+    "after": 200,
+    "actualDiffInspected": true,
+    "changedLines": 1,
+    "goalUnchanged": [7, 3],
+    "preservedInputCommit": "e3dcbaecbbc71a014be6fd6c8b272e7ab2c20dbf",
+    "commitTiming": "After the user shared output; not a pre-execution source freeze."
+  },
+  "configuredContext": {
+    "archivedMapTrial": 10,
+    "mode": "always-fine",
+    "fineBudget": 200,
+    "tieBreak": "fifo",
+    "radius": 0.4,
+    "clearance": 0.15
+  },
+  "comparisonReport": "data/learning/practice-04-student-report-02.json",
+  "aiReferenceValidation": "data/footprint/endpoint-placement-controls-validation-01.json",
+  "provenance": {
+    "student": "Saved guided fineBudget100-to200 edit, verified on disk, and pasted the result table.",
+    "ai": "Provided scaffold, selected the budget intervention, execution instructions and interpretation.",
+    "userProcessIndependentlyObserved": false,
+    "userExecutionSourceHashCaptured": false,
+    "studentExplanationReceived": false
+  },
+  "interpretationByAi": "Shared tables at configured budgets100 and200 both show the same endpoint-clearance rejection with null length and zero examined positions. The existing implementation rejects before search, so increasing the search budget does not alter this geometric validity condition.",
+  "scope": "Guided user reports and verified file edits, not independently observed user execution, a new independent map, algorithm improvement, physical result or student-authored explanation. Pasted tables do not attest budget or all other settings; configured context is bound to inspected files.",
+  "nextTask": "experiments/endpoint-placement-student-01.design.json"
+}
