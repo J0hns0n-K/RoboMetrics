@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student A90/B180 confirmed; AI rotation descriptor and eleven focused tests recorded in data/learning/path-rotation-run-01.json. Next experiments/path-rotation-initial-heading-01.design.json asks initial alignment only when starting down: X first moves right, Y first moves down. Await actual student answers before changing/running initial-down X/Y. No student answer yet or timing/dynamics/physical claim.",
+  "nextTask": "Student first-move alignment X90/Y0 at initial down recorded in data/learning/path-rotation-initial-heading-answer-01.json. practice06 inspected stillright. Next student opens06 in Notepad via Ctrl+O, changes only initialHeading right todown and saves; inspect exact diff and preserve input before new AI execution. No initial-down configured X/Y run or saved edit yet verified; keep right-heading artifacts immutable.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -279,5 +279,6 @@
   "headingAngleDraft": "experiments/heading-angle-01.design.json",
   "headingAngleAnswer": "data/learning/heading-angle-answer-01.json",
   "pathRotationRun": "data/learning/path-rotation-run-01.json",
-  "pathRotationInitialHeadingDraft": "experiments/path-rotation-initial-heading-01.design.json"
+  "pathRotationInitialHeadingDraft": "experiments/path-rotation-initial-heading-01.design.json",
+  "pathRotationInitialHeadingAnswer": "data/learning/path-rotation-initial-heading-answer-01.json"
 }

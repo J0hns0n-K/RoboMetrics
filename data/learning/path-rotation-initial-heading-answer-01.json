@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "`X: 90도 / Y: 0도`  ",
+  "studentInitialAlignmentDegrees": {"X": 90, "Y": 0},
+  "studentRationale": null,
+  "task": "experiments/path-rotation-initial-heading-01.design.json",
+  "context": "AI asked only for alignment before the first move when initially facing down. X's first move is right and Y's is down; internal path rotations were not part of this answer.",
+  "practiceStateAtRecording": {
+    "file": "practice/06-path-rotation.mjs",
+    "inspectedInitialHeading": "right",
+    "studentInputEditVerified": false,
+    "configuredInitialDownRunCompleted": false
+  },
+  "roles": {
+    "student": "Correctly supplied the two initial-alignment angles before the practice input was changed or the initial-down X/Y condition was run.",
+    "ai": "Provided the starting heading, route properties, geometric convention, task and code; reviewed the hand answer."
+  },
+  "scope": "Guided initial-condition hand calculation, not full-path rotation totals, independently verified CLI output, measured turn timing, student code or a new path/planner result."
+}

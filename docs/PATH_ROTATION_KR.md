@@ -27,4 +27,4 @@
 
 이 결과는 기하학적 방향 정렬 지표다. 실제 회전 속도·가속도·미끄러짐·제어 오차·회전 반경·충돌 가능성·시간·에너지를 검증한 결과가 아니다. 경로 선택이나 운동학 모델을 구현했다는 주장도 하지 않는다.
 
-다음 [출발 방향 민감도 과제](../experiments/path-rotation-initial-heading-01.design.json)는 처음 방향만 아래로 바꾸었을 때 첫 이동 전 필요한 각도를 학생에게 묻는다. 아래 방향 출발의 X/Y 구성 실행은 아직 하지 않았다.
+다음 [출발 방향 민감도 과제](../experiments/path-rotation-initial-heading-01.design.json)는 처음 방향만 아래로 바꾸었을 때 첫 이동 전 필요한 각도를 학생에게 묻는다. 학생은 [X: 90도 / Y: 0도](../data/learning/path-rotation-initial-heading-answer-01.json)라고 첫 이동 전 정렬 각도를 답했다. 확인 당시 실습06의 값은 여전히 `right`였으며, 다음은 메모장에서 `initialHeading`을 `down`으로 바꾸어 저장하는 단계다. 아래 방향 출발의 X/Y 구성 실행은 아직 하지 않았다.
