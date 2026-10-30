@@ -834,6 +834,11 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Fixed schematic X/Y, initial down, v1/a1/angular180: every-waypoint/turns-only timesX15/15s,Y17/12s. SelectedYtranslation16to11s, rotation1s fixed; Xfive intermediate stops unchanged. Straight length3/initial right: selected4s for unit/half-step sampling, alternate6s/about8.49s intentionally requests more stops on refinement. Legacy instantaneous9/9 bytes and old source/fixtures preserved.
 - Conditional analytic model result, not measured time/energy, hardware calibration, timed dynamics/controller/collision validation or global route optimum. Linear acceleration finite, angular-rate changes still instantaneous and jerk unbounded. Student rationale not promoted to a universal claim. Next [X countercase explanation](../experiments/linear-accel-path-interpretation-01.design.json) pending.
 
+## 2026-10-30 — Student interpretation of the equal-time countercase
+
+- [Exact student explanation](../data/learning/linear-accel-path-interpretation-01.json) attributes X's unchanged time to repeated direction changes preventing the benefit of straight continuation. Guided post-result reasoning, consistent with the declared rest-before-turn assumption; not a new forecast, timing derivation or physical measurement. AI clarifies the fixed speed cap and retains the existing [source-bound run](../data/learning/linear-accel-path-run-01.json) unchanged.
+- Documentation only; no new model/test/planner/hardware execution. Next [student design](../experiments/linear-accel-route-design-01.design.json) rearranges exactly three right and three down moves in an obstacle-free schematic plane at fixed endpoints, length and model limits. No student route or new result yet.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

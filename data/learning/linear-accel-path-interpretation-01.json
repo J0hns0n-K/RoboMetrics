@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "계속 방향을 바꿨으니까 그렇지. 직선에서는 속도가 빨라지는데 방향을 계속 바꾸니까 그렇지.",
+  "task": "experiments/linear-accel-path-interpretation-01.design.json",
+  "evidence": "data/learning/linear-accel-path-run-01.json",
+  "evidenceSourceCommit": "bcb4eaeddff127185abc9cdceb21218460b89aca",
+  "context": "AI presented the already checked X equal-time case and alternating right/down sequence after the student selected turns-only stopping. This is guided post-result interpretation, not a prior prediction.",
+  "review": {
+    "matchesDeclaredModel": true,
+    "studentReasoning": "Frequent changes of direction prevent the benefit of continuing along a straight run.",
+    "aiClarification": "Under the declared stop-before-turn assumption, every intermediate X waypoint requires rest under either policy. Longer straight runs permit continued motion subject to the speed cap; speed does not grow indefinitely.",
+    "notInferred": "No exact stop count, timing arithmetic, route redesign, code authorship, physical measurement or universal performance guarantee attributed to the student."
+  },
+  "roles": {
+    "student": "Supplied the quoted qualitative explanation after seeing results.",
+    "ai": "Supplied question, model assumptions, existing implementation/results, review and recording."
+  },
+  "execution": "Documentation and learning record only; no new model, test, planner or hardware execution.",
+  "nextTask": "experiments/linear-accel-route-design-01.design.json"
+}

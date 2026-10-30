@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student turns-only choice/reason implemented in separate bounded-linear-acceleration API, checked in data/learning/linear-accel-path-run-01.json with141full tracked tests and eight analytic controls. Fixed X15/15s,Y17/12s under every-waypoint/turns-only. Next experiments/linear-accel-path-interpretation-01.design.json asks why X has no reduction using its alternating directions. Student explanation pending; model seconds not measured time, angular acceleration still omitted.",
+  "nextTask": "Student explained the equal-time X case by its repeated direction changes; see data/learning/linear-accel-path-interpretation-01.json. Next experiments/linear-accel-route-design-01.design.json requests a student six-move rearrangement at fixed endpoints, length and model limits before any new evaluation. No new model/test/planner/hardware execution.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -299,5 +299,7 @@
   "stopTurnPolicyChoiceDraft": "experiments/stop-turn-policy-choice-01.design.json",
   "stopTurnPolicyStudentChoice": "data/learning/stop-turn-policy-choice-01.json",
   "linearAccelPathRun": "data/learning/linear-accel-path-run-01.json",
-  "linearAccelPathInterpretationDraft": "experiments/linear-accel-path-interpretation-01.design.json"
+  "linearAccelPathInterpretationDraft": "experiments/linear-accel-path-interpretation-01.design.json",
+  "linearAccelPathInterpretation": "data/learning/linear-accel-path-interpretation-01.json",
+  "linearAccelRouteDesignDraft": "experiments/linear-accel-route-design-01.design.json"
 }

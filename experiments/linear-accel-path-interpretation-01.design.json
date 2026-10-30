@@ -1,11 +1,13 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "awaiting-student-post-result-countercase-explanation",
+  "status": "student-post-result-explanation-recorded",
   "proposalAuthor": "AI assistant",
   "source": "data/learning/linear-accel-path-run-01.json",
   "studentPriorChoice": "data/learning/stop-turn-policy-choice-01.json",
   "question": "Under identical declared model limits, X takes15seconds for either stop rule while Y changes17to12. X's sequence is right/down/right/down/right/down. Why does X get no reduction when collinear points may be passed without stopping?",
-  "studentExplanationVerbatim": null,
-  "scope": "Guided post-result interpretation of a known analytic countercase, not a new prior forecast or physical performance conclusion. The student's original speed rationale is not treated as an explicit universal claim."
+  "studentExplanationVerbatim": "계속 방향을 바꿨으니까 그렇지. 직선에서는 속도가 빨라지는데 방향을 계속 바꾸니까 그렇지.",
+  "scope": "Guided post-result interpretation of a known analytic countercase, not a new prior forecast or physical performance conclusion. The student's original speed rationale is not treated as an explicit universal claim.",
+  "answerRecord": "data/learning/linear-accel-path-interpretation-01.json",
+  "nextTask": "experiments/linear-accel-route-design-01.design.json"
 }
