@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student first ramp-distance answer1 preserved in data/learning/linear-ramp-distance-attempt-01.json; AI explains mean0.5/distance0.5 for the1s profile. No student correction or reasoning inferred. Next experiments/linear-ramp-duration-01.design.json asks average speed and distance for0-to1virtualcell/s over2s, after this worked example. No acceleration code or execution yet; existing nominal-time artifacts unchanged.",
+  "nextTask": "Student2s ramp answer average1/distance1 preserved in data/learning/linear-ramp-duration-attempt-01.json: distance correct, average should0.5 under declared model. AI supplies terminal-versus-average diagram and distance/time review. Ask one-sentence student explanation why the whole-interval mean is below terminal speed; do not infer a correction or cause not stated. No production acceleration code, CLI/planner/test run or physical data.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -292,5 +292,6 @@
   "pathNominalAngular180Run": "data/learning/path-nominal-time-run-02.json",
   "linearRampDistanceDraft": "experiments/linear-ramp-distance-01.design.json",
   "linearRampFirstAttempt": "data/learning/linear-ramp-distance-attempt-01.json",
-  "linearRampDurationDraft": "experiments/linear-ramp-duration-01.design.json"
+  "linearRampDurationDraft": "experiments/linear-ramp-duration-01.design.json",
+  "linearRampDurationFirstAttempt": "data/learning/linear-ramp-duration-attempt-01.json"
 }

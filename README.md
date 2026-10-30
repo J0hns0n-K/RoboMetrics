@@ -138,7 +138,7 @@ After [hand-calculating X9/Y9 and explicitly identifying a tie](data/learning/pa
 | X | 180degrees/s | 6 | 540degrees | 6s | 3s | 9s |
 | Y | 180degrees/s | 8 | 180degrees | 8s | 1s | 9s |
 
-The rates remain uncalibrated assumptions with instantaneous rate changes; acceleration, slip, tracking, sensing and collision feasibility are not validated. Nominal seconds are not measured travel duration or elapsed program time. No existing score/search objective changes, and no globally fastest path is established. Next is a [linear-speed-ramp hand calculation](experiments/linear-ramp-distance-01.design.json) to examine the instantaneous-start assumption before any finite-acceleration code is added. Core point-planner/browser results remain intact; differential-drive dynamics, control, sensing and physical measurements remain future work. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
+The rates remain uncalibrated assumptions with instantaneous rate changes; acceleration, slip, tracking, sensing and collision feasibility are not validated. Nominal seconds are not measured travel duration or elapsed program time. No existing score/search objective changes, and no globally fastest path is established. Next is a [linear-speed-ramp hand calculation](experiments/linear-ramp-distance-01.design.json) to examine the instantaneous-start assumption before a tested finite-acceleration motion module is added. Core point-planner/browser results remain intact; differential-drive dynamics, control, sensing and physical measurements remain future work. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
 
 ## Run and inspect
 

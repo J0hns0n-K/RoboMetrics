@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "`평균 속도: 1칸/초 / 이동 거리: 1칸`  ",
+  "studentAverageSpeed": 1,
+  "studentDistance": 1,
+  "studentRationale": null,
+  "task": "experiments/linear-ramp-duration-01.design.json",
+  "givenProfile": {
+    "initialSpeed": 0,
+    "finalSpeed": 1,
+    "speedUnits": "virtual cells per second",
+    "duration": 2,
+    "durationUnits": "seconds",
+    "speedShape": "linear increase"
+  },
+  "priorGuidance": "AI had already explained average0.5 and distance0.5 for the1s ramp before asking this2s transfer case.",
+  "assessmentByAi": {
+    "averageSpeedMatchesDeclaredModel": false,
+    "distanceMatchesDeclaredModel": true,
+    "reportedPairConsistentWithDistanceEqualsAverageTimesDuration": false,
+    "correctAverageSpeed": 0.5,
+    "correctDistance": 1,
+    "review": "For the declared linear profile, mean=(0+1)/2=0.5. Independently, the correctly reported distance1 divided by duration2 gives average0.5, not1. No unstated student reasoning is inferred."
+  },
+  "studentAverageCorrectionReceived": false,
+  "aiVisualGuidance": {
+    "purpose": "Distinguish terminal instantaneous speed1 from whole-interval average0.5 and distance1 for the2s ramp.",
+    "author": "AI assistant",
+    "conversationOnlyFragment": "ramp-average-speed.html",
+    "sha256Bytes": "04ac88eca6aced8030512fa4fc8d7efb4f713b484590bda550f84842a2827b2e",
+    "renderReview": {
+      "wideOuterWidth": 736,
+      "wideFragmentWidth": 704,
+      "narrowOuterWidth": 320,
+      "narrowFragmentWidth": 288,
+      "method": "Standalone skill wrapper and isolated headless Chrome screenshots; narrow wrapper body explicitly constrained to320px to overcome desktop headless minimum viewport width. Both final layouts visually inspected.",
+      "labelsReadableAndUnclipped": true
+    },
+    "learnerInteractionObserved": false,
+    "projectAccelerationModuleImplemented": false
+  },
+  "scope": "Partially correct guided hand answer: preserve reported average1 and distance1; teacher correction/diagram is AI-authored. No student correction or explanation, production acceleration module, timed robot model, physical measurement, CLI/planner run or new test suite inferred.",
+  "nextTask": "Ask for one-sentence explanation of why whole-interval average speed is below terminal speed in this linear ramp, using the AI visual. Student explanation pending."
+}
