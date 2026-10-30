@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Guided goal edit verified in commit6987e798f18038200517a520e738a80acebfd173 and reproduced by AI in data/learning/practice-04-run-01.json. Next student directly runs node practice/04-goal-placement.mjs and shares output. Student operation not yet verified; no independent design or new research data claim.",
+  "nextTask": "User pasted guided A result; preserve data/learning/practice-04-student-report-01.json as a user report, not independent process evidence. Next change only practice04 goal[7,2] back to original[7,3], save, run the same command and share output for a guided known-baseline comparison. No independent prediction/new research claim.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -246,5 +246,6 @@
     "data/footprint/endpoint-placement-controls-run-01.json",
     "data/footprint/endpoint-placement-controls-validation-01.json"
   ],
-  "endpointPlacementPractice": "practice/04-goal-placement.mjs"
+  "endpointPlacementPractice": "practice/04-goal-placement.mjs",
+  "endpointPlacementPracticeStudentReport": "data/learning/practice-04-student-report-01.json"
 }

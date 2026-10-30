@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "evidenceType": "guided-user-pasted-terminal-output",
+  "reportedContext": "After PowerShell could not resolve node, AI located an existing runtime and provided an absolute-path command for practice/04-goal-placement.mjs. The user then pasted the result table.",
+  "verbatimUserOutput": "│ (index) │ goal  │ result        │ worldLength │ examined │\n├─────────┼───────┼───────────────┼─────────────┼──────────┤\n│ 0       │ '7,2' │ 'ROUTE_FOUND' │ 9           │ 38       │",
+  "reportedFields": {
+    "goal": [7, 2],
+    "status": "ROUTE_FOUND",
+    "geometricLength": 9,
+    "expanded": 38
+  },
+  "practiceInputCommit": "6987e798f18038200517a520e738a80acebfd173",
+  "aiReproductionRecord": "data/learning/practice-04-run-01.json",
+  "configuredContext": {
+    "archivedMapTrial": 10,
+    "mode": "always-fine",
+    "fineBudget": 100,
+    "tieBreak": "fifo",
+    "radius": 0.4,
+    "clearance": 0.15
+  },
+  "provenance": {
+    "student": "Verified guided coordinate edit, followed by shared terminal output after execution instructions.",
+    "ai": "Scaffold, reference target, command instructions, prior independently recorded AI execution, and documentation.",
+    "userProcessIndependentlyObserved": false,
+    "userExecutionSourceHashCaptured": false,
+    "matchesExistingAiResult": true
+  },
+  "scope": "User-reported guided reproduction, not an independently observed run, new research sample, algorithm change or independent placement discovery. Configured context identifies the committed exercise; the pasted table alone does not attest every setting.",
+  "nextTask": "Guided return-to-baseline check: change goal [7,2] back to [7,3], save, run the same command and share output. The baseline result was already explained; this is not a blind prediction."
+}

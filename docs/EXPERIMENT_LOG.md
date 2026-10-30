@@ -729,6 +729,11 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - AI ran `node practice/04-goal-placement.mjs`: ROUTE_FOUND/world9/examined38 on archived trial10, always-fine/FIFO/budget100/radius0.4/clearance0.15. [Run record](../data/learning/practice-04-run-01.json) includes exact stdout, source/input hashes and unchanged research/source bytes. Baseline G remains preserved in practice-04-setup-01.json; old cohort/manifests untouched.
 - No algorithm change, new independent maps or full-suite rerun. Student operation remains unverified; next is direct student execution and output sharing. Unrelated practice02/portfolio preserved.
 
+## 2026-10-30 — User shared practice04 terminal output
+
+- PowerShell could not resolve node; AI checked the existing local runtime and supplied its full-path command. Student then pasted goal7,2 / ROUTE_FOUND / world9 / examined38. [Report](../data/learning/practice-04-student-report-01.json) preserves exact pasted text and provenance separately from the AI-run record.
+- This is a guided user report matching the prior one-map result, not independently observed execution or new research data. No algorithm/raw data changes or new test/planner execution in this recording step. Next return goal to original[7,3] and share the resulting status for a controlled guided comparison.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
