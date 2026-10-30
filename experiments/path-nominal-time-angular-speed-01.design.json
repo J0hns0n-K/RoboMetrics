@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "student-recalculation-recorded-guided-input-edit-pending",
+  "status": "guided-edit-and-ai-angular180-check-completed",
   "proposalAuthor": "AI assistant",
   "parentTask": "experiments/path-nominal-time-01.design.json",
   "fixtures": "experiments/path-turn-score-01.config.json",
@@ -21,6 +21,10 @@
   "studentComparison": "tie",
   "studentRationale": null,
   "nextGuidedEditAfterAnswer": "Change only practice07 angularSpeedDegrees from90 to180, inspect actual saved diff and preserve a new source-bound result rather than replacing the90 baseline.",
-  "scope": "Student hand-recalculated X9/Y9 and explicitly identified a tie under AI-supplied ideal rates. Practice07 inspected stillangular90; no saved parameter edit or configured angular180 X/Y run verified. Not physical timing/calibration, new routes, student code or changed planner.",
-  "studentAnswerRecord": "data/learning/path-nominal-time-angular-speed-answer-01.json"
+  "scope": "Student hand-calculated X9/Y9 tie and saved verified90-to180 input. New AI check confirms same nominal times with fixed geometry/translation and halved rotation duration, original90 bytes preserved. No physical timing/calibration, student code/operation or global-optimality claim. Next linear-ramp hand answer pending; no acceleration code.",
+  "studentAnswerRecord": "data/learning/path-nominal-time-angular-speed-answer-01.json",
+  "studentEditRecord": "data/learning/path-nominal-time-edit-01.json",
+  "runProtocol": "experiments/path-nominal-time-02.protocol.json",
+  "runRecord": "data/learning/path-nominal-time-run-02.json",
+  "nextTask": "experiments/linear-ramp-distance-01.design.json"
 }

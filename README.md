@@ -129,12 +129,16 @@ Rotation magnitude and starting orientation expose a further limit of event coun
 
 The current extension is an [ideal nominal-duration proxy](docs/NOMINAL_PATH_TIME_KR.md), not a timed controller or hardware result. At AI-assumed linear speed1virtualcell/s and angular speed90degrees/s, with initial down and sequential translation/rotation, `nominal seconds = world length / linear speed + total rotation degrees / angular speed`. Junmo [hand-calculated X12/Y10](data/learning/path-nominal-time-answer-01.json); AI implemented the helper, exercise and checks. The [source-bound execution](data/learning/path-nominal-time-run-01.json), under its [protocol](experiments/path-nominal-time-01.protocol.json), records the components below. Twelve focused tests pass: six new duration tests and six existing rotation tests; the old101 suite was not repeated. Independent path/heading/rate arithmetic agrees, with no new planner calls, BFS or maps.
 
-| Fixed schematic path | World length | Total rotation, initial alignment included | Nominal translation | Nominal rotation | Nominal total |
-|---|---:|---:|---:|---:|---:|
-| X | 6 | 540degrees | 6s | 6s | 12s |
-| Y | 8 | 180degrees | 8s | 2s | 10s |
+After [hand-calculating X9/Y9 and explicitly identifying a tie](data/learning/path-nominal-time-angular-speed-answer-01.json), Junmo saved the [verified angular90-to180 input edit](data/learning/path-nominal-time-edit-01.json). The [separate source-bound check](data/learning/path-nominal-time-run-02.json), under its [protocol](experiments/path-nominal-time-02.protocol.json), confirms the tie and preserves the original90-rate artifact. Geometry and translation stay fixed; only rotation components halve. Unchanged module/fixture/test hashes reuse the prior twelve-test record without repeating tests for this input-only change.
 
-The rates are uncalibrated assumptions with instantaneous rate changes; acceleration, slip, tracking, sensing and collision feasibility are not validated. Nominal seconds are not measured travel duration or elapsed program time. No existing score/search objective changes, and no globally fastest path is established. At the offered angular180degrees/s condition, Junmo [hand-calculated X9/Y9 and explicitly identified a tie](data/learning/path-nominal-time-angular-speed-answer-01.json). Practice07 was stillangular90 at inspection; next is the guided one-parameter edit and configured check, still pending. The hand answer remains separate from an executed result. Core point-planner/browser results remain intact; differential-drive dynamics, control, sensing and physical measurements remain future work. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
+| Fixed schematic path | Assumed angular speed | World length | Total rotation, initial alignment included | Nominal translation | Nominal rotation | Nominal total |
+|---|---:|---:|---:|---:|---:|---:|
+| X | 90degrees/s | 6 | 540degrees | 6s | 6s | 12s |
+| Y | 90degrees/s | 8 | 180degrees | 8s | 2s | 10s |
+| X | 180degrees/s | 6 | 540degrees | 6s | 3s | 9s |
+| Y | 180degrees/s | 8 | 180degrees | 8s | 1s | 9s |
+
+The rates remain uncalibrated assumptions with instantaneous rate changes; acceleration, slip, tracking, sensing and collision feasibility are not validated. Nominal seconds are not measured travel duration or elapsed program time. No existing score/search objective changes, and no globally fastest path is established. Next is a [linear-speed-ramp hand calculation](experiments/linear-ramp-distance-01.design.json) to examine the instantaneous-start assumption before any finite-acceleration code is added. Core point-planner/browser results remain intact; differential-drive dynamics, control, sensing and physical measurements remain future work. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
 
 ## Run and inspect
 

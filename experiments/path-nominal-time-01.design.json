@@ -32,7 +32,7 @@
     "Y": 10
   },
   "studentRationale": null,
-  "scope": "Student X12/Y10 baseline hand calculation confirmed by separate AI nominal-duration code/checks. Student then hand-calculated angular180 X9/Y9 and a tie; that input edit/configured run remain pending. No measured runtime/travel time, timed controller, differential-drive dynamics, calibration or collision feasibility claim.",
+  "scope": "Student X12/Y10 baseline times confirmed by AI proxy/checks; child angular180 X9/Y9 tie and saved input also confirmed by a separate AI run. No measured runtime/travel time, timed controller, differential-drive dynamics, calibration or collision feasibility claim. Next linear-ramp distance hand task pending before acceleration code.",
   "studentAnswerRecord": "data/learning/path-nominal-time-answer-01.json",
   "durationProtocol": "experiments/path-nominal-time-01.protocol.json",
   "nextTask": "experiments/path-nominal-time-angular-speed-01.design.json",

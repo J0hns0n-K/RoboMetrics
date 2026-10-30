@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "executedAtUTC": "2026-10-30T08:08:49.735440+00:00",
+  "sourceCommit": "bec838276d1a7f490337b4efcc9bca4dae967bb0",
+  "operator": "AI assistant CLI",
+  "protocol": "experiments/path-nominal-time-02.protocol.json",
+  "fixtures": "experiments/path-turn-score-01.config.json",
+  "studentAnswer": "data/learning/path-nominal-time-angular-speed-answer-01.json",
+  "verifiedStudentEdit": "data/learning/path-nominal-time-edit-01.json",
+  "configuredRun": {
+    "commandSource": "const {results}=await import('./practice/07-path-time.mjs');process.stderr.write(JSON.stringify(results));",
+    "exitCode": 0,
+    "stdout": "가정한 속도: 1칸/초, 180도/초. 직진과 회전을 순서대로 계산합니다.\n┌─────────┬───────┬─────────────┬──────────────────────┬────────────────────┬─────────────────┬────────────────┐\n│ (index) │ route │ worldLength │ totalRotationDegrees │ translationSeconds │ rotationSeconds │ nominalSeconds │\n├─────────┼───────┼─────────────┼──────────────────────┼────────────────────┼─────────────────┼────────────────┤\n│ 0       │ 'X'   │ 6           │ 540                  │ 6                  │ 3               │ 9              │\n│ 1       │ 'Y'   │ 8           │ 180                  │ 8                  │ 1               │ 9              │\n└─────────┴───────┴─────────────┴──────────────────────┴────────────────────┴─────────────────┴────────────────┘\n",
+    "diagnosticStreamPurpose": "stderr carries exported calculation JSON, not errors; no duplicate CLI execution.",
+    "initialHeading": "down",
+    "linearSpeed": 1,
+    "linearSpeedUnits": "virtual cells per second",
+    "angularSpeedDegrees": 180,
+    "angularSpeedUnits": "degrees per second",
+    "results": [
+      {
+        "route": "X",
+        "worldLength": 6,
+        "initialHeading": "down",
+        "initialAlignmentDegrees": 90,
+        "pathRotationDegrees": 450,
+        "totalRotationDegrees": 540,
+        "linearSpeed": 1,
+        "angularSpeedDegrees": 180,
+        "translationSeconds": 6,
+        "rotationSeconds": 3,
+        "nominalSeconds": 9
+      },
+      {
+        "route": "Y",
+        "worldLength": 8,
+        "initialHeading": "down",
+        "initialAlignmentDegrees": 0,
+        "pathRotationDegrees": 180,
+        "totalRotationDegrees": 180,
+        "linearSpeed": 1,
+        "angularSpeedDegrees": 180,
+        "translationSeconds": 8,
+        "rotationSeconds": 1,
+        "nominalSeconds": 9
+      }
+    ],
+    "lowerOfferedNominalTimeRoutes": [
+      "X",
+      "Y"
+    ],
+    "comparison": "tie",
+    "measuredElapsedTime": false
+  },
+  "pairedComparison": {
+    "baseline": "data/learning/path-nominal-time-run-01.json",
+    "baselineSha256Bytes": "4c39f4479803220ff83ee0d9141253bcf0e64959bff48773fbf57144df508067",
+    "changedInput": "Assumed angularSpeedDegrees90 to180 only",
+    "heldFixed": "Exact schematic X/Y paths/endpoints, initial down, geometric length/rotation, linear speed1virtualcell/s, instantaneous sequential stop-and-turn equation/code.",
+    "conditions": [
+      {
+        "angularSpeedDegrees": 90,
+        "nominalSeconds": {
+          "X": 12,
+          "Y": 10
+        },
+        "lowerOfferedNominalTimeRoutes": [
+          "Y"
+        ]
+      },
+      {
+        "angularSpeedDegrees": 180,
+        "nominalSeconds": {
+          "X": 9,
+          "Y": 9
+        },
+        "lowerOfferedNominalTimeRoutes": [
+          "X",
+          "Y"
+        ]
+      }
+    ],
+    "interpretationByAi": "Only rotation components halve; translation stays fixed, so totals do not simply halve. These two offered paths become tied at9 nominal seconds under the changed assumed rate."
+  },
+  "validation": {
+    "independentPythonAudits": [
+      {
+        "route": "X",
+        "worldLength": 6,
+        "totalRotationDegrees": 540,
+        "translationSeconds": 6,
+        "rotationSeconds": 3.0,
+        "nominalSeconds": 9.0,
+        "directGeometryAndRateArithmeticMatches": true,
+        "geometryAndTranslationUnchanged": true,
+        "rotationDurationHalved": true
+      },
+      {
+        "route": "Y",
+        "worldLength": 8,
+        "totalRotationDegrees": 180,
+        "translationSeconds": 8,
+        "rotationSeconds": 1.0,
+        "nominalSeconds": 9.0,
+        "directGeometryAndRateArithmeticMatches": true,
+        "geometryAndTranslationUnchanged": true,
+        "rotationDurationHalved": true
+      }
+    ],
+    "studentTimesAndExplicitTieMatch": true,
+    "baselineBytesUnchanged": true,
+    "sourceFixtureAndAnswerBytesUnchanged": true,
+    "sha256Bytes": {
+      "practice/07-path-time.mjs": "efa5424b060864fcf8bb2814f5af452efff0321db160deaba5f58db50c249caf",
+      "src/nominal-path-time.mjs": "2037bf50b8f0b4e7eeffd1239b15ed04ae4ccbce6dbab66cc7b9a77328015195",
+      "src/path-rotation.mjs": "e2b388168713b7dc42028e7b9199a782bf45b216fa7487cfa4a076b9c608d84b",
+      "src/path-metrics.mjs": "9813941430e2fa6c8f1096032108d5572e350f6889923ce49c8212b26390af58",
+      "experiments/path-turn-score-01.config.json": "6959b179884c81e06eed7ac54e416c022616fd0a0957f40c831557fe6ad31237",
+      "experiments/path-nominal-time-02.protocol.json": "9faa6a73a75ca7c28f80308d8c993d23f424f6d759bb2dab4c7db6462b344998",
+      "data/learning/path-nominal-time-angular-speed-answer-01.json": "f24573cfa741dbbf1c553bb372636ea39f84400031698005c8ba7c6e67dfffdd",
+      "data/learning/path-nominal-time-edit-01.json": "deeb7bea1d95d06f793cbc3fff40d8c058236c984d22b85720dd6861be4ae3a8"
+    },
+    "unchangedModuleFixtureTestHashesMatchBaseline": true,
+    "priorTwelveTestArchiveHashesVerified": true,
+    "testsRerun": false,
+    "configuredCliExecutions": 1,
+    "newPlannerCalls": 0,
+    "newBfsCalls": 0,
+    "newIndependentMaps": 0
+  },
+  "roles": {
+    "student": "Hand-calculated X9/Y9, explicitly identified a tie, and saved the verified guided90-to180 input edit.",
+    "ai": "Supplied rates/model/paths/code/instructions, inspected/froze input, operated CLI and independent arithmetic, and wrote records. No user execution or measured time inferred."
+  },
+  "scope": "Ideal nominal-time rate sensitivity, not actual elapsed program/travel time, timed simulator/controller, hardware actuation/calibration, dynamics/collision feasibility, new route or global optimum. Instantaneous rate changes remain an assumption.",
+  "nextTask": "experiments/linear-ramp-distance-01.design.json"
+}

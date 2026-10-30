@@ -815,6 +815,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - [Run](../data/learning/path-nominal-time-run-01.json): twelve focused tests (six new duration/six existing rotation), one CLI computation. X L6/Theta540degrees gives translation6s/rotation6s/nominal12s; Y8/180 gives8s/2s/10s. Python reconstructs geometry and rates, agreeing with prior geometric results, exported fields and student times. Prior source/fixture/evidence hashes match; zero planner/BFS/maps and no old101-suite repetition. AI derives Y lower among the offered paths, not a student choice or global optimum.
 - Nominal model seconds, not actual elapsed runtime/travel measurement, timed trajectory simulation, differential-drive dynamics, tracking control or collision/energy validation. Next [angular180 exercise](../experiments/path-nominal-time-angular-speed-01.design.json) awaits actual student answer before that X/Y condition is edited/run.
 
+## 2026-10-30 — Angular-rate sensitivity confirms a nominal-time tie
+
+- Student previously hand-calculated X9/Y9 and explicitly said 같아졌어, then saved the guided angular90-to180 edit. [Verified edit](../data/learning/path-nominal-time-edit-01.json) and new protocol/sourcebec838276d1a7f490337b4efcc9bca4dae967bb0 preserved before AI execution.
+- [New run/paired comparison](../data/learning/path-nominal-time-run-02.json): same X/Y geometry, initial down, linear1virtualcell/s and ideal sequential-rate model. Xtranslation6s/rotation3s/nominal9s, Y8s/1s/9s; direct Python geometry/rate arithmetic and student tie agree. Original angular90 bytes unchanged. Translation stays fixed; only rotation duration halves. Module/fixture/test and prior twelve-test TAP hashes match; no unit-test repeat for parameter-only change. One CLI calculation, zero planner/BFS/new maps.
+- No measured elapsed/travel time, physical actuation/calibration, timed controller/dynamics/collision or global-optimality result. Next [linear-ramp distance task](../experiments/linear-ramp-distance-01.design.json) examines the instantaneous-speed assumption with an explicit0-to1virtualcell/s over1s profile; student answer and acceleration code pending.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
