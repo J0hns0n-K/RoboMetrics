@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "1칸",
+  "studentDistance": 1,
+  "studentRationale": null,
+  "task": "experiments/linear-ramp-distance-01.design.json",
+  "givenProfile": {"initialSpeed":0, "finalSpeed":1, "speedUnits":"virtual cells per second", "duration":1, "durationUnits":"seconds", "speedShape":"linear increase"},
+  "priorGuidance": "The prompt already supplied the mean-speed formula for a linear ramp and distance=mean speed*time.",
+  "aiWorkedExample": {
+    "averageSpeed": 0.5,
+    "distance": 0.5,
+    "derivation": "average=(0+1)/2=0.5 virtualcell/s; distance=0.5*1=0.5 virtualcell.",
+    "review": "The first answer1 does not match the declared linear-speed profile. One cell is the constant-speed1virtualcell/s,1second comparison, not the ramp's distance.",
+    "authorship": "AI explanation, not a student correction or a software/physical measurement. Do not infer the student's unstated reasoning."
+  },
+  "studentCorrectionReceived": false,
+  "scope": "First guided hand-calculation attempt preserved verbatim. No acceleration code, simulation, test/planner execution or measured motor result. A worked example is provided before the next transfer task.",
+  "nextTask": "experiments/linear-ramp-duration-01.design.json"
+}

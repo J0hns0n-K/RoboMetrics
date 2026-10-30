@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "awaiting-student-two-second-ramp-calculation",
+  "proposalAuthor": "AI assistant",
+  "parentTask": "experiments/linear-ramp-distance-01.design.json",
+  "priorWorkedExample": "data/learning/linear-ramp-distance-attempt-01.json",
+  "profile": {"initialSpeed":0, "finalSpeed":1, "speedUnits":"virtual cells per second", "duration":2, "durationUnits":"seconds", "speedShape":"linear increase across the whole interval"},
+  "heldFixed": "Initial and final speeds and the linear shape; duration changes from1 to2seconds. This changes the acceleration slope, not the final speed.",
+  "studentTask": "After the AI worked example for1second, give both average speed and distance when speed rises evenly from0 to1virtualcell/s over2seconds.",
+  "formulaHint": "averageSpeed=(initialSpeed+finalSpeed)/2; distance=averageSpeed*duration, for this linear ramp only.",
+  "studentAverageSpeed": null,
+  "studentDistance": null,
+  "studentRationale": null,
+  "scope": "Guided transfer hand exercise after an explicit AI correction, not a blind forecast, acceleration implementation, measured motion or student-authored model. Existing nominal-time code/results stay unchanged."
+}

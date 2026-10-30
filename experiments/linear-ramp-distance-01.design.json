@@ -1,14 +1,25 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "awaiting-student-ramp-distance",
+  "status": "first-attempt-preserved-ai-worked-example-provided",
   "proposalAuthor": "AI assistant",
   "motivation": "Examine the instantaneous-speed assumption in the nominal stop-and-turn proxy before introducing finite acceleration.",
   "parentResult": "data/learning/path-nominal-time-run-02.json",
-  "oneDimensionalProfile": {"initialPosition":0, "initialSpeed":0, "finalSpeed":1, "speedUnits":"virtual cells per second", "duration":1, "durationUnits":"seconds", "speedShape":"linear increase across the whole interval"},
+  "oneDimensionalProfile": {
+    "initialPosition": 0,
+    "initialSpeed": 0,
+    "finalSpeed": 1,
+    "speedUnits": "virtual cells per second",
+    "duration": 1,
+    "durationUnits": "seconds",
+    "speedShape": "linear increase across the whole interval"
+  },
   "studentTask": "A schematic robot starts at rest and increases speed evenly from0 to1virtualcell/s over1second. How many virtual cells does it travel during that second?",
   "formulaHint": "For this linear-speed ramp only: averageSpeed=(initialSpeed+finalSpeed)/2; distance=averageSpeed*duration.",
-  "studentDistance": null,
+  "studentDistance": 1,
   "studentRationale": null,
-  "scope": "Pending guided one-dimensional kinematic hand calculation, not measured motor acceleration, a completed acceleration/timed-trajectory implementation, controller, collision or physical test. Existing constant-rate proxy and its archived results remain unchanged."
+  "scope": "Student first answer1 preserved; AI worked example gives0.5 from the declared1s linear ramp. No student correction/rationale inferred. Next guided2s transfer calculation pending; acceleration code, timed simulation, controller and physical tests not implemented.",
+  "studentFirstAttemptRecord": "data/learning/linear-ramp-distance-attempt-01.json",
+  "studentCorrectionReceived": false,
+  "nextTask": "experiments/linear-ramp-duration-01.design.json"
 }
