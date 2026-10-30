@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "awaiting-student-message",
+  "proposalAuthor": "AI assistant",
+  "purpose": "Turn the student's guided insufficient-space interpretation into a clear actionable user-facing message in the existing practice CLI.",
+  "parentTask": "experiments/endpoint-placement-student-01.design.json",
+  "interpretationRecord": "data/learning/endpoint-student-interpretation-01.json",
+  "targetStatus": "INVALID_ENDPOINT_CLEARANCE",
+  "studentTask": "Write one Korean sentence for a user that gives both the insufficient-space reason and what the user should do next.",
+  "studentMessageVerbatim": null,
+  "plannedIntegration": "After recording the student's exact text, add it as a conditional explanatory message to practice/04-goal-placement.mjs. Keep goal, body, budgets, algorithm, raw status, numerical output and original research data unchanged. Do not automatically move the goal. AI supplies conditional wiring; attribute the message text separately to the student after it is actually provided.",
+  "plannedChecks": "Check the displayed text for the known invalid case and ensure a valid result is not labeled invalid. Record the real check method and operator; no claim that display text improves planning performance.",
+  "scope": "Small CLI communication task proposed by AI, not completed implementation, new search policy, browser integration or physical safety feature. No student message or new execution yet."
+}

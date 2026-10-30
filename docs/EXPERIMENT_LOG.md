@@ -756,6 +756,11 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - [AI run02](../data/learning/endpoint-student-choice-run-02.json) returns ROUTE_FOUND/world8/examined31. Direct geometry: world center6.5,1.5; boundary clearance1.5; nearest obstacle5,0 clearance sqrt(0.5), above required strict0.55. Source/raw bytes unchanged. Existing successful-path adjacency/swept guards run within the unchanged library; no additional independent BFS or full-suite repeat. One new AI exercise evaluation, not a new independent map/student run.
 - Different goals mean this is not a matched-goal path-length improvement or algorithm change. Next obtain student post-result explanation of why8,4 and6,1 differ; no student interpretation yet.
 
+## 2026-10-30 — Guided endpoint interpretation recorded
+
+- Student wrote **공간이 부족해서** in response to the post-result8,4-vs6,1 explanation prompt. [Record](../data/learning/endpoint-student-interpretation-01.json) preserves the exact phrase, prior AI guidance and limits: insufficient-space attribution, not a detailed independent boundary/obstacle calculation or forecast.
+- No new planner/test execution, map, result or algorithm change. Next [message task](../experiments/endpoint-feedback-message-01.design.json) asks the student for a one-sentence reason-plus-action message for the existing CLI; text and implementation remain pending.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

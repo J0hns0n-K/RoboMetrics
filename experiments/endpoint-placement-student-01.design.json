@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "revised-choice-checked-awaiting-student-interpretation",
+  "status": "guided-choice-and-post-result-interpretation-recorded",
   "proposalAuthor": "AI assistant",
   "purpose": "Let the student choose a different goal on the known archived map after guided parameter editing and terminal operation.",
   "mapSource": "data/footprint/resolution-quality-prospective-run-01.json",
@@ -55,15 +55,17 @@
   "studentPrediction": null,
   "prompt": "Choose an empty cell different from the start and the two previously tried goals. Give (x,y), and optionally why it seems suitable. Consider the body and margin near walls and the outer boundary.",
   "procedureAfterChoice": "Record the exact choice and rationale before a new execution. Keep original map/start/body/margin and budgets unchanged, change only the practice goal, inspect the actual saved diff, and separate student-reported operation from AI checks. Endpoint fit alone does not guarantee a route or a result within budget.",
-  "scope": "Student chose8,4 then6,1 and saved each goal edit. AI checked both on the same known map: first clearance-invalid, second valid route. No reasons or explicit outcome forecasts supplied; student post-result explanation pending. Different goal inputs do not establish an algorithm gain/new independent cohort. Original raw artifacts immutable.",
+  "scope": "Student chose8,4 then6,1 and saved each edit; AI checked both. Student later attributed failure to insufficient space after AI explanation. No prior rationale or explicit forecast, detailed student proof, algorithm gain or new independent cohort. Original raw artifacts immutable.",
   "studentChoiceRecord": "data/learning/endpoint-student-choice-01.json",
   "aiCheckRecord": "data/learning/endpoint-student-choice-run-01.json",
-  "nextPrompt": "Explain in your own words why goal8,4 was rejected but revised goal6,1 admitted a route. Post-result guided interpretation, not a new prediction.",
+  "nextPrompt": "Write one Korean user-facing sentence containing the insufficient-space reason and what to do next. Student text not yet supplied.",
   "studentRevisedGoal": [
     6,
     1
   ],
   "studentRevisedChoiceRecord": "data/learning/endpoint-student-choice-02.json",
   "studentRevisedAiCheckRecord": "data/learning/endpoint-student-choice-run-02.json",
-  "studentPostResultExplanation": null
+  "studentPostResultExplanation": "공간이 부족해서",
+  "studentPostResultExplanationRecord": "data/learning/endpoint-student-interpretation-01.json",
+  "nextTask": "experiments/endpoint-feedback-message-01.design.json"
 }

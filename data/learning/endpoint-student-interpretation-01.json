@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "공간이 부족해서",
+  "promptContext": "After AI explained and checked why student-selected goal8,4 was clearance-invalid while revised goal6,1 admitted a route, the student was asked for a one-sentence explanation of the different outcomes.",
+  "evidenceType": "guided-post-result-student-explanation",
+  "contextualReading": "Attributes the failed placement to insufficient space. The phrase does not independently specify the boundary, obstacle, exact distances, model or successful-case mechanism.",
+  "aiClarification": "In the assumed model, the goal8,4 center is too close to the right world boundary and the wall directly above for the body plus requested margin. Goal6,1 passes endpoint clearance and an AI run found a route. This detail was provided by AI, not authored in the student's short response.",
+  "references": {
+    "firstChoice": "data/learning/endpoint-student-choice-01.json",
+    "firstAiRun": "data/learning/endpoint-student-choice-run-01.json",
+    "revisedChoice": "data/learning/endpoint-student-choice-02.json",
+    "revisedAiRun": "data/learning/endpoint-student-choice-run-02.json"
+  },
+  "scope": "Post-result guided explanation only, not a prior forecast, independent geometric proof, algorithm implementation, student-run measurement or new experimental data.",
+  "nextTask": "experiments/endpoint-feedback-message-01.design.json"
+}

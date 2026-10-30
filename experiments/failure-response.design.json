@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Revised student-selected goal6,1 and matching edit verified; AI result in data/learning/endpoint-student-choice-run-02.json is ROUTE_FOUND/world8/examined31 at unchanged map/body/budget200. Next obtain student post-result explanation of why8,4 failed clearance and6,1 admitted a route. No student rationale, explicit forecast or explanation supplied yet; no algorithm improvement claim.",
+  "nextTask": "Student guided post-result response recorded verbatim as 공간이 부족해서 in data/learning/endpoint-student-interpretation-01.json. Next ask for one Korean user-facing sentence that explains insufficient space and the next action, under experiments/endpoint-feedback-message-01.design.json. No message text/integration yet; retain raw status, goal/body/budget/algorithm and research data.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -254,5 +254,7 @@
   "endpointPlacementStudentChoice": "data/learning/endpoint-student-choice-01.json",
   "endpointPlacementStudentChoiceAiRun": "data/learning/endpoint-student-choice-run-01.json",
   "endpointPlacementStudentRevisedChoice": "data/learning/endpoint-student-choice-02.json",
-  "endpointPlacementStudentRevisedAiRun": "data/learning/endpoint-student-choice-run-02.json"
+  "endpointPlacementStudentRevisedAiRun": "data/learning/endpoint-student-choice-run-02.json",
+  "endpointPlacementStudentInterpretation": "data/learning/endpoint-student-interpretation-01.json",
+  "endpointFeedbackMessageDraft": "experiments/endpoint-feedback-message-01.design.json"
 }
