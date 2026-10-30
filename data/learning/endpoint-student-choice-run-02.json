@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "executedAtUTC": "2026-10-30T01:26:38.971683+00:00",
+  "operator": "AI assistant CLI",
+  "sourceCommit": "1ff88230e9921da08eac594de7598f8b0e758d42",
+  "choiceRecord": "data/learning/endpoint-student-choice-02.json",
+  "protocol": "experiments/endpoint-placement-student-01.design.json",
+  "command": "node practice/04-goal-placement.mjs",
+  "stdout": "도착점만 바꾸는 안내된 연습입니다. 원래 실험 자료는 수정하거나 덮어쓰지 않습니다.\n┌─────────┬───────┬───────────────┬─────────────┬──────────┐\n│ (index) │ goal  │ result        │ worldLength │ examined │\n├─────────┼───────┼───────────────┼─────────────┼──────────┤\n│ 0       │ '6,1' │ 'ROUTE_FOUND' │ 8           │ 31       │\n└─────────┴───────┴───────────────┴─────────────┴──────────┘\n",
+  "stderr": "",
+  "exitCode": 0,
+  "input": {
+    "archivedTrial": 10,
+    "goal": [
+      6,
+      1
+    ],
+    "mode": "always-fine",
+    "fineBudget": 200,
+    "tieBreak": "fifo",
+    "radius": 0.4,
+    "clearance": 0.15
+  },
+  "observedOutput": {
+    "status": "ROUTE_FOUND",
+    "geometricLength": 8.0,
+    "expanded": 31
+  },
+  "geometryAudit": {
+    "goalPointCellFree": true,
+    "goalWorldCenter": [
+      6.5,
+      1.5
+    ],
+    "boundaryCenterClearance": 1.5,
+    "nearestObstacleCenterClearance": 0.7071067811865476,
+    "nearestObstacles": [
+      [
+        5,
+        0
+      ]
+    ],
+    "requiredCenterClearanceStrictlyGreaterThan": 0.55,
+    "endpointClearanceValid": true,
+    "auditMethod": "Direct point-to-boundary and original closed-square distance arithmetic; same assumed geometry, not hardware validation."
+  },
+  "validation": {
+    "sourceAndResearchArtifactBytesUnchanged": true,
+    "sha256Bytes": {
+      "practice/04-goal-placement.mjs": "4b544d5d572e3cd3a93c082f2203cc50de1519f9036a2df6c967e45803a059b1",
+      "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+      "src/disk-footprint.mjs": "d65440878eea0718b28c61357948e3e56e48227213a5ea2c732961cd156853e8",
+      "src/resolution-policy.mjs": "dc071ca5af42d67d5de1143c0166526ec1affe85f8cf064594aa2e190c139293",
+      "data/footprint/resolution-quality-prospective-run-01.json": "839d229c4c12c0fbda9fb7eeb3645ca348827232a6c447041029332f76a2d9fc",
+      "experiments/disk-model-clearance015-01.config.json": "05eb114289bcc542081674dd9aa70a5cc9a362513d57d8e7b8e94f74dc8bf658",
+      "data/footprint/endpoint-placement-controls-validation-01.json": "547bb550376203ad28d3f4adf3bb1a167d1a44f943a576341e2cf7a56f627f7c"
+    },
+    "committedPracticeUnchangedAtRun": true,
+    "consoleFieldsParsed": true,
+    "existingSuccessfulPathGuards": "Unchanged library checks sampled adjacency and swept segments against original geometry before returning a successful path. No additional independent BFS or path audit performed in this exercise.",
+    "fullSuiteRerun": false,
+    "newIndependentMaps": 0
+  },
+  "roles": {
+    "student": "Revised goal choice6,1 and matching saved edit; no reason or explicit outcome forecast supplied.",
+    "ai": "Scaffold/task, source recording, one exercise execution, endpoint geometry audit and interpretation; no student run inferred."
+  },
+  "scope": "One new goal assignment on the same archived known map. Scope any path length to the half-step four-neighbor model, not global continuous optimum, algorithm improvement or physical performance.",
+  "nextTask": "Student explains why6,1 differs from8,4 in endpoint clearance, using the observed results; no explanation received yet."
+}

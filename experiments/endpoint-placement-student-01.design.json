@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "revised-choice-recorded-ai-check-pending",
+  "status": "revised-choice-checked-awaiting-student-interpretation",
   "proposalAuthor": "AI assistant",
   "purpose": "Let the student choose a different goal on the known archived map after guided parameter editing and terminal operation.",
   "mapSource": "data/footprint/resolution-quality-prospective-run-01.json",
@@ -55,13 +55,15 @@
   "studentPrediction": null,
   "prompt": "Choose an empty cell different from the start and the two previously tried goals. Give (x,y), and optionally why it seems suitable. Consider the body and margin near walls and the outer boundary.",
   "procedureAfterChoice": "Record the exact choice and rationale before a new execution. Keep original map/start/body/margin and budgets unchanged, change only the practice goal, inspect the actual saved diff, and separate student-reported operation from AI checks. Endpoint fit alone does not guarantee a route or a result within budget.",
-  "scope": "Student first chose8,4; AI check rejected clearance. Student now chose6,1 and saved matching goal edit after explanation; no reason or explicit success forecast supplied. New AI check pending. Same known map/body/budget, no new independent cohort or algorithm change.",
+  "scope": "Student chose8,4 then6,1 and saved each goal edit. AI checked both on the same known map: first clearance-invalid, second valid route. No reasons or explicit outcome forecasts supplied; student post-result explanation pending. Different goal inputs do not establish an algorithm gain/new independent cohort. Original raw artifacts immutable.",
   "studentChoiceRecord": "data/learning/endpoint-student-choice-01.json",
   "aiCheckRecord": "data/learning/endpoint-student-choice-run-01.json",
-  "nextPrompt": "Choose another empty cell inside x1..7 and y1..5, apart from the start and previous goals, considering nearby walls too. Optional rationale; keep body/world/budget fixed.",
+  "nextPrompt": "Explain in your own words why goal8,4 was rejected but revised goal6,1 admitted a route. Post-result guided interpretation, not a new prediction.",
   "studentRevisedGoal": [
     6,
     1
   ],
-  "studentRevisedChoiceRecord": "data/learning/endpoint-student-choice-02.json"
+  "studentRevisedChoiceRecord": "data/learning/endpoint-student-choice-02.json",
+  "studentRevisedAiCheckRecord": "data/learning/endpoint-student-choice-run-02.json",
+  "studentPostResultExplanation": null
 }

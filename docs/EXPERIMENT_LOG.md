@@ -750,6 +750,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - [AI run and validation](../data/learning/endpoint-student-choice-run-01.json): INVALID_ENDPOINT_CLEARANCE/null/0. Empty original point cell; world center8.5,4.5 is0.5 from the right boundary and obstacle8,3, below required strict0.55. Direct distance arithmetic agrees. Source/raw byte hashes unchanged; no full-suite rerun or new independent map. One new AI exercise evaluation, no path-search expansions; student execution not inferred.
 - Next revised student choice should account for both boundary and obstacle clearance; no second location selected yet. Physical motion/safety, algorithm improvement and student explanation not established.
 
+## 2026-10-30 — Revised student goal(6,1) admits a route
+
+- Student chose(6,1) after AI clearance explanation; saved diff only goal8,4 to6,1. [Choice02](../data/learning/endpoint-student-choice-02.json) and input1ff88230e9921da08eac594de7598f8b0e758d42 committed before AI execution. No reason or explicit outcome forecast supplied. Same known trial10/start/body0.4+0.15/always-fine/FIFO/budget200.
+- [AI run02](../data/learning/endpoint-student-choice-run-02.json) returns ROUTE_FOUND/world8/examined31. Direct geometry: world center6.5,1.5; boundary clearance1.5; nearest obstacle5,0 clearance sqrt(0.5), above required strict0.55. Source/raw bytes unchanged. Existing successful-path adjacency/swept guards run within the unchanged library; no additional independent BFS or full-suite repeat. One new AI exercise evaluation, not a new independent map/student run.
+- Different goals mean this is not a matched-goal path-length improvement or algorithm change. Next obtain student post-result explanation of why8,4 and6,1 differ; no student interpretation yet.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

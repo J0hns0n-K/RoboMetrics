@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student chose8,4 and saved matching input; AI check in data/learning/endpoint-student-choice-run-01.json rejects boundary/obstacle clearance. Next invite a revised interior empty goal, considering walls, with optional rationale. Keep archived map/start/body/budget200 unchanged and record selection before new execution. No student reason/prediction or new choice yet.",
+  "nextTask": "Revised student-selected goal6,1 and matching edit verified; AI result in data/learning/endpoint-student-choice-run-02.json is ROUTE_FOUND/world8/examined31 at unchanged map/body/budget200. Next obtain student post-result explanation of why8,4 failed clearance and6,1 admitted a route. No student rationale, explicit forecast or explanation supplied yet; no algorithm improvement claim.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -252,5 +252,7 @@
   "endpointPlacementPracticeBudgetReport": "data/learning/practice-04-student-report-03.json",
   "endpointPlacementStudentGoalDraft": "experiments/endpoint-placement-student-01.design.json",
   "endpointPlacementStudentChoice": "data/learning/endpoint-student-choice-01.json",
-  "endpointPlacementStudentChoiceAiRun": "data/learning/endpoint-student-choice-run-01.json"
+  "endpointPlacementStudentChoiceAiRun": "data/learning/endpoint-student-choice-run-01.json",
+  "endpointPlacementStudentRevisedChoice": "data/learning/endpoint-student-choice-02.json",
+  "endpointPlacementStudentRevisedAiRun": "data/learning/endpoint-student-choice-run-02.json"
 }
