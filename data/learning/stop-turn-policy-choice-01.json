@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "2/ 더 빠르잖아",
+  "studentChoice": "2",
+  "selectedPolicy": "turns-only",
+  "studentRationaleVerbatim": "더 빠르잖아",
+  "task": "experiments/stop-turn-policy-choice-01.design.json",
+  "context": "AI offered rest at every supplied intermediate waypoint versus continuing through collinear points and resting before turns. Both start and goal are at rest.",
+  "studentExpectedEffect": "Selected the second model rule expecting faster travel; no numeric forecast or universal proof supplied.",
+  "roles": {
+    "student": "Selected the virtual-model stop rule and supplied a speed rationale before implementation/checks.",
+    "ai": "Provided options, later selects explicit virtual limits, authors profile/composition code and controls, and operates validation."
+  },
+  "scope": "Guided model-design choice and qualitative expectation, not measured physical behavior, student-authored code, calibrated acceleration or a proven gain on every path."
+}

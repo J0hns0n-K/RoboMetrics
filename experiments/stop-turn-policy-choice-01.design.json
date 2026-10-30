@@ -1,16 +1,44 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "awaiting-student-model-stop-policy-choice",
+  "status": "student-choice-recorded-ai-linear-acceleration-check-pending",
   "proposalAuthor": "AI assistant",
   "motivation": "Before composing finite acceleration/braking into path duration, explicitly choose where the model requires rest.",
-  "straightExample": {"waypoints":[[0,0],[1,0],[2,0],[3,0]], "startAndGoalAtRest":true},
-  "choices": {
-    "1": {"id":"every-waypoint", "meaning":"Require rest at each supplied intermediate waypoint, then start again."},
-    "2": {"id":"turns-only", "meaning":"Continue through collinear intermediate waypoints; require rest before direction changes and at the goal."}
+  "straightExample": {
+    "waypoints": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ]
+    ],
+    "startAndGoalAtRest": true
   },
-  "studentChoice": null,
-  "studentRationale": null,
-  "implementationStatus": "No path-wide finite-acceleration or stop-policy implementation yet. Existing instantaneous path-time proxy stays unchanged.",
-  "scope": "A proposed virtual-model design decision, not an established physical robot behavior or universal best controller. Record the actual choice/reason before implementation; keep alternate assumptions explicit."
+  "choices": {
+    "1": {
+      "id": "every-waypoint",
+      "meaning": "Require rest at each supplied intermediate waypoint, then start again."
+    },
+    "2": {
+      "id": "turns-only",
+      "meaning": "Continue through collinear intermediate waypoints; require rest before direction changes and at the goal."
+    }
+  },
+  "studentChoice": "2",
+  "studentRationale": "더 빠르잖아",
+  "implementationStatus": "AI added a separate finite-linear-acceleration timing reference with turns-only default and explicit every-waypoint control; validation pending. Angular-rate changes remain instantaneous. Legacy nominal model unchanged.",
+  "scope": "Student chose the offered turns-only rule expecting faster travel, no numeric or universal proof. AI supplied virtual limits/equations/code/controls; no physical behavior or calibration established. Configured checks pending.",
+  "studentChoiceRecord": "data/learning/stop-turn-policy-choice-01.json",
+  "runProtocol": "experiments/linear-accel-path-01.protocol.json"
 }

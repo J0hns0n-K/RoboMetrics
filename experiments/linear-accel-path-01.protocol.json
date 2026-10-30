@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "ready-before-linear-acceleration-path-controls",
+  "methodAuthor": "AI assistant",
+  "studentChoice": "data/learning/stop-turn-policy-choice-01.json",
+  "config": "experiments/linear-accel-path-01.config.json",
+  "legacyBaseline": "data/learning/path-nominal-time-run-02.json",
+  "primaryPolicy": "turns-only",
+  "controlPolicy": "every-waypoint",
+  "model": "Finite symmetric linear acceleration/braking from rest to rest on each required translation run, bounded speed1virtualcell/s and acceleration1virtualcell/s^2. Short runs use triangular speed, longer ones include cruise. Constant angular speed180degrees/s still starts/stops instantaneously; initial down, no final-heading alignment. Sequential forward-only translation/in-place rotation, no jerk/steering/slip/controller/collision/hardware validation.",
+  "controls": "Four X/Y policy evaluations on the same fixed schematic paths. Four straight evaluations: unit/half-step samples of the same length3 path, initial right, each policy. turns-only collinear resampling must preserve geometry/time; every-waypoint refinement intentionally changes required stops, not the same physical stop task.",
+  "plannedChecks": "Commit source/choice/config first. Run the explicit test/*.test.mjs files once for a full tracked-test-directory regression, excluding unrelated portfolio. Archive a new TAP. Import practice09 once and capture all eight model results, operations and scalar profiles. Independently reconstruct runs/headings and duration formulas, numerically integrate phase speeds and check rest/caps/continuity/distance. Compare unchanged legacy9/9 bytes/source and preserve all historical artifacts.",
+  "scope": "Known analytic controls, not new maps, held-out workload, measured travel time/CPU/energy, a timed robot simulator, calibrated actuator model or globally fastest route. Student selected the offered stop rule and gave a qualitative speed reason; limits/equations/code/tests/operation remain AI support. Do not infer strict improvement on every route."
+}

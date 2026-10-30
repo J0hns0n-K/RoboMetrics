@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "fixtureAuthor": "AI assistant",
+  "studentChoice": "data/learning/stop-turn-policy-choice-01.json",
+  "primaryPolicy": "turns-only",
+  "controlPolicy": "every-waypoint",
+  "schematicPaths": "experiments/path-turn-score-01.config.json",
+  "motionLimits": {"initialHeading":"down", "linearSpeed":1, "linearAcceleration":1, "angularSpeedDegrees":180},
+  "units": {"distance":"virtual cells", "speed":"virtual cells per second", "linearAcceleration":"virtual cells per second squared", "angle":"degrees", "angularSpeedDegrees":"degrees per second", "time":"model seconds"},
+  "straightControls": [
+    {"id":"straight-unit", "initialHeading":"right", "path":[[0,0],[1,0],[2,0],[3,0]]},
+    {"id":"straight-half", "initialHeading":"right", "path":[[0,0],[0.5,0],[1,0],[1.5,0],[2,0],[2.5,0],[3,0]]}
+  ],
+  "scope": "Known schematic controls, no obstacle/hardware validation. Linear acceleration/braking finite, angular rate changes still instantaneous. Every-waypoint refinement changes the required stops intentionally; turns-only must be invariant to collinear resampling."
+}
