@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "studentInput": "data/learning/linear-accel-route-design-01.json",
+  "baselineFixture": "experiments/path-turn-score-01.config.json",
+  "baselineId": "X",
+  "motionLimits": {
+    "initialHeading": "down",
+    "linearSpeed": 1,
+    "linearAcceleration": 1,
+    "angularSpeedDegrees": 180,
+    "stopPolicy": "turns-only"
+  },
+  "studentPath": [[0,0],[1,0],[1,1],[1,2],[2,2],[2,3],[3,3]],
+  "coordinateTranscriptionAuthor": "AI assistant, from the student's arrow sequence",
+  "controls": "Same start (0,0), goal (3,3), six unit moves, virtual motion limits and stop rule. Only path shape changes; obstacle-free schematic plane."
+}

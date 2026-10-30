@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "`→`  `↓` `↓` `→` `↓` `→`   ",
+  "normalizedSequence": ["right", "down", "down", "right", "down", "right"],
+  "task": "experiments/linear-accel-route-design-01.design.json",
+  "roles": {
+    "student": "Designed the six-arrow sequence in response to fixed endpoints/length and a request to reduce required stops.",
+    "ai": "Provided constraints and baseline; transcribes arrows to coordinates, implements the comparison wrapper, operates checks and records results."
+  },
+  "scope": "Student schematic route design only. No student numeric time forecast, code authorship, independently observed execution, physical measurement or claim of optimality."
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "frozen-before-student-route-evaluation",
+  "methodAuthor": "AI assistant",
+  "config": "experiments/linear-accel-route-01.config.json",
+  "studentInput": "data/learning/linear-accel-route-design-01.json",
+  "baselineRun": "data/learning/linear-accel-path-run-01.json",
+  "comparison": "Two known schematic paths, baseline X and student rearrangement, under turns-only; fixed endpoints, length and motion limits. Required intermediate stops exclude start and goal; initial alignment contributes separately to rotation/time.",
+  "checks": [
+    "Commit inputs, protocol and wrapper before configured execution.",
+    "Run the existing 12 linear-accel-path-time tests once and archive a new TAP. No core code change; the earlier full 141-test run remains historical evidence, not a new full-suite run.",
+    "Import practice10 once, capturing two results with profiles/operations. Independently reconstruct coordinates, unit moves, endpoints, runs, minimum heading rotations and duration formulas in Python.",
+    "Check model outputs against independent arithmetic; check source/config/input and previous run/TAP bytes remain unchanged. Archive under new names without overwriting historical artifacts."
+  ],
+  "scope": "AI-operated analytic validation of student route design. No new map cohort, search/BFS, hardware, measured runtime/energy, calibrated motion, collision/steering validation or global optimum. Linear acceleration/braking finite; angular-rate changes still instantaneous."
+}
