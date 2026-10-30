@@ -1,21 +1,60 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "awaiting-student-goal-choice",
+  "status": "student-choice-recorded-ai-check-pending",
   "proposalAuthor": "AI assistant",
   "purpose": "Let the student choose a different goal on the known archived map after guided parameter editing and terminal operation.",
   "mapSource": "data/footprint/resolution-quality-prospective-run-01.json",
   "mapTrial": 10,
-  "originalRows": [".....#...", ".##......", "..#......", "......#.#", ".........", "..#....#.", ".....#..#"],
-  "start": [1, 3],
+  "originalRows": [
+    ".....#...",
+    ".##......",
+    "..#......",
+    "......#.#",
+    ".........",
+    "..#....#.",
+    ".....#..#"
+  ],
+  "start": [
+    1,
+    3
+  ],
   "coordinateConvention": "Zero-based x increases right from0 to8, y increases downward from0 to6. Input is [x,y], with body center at [x+0.5,y+0.5].",
-  "displayRows": [".....#...", ".##......", "..#......", ".S....#G#", ".........", "..#....#.", ".....#..#"],
-  "fixedInputs": {"radius": 0.4, "clearance": 0.15, "mode": "always-fine", "fineBudget": 200, "coarseBudget": 100, "tieBreak": "fifo"},
-  "previouslyTriedGoals": [[7, 2], [7, 3]],
-  "studentGoal": null,
+  "displayRows": [
+    ".....#...",
+    ".##......",
+    "..#......",
+    ".S....#G#",
+    ".........",
+    "..#....#.",
+    ".....#..#"
+  ],
+  "fixedInputs": {
+    "radius": 0.4,
+    "clearance": 0.15,
+    "mode": "always-fine",
+    "fineBudget": 200,
+    "coarseBudget": 100,
+    "tieBreak": "fifo"
+  },
+  "previouslyTriedGoals": [
+    [
+      7,
+      2
+    ],
+    [
+      7,
+      3
+    ]
+  ],
+  "studentGoal": [
+    8,
+    4
+  ],
   "studentRationale": null,
   "studentPrediction": null,
   "prompt": "Choose an empty cell different from the start and the two previously tried goals. Give (x,y), and optionally why it seems suitable. Consider the body and margin near walls and the outer boundary.",
   "procedureAfterChoice": "Record the exact choice and rationale before a new execution. Keep original map/start/body/margin and budgets unchanged, change only the practice goal, inspect the actual saved diff, and separate student-reported operation from AI checks. Endpoint fit alone does not guarantee a route or a result within budget.",
-  "scope": "Known-map guided goal-choice task, not a blinded new research cohort, guaranteed success or algorithm improvement. No student choice or new planner execution has occurred. Original raw artifacts remain immutable."
+  "scope": "Known-map guided task with student-selected8,4 and verified matching one-line edit. No reason or success prediction supplied; new AI check pending. Not a blind new research cohort or algorithm improvement. Original raw artifacts remain immutable.",
+  "studentChoiceRecord": "data/learning/endpoint-student-choice-01.json"
 }

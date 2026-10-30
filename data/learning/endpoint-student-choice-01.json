@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "(8,4)",
+  "studentGoal": [8, 4],
+  "studentRationale": null,
+  "studentSuccessPrediction": null,
+  "task": "experiments/endpoint-placement-student-01.design.json",
+  "editVerification": {
+    "file": "practice/04-goal-placement.mjs",
+    "actualDiffInspected": true,
+    "before": "const goal = [7, 3];",
+    "after": "const goal = [8, 4];",
+    "changedLines": 1,
+    "otherSettingsUnchanged": true,
+    "fineBudget": 200
+  },
+  "roles": {
+    "student": "Chose coordinate8,4 in the AI-framed known-map task and saved the matching one-line input edit, verified on disk.",
+    "ai": "Supplied map, scaffold, task and constraints; recorded choice before a new AI check. No success prediction or rationale is inferred."
+  },
+  "scope": "Student-selected input on an already examined synthetic map, not algorithm authorship, a new independent map or an independently observed student run."
+}
