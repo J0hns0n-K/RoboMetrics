@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "awaiting-student-prior-prediction",
+  "proposalAuthor": "AI assistant",
+  "context": "data/learning/linear-accel-route-run-02.json",
+  "question": "Under the same initial-down heading and all current model limits, compare student down/down/down/right/right/right against right/right/right/down/down/down. Both have length6 and one internal direction change. Will model time be the same or which sequence will take longer? Give a prediction/reason before this order control is evaluated.",
+  "controls": {
+    "initialHeading": "down",
+    "linearSpeed": 1,
+    "linearAcceleration": 1,
+    "angularSpeedDegrees": 180,
+    "stopPolicy": "turns-only",
+    "startAndGoalAtRest": true,
+    "sameEndpoints": [
+      [
+        0,
+        0
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "length": 6,
+    "internalDirectionChanges": 1,
+    "obstacles": "none; schematic"
+  },
+  "studentPredictionVerbatim": null,
+  "scope": "Pending known-route initial-alignment control. Reversed order has not been evaluated in this configured condition; not a physical forecast or global optimum."
+}

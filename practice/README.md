@@ -141,3 +141,7 @@ const fieldName = '____';
 ## 열 번째 파일 — 학생이 설계한 같은 거리의 경로
 
 [10-student-route.mjs](10-student-route.mjs)는 [학생의 여섯 화살표](../data/learning/linear-accel-route-design-01.json)를 AI가 좌표로 옮겨 기존 X와 비교한다. 경로 설계는 학생, 좌표 변환·비교 코드·검사·실행은 AI 지원이다. [새 결과](../data/learning/linear-accel-route-run-01.json)와 [방법·한계](../docs/LINEAR_ACCEL_PATH_TIME_KR.md)는 같은 출발·도착·거리6·출발down·2번 규칙·속도1/가속도1/각속도180에서 중간 정지5→4번, 모델 시간15→13.5초를 확인한다. 기존 모델 검사12개가 통과했고 이전 전체141개는 반복하지 않았다. 실제 로봇 측정이나 새 지도 탐색이 아니다. 다음은 오른쪽3번·아래3번으로 방향을 정확히1번 바꾸는 [새 순서 설계](../experiments/linear-accel-route-design-02.design.json)다.
+
+## 열한 번째 파일 — 한 번만 방향을 바꾸는 학생 경로
+
+학생은 `↓ ↓ ↓ → → →`를 [설계](../data/learning/linear-accel-route-design-02.json)했다. AI의 [11-one-turn-route.mjs](11-one-turn-route.mjs)는 세 경로를 같은 조건에서 비교한다. [새 실행](../data/learning/linear-accel-route-run-02.json)과 [방법·한계](../docs/LINEAR_ACCEL_PATH_TIME_KR.md)는 새 경로의 중간 정지1번·출발 정렬0도·8.5모델 초를 확인한다. 앞선 학생 경로13.5초와 X15초도 재현됐다. 같은 출발·도착·거리6·출발down·2번 규칙·속도1/가속도1/각속도180의 가상 조건이다. 내부 전환과 출발 정렬이 함께 달라졌으며 실제 측정이나 최속 경로 증명이 아니다. AI가 별도 수식·좌표·위상 확인을 수행했다. 기존 소스·검사·12개 통과 TAP 해시를 확인해 검사 반복은 하지 않았다. 다음은 `→ → → ↓ ↓ ↓`로 순서를 뒤집었을 때 시간을 [먼저 예상하는 과제](../experiments/linear-accel-initial-order-01.design.json)다.

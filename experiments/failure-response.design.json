@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student six-arrow route right/down/down/right/down/right meets the fixed-endpoint six-move constraints. AI check data/learning/linear-accel-route-run-01.json gives 13.5 versus baseline15 model seconds, intermediate stops4 versus5, under fixed turns-only limits. Next experiments/linear-accel-route-design-02.design.json requests exactly one internal direction change before evaluation.",
+  "nextTask": "Student designed down/down/down/right/right/right. New source-bound analytic check data/learning/linear-accel-route-run-02.json gives one intermediate stop, zero initial alignment and8.5modelseconds at fixed endpoints/length/limits. Next experiments/linear-accel-initial-order-01.design.json asks for a prediction comparing reversed segment order with the same one-change count before evaluation.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -304,5 +304,8 @@
   "linearAccelRouteDesignDraft": "experiments/linear-accel-route-design-01.design.json",
   "linearAccelStudentRoute": "data/learning/linear-accel-route-design-01.json",
   "linearAccelStudentRouteRun": "data/learning/linear-accel-route-run-01.json",
-  "linearAccelNextRouteDesignDraft": "experiments/linear-accel-route-design-02.design.json"
+  "linearAccelNextRouteDesignDraft": "experiments/linear-accel-route-design-02.design.json",
+  "linearAccelStudentOneTurnRoute": "data/learning/linear-accel-route-design-02.json",
+  "linearAccelStudentOneTurnRun": "data/learning/linear-accel-route-run-02.json",
+  "linearAccelInitialOrderDraft": "experiments/linear-accel-initial-order-01.design.json"
 }

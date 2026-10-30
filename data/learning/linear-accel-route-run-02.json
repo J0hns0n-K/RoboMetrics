@@ -1,0 +1,1129 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "executedAtUTC": "2026-10-30T14:52:03.943031+00:00",
+  "sourceCommit": "7ce73d87652e06da3bbcd16c2d8daa7225a13ef1",
+  "operator": "AI assistant CLI",
+  "protocol": "experiments/linear-accel-route-02.protocol.json",
+  "config": "experiments/linear-accel-route-02.config.json",
+  "studentInput": "data/learning/linear-accel-route-design-02.json",
+  "tests": {
+    "rerun": false,
+    "reusedEvidence": "data/learning/linear-accel-route-run-01.json",
+    "archive": "data/learning/linear-accel-route-tests-01.tap",
+    "sha256Bytes": "141b585f23a51c09af3b51447c040a0c37d313c0756e08046be1e5f6d3d16315",
+    "previousPassed": 12,
+    "previousFailed": 0,
+    "reason": "Core/dependency/test hashes unchanged. New wrapper/input validated by configured execution and independent arithmetic; no new tests or full-suite run claimed."
+  },
+  "configuredRun": {
+    "commandSource": "const {results}=await import('./practice/11-one-turn-route.mjs');process.stderr.write(JSON.stringify(results));",
+    "exitCode": 0,
+    "stdout": "같은 거리·출발 방향·운동 한계에서 세 경로를 비교한 가상 모델입니다.\n┌─────────┬────────────────────┬─────────────┬───────────────────┬─────────────────────────┬────────────────────┬─────────────────┬──────────────┐\n│ (index) │ route              │ worldLength │ intermediateStops │ initialAlignmentDegrees │ translationSeconds │ rotationSeconds │ modelSeconds │\n├─────────┼────────────────────┼─────────────┼───────────────────┼─────────────────────────┼────────────────────┼─────────────────┼──────────────┤\n│ 0       │ 'baseline-X'       │ 6           │ 5                 │ 90                      │ 12                 │ 3               │ 15           │\n│ 1       │ 'student-route-01' │ 6           │ 4                 │ 90                      │ 11                 │ 2.5             │ 13.5         │\n│ 2       │ 'student-route-02' │ 6           │ 1                 │ 0                       │ 8                  │ 0.5             │ 8.5          │\n└─────────┴────────────────────┴─────────────┴───────────────────┴─────────────────────────┴────────────────────┴─────────────────┴──────────────┘\n",
+    "diagnosticStreamPurpose": "stderr carries exported JSON, not errors",
+    "results": [
+      {
+        "route": "baseline-X",
+        "path": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "initialHeading": "down",
+        "stopPolicy": "turns-only",
+        "linearSpeed": 1,
+        "linearAcceleration": 1,
+        "angularSpeedDegrees": 180,
+        "worldLength": 6,
+        "directionChanges": 5,
+        "initialAlignmentDegrees": 90,
+        "pathRotationDegrees": 450,
+        "totalRotationDegrees": 540,
+        "translationRuns": 6,
+        "intermediateStops": 5,
+        "rotationOperations": 6,
+        "translationSeconds": 12,
+        "rotationSeconds": 3,
+        "modelSeconds": 15,
+        "operations": [
+          {
+            "kind": "rotate",
+            "at": [
+              0,
+              0
+            ],
+            "fromHeading": "down",
+            "toHeading": "right",
+            "angleDegrees": 90,
+            "durationSeconds": 0.5,
+            "startSeconds": 0,
+            "endSeconds": 0.5
+          },
+          {
+            "kind": "translate",
+            "from": [
+              0,
+              0
+            ],
+            "to": [
+              1,
+              0
+            ],
+            "fromIndex": 0,
+            "toIndex": 1,
+            "heading": "right",
+            "length": 1,
+            "profile": {
+              "distance": 1,
+              "maxSpeed": 1,
+              "acceleration": 1,
+              "shape": "triangular",
+              "peakSpeed": 1,
+              "totalSeconds": 2,
+              "phases": [
+                {
+                  "kind": "accelerate",
+                  "duration": 1,
+                  "initialSpeed": 0,
+                  "finalSpeed": 1,
+                  "acceleration": 1,
+                  "distance": 0.5
+                },
+                {
+                  "kind": "brake",
+                  "duration": 1,
+                  "initialSpeed": 1,
+                  "finalSpeed": 0,
+                  "acceleration": -1,
+                  "distance": 0.5
+                }
+              ]
+            },
+            "durationSeconds": 2,
+            "startSeconds": 0.5,
+            "endSeconds": 2.5
+          },
+          {
+            "kind": "rotate",
+            "at": [
+              1,
+              0
+            ],
+            "fromHeading": "right",
+            "toHeading": "down",
+            "angleDegrees": 90,
+            "durationSeconds": 0.5,
+            "startSeconds": 2.5,
+            "endSeconds": 3
+          },
+          {
+            "kind": "translate",
+            "from": [
+              1,
+              0
+            ],
+            "to": [
+              1,
+              1
+            ],
+            "fromIndex": 1,
+            "toIndex": 2,
+            "heading": "down",
+            "length": 1,
+            "profile": {
+              "distance": 1,
+              "maxSpeed": 1,
+              "acceleration": 1,
+              "shape": "triangular",
+              "peakSpeed": 1,
+              "totalSeconds": 2,
+              "phases": [
+                {
+                  "kind": "accelerate",
+                  "duration": 1,
+                  "initialSpeed": 0,
+                  "finalSpeed": 1,
+                  "acceleration": 1,
+                  "distance": 0.5
+                },
+                {
+                  "kind": "brake",
+                  "duration": 1,
+                  "initialSpeed": 1,
+                  "finalSpeed": 0,
+                  "acceleration": -1,
+                  "distance": 0.5
+                }
+              ]
+            },
+            "durationSeconds": 2,
+            "startSeconds": 3,
+            "endSeconds": 5
+          },
+          {
+            "kind": "rotate",
+            "at": [
+              1,
+              1
+            ],
+            "fromHeading": "down",
+            "toHeading": "right",
+            "angleDegrees": 90,
+            "durationSeconds": 0.5,
+            "startSeconds": 5,
+            "endSeconds": 5.5
+          },
+          {
+            "kind": "translate",
+            "from": [
+              1,
+              1
+            ],
+            "to": [
+              2,
+              1
+            ],
+            "fromIndex": 2,
+            "toIndex": 3,
+            "heading": "right",
+            "length": 1,
+            "profile": {
+              "distance": 1,
+              "maxSpeed": 1,
+              "acceleration": 1,
+              "shape": "triangular",
+              "peakSpeed": 1,
+              "totalSeconds": 2,
+              "phases": [
+                {
+                  "kind": "accelerate",
+                  "duration": 1,
+                  "initialSpeed": 0,
+                  "finalSpeed": 1,
+                  "acceleration": 1,
+                  "distance": 0.5
+                },
+                {
+                  "kind": "brake",
+                  "duration": 1,
+                  "initialSpeed": 1,
+                  "finalSpeed": 0,
+                  "acceleration": -1,
+                  "distance": 0.5
+                }
+              ]
+            },
+            "durationSeconds": 2,
+            "startSeconds": 5.5,
+            "endSeconds": 7.5
+          },
+          {
+            "kind": "rotate",
+            "at": [
+              2,
+              1
+            ],
+            "fromHeading": "right",
+            "toHeading": "down",
+            "angleDegrees": 90,
+            "durationSeconds": 0.5,
+            "startSeconds": 7.5,
+            "endSeconds": 8
+          },
+          {
+            "kind": "translate",
+            "from": [
+              2,
+              1
+            ],
+            "to": [
+              2,
+              2
+            ],
+            "fromIndex": 3,
+            "toIndex": 4,
+            "heading": "down",
+            "length": 1,
+            "profile": {
+              "distance": 1,
+              "maxSpeed": 1,
+              "acceleration": 1,
+              "shape": "triangular",
+              "peakSpeed": 1,
+              "totalSeconds": 2,
+              "phases": [
+                {
+                  "kind": "accelerate",
+                  "duration": 1,
+                  "initialSpeed": 0,
+                  "finalSpeed": 1,
+                  "acceleration": 1,
+                  "distance": 0.5
+                },
+                {
+                  "kind": "brake",
+                  "duration": 1,
+                  "initialSpeed": 1,
+                  "finalSpeed": 0,
+                  "acceleration": -1,
+                  "distance": 0.5
+                }
+              ]
+            },
+            "durationSeconds": 2,
+            "startSeconds": 8,
+            "endSeconds": 10
+          },
+          {
+            "kind": "rotate",
+            "at": [
+              2,
+              2
+            ],
+            "fromHeading": "down",
+            "toHeading": "right",
+            "angleDegrees": 90,
+            "durationSeconds": 0.5,
+            "startSeconds": 10,
+            "endSeconds": 10.5
+          },
+          {
+            "kind": "translate",
+            "from": [
+              2,
+              2
+            ],
+            "to": [
+              3,
+              2
+            ],
+            "fromIndex": 4,
+            "toIndex": 5,
+            "heading": "right",
+            "length": 1,
+            "profile": {
+              "distance": 1,
+              "maxSpeed": 1,
+              "acceleration": 1,
+              "shape": "triangular",
+              "peakSpeed": 1,
+              "totalSeconds": 2,
+              "phases": [
+                {
+                  "kind": "accelerate",
+                  "duration": 1,
+                  "initialSpeed": 0,
+                  "finalSpeed": 1,
+                  "acceleration": 1,
+                  "distance": 0.5
+                },
+                {
+                  "kind": "brake",
+                  "duration": 1,
+                  "initialSpeed": 1,
+                  "finalSpeed": 0,
+                  "acceleration": -1,
+                  "distance": 0.5
+                }
+              ]
+            },
+            "durationSeconds": 2,
+            "startSeconds": 10.5,
+            "endSeconds": 12.5
+          },
+          {
+            "kind": "rotate",
+            "at": [
+              3,
+              2
+            ],
+            "fromHeading": "right",
+            "toHeading": "down",
+            "angleDegrees": 90,
+            "durationSeconds": 0.5,
+            "startSeconds": 12.5,
+            "endSeconds": 13
+          },
+          {
+            "kind": "translate",
+            "from": [
+              3,
+              2
+            ],
+            "to": [
+              3,
+              3
+            ],
+            "fromIndex": 5,
+            "toIndex": 6,
+            "heading": "down",
+            "length": 1,
+            "profile": {
+              "distance": 1,
+              "maxSpeed": 1,
+              "acceleration": 1,
+              "shape": "triangular",
+              "peakSpeed": 1,
+              "totalSeconds": 2,
+              "phases": [
+                {
+                  "kind": "accelerate",
+                  "duration": 1,
+                  "initialSpeed": 0,
+                  "finalSpeed": 1,
+                  "acceleration": 1,
+                  "distance": 0.5
+                },
+                {
+                  "kind": "brake",
+                  "duration": 1,
+                  "initialSpeed": 1,
+                  "finalSpeed": 0,
+                  "acceleration": -1,
+                  "distance": 0.5
+                }
+              ]
+            },
+            "durationSeconds": 2,
+            "startSeconds": 13,
+            "endSeconds": 15
+          }
+        ]
+      },
+      {
+        "route": "student-route-01",
+        "path": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "initialHeading": "down",
+        "stopPolicy": "turns-only",
+        "linearSpeed": 1,
+        "linearAcceleration": 1,
+        "angularSpeedDegrees": 180,
+        "worldLength": 6,
+        "directionChanges": 4,
+        "initialAlignmentDegrees": 90,
+        "pathRotationDegrees": 360,
+        "totalRotationDegrees": 450,
+        "translationRuns": 5,
+        "intermediateStops": 4,
+        "rotationOperations": 5,
+        "translationSeconds": 11,
+        "rotationSeconds": 2.5,
+        "modelSeconds": 13.5,
+        "operations": [
+          {
+            "kind": "rotate",
+            "at": [
+              0,
+              0
+            ],
+            "fromHeading": "down",
+            "toHeading": "right",
+            "angleDegrees": 90,
+            "durationSeconds": 0.5,
+            "startSeconds": 0,
+            "endSeconds": 0.5
+          },
+          {
+            "kind": "translate",
+            "from": [
+              0,
+              0
+            ],
+            "to": [
+              1,
+              0
+            ],
+            "fromIndex": 0,
+            "toIndex": 1,
+            "heading": "right",
+            "length": 1,
+            "profile": {
+              "distance": 1,
+              "maxSpeed": 1,
+              "acceleration": 1,
+              "shape": "triangular",
+              "peakSpeed": 1,
+              "totalSeconds": 2,
+              "phases": [
+                {
+                  "kind": "accelerate",
+                  "duration": 1,
+                  "initialSpeed": 0,
+                  "finalSpeed": 1,
+                  "acceleration": 1,
+                  "distance": 0.5
+                },
+                {
+                  "kind": "brake",
+                  "duration": 1,
+                  "initialSpeed": 1,
+                  "finalSpeed": 0,
+                  "acceleration": -1,
+                  "distance": 0.5
+                }
+              ]
+            },
+            "durationSeconds": 2,
+            "startSeconds": 0.5,
+            "endSeconds": 2.5
+          },
+          {
+            "kind": "rotate",
+            "at": [
+              1,
+              0
+            ],
+            "fromHeading": "right",
+            "toHeading": "down",
+            "angleDegrees": 90,
+            "durationSeconds": 0.5,
+            "startSeconds": 2.5,
+            "endSeconds": 3
+          },
+          {
+            "kind": "translate",
+            "from": [
+              1,
+              0
+            ],
+            "to": [
+              1,
+              2
+            ],
+            "fromIndex": 1,
+            "toIndex": 3,
+            "heading": "down",
+            "length": 2,
+            "profile": {
+              "distance": 2,
+              "maxSpeed": 1,
+              "acceleration": 1,
+              "shape": "trapezoidal",
+              "peakSpeed": 1,
+              "totalSeconds": 3,
+              "phases": [
+                {
+                  "kind": "accelerate",
+                  "duration": 1,
+                  "initialSpeed": 0,
+                  "finalSpeed": 1,
+                  "acceleration": 1,
+                  "distance": 0.5
+                },
+                {
+                  "kind": "cruise",
+                  "duration": 1,
+                  "initialSpeed": 1,
+                  "finalSpeed": 1,
+                  "acceleration": 0,
+                  "distance": 1
+                },
+                {
+                  "kind": "brake",
+                  "duration": 1,
+                  "initialSpeed": 1,
+                  "finalSpeed": 0,
+                  "acceleration": -1,
+                  "distance": 0.5
+                }
+              ]
+            },
+            "durationSeconds": 3,
+            "startSeconds": 3,
+            "endSeconds": 6
+          },
+          {
+            "kind": "rotate",
+            "at": [
+              1,
+              2
+            ],
+            "fromHeading": "down",
+            "toHeading": "right",
+            "angleDegrees": 90,
+            "durationSeconds": 0.5,
+            "startSeconds": 6,
+            "endSeconds": 6.5
+          },
+          {
+            "kind": "translate",
+            "from": [
+              1,
+              2
+            ],
+            "to": [
+              2,
+              2
+            ],
+            "fromIndex": 3,
+            "toIndex": 4,
+            "heading": "right",
+            "length": 1,
+            "profile": {
+              "distance": 1,
+              "maxSpeed": 1,
+              "acceleration": 1,
+              "shape": "triangular",
+              "peakSpeed": 1,
+              "totalSeconds": 2,
+              "phases": [
+                {
+                  "kind": "accelerate",
+                  "duration": 1,
+                  "initialSpeed": 0,
+                  "finalSpeed": 1,
+                  "acceleration": 1,
+                  "distance": 0.5
+                },
+                {
+                  "kind": "brake",
+                  "duration": 1,
+                  "initialSpeed": 1,
+                  "finalSpeed": 0,
+                  "acceleration": -1,
+                  "distance": 0.5
+                }
+              ]
+            },
+            "durationSeconds": 2,
+            "startSeconds": 6.5,
+            "endSeconds": 8.5
+          },
+          {
+            "kind": "rotate",
+            "at": [
+              2,
+              2
+            ],
+            "fromHeading": "right",
+            "toHeading": "down",
+            "angleDegrees": 90,
+            "durationSeconds": 0.5,
+            "startSeconds": 8.5,
+            "endSeconds": 9
+          },
+          {
+            "kind": "translate",
+            "from": [
+              2,
+              2
+            ],
+            "to": [
+              2,
+              3
+            ],
+            "fromIndex": 4,
+            "toIndex": 5,
+            "heading": "down",
+            "length": 1,
+            "profile": {
+              "distance": 1,
+              "maxSpeed": 1,
+              "acceleration": 1,
+              "shape": "triangular",
+              "peakSpeed": 1,
+              "totalSeconds": 2,
+              "phases": [
+                {
+                  "kind": "accelerate",
+                  "duration": 1,
+                  "initialSpeed": 0,
+                  "finalSpeed": 1,
+                  "acceleration": 1,
+                  "distance": 0.5
+                },
+                {
+                  "kind": "brake",
+                  "duration": 1,
+                  "initialSpeed": 1,
+                  "finalSpeed": 0,
+                  "acceleration": -1,
+                  "distance": 0.5
+                }
+              ]
+            },
+            "durationSeconds": 2,
+            "startSeconds": 9,
+            "endSeconds": 11
+          },
+          {
+            "kind": "rotate",
+            "at": [
+              2,
+              3
+            ],
+            "fromHeading": "down",
+            "toHeading": "right",
+            "angleDegrees": 90,
+            "durationSeconds": 0.5,
+            "startSeconds": 11,
+            "endSeconds": 11.5
+          },
+          {
+            "kind": "translate",
+            "from": [
+              2,
+              3
+            ],
+            "to": [
+              3,
+              3
+            ],
+            "fromIndex": 5,
+            "toIndex": 6,
+            "heading": "right",
+            "length": 1,
+            "profile": {
+              "distance": 1,
+              "maxSpeed": 1,
+              "acceleration": 1,
+              "shape": "triangular",
+              "peakSpeed": 1,
+              "totalSeconds": 2,
+              "phases": [
+                {
+                  "kind": "accelerate",
+                  "duration": 1,
+                  "initialSpeed": 0,
+                  "finalSpeed": 1,
+                  "acceleration": 1,
+                  "distance": 0.5
+                },
+                {
+                  "kind": "brake",
+                  "duration": 1,
+                  "initialSpeed": 1,
+                  "finalSpeed": 0,
+                  "acceleration": -1,
+                  "distance": 0.5
+                }
+              ]
+            },
+            "durationSeconds": 2,
+            "startSeconds": 11.5,
+            "endSeconds": 13.5
+          }
+        ]
+      },
+      {
+        "route": "student-route-02",
+        "path": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "initialHeading": "down",
+        "stopPolicy": "turns-only",
+        "linearSpeed": 1,
+        "linearAcceleration": 1,
+        "angularSpeedDegrees": 180,
+        "worldLength": 6,
+        "directionChanges": 1,
+        "initialAlignmentDegrees": 0,
+        "pathRotationDegrees": 90,
+        "totalRotationDegrees": 90,
+        "translationRuns": 2,
+        "intermediateStops": 1,
+        "rotationOperations": 1,
+        "translationSeconds": 8,
+        "rotationSeconds": 0.5,
+        "modelSeconds": 8.5,
+        "operations": [
+          {
+            "kind": "translate",
+            "from": [
+              0,
+              0
+            ],
+            "to": [
+              0,
+              3
+            ],
+            "fromIndex": 0,
+            "toIndex": 3,
+            "heading": "down",
+            "length": 3,
+            "profile": {
+              "distance": 3,
+              "maxSpeed": 1,
+              "acceleration": 1,
+              "shape": "trapezoidal",
+              "peakSpeed": 1,
+              "totalSeconds": 4,
+              "phases": [
+                {
+                  "kind": "accelerate",
+                  "duration": 1,
+                  "initialSpeed": 0,
+                  "finalSpeed": 1,
+                  "acceleration": 1,
+                  "distance": 0.5
+                },
+                {
+                  "kind": "cruise",
+                  "duration": 2,
+                  "initialSpeed": 1,
+                  "finalSpeed": 1,
+                  "acceleration": 0,
+                  "distance": 2
+                },
+                {
+                  "kind": "brake",
+                  "duration": 1,
+                  "initialSpeed": 1,
+                  "finalSpeed": 0,
+                  "acceleration": -1,
+                  "distance": 0.5
+                }
+              ]
+            },
+            "durationSeconds": 4,
+            "startSeconds": 0,
+            "endSeconds": 4
+          },
+          {
+            "kind": "rotate",
+            "at": [
+              0,
+              3
+            ],
+            "fromHeading": "down",
+            "toHeading": "right",
+            "angleDegrees": 90,
+            "durationSeconds": 0.5,
+            "startSeconds": 4,
+            "endSeconds": 4.5
+          },
+          {
+            "kind": "translate",
+            "from": [
+              0,
+              3
+            ],
+            "to": [
+              3,
+              3
+            ],
+            "fromIndex": 3,
+            "toIndex": 6,
+            "heading": "right",
+            "length": 3,
+            "profile": {
+              "distance": 3,
+              "maxSpeed": 1,
+              "acceleration": 1,
+              "shape": "trapezoidal",
+              "peakSpeed": 1,
+              "totalSeconds": 4,
+              "phases": [
+                {
+                  "kind": "accelerate",
+                  "duration": 1,
+                  "initialSpeed": 0,
+                  "finalSpeed": 1,
+                  "acceleration": 1,
+                  "distance": 0.5
+                },
+                {
+                  "kind": "cruise",
+                  "duration": 2,
+                  "initialSpeed": 1,
+                  "finalSpeed": 1,
+                  "acceleration": 0,
+                  "distance": 2
+                },
+                {
+                  "kind": "brake",
+                  "duration": 1,
+                  "initialSpeed": 1,
+                  "finalSpeed": 0,
+                  "acceleration": -1,
+                  "distance": 0.5
+                }
+              ]
+            },
+            "durationSeconds": 4,
+            "startSeconds": 4.5,
+            "endSeconds": 8.5
+          }
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "independentPythonAudit": [
+      {
+        "route": "baseline-X",
+        "runs": [
+          [
+            "right",
+            1
+          ],
+          [
+            "down",
+            1
+          ],
+          [
+            "right",
+            1
+          ],
+          [
+            "down",
+            1
+          ],
+          [
+            "right",
+            1
+          ],
+          [
+            "down",
+            1
+          ]
+        ],
+        "worldLength": 6,
+        "directionChanges": 5,
+        "intermediateStops": 5,
+        "initialAlignmentDegrees": 90,
+        "totalRotationDegrees": 540,
+        "translationSeconds": 12.0,
+        "rotationSeconds": 3.0,
+        "modelSeconds": 15.0,
+        "independentArithmeticMatches": true
+      },
+      {
+        "route": "student-route-01",
+        "runs": [
+          [
+            "right",
+            1
+          ],
+          [
+            "down",
+            2
+          ],
+          [
+            "right",
+            1
+          ],
+          [
+            "down",
+            1
+          ],
+          [
+            "right",
+            1
+          ]
+        ],
+        "worldLength": 6,
+        "directionChanges": 4,
+        "intermediateStops": 4,
+        "initialAlignmentDegrees": 90,
+        "totalRotationDegrees": 450,
+        "translationSeconds": 11.0,
+        "rotationSeconds": 2.5,
+        "modelSeconds": 13.5,
+        "independentArithmeticMatches": true
+      },
+      {
+        "route": "student-route-02",
+        "runs": [
+          [
+            "down",
+            3
+          ],
+          [
+            "right",
+            3
+          ]
+        ],
+        "worldLength": 6,
+        "directionChanges": 1,
+        "intermediateStops": 1,
+        "initialAlignmentDegrees": 0,
+        "totalRotationDegrees": 90,
+        "translationSeconds": 8.0,
+        "rotationSeconds": 0.5,
+        "modelSeconds": 8.5,
+        "independentArithmeticMatches": true
+      }
+    ],
+    "studentArrowCoordinatesAndOneChangeConstraintMatch": true,
+    "controlOutputsEqualPriorResults": true,
+    "sourceInputsAndHistoricalBytesUnchanged": true,
+    "sha256Bytes": {
+      "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+      "src/disk-footprint.mjs": "d65440878eea0718b28c61357948e3e56e48227213a5ea2c732961cd156853e8",
+      "src/linear-accel-path-time.mjs": "5e784a02bc879d49d2798c7109dc1644be56eb69dc3855ab1820bb9ebbc7bd4e",
+      "src/linear-speed-ramp.mjs": "ae39ded0fa31c17bb5580539436a595ee8b02940b34c6984d0bc73171e248d9d",
+      "src/nominal-path-time.mjs": "2037bf50b8f0b4e7eeffd1239b15ed04ae4ccbce6dbab66cc7b9a77328015195",
+      "src/path-metrics.mjs": "9813941430e2fa6c8f1096032108d5572e350f6889923ce49c8212b26390af58",
+      "src/path-rotation.mjs": "e2b388168713b7dc42028e7b9199a782bf45b216fa7487cfa4a076b9c608d84b",
+      "src/resolution-policy.mjs": "dc071ca5af42d67d5de1143c0166526ec1affe85f8cf064594aa2e190c139293",
+      "src/resolution-quality-policy.mjs": "0f3b0627c830db00d07e55f09261ee1056ace7700e820dcab693b2b3d125baff",
+      "src/resumable-astar.mjs": "c43cc77c139446f50a4de02a1f315945e4406f760d4b631e5b905524a2769ed9",
+      "src/retry-policy.mjs": "72729cd2ce9fb2c93a94057a43ee6b9b29bfdf270b73418541adcf6b169e9576",
+      "src/route-update-policy.mjs": "4d5e3b8de34bba367d9e08be26227bb03c46575494f4868ad732ac6f5550e5e6",
+      "src/ui.mjs": "83449f56a4844bb877272fb8050d72bf7364df1214eb236b3420c5f3f8f71c38",
+      "src/virtual-path-score.mjs": "a0e0b25c2178d6ea1a3a80b1513603ae013fe6b89f8c0286b9d36c7c40379285",
+      "test/audit.test.mjs": "503219f7024d99facae214cdfc0b5687910ec71ceb68439c98ab740ed3e2d94c",
+      "test/bound-budget-stress.test.mjs": "970ae94c3735ce124d2d4159cccab55c0fa88150ead9e58e8474152ebea8a6a0",
+      "test/core.test.mjs": "b75b834a103758ffbd780d3c842be93189294d6e6600fa46fd0096b66510c795",
+      "test/counterexample.test.mjs": "58c47306956f77a1cb84ea41130bcbfd49bb52b44d485faf39d35bb0061ed71e",
+      "test/current-position-detour.test.mjs": "3105108879cbce53fba1ed7c5f7a4d167da986f4c07c81771d2db51b1a41ca87",
+      "test/demo-rule.test.mjs": "74e8a2d7653ea6e0d108292ad8b57d3bff3272818c862d8a4bd7d151078a20e7",
+      "test/disk-footprint.test.mjs": "829b226c84ea8cb7e2f2e173396666896c4e3cb9774b7830fcccb39b4dd2d509",
+      "test/fixed-ties.test.mjs": "24bedf6106fae2cdab14006154a2a9c086befc305bd6d76f27c8fc1bc0201110",
+      "test/linear-accel-path-time.test.mjs": "6bd4f2a8cb481e08985fb7a11a8300afb16a563bd859c3c59f01c2784e9cb946",
+      "test/linear-speed-ramp.test.mjs": "50df92c581296b858b3322121711b11492dab0e4bda74b0107c8933bd9d21cd7",
+      "test/manhattan-bound-skip.test.mjs": "65d81ab70a8d8c45ce10386ed2711ad9866de8a97594c3e46dccd9baa2413a82",
+      "test/matrix.test.mjs": "20d10863f15bb1bd713fce6914265254b7222376c60bfcb35672c13aefbe73ec",
+      "test/nominal-path-time.test.mjs": "d4d2bf7f54f566e90e2d5f88ac5841ce8488767460529f743f9e78f28483402d",
+      "test/path-metrics.test.mjs": "4fc2a9e44b3d16d4525af61d6c11d2408e3f146ea59406d165c6a5f5ea724256",
+      "test/path-rotation.test.mjs": "41866fc48ec2b6cf4b1673c8465f9b93acc76356c004f5a8d85233c03d9e2279",
+      "test/resolution-cohort.test.mjs": "ffd23e674941897a30757bc959a27a45561222a72a3dee0d8acfbf9b7f92afb6",
+      "test/resolution-comparison.test.mjs": "3f59b63d4f970e68468ae5c81dafbe4b8b32b897dfdd5ade4ca0ca667c24af94",
+      "test/resolution-policy.test.mjs": "7c6e38a73b4e68bc799d6648d1bfea5f03a10d980ce41fa9dc6d6e489a98abb0",
+      "test/resolution-quality.test.mjs": "55d9ec378fab86b168dc29d9b84de70605dc95edec120fabaf108cbc81a65d7a",
+      "test/resumable-astar.test.mjs": "8c76a18e22a7607fe35a941ea61de5a9299127a781f07259df8b56d024279f9b",
+      "test/retry-policy.test.mjs": "8b3d8f20311854ecaae219d94438991d21b1bbf03dac4af3a0889fd2d3a22ccb",
+      "test/route-continuation.test.mjs": "2032ef0e150373e21ed8b5fd61086207d60025b990774945809135011cbdc87e",
+      "test/route-reoptimization-batch.test.mjs": "d37185657928fd5d0c3dc776f340484e9d098bd2b976c89d68daa7e001052f31",
+      "test/route-update-policy.test.mjs": "a63e2793f1a508e3d06ba9a4302623615111c02c06d35147eaeb6c644a34bc95",
+      "test/sampled-disk.test.mjs": "be4204cdc04bb89c35def036b1ef6d12d89ee2078f058bc27312a61c6b8f79a6",
+      "test/tie-break.test.mjs": "7e4405e0f817c56ac6f7e8018193deaa80117f03d1b5077886bee52f2c05d256",
+      "test/two-cell-doorway.test.mjs": "29b5719a9556dcf9e0f24288e459dfffcca53d97f3e6c74d903889d301a316c0",
+      "test/virtual-path-score.test.mjs": "a6947b3d0b6c9b652c73928140a844ab407836a9a467bb6015f8deabe780460c",
+      "practice/09-acceleration-stops.mjs": "320ddf12454199199cf93a8a999545083dbc13a99b3e446dcf0620ac481c56fe",
+      "experiments/linear-accel-path-01.config.json": "880cc181a480a28fde646d81644e65d9e2a70410fa3517d1f2f639832bb80a5e",
+      "experiments/linear-accel-path-01.protocol.json": "ca6124aefc67ac8f290f306cb41a10c22649c17e2f96c5d4d2b2680b0c6d6e09",
+      "experiments/path-turn-score-01.config.json": "6959b179884c81e06eed7ac54e416c022616fd0a0957f40c831557fe6ad31237",
+      "data/learning/stop-turn-policy-choice-01.json": "954383fb020c67fb3be9fef2fb47b08f5c10edc3a257722dbeeccd32bd246359",
+      "data/learning/linear-accel-path-run-01.json": "c906505e8361a23e973653f817582dbefa0aa32deae6b2bc28ab7bc646907af3",
+      "data/learning/linear-accel-path-tests-01.tap": "e17c9743e022c26f48064191706c031e6e473e97e2f4a2b082bbb6eb87d818f1",
+      "practice/10-student-route.mjs": "e162889909e1776688c6b5b62235a8f0312495b72e517ae6382b07f3d316531f",
+      "experiments/linear-accel-route-01.config.json": "6eb71c39bcee8c95e8b2af109b3b474242a773f51eca1980f949ffeca6da85c6",
+      "experiments/linear-accel-route-01.protocol.json": "65ddd693286ce0ebf14b8f15501775528149ea1de220998c46c25bb30b0bffe1",
+      "data/learning/linear-accel-route-design-01.json": "a599dd83a1b6392c8853b92fc86df9f274857878e3743e74e8b4ecfa79d2eaae",
+      "data/learning/linear-accel-route-run-01.json": "b668e44a1c4ab4514a7dcc4a3be6c1eb289e5cc1d4898b590b9f686ea0bf557a",
+      "data/learning/linear-accel-route-tests-01.tap": "141b585f23a51c09af3b51447c040a0c37d313c0756e08046be1e5f6d3d16315",
+      "data/learning/linear-accel-route-design-02.json": "fa9bac23f343dadab2a2c40ba62023792fb494d3a2184ea0ec99d500e51b9735",
+      "experiments/linear-accel-route-02.config.json": "df1f6105d1da41358e4ede15ba006ae3cda302a19b6bd3442c6bd08494f83f79",
+      "experiments/linear-accel-route-02.protocol.json": "12dca9301e1959ca38f624572c42797af953151d86c1fef9a9b830a1eb2b58d9",
+      "practice/11-one-turn-route.mjs": "36a8073ed0614eb6aea4f4d83038f481c543348beddec98680a27d01b0221997"
+    },
+    "configuredModelEvaluations": 3,
+    "configuredPlannerCalls": 0,
+    "configuredBfsCalls": 0,
+    "newIndependentResearchMaps": 0
+  },
+  "comparison": [
+    {
+      "route": "baseline-X",
+      "intermediateStops": 5,
+      "initialAlignmentDegrees": 90,
+      "translationSeconds": 12,
+      "rotationSeconds": 3,
+      "modelSeconds": 15
+    },
+    {
+      "route": "student-route-01",
+      "intermediateStops": 4,
+      "initialAlignmentDegrees": 90,
+      "translationSeconds": 11,
+      "rotationSeconds": 2.5,
+      "modelSeconds": 13.5
+    },
+    {
+      "route": "student-route-02",
+      "intermediateStops": 1,
+      "initialAlignmentDegrees": 0,
+      "translationSeconds": 8,
+      "rotationSeconds": 0.5,
+      "modelSeconds": 8.5
+    }
+  ],
+  "roles": {
+    "student": "Designed the constrained six-arrow one-change route, no numeric time prediction or code/execution inferred.",
+    "ai": "Constraints, coordinate transcription/wrapper, operation, independent checks and recording."
+  },
+  "scope": "Known schematic analytic controls, same endpoints/length/limits, no obstacles. No measured runtime/physical motion/energy, controller/collision validation, population evidence or global optimum. Angular rate changes instantaneous."
+}

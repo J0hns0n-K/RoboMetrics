@@ -845,6 +845,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - [New raw check](../data/learning/linear-accel-route-run-01.json) and [TAP](../data/learning/linear-accel-route-tests-01.tap): twelve existing model tests pass; two configured evaluations. Intermediate stops5to4, translation12to11s, rotation3to2.5s, total15to13.5modelseconds. Independent Python arrow/coordinate/unit-length/endpoints/run/angle/duration/profile-cap/rest/integral checks agree. Baseline result and all recorded source/input/historical hashes unchanged.
 - Prior full141-test evidence retained, not rerun. No planner/BFS/new independent maps/hardware; model seconds not measured travel/runtime/energy. Student owns sequence design, AI owns wrapper/operation/audit. No optimum claim. Next [one-internal-change route task](../experiments/linear-accel-route-design-02.design.json) pending.
 
+## 2026-10-30 — Student one-change route and starting alignment
+
+- [Student sequence](../data/learning/linear-accel-route-design-02.json) down/down/down/right/right/right frozen with [config](../experiments/linear-accel-route-02.config.json), [protocol](../experiments/linear-accel-route-02.protocol.json) and wrapper at source7ce73d87652e06da3bbcd16c2d8daa7225a13ef1 before execution. Student authored arrows only, no numeric forecast; AI authored transcription/wrapper and operated checks.
+- [New run](../data/learning/linear-accel-route-run-02.json): same endpoints0,0to3,3, length6, initial down, turns-only, v1/a1/angular180 virtual limits; three schematic evaluations/no obstacles. New route meets exactly one internal change and needs one intermediate stop/no initial alignment. Translation8s+rotation0.5s=8.5modelseconds. Prior controls X15 and student13.5 reproduce exactly. Both initial alignment and internal turns change; reduction is not isolated evidence for turn count alone.
+- Independent Python arrows/coordinates/unit-length/endpoints/runs/angles/time/profile-distance/rest/cap/schedule checks agree. Source/dependency/test/prior12-pass TAP hashes unchanged, tests not repeated; earlier full141 run remains historical. Zero configured planner/BFS/new maps/hardware. Model seconds not measured runtime/travel/energy, collision or global optimum. Next [equal-internal-count order-reversal prediction](../experiments/linear-accel-initial-order-01.design.json) pending, reversed condition not yet evaluated.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
