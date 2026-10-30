@@ -723,6 +723,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - User requested 다시해. AI checked prior raw/test hashes and links, preserved Oct29G/A/B raw evidence, and ran the now-committed practice04 baseline with original goal[7,3]. Output INVALID_ENDPOINT_CLEARANCE is expected. Record data/learning/practice-04-setup-01.json includes source/hash/operator/stdout.
 - Student edit/run not yet verified; next guided change is goal[7,2] after AI provided A reference. No algorithm/default/new-map or full-suite change. Local practice02/portfolio work preserved.
 
+## 2026-10-30 — Guided practice04 edit verified and reproduced by AI
+
+- Student reported 저장했어; inspected diff contains only goal[7,3]→[7,2]. Input committed as6987e798f18038200517a520e738a80acebfd173 before execution. Target A was already AI-explained; this is guided parameter transcription, not independent placement discovery.
+- AI ran `node practice/04-goal-placement.mjs`: ROUTE_FOUND/world9/examined38 on archived trial10, always-fine/FIFO/budget100/radius0.4/clearance0.15. [Run record](../data/learning/practice-04-run-01.json) includes exact stdout, source/input hashes and unchanged research/source bytes. Baseline G remains preserved in practice-04-setup-01.json; old cohort/manifests untouched.
+- No algorithm change, new independent maps or full-suite rerun. Student operation remains unverified; next is direct student execution and output sharing. Unrelated practice02/portfolio preserved.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "executedAtUTC": "2026-10-30T01:05:21.525849+00:00",
+  "userReportVerbatim": "저장했어",
+  "sourceCommit": "6987e798f18038200517a520e738a80acebfd173",
+  "editVerification": {
+    "file": "practice/04-goal-placement.mjs",
+    "before": "const goal = [7, 3];",
+    "after": "const goal = [7, 2];",
+    "changedLines": 1,
+    "actualDiffInspected": true,
+    "committedBeforeRun": true,
+    "sha256GitBlob": "b5ddc9bbbe87aad1d2201cd9fcd77998d0b40a87539fa753e6e49d160da66f9a"
+  },
+  "roles": {
+    "student": "Reported saving; actual guided one-line coordinate edit verified on disk. A target was previously supplied by AI.",
+    "ai": "Provided exercise and target, inspected and committed edit, ran command, checked output and wrote evidence.",
+    "studentExecutionVerified": false
+  },
+  "command": "node practice/04-goal-placement.mjs",
+  "operator": "AI assistant CLI",
+  "exitCode": 0,
+  "stdout": "도착점만 바꾸는 안내된 연습입니다. 원래 실험 자료는 수정하거나 덮어쓰지 않습니다.\n┌─────────┬───────┬───────────────┬─────────────┬──────────┐\n│ (index) │ goal  │ result        │ worldLength │ examined │\n├─────────┼───────┼───────────────┼─────────────┼──────────┤\n│ 0       │ '7,2' │ 'ROUTE_FOUND' │ 9           │ 38       │\n└─────────┴───────┴───────────────┴─────────────┴──────────┘\n",
+  "stderr": "",
+  "input": {
+    "archivedTrial": 10,
+    "goal": [
+      7,
+      2
+    ],
+    "mode": "always-fine",
+    "fineBudget": 100,
+    "tieBreak": "fifo",
+    "radius": 0.4,
+    "clearance": 0.15
+  },
+  "observedOutput": {
+    "status": "ROUTE_FOUND",
+    "geometricLength": 9,
+    "expanded": 38
+  },
+  "comparison": {
+    "baseline": "data/learning/practice-04-setup-01.json",
+    "baselineGoal": [
+      7,
+      3
+    ],
+    "baselineStatus": "INVALID_ENDPOINT_CLEARANCE",
+    "referenceValidation": "data/footprint/endpoint-placement-controls-validation-01.json",
+    "samePreviouslyCheckedAInput": true
+  },
+  "validation": {
+    "consoleFieldsChecked": true,
+    "trackedPracticeMatchesCommittedInput": true,
+    "sourceAndResearchArtifactBytesUnchanged": true,
+    "sha256Bytes": {
+      "practice/04-goal-placement.mjs": "b5ddc9bbbe87aad1d2201cd9fcd77998d0b40a87539fa753e6e49d160da66f9a",
+      "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+      "src/disk-footprint.mjs": "d65440878eea0718b28c61357948e3e56e48227213a5ea2c732961cd156853e8",
+      "src/resolution-policy.mjs": "dc071ca5af42d67d5de1143c0166526ec1affe85f8cf064594aa2e190c139293",
+      "data/footprint/resolution-quality-prospective-run-01.json": "839d229c4c12c0fbda9fb7eeb3645ca348827232a6c447041029332f76a2d9fc",
+      "experiments/disk-model-clearance015-01.config.json": "05eb114289bcc542081674dd9aa70a5cc9a362513d57d8e7b8e94f74dc8bf658",
+      "data/footprint/endpoint-placement-controls-run-01.json": "cfced29a6a471ee463e6ad681f68638281e9110bed38d14324d5a7d42d5409c2",
+      "data/footprint/endpoint-placement-controls-validation-01.json": "547bb550376203ad28d3f4adf3bb1a167d1a44f943a576341e2cf7a56f627f7c"
+    },
+    "fullSuiteRerun": false,
+    "newIndependentMaps": 0
+  },
+  "scope": "Guided reproduction by changing goal input on one archived synthetic map, not student algorithm authorship, independent placement discovery, physical measurement or algorithm improvement.",
+  "nextTask": "Student directly runs node practice/04-goal-placement.mjs and shares output. Student operation not yet verified."
+}
