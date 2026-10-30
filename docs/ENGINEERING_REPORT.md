@@ -335,7 +335,7 @@ The sections above distinguish completed simulation checks from planned work and
 
 ## Next engineering gates
 
-- The student has shared guided terminal output in [a separate report](../data/learning/practice-04-student-report-01.json), matching the known A result; process/source-at-run were not independently captured. Next return to the original goal for a guided status comparison; retain original endpoint failures and distinguish input changes from algorithm improvements. Define larger placement/generalization protocols before new inputs or interventions.
+- The student has shared guided terminal output in [a separate report](../data/learning/practice-04-student-report-01.json), matching the known A result; process/source-at-run were not independently captured. The [original-goal return](../data/learning/practice-04-student-report-02.json) now has a verified guided edit preserved after the reported run, and user-pasted INVALID_ENDPOINT_CLEARANCE/null/0 matching the prior baseline. Next vary only the fine budget100 to200 on this known rejection; retain original endpoint failures and distinguish input changes from algorithm improvements. Define larger placement/generalization protocols before new inputs or interventions.
 - Preserve obstacle/world/body units when adding samples; validate every returned swept path and distinguish geometric length from edge count and search work.
 - Add scoped kinematics, waypoint control and sensing uncertainty only with explicit assumptions and checks.
 - If hardware is obtained, measure its dimensions and repeat controlled trials; report simulation/physical differences and failed cases separately. Follow [the robotics roadmap](ROBOTICS_ROADMAP.md).

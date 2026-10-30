@@ -734,6 +734,11 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - PowerShell could not resolve node; AI checked the existing local runtime and supplied its full-path command. Student then pasted goal7,2 / ROUTE_FOUND / world9 / examined38. [Report](../data/learning/practice-04-student-report-01.json) preserves exact pasted text and provenance separately from the AI-run record.
 - This is a guided user report matching the prior one-map result, not independently observed execution or new research data. No algorithm/raw data changes or new test/planner execution in this recording step. Next return goal to original[7,3] and share the resulting status for a controlled guided comparison.
 
+## 2026-10-30 — Guided original-goal return reported
+
+- Actual diff restores only goal[7,2] to[7,3]; preserved ef61be711d051d2cda68620ecf24ab192551ee71 after user shared output. [User report](../data/learning/practice-04-student-report-02.json) retains INVALID_ENDPOINT_CLEARANCE/null/0, matching the old AI baseline; user process/source-at-run not independently observed. Same archived trial10/always-fine/FIFO/budget100/body0.4+0.15 in the committed exercise.
+- AI explains rejection before search, not budget failure or an exhaustive no-route proof. No student explanation inferred, new cohort, code-method change, AI planner run or full-suite rerun. Old raw/manifests unchanged. Next known-case guided check changes only fineBudget100 to200 at original goal.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "evidenceType": "guided-user-pasted-terminal-output",
+  "verbatimUserOutput": "│ (index) │ goal  │ result                       │ worldLength │ examined │\n├─────────┼───────┼──────────────────────────────┼─────────────┼──────────┤\n│ 0       │ '7,3' │ 'INVALID_ENDPOINT_CLEARANCE' │ null        │ 0        │",
+  "reportedFields": {
+    "goal": [7, 3],
+    "status": "INVALID_ENDPOINT_CLEARANCE",
+    "geometricLength": null,
+    "expanded": 0
+  },
+  "editVerification": {
+    "file": "practice/04-goal-placement.mjs",
+    "before": "const goal = [7, 2];",
+    "after": "const goal = [7, 3];",
+    "actualDiffInspected": true,
+    "changedLines": 1,
+    "preservedInputCommit": "ef61be711d051d2cda68620ecf24ab192551ee71",
+    "commitTiming": "Preserved after the user shared output; not a pre-execution input freeze for the reported run."
+  },
+  "configuredContext": {
+    "archivedMapTrial": 10,
+    "mode": "always-fine",
+    "fineBudget": 100,
+    "tieBreak": "fifo",
+    "radius": 0.4,
+    "clearance": 0.15
+  },
+  "references": {
+    "previousUserReport": "data/learning/practice-04-student-report-01.json",
+    "aiBaseline": "data/learning/practice-04-setup-01.json",
+    "endpointControlValidation": "data/footprint/endpoint-placement-controls-validation-01.json"
+  },
+  "provenance": {
+    "student": "Saved the guided return-to-original-goal edit, verified on disk, and shared output after repeat-command instructions.",
+    "ai": "Supplied scaffold, target, execution guidance, existing reference controls and documentation.",
+    "userProcessIndependentlyObserved": false,
+    "userExecutionSourceHashCaptured": false,
+    "matchesExistingAiBaseline": true
+  },
+  "interpretationByAi": "The assumed body-clearance check rejects this goal before search. Null means no returned path length, not zero travel. Zero examined positions reflects pre-search rejection, not an exhaustive search or a budget failure.",
+  "scope": "Guided reproduction on the same archived map. The user table does not independently attest all configured settings. No new research cohort, algorithm change, physical measurement or student explanation is inferred.",
+  "nextTask": "Keep goal [7,3] and all other inputs fixed, change only fineBudget from100 to200, save and rerun the same command. Share output to check whether extra search budget changes the endpoint rejection. Known-case guided check, not a blind new research prediction."
+}
