@@ -785,6 +785,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - One new descriptor call, no planner/BFS/new map/test repeat; old source/raw hashes unchanged. Not current obstacle/body feasibility, physics or measured travel performance.
 - Next [score task](../experiments/path-turn-cost-01.design.json) offers verified schematic X6moves/5changes and Y8moves/2changes at the same endpoint, with AI-assumed move1/change2 arbitrary points. Student comparison pending; no weighted score implementation, calibrated cost or search-priority change. Only these two offered routes are being compared, not a global optimum.
 
+## 2026-10-30 — Student score calculation confirmed and virtual-score exercise added
+
+- Student wrote **X: 16점, Y: 12점 -> Y** under the AI-offered paths and move1/change2 rule. [Answer](../data/learning/path-turn-cost-answer-01.json) preserved before configured checks; no student coefficient design/code inferred. Source95c780b467fe1c03c979a1c5e72c16e67af103ad freezes fixtures/protocol/score code/practice05.
+- [Run](../data/learning/path-turn-score-run-01.json) records ten focused tests (five new score/five existing direction), one CLI execution and independently checked endpoints/lengths/heading changes/scores. X6/5/16;Y8/2/12. Original-world length rather than sampled edge count is charged; no initial orientation alignment. Core/body/descriptor/research bytes unchanged, zero planner/BFS/maps and no old101-suite repeat.
+- Only two offered schematic paths and arbitrary points; not calibrated seconds/energy, obstacle/physical feasibility, global optimality or changed search objective. Next [weight0.5 task](../experiments/path-turn-cost-sensitivity-01.design.json) awaits student answer before that condition is edited/run; do not overwrite the weight2 artifact.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

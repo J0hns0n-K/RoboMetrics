@@ -97,3 +97,9 @@ const fieldName = '____';
 학생은 설명용 A/B 순서의 방향 전환을 **1번/5번**으로 셌다. [원문](../data/learning/path-turn-count-answer-01.json)과 AI 지원 범위를 구분한다. AI가 `directionChanges` 열을 추가해 성공 경로의 방향 전환을 자동 계산한다. 실패는 `null`이며 출발 방향 맞추기는 세지 않는다. [방법·실행 근거](../docs/PATH_DIRECTION_METRIC_KR.md)는 같은 지도/몸체/예산200에서6,1의 길이8·검토31·방향 전환6, 실패8,4의null을 확인한다. 새 지표 검사5개와 반환 벡터 재계산은 통과했으며 기존 전체 검사는 반복하지 않았다. 다음은 오른쪽3칸·아래3칸·총6칸 이동하면서 방향을 정확히2번 바꾸는 순서를 학생이 직접 만드는 설명용 과제다. 아직 순서는 받지 않았다.
 
 학생이 `↓→→→↓↓`를 제시했다. [원문](../data/learning/path-turn-design-answer-01.json)을 먼저 보존한 뒤 [같은 지표와 직접 계산](../data/learning/path-turn-design-validation-01.json)으로6칸·오른쪽3/아래3·도착3,3·전환2회를 확인했다. 학생이 만든 설명용 순서이며 현재 지도·몸체의 실제 통과 실험은 아니다. 다음은 이동1점/방향 전환2점이라는 AI 제시 가상 규칙에서 두 경로 점수를 비교하는 과제다.
+
+## 다섯 번째 파일 — 방향 전환 가상 점수
+
+[05-path-score.mjs](05-path-score.mjs)는 고정된 설명용 X/Y 경로에 `세계 길이 × 1 + 방향 전환 횟수 × perDirectionChange`를 적용하는 AI 제공 도구다. 학생은 먼저 **X: 16점, Y: 12점 -> Y**라고 계산·선택했다. [원문](../data/learning/path-turn-cost-answer-01.json)과 [AI 실행·검사](../data/learning/path-turn-score-run-01.json)를 구분한다. 초기 `perDirectionChange = 2`에서X16/Y12가 확인됐다.
+
+세계 길이를 쓰므로 반 칸으로 나눈 구간 수를 이동 거리로 오인하지 않는다. 점수는 임의 단위이며 초·에너지나 실제 로봇 보정값이 아니다. 자동 길찾기 규칙도 바꾸지 않는다. 점수 검사5개와 기존 방향 검사5개, 총10개가 통과했고 이전101개 전체 검사는 반복하지 않았다. 다음은 전환 계수만0.5로 낮춘 경우의 X/Y 점수와 선택을 먼저 계산하는 [과제](../experiments/path-turn-cost-sensitivity-01.design.json)다. 해당 조건을 아직 실행하지 않았다. 학생 답을 받은 뒤에만 파일의 `perDirectionChange`를2→0.5로 바꿔 저장·실행하는 단계로 진행한다.

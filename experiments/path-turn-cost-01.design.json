@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "student-score-comparison-recorded-ai-score-check-pending",
+  "status": "student-score-comparison-confirmed-ai-score-checked",
   "proposalAuthor": "AI assistant",
   "purpose": "Explore how an explicitly assumed heading-change penalty can change a comparison based only on distance.",
   "start": [
@@ -53,7 +53,7 @@
   },
   "studentChoice": "Y",
   "studentRationale": null,
-  "scope": "Student calculated X16/Y12 and chose Y under the AI-provided rule. Coefficients and fixtures AI-supplied; no global-optimality proof, calibrated cost or student code. AI score implementation/check pending; sensitivity response not supplied.",
+  "scope": "Student correctly calculated X16/Y12 and selected Y under AI-supplied paths/coefficients. AI implementation and focused checks completed. Offered-route arithmetic only, not global optimum, calibrated physical costs or a planner objective change. Next weight0.5 student response pending.",
   "setupCheck": {
     "method": "AI direct displacement/move/adjacent-heading arithmetic before presenting the exercise; no weighted score answers computed or recorded.",
     "givenRoutePropertiesChecked": true,
@@ -61,5 +61,7 @@
   },
   "studentAnswerRecord": "data/learning/path-turn-cost-answer-01.json",
   "scoreProtocol": "experiments/path-turn-score-01.protocol.json",
-  "nextTask": "experiments/path-turn-cost-sensitivity-01.design.json"
+  "nextTask": "experiments/path-turn-cost-sensitivity-01.design.json",
+  "scoreRun": "data/learning/path-turn-score-run-01.json",
+  "practice": "practice/05-path-score.mjs"
 }

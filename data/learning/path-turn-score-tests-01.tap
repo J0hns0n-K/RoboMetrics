@@ -1,0 +1,70 @@
+TAP version 13
+# Subtest: same six-step displacement can have one or five direction changes
+ok 1 - same six-step displacement can have one or five direction changes
+  ---
+  duration_ms: 0.6641
+  type: 'test'
+  ...
+# Subtest: a stationary singleton or straight path has no heading change; initial heading is excluded
+ok 2 - a stationary singleton or straight path has no heading change; initial heading is excluded
+  ---
+  duration_ms: 0.0912
+  type: 'test'
+  ...
+# Subtest: subdividing a straight segment into half-steps does not add changes
+ok 3 - subdividing a straight segment into half-steps does not add changes
+  ---
+  duration_ms: 0.8831
+  type: 'test'
+  ...
+# Subtest: a reversal is one change event rather than a ninety-degree rotation count
+ok 4 - a reversal is one change event rather than a ninety-degree rotation count
+  ---
+  duration_ms: 0.1199
+  type: 'test'
+  ...
+# Subtest: missing, empty, malformed, diagonal, repeated or overflowing segments are rejected
+ok 5 - missing, empty, malformed, diagonal, repeated or overflowing segments are rejected
+  ---
+  duration_ms: 0.3656
+  type: 'test'
+  ...
+# Subtest: the offered X/Y paths score sixteen and twelve at assumed weights one/two
+ok 6 - the offered X/Y paths score sixteen and twelve at assumed weights one/two
+  ---
+  duration_ms: 0.6488
+  type: 'test'
+  ...
+# Subtest: half-step subdivision preserves world distance and score rather than charging per edge
+ok 7 - half-step subdivision preserves world distance and score rather than charging per edge
+  ---
+  duration_ms: 1.2437
+  type: 'test'
+  ...
+# Subtest: explicit custom and zero penalties use their declared arithmetic; singleton score is zero
+ok 8 - explicit custom and zero penalties use their declared arithmetic; singleton score is zero
+  ---
+  duration_ms: 0.1192
+  type: 'test'
+  ...
+# Subtest: invalid weights and absent or invalid axis paths are rejected
+ok 9 - invalid weights and absent or invalid axis paths are rejected
+  ---
+  duration_ms: 0.3728
+  type: 'test'
+  ...
+# Subtest: overflowing summed distance or weighted score is rejected
+ok 10 - overflowing summed distance or weighted score is rejected
+  ---
+  duration_ms: 0.1178
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 114.2475

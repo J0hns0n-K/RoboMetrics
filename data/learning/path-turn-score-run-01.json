@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "executedAtUTC": "2026-10-30T02:53:40.278647+00:00",
+  "sourceCommit": "95c780b467fe1c03c979a1c5e72c16e67af103ad",
+  "operator": "AI assistant CLI",
+  "protocol": "experiments/path-turn-score-01.protocol.json",
+  "fixtures": "experiments/path-turn-score-01.config.json",
+  "studentAnswer": "data/learning/path-turn-cost-answer-01.json",
+  "tests": {
+    "command": "node --test --test-reporter=tap test/path-metrics.test.mjs test/virtual-path-score.test.mjs",
+    "passed": 10,
+    "failed": 0,
+    "newScoreTests": 5,
+    "existingDescriptorTestsRerun": 5,
+    "old101SuiteRerun": false,
+    "exitCode": 0,
+    "archive": "data/learning/path-turn-score-tests-01.tap",
+    "sha256Bytes": "34fb7df53fe0232d6f5b4f4724f975883c26b752d9bd91a1a1c08d1c80c80d26",
+    "stderr": ""
+  },
+  "configuredRun": {
+    "commandSource": "const {results}=await import('./practice/05-path-score.mjs');process.stderr.write(JSON.stringify(results));",
+    "exitCode": 0,
+    "stdout": "가상 점수 = 세계 길이 × 1 + 방향 전환 횟수 × 2\n┌─────────┬───────┬─────────────┬──────────────────┬──────────────┐\n│ (index) │ route │ worldLength │ directionChanges │ virtualScore │\n├─────────┼───────┼─────────────┼──────────────────┼──────────────┤\n│ 0       │ 'X'   │ 6           │ 5                │ 16           │\n│ 1       │ 'Y'   │ 8           │ 2                │ 12           │\n└─────────┴───────┴─────────────┴──────────────────┴──────────────┘\n",
+    "diagnosticStreamPurpose": "stderr contains exported results JSON to avoid repeating the CLI execution; this is not an error stream capture.",
+    "results": [
+      {
+        "route": "X",
+        "worldLength": 6,
+        "directionChanges": 5,
+        "virtualScore": 16,
+        "weights": {
+          "perWorldUnit": 1,
+          "perDirectionChange": 2
+        }
+      },
+      {
+        "route": "Y",
+        "worldLength": 8,
+        "directionChanges": 2,
+        "virtualScore": 12,
+        "weights": {
+          "perWorldUnit": 1,
+          "perDirectionChange": 2
+        }
+      }
+    ],
+    "weights": {
+      "perWorldUnit": 1,
+      "perDirectionChange": 2
+    },
+    "units": "arbitrary score points",
+    "lowerOfferedScoreRoutes": [
+      "Y"
+    ]
+  },
+  "validation": {
+    "independentPythonAudits": [
+      {
+        "route": "X",
+        "endpoint": [
+          3,
+          3
+        ],
+        "worldLength": 6,
+        "directionChanges": 5,
+        "virtualScore": 16,
+        "directPythonRecountMatches": true
+      },
+      {
+        "route": "Y",
+        "endpoint": [
+          3,
+          3
+        ],
+        "worldLength": 8,
+        "directionChanges": 2,
+        "virtualScore": 12,
+        "directPythonRecountMatches": true
+      }
+    ],
+    "studentScoresAndChoiceMatch": true,
+    "sourceAndFixtureBytesUnchanged": true,
+    "priorCoreBodyDescriptorAndResearchRawHashesMatch": true,
+    "sha256Bytes": {
+      "src/virtual-path-score.mjs": "a0e0b25c2178d6ea1a3a80b1513603ae013fe6b89f8c0286b9d36c7c40379285",
+      "src/path-metrics.mjs": "9813941430e2fa6c8f1096032108d5572e350f6889923ce49c8212b26390af58",
+      "test/virtual-path-score.test.mjs": "a6947b3d0b6c9b652c73928140a844ab407836a9a467bb6015f8deabe780460c",
+      "test/path-metrics.test.mjs": "4fc2a9e44b3d16d4525af61d6c11d2408e3f146ea59406d165c6a5f5ea724256",
+      "practice/05-path-score.mjs": "e836428e11c583e30d86ee66f50d6eec1db9af9779ade316ed94f548ac646af1",
+      "experiments/path-turn-score-01.config.json": "6959b179884c81e06eed7ac54e416c022616fd0a0957f40c831557fe6ad31237",
+      "experiments/path-turn-score-01.protocol.json": "84738d877acd079cc3b886bda0db9045b5c941f923af4605cc73c7b1a37facdd",
+      "data/learning/path-turn-cost-answer-01.json": "1ce249cb73baf64e1764810cac6e796f429ea0121e55da60f487df316a8938da"
+    },
+    "configuredCliExecutions": 1,
+    "newPlannerCalls": 0,
+    "newBfsCalls": 0,
+    "newIndependentMaps": 0,
+    "nextHalfPenaltyConditionExecuted": false
+  },
+  "roles": {
+    "student": "Calculated X16/Y12 and chose lower-scoring Y under the supplied rule.",
+    "ai": "Supplied fixtures/coefficients, score code, exercise CLI, tests, execution, independent arithmetic and documentation."
+  },
+  "scope": "Only a weighted comparison of two schematic offered routes. Not global optimality, obstacle/body feasibility, calibrated duration/energy, a new search objective or physical performance. World distance rather than edge count is charged; orientation alignment is excluded.",
+  "nextTask": "Await student scores/choice for direction-change penalty0.5 before editing/running that practice condition."
+}
