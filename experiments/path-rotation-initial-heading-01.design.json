@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "student-alignment-answers-recorded-manual-edit-pending",
+  "status": "guided-edit-and-ai-initial-down-check-completed",
   "proposalAuthor": "AI assistant",
   "fixtures": "experiments/path-turn-score-01.config.json",
   "changedInput": {
@@ -18,6 +18,10 @@
   },
   "studentRationale": null,
   "nextGuidedEditAfterAnswer": "Change only practice06 initialHeading from right to down after recording the response; inspect saved diff and preserve a new result instead of replacing the right-heading baseline.",
-  "scope": "Student correctly answered initial alignment X90/Y0 at the AI-given starting-down condition. This answer concerns only alignment before the first move. Practice06 stillright at inspection; saved edit and configured initial-down X/Y execution pending. No measured timing, new path, dynamics or student code claim.",
-  "studentAnswerRecord": "data/learning/path-rotation-initial-heading-answer-01.json"
+  "scope": "Student answered initial alignment X90/Y0 and saved verified right-to-down input. AI froze/ran/audited the initial-down case: fixed paths/internal angles, new totals540/180degrees. Original baseline preserved. No student full-path forecast/operation, measured time/energy, dynamics or new planner/path claim. Next nominal-time hand task pending.",
+  "studentAnswerRecord": "data/learning/path-rotation-initial-heading-answer-01.json",
+  "studentEditRecord": "data/learning/path-rotation-edit-01.json",
+  "runProtocol": "experiments/path-rotation-02.protocol.json",
+  "runRecord": "data/learning/path-rotation-run-02.json",
+  "nextTask": "experiments/path-nominal-time-01.design.json"
 }

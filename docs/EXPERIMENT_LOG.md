@@ -803,6 +803,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - [Run](../data/learning/path-rotation-run-01.json) records eleven focused tests (six new/five existing), one CLI execution, simple A90/B180 plus fixed schematic X5changes/initial0/internal450/total450degrees and Y2/90/180/270 at initial right. Python reconstructs headings/quarter-index angles and agrees. Prior score/descriptor/research hashes match. No old101-suite repeat, planner/BFS/new maps.
 - Cumulative absolute geometry, not net angle, measured/estimated turn time/energy, motion/collision feasibility, dynamic controller or turn-aware search. Next [initial-down alignment task](../experiments/path-rotation-initial-heading-01.design.json) awaits student answers before a new configured condition.
 
+## 2026-10-30 — Initial-down input verified with unchanged internal path angles
+
+- Student reported 저장했어 after X90/Y0 initial-alignment answer. Actual practice06 diff changes only right todown, recorded in [edit](../data/learning/path-rotation-edit-01.json); source599b704dbe0556668013fc274205a0cbf308a049 freezes input/protocol before AI execution.
+- [New run and paired comparison](../data/learning/path-rotation-run-02.json): fixed X5changes/internal450 and Y2/internal180; initial-down alignments90/0 yield totals540/180degrees versus right-heading450/270. Student supplied only initial angles and saved input; full totals/operation/audit are AI support. Independent Python geometry agrees, baseline bytes unchanged, prior module/fixture/test/eleven-test archive hashes match. No tests repeated for input-only change, one CLI run/zero planner/BFS/maps.
+- Geometry only, no dynamics/collision/control/time calibration or physical result. Next [nominal-time exercise](../experiments/path-nominal-time-01.design.json) explicitly assumes1virtualcell/s and90degrees/s, sequential stop-and-turn, instantaneous rate changes; hand answer and timing code pending.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

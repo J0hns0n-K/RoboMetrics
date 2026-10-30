@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "awaiting-student-nominal-time-calculation",
+  "proposalAuthor": "AI assistant",
+  "geometrySource": "data/learning/path-rotation-run-02.json",
+  "fixtures": "experiments/path-turn-score-01.config.json",
+  "initialHeading": "down",
+  "givenGeometry": {
+    "X": {"worldLength": 6, "totalRotationDegrees": 540},
+    "Y": {"worldLength": 8, "totalRotationDegrees": 180}
+  },
+  "assumedRates": {"linearSpeed": 1, "linearSpeedUnits": "virtual cells per second", "angularSpeed": 90, "angularSpeedUnits": "degrees per second", "author": "AI assistant", "calibratedFromHardware": false},
+  "model": "Ideal forward-only stop-and-turn path execution. Translation and minimum in-place alignment occur sequentially at the declared constant rates. Include initial alignment, no final-heading target, instantaneous rate changes, no acceleration/deceleration/slip/tracking/dwell/sensing effects.",
+  "formula": "nominal seconds = worldLength / linearSpeed + totalRotationDegrees / angularSpeed",
+  "studentTask": "Calculate X and Y nominal total times under these explicitly assumed rates. They are model calculations, not observed physical travel times.",
+  "studentNominalSeconds": null,
+  "studentRationale": null,
+  "scope": "Pending hand calculation on schematic paths. No timing function, timed simulator/controller, differential-drive equations, calibration, motion/collision feasibility check or physical trial has been completed. No new planner, route or measured runtime claim."
+}

@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "executedAtUTC": "2026-10-30T07:45:13.288370+00:00",
+  "sourceCommit": "599b704dbe0556668013fc274205a0cbf308a049",
+  "operator": "AI assistant CLI",
+  "protocol": "experiments/path-rotation-02.protocol.json",
+  "fixtures": "experiments/path-turn-score-01.config.json",
+  "studentAnswer": "data/learning/path-rotation-initial-heading-answer-01.json",
+  "verifiedStudentEdit": "data/learning/path-rotation-edit-01.json",
+  "configuredRun": {
+    "commandSource": "const {results}=await import('./practice/06-path-rotation.mjs');process.stderr.write(JSON.stringify(results));",
+    "exitCode": 0,
+    "stdout": "설명용 경로의 최소 회전 각도 합계입니다. 처음 방향: down\n┌─────────┬───────┬──────────────────┬─────────────────────────┬─────────────────────┬──────────────────────┐\n│ (index) │ route │ directionChanges │ initialAlignmentDegrees │ pathRotationDegrees │ totalRotationDegrees │\n├─────────┼───────┼──────────────────┼─────────────────────────┼─────────────────────┼──────────────────────┤\n│ 0       │ 'X'   │ 5                │ 90                      │ 450                 │ 540                  │\n│ 1       │ 'Y'   │ 2                │ 0                       │ 180                 │ 180                  │\n└─────────┴───────┴──────────────────┴─────────────────────────┴─────────────────────┴──────────────────────┘\n",
+    "diagnosticStreamPurpose": "stderr carries exported result JSON, not an error; avoid a duplicate CLI run.",
+    "initialHeading": "down",
+    "results": [
+      {
+        "route": "X",
+        "directionChanges": 5,
+        "initialHeading": "down",
+        "initialAlignmentDegrees": 90,
+        "pathRotationDegrees": 450,
+        "totalRotationDegrees": 540
+      },
+      {
+        "route": "Y",
+        "directionChanges": 2,
+        "initialHeading": "down",
+        "initialAlignmentDegrees": 0,
+        "pathRotationDegrees": 180,
+        "totalRotationDegrees": 180
+      }
+    ]
+  },
+  "pairedComparison": {
+    "baseline": "data/learning/path-rotation-run-01.json",
+    "baselineSha256Bytes": "9aff93d3b737a5150d2eefb4e73f510e6984a12220fd510f5c2c7fcb8fed1ff4",
+    "changedInput": "initialHeading right to down only",
+    "heldFixed": "Exact schematic X/Y coordinates, endpoints, segment headings, forward-only alignment convention, count/angle/score code.",
+    "rightHeading": [
+      {
+        "route": "X",
+        "directionChanges": 5,
+        "initialHeading": "right",
+        "initialAlignmentDegrees": 0,
+        "pathRotationDegrees": 450,
+        "totalRotationDegrees": 450
+      },
+      {
+        "route": "Y",
+        "directionChanges": 2,
+        "initialHeading": "right",
+        "initialAlignmentDegrees": 90,
+        "pathRotationDegrees": 180,
+        "totalRotationDegrees": 270
+      }
+    ],
+    "downHeading": [
+      {
+        "route": "X",
+        "directionChanges": 5,
+        "initialHeading": "down",
+        "initialAlignmentDegrees": 90,
+        "pathRotationDegrees": 450,
+        "totalRotationDegrees": 540
+      },
+      {
+        "route": "Y",
+        "directionChanges": 2,
+        "initialHeading": "down",
+        "initialAlignmentDegrees": 0,
+        "pathRotationDegrees": 180,
+        "totalRotationDegrees": 180
+      }
+    ],
+    "interpretationByAi": "The path-internal angle and event count stay fixed; only initial alignment and the total change. Initial-down X90/Y0 alignment matches the student hand answer. This does not measure physical turning."
+  },
+  "validation": {
+    "independentPythonAudits": [
+      {
+        "route": "X",
+        "worldLength": 6,
+        "segmentHeadings": [
+          "right",
+          "down",
+          "right",
+          "down",
+          "right",
+          "down"
+        ],
+        "initialAlignmentDegrees": 90,
+        "pathRotationDegrees": 450,
+        "totalRotationDegrees": 540,
+        "studentInitialAnswerAndDirectAuditMatch": true,
+        "internalAngleAndEventCountUnchanged": true
+      },
+      {
+        "route": "Y",
+        "worldLength": 8,
+        "segmentHeadings": [
+          "down",
+          "down",
+          "down",
+          "down",
+          "right",
+          "right",
+          "right",
+          "up"
+        ],
+        "initialAlignmentDegrees": 0,
+        "pathRotationDegrees": 180,
+        "totalRotationDegrees": 180,
+        "studentInitialAnswerAndDirectAuditMatch": true,
+        "internalAngleAndEventCountUnchanged": true
+      }
+    ],
+    "studentInitialAnglesMatch": true,
+    "baselineBytesUnchanged": true,
+    "sourceFixtureAndAnswerBytesUnchanged": true,
+    "sha256Bytes": {
+      "practice/06-path-rotation.mjs": "3e9adb38d9d125d6101338850e9d4b2101b657eccc50d3adb1408cae392b35a4",
+      "src/path-rotation.mjs": "e2b388168713b7dc42028e7b9199a782bf45b216fa7487cfa4a076b9c608d84b",
+      "src/path-metrics.mjs": "9813941430e2fa6c8f1096032108d5572e350f6889923ce49c8212b26390af58",
+      "experiments/path-turn-score-01.config.json": "6959b179884c81e06eed7ac54e416c022616fd0a0957f40c831557fe6ad31237",
+      "experiments/path-rotation-02.protocol.json": "882d572d8aa39439a55a000e985ab323c5521d4dcd87ccf1f4929b34030bc85d",
+      "data/learning/path-rotation-initial-heading-answer-01.json": "6036b7b96bf4b8688024f9d353eab1bd5337a94eb5480fe2ae200beb9d3e124f",
+      "data/learning/path-rotation-edit-01.json": "90a10d47c49f4ed28071728a590750eade08d29eae57fb9c8391164ece75f67c"
+    },
+    "unchangedModuleFixtureTestHashesMatchBaseline": true,
+    "priorElevenTestArchiveHashesVerified": true,
+    "testsRerun": false,
+    "configuredCliExecutions": 1,
+    "newPlannerCalls": 0,
+    "newBfsCalls": 0,
+    "newIndependentMaps": 0
+  },
+  "roles": {
+    "student": "Hand-calculated first-move alignment X90/Y0 and saved the guided right-to-down input edit.",
+    "ai": "Task/convention/code/instructions, input inspection/freeze, execution, independent heading arithmetic and documentation. No student execution or full-path angle prediction inferred."
+  },
+  "scope": "Geometric initial-condition sensitivity for two fixed schematic forward-travel paths. Not new routes, measured duration/energy, dynamic/collision/control validation or changed score/search policy.",
+  "nextTask": "A forthcoming task may introduce explicitly assumed constant linear/angular rates to calculate nominal stop-and-turn time. No timing function, student timing answer or timed motion has been implemented/executed here."
+}

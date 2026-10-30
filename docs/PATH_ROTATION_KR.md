@@ -27,4 +27,15 @@
 
 이 결과는 기하학적 방향 정렬 지표다. 실제 회전 속도·가속도·미끄러짐·제어 오차·회전 반경·충돌 가능성·시간·에너지를 검증한 결과가 아니다. 경로 선택이나 운동학 모델을 구현했다는 주장도 하지 않는다.
 
-다음 [출발 방향 민감도 과제](../experiments/path-rotation-initial-heading-01.design.json)는 처음 방향만 아래로 바꾸었을 때 첫 이동 전 필요한 각도를 학생에게 묻는다. 학생은 [X: 90도 / Y: 0도](../data/learning/path-rotation-initial-heading-answer-01.json)라고 첫 이동 전 정렬 각도를 답했다. 확인 당시 실습06의 값은 여전히 `right`였으며, 다음은 메모장에서 `initialHeading`을 `down`으로 바꾸어 저장하는 단계다. 아래 방향 출발의 X/Y 구성 실행은 아직 하지 않았다.
+다음 [출발 방향 민감도 과제](../experiments/path-rotation-initial-heading-01.design.json)는 처음 방향만 아래로 바꾸었을 때 첫 이동 전 필요한 각도를 학생에게 묻는다. 학생은 [X: 90도 / Y: 0도](../data/learning/path-rotation-initial-heading-answer-01.json)라고 첫 이동 전 정렬 각도를 답했다. 그 답을 먼저 기록한 뒤 학생이 `initialHeading`을 `right`→`down` 한 줄로 저장한 것을 확인했다. 입력과 [새 프로토콜](../experiments/path-rotation-02.protocol.json)을 소스 `599b704dbe0556668013fc274205a0cbf308a049`에 보존한 뒤 AI가 [아래 방향 조건을 실행·검증](../data/learning/path-rotation-run-02.json)했다.
+
+| 경로 | 출발 방향 | 출발 정렬 | 경로 중 회전 | 합계 |
+|---|---|---:|---:|---:|
+| X | right | 0도 | 450도 | 450도 |
+| X | down | 90도 | 450도 | 540도 |
+| Y | right | 90도 | 180도 | 270도 |
+| Y | down | 0도 | 180도 | 180도 |
+
+같은 경로의 내부 각도와 변경 횟수는 유지됐고, 출발 정렬과 그만큼의 합계만 변했다. 기존 오른쪽 결과 바이트를 보존했고, Python의 별도 방향 계산도 일치했다. 모듈·고정 경로·검사 파일·기존11개 TAP 해시가 같아 입력만 바꾼 이번 조건에서 검사는 반복하지 않았다. 새 CLI 실행1회이며 경로탐색/BFS/새 지도는 없다. 학생의 손계산·수정과 AI 실행을 구분한다.
+
+다음 [명시적 가상 속도의 소요 시간 계산](../experiments/path-nominal-time-01.design.json)은1칸/초와90도/초에서 직진·회전 시간을 순서대로 더하는 이상적 모델을 먼저 손으로 계산한다. 속도는 AI가 가정했으며 실제 측정값이 아니다. 시간 계산 코드·주행 제어·동역학·실제 로봇 검증은 아직 없다.
