@@ -13,7 +13,7 @@ const blocked = fixture.originalRows.flatMap((line, y) => [...line].flatMap((val
 const map = makeMap(9, 7, blocked, source.protocol.start, goal);
 const result = resolveDiskResolution(map, {
   mode: 'always-fine', radius: model.radius, clearance: model.clearance,
-  coarseBudget: 100, fineBudget: 100, tieBreak: 'fifo'
+  coarseBudget: 100, fineBudget: 200, tieBreak: 'fifo'
 });
 console.log('도착점만 바꾸는 안내된 연습입니다. 원래 실험 자료는 수정하거나 덮어쓰지 않습니다.');
 console.table([{goal: goal.join(','), result: result.status, worldLength: result.geometricLength, examined: result.expanded}]);
