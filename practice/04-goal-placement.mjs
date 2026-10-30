@@ -4,7 +4,7 @@ import {makeMap} from '../src/core.mjs';
 import {resolveDiskResolution} from '../src/resolution-policy.mjs';
 
 // Goal choices and saved edits are attributed separately in data/learning/endpoint-student-choice-*.json.
-const goal = [6, 1];
+const goal = [8, 4];
 
 const source = JSON.parse(await readFile(new URL('../data/footprint/resolution-quality-prospective-run-01.json', import.meta.url), 'utf8'));
 const model = JSON.parse(await readFile(new URL('../experiments/disk-model-clearance015-01.config.json', import.meta.url), 'utf8'));

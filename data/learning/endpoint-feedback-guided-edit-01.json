@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "됬음",
+  "context": "After difficulty editing the Codex file view, AI launched Windows Notepad for the practice file; student then reported completion.",
+  "editVerification": {
+    "file": "practice/04-goal-placement.mjs",
+    "before": "const goal = [6, 1];",
+    "after": "const goal = [8, 4];",
+    "actualDiffInspected": true,
+    "onlyGoalChanged": true,
+    "parentRevision": "f4bd32bb0590e91ab52f30b3a004969fefe5c162",
+    "sha256BytesAfterEdit": "f4b073c6bb35ce4a6c0ff33e73e97673783e7488640de7aa99253001b56c3d66"
+  },
+  "roles": {
+    "student": "Saved the guided known-invalid goal input; matching one-line edit verified on disk.",
+    "ai": "Supplied editor assistance, target, wording and code, and recorded the saved edit."
+  },
+  "messageAuthor": "AI assistant",
+  "referenceValidation": "data/learning/endpoint-feedback-validation-01.json",
+  "studentExecutionReported": false,
+  "studentMessageInspectionReported": false,
+  "scope": "Guided input edit only; no new research result, student-authored message/code or execution inferred. No new planner or test run.",
+  "nextTask": "Student repeats the known PowerShell command and shares the displayed Korean guidance below the raw table."
+}
