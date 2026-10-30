@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "X: 16점, Y: 12점 -> Y",
+  "studentScores": {"X": 16, "Y": 12},
+  "studentChoice": "Y",
+  "studentAdditionalRationale": null,
+  "task": "experiments/path-turn-cost-01.design.json",
+  "givenRule": {"perUnitMove": 1, "perDirectionChange": 2, "units": "arbitrary score points"},
+  "roles": {
+    "student": "Calculated both offered route scores and chose Y under the given rule.",
+    "ai": "Provided routes, route properties, scoring rule and coefficients; subsequent implementation/checks are AI assistance."
+  },
+  "scope": "Correct guided calculation and offered-route selection, not student design of the coefficients, proof of a globally best route, calibrated physical cost or code implementation."
+}

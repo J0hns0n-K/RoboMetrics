@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "fixtureAuthor": "AI assistant",
+  "sourceTask": "experiments/path-turn-cost-01.design.json",
+  "units": "schematic coordinate lengths and arbitrary score points; no obstacle or physical model",
+  "start": [0, 0],
+  "goal": [3, 3],
+  "routes": [
+    {"id": "X", "path": [[0,0], [1,0], [1,1], [2,1], [2,2], [3,2], [3,3]]},
+    {"id": "Y", "path": [[0,0], [0,1], [0,2], [0,3], [0,4], [1,4], [2,4], [3,4], [3,3]]}
+  ]
+}

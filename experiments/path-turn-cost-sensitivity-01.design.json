@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "awaiting-student-recalculation",
+  "proposalAuthor": "AI assistant",
+  "parentTask": "experiments/path-turn-cost-01.design.json",
+  "fixtures": "experiments/path-turn-score-01.config.json",
+  "heldFixed": "Same X/Y paths, endpoints and world-distance weight1.",
+  "changedInput": {"perDirectionChange": {"from": 2, "to": 0.5}},
+  "studentTask": "Calculate X and Y at the lower assumed direction-change penalty0.5 and choose the lower-score offered route. Record response before changing the practice input/running this condition.",
+  "studentScores": null,
+  "studentChoice": null,
+  "nextGuidedEditAfterAnswer": "Change only practice/05-path-score.mjs perDirectionChange from2 to0.5, inspect the actual saved diff and record operator/output. Do not overwrite the weight2 result.",
+  "scope": "Guided arithmetic/parameter sensitivity under arbitrary points, not a blind research cohort, calibrated robot timing, a new route or planner change. No student recalculation or configured0.5 run yet."
+}

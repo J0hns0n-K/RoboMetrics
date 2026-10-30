@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "ready-before-score-cli-check",
+  "methodAuthor": "AI assistant",
+  "studentAnswer": "data/learning/path-turn-cost-answer-01.json",
+  "fixtures": "experiments/path-turn-score-01.config.json",
+  "scoreDefinition": "worldLength * perWorldUnit + directionChanges * perDirectionChange, finite nonnegative arbitrary weights. Use original-coordinate segment lengths, not sampled edge count. Initial orientation alignment excluded; reversals are one heading-change event.",
+  "configuredWeights": {"perWorldUnit": 1, "perDirectionChange": 2},
+  "cli": "practice/05-path-score.mjs",
+  "module": "src/virtual-path-score.mjs",
+  "tests": "test/virtual-path-score.test.mjs",
+  "plannedChecks": "Run five new score tests and five relevant existing direction-descriptor tests, archive a new TAP file without replacing the previous one. Execute committed practice05 once and record exported results. Independently reconstruct lengths/headings/scores from the immutable fixture paths; check prior core/body/metric/raw hashes. No planner/BFS or new maps, no repetition of the old101 suite.",
+  "scope": "Arithmetic and CLI integration on two offered schematic paths. Coefficients are AI assumptions, student supplied scores/choice only. Not a global-optimality test, obstacle/physical validation or changed planner objective. Do not execute the next0.5-penalty exercise before its student response."
+}
