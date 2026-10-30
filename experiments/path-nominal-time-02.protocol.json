@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "ready-before-angular180-cli-check",
+  "methodAuthor": "AI assistant",
+  "parentProtocol": "experiments/path-nominal-time-01.protocol.json",
+  "baseline": "data/learning/path-nominal-time-run-01.json",
+  "fixtures": "experiments/path-turn-score-01.config.json",
+  "studentAnswer": "data/learning/path-nominal-time-angular-speed-answer-01.json",
+  "studentEdit": "data/learning/path-nominal-time-edit-01.json",
+  "changedInput": {"angularSpeedDegrees": {"from":90, "to":180, "units":"degrees per second"}},
+  "heldFixed": "Exact schematic X/Y paths, initial down, world lengths6/8 and angles540/180degrees, linear speed1virtualcell/s, nominal-time/rotation code and sequential constant-rate model. No actual actuation or elapsed-time measurement.",
+  "plannedChecks": "Freeze the verified one-line input before AI execution. Import practice07 once and capture console/exported components. Independently reconstruct geometry and nominal rate arithmetic, compare student X9/Y9 tie and unchanged translation components. Preserve angular90 bytes and verify unchanged module/fixture/test hashes and prior twelve-test archive; no test repeat for this parameter-only condition, planner/BFS/new maps.",
+  "scope": "Ideal arithmetic sensitivity at an AI-assumed virtual angular speed, not measured travel/runtime, timed simulator/controller, calibration, physical dynamics/collision validation, new paths or a globally fastest trajectory."
+}

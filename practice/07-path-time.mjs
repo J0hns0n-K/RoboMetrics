@@ -4,7 +4,7 @@ import {nominalStopTurnTime} from '../src/nominal-path-time.mjs';
 
 const initialHeading = 'down';
 const linearSpeed = 1; // Virtual cells per second.
-const angularSpeedDegrees = 90; // Degrees per second.
+const angularSpeedDegrees = 180; // Degrees per second.
 
 const fixtures = JSON.parse(await readFile(new URL('../experiments/path-turn-score-01.config.json', import.meta.url), 'utf8'));
 export const results = fixtures.routes.map(({id, path}) => ({route: id,

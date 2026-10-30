@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "저장했어",
+  "priorAnswer": "data/learning/path-nominal-time-angular-speed-answer-01.json",
+  "editVerification": {
+    "file": "practice/07-path-time.mjs",
+    "actualDiffInspected": true,
+    "before": "const angularSpeedDegrees = 90; // Degrees per second.",
+    "after": "const angularSpeedDegrees = 180; // Degrees per second.",
+    "changedLines": 1,
+    "onlyAngularSpeedChanged": true
+  },
+  "roles": {
+    "student": "Saved the matching guided angular-speed90-to180 edit after correctly calculating X9/Y9 and explicitly identifying a tie.",
+    "ai": "Supplied rates/model/code/task/instructions and inspected/preserved the input; subsequent AI execution is not student operation."
+  },
+  "scope": "Verified guided input edit only, not physical speed actuation, code authorship or a user-executed output. Commit before new AI check; preserve the angular90 artifact."
+}
