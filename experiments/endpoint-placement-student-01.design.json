@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "first-choice-checked-awaiting-student-revision",
+  "status": "revised-choice-recorded-ai-check-pending",
   "proposalAuthor": "AI assistant",
   "purpose": "Let the student choose a different goal on the known archived map after guided parameter editing and terminal operation.",
   "mapSource": "data/footprint/resolution-quality-prospective-run-01.json",
@@ -55,9 +55,13 @@
   "studentPrediction": null,
   "prompt": "Choose an empty cell different from the start and the two previously tried goals. Give (x,y), and optionally why it seems suitable. Consider the body and margin near walls and the outer boundary.",
   "procedureAfterChoice": "Record the exact choice and rationale before a new execution. Keep original map/start/body/margin and budgets unchanged, change only the practice goal, inspect the actual saved diff, and separate student-reported operation from AI checks. Endpoint fit alone does not guarantee a route or a result within budget.",
-  "scope": "Known-map guided task: student chose8,4 and saved matching input, with no reason/outcome prediction. AI check rejects boundary/obstacle clearance before search. Await revised student choice. No new independent map or algorithm improvement; original raw artifacts immutable.",
+  "scope": "Student first chose8,4; AI check rejected clearance. Student now chose6,1 and saved matching goal edit after explanation; no reason or explicit success forecast supplied. New AI check pending. Same known map/body/budget, no new independent cohort or algorithm change.",
   "studentChoiceRecord": "data/learning/endpoint-student-choice-01.json",
   "aiCheckRecord": "data/learning/endpoint-student-choice-run-01.json",
   "nextPrompt": "Choose another empty cell inside x1..7 and y1..5, apart from the start and previous goals, considering nearby walls too. Optional rationale; keep body/world/budget fixed.",
-  "studentRevisedGoal": null
+  "studentRevisedGoal": [
+    6,
+    1
+  ],
+  "studentRevisedChoiceRecord": "data/learning/endpoint-student-choice-02.json"
 }

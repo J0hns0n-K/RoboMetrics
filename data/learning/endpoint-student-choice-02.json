@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "(6,1)",
+  "studentGoal": [6, 1],
+  "studentRationale": null,
+  "studentSuccessPrediction": null,
+  "previousChoiceRecord": "data/learning/endpoint-student-choice-01.json",
+  "task": "experiments/endpoint-placement-student-01.design.json",
+  "editVerification": {
+    "file": "practice/04-goal-placement.mjs",
+    "actualDiffInspected": true,
+    "before": "const goal = [8, 4];",
+    "after": "const goal = [6, 1];",
+    "changedLines": 1,
+    "otherSettingsUnchanged": true,
+    "fineBudget": 200
+  },
+  "roles": {
+    "student": "Selected revised coordinate6,1 after the AI explained boundary and obstacle clearance, and saved the matching one-line goal edit verified on disk. No reason or explicit outcome forecast supplied.",
+    "ai": "Provided known map, scaffold, task, constraints and previous diagnosis; records this choice before new execution."
+  },
+  "scope": "Guided student-selected input on the same known synthetic map, not algorithm authorship, a blind new research map or independently observed student execution."
+}
