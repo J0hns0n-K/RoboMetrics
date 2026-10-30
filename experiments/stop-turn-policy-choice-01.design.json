@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "awaiting-student-model-stop-policy-choice",
+  "proposalAuthor": "AI assistant",
+  "motivation": "Before composing finite acceleration/braking into path duration, explicitly choose where the model requires rest.",
+  "straightExample": {"waypoints":[[0,0],[1,0],[2,0],[3,0]], "startAndGoalAtRest":true},
+  "choices": {
+    "1": {"id":"every-waypoint", "meaning":"Require rest at each supplied intermediate waypoint, then start again."},
+    "2": {"id":"turns-only", "meaning":"Continue through collinear intermediate waypoints; require rest before direction changes and at the goal."}
+  },
+  "studentChoice": null,
+  "studentRationale": null,
+  "implementationStatus": "No path-wide finite-acceleration or stop-policy implementation yet. Existing instantaneous path-time proxy stays unchanged.",
+  "scope": "A proposed virtual-model design decision, not an established physical robot behavior or universal best controller. Record the actual choice/reason before implementation; keep alternate assumptions explicit."
+}

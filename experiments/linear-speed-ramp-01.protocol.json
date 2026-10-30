@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "ready-before-analytic-ramp-check",
+  "methodAuthor": "AI assistant",
+  "studentExplanation": "data/learning/linear-ramp-mean-explanation-01.json",
+  "priorAttempts": ["data/learning/linear-ramp-distance-attempt-01.json", "data/learning/linear-ramp-duration-attempt-01.json"],
+  "fixtures": "experiments/linear-speed-ramp-01.config.json",
+  "module": "src/linear-speed-ramp.mjs",
+  "cli": "practice/08-linear-ramp.mjs",
+  "equations": "a=(v1-v0)/T; fullRampMean=(v0+v1)/2; fullDistance=fullRampMean*T; v(t)=v0+(v1-v0)*t/T; x(t)=v0*t+0.5*a*t^2. Implementation uses stable half-sums and prefix mean for displacement.",
+  "domain": "Forward one-dimensional analytic interval only: finite nonnegative endpoint speeds, finite positive duration, elapsed in[0,T]. Linear speed change allows acceleration, constant speed or deceleration. Explicit full-ramp mean differs from instantaneous/prefix speed; no motion after T is defined.",
+  "plannedChecks": "Freeze source/known teaching fixtures before execution. Archive six new ramp tests, run practice08 once and record six analytic states. Independently reconstruct each state using the constant-acceleration equations and numerical trapezoidal velocity integration, verify prior nominal-code/fixture/evidence hashes. No old-suite repeat, timed simulation, planner/BFS/new maps or hardware.",
+  "scope": "AI analytic kinematic reference after corrected examples and student qualitative explanation, not student code or a new blind forecast. Preserve the student's earlier incorrect/partial numbers; do not relabel AI reference values as student corrections. Existing path-wide instantaneous nominal-time model is unchanged; composing finite ramps into path timing is future work."
+}

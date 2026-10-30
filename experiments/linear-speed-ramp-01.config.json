@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "fixtureAuthor": "AI assistant",
+  "sourceTasks": ["experiments/linear-ramp-distance-01.design.json", "experiments/linear-ramp-duration-01.design.json"],
+  "units": {"speed":"virtual cells per second", "time":"seconds", "displacement":"virtual cells", "acceleration":"virtual cells per second squared"},
+  "profiles": [
+    {"id":"ramp-1s", "initialSpeed":0, "finalSpeed":1, "duration":1},
+    {"id":"ramp-2s", "initialSpeed":0, "finalSpeed":1, "duration":2}
+  ],
+  "sampleFractions": [0, 0.5, 1],
+  "scope": "Known teaching/control profiles after AI worked examples, not blinded forecasts or measured motor data."
+}

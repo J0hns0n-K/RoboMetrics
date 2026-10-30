@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "처음 시작이 0이었으니까 당연한 거 아니야",
+  "task": "experiments/linear-ramp-duration-01.design.json",
+  "priorAttemptAndVisualGuidance": "data/learning/linear-ramp-duration-attempt-01.json",
+  "context": "After AI correction and a speed-time diagram, the student was asked why the whole-interval mean is below the terminal speed in the declared monotonic linear0-to1 profile.",
+  "contextualReading": "Refers to the low starting speed as the reason for a lower interval average in this specified increasing profile. Do not generalize this to arbitrary nonmonotonic profiles from starting speed alone.",
+  "studentNumericalAverageCorrectionSupplied": false,
+  "roles": {
+    "student": "Supplied a guided qualitative explanation after the worked example and visual.",
+    "ai": "Provided profile, correction, visual and framing; subsequent analytic reference code/tests/operation remain AI assistance."
+  },
+  "scope": "Qualitative post-guidance explanation, not a new numerical answer, original model proof, student code, timed motion or physical measurement. Earlier partial answers remain unchanged."
+}

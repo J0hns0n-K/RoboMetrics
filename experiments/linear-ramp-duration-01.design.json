@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "partial-answer-preserved-ai-visual-guidance-provided",
+  "status": "guided-qualitative-explanation-recorded-ai-ramp-check-pending",
   "proposalAuthor": "AI assistant",
   "parentTask": "experiments/linear-ramp-distance-01.design.json",
   "priorWorkedExample": "data/learning/linear-ramp-distance-attempt-01.json",
@@ -19,7 +19,7 @@
   "studentAverageSpeed": 1,
   "studentDistance": 1,
   "studentRationale": null,
-  "scope": "Student reported average1/distance1; distance matches but average does not match the declared2s linear ramp. Exact partial answer preserved; AI correction/diagram separate. No student correction/explanation or production acceleration code/run/measurement inferred.",
+  "scope": "Original reported average1/distance1 preserved: only distance correct under the declared2s profile. After AI correction/visual, student gave a qualitative explanation referring to the low start speed; no new numeric average correction. AI analytic 1D reference code/check pending, not student code or physical validation.",
   "studentFirstAttemptRecord": "data/learning/linear-ramp-duration-attempt-01.json",
   "assessmentByAi": {
     "averageSpeedCorrect": false,
@@ -27,5 +27,8 @@
     "studentAverageCorrectionReceived": false
   },
   "guidedNextQuestion": "Explain in one sentence why the average speed for the whole0-to1 linear ramp is lower than the terminal speed, after viewing the AI diagram.",
-  "studentExplanationVerbatim": null
+  "studentExplanationVerbatim": "처음 시작이 0이었으니까 당연한 거 아니야",
+  "studentExplanationRecord": "data/learning/linear-ramp-mean-explanation-01.json",
+  "analyticReferenceProtocol": "experiments/linear-speed-ramp-01.protocol.json",
+  "nextTask": "experiments/stop-turn-policy-choice-01.design.json"
 }
