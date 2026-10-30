@@ -1,15 +1,28 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "awaiting-student-minimum-angle-answers",
+  "status": "student-angle-answers-recorded-ai-descriptor-check-pending",
   "proposalAuthor": "AI assistant",
   "parentInterpretation": "data/learning/path-turn-cost-interpretation-01.json",
   "question": "A schematic robot initially faces right. What minimum absolute rotation angle is needed to face down in case A, or left in case B? Answer A/B in degrees.",
   "initialHeading": "right",
-  "cases": {"A": {"targetHeading": "down"}, "B": {"targetHeading": "left"}},
+  "cases": {
+    "A": {
+      "targetHeading": "down"
+    },
+    "B": {
+      "targetHeading": "left"
+    }
+  },
   "convention": "Shortest in-place change of heading, report unsigned angle in degrees. Either rotation direction may be used; do not infer time or energy.",
-  "studentAnglesDegrees": null,
+  "studentAnglesDegrees": {
+    "A": 90,
+    "B": 180
+  },
   "studentRationale": null,
   "motivation": "A heading-change event count does not specify how large the turn is. The existing path descriptor excludes initial alignment; this separate conceptual task explicitly introduces an initial heading. No existing metric semantics or code is changed yet.",
-  "scope": "AI-framed schematic orientation exercise, not physical motion, collision feasibility, constant angular speed, turn-duration measurement or completed orientation-aware planning."
+  "scope": "Student correctly answered minimum angles A90/B180 under the AI-supplied starting heading/convention. AI authored a separate orientation descriptor with validation pending; old event metric unchanged. No physical timing, motion feasibility or student code claim.",
+  "studentAnswerRecord": "data/learning/heading-angle-answer-01.json",
+  "descriptorProtocol": "experiments/path-rotation-01.protocol.json",
+  "nextTask": "experiments/path-rotation-initial-heading-01.design.json"
 }

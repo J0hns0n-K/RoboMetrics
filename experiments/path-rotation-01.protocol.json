@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "ready-before-orientation-cli-check",
+  "methodAuthor": "AI assistant",
+  "studentAnswer": "data/learning/heading-angle-answer-01.json",
+  "module": "src/path-rotation.mjs",
+  "cli": "practice/06-path-rotation.mjs",
+  "fixtures": "experiments/path-turn-score-01.config.json",
+  "configuredInitialHeading": "right",
+  "simpleCases": {"A": {"from": "right", "to": "down"}, "B": {"from": "right", "to": "left"}},
+  "model": "Schematic forward-only axis movement: align in place to each segment's travel heading using the shortest unsigned turn. Separate alignment before the first segment from subsequent internal path turns; sum absolute angle magnitudes, not net heading difference. No final target-heading alignment is required. A stationary singleton has no travel heading and adds no turn.",
+  "existingMetricCompatibility": "countDirectionChanges remains unchanged and still excludes initial alignment, counting a reversal as one event. The new angle descriptor is separate; it does not redefine the existing score or planner objective.",
+  "plannedChecks": "Archive six new rotation tests plus five relevant existing direction tests. Import the committed practice CLI once, capture exported X/Y rotation descriptors and direct A/B minimum angles. Independently calculate heading transitions from fixed coordinates. Verify unchanged previous modules/fixtures/research hashes. No planner/BFS/new map or old101-suite run.",
+  "scope": "Geometric orientation bookkeeping under a forward-only stop-and-align assumption, not a differential-drive dynamics/controller implementation, finite turning-radius model, collision/motion feasibility test, or measured/estimated duration and energy. The configured initial-down X/Y case remains pending student response."
+}

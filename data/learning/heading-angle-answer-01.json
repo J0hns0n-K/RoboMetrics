@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "A: 90도 / B: 180도",
+  "studentAnglesDegrees": {"A": 90, "B": 180},
+  "studentRationale": null,
+  "task": "experiments/heading-angle-01.design.json",
+  "context": "AI specified an initial right-facing heading and asked for minimum unsigned in-place angles to down(A) and left(B), before adding the angle descriptor.",
+  "roles": {
+    "student": "Correct angle answers for the two offered cases.",
+    "ai": "Supplied headings/convention/task; subsequent angle code, tests and operation are AI assistance."
+  },
+  "scope": "Guided geometric calculation, not student code, measured turn timing, motion feasibility, kinematic validation or independent model design."
+}

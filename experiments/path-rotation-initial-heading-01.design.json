@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "awaiting-student-initial-alignment-angles",
+  "proposalAuthor": "AI assistant",
+  "fixtures": "experiments/path-turn-score-01.config.json",
+  "changedInput": {"initialHeading": {"from": "right", "to": "down"}},
+  "heldFixed": "Exact X/Y paths; X begins right, Y begins down. Internal path headings do not change.",
+  "studentTask": "If the robot initially faces down, state the minimum angle needed before the first move of X and Y. Ask only for initial alignment, not the whole path total.",
+  "studentInitialAlignmentDegrees": null,
+  "studentRationale": null,
+  "nextGuidedEditAfterAnswer": "Change only practice06 initialHeading from right to down after recording the response; inspect saved diff and preserve a new result instead of replacing the right-heading baseline.",
+  "scope": "Guided orientation/initial-condition sensitivity on schematic paths, not measured turning time, new route, dynamic feasibility or a changed planner. No student answer or configured initial-down X/Y run yet."
+}
