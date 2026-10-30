@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "awaiting-student-direction-change-counts",
+  "proposalAuthor": "AI assistant",
+  "question": "Introduce direction changes as a separate path descriptor alongside length before any future motion/control model.",
+  "exampleType": "Schematic movement sequences, not paths claimed valid on the current obstacle map or physical robot trajectories.",
+  "start": [0, 0],
+  "goal": [3, 3],
+  "stepLength": 1,
+  "sequences": {
+    "A": ["right", "right", "right", "down", "down", "down"],
+    "B": ["right", "down", "right", "down", "right", "down"]
+  },
+  "countConvention": "Count one direction-change event when consecutive step headings differ; initial orientation alignment is excluded. These sequences contain only right-angle changes. Do not infer time, energy or dynamic feasibility from this count.",
+  "studentCounts": null,
+  "studentRationale": null,
+  "nextTask": "Ask the student how many times direction changes in A and B. Record actual response before adding any automatic path-turn metric. No new planner run, metric implementation or robot/control test yet.",
+  "scope": "AI-framed hand-count exercise introducing a future geometric descriptor. Not a new search algorithm, shortest-time optimization, tested kinematics or physical performance result."
+}

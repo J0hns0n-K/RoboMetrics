@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "evidenceType": "guided-user-pasted-table-and-warning-absence-confirmation",
+  "userTableVerbatim": "┌─────────┬───────┬───────────────┬─────────────┬──────────┐\n│ (index) │ goal  │ result        │ worldLength │ examined │\n├─────────┼───────┼───────────────┼─────────────┼──────────┤\n│ 0       │ '6,1' │ 'ROUTE_FOUND' │ 8           │ 31       │\n└─────────┴───────┴───────────────┴─────────────┴──────────┘",
+  "userWarningAbsenceVerbatim": "안 나옴",
+  "context": "Student first shared the valid-case result table. After AI specifically asked whether the insufficient-space warning appeared, the student reported that it did not.",
+  "reportedFields": {
+    "goal": [
+      6,
+      1
+    ],
+    "status": "ROUTE_FOUND",
+    "geometricLength": 8,
+    "expanded": 31,
+    "clearanceMessageShown": false
+  },
+  "configuredContext": {
+    "archivedTrial": 10,
+    "mode": "always-fine",
+    "fineBudget": 200,
+    "tieBreak": "fifo",
+    "radius": 0.4,
+    "clearance": 0.15
+  },
+  "editVerification": {
+    "file": "practice/04-goal-placement.mjs",
+    "before": "const goal = [8, 4];",
+    "after": "const goal = [6, 1];",
+    "actualDiffInspected": true,
+    "onlyGoalChanged": true,
+    "parentRevision": "c380caff6a76eed40d853482d87a56d41c4a7107",
+    "sha256BytesAtRecording": "28f4c823c657d346c75089c304332def3f74606ef3154a5611cda0e55b7acad3",
+    "matchesAiValidatedValidModuleIgnoringLineEndings": true,
+    "preservationTiming": "After the user report, not a pre-execution user source freeze."
+  },
+  "references": {
+    "invalidCaseUserReport": "data/learning/endpoint-feedback-student-report-01.json",
+    "aiFunctionalControls": "data/learning/endpoint-feedback-validation-01.json",
+    "messageAuthorship": "data/learning/endpoint-message-uncertainty-01.json"
+  },
+  "provenance": {
+    "student": "Saved the guided goal restoration, shared valid table and explicitly reported no clearance warning.",
+    "ai": "Scaffold, full message/code, targets, operation guidance, existing functional controls and record.",
+    "userProcessIndependentlyObserved": false,
+    "userExecutionSourceHashCaptured": false
+  },
+  "scope": "Completes guided user-reported message appearance/absence checks on two goal variants of the same known map. Not independently observed execution, a new research cohort, student-written message/code or planning improvement. No new AI planner/test execution for recording this report.",
+  "nextTask": "experiments/path-turn-count-01.design.json"
+}

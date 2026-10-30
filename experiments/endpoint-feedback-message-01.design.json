@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "invalid-case-user-inspection-reported-valid-case-pending",
+  "status": "known-case-ai-controls-and-guided-user-reports-completed",
   "proposalAuthor": "AI assistant",
   "purpose": "Turn the student's guided insufficient-space interpretation into a clear actionable user-facing message in the existing practice CLI.",
   "parentTask": "experiments/endpoint-placement-student-01.design.json",
@@ -11,15 +11,16 @@
   "studentMessageVerbatim": null,
   "plannedIntegration": "After recording the student's exact text, add it as a conditional explanatory message to practice/04-goal-placement.mjs. Keep goal, body, budgets, algorithm, raw status, numerical output and original research data unchanged. Do not automatically move the goal. AI supplies conditional wiring; attribute the message text separately to the student after it is actually provided.",
   "plannedChecks": "Check the displayed text for the known invalid case and ensure a valid result is not labeled invalid. Record the real check method and operator; no claim that display text improves planning performance.",
-  "scope": "AI-written CLI wording/code, previously checked by AI on known valid/invalid cases. User now reports invalid-case table and guidance appearance; valid-case user inspection remains pending. No independent process capture, student-authored message/code, new research map or algorithm improvement.",
+  "scope": "AI-written CLI wording/code, checked by AI on two known goal cases and now covered by guided user-reported warning appearance/absence. No independent user process capture, student-authored wording/code, new research map, search change or physical performance. Two-case feature checkpoint completed; no wider UI coverage claim.",
   "studentUncertaintyRecord": "data/learning/endpoint-message-uncertainty-01.json",
   "aiExampleMessage": "로봇 몸체와 여유폭을 확보할 공간이 부족하니, 벽과 지도 경계에서 더 떨어진 위치를 선택하세요.",
   "messageAuthor": "AI assistant",
   "actualIntegration": "After student uncertainty, AI supplied example wording and conditional console output in practice04 only for INVALID_ENDPOINT_CLEARANCE. Raw table/status, goal6,1, model, budgets and algorithms unchanged; no automatic goal move.",
   "validationRecord": "data/learning/endpoint-feedback-validation-01.json",
   "studentInspectionReported": true,
-  "nextTask": "Student restores goal6,1 in Notepad, saves and reruns the same command, then shares the table and whether any clearance warning appears. Valid-case user inspection not reported yet.",
+  "nextTask": "experiments/path-turn-count-01.design.json",
   "studentGuidedEditRecord": "data/learning/endpoint-feedback-guided-edit-01.json",
   "studentInvalidCaseReport": "data/learning/endpoint-feedback-student-report-01.json",
-  "studentValidCaseInspectionReported": false
+  "studentValidCaseInspectionReported": true,
+  "studentValidCaseReport": "data/learning/endpoint-feedback-student-report-02.json"
 }

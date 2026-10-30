@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "User reports guidance appeared for invalid8,4 in data/learning/endpoint-feedback-student-report-01.json. Next restore only goal6,1 in Notepad, save and rerun known command; share table and whether a clearance warning appears. Valid-case user inspection still pending; AI wording/code, no independent process capture or new algorithm/data claim.",
+  "nextTask": "Known-case message checkpoint completed: invalid8,4 warning appearance and valid6,1 warning absence are guided user reports, with restored goal edit verified. Next experiments/path-turn-count-01.design.json introduces direction-change counting on schematic A/B sequences before any metric code or motion model. Student counts pending; no new AI planner/test execution.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -259,5 +259,7 @@
   "endpointFeedbackMessageDraft": "experiments/endpoint-feedback-message-01.design.json",
   "endpointFeedbackAssistance": "data/learning/endpoint-message-uncertainty-01.json",
   "endpointFeedbackValidation": "data/learning/endpoint-feedback-validation-01.json",
-  "endpointFeedbackStudentInvalidReport": "data/learning/endpoint-feedback-student-report-01.json"
+  "endpointFeedbackStudentInvalidReport": "data/learning/endpoint-feedback-student-report-01.json",
+  "endpointFeedbackStudentValidReport": "data/learning/endpoint-feedback-student-report-02.json",
+  "pathTurnCountDraft": "experiments/path-turn-count-01.design.json"
 }

@@ -767,6 +767,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Source4cd9a385c5e15b995d9f81f40db10546022f731b committed before [functional controls](../data/learning/endpoint-feedback-validation-01.json). Stored valid6,1 output exactly matches prior; in-memory8,4 input with only goal and URL-resolution substitutions matches prior invalid output plus message. No tracked control-input mutation, research-byte change, independent new map, extra BFS or full-suite repeat. Two CLI evaluations, one planner call/31expansions; syntax check passed.
 - Communication change only, not algorithm optimization, automatic goal relocation or physical safety. Next user manually selects known invalid8,4 and shares the displayed message; user check pending.
 
+## 2026-10-30 — Guided CLI message inspection completed on two known cases
+
+- [Valid-case user report](../data/learning/endpoint-feedback-student-report-02.json) preserves6,1/ROUTE_FOUND/world8/examined31 and explicit warning absence **안 나옴**, following invalid8,4 warning appearance reported earlier. Actual saved diff restores only goal8,4 to6,1; inspected after user report, not a pre-execution user source freeze. Restored module matches previously AI-checked valid source ignoring line endings.
+- One known archived trial10, two goal inputs, same body/always-fine/FIFO/budget200. User reports are not independent process capture; wording/code remain AI-authored. No new AI planner/test execution, independent map, algorithm or physical result.
+- Feature checkpoint complete for the two known cases. Next [schematic turn-count task](../experiments/path-turn-count-01.design.json) asks counts before any new metric implementation. Initial orientation alignment excluded; no duration/energy/kinematic claim.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
