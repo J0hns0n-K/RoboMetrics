@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "A: 1번 / B: 5번",
+  "studentCounts": {"A": 1, "B": 5},
+  "task": "experiments/path-turn-count-01.design.json",
+  "context": "AI supplied two schematic six-step sequences and the convention excluding initial orientation alignment. Student counted heading changes before automatic metric code was added.",
+  "studentRationale": null,
+  "roles": {
+    "student": "Correct hand-count answers for the two offered schematic sequences.",
+    "ai": "Provided sequences, count definition and task; subsequent metric implementation, tests and operation are AI assistance."
+  },
+  "scope": "Guided hand-count contribution, not a new planner experiment, metric implementation by the student, kinematic validation or measured time/energy result."
+}

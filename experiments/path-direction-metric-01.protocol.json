@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "ready-before-functional-checks",
+  "methodAuthor": "AI assistant",
+  "studentAnswer": "data/learning/path-turn-count-answer-01.json",
+  "definition": "Count consecutive axis-heading changes in a nonempty finite path. Initial alignment excluded; reversal counts one change event, not a quarter-turn count. Stationary singleton gives0. Reject empty, malformed, repeated, diagonal or nonfinite segments. Count is invariant to straight-segment subdivision.",
+  "metricSource": "src/path-metrics.mjs",
+  "target": "practice/04-goal-placement.mjs",
+  "integration": "Add directionChanges to the existing result table only. Use returned worldPath on ROUTE_FOUND, otherwise null. Export the existing result for recording the actual returned path without a second search. Search priorities, algorithms, body, clearance, budgets, goal and message remain unchanged.",
+  "unitControls": "test/path-metrics.test.mjs",
+  "functionalInputs": {"archivedTrial": 10, "mapSource": "data/footprint/resolution-quality-prospective-run-01.json", "start": [1,3], "bodyModel": "experiments/disk-model-clearance015-01.config.json", "mode": "always-fine", "tieBreak": "fifo", "fineBudget": 200, "validGoal": [6,1], "invalidGoal": [8,4]},
+  "executionMethod": "Import committed practice CLI once per case; record its console table and exported result path. Valid case uses saved input. Invalid case substitutes goal only in memory and resolves the original module/data URLs before import, with no tracked input writes. Capture structured path on the diagnostic stream. These are known-map controls, not new samples.",
+  "checks": "Archive only the five new metric tests. Match old status/length/expanded/path references, independently recount changes from recorded vectors and length from segment distances, ensure failed path gets null and its existing warning remains. Check old source/raw hashes. No full old101-test repeat or independent BFS planned.",
+  "scope": "Geometric descriptor only, not orientation-aware planning, turn optimization, a kinematic/controller model or runtime/energy/physical evidence. Student hand-counts are separate from AI code, tests, operation and validation."
+}
