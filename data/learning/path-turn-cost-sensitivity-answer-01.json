@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "X: 8.5, Y: 9, X",
+  "studentScores": {"X": 8.5, "Y": 9},
+  "studentChoice": "X",
+  "studentAdditionalRationale": null,
+  "task": "experiments/path-turn-cost-sensitivity-01.design.json",
+  "fixtures": "experiments/path-turn-score-01.config.json",
+  "givenRule": {"perWorldUnit": 1, "perDirectionChange": 0.5, "units": "arbitrary score points"},
+  "priorAnswer": "data/learning/path-turn-cost-answer-01.json",
+  "arithmeticReviewByAi": "Using the given route properties: X = 6 + 5 * 0.5 = 8.5; Y = 8 + 2 * 0.5 = 9. This agrees with the student's recalculation and changes the offered-route choice from Y to X.",
+  "practiceStateAtRecording": {
+    "file": "practice/05-path-score.mjs",
+    "inspectedValue": 2,
+    "studentParameterEditVerified": false,
+    "configuredHalfPenaltyRunCompleted": false
+  },
+  "roles": {
+    "student": "Recalculated both scores and chose X under the new given coefficient before the practice input was changed or this condition was executed.",
+    "ai": "Supplied the paths, coefficients, task, arithmetic review, code and instructions."
+  },
+  "scope": "Guided hand calculation, not an independently verified CLI dataset, student-selected physical coefficient, blind research forecast, new route or planner result. Manual parameter edit and configured run remain pending."
+}
