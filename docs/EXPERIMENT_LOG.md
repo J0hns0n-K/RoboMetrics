@@ -761,6 +761,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Student wrote **공간이 부족해서** in response to the post-result8,4-vs6,1 explanation prompt. [Record](../data/learning/endpoint-student-interpretation-01.json) preserves the exact phrase, prior AI guidance and limits: insufficient-space attribution, not a detailed independent boundary/obstacle calculation or forecast.
 - No new planner/test execution, map, result or algorithm change. Next [message task](../experiments/endpoint-feedback-message-01.design.json) asks the student for a one-sentence reason-plus-action message for the existing CLI; text and implementation remain pending.
 
+## 2026-10-30 — AI example clearance message implemented after uncertainty
+
+- Student replied **잘 모르겠네** to the one-sentence reason/action task. [Record](../data/learning/endpoint-message-uncertainty-01.json) assigns full example wording and code to AI, not student authorship. practice04 conditionally appends the Korean message only for INVALID_ENDPOINT_CLEARANCE; raw table, saved goal6,1, model, budgets and planner unchanged.
+- Source4cd9a385c5e15b995d9f81f40db10546022f731b committed before [functional controls](../data/learning/endpoint-feedback-validation-01.json). Stored valid6,1 output exactly matches prior; in-memory8,4 input with only goal and URL-resolution substitutions matches prior invalid output plus message. No tracked control-input mutation, research-byte change, independent new map, extra BFS or full-suite repeat. Two CLI evaluations, one planner call/31expansions; syntax check passed.
+- Communication change only, not algorithm optimization, automatic goal relocation or physical safety. Next user manually selects known invalid8,4 and shares the displayed message; user check pending.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

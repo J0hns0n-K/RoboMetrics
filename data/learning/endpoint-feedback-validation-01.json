@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "executedAtUTC": "2026-10-30T01:41:44.740100+00:00",
+  "sourceCommit": "4cd9a385c5e15b995d9f81f40db10546022f731b",
+  "operator": "AI assistant CLI",
+  "task": "experiments/endpoint-feedback-message-01.design.json",
+  "authorshipRecord": "data/learning/endpoint-message-uncertainty-01.json",
+  "message": "로봇 몸체와 여유폭을 확보할 공간이 부족하니, 벽과 지도 경계에서 더 떨어진 위치를 선택하세요.",
+  "messageAuthor": "AI assistant",
+  "checks": [
+    {
+      "case": "valid-current-file",
+      "goal": [
+        6,
+        1
+      ],
+      "command": "node practice/04-goal-placement.mjs",
+      "exitCode": 0,
+      "stdout": "도착점만 바꾸는 안내된 연습입니다. 원래 실험 자료는 수정하거나 덮어쓰지 않습니다.\n┌─────────┬───────┬───────────────┬─────────────┬──────────┐\n│ (index) │ goal  │ result        │ worldLength │ examined │\n├─────────┼───────┼───────────────┼─────────────┼──────────┤\n│ 0       │ '6,1' │ 'ROUTE_FOUND' │ 8           │ 31       │\n└─────────┴───────┴───────────────┴─────────────┴──────────┘\n",
+      "stderr": "",
+      "status": "ROUTE_FOUND",
+      "geometricLength": 8,
+      "expanded": 31,
+      "matchesPriorOutputExactly": true,
+      "prior": "data/learning/endpoint-student-choice-run-02.json",
+      "clearanceMessageShown": false
+    },
+    {
+      "case": "invalid-in-memory-input-control",
+      "goal": [
+        8,
+        4
+      ],
+      "commandMethod": "Read committed practice module, substitute only the goal and resolve original relative module/data URLs to absolute URLs, execute with node --input-type=module -e. No tracked input or research data written.",
+      "moduleSubstitutions": [
+        [
+          "const goal = [6, 1];",
+          "const goal = [8, 4];"
+        ],
+        [
+          "'../src/core.mjs'",
+          "\"file:///C:/Users/User/Documents/ChatGPT/Robometrics/src/core.mjs\""
+        ],
+        [
+          "'../src/resolution-policy.mjs'",
+          "\"file:///C:/Users/User/Documents/ChatGPT/Robometrics/src/resolution-policy.mjs\""
+        ],
+        [
+          "new URL('../data/footprint/resolution-quality-prospective-run-01.json', import.meta.url)",
+          "new URL(\"file:///C:/Users/User/Documents/ChatGPT/Robometrics/data/footprint/resolution-quality-prospective-run-01.json\")"
+        ],
+        [
+          "new URL('../experiments/disk-model-clearance015-01.config.json', import.meta.url)",
+          "new URL(\"file:///C:/Users/User/Documents/ChatGPT/Robometrics/experiments/disk-model-clearance015-01.config.json\")"
+        ]
+      ],
+      "exitCode": 0,
+      "stdout": "도착점만 바꾸는 안내된 연습입니다. 원래 실험 자료는 수정하거나 덮어쓰지 않습니다.\n┌─────────┬───────┬──────────────────────────────┬─────────────┬──────────┐\n│ (index) │ goal  │ result                       │ worldLength │ examined │\n├─────────┼───────┼──────────────────────────────┼─────────────┼──────────┤\n│ 0       │ '8,4' │ 'INVALID_ENDPOINT_CLEARANCE' │ null        │ 0        │\n└─────────┴───────┴──────────────────────────────┴─────────────┴──────────┘\n로봇 몸체와 여유폭을 확보할 공간이 부족하니, 벽과 지도 경계에서 더 떨어진 위치를 선택하세요.\n",
+      "stderr": "",
+      "status": "INVALID_ENDPOINT_CLEARANCE",
+      "geometricLength": null,
+      "expanded": 0,
+      "priorOutputUnchangedWithOnlyMessageAppended": true,
+      "prior": "data/learning/endpoint-student-choice-run-01.json",
+      "clearanceMessageShown": true
+    }
+  ],
+  "validation": {
+    "syntaxCheckPassed": true,
+    "sourceAndResearchArtifactBytesUnchanged": true,
+    "sha256Bytes": {
+      "practice\\04-goal-placement.mjs": "28f4c823c657d346c75089c304332def3f74606ef3154a5611cda0e55b7acad3",
+      "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+      "src/disk-footprint.mjs": "d65440878eea0718b28c61357948e3e56e48227213a5ea2c732961cd156853e8",
+      "src/resolution-policy.mjs": "dc071ca5af42d67d5de1143c0166526ec1affe85f8cf064594aa2e190c139293",
+      "data/footprint/resolution-quality-prospective-run-01.json": "839d229c4c12c0fbda9fb7eeb3645ca348827232a6c447041029332f76a2d9fc",
+      "experiments/disk-model-clearance015-01.config.json": "05eb114289bcc542081674dd9aa70a5cc9a362513d57d8e7b8e94f74dc8bf658",
+      "data/footprint/endpoint-placement-controls-validation-01.json": "547bb550376203ad28d3f4adf3bb1a167d1a44f943a576341e2cf7a56f627f7c"
+    },
+    "fullSuiteRerun": false,
+    "newCliEvaluations": 2,
+    "newPlannerCalls": 1,
+    "newExpanded": 31,
+    "additionalBfsCalls": 0,
+    "newIndependentMaps": 0
+  },
+  "scope": "Functional display controls on the same known map. No algorithm, body, budget, raw status/table or automatic-goal behavior change; AI example and implementation, not student-authored wording. No user execution inferred or physical performance claim.",
+  "nextTask": "Student changes only practice goal6,1 to8,4, saves and reruns the known command to inspect the new Korean message. User report pending."
+}

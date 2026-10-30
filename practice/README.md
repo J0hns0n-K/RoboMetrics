@@ -81,3 +81,7 @@ const fieldName = '____';
 학생은 이어 `(6,1)`을 골랐고 실제 파일도 `[8, 4]`→`[6, 1]` 한 줄로 바뀌었다. [두 번째 선택](../data/learning/endpoint-student-choice-02.json)을 입력 커밋 `1ff88230e9921da08eac594de7598f8b0e758d42`에 보존한 뒤 AI가 실행했다. [두 번째 실행](../data/learning/endpoint-student-choice-run-02.json)은 같은 지도10번/출발점/몸체/always-fine/FIFO/예산200에서 `ROUTE_FOUND`, 세계 길이8, 검토31을 기록한다. 끝점 중심과 경계 간격1.5, 가장 가까운 벽(5,0)과의 간격 약0.707은 요구값0.55보다 크다. 도착점이 달라졌으므로 앞선 길이와 비교해 알고리즘 개선으로 주장하지 않는다. 학생은 좌표 선택·저장만 확인됐고 이유나 성공 예상은 제공하지 않았다. 다음은 `(8,4)`와 `(6,1)` 결과가 다른 이유를 학생이 사후에 설명하는 단계다.
 
 학생의 사후 설명은 **공간이 부족해서**였다. [원문과 안내 맥락](../data/learning/endpoint-student-interpretation-01.json)을 보존하며, 벽·경계·수치의 상세 진단은 AI 설명과 구분한다. 다음은 [공간 부족 이유와 다음 행동을 함께 알려 주는 안내문 한 문장 작성](../experiments/endpoint-feedback-message-01.design.json)이다. 학생 문구와 CLI 반영은 아직 완료하지 않았다.
+
+### 공간 부족 안내문 — AI 예시 구현
+
+학생은 안내문 작성 요청에 **잘 모르겠네**라고 답했다. [도움 기록](../data/learning/endpoint-message-uncertainty-01.json)에 따라 문구와 조건문은 모두 AI 작성이다. `INVALID_ENDPOINT_CLEARANCE`일 때 표 아래에 “로봇 몸체와 여유폭을 확보할 공간이 부족하니, 벽과 지도 경계에서 더 떨어진 위치를 선택하세요.”를 표시한다. 도착점을 자동으로 옮기지 않는다. [실행 확인](../data/learning/endpoint-feedback-validation-01.json)은 저장된 성공 입력6,1의 출력이 이전과 같고, 메모리 안에서만 바꾼 실패 입력8,4는 이전 출력에 안내문만 추가됨을 보존한다. 같은 지도/몸체/예산200이며 알고리즘·숫자 표는 바꾸지 않았다. 다음은 학생이 goal을8,4로 바꿔 저장하고 같은 명령을 실행해 새 안내문을 확인하는 단계다.
