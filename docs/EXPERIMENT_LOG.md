@@ -744,6 +744,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Actual practice04 diff changes only fineBudget100 to200, keeping goal7,3/map/body/FIFO fixed. Input preserved after report as e3dcbaecbbc71a014be6fd6c8b272e7ab2c20dbf. [Report](../data/learning/practice-04-student-report-03.json) preserves the full user table: INVALID_ENDPOINT_CLEARANCE/null/0, same as the budget100 report. User process/source-at-run not independently captured; table itself does not attest the budget.
 - AI interprets known pre-search geometric rejection as unaffected by extra search budget; no student explanation inferred. No new AI planner/test execution, new map or method change; historical raw/manifests unchanged. Next [student goal-choice task](../experiments/endpoint-placement-student-01.design.json) fixes the same map/body/budgets and leaves choice/reason unset.
 
+## 2026-10-30 — Student-selected goal(8,4) checked by AI
+
+- Student chose(8,4); actual practice04 diff changed only goal7,3 to8,4. [Choice](../data/learning/endpoint-student-choice-01.json) and source43d5dc7100263208ceffd6c3dbcae74c12a4d497 committed before AI execution. No student reason or success forecast supplied. Same archived trial10/start/body0.4+0.15/FIFO/always-fine/budget200.
+- [AI run and validation](../data/learning/endpoint-student-choice-run-01.json): INVALID_ENDPOINT_CLEARANCE/null/0. Empty original point cell; world center8.5,4.5 is0.5 from the right boundary and obstacle8,3, below required strict0.55. Direct distance arithmetic agrees. Source/raw byte hashes unchanged; no full-suite rerun or new independent map. One new AI exercise evaluation, no path-search expansions; student execution not inferred.
+- Next revised student choice should account for both boundary and obstacle clearance; no second location selected yet. Physical motion/safety, algorithm improvement and student explanation not established.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

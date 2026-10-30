@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "executedAtUTC": "2026-10-30T01:21:54.921276+00:00",
+  "operator": "AI assistant CLI",
+  "sourceCommit": "43d5dc7100263208ceffd6c3dbcae74c12a4d497",
+  "choiceRecord": "data/learning/endpoint-student-choice-01.json",
+  "protocol": "experiments/endpoint-placement-student-01.design.json",
+  "command": "node practice/04-goal-placement.mjs",
+  "stdout": "도착점만 바꾸는 안내된 연습입니다. 원래 실험 자료는 수정하거나 덮어쓰지 않습니다.\n┌─────────┬───────┬──────────────────────────────┬─────────────┬──────────┐\n│ (index) │ goal  │ result                       │ worldLength │ examined │\n├─────────┼───────┼──────────────────────────────┼─────────────┼──────────┤\n│ 0       │ '8,4' │ 'INVALID_ENDPOINT_CLEARANCE' │ null        │ 0        │\n└─────────┴───────┴──────────────────────────────┴─────────────┴──────────┘\n",
+  "stderr": "",
+  "exitCode": 0,
+  "input": {
+    "archivedTrial": 10,
+    "goal": [
+      8,
+      4
+    ],
+    "mode": "always-fine",
+    "fineBudget": 200,
+    "tieBreak": "fifo",
+    "radius": 0.4,
+    "clearance": 0.15
+  },
+  "observedOutput": {
+    "status": "INVALID_ENDPOINT_CLEARANCE",
+    "geometricLength": null,
+    "expanded": 0
+  },
+  "geometryAudit": {
+    "goalPointCellFree": true,
+    "goalWorldCenter": [
+      8.5,
+      4.5
+    ],
+    "boundaryCenterClearance": 0.5,
+    "nearestObstacleCenterClearance": 0.5,
+    "nearestObstacles": [
+      [
+        8,
+        3
+      ]
+    ],
+    "requiredCenterClearanceStrictlyGreaterThan": 0.55,
+    "bodySurfaceGapAtNearestConstraint": 0.09999999999999998,
+    "auditMethod": "Direct point-to-world-boundary and closed-square distance arithmetic from original rows; same assumed geometric model, not hardware validation."
+  },
+  "validation": {
+    "sourceAndResearchArtifactBytesUnchanged": true,
+    "sha256Bytes": {
+      "practice/04-goal-placement.mjs": "69502542f25f756e1aca51d50d7c07559f0f6e327fef5cf29a41182c4a508916",
+      "src/core.mjs": "4817eada9154d9451291b8b76a58c19a0f278fb127d3ac2b271420a0ef6f5feb",
+      "src/disk-footprint.mjs": "d65440878eea0718b28c61357948e3e56e48227213a5ea2c732961cd156853e8",
+      "src/resolution-policy.mjs": "dc071ca5af42d67d5de1143c0166526ec1affe85f8cf064594aa2e190c139293",
+      "data/footprint/resolution-quality-prospective-run-01.json": "839d229c4c12c0fbda9fb7eeb3645ca348827232a6c447041029332f76a2d9fc",
+      "experiments/disk-model-clearance015-01.config.json": "05eb114289bcc542081674dd9aa70a5cc9a362513d57d8e7b8e94f74dc8bf658",
+      "data/footprint/endpoint-placement-controls-validation-01.json": "547bb550376203ad28d3f4adf3bb1a167d1a44f943a576341e2cf7a56f627f7c"
+    },
+    "committedPracticeUnchangedAtRun": true,
+    "consoleFieldsChecked": true,
+    "fullSuiteRerun": false,
+    "newIndependentMaps": 0
+  },
+  "roles": {
+    "student": "Selected8,4 and saved matching goal edit; no rationale or outcome prediction supplied.",
+    "ai": "Scaffold/task, source recording, execution, geometry audit and interpretation. Student execution not inferred."
+  },
+  "scope": "One additional goal-input evaluation on the known archived map, not an algorithm improvement, physical collision measurement, new independent cohort or student-authored result interpretation.",
+  "nextTask": "Student chooses a different interior empty goal considering both obstacle and boundary clearance; selection/rationale not yet supplied."
+}
