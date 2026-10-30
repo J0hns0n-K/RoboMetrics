@@ -119,3 +119,5 @@ const fieldName = '____';
 ## 일곱 번째 파일 — 가정한 속도의 명목 시간
 
 학생은 **X: 12초 / Y: 10초**라고 [손계산](../data/learning/path-nominal-time-answer-01.json)으로 답했다. AI가 [07-path-time.mjs](07-path-time.mjs)와 함수·검사를 구현했다. 초기 방향down, 선속도1가상칸/초·각속도90도/초에서 직진과 제자리 회전을 순서대로 계산한다. [방법·실행 근거](../docs/NOMINAL_PATH_TIME_KR.md)는X직진6초+회전6초=12초, Y8초+2초=10초를 확인한다. 새 시간 검사6개와 기존 회전 검사6개, 총12개가 통과했고 이전101개 전체 검사는 반복하지 않았다. 학생의 계산과 AI 코드·실행을 구분한다. 실제 측정·제어·동역학·시간 궤적 시뮬레이션을 수행한 것은 아니다. 다음은 각속도만180도/초로 바꾼 경우를 먼저 손계산하는 [과제](../experiments/path-nominal-time-angular-speed-01.design.json)이며, 그 조건은 아직 실행하지 않았다.
+
+학생은 각속도180도/초에서 **X: 9초 / Y: 9초, 같아졌어**라고 [손계산과 동점 판단](../data/learning/path-nominal-time-angular-speed-answer-01.json)을 답했다. 확인 당시07파일은 여전히 `angularSpeedDegrees = 90`이었다. 다음은 메모장에서07파일을 열고 이 값만180으로 바꾸어 저장하는 단계다. 실제 저장 차이·실행 주체·출력은 이후 확인하고 기존90도/초 결과는 유지한다.

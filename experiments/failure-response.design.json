@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student X12/Y10 nominal hand times confirmed by AI proxy/checks in data/learning/path-nominal-time-run-01.json at initial down/linear1virtualcell/s/angular90degrees/s. Next experiments/path-nominal-time-angular-speed-01.design.json asks new X/Y nominal times/comparison at angular180, others fixed. Await answer before editing/running; no student choice inferred or measured/simulated-control claim.",
+  "nextTask": "Student angular180 hand calculation X9/Y9 and explicit tie recorded in data/learning/path-nominal-time-angular-speed-answer-01.json. practice07 inspected angularSpeedDegrees90. Next student opens07 via Notepad Ctrl+O, changes only angularSpeedDegrees90 to180 and saves. Inspect exact diff and preserve source before new AI check; no configured angular180 X/Y run or saved edit yet verified. Keep90 baseline immutable, no physical timing claim.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -286,5 +286,6 @@
   "pathNominalTimeDraft": "experiments/path-nominal-time-01.design.json",
   "pathNominalTimeAnswer": "data/learning/path-nominal-time-answer-01.json",
   "pathNominalTimeRun": "data/learning/path-nominal-time-run-01.json",
-  "pathNominalAngularSpeedDraft": "experiments/path-nominal-time-angular-speed-01.design.json"
+  "pathNominalAngularSpeedDraft": "experiments/path-nominal-time-angular-speed-01.design.json",
+  "pathNominalAngularSpeedAnswer": "data/learning/path-nominal-time-angular-speed-answer-01.json"
 }

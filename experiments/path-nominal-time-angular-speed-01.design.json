@@ -1,16 +1,26 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "awaiting-student-faster-turn-recalculation",
+  "status": "student-recalculation-recorded-guided-input-edit-pending",
   "proposalAuthor": "AI assistant",
   "parentTask": "experiments/path-nominal-time-01.design.json",
   "fixtures": "experiments/path-turn-score-01.config.json",
-  "changedInput": {"angularSpeedDegrees": {"from":90, "to":180, "units":"degrees per second"}},
+  "changedInput": {
+    "angularSpeedDegrees": {
+      "from": 90,
+      "to": 180,
+      "units": "degrees per second"
+    }
+  },
   "heldFixed": "Same X/Y paths, initial down, world lengths6/8, total rotations540/180degrees, linear speed1virtualcell/s and ideal sequential stop-and-turn assumptions.",
   "studentTask": "Calculate X/Y nominal seconds with angular speed180degrees/s and state whether their times differ or tie. Record response before editing/running this condition.",
-  "studentNominalSeconds": null,
-  "studentComparison": null,
+  "studentNominalSeconds": {
+    "X": 9,
+    "Y": 9
+  },
+  "studentComparison": "tie",
   "studentRationale": null,
   "nextGuidedEditAfterAnswer": "Change only practice07 angularSpeedDegrees from90 to180, inspect actual saved diff and preserve a new source-bound result rather than replacing the90 baseline.",
-  "scope": "Pending guided sensitivity calculation under uncalibrated virtual rates, not a physical speed change, measured travel duration, new route/planner objective or globally optimal trajectory."
+  "scope": "Student hand-recalculated X9/Y9 and explicitly identified a tie under AI-supplied ideal rates. Practice07 inspected stillangular90; no saved parameter edit or configured angular180 X/Y run verified. Not physical timing/calibration, new routes, student code or changed planner.",
+  "studentAnswerRecord": "data/learning/path-nominal-time-angular-speed-answer-01.json"
 }

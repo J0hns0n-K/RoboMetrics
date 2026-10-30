@@ -134,7 +134,7 @@ The current extension is an [ideal nominal-duration proxy](docs/NOMINAL_PATH_TIM
 | X | 6 | 540degrees | 6s | 6s | 12s |
 | Y | 8 | 180degrees | 8s | 2s | 10s |
 
-The rates are uncalibrated assumptions with instantaneous rate changes; acceleration, slip, tracking, sensing and collision feasibility are not validated. Nominal seconds are not measured travel duration or elapsed program time. No existing score/search objective changes, and no globally fastest path is established. Next is [student recalculation at angular speed180degrees/s](experiments/path-nominal-time-angular-speed-01.design.json), before that condition is edited or run. Core point-planner/browser results remain intact; differential-drive dynamics, control, sensing and physical measurements remain future work. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
+The rates are uncalibrated assumptions with instantaneous rate changes; acceleration, slip, tracking, sensing and collision feasibility are not validated. Nominal seconds are not measured travel duration or elapsed program time. No existing score/search objective changes, and no globally fastest path is established. At the offered angular180degrees/s condition, Junmo [hand-calculated X9/Y9 and explicitly identified a tie](data/learning/path-nominal-time-angular-speed-answer-01.json). Practice07 was stillangular90 at inspection; next is the guided one-parameter edit and configured check, still pending. The hand answer remains separate from an executed result. Core point-planner/browser results remain intact; differential-drive dynamics, control, sensing and physical measurements remain future work. [Research roadmap](docs/ROBOTICS_ROADMAP.md)
 
 ## Run and inspect
 

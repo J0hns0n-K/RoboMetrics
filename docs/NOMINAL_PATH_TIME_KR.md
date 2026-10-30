@@ -25,4 +25,4 @@
 
 이는 수식으로 계산한 이상적인 명목 시간이다. 프로그램 실행 시간·시간에 따라 움직이는 시뮬레이터·실제 주행 측정·차동 구동 운동학·충돌/동역학 검증을 완료했다는 뜻이 아니다. 기존 가상 점수나 A*·Greedy의 선택 기준도 바꾸지 않았다. 제공된 두 경로의 비교이며 전체 최속 경로를 증명하지 않는다.
 
-다음 [각속도 민감도 과제](../experiments/path-nominal-time-angular-speed-01.design.json)는 다른 입력을 고정하고 가상 각속도만180도/초로 바꾸었을 때의 시간을 학생에게 먼저 묻는다. 해당 X/Y 조건은 아직 구성 실행하지 않았다.
+다음 [각속도 민감도 과제](../experiments/path-nominal-time-angular-speed-01.design.json)는 다른 입력을 고정하고 가상 각속도만180도/초로 바꾸었을 때의 시간을 학생에게 먼저 묻는다. 학생은 [X9초/Y9초와 동점](../data/learning/path-nominal-time-angular-speed-answer-01.json)을 손계산으로 답했다. 확인 당시 실습07의 각속도는 여전히90이었으며, 다음은 메모장에서 `angularSpeedDegrees`를90→180으로 바꿔 저장하는 단계다. 해당 X/Y 조건은 아직 구성 실행하지 않았다.

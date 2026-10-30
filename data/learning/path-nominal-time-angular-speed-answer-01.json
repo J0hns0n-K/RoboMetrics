@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "userVerbatim": "`X: 9초 / Y: 9초`  같아졌어",
+  "studentNominalSeconds": {"X": 9, "Y": 9},
+  "studentComparison": "tie",
+  "studentAdditionalRationale": null,
+  "task": "experiments/path-nominal-time-angular-speed-01.design.json",
+  "priorAnswer": "data/learning/path-nominal-time-answer-01.json",
+  "givenConditions": {"initialHeading":"down", "linearSpeed":1, "linearSpeedUnits":"virtual cells per second", "angularSpeedDegrees":180, "angularSpeedUnits":"degrees per second", "sequentialTranslationAndRotation":true},
+  "arithmeticReviewByAi": "Using the fixed geometry: X = 6/1 + 540/180 = 9 nominal seconds; Y = 8/1 + 180/180 = 9. The student's explicit tie comparison agrees under these assumptions.",
+  "practiceStateAtRecording": {"file":"practice/07-path-time.mjs", "inspectedAngularSpeedDegrees":90, "studentParameterEditVerified":false, "configuredAngular180RunCompleted":false},
+  "roles": {
+    "student": "Recalculated both offered nominal times and explicitly identified a tie before the input was changed or this condition was executed.",
+    "ai": "Supplied rates, model, paths/geometric totals and task, and reviewed the hand arithmetic."
+  },
+  "scope": "Guided hand calculation and comparison, not an executed CLI dataset, physical timing observation, student-designed calibrated rate, code or global fastest-route result. Manual parameter edit and configured angular180 X/Y run remain pending."
+}

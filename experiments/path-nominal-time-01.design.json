@@ -32,7 +32,7 @@
     "Y": 10
   },
   "studentRationale": null,
-  "scope": "Student calculated X12/Y10 under AI-supplied ideal rates, no choice/rationale supplied. AI implemented/checked a nominal-duration proxy; not timed simulation, measured runtime/travel time, differential-drive dynamics, calibration or collision/control feasibility. Next angular180 hand response pending.",
+  "scope": "Student X12/Y10 baseline hand calculation confirmed by separate AI nominal-duration code/checks. Student then hand-calculated angular180 X9/Y9 and a tie; that input edit/configured run remain pending. No measured runtime/travel time, timed controller, differential-drive dynamics, calibration or collision feasibility claim.",
   "studentAnswerRecord": "data/learning/path-nominal-time-answer-01.json",
   "durationProtocol": "experiments/path-nominal-time-01.protocol.json",
   "nextTask": "experiments/path-nominal-time-angular-speed-01.design.json",
