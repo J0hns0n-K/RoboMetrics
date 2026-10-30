@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "status": "awaiting-student-score-comparison",
+  "proposalAuthor": "AI assistant",
+  "purpose": "Explore how an explicitly assumed heading-change penalty can change a comparison based only on distance.",
+  "start": [
+    0,
+    0
+  ],
+  "goal": [
+    3,
+    3
+  ],
+  "routes": {
+    "X": {
+      "directions": [
+        "right",
+        "down",
+        "right",
+        "down",
+        "right",
+        "down"
+      ],
+      "givenMoveCount": 6,
+      "givenDirectionChanges": 5
+    },
+    "Y": {
+      "directions": [
+        "down",
+        "down",
+        "down",
+        "down",
+        "right",
+        "right",
+        "right",
+        "up"
+      ],
+      "givenMoveCount": 8,
+      "givenDirectionChanges": 2
+    }
+  },
+  "assumedCost": {
+    "perUnitMove": 1,
+    "perDirectionChange": 2,
+    "units": "arbitrary score points, not seconds or energy",
+    "initialAlignmentExcluded": true
+  },
+  "studentTask": "Calculate the score of X and Y as moves + 2 * direction changes, then choose the lower-score offered route.",
+  "studentScores": null,
+  "studentChoice": null,
+  "studentRationale": null,
+  "scope": "AI-selected schematic inputs and arbitrary coefficients, not calibrated robot costs, obstacle-valid paths, automatic planner changes or global-optimality evidence. Compare only X and Y; other routes exist, including the student's six-step/two-change sequence. No student comparison or score implementation yet.",
+  "setupCheck": {
+    "method": "AI direct displacement/move/adjacent-heading arithmetic before presenting the exercise; no weighted score answers computed or recorded.",
+    "givenRoutePropertiesChecked": true,
+    "newPlannerCalls": 0
+  }
+}

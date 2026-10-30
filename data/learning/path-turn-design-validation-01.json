@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-30",
+  "executedAtUTC": "2026-10-30T02:47:59.190094+00:00",
+  "sourceCommit": "c3c986564f0798f18be2f2b9de382c4efe84364c",
+  "operator": "AI assistant CLI",
+  "studentAnswer": "data/learning/path-turn-design-answer-01.json",
+  "inputSha256Bytes": "ec3b623779acfc58b54ec93de764a30268ddac288fafaff15cffad38a12893b9",
+  "method": {
+    "module": "src/path-metrics.mjs",
+    "sha256Bytes": "9813941430e2fa6c8f1096032108d5572e350f6889923ce49c8212b26390af58",
+    "codeSourceRevision": "2f4f3cc2999d9795323f7dc471a42b00bd64c62b",
+    "initialAlignmentExcluded": true,
+    "automaticCommandSource": "import {readFileSync} from 'node:fs'; import {countDirectionChanges} from './src/path-metrics.mjs'; const answer=JSON.parse(readFileSync('data/learning/path-turn-design-answer-01.json','utf8')); console.log(JSON.stringify({directionChanges:countDirectionChanges(answer.path)}));"
+  },
+  "result": {
+    "normalizedArrows": "↓→→→↓↓",
+    "moveCount": 6,
+    "rightMoves": 3,
+    "downMoves": 3,
+    "endpoint": [
+      3,
+      3
+    ],
+    "directionChanges": 2,
+    "changedHeadingAtStep": [
+      2,
+      5
+    ],
+    "allTaskConstraintsMet": true
+  },
+  "validation": {
+    "directDirectionSequenceCountMatches": true,
+    "coordinatesMatchLiteralDirections": true,
+    "sourceAndResearchArtifactBytesUnchanged": true,
+    "nodeStdout": "{\"directionChanges\":2}\n",
+    "nodeStderr": "",
+    "exitCode": 0,
+    "newMetricCalls": 1,
+    "newPlannerCalls": 0,
+    "newBfsCalls": 0,
+    "newIndependentMaps": 0,
+    "fullSuiteRerun": false,
+    "metricTestsRerun": false
+  },
+  "roles": {
+    "student": "Designed and supplied the exact schematic arrow sequence.",
+    "ai": "Task/constraints, transcription, automatic metric check, direct arithmetic, records and writing."
+  },
+  "scope": "Validates this schematic sequence under the task constraints only, not obstacle/body feasibility, student code, motion dynamics or measured time/energy."
+}

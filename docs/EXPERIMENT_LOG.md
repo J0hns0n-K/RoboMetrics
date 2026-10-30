@@ -779,6 +779,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - [Run](../data/learning/path-direction-metric-run-01.json) archives five new passing tests and two known-input controls: archived trial10/start1,3/body0.4+0.15/always-fine/FIFO/budget200, goal6,1 world8/31examined/6changes; invalid8,4 null/0/null with warning. Saved valid input and in-memory invalid goal/URL substitutions, no tracked input change. Exported path recorded on diagnostic stream without duplicate search; Python vector recount and world-length sum agree. Prior full path unavailable, so no historical full-path equality claim; numeric references and old core/body/raw hashes agree.
 - Two CLI evaluations/one planner call31expansions/zero extra BFS/new maps; old101 suite not repeated. Direction changes are geometric events, not measured turn duration/energy, yaw-aware planning or physical feasibility. Next [student sequence design](../experiments/path-turn-design-01.design.json) remains pending.
 
+## 2026-10-30 — Student-designed two-change sequence verified
+
+- Student supplied **↓→→→↓↓**; [literal answer](../data/learning/path-turn-design-answer-01.json) preserved in c3c986564f0798f18be2f2b9de382c4efe84364c before checking. [AI validation](../data/learning/path-turn-design-validation-01.json) uses unchanged metric source2f4f3cc plus independent displacement/adjacent-heading arithmetic: six moves, right3/down3, endpoint3,3, two changes at new-heading steps2/5. Student sequence, AI framing/transcription/operation; no reason or code supplied.
+- One new descriptor call, no planner/BFS/new map/test repeat; old source/raw hashes unchanged. Not current obstacle/body feasibility, physics or measured travel performance.
+- Next [score task](../experiments/path-turn-cost-01.design.json) offers verified schematic X6moves/5changes and Y8moves/2changes at the same endpoint, with AI-assumed move1/change2 arbitrary points. Student comparison pending; no weighted score implementation, calibrated cost or search-priority change. Only these two offered routes are being compared, not a global optimum.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

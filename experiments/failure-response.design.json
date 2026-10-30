@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student counted A1/B5; AI metric and five new tests/known-input checks recorded in data/learning/path-direction-metric-run-01.json. Next experiments/path-turn-design-01.design.json asks student to create six moves (three right/three down) with exactly two heading changes. Initial alignment excluded; preserve literal response before checking. No student sequence yet or motion/energy claim.",
+  "nextTask": "Student schematic ↓→→→↓↓ met all constraints in data/learning/path-turn-design-validation-01.json. Next experiments/path-turn-cost-01.design.json asks offered X/Y scores and lower-score choice at arbitrary move1/change2 points. Student scores/choice pending; not time/energy calibration or planner objective change.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -264,5 +264,8 @@
   "pathTurnCountDraft": "experiments/path-turn-count-01.design.json",
   "pathTurnCountAnswer": "data/learning/path-turn-count-answer-01.json",
   "pathDirectionMetricRun": "data/learning/path-direction-metric-run-01.json",
-  "pathTurnSequenceDraft": "experiments/path-turn-design-01.design.json"
+  "pathTurnSequenceDraft": "experiments/path-turn-design-01.design.json",
+  "pathTurnDesignAnswer": "data/learning/path-turn-design-answer-01.json",
+  "pathTurnDesignValidation": "data/learning/path-turn-design-validation-01.json",
+  "pathTurnCostDraft": "experiments/path-turn-cost-01.design.json"
 }

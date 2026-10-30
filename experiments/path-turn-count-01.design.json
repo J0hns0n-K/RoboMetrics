@@ -39,7 +39,7 @@
   },
   "studentRationale": null,
   "nextTask": "experiments/path-turn-design-01.design.json",
-  "scope": "Student correctly hand-counted A1/B5 under AI definition. AI then implemented and checked a separate path descriptor; student did not implement it. No new search objective, measured duration/energy or physical claim. Next schematic sequence design pending.",
+  "scope": "Student correctly hand-counted A1/B5, then designed a verified schematic six-step/two-change sequence. AI implemented/checked the descriptor; student did not implement it. No measured duration/energy, physical result or new search objective.",
   "studentAnswerRecord": "data/learning/path-turn-count-answer-01.json",
   "metricProtocol": "experiments/path-direction-metric-01.protocol.json",
   "metricRun": "data/learning/path-direction-metric-run-01.json"
