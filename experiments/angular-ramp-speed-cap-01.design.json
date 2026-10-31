@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-31",
-  "status": "awaiting-student-prior-duration-prediction",
+  "status": "student-equality-forecast-recorded-and-ai-short-angle-check-complete",
   "proposalAuthor": "AI assistant",
   "context": "data/learning/angular-ramp-accel-sensitivity-run-01.json",
   "question": "For a single90degree rotation from rest to rest, keep acceleration/braking magnitude360degrees/s^2 fixed. Raise only the permitted angular speed cap from180to360degrees/s. Do you expect this short rotation to take less model time or the same? Give a prediction before evaluating the higher-cap condition.",
@@ -14,6 +14,11 @@
     "extraDwellSeconds": 0,
     "translation": "none; isolated analytic profile"
   },
-  "studentPredictionVerbatim": null,
-  "scope": "Pending speed-cap-only control. Baseline90degree profile already appears as a component of the previous split rotation; new higher-cap condition not configured/evaluated. No hardware, physical calibration or path composition."
+  "studentPredictionVerbatim": "같지",
+  "scope": "Completed guided forecast and AI isolated90degree cap comparison, same duration supported here. No student reason/numeric time or universal claim; no path composition, hardware/calibration.",
+  "predictionRecord": "data/learning/angular-ramp-speed-cap-prediction-01.json",
+  "runRecord": "data/learning/angular-ramp-speed-cap-run-01.json",
+  "sourceCommit": "3479a7f3faf0f4572eb3ce2b96de95603f4f3176",
+  "predictionSupportedInThisControl": true,
+  "nextTask": "experiments/angular-ramp-long-angle-cap-01.design.json"
 }

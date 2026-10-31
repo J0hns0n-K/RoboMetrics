@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-31",
+  "status": "awaiting-student-prior-long-angle-forecast",
+  "proposalAuthor": "AI assistant",
+  "context": "data/learning/angular-ramp-speed-cap-run-01.json",
+  "question": "For a continuous360degree rotation from rest to rest, keep acceleration/braking360degrees/s^2 and compare permitted speed caps180versus360degrees/s, with no dwell. Do you predict the higher cap now reduces time or still gives equal time? Give a prediction before the long-angle control is evaluated.",
+  "controls": {
+    "angleDegrees": 360,
+    "angularAccelerationMagnitudeDegreesPerSecondSquared": 360,
+    "lowerCapDegreesPerSecond": 180,
+    "higherCapDegreesPerSecond": 360,
+    "startAndEndAngularSpeed": 0,
+    "extraDwellSeconds": 0,
+    "translation": "none; isolated analytic rotation"
+  },
+  "studentPredictionVerbatim": null,
+  "scope": "Pending long-angle speed-cap comparison, not a result or physical/global claim. Previous90degree result does not establish equality for every angle."
+}

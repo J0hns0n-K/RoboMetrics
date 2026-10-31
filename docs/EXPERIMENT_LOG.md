@@ -875,6 +875,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - [New run](../data/learning/angular-ramp-accel-sensitivity-run-01.json): same isolated180 versus stopped90+90, max180degrees/s, endpoint rest/zero dwell; only acceleration/braking180to360degrees/s². Continuous2to1.5s, split2.8284271247461903to2modelseconds, gap0.8284271247461903to0.5. Forecast supported under these conditions; interpretation is AI review, not student reason/universal law.
 - Two configured evaluations,3profiles/7phases checked with independent formulas/rest/caps/continuity/schedule and64-panel phase velocity integrals. Model/dependency/test/prior25-pass TAP/historical bytes unchanged; tests not repeated. Zero planner/BFS/new maps/hardware, no measured runtime/energy, calibration or path-wide angular integration. Next [short90degree speed-cap prediction](../experiments/angular-ramp-speed-cap-01.design.json) pending before high-cap evaluation.
 
+## 2026-10-31 — Permitted speed cap is not the achieved peak
+
+- Student [prior forecast](../data/learning/angular-ramp-speed-cap-prediction-01.json) **같지**, no reason/numeric forecast. AI froze [config](../experiments/angular-ramp-speed-cap-01.config.json)/[protocol](../experiments/angular-ramp-speed-cap-01.protocol.json) at source3479a7f3faf0f4572eb3ce2b96de95603f4f3176 before execution.
+- [New run](../data/learning/angular-ramp-speed-cap-run-01.json): single90degrees, acceleration/braking360degrees/s², endpoint rest/zero dwell; caps180and360degrees/s. Both1modelsecond, actual peaks180degrees/s, identical velocity phases. Student forecast supported here; AI explanation that braking prevents a higher peak is not student reasoning or an all-angle no-benefit claim. Instantaneous-rate controls0.5/0.25s remain separate.
+- Two evaluations/2profiles/4phases independently checked by time/peak formulas,64-panel velocity integrals, angle/rest/cap/continuity/schedule. Lower-cap profile matches archived split-rotation90degree component. Source/dependency/test/prior25-pass TAP/historical hashes unchanged; no repeated tests/maps/planner/BFS/hardware. Isolated angular model, no path-wide/controller/collision/calibration/runtime/energy/optimum inference. Next [long360degree cap forecast](../experiments/angular-ramp-long-angle-cap-01.design.json) pending before evaluation.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
