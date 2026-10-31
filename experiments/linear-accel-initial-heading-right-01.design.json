@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-31",
-  "status": "awaiting-student-prior-prediction",
+  "status": "student-choice-recorded-and-ai-control-checked",
   "proposalAuthor": "AI assistant",
   "context": "data/learning/linear-accel-initial-order-run-01.json",
   "question": "Change only initial heading from down to right. Keep the same down/down/down/right/right/right and right/right/right/down/down/down paths, endpoints, length6, one internal change and motion limits. Which path do you predict will take less model time, or will they tie? Give a short reason before evaluation.",
@@ -14,6 +14,12 @@
     "samePathsAs": "experiments/linear-accel-initial-order-01.config.json",
     "obstacles": "none; schematic"
   },
-  "studentPredictionVerbatim": null,
-  "scope": "Pending guided sensitivity control, no numeric prediction or new configured result yet. No physical measurement or optimality claim."
+  "studentPredictionVerbatim": "2번째 꺼",
+  "scope": "Completed guided forecast and AI-operated analytic sensitivity. Student chose second/right-first without reason or numeric time; the explanation remains AI review. No physical measurement or optimality claim.",
+  "resolvedChoice": "right-first route predicted faster",
+  "predictionRecord": "data/learning/linear-accel-initial-heading-right-prediction-01.json",
+  "runRecord": "data/learning/linear-accel-initial-heading-right-run-01.json",
+  "sourceCommit": "d2909d0f1a04b5a4e7d12906861650d0b569f724",
+  "predictionSupportedInThisControl": true,
+  "nextTask": "experiments/angular-ramp-stop-01.design.json"
 }

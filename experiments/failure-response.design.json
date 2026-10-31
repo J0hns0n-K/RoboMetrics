@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Original equal-time prediction preserved in data/learning/linear-accel-initial-order-prediction-01.json. AI order control data/learning/linear-accel-initial-order-run-01.json gives down-first8.5/right-first9 model seconds: equal internal turn counts, different initial alignment. Next experiments/linear-accel-initial-heading-right-01.design.json changes only starting heading to right and awaits student prediction before evaluation. No student correction yet.",
+  "nextTask": "Student selected second/right-first under initial right; data/learning/linear-accel-initial-heading-right-run-01.json supports it with down-first9/right-first8.5modelseconds. Only heading changed versus initial-down comparison, reversing ranking. Student supplied no reason/numeric forecast. Next experiments/angular-ramp-stop-01.design.json asks a prediction for finite-angular-acceleration single180 versus two stopped90 rotations before implementation/evaluation.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -310,5 +310,8 @@
   "linearAccelInitialOrderDraft": "experiments/linear-accel-initial-order-01.design.json",
   "linearAccelInitialOrderPrediction": "data/learning/linear-accel-initial-order-prediction-01.json",
   "linearAccelInitialOrderRun": "data/learning/linear-accel-initial-order-run-01.json",
-  "linearAccelRightHeadingDraft": "experiments/linear-accel-initial-heading-right-01.design.json"
+  "linearAccelRightHeadingDraft": "experiments/linear-accel-initial-heading-right-01.design.json",
+  "linearAccelRightHeadingPrediction": "data/learning/linear-accel-initial-heading-right-prediction-01.json",
+  "linearAccelRightHeadingRun": "data/learning/linear-accel-initial-heading-right-run-01.json",
+  "angularRampStopDraft": "experiments/angular-ramp-stop-01.design.json"
 }

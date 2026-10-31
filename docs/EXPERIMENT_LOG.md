@@ -857,6 +857,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - [New run](../data/learning/linear-accel-initial-order-run-01.json): two schematic evaluations, same endpoints/length6/run lengths3+3/internal change1, initial down, turns-only, v1/a1/angular180 virtual limits. Both translate8s and rotate internally90degrees; initial alignment0versus90degrees yields total8.5versus9modelseconds. Forecast not supported in this control. Difference isolates initial-alignment cost under this model; review is AI-authored.
 - Independent Python coordinates/runs/angles/durations/phase distance/rest/caps/schedule agree; down-first baseline reproduced. Source/dependency/test and prior12-pass TAP bytes unchanged, tests not repeated. Zero configured planner/BFS/new maps/hardware; no measured runtime/travel/energy or global optimum. Next [initial-right heading forecast](../experiments/linear-accel-initial-heading-right-01.design.json) pending before evaluation.
 
+## 2026-10-31 — Starting-heading sensitivity reverses the preferred order
+
+- [Student prior choice](../data/learning/linear-accel-initial-heading-right-prediction-01.json): **2번째 꺼**, resolving to right-first. No reason or numeric forecast supplied. [Config](../experiments/linear-accel-initial-heading-right-01.config.json) and [protocol](../experiments/linear-accel-initial-heading-right-01.protocol.json) committed at sourced2909d0f1a04b5a4e7d12906861650d0b569f724 before AI operation.
+- [New run](../data/learning/linear-accel-initial-heading-right-run-01.json): initial direction alone down→right; identical paths/endpoints/length6/run lengths3+3/internal turn1/turns-only/v1/a1/angular180 virtual limits. Down-first9/right-first8.5modelseconds, opposite the archived initial-down8.5/9 order. Both translate8s/rotate internally90degrees; initial90degree alignment now burdens down-first. Two schematic evaluations support the student choice; the explanation is AI review.
+- Independent geometry/formula/profile/schedule checks match; paired-input checks isolate heading, source/dependency/test/prior12-pass TAP hashes unchanged. No repeated tests, maps, planner/BFS or hardware. No measured time/energy or global optimum. Next [angular-stop forecast](../experiments/angular-ramp-stop-01.design.json) awaits student prediction before angular-model implementation/evaluation.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

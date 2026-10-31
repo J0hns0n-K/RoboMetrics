@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-31",
+  "status": "awaiting-student-prediction-before-angular-profile-implementation",
+  "proposalAuthor": "AI assistant",
+  "motivation": "The current path model still changes angular rate instantaneously. The paired-heading check makes the rotation-time assumption explicit before extending it.",
+  "context": "data/learning/linear-accel-initial-heading-right-run-01.json",
+  "question": "For a proposed model with finite angular acceleration/braking, compare a single continuous180degree rotation with two same-direction90degree rotations that fully stop between them. Both start/end at rest, same total180degrees, speed/acceleration limits and no extra dwell. Which do you expect to take longer, or will they tie? Give a prediction before implementation/evaluation.",
+  "proposedVirtualLimits": {
+    "maxAngularSpeedDegreesPerSecond": 180,
+    "angularAccelerationMagnitudeDegreesPerSecondSquared": 180,
+    "startAndEndAngularSpeed": 0,
+    "extraDwellSeconds": 0,
+    "translation": "none; isolated analytic angular profiles"
+  },
+  "studentPredictionVerbatim": null,
+  "scope": "Future isolated angular-profile control and AI-supplied virtual limits, not yet implemented/evaluated as an angular model. No wheel actuation, controller, physical calibration or global route claim."
+}
