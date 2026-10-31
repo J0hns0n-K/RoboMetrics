@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-31",
+  "userVerbatim": "같지 않을까? 걸리는 시간을 바꾸는 건 방향 전환 횟수이기 때문이야",
+  "task": "experiments/linear-accel-initial-order-01.design.json",
+  "prediction": "Equal model duration for down/down/down/right/right/right and right/right/right/down/down/down, because internal direction-change counts match.",
+  "context": "AI offered a guided order-reversal comparison at fixed initial-down heading, length6, one internal direction change, same endpoints and virtual motion limits. Recorded before this configured comparison is run.",
+  "roles": {"student":"Supplied the equal-time prediction and turn-count rationale.","ai":"Proposed control/limits, records prediction, implements and operates analytic check."},
+  "scope": "Prior qualitative hypothesis for two known schematic routes, not an independently measured result, numeric prediction, student code or physical claim. Preserve this original prediction even if the check contradicts it."
+}

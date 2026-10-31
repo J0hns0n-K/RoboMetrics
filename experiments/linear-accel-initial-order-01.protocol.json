@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-31",
+  "status": "frozen-before-order-control-execution",
+  "methodAuthor": "AI assistant",
+  "config": "experiments/linear-accel-initial-order-01.config.json",
+  "prediction": "data/learning/linear-accel-initial-order-prediction-01.json",
+  "baselineRun": "data/learning/linear-accel-route-run-02.json",
+  "commandSource": "import {readFile} from 'node:fs/promises';import {linearAccelStopTurnTime} from './src/linear-accel-path-time.mjs';const c=JSON.parse(await readFile('experiments/linear-accel-initial-order-01.config.json','utf8'));const results=c.routes.map(({id,path})=>({route:id,path,...linearAccelStopTurnTime(path,c.motionLimits)}));process.stdout.write(JSON.stringify(results));",
+  "checks": [
+    "Commit prediction/config/protocol before executing the two configured analytic evaluations once.",
+    "Check unchanged model/dependency/test and prior 12-pass TAP hashes; reuse earlier test evidence, no repeated tests or new full-suite claim for input-only comparison.",
+    "Independently verify endpoints, unit moves, same run lengths, internal changes/stops, initial alignment, internal/total rotation and model time by Python geometry/formulas. Check profile distance/rest/caps and schedule.",
+    "Compare down-first output with immutable previous student-route-02 result; record whether the equal-time forecast is supported. Preserve all historical artifacts/source/input bytes."
+  ],
+  "scope": "Two known schematic analytic controls, not new maps, planner/BFS calls, hardware, runtime/energy/physical measurements, controller/collision validation or optimality proof. Same finite-linear model with instantaneous angular rate changes. Initial alignment may differ even though internal turn counts match."
+}
