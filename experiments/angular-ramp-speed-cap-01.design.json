@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-31",
+  "status": "awaiting-student-prior-duration-prediction",
+  "proposalAuthor": "AI assistant",
+  "context": "data/learning/angular-ramp-accel-sensitivity-run-01.json",
+  "question": "For a single90degree rotation from rest to rest, keep acceleration/braking magnitude360degrees/s^2 fixed. Raise only the permitted angular speed cap from180to360degrees/s. Do you expect this short rotation to take less model time or the same? Give a prediction before evaluating the higher-cap condition.",
+  "controls": {
+    "angleDegrees": 90,
+    "angularAccelerationMagnitudeDegreesPerSecondSquared": 360,
+    "baselineMaxAngularSpeedDegreesPerSecond": 180,
+    "newMaxAngularSpeedDegreesPerSecond": 360,
+    "startAndEndAngularSpeed": 0,
+    "extraDwellSeconds": 0,
+    "translation": "none; isolated analytic profile"
+  },
+  "studentPredictionVerbatim": null,
+  "scope": "Pending speed-cap-only control. Baseline90degree profile already appears as a component of the previous split rotation; new higher-cap condition not configured/evaluated. No hardware, physical calibration or path composition."
+}

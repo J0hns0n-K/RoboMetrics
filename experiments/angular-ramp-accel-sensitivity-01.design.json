@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-31",
-  "status": "awaiting-student-prior-gap-prediction",
+  "status": "student-gap-forecast-recorded-and-ai-sensitivity-checked",
   "proposalAuthor": "AI assistant",
   "context": "data/learning/angular-ramp-stop-run-01.json",
   "question": "Keep maximum angular speed180degrees/s, the same180degree versus stopped90+90 cases and all endpoint-rest/zero-dwell assumptions. Increase only angular acceleration/braking magnitude from180to360degrees/s^2. Do you expect the extra time caused by the intermediate stop to shrink, grow or stay the same? Give a prediction before evaluation.",
@@ -10,6 +10,11 @@
     "newAngularAccelerationMagnitudeDegreesPerSecondSquared": 360,
     "changedFactor": "angular acceleration/braking magnitude only"
   },
-  "studentPredictionVerbatim": null,
-  "scope": "Pending isolated angular-profile sensitivity with AI virtual limits; no new result, path composition, hardware or calibration."
+  "studentPredictionVerbatim": "줄어들지",
+  "scope": "Completed guided qualitative gap forecast and AI isolated angular sensitivity. Student supplied no reason/numeric forecast; no universal result, path composition, hardware or calibration.",
+  "predictionRecord": "data/learning/angular-ramp-accel-sensitivity-prediction-01.json",
+  "runRecord": "data/learning/angular-ramp-accel-sensitivity-run-01.json",
+  "sourceCommit": "c49dd3553bdf5ba53dfbc9a2f89c1735820a0446",
+  "predictionSupportedInThisControl": true,
+  "nextTask": "experiments/angular-ramp-speed-cap-01.design.json"
 }

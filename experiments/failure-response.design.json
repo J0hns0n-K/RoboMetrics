@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student choice2 predicts stopped90+90 takes longer. AI isolated angular check data/learning/angular-ramp-stop-run-01.json supports it: one180=2modelseconds versus two90=2.8284271247461903 at max180degrees/s and accel180degrees/s^2, no dwell.25focused tests pass. Next experiments/angular-ramp-accel-sensitivity-01.design.json awaits a gap prediction when only acceleration rises to360. No path-wide angular integration yet.",
+  "nextTask": "Student 줄어들지 forecast supported by data/learning/angular-ramp-accel-sensitivity-run-01.json: fixed max180degrees/s, accel180to360degrees/s^2 changes continuous180 from2to1.5modelseconds and stopped90+90 from2.8284271247461903to2, shrinking gap0.8284271247461903to0.5. No test repeat; prior25-pass hashes match. Next experiments/angular-ramp-speed-cap-01.design.json awaits a prediction for single90 with accel360 fixed and cap180to360 before that high-cap condition is evaluated.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -316,5 +316,8 @@
   "angularRampStopDraft": "experiments/angular-ramp-stop-01.design.json",
   "angularRampStopPrediction": "data/learning/angular-ramp-stop-prediction-01.json",
   "angularRampStopRun": "data/learning/angular-ramp-stop-run-01.json",
-  "angularRampSensitivityDraft": "experiments/angular-ramp-accel-sensitivity-01.design.json"
+  "angularRampSensitivityDraft": "experiments/angular-ramp-accel-sensitivity-01.design.json",
+  "angularRampSensitivityPrediction": "data/learning/angular-ramp-accel-sensitivity-prediction-01.json",
+  "angularRampSensitivityRun": "data/learning/angular-ramp-accel-sensitivity-run-01.json",
+  "angularRampSpeedCapDraft": "experiments/angular-ramp-speed-cap-01.design.json"
 }

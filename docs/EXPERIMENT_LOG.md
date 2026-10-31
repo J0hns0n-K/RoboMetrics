@@ -869,6 +869,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - [New run](../data/learning/angular-ramp-stop-run-01.json), [TAP](../data/learning/angular-ramp-stop-tests-01.tap): new7angular+existing12linear-profile+6ramp=25passing tests/0fail, no full-suite rerun. Two known analytic configurations, total same-direction180degrees, maximum180degrees/s and acceleration/braking180degrees/s², endpoint rest, zero added dwell. Continuous180 takes2s, stopped90+90 takes2.8284271247461903modelseconds; separate instantaneous-rate controls1/1s. Choice supported here; restart explanation AI-authored.
 - Python independently checks time formulas,3profiles/6phases, rest/caps/continuity/schedule and64-panel phase velocity integrals. Source/input/historical results/TAP hashes unchanged. Isolated angular timing only; existing path-time angular-rate changes remain instantaneous. Zero configured planner/BFS/new maps/hardware; no elapsed-runtime/physical/energy/calibrated/controller/collision/optimum inference. Next [acceleration-only sensitivity forecast](../experiments/angular-ramp-accel-sensitivity-01.design.json) awaits student before evaluation.
 
+## 2026-10-31 — Acceleration-only sensitivity reduces the stop penalty
+
+- Student [prior forecast](../data/learning/angular-ramp-accel-sensitivity-prediction-01.json) **줄어들지**, no reason/numeric forecast. AI froze [config](../experiments/angular-ramp-accel-sensitivity-01.config.json)/[protocol](../experiments/angular-ramp-accel-sensitivity-01.protocol.json) at sourcec49dd3553bdf5ba53dfbc9a2f89c1735820a0446 before operation.
+- [New run](../data/learning/angular-ramp-accel-sensitivity-run-01.json): same isolated180 versus stopped90+90, max180degrees/s, endpoint rest/zero dwell; only acceleration/braking180to360degrees/s². Continuous2to1.5s, split2.8284271247461903to2modelseconds, gap0.8284271247461903to0.5. Forecast supported under these conditions; interpretation is AI review, not student reason/universal law.
+- Two configured evaluations,3profiles/7phases checked with independent formulas/rest/caps/continuity/schedule and64-panel phase velocity integrals. Model/dependency/test/prior25-pass TAP/historical bytes unchanged; tests not repeated. Zero planner/BFS/new maps/hardware, no measured runtime/energy, calibration or path-wide angular integration. Next [short90degree speed-cap prediction](../experiments/angular-ramp-speed-cap-01.design.json) pending before high-cap evaluation.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
