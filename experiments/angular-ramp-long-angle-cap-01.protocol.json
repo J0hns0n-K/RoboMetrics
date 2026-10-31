@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-31",
+  "status": "frozen-before-long-angle-speed-cap-control",
+  "methodAuthor": "AI assistant",
+  "config": "experiments/angular-ramp-long-angle-cap-01.config.json",
+  "studentPrediction": "data/learning/angular-ramp-long-angle-cap-prediction-01.json",
+  "baselineRun": "data/learning/angular-ramp-speed-cap-run-01.json",
+  "commandSource": "import {readFile} from 'node:fs/promises';import {stoppedAngularSequenceTime} from './src/angular-speed-profile.mjs';const c=JSON.parse(await readFile('experiments/angular-ramp-long-angle-cap-01.config.json','utf8'));const results=c.cases.map(({id,maxAngularSpeedDegreesPerSecond})=>({id,maxAngularSpeedDegreesPerSecond,...stoppedAngularSequenceTime([c.angleDegrees],{maxAngularSpeedDegreesPerSecond,angularAccelerationMagnitudeDegreesPerSecondSquared:c.angularAccelerationMagnitudeDegreesPerSecondSquared}),instantaneousRateControlSeconds:c.angleDegrees/maxAngularSpeedDegreesPerSecond}));process.stdout.write(JSON.stringify(results));",
+  "checks": [
+    "Commit prediction/config/protocol before two configured evaluations. Hold angle/rest/acceleration/dwell fixed, change only speed cap.",
+    "Independently reconstruct360degree profile threshold/time/shape, peak speed,64-panel phase integrals, angle/rest/caps/continuity/schedule. Compare speed-cap effect with immutable90degree results while keeping both caps and acceleration fixed.",
+    "Compare durations for the student shorter-time forecast, retaining exact original choice and separate AI interpretation.",
+    "Verify source/dependency/test/prior25-pass TAP and historical hashes. No code change: reuse existing test evidence without repeating tests or claiming full-suite execution."
+  ],
+  "scope": "Two known long-angle isolated analytic controls, paired with prior short-angle evidence at identical caps/acceleration. No path-wide composition, maps/planners/BFS, physical/calibrated/controller/runtime/energy/optimum evidence. Student supplied no reason or numeric forecast."
+}

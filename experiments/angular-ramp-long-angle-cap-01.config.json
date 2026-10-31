@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "studentPrediction": "data/learning/angular-ramp-long-angle-cap-prediction-01.json",
+  "angleDegrees": 360,
+  "angularAccelerationMagnitudeDegreesPerSecondSquared": 360,
+  "cases": [
+    {
+      "id": "cap180",
+      "maxAngularSpeedDegreesPerSecond": 180
+    },
+    {
+      "id": "cap360",
+      "maxAngularSpeedDegreesPerSecond": 360
+    }
+  ],
+  "controls": "Same single360degree rotation, start/end angular rest, acceleration/braking360degrees/s^2, zero dwell, no translation/obstacles; only maximum permitted angular speed changes.",
+  "pairedShortAngleConfig": "experiments/angular-ramp-speed-cap-01.config.json"
+}

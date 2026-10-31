@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-31",
+  "userVerbatim": "줄어들지",
+  "task": "experiments/angular-ramp-long-angle-cap-01.design.json",
+  "resolvedPrediction": "The higher permitted speed cap reduces model time for a continuous360degree rest-to-rest rotation with acceleration/braking360degrees/s^2 fixed.",
+  "context": "AI offered the long-angle control after the90degree no-change result. Student supplied qualitative forecast only, without reason or number, before evaluation.",
+  "roles": {
+    "student": "Guided prior qualitative shorter-time forecast.",
+    "ai": "Limits/controls, configured implementation/operation, independent audit and review."
+  },
+  "scope": "Hypothesis, not student code/execution, measured physical result or all-angle proof."
+}
