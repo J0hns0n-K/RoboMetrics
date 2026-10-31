@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-31",
+  "status": "frozen-before-acceleration-only-sensitivity",
+  "methodAuthor": "AI assistant",
+  "config": "experiments/angular-ramp-accel-sensitivity-01.config.json",
+  "studentPrediction": "data/learning/angular-ramp-accel-sensitivity-prediction-01.json",
+  "baselineRun": "data/learning/angular-ramp-stop-run-01.json",
+  "commandSource": "import {readFile} from 'node:fs/promises';import {stoppedAngularSequenceTime} from './src/angular-speed-profile.mjs';const c=JSON.parse(await readFile('experiments/angular-ramp-accel-sensitivity-01.config.json','utf8'));const results=c.cases.map(({id,anglesDegrees})=>({id,anglesDegrees,...stoppedAngularSequenceTime(anglesDegrees,c.limits),instantaneousRateControlSeconds:anglesDegrees.reduce((s,angle)=>s+angle/c.limits.maxAngularSpeedDegreesPerSecond,0)}));process.stdout.write(JSON.stringify(results));",
+  "checks": [
+    "Commit prediction/config/protocol before execution. Verify case angles/speed/rest/dwell unchanged; only acceleration changes180to360degrees/s^2.",
+    "Run two configured analytic evaluations once. Independently compute profile shapes/times and phase velocity integrals with64panels; check rest/continuity/caps/schedules.",
+    "Compare the new stopped-minus-continuous time gap with the immutable baseline; preserve original forecast and separate AI interpretation.",
+    "Verify model/dependency/test/historical byte hashes and prior25-pass TAP. Reuse that evidence without repeating tests for an input-only change; no new full-suite claim."
+  ],
+  "scope": "Two known isolated angular analytic controls, not path-wide angular integration, new maps/planners/BFS, physical/controller/calibration/runtime/energy evidence or global optimum. Student supplied qualitative gap choice, no reason/numeric forecast."
+}

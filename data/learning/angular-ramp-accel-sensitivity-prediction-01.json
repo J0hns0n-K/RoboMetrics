@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-31",
+  "userVerbatim": "줄어들지",
+  "task": "experiments/angular-ramp-accel-sensitivity-01.design.json",
+  "resolvedPrediction": "The extra model time of stopped90+90 relative to continuous180 will shrink when only angular acceleration/braking magnitude increases180to360degrees/s^2.",
+  "context": "AI supplied the comparison and virtual limits. Student predicted smaller gap before configured evaluation, without a reason or numerical forecast.",
+  "roles": {
+    "student": "Guided prior qualitative gap forecast.",
+    "ai": "Conditions/limits, comparison implementation/operation, independent checks and review."
+  },
+  "scope": "Hypothesis only, no student code/execution, physical measurement, universal proof or inferred reason."
+}
