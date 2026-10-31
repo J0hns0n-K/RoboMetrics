@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-31",
+  "status": "awaiting-student-prior-gap-prediction",
+  "proposalAuthor": "AI assistant",
+  "context": "data/learning/angular-ramp-stop-run-01.json",
+  "question": "Keep maximum angular speed180degrees/s, the same180degree versus stopped90+90 cases and all endpoint-rest/zero-dwell assumptions. Increase only angular acceleration/braking magnitude from180to360degrees/s^2. Do you expect the extra time caused by the intermediate stop to shrink, grow or stay the same? Give a prediction before evaluation.",
+  "controls": {
+    "baseConfig": "experiments/angular-ramp-stop-01.config.json",
+    "newAngularAccelerationMagnitudeDegreesPerSecondSquared": 360,
+    "changedFactor": "angular acceleration/braking magnitude only"
+  },
+  "studentPredictionVerbatim": null,
+  "scope": "Pending isolated angular-profile sensitivity with AI virtual limits; no new result, path composition, hardware or calibration."
+}

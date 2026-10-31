@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student selected second/right-first under initial right; data/learning/linear-accel-initial-heading-right-run-01.json supports it with down-first9/right-first8.5modelseconds. Only heading changed versus initial-down comparison, reversing ranking. Student supplied no reason/numeric forecast. Next experiments/angular-ramp-stop-01.design.json asks a prediction for finite-angular-acceleration single180 versus two stopped90 rotations before implementation/evaluation.",
+  "nextTask": "Student choice2 predicts stopped90+90 takes longer. AI isolated angular check data/learning/angular-ramp-stop-run-01.json supports it: one180=2modelseconds versus two90=2.8284271247461903 at max180degrees/s and accel180degrees/s^2, no dwell.25focused tests pass. Next experiments/angular-ramp-accel-sensitivity-01.design.json awaits a gap prediction when only acceleration rises to360. No path-wide angular integration yet.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -313,5 +313,8 @@
   "linearAccelRightHeadingDraft": "experiments/linear-accel-initial-heading-right-01.design.json",
   "linearAccelRightHeadingPrediction": "data/learning/linear-accel-initial-heading-right-prediction-01.json",
   "linearAccelRightHeadingRun": "data/learning/linear-accel-initial-heading-right-run-01.json",
-  "angularRampStopDraft": "experiments/angular-ramp-stop-01.design.json"
+  "angularRampStopDraft": "experiments/angular-ramp-stop-01.design.json",
+  "angularRampStopPrediction": "data/learning/angular-ramp-stop-prediction-01.json",
+  "angularRampStopRun": "data/learning/angular-ramp-stop-run-01.json",
+  "angularRampSensitivityDraft": "experiments/angular-ramp-accel-sensitivity-01.design.json"
 }

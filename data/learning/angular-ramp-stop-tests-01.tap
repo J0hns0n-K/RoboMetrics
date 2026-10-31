@@ -1,0 +1,160 @@
+TAP version 13
+# Subtest: angular units distinguish short, threshold, cruising and stationary rotations
+ok 1 - angular units distinguish short, threshold, cruising and stationary rotations
+  ---
+  duration_ms: 1.5044
+  type: 'test'
+  ...
+# Subtest: angular velocity integrals reconstruct angle with bounded acceleration and rest endpoints
+ok 2 - angular velocity integrals reconstruct angle with bounded acceleration and rest endpoints
+  ---
+  duration_ms: 0.3251
+  type: 'test'
+  ...
+# Subtest: same total rotation with an intermediate full stop costs more without any dwell
+ok 3 - same total rotation with an intermediate full stop costs more without any dwell
+  ---
+  duration_ms: 0.2277
+  type: 'test'
+  ...
+# Subtest: instantaneous constant-rate control ties and is separate from the bounded model
+ok 4 - instantaneous constant-rate control ties and is separate from the bounded model
+  ---
+  duration_ms: 0.149
+  type: 'test'
+  ...
+# Subtest: sequence schedule is serial, preserves input and sums requested angles and profile times
+ok 5 - sequence schedule is serial, preserves input and sums requested angles and profile times
+  ---
+  duration_ms: 0.1601
+  type: 'test'
+  ...
+# Subtest: angular-unit rescaling preserves time when angle, rate and acceleration scale together
+ok 6 - angular-unit rescaling preserves time when angle, rate and acceleration scale together
+  ---
+  duration_ms: 0.1286
+  type: 'test'
+  ...
+# Subtest: invalid angles, limits and unrepresentable profiles are rejected
+ok 7 - invalid angles, limits and unrepresentable profiles are rejected
+  ---
+  duration_ms: 0.5425
+  type: 'test'
+  ...
+# Subtest: rest-to-rest profiles distinguish triangular, cruise and stationary cases
+ok 8 - rest-to-rest profiles distinguish triangular, cruise and stationary cases
+  ---
+  duration_ms: 1.414
+  type: 'test'
+  ...
+# Subtest: threshold profiles are continuous and respect speed and acceleration caps
+ok 9 - threshold profiles are continuous and respect speed and acceleration caps
+  ---
+  duration_ms: 0.2275
+  type: 'test'
+  ...
+# Subtest: phase integrals, continuity and endpoint rest reconstruct requested distance
+ok 10 - phase integrals, continuity and endpoint rest reconstruct requested distance
+  ---
+  duration_ms: 0.1906
+  type: 'test'
+  ...
+# Subtest: straight continuation avoids two unnecessary restarts in the offered three-unit control
+ok 11 - straight continuation avoids two unnecessary restarts in the offered three-unit control
+  ---
+  duration_ms: 0.548
+  type: 'test'
+  ...
+# Subtest: turns-only is invariant to collinear half-step sampling; explicit waypoint stops are not
+ok 12 - turns-only is invariant to collinear half-step sampling; explicit waypoint stops are not
+  ---
+  duration_ms: 0.3555
+  type: 'test'
+  ...
+# Subtest: an all-turn path is a counterexample to strict improvement from merging
+ok 13 - an all-turn path is a counterexample to strict improvement from merging
+  ---
+  duration_ms: 0.1838
+  type: 'test'
+  ...
+# Subtest: the offered longer straight runs gain five model seconds under identical limits
+ok 14 - the offered longer straight runs gain five model seconds under identical limits
+  ---
+  duration_ms: 0.757
+  type: 'test'
+  ...
+# Subtest: constant-rate legacy timing is preserved separately and is a lower control for this schedule
+ok 15 - constant-rate legacy timing is preserved separately and is a lower control for this schedule
+  ---
+  duration_ms: 0.2838
+  type: 'test'
+  ...
+# Subtest: a reversal is not merged into a straight run and initial alignment remains explicit
+ok 16 - a reversal is not merged into a straight run and initial alignment remains explicit
+  ---
+  duration_ms: 0.1403
+  type: 'test'
+  ...
+# Subtest: stationary paths add no operation or target-heading alignment
+ok 17 - stationary paths add no operation or target-heading alignment
+  ---
+  duration_ms: 0.1377
+  type: 'test'
+  ...
+# Subtest: invalid paths, limits, policies and unrepresentable profile transitions are rejected
+ok 18 - invalid paths, limits, policies and unrepresentable profile transitions are rejected
+  ---
+  duration_ms: 0.5497
+  type: 'test'
+  ...
+# Subtest: analytic operation schedule is serial and both duration components add to the total
+ok 19 - analytic operation schedule is serial and both duration components add to the total
+  ---
+  duration_ms: 0.1399
+  type: 'test'
+  ...
+# Subtest: the taught one- and two-second profiles share mean speed but differ in distance and acceleration
+ok 20 - the taught one- and two-second profiles share mean speed but differ in distance and acceleration
+  ---
+  duration_ms: 1.0968
+  type: 'test'
+  ...
+# Subtest: instantaneous speed, full-interval mean and partial displacement are separate
+ok 21 - instantaneous speed, full-interval mean and partial displacement are separate
+  ---
+  duration_ms: 0.8048
+  type: 'test'
+  ...
+# Subtest: constant, stationary and decelerating nonnegative profiles remain supported
+ok 22 - constant, stationary and decelerating nonnegative profiles remain supported
+  ---
+  duration_ms: 0.2681
+  type: 'test'
+  ...
+# Subtest: sampled velocity integrals and independent constant-acceleration displacement agree
+ok 23 - sampled velocity integrals and independent constant-acceleration displacement agree
+  ---
+  duration_ms: 0.263
+  type: 'test'
+  ...
+# Subtest: invalid endpoint speeds, durations and out-of-range sample times are rejected
+ok 24 - invalid endpoint speeds, durations and out-of-range sample times are rejected
+  ---
+  duration_ms: 0.4529
+  type: 'test'
+  ...
+# Subtest: finite large means avoid addition overflow, but unrepresentable state is rejected
+ok 25 - finite large means avoid addition overflow, but unrepresentable state is rejected
+  ---
+  duration_ms: 0.1296
+  type: 'test'
+  ...
+1..25
+# tests 25
+# suites 0
+# pass 25
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 215.7397

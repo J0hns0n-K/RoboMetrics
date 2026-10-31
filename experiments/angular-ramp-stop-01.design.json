@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-31",
-  "status": "awaiting-student-prediction-before-angular-profile-implementation",
+  "status": "student-choice-recorded-and-isolated-angular-check-complete",
   "proposalAuthor": "AI assistant",
   "motivation": "The current path model still changes angular rate instantaneously. The paired-heading check makes the rotation-time assumption explicit before extending it.",
   "context": "data/learning/linear-accel-initial-heading-right-run-01.json",
@@ -13,6 +13,11 @@
     "extraDwellSeconds": 0,
     "translation": "none; isolated analytic angular profiles"
   },
-  "studentPredictionVerbatim": null,
-  "scope": "Future isolated angular-profile control and AI-supplied virtual limits, not yet implemented/evaluated as an angular model. No wheel actuation, controller, physical calibration or global route claim."
+  "studentPredictionVerbatim": "2",
+  "scope": "Completed guided choice and AI isolated angular-model implementation/check; student supplied no reason/numeric forecast. Existing path-time angular assumption unchanged; no physical/calibrated/controller result.",
+  "predictionRecord": "data/learning/angular-ramp-stop-prediction-01.json",
+  "runRecord": "data/learning/angular-ramp-stop-run-01.json",
+  "sourceCommit": "f1a9eb1ac7bdf71e199db0e90e33dec5cc1c021b",
+  "predictionSupportedInThisControl": true,
+  "nextTask": "experiments/angular-ramp-accel-sensitivity-01.design.json"
 }
