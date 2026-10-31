@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-31",
+  "userVerbatim": "2번째 꺼",
+  "task": "experiments/linear-accel-initial-heading-right-01.design.json",
+  "resolvedChoice": "Second route: right/right/right/down/down/down is predicted faster with initial heading right.",
+  "context": "AI asked which of the displayed down-first and right-first routes is faster when only the starting heading changes to right. Student selected the second; no reason or numerical time was supplied.",
+  "roles": {
+    "student": "Selected right-first in a guided prior prediction.",
+    "ai": "Provided choices/conditions, records response and operates validation."
+  },
+  "scope": "Qualitative forecast before the initial-right configured check, not an observed result, student code/execution, reasoned explanation or physical measurement."
+}

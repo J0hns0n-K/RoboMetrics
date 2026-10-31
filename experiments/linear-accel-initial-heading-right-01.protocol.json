@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-31",
+  "status": "frozen-before-initial-right-heading-control",
+  "methodAuthor": "AI assistant",
+  "config": "experiments/linear-accel-initial-heading-right-01.config.json",
+  "prediction": "data/learning/linear-accel-initial-heading-right-prediction-01.json",
+  "baselineRun": "data/learning/linear-accel-initial-order-run-01.json",
+  "commandSource": "import {readFile} from 'node:fs/promises';import {linearAccelStopTurnTime} from './src/linear-accel-path-time.mjs';const c=JSON.parse(await readFile('experiments/linear-accel-initial-heading-right-01.config.json','utf8'));const results=c.routes.map(({id,path})=>({route:id,path,...linearAccelStopTurnTime(path,c.motionLimits)}));process.stdout.write(JSON.stringify(results));",
+  "checks": [
+    "Commit prediction/config/protocol before executing the two configured analytic evaluations once.",
+    "Check unchanged model/dependency/test and prior 12-pass TAP hashes; reuse earlier test evidence, no repeated tests or new full-suite claim for input-only comparison.",
+    "Independently verify endpoints, unit moves, same run lengths, internal changes/stops, initial alignment, internal/total rotation and model time by Python geometry/formulas. Check profile distance/rest/caps and schedule.",
+    "Verify the only config change is initial heading/prediction/control metadata; fixed route coordinates/rates/stop rule. Compare both headings with immutable prior output; preserve source/input and historical bytes."
+  ],
+  "scope": "Paired initial-heading sensitivity: two known schematic evaluations at initial right, compared with prior initial-down evidence. No maps/planners/hardware/runtime/energy/global optimum. Finite linear, instantaneous angular rate changes; student picked second without a reason or numeric forecast."
+}

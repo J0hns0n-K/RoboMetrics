@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "prediction": "data/learning/linear-accel-initial-heading-right-prediction-01.json",
+  "motionLimits": {
+    "initialHeading": "right",
+    "linearSpeed": 1,
+    "linearAcceleration": 1,
+    "angularSpeedDegrees": 180,
+    "stopPolicy": "turns-only"
+  },
+  "routes": [
+    {
+      "id": "down-first",
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "provenance": "Student route from experiments/linear-accel-route-02.config.json"
+    },
+    {
+      "id": "right-first",
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "provenance": "AI order-reversal control, not student-designed"
+    }
+  ],
+  "controls": "Same endpoints, six unit moves, straight-run lengths3/3, one internal direction change and intermediate stop; fixed initial-right heading and rates. No obstacles; rest at start/goal, no final heading alignment.",
+  "pairedBaseline": "experiments/linear-accel-initial-order-01.config.json"
+}
