@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-31",
+  "userVerbatim": "2",
+  "task": "experiments/angular-ramp-stop-01.design.json",
+  "resolvedChoice": "Two same-direction90degree rotations with a complete intermediate stop are predicted to take longer than one continuous180degree rotation.",
+  "context": "AI supplied the cases, finite-angular-acceleration assumption and virtual limits. Student selected case2 without a reason or numerical forecast, before implementation/configured evaluation.",
+  "roles": {"student":"Guided prior qualitative choice only.","ai":"Case design, limits, equations/angular adapter/tests/operation and interpretation."},
+  "scope": "Hypothesis, not measured performance, student code or independently observed execution. No reason or numeric forecast inferred."
+}

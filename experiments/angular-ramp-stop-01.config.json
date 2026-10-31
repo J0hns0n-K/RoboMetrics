@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "studentPrediction": "data/learning/angular-ramp-stop-prediction-01.json",
+  "limits": {"maxAngularSpeedDegreesPerSecond":180,"angularAccelerationMagnitudeDegreesPerSecondSquared":180},
+  "cases": [{"id":"one180","anglesDegrees":[180]},{"id":"two90-with-rest","anglesDegrees":[90,90]}],
+  "controls": "Same total same-direction180degrees, speed/acceleration limits and rest at both endpoints. Second case also rests between rotations; no dwell time. Isolated analytic angular motion, no translation or obstacles."
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-31",
+  "status": "frozen-before-angular-control-checks",
+  "methodAuthor": "AI assistant",
+  "config": "experiments/angular-ramp-stop-01.config.json",
+  "studentPrediction": "data/learning/angular-ramp-stop-prediction-01.json",
+  "method": "Angular adapter of existing scalar rest-to-rest equations, with degrees, degrees/s and degrees/s^2 explicit. Symmetric finite acceleration/braking and bounded angular speed; unsigned same-direction angles, full rest at each commanded boundary, zero added dwell. Isolated angular profiles, not integrated into path-time code.",
+  "checks": [
+    "Commit prediction/code/config/protocol before checks. Run new angular tests plus existing12 linear-profile path tests and6 ramp tests once; archive a new TAP. No full-suite rerun claim.",
+    "Import practice12 once, capturing both configurations and all angular phase profiles. Independently compute threshold/triangular/cruise time formulas, angles, limits, rest/continuity/schedule and64-panel phase-velocity integrals in Python.",
+    "Compare total180degrees for both cases and the separate instantaneous-rate control1s/1s. Record whether student choice2 is supported under declared assumptions.",
+    "Verify existing source/test/baseline/TAP bytes unchanged and preserve historical artifacts; archive new results under new names."
+  ],
+  "scope": "Known analytic angular controls, not physical calibration, wheel actuation, timed controller/collision simulation, measured runtime/energy, global optimality or new maps/planner/BFS calls. Existing path timing still has instantaneous angular-rate changes; this extension is isolated only. AI implements/operates; student supplied qualitative choice without reason."
+}
