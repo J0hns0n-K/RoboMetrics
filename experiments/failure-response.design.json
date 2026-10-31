@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student designed down/down/down/right/right/right. New source-bound analytic check data/learning/linear-accel-route-run-02.json gives one intermediate stop, zero initial alignment and8.5modelseconds at fixed endpoints/length/limits. Next experiments/linear-accel-initial-order-01.design.json asks for a prediction comparing reversed segment order with the same one-change count before evaluation.",
+  "nextTask": "Original equal-time prediction preserved in data/learning/linear-accel-initial-order-prediction-01.json. AI order control data/learning/linear-accel-initial-order-run-01.json gives down-first8.5/right-first9 model seconds: equal internal turn counts, different initial alignment. Next experiments/linear-accel-initial-heading-right-01.design.json changes only starting heading to right and awaits student prediction before evaluation. No student correction yet.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -307,5 +307,8 @@
   "linearAccelNextRouteDesignDraft": "experiments/linear-accel-route-design-02.design.json",
   "linearAccelStudentOneTurnRoute": "data/learning/linear-accel-route-design-02.json",
   "linearAccelStudentOneTurnRun": "data/learning/linear-accel-route-run-02.json",
-  "linearAccelInitialOrderDraft": "experiments/linear-accel-initial-order-01.design.json"
+  "linearAccelInitialOrderDraft": "experiments/linear-accel-initial-order-01.design.json",
+  "linearAccelInitialOrderPrediction": "data/learning/linear-accel-initial-order-prediction-01.json",
+  "linearAccelInitialOrderRun": "data/learning/linear-accel-initial-order-run-01.json",
+  "linearAccelRightHeadingDraft": "experiments/linear-accel-initial-heading-right-01.design.json"
 }

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-31",
+  "status": "awaiting-student-prior-prediction",
+  "proposalAuthor": "AI assistant",
+  "context": "data/learning/linear-accel-initial-order-run-01.json",
+  "question": "Change only initial heading from down to right. Keep the same down/down/down/right/right/right and right/right/right/down/down/down paths, endpoints, length6, one internal change and motion limits. Which path do you predict will take less model time, or will they tie? Give a short reason before evaluation.",
+  "controls": {
+    "initialHeading": "right",
+    "linearSpeed": 1,
+    "linearAcceleration": 1,
+    "angularSpeedDegrees": 180,
+    "stopPolicy": "turns-only",
+    "samePathsAs": "experiments/linear-accel-initial-order-01.config.json",
+    "obstacles": "none; schematic"
+  },
+  "studentPredictionVerbatim": null,
+  "scope": "Pending guided sensitivity control, no numeric prediction or new configured result yet. No physical measurement or optimality claim."
+}

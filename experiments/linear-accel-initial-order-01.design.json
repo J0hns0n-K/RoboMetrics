@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-30",
-  "status": "awaiting-student-prior-prediction",
+  "status": "student-prediction-recorded-and-ai-control-checked",
   "proposalAuthor": "AI assistant",
   "context": "data/learning/linear-accel-route-run-02.json",
   "question": "Under the same initial-down heading and all current model limits, compare student down/down/down/right/right/right against right/right/right/down/down/down. Both have length6 and one internal direction change. Will model time be the same or which sequence will take longer? Give a prediction/reason before this order control is evaluated.",
@@ -26,6 +26,11 @@
     "internalDirectionChanges": 1,
     "obstacles": "none; schematic"
   },
-  "studentPredictionVerbatim": null,
-  "scope": "Pending known-route initial-alignment control. Reversed order has not been evaluated in this configured condition; not a physical forecast or global optimum."
+  "studentPredictionVerbatim": "같지 않을까? 걸리는 시간을 바꾸는 건 방향 전환 횟수이기 때문이야",
+  "scope": "Completed guided prior prediction and AI-operated analytic order control; original equal-time forecast preserved. No student post-result correction yet, no hardware or global-optimality evidence.",
+  "predictionRecord": "data/learning/linear-accel-initial-order-prediction-01.json",
+  "runRecord": "data/learning/linear-accel-initial-order-run-01.json",
+  "sourceCommit": "a9974fd9ccd6e8a80788c9b4b291a559d4fb8a9f",
+  "predictionSupportedInThisControl": false,
+  "nextTask": "experiments/linear-accel-initial-heading-right-01.design.json"
 }
