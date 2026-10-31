@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-31",
+  "status": "awaiting-student-prior-path-penalty-prediction",
+  "proposalAuthor": "AI assistant",
+  "context": "data/learning/angular-ramp-long-angle-cap-run-01.json",
+  "question": "Next compose finite angular acceleration/braking into a separate full-path model, retaining existing finite-linear timing and turns-only rules. Compare baseline X with six90degree rotation operations (including initial alignment) against student down/down/down/right/right/right with one90degree rotation. With all existing limits fixed and angular acceleration360degrees/s^2 added, which path do you predict has the larger added model time versus its own old instantaneous-angular baseline?",
+  "baselineRun": "data/learning/linear-accel-route-run-02.json",
+  "baselineConfig": "experiments/linear-accel-route-02.config.json",
+  "controls": {
+    "initialHeading": "down",
+    "linearSpeed": 1,
+    "linearAcceleration": 1,
+    "angularSpeedDegrees": 180,
+    "newAngularAccelerationMagnitudeDegreesPerSecondSquared": 360,
+    "stopPolicy": "turns-only",
+    "startGoalAndRequiredStopsAtRest": true,
+    "rotationsAtRest": "include initial alignment and every internal turn",
+    "finalHeadingAlignment": "none",
+    "obstacles": "none; same known schematic paths"
+  },
+  "studentPredictionVerbatim": null,
+  "plan": "Record prediction before new composition code/control run. Preserve legacy APIs and raw outputs; use a separate bounded path reference and paired controls, with independent schedule/angle/time validation.",
+  "scope": "Pending AI implementation and guided student forecast, not a composed result, physical robot controller, wheel integration, collision proof or global path optimum."
+}

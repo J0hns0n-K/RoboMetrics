@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-31",
-  "status": "awaiting-student-prior-long-angle-forecast",
+  "status": "student-shorter-time-forecast-recorded-and-ai-long-angle-check-complete",
   "proposalAuthor": "AI assistant",
   "context": "data/learning/angular-ramp-speed-cap-run-01.json",
   "question": "For a continuous360degree rotation from rest to rest, keep acceleration/braking360degrees/s^2 and compare permitted speed caps180versus360degrees/s, with no dwell. Do you predict the higher cap now reduces time or still gives equal time? Give a prediction before the long-angle control is evaluated.",
@@ -14,6 +14,11 @@
     "extraDwellSeconds": 0,
     "translation": "none; isolated analytic rotation"
   },
-  "studentPredictionVerbatim": null,
-  "scope": "Pending long-angle speed-cap comparison, not a result or physical/global claim. Previous90degree result does not establish equality for every angle."
+  "studentPredictionVerbatim": "줄어들지",
+  "scope": "Completed guided forecast and AI isolated360degree cap comparison; higher cap reduces time here. No student reason/numeric forecast, all-angle law, path composition or physical result.",
+  "predictionRecord": "data/learning/angular-ramp-long-angle-cap-prediction-01.json",
+  "runRecord": "data/learning/angular-ramp-long-angle-cap-run-01.json",
+  "sourceCommit": "7196540d5f337b6a9560334ad8c228f4d005c853",
+  "predictionSupportedInThisControl": true,
+  "nextTask": "experiments/bounded-path-angular-01.design.json"
 }

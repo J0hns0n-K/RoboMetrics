@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student 같지 forecast supported by data/learning/angular-ramp-speed-cap-run-01.json: single90degrees, accel360degrees/s^2, caps180/360 both1modelsecond and actual peak180degrees/s. Prior25-pass source/test/TAP hashes reused without repeating tests. Next experiments/angular-ramp-long-angle-cap-01.design.json awaits a forecast comparing the same caps at continuous360degrees before evaluation.",
+  "nextTask": "Student 줄어들지 long-angle forecast supported by data/learning/angular-ramp-long-angle-cap-run-01.json: continuous360degrees at accel360degrees/s^2 takes2.5versus2modelseconds for caps180/360, actual peaks180/360, unlike prior90degree1/1 tie. Prior25-pass hashes reused without tests repeated. Next experiments/bounded-path-angular-01.design.json awaits a forecast of added time for Xsix90degree rotations versus student down-first routeone90degree rotation before separate finite-angular path composition.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -322,5 +322,8 @@
   "angularRampSpeedCapDraft": "experiments/angular-ramp-speed-cap-01.design.json",
   "angularRampSpeedCapPrediction": "data/learning/angular-ramp-speed-cap-prediction-01.json",
   "angularRampSpeedCapRun": "data/learning/angular-ramp-speed-cap-run-01.json",
-  "angularRampLongAngleDraft": "experiments/angular-ramp-long-angle-cap-01.design.json"
+  "angularRampLongAngleDraft": "experiments/angular-ramp-long-angle-cap-01.design.json",
+  "angularRampLongAnglePrediction": "data/learning/angular-ramp-long-angle-cap-prediction-01.json",
+  "angularRampLongAngleRun": "data/learning/angular-ramp-long-angle-cap-run-01.json",
+  "boundedPathAngularDraft": "experiments/bounded-path-angular-01.design.json"
 }

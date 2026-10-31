@@ -881,6 +881,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - [New run](../data/learning/angular-ramp-speed-cap-run-01.json): single90degrees, acceleration/braking360degrees/s², endpoint rest/zero dwell; caps180and360degrees/s. Both1modelsecond, actual peaks180degrees/s, identical velocity phases. Student forecast supported here; AI explanation that braking prevents a higher peak is not student reasoning or an all-angle no-benefit claim. Instantaneous-rate controls0.5/0.25s remain separate.
 - Two evaluations/2profiles/4phases independently checked by time/peak formulas,64-panel velocity integrals, angle/rest/cap/continuity/schedule. Lower-cap profile matches archived split-rotation90degree component. Source/dependency/test/prior25-pass TAP/historical hashes unchanged; no repeated tests/maps/planner/BFS/hardware. Isolated angular model, no path-wide/controller/collision/calibration/runtime/energy/optimum inference. Next [long360degree cap forecast](../experiments/angular-ramp-long-angle-cap-01.design.json) pending before evaluation.
 
+## 2026-10-31 — Longer rotation admits a higher achieved peak
+
+- Student [prior forecast](../data/learning/angular-ramp-long-angle-cap-prediction-01.json) **줄어들지**, no reason/numeric forecast. AI froze [config](../experiments/angular-ramp-long-angle-cap-01.config.json)/[protocol](../experiments/angular-ramp-long-angle-cap-01.protocol.json) at source7196540d5f337b6a9560334ad8c228f4d005c853 before execution.
+- [New run](../data/learning/angular-ramp-long-angle-cap-run-01.json): continuous360degrees, accel/braking360degrees/s², endpoint rest/zero dwell; caps180/360degrees/s. Times2.5/2modelseconds, actual peaks180/360degrees/s. Lower cap cruises, higher cap reaches triangular threshold; forecast supported here. Same caps/acceleration at previous90degrees gave1/1s; preserve that countercase and avoid all-angle generalization. Explanation is AI review, not student reason.
+- Two configured evaluations/2profiles/5phases checked by independent formulas/shape/peak/64-panel velocity integrals/angle/rest/caps/continuity/schedule. Previous source/dependency/test/25-pass TAP/historical hashes unchanged; tests not repeated. Zero planner/BFS/new maps/hardware, no measured runtime/energy/calibration/controller/collision/optimum. Next [matched full-path angular penalty forecast](../experiments/bounded-path-angular-01.design.json) pending before composition code/evaluation.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
