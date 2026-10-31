@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-31",
+  "userVerbatim": "같지",
+  "task": "experiments/angular-ramp-speed-cap-01.design.json",
+  "resolvedPrediction": "A single90degree rest-to-rest rotation has equal model duration when only speed cap rises180to360degrees/s with acceleration/braking360degrees/s^2 fixed.",
+  "context": "AI offered fixed angle/acceleration and doubled permitted speed; recorded before the higher-cap configured check. Student supplied no reason or numerical time.",
+  "roles": {
+    "student": "Guided prior qualitative equal-time forecast.",
+    "ai": "Controls/limits, implementation/operation, independent audit and explanation."
+  },
+  "scope": "Hypothesis, not measured physical performance, student code/execution or a universal speed-cap claim."
+}

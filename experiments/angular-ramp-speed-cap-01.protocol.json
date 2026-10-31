@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-10-31",
+  "status": "frozen-before-short-rotation-speed-cap-control",
+  "methodAuthor": "AI assistant",
+  "config": "experiments/angular-ramp-speed-cap-01.config.json",
+  "studentPrediction": "data/learning/angular-ramp-speed-cap-prediction-01.json",
+  "baselineRun": "data/learning/angular-ramp-accel-sensitivity-run-01.json",
+  "commandSource": "import {readFile} from 'node:fs/promises';import {stoppedAngularSequenceTime} from './src/angular-speed-profile.mjs';const c=JSON.parse(await readFile('experiments/angular-ramp-speed-cap-01.config.json','utf8'));const results=c.cases.map(({id,maxAngularSpeedDegreesPerSecond})=>({id,maxAngularSpeedDegreesPerSecond,...stoppedAngularSequenceTime([c.angleDegrees],{maxAngularSpeedDegreesPerSecond,angularAccelerationMagnitudeDegreesPerSecondSquared:c.angularAccelerationMagnitudeDegreesPerSecondSquared}),instantaneousRateControlSeconds:c.angleDegrees/maxAngularSpeedDegreesPerSecond}));process.stdout.write(JSON.stringify(results));",
+  "checks": [
+    "Commit prediction/config/protocol before two configured evaluations. Hold angle/rest/acceleration/dwell fixed, change only speed cap.",
+    "Independently reconstruct profile threshold/time, peak angular speed, angle integrals with64panels per phase, limits/rest/continuity/schedule. Compare lower-cap profile with immutable baseline component.",
+    "Compare durations for the student equality forecast, retaining original choice and separating AI explanation.",
+    "Verify source/dependency/test/prior25-pass TAP and historical hashes. No code change: reuse existing test evidence without repeating tests or claiming full-suite execution."
+  ],
+  "scope": "Known isolated angular analytic controls; no path-wide composition, maps/planners/BFS, physical/calibrated/controller/runtime/energy/optimum evidence. Student forecast only, no supplied reason/numeric time."
+}
