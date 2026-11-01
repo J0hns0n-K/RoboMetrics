@@ -911,6 +911,13 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Student **장애물이 있었으니까** [brief explanation](../data/learning/bounded-path-wall-interpretation-01.json) after the shown current-blocked versus historical9second result. Preserve as post-result obstacle attribution, not independent detailed validity reasoning/proof or new data. Specific cell/status/time interpretation remains AI review.
 - Documentation only; no new tests/timing/planner/hardware execution. Existing wall data and baseline remain unchanged. Next [student witness task](../experiments/bounded-path-detour-witness-01.design.json) proposes a new AI-designed4x5point grid with a barrier/extra bottom row, allowing longer paths/up/left. It probes candidate-family coverage; not a one-factor change from the old single-wall map. No student route or configured check yet.
 
+## 2026-11-01 — Student longer-path witness refutes global inference from six-move family failure
+
+- Student [DDDDRRRU witness](../data/learning/bounded-path-detour-witness-01.json), no numeric time/shortest proof. New4x5point map/barrier/extra row is AI-proposed, not student map design or a one-factor change from prior wall map. AI froze [config](../experiments/bounded-path-detour-witness-01.config.json)/[protocol](../experiments/bounded-path-detour-witness-01.protocol.json)/wrapper at source4694255e9c1aa7d51654199ab1bb83ae02111f1e before checks.
+- [New run](../data/learning/bounded-path-detour-witness-run-01.json): student point path valid,8moves. Old20six-move candidates all blocked; status NO_VALID_MEMBER_IN_REGISTERED_FAMILY, not global UNREACHABLE. One existing A* call, unit-point moves/Manhattan/FIFO/budget20, success length8/expanded9; one independent unbudgeted Python BFS minimum8. No Greedy call or comparative algorithm claim.
+- At unchanged v1/a1/angular180/alpha360/initial down/turns-only, student runs4/3/1 give11translation+2rotation=13modelseconds. One student timing evaluation,20candidate point-validity checks. Python arrows/coordinates/set/point checks, BFS and component formulas/schedule/64-panel integrals for5profiles/12phases agree. Model/core/dependency/test/prior156-pass TAP/historical bytes unchanged; tests not repeated.
+- Known designed coverage counterexample, no new independent map cohort/physical body/swept collision/calibration/controller/runtime/energy/global fastest-time result. Student witness design separate from AI code/reference execution/proof. Next [student candidate-coverage interpretation](../experiments/bounded-path-coverage-interpretation-01.design.json) pending.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

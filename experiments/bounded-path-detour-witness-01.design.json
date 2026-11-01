@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-11-01",
-  "status": "awaiting-student-point-path-witness",
+  "status": "student-witness-recorded-and-ai-point-validity-length-timing-checked",
   "proposalAuthor": "AI assistant",
   "motivation": "Move from validity of a fixed six-move candidate family to coverage: allow longer paths and up/left moves in a newly specified point-grid control.",
   "context": "data/learning/bounded-path-wall-interpretation-01.json",
@@ -56,11 +56,15 @@
     "diagonalMoves": false,
     "provenance": "AI proposed barrier and extra bottom row; point(2,3) retains the earlier student-selected wall. The full map is not student-designed."
   },
-  "studentSequenceVerbatim": null,
+  "studentSequenceVerbatim": "`↓ `  `↓ `  `↓ `  `↓ `  `→ `  `→ `  `→ `  ↑",
   "plannedChecks": [
     "Record student route before converting/evaluating it. Check endpoints/bounds/unit moves/blocked cells; retain invalid attempts.",
     "Freeze a new protocol before candidate-family coverage and any longer-path timing check. Do not infer no route globally from failure of the old six-move family.",
     "Use unchanged bounded timing only after point-path validity is established. Any reference shortest-path or completeness check is AI operation; keep hardware/body/continuous collision separate."
   ],
-  "scope": "Pending guided student witness design on a known AI-proposed schematic control. No configured run/new student route yet, no independent map cohort, physical clearance/controller/calibration/runtime/energy evidence or global time optimum."
+  "scope": "Completed guided student eight-arrow witness on known AI map, with AI validity/A*/BFS/analytic timing checks. Student length matches point-grid BFS minimum; no student proof/code/operation, minimum-time or physical result. Not an independent map cohort or one-factor prior-wall variation.",
+  "studentInput": "data/learning/bounded-path-detour-witness-01.json",
+  "runRecord": "data/learning/bounded-path-detour-witness-run-01.json",
+  "sourceCommit": "4694255e9c1aa7d51654199ab1bb83ae02111f1e",
+  "nextTask": "experiments/bounded-path-coverage-interpretation-01.design.json"
 }

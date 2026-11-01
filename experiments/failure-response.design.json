@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student explained 장애물이 있었으니까 after the shown blocked-route result; data/learning/bounded-path-wall-interpretation-01.json preserves this brief guided explanation separately from AI detail. No new execution. Next experiments/bounded-path-detour-witness-01.design.json asks for a student path on a new AI-proposed4x5point grid with a barrier and extra bottom row, allowing more than6moves/up/left. Student route and configured checks pending; do not treat the new map as a one-factor variation or student-designed.",
+  "nextTask": "Student DDDDRRRU witness is valid on new AI4x5point map; data/learning/bounded-path-detour-witness-run-01.json confirms8moves, independent BFS minimum8, A*FIFO under budget20 succeeds length8 with9expanded. Bounded time13modelseconds (translation11/rotation2). Old20six-move family has0valid/20blocked on this map. No unit-test repetition; prior156-pass hashes preserved. Next experiments/bounded-path-coverage-interpretation-01.design.json asks student to distinguish candidate-family exhaustion from full-graph unreachability. No student scope explanation yet.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -336,5 +336,8 @@
   "boundedPathSingleWallRun": "data/learning/bounded-path-single-wall-run-01.json",
   "boundedPathWallInterpretationDraft": "experiments/bounded-path-wall-interpretation-01.design.json",
   "boundedPathWallInterpretation": "data/learning/bounded-path-wall-interpretation-01.json",
-  "boundedPathDetourWitnessDraft": "experiments/bounded-path-detour-witness-01.design.json"
+  "boundedPathDetourWitnessDraft": "experiments/bounded-path-detour-witness-01.design.json",
+  "boundedPathDetourWitness": "data/learning/bounded-path-detour-witness-01.json",
+  "boundedPathDetourRun": "data/learning/bounded-path-detour-witness-run-01.json",
+  "boundedPathCoverageInterpretationDraft": "experiments/bounded-path-coverage-interpretation-01.design.json"
 }

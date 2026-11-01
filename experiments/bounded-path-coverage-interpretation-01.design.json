@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-01",
+  "status": "awaiting-student-guided-post-result-scope-explanation",
+  "proposalAuthor": "AI assistant",
+  "context": "data/learning/bounded-path-detour-witness-run-01.json",
+  "question": "On this new map all20registered six-move candidates are blocked, yet your valid eight-move path reaches G. Is it correct to conclude that G is unreachable merely because the six-move family has no usable path? Explain briefly in your own words.",
+  "factsShown": {
+    "restrictedCandidateCount": 20,
+    "validRestrictedCandidates": 0,
+    "studentWitnessMoves": 8,
+    "studentPointPathValid": true,
+    "unbudgetedBfsMinimumMoves": 8
+  },
+  "studentExplanationVerbatim": null,
+  "scope": "Guided post-result interpretation of candidate-family coverage versus full point-graph reachability; no new experiment or inferred student general proof yet. Not physical robot reachability."
+}
