@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-11-01",
-  "status": "awaiting-student-offered-response-policy-selection",
+  "status": "student-policy-choice-recorded-implemented-and-ai-controls-checked",
   "proposalAuthor": "AI assistant",
   "context": "data/learning/bounded-path-coverage-interpretation-01.json",
   "question": "Choose what the program should try when every registered six-move candidate is blocked:1extend the registered family to exactly8moves using cardinal steps, then check/rank valid members;2run existing unit-cost A* on the finite point map to find a valid route. Both are proposed responses, not implemented policies yet.",
@@ -17,8 +17,8 @@
       "effect": "Use graph search after candidate-family exhaustion; retain success/budget-exceeded/graph-exhausted outcomes. A* here minimizes move count, not bounded model time."
     }
   ],
-  "studentChoiceVerbatim": null,
-  "selectedPolicy": null,
+  "studentChoiceVerbatim": "2",
+  "selectedPolicy": "astar-after-family-exhaustion",
   "controls": {
     "referenceMap": "experiments/bounded-path-detour-witness-01.config.json",
     "initialFamilySource": "data/learning/bounded-path-monotone-run-01.json",
@@ -31,5 +31,9 @@
     }
   },
   "plan": "After student choice, freeze selected response/config/protocol before implementation and new controls. Keep candidate checks separate from search expansions and elapsed time; preserve earlier reference-only runs. No speed/work improvement claim from choosing a response alone.",
-  "scope": "Pending guided student response-policy selection, not student code, implemented fallback, physical controller, minimum-model-time planner or general optimality evidence."
+  "scope": "Implemented separate response API under student offered choice; AI code/tests/control/reference operation/review. No student reason/performance forecast/code/execution inferred, minimum-model-time planner or physical result claimed.",
+  "choiceRecord": "data/learning/bounded-path-family-response-choice-01.json",
+  "runRecord": "data/learning/candidate-astar-fallback-run-01.json",
+  "sourceCommit": "c353a91c27c266f76911915b3d704a6381828b11",
+  "nextTask": "experiments/candidate-astar-direct-comparison-01.design.json"
 }

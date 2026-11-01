@@ -1,0 +1,1006 @@
+TAP version 13
+# Subtest: angular units distinguish short, threshold, cruising and stationary rotations
+ok 1 - angular units distinguish short, threshold, cruising and stationary rotations
+  ---
+  duration_ms: 2.6764
+  type: 'test'
+  ...
+# Subtest: angular velocity integrals reconstruct angle with bounded acceleration and rest endpoints
+ok 2 - angular velocity integrals reconstruct angle with bounded acceleration and rest endpoints
+  ---
+  duration_ms: 0.5595
+  type: 'test'
+  ...
+# Subtest: same total rotation with an intermediate full stop costs more without any dwell
+ok 3 - same total rotation with an intermediate full stop costs more without any dwell
+  ---
+  duration_ms: 0.4143
+  type: 'test'
+  ...
+# Subtest: instantaneous constant-rate control ties and is separate from the bounded model
+ok 4 - instantaneous constant-rate control ties and is separate from the bounded model
+  ---
+  duration_ms: 0.1593
+  type: 'test'
+  ...
+# Subtest: sequence schedule is serial, preserves input and sums requested angles and profile times
+ok 5 - sequence schedule is serial, preserves input and sums requested angles and profile times
+  ---
+  duration_ms: 0.216
+  type: 'test'
+  ...
+# Subtest: angular-unit rescaling preserves time when angle, rate and acceleration scale together
+ok 6 - angular-unit rescaling preserves time when angle, rate and acceleration scale together
+  ---
+  duration_ms: 0.1884
+  type: 'test'
+  ...
+# Subtest: invalid angles, limits and unrepresentable profiles are rejected
+ok 7 - invalid angles, limits and unrepresentable profiles are rejected
+  ---
+  duration_ms: 0.7084
+  type: 'test'
+  ...
+# Subtest: all 1024 obstacle configurations of a 4x3 grid agree with independent BFS
+ok 8 - all 1024 obstacle configurations of a 4x3 grid agree with independent BFS
+  ---
+  duration_ms: 17.3794
+  type: 'test'
+  ...
+# Subtest: exact expansion budget includes examining the goal
+ok 9 - exact expansion budget includes examining the goal
+  ---
+  duration_ms: 1.2243
+  type: 'test'
+  ...
+# Subtest: fixed-map runner distinguishes path length from computation budget
+ok 10 - fixed-map runner distinguishes path length from computation budget
+  ---
+  duration_ms: 0.6528
+  type: 'test'
+  ...
+# Subtest: scenario parser rejects unfinished attribution, malformed maps, and invalid budgets
+ok 11 - scenario parser rejects unfinished attribution, malformed maps, and invalid budgets
+  ---
+  duration_ms: 0.3378
+  type: 'test'
+  ...
+# Subtest: unreachable scenarios preserve failure reason and null length ratios
+ok 12 - unreachable scenarios preserve failure reason and null length ratios
+  ---
+  duration_ms: 0.1787
+  type: 'test'
+  ...
+# Subtest: budget fallback remains usable without claiming shortestness or a completed optimization
+ok 13 - budget fallback remains usable without claiming shortestness or a completed optimization
+  ---
+  duration_ms: 3.6953
+  type: 'test'
+  ...
+# Subtest: a bound proof and a budget-limited already-shortest fallback are not counted as successful searches
+ok 14 - a bound proof and a budget-limited already-shortest fallback are not counted as successful searches
+  ---
+  duration_ms: 1.2806
+  type: 'test'
+  ...
+# Subtest: matched paths gain different bounded-angular penalties without changing translation
+ok 15 - matched paths gain different bounded-angular penalties without changing translation
+  ---
+  duration_ms: 2.5248
+  type: 'test'
+  ...
+# Subtest: initial alignment gets an angular profile independently of internal turns
+ok 16 - initial alignment gets an angular profile independently of internal turns
+  ---
+  duration_ms: 0.3183
+  type: 'test'
+  ...
+# Subtest: a reversal uses a minimum180degree rest-to-rest profile without final alignment
+ok 17 - a reversal uses a minimum180degree rest-to-rest profile without final alignment
+  ---
+  duration_ms: 0.2374
+  type: 'test'
+  ...
+# Subtest: collinear sampling invariance survives angular composition but explicit stops remain distinct
+ok 18 - collinear sampling invariance survives angular composition but explicit stops remain distinct
+  ---
+  duration_ms: 0.387
+  type: 'test'
+  ...
+# Subtest: serial schedule and component profiles preserve rest, geometry and duration sums
+ok 19 - serial schedule and component profiles preserve rest, geometry and duration sums
+  ---
+  duration_ms: 1.795
+  type: 'test'
+  ...
+# Subtest: stationary input adds no target-heading operation and keeps zero totals
+ok 20 - stationary input adds no target-heading operation and keeps zero totals
+  ---
+  duration_ms: 0.1736
+  type: 'test'
+  ...
+# Subtest: invalid angular limits and inherited invalid path/options fail explicitly
+ok 21 - invalid angular limits and inherited invalid path/options fail explicitly
+  ---
+  duration_ms: 0.6185
+  type: 'test'
+  ...
+# Subtest: new composition leaves input options/path and legacy reference output unchanged
+ok 22 - new composition leaves input options/path and legacy reference output unchanged
+  ---
+  duration_ms: 0.3663
+  type: 'test'
+  ...
+# Subtest: a valid family selects bounded-time minimum and skips A* even with a tiny search budget
+ok 23 - a valid family selects bounded-time minimum and skips A* even with a tiny search budget
+  ---
+  duration_ms: 4.7025
+  type: 'test'
+  ...
+# Subtest: family exhaustion invokes A* and recovers the longer point-path witness
+ok 24 - family exhaustion invokes A* and recovers the longer point-path witness
+  ---
+  duration_ms: 1.2426
+  type: 'test'
+  ...
+# Subtest: reachable grid with unfinished A* frontier returns budget exceeded and no bogus time
+ok 25 - reachable grid with unfinished A* frontier returns budget exceeded and no bogus time
+  ---
+  duration_ms: 0.2072
+  type: 'test'
+  ...
+# Subtest: exhausting the entire reachable graph is unreachable even at the exact numeric budget
+ok 26 - exhausting the entire reachable graph is unreachable even at the exact numeric budget
+  ---
+  duration_ms: 0.3105
+  type: 'test'
+  ...
+# Subtest: malformed, fractional, blocked and non-unit candidates cannot enter the time ranking
+ok 27 - malformed, fractional, blocked and non-unit candidates cannot enter the time ranking
+  ---
+  duration_ms: 1.2669
+  type: 'test'
+  ...
+# Subtest: an empty registered family still searches the graph and reports a shortest move path
+ok 28 - an empty registered family still searches the graph and reports a shortest move path
+  ---
+  duration_ms: 0.3307
+  type: 'test'
+  ...
+# Subtest: stable equal-time selection retains the first registered candidate
+ok 29 - stable equal-time selection retains the first registered candidate
+  ---
+  duration_ms: 0.269
+  type: 'test'
+  ...
+# Subtest: policy leaves inputs intact and returns a selected path detached from candidate coordinates
+ok 30 - policy leaves inputs intact and returns a selected path detached from candidate coordinates
+  ---
+  duration_ms: 0.5445
+  type: 'test'
+  ...
+# Subtest: invalid budgets, motion options, IDs and endpoint maps fail before claiming a search result
+ok 31 - invalid budgets, motion options, IDs and endpoint maps fail before claiming a search result
+  ---
+  duration_ms: 0.758
+  type: 'test'
+  ...
+# Subtest: zero-move success at start equals goal is not mistaken for an absent route
+ok 32 - zero-move success at start equals goal is not mistaken for an absent route
+  ---
+  duration_ms: 3.708
+  type: 'test'
+  ...
+# Subtest: open 3x3 grid: shortest path is Manhattan distance 4
+ok 33 - open 3x3 grid: shortest path is Manhattan distance 4
+  ---
+  duration_ms: 2.5734
+  type: 'test'
+  ...
+# Subtest: blocked goal is unreachable and explicit
+ok 34 - blocked goal is unreachable and explicit
+  ---
+  duration_ms: 0.1646
+  type: 'test'
+  ...
+# Subtest: budget limit is distinguishable from unreachable
+ok 35 - budget limit is distinguishable from unreachable
+  ---
+  duration_ms: 0.2346
+  type: 'test'
+  ...
+# Subtest: deterministic map and deterministic search
+ok 36 - deterministic map and deterministic search
+  ---
+  duration_ms: 2.2245
+  type: 'test'
+  ...
+# Subtest: A* path is optimal on sampled solvable static grids
+ok 37 - A* path is optimal on sampled solvable static grids
+  ---
+  duration_ms: 10.1756
+  type: 'test'
+  ...
+# Subtest: paired benchmark reproducible and metrics within bounds
+ok 38 - paired benchmark reproducible and metrics within bounds
+  ---
+  duration_ms: 5.3099
+  type: 'test'
+  ...
+# Subtest: selected seed-260 case gives valid Greedy path longer than a proven shortest path
+ok 39 - selected seed-260 case gives valid Greedy path longer than a proven shortest path
+  ---
+  duration_ms: 3.3237
+  type: 'test'
+  ...
+# Subtest: same counterexample separates budgeted success from path quality
+ok 40 - same counterexample separates budgeted success from path quality
+  ---
+  duration_ms: 0.2725
+  type: 'test'
+  ...
+# Subtest: separate text-grid BFS preserves hand-known reachable, unreachable and zero-distance cases
+ok 41 - separate text-grid BFS preserves hand-known reachable, unreachable and zero-distance cases
+  ---
+  duration_ms: 1.6941
+  type: 'test'
+  ...
+# Subtest: separate BFS uses supplied current position on a rectangular grid in both directions
+ok 42 - separate BFS uses supplied current position on a rectangular grid in both directions
+  ---
+  duration_ms: 0.1281
+  type: 'test'
+  ...
+# Subtest: benchmark exports the selected A* tie rule and applies it without changing paired maps or Greedy
+ok 43 - benchmark exports the selected A* tie rule and applies it without changing paired maps or Greedy
+  ---
+  duration_ms: 8.0394
+  type: 'test'
+  ...
+# Subtest: zero radius and zero margin reproduce point-map occupancy and route result
+ok 44 - zero radius and zero margin reproduce point-map occupancy and route result
+  ---
+  duration_ms: 3.6206
+  type: 'test'
+  ...
+# Subtest: one-cell opening passes a diameter0.8 disk and blocks diameter1.2 with valid endpoints
+ok 45 - one-cell opening passes a diameter0.8 disk and blocks diameter1.2 with valid endpoints
+  ---
+  duration_ms: 1.3391
+  type: 'test'
+  ...
+# Subtest: tangency is contact: just below half-width passes, exactly half-width does not
+ok 46 - tangency is contact: just below half-width passes, exactly half-width does not
+  ---
+  duration_ms: 0.6865
+  type: 'test'
+  ...
+# Subtest: Euclidean square-corner clearance differs from square-neighborhood dilation
+ok 47 - Euclidean square-corner clearance differs from square-neighborhood dilation
+  ---
+  duration_ms: 0.153
+  type: 'test'
+  ...
+# Subtest: world boundary and endpoint clearance are reported before search
+ok 48 - world boundary and endpoint clearance are reported before search
+  ---
+  duration_ms: 0.1216
+  type: 'test'
+  ...
+# Subtest: original-geometry swept-edge validation rejects oversized, diagonal and malformed paths
+ok 49 - original-geometry swept-edge validation rejects oversized, diagonal and malformed paths
+  ---
+  duration_ms: 0.1934
+  type: 'test'
+  ...
+# Subtest: wider opening restores the larger disk route; margin and invalid parameters are explicit
+ok 50 - wider opening restores the larger disk route; margin and invalid parameters are explicit
+  ---
+  duration_ms: 0.6208
+  type: 'test'
+  ...
+# Subtest: paired evaluator applies both distinct rules on the known center-obstacle control
+ok 51 - paired evaluator applies both distinct rules on the known center-obstacle control
+  ---
+  duration_ms: 3.5523
+  type: 'test'
+  ...
+# Subtest: paired evaluator preserves exact goal-in-budget boundaries separately for each rule
+ok 52 - paired evaluator preserves exact goal-in-budget boundaries separately for each rule
+  ---
+  duration_ms: 0.6049
+  type: 'test'
+  ...
+# Subtest: paired evaluator retains unreachable outcomes rather than treating them as budget failures
+ok 53 - paired evaluator retains unreachable outcomes rather than treating them as budget failures
+  ---
+  duration_ms: 0.2611
+  type: 'test'
+  ...
+# Subtest: rest-to-rest profiles distinguish triangular, cruise and stationary cases
+ok 54 - rest-to-rest profiles distinguish triangular, cruise and stationary cases
+  ---
+  duration_ms: 1.8946
+  type: 'test'
+  ...
+# Subtest: threshold profiles are continuous and respect speed and acceleration caps
+ok 55 - threshold profiles are continuous and respect speed and acceleration caps
+  ---
+  duration_ms: 0.2841
+  type: 'test'
+  ...
+# Subtest: phase integrals, continuity and endpoint rest reconstruct requested distance
+ok 56 - phase integrals, continuity and endpoint rest reconstruct requested distance
+  ---
+  duration_ms: 0.252
+  type: 'test'
+  ...
+# Subtest: straight continuation avoids two unnecessary restarts in the offered three-unit control
+ok 57 - straight continuation avoids two unnecessary restarts in the offered three-unit control
+  ---
+  duration_ms: 0.6059
+  type: 'test'
+  ...
+# Subtest: turns-only is invariant to collinear half-step sampling; explicit waypoint stops are not
+ok 58 - turns-only is invariant to collinear half-step sampling; explicit waypoint stops are not
+  ---
+  duration_ms: 0.4331
+  type: 'test'
+  ...
+# Subtest: an all-turn path is a counterexample to strict improvement from merging
+ok 59 - an all-turn path is a counterexample to strict improvement from merging
+  ---
+  duration_ms: 0.2282
+  type: 'test'
+  ...
+# Subtest: the offered longer straight runs gain five model seconds under identical limits
+ok 60 - the offered longer straight runs gain five model seconds under identical limits
+  ---
+  duration_ms: 1.0998
+  type: 'test'
+  ...
+# Subtest: constant-rate legacy timing is preserved separately and is a lower control for this schedule
+ok 61 - constant-rate legacy timing is preserved separately and is a lower control for this schedule
+  ---
+  duration_ms: 0.3734
+  type: 'test'
+  ...
+# Subtest: a reversal is not merged into a straight run and initial alignment remains explicit
+ok 62 - a reversal is not merged into a straight run and initial alignment remains explicit
+  ---
+  duration_ms: 0.1611
+  type: 'test'
+  ...
+# Subtest: stationary paths add no operation or target-heading alignment
+ok 63 - stationary paths add no operation or target-heading alignment
+  ---
+  duration_ms: 0.3167
+  type: 'test'
+  ...
+# Subtest: invalid paths, limits, policies and unrepresentable profile transitions are rejected
+ok 64 - invalid paths, limits, policies and unrepresentable profile transitions are rejected
+  ---
+  duration_ms: 0.7197
+  type: 'test'
+  ...
+# Subtest: analytic operation schedule is serial and both duration components add to the total
+ok 65 - analytic operation schedule is serial and both duration components add to the total
+  ---
+  duration_ms: 0.1789
+  type: 'test'
+  ...
+# Subtest: the taught one- and two-second profiles share mean speed but differ in distance and acceleration
+ok 66 - the taught one- and two-second profiles share mean speed but differ in distance and acceleration
+  ---
+  duration_ms: 1.807
+  type: 'test'
+  ...
+# Subtest: instantaneous speed, full-interval mean and partial displacement are separate
+ok 67 - instantaneous speed, full-interval mean and partial displacement are separate
+  ---
+  duration_ms: 0.9324
+  type: 'test'
+  ...
+# Subtest: constant, stationary and decelerating nonnegative profiles remain supported
+ok 68 - constant, stationary and decelerating nonnegative profiles remain supported
+  ---
+  duration_ms: 0.3067
+  type: 'test'
+  ...
+# Subtest: sampled velocity integrals and independent constant-acceleration displacement agree
+ok 69 - sampled velocity integrals and independent constant-acceleration displacement agree
+  ---
+  duration_ms: 0.3173
+  type: 'test'
+  ...
+# Subtest: invalid endpoint speeds, durations and out-of-range sample times are rejected
+ok 70 - invalid endpoint speeds, durations and out-of-range sample times are rejected
+  ---
+  duration_ms: 0.5248
+  type: 'test'
+  ...
+# Subtest: finite large means avoid addition overflow, but unrepresentable state is rejected
+ok 71 - finite large means avoid addition overflow, but unrepresentable state is rejected
+  ---
+  duration_ms: 0.1404
+  type: 'test'
+  ...
+# Subtest: default skips a valid route at the bound, while disabled guard still spends its budget
+ok 72 - default skips a valid route at the bound, while disabled guard still spends its budget
+  ---
+  duration_ms: 2.5185
+  type: 'test'
+  ...
+# Subtest: a blocked old route with bound length is rejected before considering the shortcut
+ok 73 - a blocked old route with bound length is rejected before considering the shortcut
+  ---
+  duration_ms: 0.5069
+  type: 'test'
+  ...
+# Subtest: bound uses the current suffix, ignoring a blocked already-traveled prefix
+ok 74 - bound uses the current suffix, ignoring a blocked already-traveled prefix
+  ---
+  duration_ms: 0.2733
+  type: 'test'
+  ...
+# Subtest: a valid optimal detour above the geometric bound still triggers reoptimization
+ok 75 - a valid optimal detour above the geometric bound still triggers reoptimization
+  ---
+  duration_ms: 0.5374
+  type: 'test'
+  ...
+# Subtest: all 1024 small layouts and both tie rules preserve guarded/unguarded route outcomes
+ok 76 - all 1024 small layouts and both tie rules preserve guarded/unguarded route outcomes
+  ---
+  duration_ms: 26.5335
+  type: 'test'
+  ...
+# Subtest: matrix preserves matched maps, original benchmark rows and deterministic sampling audit
+ok 77 - matrix preserves matched maps, original benchmark rows and deterministic sampling audit
+  ---
+  duration_ms: 13.9833
+  type: 'test'
+  ...
+# Subtest: common-success lengths avoid comparing different success subsets on known counterexample
+ok 78 - common-success lengths avoid comparing different success subsets on known counterexample
+  ---
+  duration_ms: 0.3622
+  type: 'test'
+  ...
+# Subtest: sampling audit detects a substituted map seed rather than accepting an unpaired cohort
+ok 79 - sampling audit detects a substituted map seed rather than accepting an unpaired cohort
+  ---
+  duration_ms: 1.7049
+  type: 'test'
+  ...
+# Subtest: the offered X/Y paths give twelve and ten nominal seconds under the declared rates
+ok 80 - the offered X/Y paths give twelve and ten nominal seconds under the declared rates
+  ---
+  duration_ms: 2.4066
+  type: 'test'
+  ...
+# Subtest: translation and rotation add sequentially, including initial alignment
+ok 81 - translation and rotation add sequentially, including initial alignment
+  ---
+  duration_ms: 0.2951
+  type: 'test'
+  ...
+# Subtest: subdividing straight movement preserves world distance and nominal duration
+ok 82 - subdividing straight movement preserves world distance and nominal duration
+  ---
+  duration_ms: 0.2588
+  type: 'test'
+  ...
+# Subtest: changing one rate affects only its duration component
+ok 83 - changing one rate affects only its duration component
+  ---
+  duration_ms: 0.1678
+  type: 'test'
+  ...
+# Subtest: a singleton is stationary; missing and nonpositive or nonfinite speeds are rejected
+ok 84 - a singleton is stationary; missing and nonpositive or nonfinite speeds are rejected
+  ---
+  duration_ms: 0.5528
+  type: 'test'
+  ...
+# Subtest: invalid paths or headings and overflowing distances or duration are rejected
+ok 85 - invalid paths or headings and overflowing distances or duration are rejected
+  ---
+  duration_ms: 1.3652
+  type: 'test'
+  ...
+# Subtest: same six-step displacement can have one or five direction changes
+ok 86 - same six-step displacement can have one or five direction changes
+  ---
+  duration_ms: 0.7171
+  type: 'test'
+  ...
+# Subtest: a stationary singleton or straight path has no heading change; initial heading is excluded
+ok 87 - a stationary singleton or straight path has no heading change; initial heading is excluded
+  ---
+  duration_ms: 0.1045
+  type: 'test'
+  ...
+# Subtest: subdividing a straight segment into half-steps does not add changes
+ok 88 - subdividing a straight segment into half-steps does not add changes
+  ---
+  duration_ms: 0.9519
+  type: 'test'
+  ...
+# Subtest: a reversal is one change event rather than a ninety-degree rotation count
+ok 89 - a reversal is one change event rather than a ninety-degree rotation count
+  ---
+  duration_ms: 0.1798
+  type: 'test'
+  ...
+# Subtest: missing, empty, malformed, diagonal, repeated or overflowing segments are rejected
+ok 90 - missing, empty, malformed, diagonal, repeated or overflowing segments are rejected
+  ---
+  duration_ms: 1.4154
+  type: 'test'
+  ...
+# Subtest: the offered right-to-down and right-to-left cases need ninety and one-eighty degrees
+ok 91 - the offered right-to-down and right-to-left cases need ninety and one-eighty degrees
+  ---
+  duration_ms: 1.3193
+  type: 'test'
+  ...
+# Subtest: all cardinal pairs use unsigned shortest angles, including wraparound
+ok 92 - all cardinal pairs use unsigned shortest angles, including wraparound
+  ---
+  duration_ms: 0.1722
+  type: 'test'
+  ...
+# Subtest: initial alignment is separate from internal path turns and stationary paths add none
+ok 93 - initial alignment is separate from internal path turns and stationary paths add none
+  ---
+  duration_ms: 0.768
+  type: 'test'
+  ...
+# Subtest: a reversal is one existing change event but requires one-eighty in the forward-heading model
+ok 94 - a reversal is one existing change event but requires one-eighty in the forward-heading model
+  ---
+  duration_ms: 0.2457
+  type: 'test'
+  ...
+# Subtest: straight-segment subdivision preserves angle totals, which are not net heading differences
+ok 95 - straight-segment subdivision preserves angle totals, which are not net heading differences
+  ---
+  duration_ms: 0.1662
+  type: 'test'
+  ...
+# Subtest: missing or unsupported headings and invalid paths are rejected
+ok 96 - missing or unsupported headings and invalid paths are rejected
+  ---
+  duration_ms: 0.5266
+  type: 'test'
+  ...
+# Subtest: row-major LCG skips only point endpoints and retains a disconnected seed1 fixture
+ok 97 - row-major LCG skips only point endpoints and retains a disconnected seed1 fixture
+  ---
+  duration_ms: 1.6209
+  type: 'test'
+  ...
+# Subtest: reference skips BFS on blocked body endpoints instead of allowing a blocked start to escape
+ok 98 - reference skips BFS on blocked body endpoints instead of allowing a blocked start to escape
+  ---
+  duration_ms: 1.2453
+  type: 'test'
+  ...
+# Subtest: reference labels a coarse-disconnected/fine-reachable passage and audits both masks
+ok 99 - reference labels a coarse-disconnected/fine-reachable passage and audits both masks
+  ---
+  duration_ms: 1.3261
+  type: 'test'
+  ...
+# Subtest: summary keeps invalid/failure rows and separates individual from joint-success length means
+ok 100 - summary keeps invalid/failure rows and separates individual from joint-success length means
+  ---
+  duration_ms: 3.5635
+  type: 'test'
+  ...
+# Subtest: shorter valid route beats lower work, then equal length uses work, then exact tie
+ok 101 - shorter valid route beats lower work, then equal length uses work, then exact tie
+  ---
+  duration_ms: 1.6537
+  type: 'test'
+  ...
+# Subtest: zero-work endpoint failures cannot be ranked as efficiency winners
+ok 102 - zero-work endpoint failures cannot be ranked as efficiency winners
+  ---
+  duration_ms: 0.1842
+  type: 'test'
+  ...
+# Subtest: no joint successes means unavailable matched totals, not zero-cost tied winners
+ok 103 - no joint successes means unavailable matched totals, not zero-cost tied winners
+  ---
+  duration_ms: 1.9341
+  type: 'test'
+  ...
+# Subtest: all-map work and single-policy successes do not replace matched equal-length denominator
+ok 104 - all-map work and single-policy successes do not replace matched equal-length denominator
+  ---
+  duration_ms: 3.3536
+  type: 'test'
+  ...
+# Subtest: coarse success returns immediately; direct fine remains an explicit comparator
+ok 105 - coarse success returns immediately; direct fine remains an explicit comparator
+  ---
+  duration_ms: 2.1251
+  type: 'test'
+  ...
+# Subtest: coarse graph exhaustion triggers one fresh fine search and retains both raw outcomes
+ok 106 - coarse graph exhaustion triggers one fresh fine search and retains both raw outcomes
+  ---
+  duration_ms: 2.8015
+  type: 'test'
+  ...
+# Subtest: coarse budget exhaustion stops without misclassifying it as graph disconnection
+ok 107 - coarse budget exhaustion stops without misclassifying it as graph disconnection
+  ---
+  duration_ms: 0.2041
+  type: 'test'
+  ...
+# Subtest: invalid original endpoint clearance stops before any planner or retry
+ok 108 - invalid original endpoint clearance stops before any planner or retry
+  ---
+  duration_ms: 0.1373
+  type: 'test'
+  ...
+# Subtest: fine exhaustion preserves both failures and ends after at most two stages
+ok 109 - fine exhaustion preserves both failures and ends after at most two stages
+  ---
+  duration_ms: 1.1043
+  type: 'test'
+  ...
+# Subtest: fine budget failure is final and includes the failed coarse work
+ok 110 - fine budget failure is final and includes the failed coarse work
+  ---
+  duration_ms: 0.2951
+  type: 'test'
+  ...
+# Subtest: policy rejects invalid budgets/mode and preserves map and detached public path
+ok 111 - policy rejects invalid budgets/mode and preserves map and detached public path
+  ---
+  duration_ms: 0.4926
+  type: 'test'
+  ...
+# Subtest: a coarse route at axis lower bound skips fine search with explicit evidence
+ok 112 - a coarse route at axis lower bound skips fine search with explicit evidence
+  ---
+  duration_ms: 2.0436
+  type: 'test'
+  ...
+# Subtest: known longer coarse paths receive one fine check and preserve acquisition outputs
+ok 113 - known longer coarse paths receive one fine check and preserve acquisition outputs
+  ---
+  duration_ms: 3.8435
+  type: 'test'
+  ...
+# Subtest: optimization timeout retains usable coarse path while last raw search stays failed
+ok 114 - optimization timeout retains usable coarse path while last raw search stays failed
+  ---
+  duration_ms: 1.5273
+  type: 'test'
+  ...
+# Subtest: fine acquisition result is already graph-optimal and never gets a third search
+ok 115 - fine acquisition result is already graph-optimal and never gets a third search
+  ---
+  duration_ms: 0.567
+  type: 'test'
+  ...
+# Subtest: initial failures retain distinct statuses and never manufacture a valid fallback
+ok 116 - initial failures retain distinct statuses and never manufacture a valid fallback
+  ---
+  duration_ms: 0.7467
+  type: 'test'
+  ...
+# Subtest: completed extra search without shortening is not counted as an improvement
+ok 117 - completed extra search without shortening is not counted as an improvement
+  ---
+  duration_ms: 0.671
+  type: 'test'
+  ...
+# Subtest: quality API preserves input and rejects invalid parameters through acquisition validation
+ok 118 - quality API preserves input and rejects invalid parameters through acquisition validation
+  ---
+  duration_ms: 0.97
+  type: 'test'
+  ...
+# Subtest: resuming retains the unexamined candidate and previous returned results
+ok 119 - resuming retains the unexamined candidate and previous returned results
+  ---
+  duration_ms: 3.435
+  type: 'test'
+  ...
+# Subtest: all 1024 small layouts match original A* at each of 12 budgets for both tie rules
+ok 120 - all 1024 small layouts match original A* at each of 12 budgets for both tie rules
+  ---
+  duration_ms: 57.9051
+  type: 'test'
+  ...
+# Subtest: exact exhaustion reports unreachable, then performs no further work
+ok 121 - exact exhaustion reports unreachable, then performs no further work
+  ---
+  duration_ms: 0.4428
+  type: 'test'
+  ...
+# Subtest: terminal success is stable and returned paths cannot mutate session state
+ok 122 - terminal success is stable and returned paths cannot mutate session state
+  ---
+  duration_ms: 0.2714
+  type: 'test'
+  ...
+# Subtest: cumulative budgets are finite positive safe integers, nondecreasing and idempotent
+ok 123 - cumulative budgets are finite positive safe integers, nondecreasing and idempotent
+  ---
+  duration_ms: 0.5825
+  type: 'test'
+  ...
+# Subtest: session owns a fixed map snapshot despite later caller edits
+ok 124 - session owns a fixed map snapshot despite later caller edits
+  ---
+  duration_ms: 0.2092
+  type: 'test'
+  ...
+# Subtest: response policy stops after initial success without spending the retry allowance
+ok 125 - response policy stops after initial success without spending the retry allowance
+  ---
+  duration_ms: 2.6511
+  type: 'test'
+  ...
+# Subtest: response policy does not retry an exhausted unreachable search
+ok 126 - response policy does not retry an exhausted unreachable search
+  ---
+  duration_ms: 0.2749
+  type: 'test'
+  ...
+# Subtest: retry success retains the original failure and charges both attempts
+ok 127 - retry success retains the original failure and charges both attempts
+  ---
+  duration_ms: 0.8878
+  type: 'test'
+  ...
+# Subtest: a second budget failure stops after one retry rather than silently escalating
+ok 128 - a second budget failure stops after one retry rather than silently escalating
+  ---
+  duration_ms: 0.214
+  type: 'test'
+  ...
+# Subtest: invalid or unbounded budget configurations are rejected before searching
+ok 129 - invalid or unbounded budget configurations are rejected before searching
+  ---
+  duration_ms: 0.5093
+  type: 'test'
+  ...
+# Subtest: the selected A* tie rule applies on the initial search and the retry
+ok 130 - the selected A* tie rule applies on the initial search and the retry
+  ---
+  duration_ms: 0.2441
+  type: 'test'
+  ...
+# Subtest: default continuation retains the first failure and charges only newly resumed expansions
+ok 131 - default continuation retains the first failure and charges only newly resumed expansions
+  ---
+  duration_ms: 3.0239
+  type: 'test'
+  ...
+# Subtest: restart comparison charges repeated work while preserving identical final result
+ok 132 - restart comparison charges repeated work while preserving identical final result
+  ---
+  duration_ms: 0.5146
+  type: 'test'
+  ...
+# Subtest: initial success and bound proof do not spend an unused continuation allowance
+ok 133 - initial success and bound proof do not spend an unused continuation allowance
+  ---
+  duration_ms: 0.2436
+  type: 'test'
+  ...
+# Subtest: a second budget failure stops after one continuation and preserves the valid fallback
+ok 134 - a second budget failure stops after one continuation and preserves the valid fallback
+  ---
+  duration_ms: 1.1406
+  type: 'test'
+  ...
+# Subtest: invalid prior paths do not use cache-only continuation and explicit retain remains available
+ok 135 - invalid prior paths do not use cache-only continuation and explicit retain remains available
+  ---
+  duration_ms: 1.1837
+  type: 'test'
+  ...
+# Subtest: both tie rules continue from the current suffix and all returned records are detached
+ok 136 - both tie rules continue from the current suffix and all returned records are detached
+  ---
+  duration_ms: 0.6923
+  type: 'test'
+  ...
+# Subtest: seeded row-major removal changes exactly one wall and preserves its parent
+ok 137 - seeded row-major removal changes exactly one wall and preserves its parent
+  ---
+  duration_ms: 1.773
+  type: 'test'
+  ...
+# Subtest: candidate audit distinguishes disconnected, no-wall and accepted maps
+ok 138 - candidate audit distinguishes disconnected, no-wall and accepted maps
+  ---
+  duration_ms: 0.5477
+  type: 'test'
+  ...
+# Subtest: paired summary separates potential shortening, realized shortening and budget fallback
+ok 139 - paired summary separates potential shortening, realized shortening and budget fallback
+  ---
+  duration_ms: 2.1795
+  type: 'test'
+  ...
+# Subtest: a blocked already-traveled prefix does not invalidate a valid remaining route
+ok 140 - a blocked already-traveled prefix does not invalidate a valid remaining route
+  ---
+  duration_ms: 2.2719
+  type: 'test'
+  ...
+# Subtest: blocked remaining route triggers fresh planning from current position and a valid detour
+ok 141 - blocked remaining route triggers fresh planning from current position and a valid detour
+  ---
+  duration_ms: 0.6059
+  type: 'test'
+  ...
+# Subtest: each known student wall choice exhausts its reachable region and preserves unreachable semantics
+ok 142 - each known student wall choice exhausts its reachable region and preserves unreachable semantics
+  ---
+  duration_ms: 0.2934
+  type: 'test'
+  ...
+# Subtest: budget exhaustion stays distinct from no route even when a known alternative exists
+ok 143 - budget exhaustion stays distinct from no route even when a known alternative exists
+  ---
+  duration_ms: 0.1616
+  type: 'test'
+  ...
+# Subtest: invalid budgets, tie rules, current indices and waypoints are rejected
+ok 144 - invalid budgets, tie rules, current indices and waypoints are rejected
+  ---
+  duration_ms: 0.472
+  type: 'test'
+  ...
+# Subtest: keeping a valid route does not promise shortestness; already at goal needs no search
+ok 145 - keeping a valid route does not promise shortestness; already at goal needs no search
+  ---
+  duration_ms: 0.1506
+  type: 'test'
+  ...
+# Subtest: student-selected default reoptimizes a valid four-move route to a two-move route
+ok 146 - student-selected default reoptimizes a valid four-move route to a two-move route
+  ---
+  duration_ms: 0.5454
+  type: 'test'
+  ...
+# Subtest: reoptimization can confirm an already shortest route while explicit retention skips search
+ok 147 - reoptimization can confirm an already shortest route while explicit retention skips search
+  ---
+  duration_ms: 0.3279
+  type: 'test'
+  ...
+# Subtest: budget-limited optimization preserves a verified route and the separate failed search
+ok 148 - budget-limited optimization preserves a verified route and the separate failed search
+  ---
+  duration_ms: 0.2878
+  type: 'test'
+  ...
+# Subtest: reoptimization uses current suffix under both tie rules even if a past cell is blocked
+ok 149 - reoptimization uses current suffix under both tie rules even if a past cell is blocked
+  ---
+  duration_ms: 1.2061
+  type: 'test'
+  ...
+# Subtest: spacing1 preserves the original occupancy and every core result field
+ok 150 - spacing1 preserves the original occupancy and every core result field
+  ---
+  duration_ms: 3.4451
+  type: 'test'
+  ...
+# Subtest: half-step samples include the midpoint without shrinking original geometry
+ok 151 - half-step samples include the midpoint without shrinking original geometry
+  ---
+  duration_ms: 1.7943
+  type: 'test'
+  ...
+# Subtest: fine graph retains distinct budget, exhausted and invalid-endpoint statuses
+ok 152 - fine graph retains distinct budget, exhausted and invalid-endpoint statuses
+  ---
+  duration_ms: 1.6189
+  type: 'test'
+  ...
+# Subtest: small-layout parity: BFS distance and swept original geometry on both nested lattices
+ok 153 - small-layout parity: BFS distance and swept original geometry on both nested lattices
+  ---
+  duration_ms: 1.8244
+  type: 'test'
+  ...
+# Subtest: unsupported spacing and oversized graph reject without scaling the world
+ok 154 - unsupported spacing and oversized graph reject without scaling the world
+  ---
+  duration_ms: 0.5693
+  type: 'test'
+  ...
+# Subtest: optional tie-break preserves all 720 recorded default A*/Greedy policy metrics
+ok 155 - optional tie-break preserves all 720 recorded default A*/Greedy policy metrics
+  ---
+  duration_ms: 58.3224
+  type: 'test'
+  ...
+# Subtest: goal-directed ties retain optimality and reachability on every 4x3 obstacle layout
+ok 156 - goal-directed ties retain optimality and reachability on every 4x3 obstacle layout
+  ---
+  duration_ms: 7.1592
+  type: 'test'
+  ...
+# Subtest: small control can keep the same optimal route length with different examined-node counts
+ok 157 - small control can keep the same optimal route length with different examined-node counts
+  ---
+  duration_ms: 0.2415
+  type: 'test'
+  ...
+# Subtest: world witness uses the gap midpoint and exact swept clearance
+ok 158 - world witness uses the gap midpoint and exact swept clearance
+  ---
+  duration_ms: 1.2605
+  type: 'test'
+  ...
+# Subtest: swept obstacle test rejects safe endpoints with an intervening square
+ok 159 - swept obstacle test rejects safe endpoints with an intervening square
+  ---
+  duration_ms: 0.2433
+  type: 'test'
+  ...
+# Subtest: contact and world boundaries reject equality, square corners use Euclidean distance
+ok 160 - contact and world boundaries reject equality, square corners use Euclidean distance
+  ---
+  duration_ms: 0.1907
+  type: 'test'
+  ...
+# Subtest: checker rejects diagonals, malformed world points and invalid effective radii
+ok 161 - checker rejects diagonals, malformed world points and invalid effective radii
+  ---
+  duration_ms: 4.5755
+  type: 'test'
+  ...
+# Subtest: the offered X/Y paths score sixteen and twelve at assumed weights one/two
+ok 162 - the offered X/Y paths score sixteen and twelve at assumed weights one/two
+  ---
+  duration_ms: 0.8151
+  type: 'test'
+  ...
+# Subtest: half-step subdivision preserves world distance and score rather than charging per edge
+ok 163 - half-step subdivision preserves world distance and score rather than charging per edge
+  ---
+  duration_ms: 1.709
+  type: 'test'
+  ...
+# Subtest: explicit custom and zero penalties use their declared arithmetic; singleton score is zero
+ok 164 - explicit custom and zero penalties use their declared arithmetic; singleton score is zero
+  ---
+  duration_ms: 0.1928
+  type: 'test'
+  ...
+# Subtest: invalid weights and absent or invalid axis paths are rejected
+ok 165 - invalid weights and absent or invalid axis paths are rejected
+  ---
+  duration_ms: 0.7051
+  type: 'test'
+  ...
+# Subtest: overflowing summed distance or weighted score is rejected
+ok 166 - overflowing summed distance or weighted score is rejected
+  ---
+  duration_ms: 0.3047
+  type: 'test'
+  ...
+1..166
+# tests 166
+# suites 0
+# pass 166
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 692.0285

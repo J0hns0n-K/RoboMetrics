@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-01",
+  "status": "awaiting-student-prior-objective-comparison-forecast",
+  "proposalAuthor": "AI assistant",
+  "context": "data/learning/candidate-astar-fallback-run-01.json",
+  "question": "On the known empty point grid with the same20six-move candidates, endpoints, initial-down heading and motion limits, compare current candidate-first policy with calling unit-cost A* directly (FIFO/budget20). Both can return6move routes. Do you predict equal arrival-model time, candidate-first lower time, or direct A* lower time? Give a forecast before this configured comparison.",
+  "controls": {
+    "sourceConfig": "experiments/candidate-astar-fallback-01.config.json",
+    "caseId": "empty-valid-family",
+    "astar": {
+      "algorithm": "astar",
+      "tieBreak": "fifo",
+      "maxExpansions": 20
+    },
+    "candidateSource": "data/learning/bounded-path-monotone-run-01.json",
+    "samePointMapAndMotionLimits": true
+  },
+  "studentPredictionVerbatim": null,
+  "plan": "Freeze prediction/comparison protocol before configured direct-policy comparison. Keep candidate checks, timing evaluations and A* expansions separate; no work/runtime claim from adding unlike counts. Compare returned valid paths, move count and analytic model time rather than assuming unit-cost optimality implies time optimality.",
+  "scope": "Pending known-control policy/objective comparison, not a new independent map cohort, blind validation, physical measurement or global time-optimal planner. Existing unit tests may exercise direct search; no configured policy comparison has been recorded yet."
+}

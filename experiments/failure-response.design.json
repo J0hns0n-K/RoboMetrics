@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student rejects global unreachability from failed six-move family, citing the already-shown8move minimum: data/learning/bounded-path-coverage-interpretation-01.json. Guided post-result reasoning, no new execution/proof. Next experiments/bounded-path-family-response-choice-01.design.json asks selection between extending the exact-length family to8moves and existing A* graph search after family exhaustion. Neither new response policy implemented; A* unit-cost objective is minimum moves, not minimum bounded time.",
+  "nextTask": "Student selected2/A*after-family-exhaustion. Separate policy API implemented and checked in data/learning/candidate-astar-fallback-run-01.json: detour budget20found8moves/13modelseconds, same map budget5BUDGET_EXCEEDED, sealed mapUNREACHABLE, valid empty-family skips A*and selects9modelseconds. Full166tests/31files pass, new10policy tests; four known controls/three layouts. Candidate checks/model evaluations/A*expansions separate, no efficiency/time-optimality claim. Next experiments/candidate-astar-direct-comparison-01.design.json awaits forecast comparing candidate-first and direct A* arrival-model time on the empty control.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -341,5 +341,8 @@
   "boundedPathDetourRun": "data/learning/bounded-path-detour-witness-run-01.json",
   "boundedPathCoverageInterpretationDraft": "experiments/bounded-path-coverage-interpretation-01.design.json",
   "boundedPathCoverageInterpretation": "data/learning/bounded-path-coverage-interpretation-01.json",
-  "boundedPathFamilyResponseChoiceDraft": "experiments/bounded-path-family-response-choice-01.design.json"
+  "boundedPathFamilyResponseChoiceDraft": "experiments/bounded-path-family-response-choice-01.design.json",
+  "boundedPathFamilyResponseChoice": "data/learning/bounded-path-family-response-choice-01.json",
+  "candidateAstarFallbackRun": "data/learning/candidate-astar-fallback-run-01.json",
+  "candidateAstarDirectComparisonDraft": "experiments/candidate-astar-direct-comparison-01.design.json"
 }
