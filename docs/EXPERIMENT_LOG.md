@@ -894,6 +894,12 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Independent Python coordinates/runs/initial alignment/minimum angles/component formulas/schedules agree.8linear+7angular profiles/32phases checked for rest/continuity/caps/distance/angle and64-panel velocity integrals. Reference outputs match immutable baseline; translation profiles/geometry and historical source/test/results/TAP hashes preserved.
 - Sequential analytic stop-turn timing, not wheel/pose integration, physical dynamics/controller/collision/calibration/runtime/energy or global optimum. Next [all20six-move monotone candidate forecast](../experiments/bounded-path-monotone-enumeration-01.design.json) pending before enumeration; not a new independent map cohort.
 
+## 2026-11-01 — Exact minimum within the fixed20path family
+
+- Student **없지 않ㄴ나?** [tentative no-faster forecast](../data/learning/bounded-path-monotone-prediction-01.json), original typo/question mark preserved, no reason/number/proof. AI froze [config](../experiments/bounded-path-monotone-enumeration-01.config.json)/[protocol](../experiments/bounded-path-monotone-enumeration-01.protocol.json)/runner at source2f254b87a1419e68a95196658ba81591e3b76f8c before enumeration.
+- [New run](../data/learning/bounded-path-monotone-run-01.json):20unique permutations of three right/three down unit moves, start0,0/goal3,3, length6, empty schematic plane, initial down, v1/a1/angular180/alpha360/turns-only. Student DDDRRR unique minimum9modelseconds,0faster/1equal including itself/19slower, maximum18. One restricted family, not20independent maps or new A*/Greedy/BFS/search-budget trials.
+- Python combinations set exactly matches recursive generation with no duplicates; every path coordinate/endpoints/run/angle/time formula agrees, published student/X anchors reproduce. Model/dependency/test/prior156-pass TAP/historical hashes unchanged; tests not repeated. Student tentative forecast supported in this family; enumeration/complete proof/review remain AI work, no student reason inferred. No global longer-route/obstacle/physical optimum, calibration/controller/collision/runtime/energy claim. Next [single point-cell wall selection](../experiments/bounded-path-single-wall-01.design.json) pending before classifying blocked/valid candidates.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:

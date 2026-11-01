@@ -152,4 +152,8 @@ const fieldName = '____';
 
 ## 열세 번째 파일 — 직진·회전 가속과 감속을 합친 경로
 
-학생의 **기존?**은 [잠정 X 선택](../data/learning/bounded-path-angular-prediction-01.json)으로 기록한다. 이유·숫자·새 코드·실행을 귀속하지 않는다. 이전 학생 경로 설계와 이번 AI의 합성 코드를 구분한다. [13-bounded-path-time.mjs](13-bounded-path-time.mjs), [방법](../docs/BOUNDED_PATH_TIME_KR.md), [결과](../data/learning/bounded-path-angular-run-01.json)는 같은 출발/도착/거리6·출발down·직진속도1/가속도1·각속도180·2번 규칙에 각가속/감속360도/초²만 추가한다. X15→18초(+3), 학생 한 번 전환 경로8.5→9모델 초(+0.5)로 잠정 선택을 지지한다. 전체30개 추적 검사 파일156개가 통과했고 새 합성 검사8개를 포함한다. AI가 별도 수식·구간·각도·프로필·시간표·속도 적분을 확인했다. 실제 휠 주행/제어/충돌 검증이 아닌 해석적 시간표다. 다음은 [같은6칸 후보20개 중 더 빠른 경로가 있는지 예상](../experiments/bounded-path-monotone-enumeration-01.design.json)하는 과제다. 아직 후보군 실행은 하지 않았다.
+학생의 **기존?**은 [잠정 X 선택](../data/learning/bounded-path-angular-prediction-01.json)으로 기록한다. 이유·숫자·새 코드·실행을 귀속하지 않는다. 이전 학생 경로 설계와 이번 AI의 합성 코드를 구분한다. [13-bounded-path-time.mjs](13-bounded-path-time.mjs), [방법](../docs/BOUNDED_PATH_TIME_KR.md), [결과](../data/learning/bounded-path-angular-run-01.json)는 같은 출발/도착/거리6·출발down·직진속도1/가속도1·각속도180·2번 규칙에 각가속/감속360도/초²만 추가한다. X15→18초(+3), 학생 한 번 전환 경로8.5→9모델 초(+0.5)로 잠정 선택을 지지한다. 전체30개 추적 검사 파일156개가 통과했고 새 합성 검사8개를 포함한다. AI가 별도 수식·구간·각도·프로필·시간표·속도 적분을 확인했다. 실제 휠 주행/제어/충돌 검증이 아닌 해석적 시간표다. 학생은 이어 더 빠른 후보가 없을 것이라는 잠정 예상을 냈고 아래 실습14에서 제한된 후보군을 확인했다.
+
+## 열네 번째 파일 — 같은6칸 경로20개 완전 비교
+
+학생은 **없지 않ㄴ나?**라고 [잠정 예상](../data/learning/bounded-path-monotone-prediction-01.json)을 제시했다. 오타·물음표와 이유·숫자 없음은 유지한다. AI의 [14-six-move-paths.mjs](14-six-move-paths.mjs), [방법](../docs/BOUNDED_PATH_TIME_KR.md), [결과](../data/learning/bounded-path-monotone-run-01.json)는 같은 출발/도착·운동 한계에서 오른쪽3번/아래3번의20개 고유 경로를 비교한다. 학생의 이전 DDDRRR 설계가 유일9모델 초, 더 빠른 후보0개·자신 포함 동시간1개·더 느린19개·최대18초였다. 별도의 조합 집합·좌표·시간식 검증이 일치했고 기준 결과와 기존156개 통과 소스/검사/TAP 해시도 같아 검사는 반복하지 않았다. AI의 생성·완전성/수식 검증이며 학생이 증명/코드/실행을 수행한 것으로 기록하지 않는다. 한정 후보군의 결과이지 실제 로봇이나 모든 경로의 최속 증명이 아니다. 다음은 [학생이 벽 한 칸을 선택해 유효 경로만 비교하는 과제](../experiments/bounded-path-single-wall-01.design.json)다.

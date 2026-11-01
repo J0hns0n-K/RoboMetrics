@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-11-01",
-  "status": "awaiting-student-prior-restricted-candidate-forecast",
+  "status": "tentative-no-faster-forecast-recorded-and-ai-restricted-enumeration-checked",
   "proposalAuthor": "AI assistant",
   "context": "data/learning/bounded-path-angular-run-01.json",
   "question": "Among all20 unique permutations of three right and three down unit moves, do you predict any six-move path has lower bounded model time than the student down/down/down/right/right/right route? Give a prediction before enumerating/evaluating that restricted family.",
@@ -31,6 +31,11 @@
     "angularAccelerationMagnitudeDegreesPerSecondSquared": 360,
     "stopPolicy": "turns-only"
   },
-  "studentPredictionVerbatim": null,
-  "scope": "Pending exhaustive check within one known restricted path family, not new independent maps, population evidence, hardware/calibration or a global fastest-path proof. No enumeration or new candidate timing has been run yet."
+  "studentPredictionVerbatim": "없지 않ㄴ나?",
+  "scope": "Completed exhaustive single restricted20path family under fixed analytic assumptions; student tentative forecast and prior sequence design, no supplied proof/reason/number/code/execution. Unique family minimum, not global physical/all-route optimum.",
+  "predictionRecord": "data/learning/bounded-path-monotone-prediction-01.json",
+  "runRecord": "data/learning/bounded-path-monotone-run-01.json",
+  "sourceCommit": "2f254b87a1419e68a95196658ba81591e3b76f8c",
+  "predictionSupportedInThisFamily": true,
+  "nextTask": "experiments/bounded-path-single-wall-01.design.json"
 }
