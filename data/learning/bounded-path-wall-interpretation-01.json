@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-01",
+  "userVerbatim": "장애물이 있었으니까",
+  "task": "experiments/bounded-path-wall-interpretation-01.design.json",
+  "evidence": "data/learning/bounded-path-single-wall-run-01.json",
+  "evidenceSourceCommit": "e907420890593153b1fb73428ebade0d30760426",
+  "context": "AI had shown the selected obstacle blocks the historical9second route and leaves a valid10second family minimum, then asked why the valid10second route should be chosen.",
+  "review": {
+    "studentContent": "Guided qualitative attribution to obstacle presence.",
+    "consistentWithShownCondition": true,
+    "aiClarification": "In this particular condition the selected point(2,3) lies on the old route, which is blocked and has null current time. Ranking therefore uses valid routes. This specific location/validity explanation remains AI review.",
+    "notInferred": "No independent diagnosis, exact cell/status/count/time calculation, general proof, code or execution attributed to the student."
+  },
+  "roles": {
+    "student": "Supplied the quoted brief post-result explanation.",
+    "ai": "Question, earlier condition/code/checks and detailed validity review/recording."
+  },
+  "execution": "Learning record/documentation only; no new timing/planner/test/physical run.",
+  "nextTask": "experiments/bounded-path-detour-witness-01.design.json"
+}

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-01",
+  "status": "awaiting-student-point-path-witness",
+  "proposalAuthor": "AI assistant",
+  "motivation": "Move from validity of a fixed six-move candidate family to coverage: allow longer paths and up/left moves in a newly specified point-grid control.",
+  "context": "data/learning/bounded-path-wall-interpretation-01.json",
+  "question": "On the displayed4column/5row schematic point grid, design a cardinal-move route from S to G without entering# or leaving the grid. More than6moves is allowed. Send arrows; repeated directions may be abbreviated with counts. This is a new AI-proposed control, not the previous single-wall map.",
+  "map": {
+    "width": 4,
+    "height": 5,
+    "coordinates": "zero-based x from left, y from top",
+    "start": [
+      0,
+      0
+    ],
+    "goal": [
+      3,
+      3
+    ],
+    "blockedCells": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "rows": [
+      "S#..",
+      ".#..",
+      ".#..",
+      ".##G",
+      "...."
+    ],
+    "allowedMoves": [
+      "right",
+      "down",
+      "left",
+      "up"
+    ],
+    "diagonalMoves": false,
+    "provenance": "AI proposed barrier and extra bottom row; point(2,3) retains the earlier student-selected wall. The full map is not student-designed."
+  },
+  "studentSequenceVerbatim": null,
+  "plannedChecks": [
+    "Record student route before converting/evaluating it. Check endpoints/bounds/unit moves/blocked cells; retain invalid attempts.",
+    "Freeze a new protocol before candidate-family coverage and any longer-path timing check. Do not infer no route globally from failure of the old six-move family.",
+    "Use unchanged bounded timing only after point-path validity is established. Any reference shortest-path or completeness check is AI operation; keep hardware/body/continuous collision separate."
+  ],
+  "scope": "Pending guided student witness design on a known AI-proposed schematic control. No configured run/new student route yet, no independent map cohort, physical clearance/controller/calibration/runtime/energy evidence or global time optimum."
+}

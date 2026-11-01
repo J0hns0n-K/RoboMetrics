@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student choice2 maps to wall(2,3). AI point-cell control data/learning/bounded-path-single-wall-run-01.json classifies20archived paths into10blocked/10valid before timing only10valid members. Old student9second route becomes BLOCKED_POINT_CELL/null; valid-family sole minimum RRRDDD takes10modelseconds. Prior156-pass source/test/TAP hashes reused/no test repeat, no planners/maps/hardware. Next experiments/bounded-path-wall-interpretation-01.design.json asks the student why feasibility must precede comparison of9historical versus10current valid seconds; explanation not yet supplied.",
+  "nextTask": "Student explained 장애물이 있었으니까 after the shown blocked-route result; data/learning/bounded-path-wall-interpretation-01.json preserves this brief guided explanation separately from AI detail. No new execution. Next experiments/bounded-path-detour-witness-01.design.json asks for a student path on a new AI-proposed4x5point grid with a barrier and extra bottom row, allowing more than6moves/up/left. Student route and configured checks pending; do not treat the new map as a one-factor variation or student-designed.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -334,5 +334,7 @@
   "boundedPathSingleWallDraft": "experiments/bounded-path-single-wall-01.design.json",
   "boundedPathSingleWallChoice": "data/learning/bounded-path-single-wall-choice-01.json",
   "boundedPathSingleWallRun": "data/learning/bounded-path-single-wall-run-01.json",
-  "boundedPathWallInterpretationDraft": "experiments/bounded-path-wall-interpretation-01.design.json"
+  "boundedPathWallInterpretationDraft": "experiments/bounded-path-wall-interpretation-01.design.json",
+  "boundedPathWallInterpretation": "data/learning/bounded-path-wall-interpretation-01.json",
+  "boundedPathDetourWitnessDraft": "experiments/bounded-path-detour-witness-01.design.json"
 }

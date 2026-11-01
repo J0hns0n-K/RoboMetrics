@@ -906,6 +906,11 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - [New run](../data/learning/bounded-path-single-wall-run-01.json): same20archived IDs/paths/endpoints/limits; only the blocked cell changes.20validity checks yield10blocked/10point-valid, not10/20map success. Blocked current times null and excluded; time model evaluated only for10valid. Previous student9second design becomes BLOCKED_POINT_CELL/null; sole valid-family minimum RRRDDD10modelseconds. Empty-case data kept immutable.
 - Independent Python combinations/coordinates/membership/partition and blocked count C(5,2)*C(1,1)=10 agree. All valid run/angle/time formulas and archived empty-case durations match. Source/dependency/test/prior156-pass TAP/historical hashes unchanged; no repeated tests/planner/BFS/new independent maps/hardware. Point-cell validity only, not physical body/swept collision/calibration/controller/runtime/energy/global optimum. Choice student, filtering/code/operation/interpretation AI. Next [student post-result feasibility interpretation](../experiments/bounded-path-wall-interpretation-01.design.json) pending.
 
+## 2026-11-01 — Guided wall-result explanation and next coverage question
+
+- Student **장애물이 있었으니까** [brief explanation](../data/learning/bounded-path-wall-interpretation-01.json) after the shown current-blocked versus historical9second result. Preserve as post-result obstacle attribution, not independent detailed validity reasoning/proof or new data. Specific cell/status/time interpretation remains AI review.
+- Documentation only; no new tests/timing/planner/hardware execution. Existing wall data and baseline remain unchanged. Next [student witness task](../experiments/bounded-path-detour-witness-01.design.json) proposes a new AI-designed4x5point grid with a barrier/extra bottom row, allowing longer paths/up/left. It probes candidate-family coverage; not a one-factor change from the old single-wall map. No student route or configured check yet.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
