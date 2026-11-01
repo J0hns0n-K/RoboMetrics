@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-01",
+  "status": "awaiting-student-prior-restricted-candidate-forecast",
+  "proposalAuthor": "AI assistant",
+  "context": "data/learning/bounded-path-angular-run-01.json",
+  "question": "Among all20 unique permutations of three right and three down unit moves, do you predict any six-move path has lower bounded model time than the student down/down/down/right/right/right route? Give a prediction before enumerating/evaluating that restricted family.",
+  "candidateFamily": {
+    "start": [
+      0,
+      0
+    ],
+    "goal": [
+      3,
+      3
+    ],
+    "unitMoves": 6,
+    "exactlyRight": 3,
+    "exactlyDown": 3,
+    "uniqueCandidateCount": 20,
+    "obstacles": "none; schematic",
+    "excluded": "Longer paths, other endpoints, nonmonotone moves, obstacles and physical behavior are outside this candidate family."
+  },
+  "controls": {
+    "model": "src/bounded-path-time.mjs",
+    "baseConfig": "experiments/bounded-path-angular-01.config.json",
+    "initialHeading": "down",
+    "linearSpeed": 1,
+    "linearAcceleration": 1,
+    "angularSpeedDegrees": 180,
+    "angularAccelerationMagnitudeDegreesPerSecondSquared": 360,
+    "stopPolicy": "turns-only"
+  },
+  "studentPredictionVerbatim": null,
+  "scope": "Pending exhaustive check within one known restricted path family, not new independent maps, population evidence, hardware/calibration or a global fastest-path proof. No enumeration or new candidate timing has been run yet."
+}

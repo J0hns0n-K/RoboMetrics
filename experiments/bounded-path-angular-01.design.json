@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-10-31",
-  "status": "awaiting-student-prior-path-penalty-prediction",
+  "status": "tentative-student-choice-recorded-and-ai-bounded-path-check-complete",
   "proposalAuthor": "AI assistant",
   "context": "data/learning/angular-ramp-long-angle-cap-run-01.json",
   "question": "Next compose finite angular acceleration/braking into a separate full-path model, retaining existing finite-linear timing and turns-only rules. Compare baseline X with six90degree rotation operations (including initial alignment) against student down/down/down/right/right/right with one90degree rotation. With all existing limits fixed and angular acceleration360degrees/s^2 added, which path do you predict has the larger added model time versus its own old instantaneous-angular baseline?",
@@ -19,7 +19,12 @@
     "finalHeadingAlignment": "none",
     "obstacles": "none; same known schematic paths"
   },
-  "studentPredictionVerbatim": null,
+  "studentPredictionVerbatim": "기존?",
   "plan": "Record prediction before new composition code/control run. Preserve legacy APIs and raw outputs; use a separate bounded path reference and paired controls, with independent schedule/angle/time validation.",
-  "scope": "Pending AI implementation and guided student forecast, not a composed result, physical robot controller, wheel integration, collision proof or global path optimum."
+  "scope": "Completed tentative guided choice and AI analytic composition/validation. Student question mark preserved; no reason/numeric forecast/code/execution inferred. Legacy APIs unchanged; no wheel/controller/hardware/physical/optimality claim.",
+  "predictionRecord": "data/learning/bounded-path-angular-prediction-01.json",
+  "runRecord": "data/learning/bounded-path-angular-run-01.json",
+  "sourceCommit": "d4ff097850702502078acfd3f36e9b4cff4fc9ec",
+  "predictionSupportedInThisControl": true,
+  "nextTask": "experiments/bounded-path-monotone-enumeration-01.design.json"
 }
