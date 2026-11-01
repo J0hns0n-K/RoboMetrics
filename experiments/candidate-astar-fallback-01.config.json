@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "studentChoice": "data/learning/bounded-path-family-response-choice-01.json",
+  "candidateSource": "data/learning/bounded-path-monotone-run-01.json",
+  "motionLimits": {
+    "initialHeading": "down",
+    "linearSpeed": 1,
+    "linearAcceleration": 1,
+    "angularSpeedDegrees": 180,
+    "stopPolicy": "turns-only",
+    "angularAccelerationMagnitudeDegreesPerSecondSquared": 360
+  },
+  "cases": [
+    {
+      "id": "detour-budget20",
+      "world": {
+        "width": 4,
+        "height": 5,
+        "coordinates": "zero-based x from left, y from top",
+        "start": [
+          0,
+          0
+        ],
+        "goal": [
+          3,
+          3
+        ],
+        "blockedCells": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "rows": [
+          "S#..",
+          ".#..",
+          ".#..",
+          ".##G",
+          "...."
+        ],
+        "allowedMoves": [
+          "right",
+          "down",
+          "left",
+          "up"
+        ],
+        "diagonalMoves": false,
+        "provenance": "AI proposed barrier and extra bottom row; point(2,3) retains the earlier student-selected wall. The full map is not student-designed."
+      },
+      "maxExpansions": 20
+    },
+    {
+      "id": "detour-budget5",
+      "world": {
+        "width": 4,
+        "height": 5,
+        "coordinates": "zero-based x from left, y from top",
+        "start": [
+          0,
+          0
+        ],
+        "goal": [
+          3,
+          3
+        ],
+        "blockedCells": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "rows": [
+          "S#..",
+          ".#..",
+          ".#..",
+          ".##G",
+          "...."
+        ],
+        "allowedMoves": [
+          "right",
+          "down",
+          "left",
+          "up"
+        ],
+        "diagonalMoves": false,
+        "provenance": "AI proposed barrier and extra bottom row; point(2,3) retains the earlier student-selected wall. The full map is not student-designed."
+      },
+      "maxExpansions": 5
+    },
+    {
+      "id": "sealed-budget20",
+      "world": {
+        "width": 4,
+        "height": 5,
+        "coordinates": "zero-based x from left, y from top",
+        "start": [
+          0,
+          0
+        ],
+        "goal": [
+          3,
+          3
+        ],
+        "blockedCells": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "rows": [
+          "S#..",
+          ".#..",
+          ".#..",
+          ".##G",
+          ".#.."
+        ],
+        "allowedMoves": [
+          "right",
+          "down",
+          "left",
+          "up"
+        ],
+        "diagonalMoves": false,
+        "provenance": "AI negative control: close the bottom gap in the existing detour map."
+      },
+      "maxExpansions": 20
+    },
+    {
+      "id": "empty-valid-family",
+      "world": {
+        "width": 4,
+        "height": 5,
+        "coordinates": "zero-based x from left, y from top",
+        "start": [
+          0,
+          0
+        ],
+        "goal": [
+          3,
+          3
+        ],
+        "blockedCells": [],
+        "rows": [
+          "S...",
+          "....",
+          "....",
+          "...G",
+          "...."
+        ],
+        "allowedMoves": [
+          "right",
+          "down",
+          "left",
+          "up"
+        ],
+        "diagonalMoves": false,
+        "provenance": "AI skip-fallback control: obstacle-free point grid, same endpoints/dimensions."
+      },
+      "maxExpansions": 20
+    }
+  ],
+  "controls": "Four known designed controls across three point layouts. Same20registered candidates and motion limits; reachable budget pair, fully sealed graph, and valid-family skip case. Fixed FIFO/Manhattan unit-cost A* only after no valid registered member. Candidate checks, timing evaluations and A* expansions are different units."
+}

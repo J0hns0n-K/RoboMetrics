@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-01",
+  "status": "frozen-before-candidate-fallback-validation",
+  "methodAuthor": "AI assistant",
+  "config": "experiments/candidate-astar-fallback-01.config.json",
+  "studentChoice": "data/learning/bounded-path-family-response-choice-01.json",
+  "method": "Separate selectCandidateOrAstar point-policy API: validate/rank registered candidates by bounded model time; if none valid invoke unchanged unit-cost A* FIFO with explicit expansion cap. Only A* graph exhaustion yields UNREACHABLE; nonempty frontier at cap yields BUDGET_EXCEEDED. Success is ROUTE_FOUND. Failure path empty/time null. Fallback A* minimizes moves, not bounded time; browser/core defaults unchanged.",
+  "checks": [
+    "Commit choice/source/new10tests/wrapper/config/protocol before checks. Run every tracked root test/*.test.mjs once and archive a new TAP; unrelated untracked portfolio excluded.",
+    "Import practice17 once for four configured policy invocations. Record per-case family validation/timing, A* calls/expansions, selected source/path/time and failure reason separately. Regression planner calls are not these control counts.",
+    "Independently check all candidate partitions and valid timing formulas. Run Python unbudgeted BFS once per unique point layout (three maps) to distinguish reachable-budget failure from disconnected graph, compare successful path lengths, and verify returned point paths.",
+    "Check success profile formulas/rest/caps/continuity/schedules/64-panel integrals. Validate no A* call when a valid family member exists and no model time for invalid/failed outputs. Match historical known-case anchors.",
+    "Preserve old model/core/test/data/TAP bytes and freeze new evidence under new names. No comparative work/runtime improvement, global time optimum or physical claim from policy selection."
+  ],
+  "scope": "Student selected offered policy; AI code/maps/limits/test/reference operation and interpretation. Known point controls, not new independent map cohort, wheel/body/swept collision/calibration/controller/runtime/energy validation or A*versusGreedy comparison."
+}

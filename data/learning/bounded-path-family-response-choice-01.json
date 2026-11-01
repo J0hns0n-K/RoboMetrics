@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-01",
+  "userVerbatim": "2",
+  "task": "experiments/bounded-path-family-response-choice-01.design.json",
+  "selectedPolicy": "astar-after-family-exhaustion",
+  "context": "Student selected offered option2: use existing unit-cost A* when no registered candidate is point-valid. No reason, performance forecast or code supplied.",
+  "roles": {
+    "student": "Offered response-policy selection.",
+    "ai": "Options/control design, policy implementation/tests/operation, independent review."
+  },
+  "scope": "Design choice, not student code/execution, proven work/time improvement, minimum-model-time planner or physical controller."
+}
