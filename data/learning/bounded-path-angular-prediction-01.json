@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-01",
+  "userVerbatim": "기존?",
+  "task": "experiments/bounded-path-angular-01.design.json",
+  "resolvedPrediction": "Tentatively selects existing baseline X as having more added model time than the student one-turn route when finite angular acceleration/braking is included.",
+  "certainty": "tentative; original question mark retained",
+  "context": "AI supplied matched path comparison and counts: X has six90degree rotations including initial alignment, versus one for the student down/down/down/right/right/right. User replied 기존? without reason or numerical time, before composition implementation/checks.",
+  "roles": {"student":"Tentative guided prior path selection only.","ai":"Resolves reference to baseline X, supplies counts/limits, implements composition and operates validation/review."},
+  "scope": "Do not promote this tentative choice to an explicit reason, numeric forecast, student code/execution, physical result or universal proof."
+}

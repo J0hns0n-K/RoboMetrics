@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-01",
+  "status": "frozen-before-bounded-path-checks",
+  "methodAuthor": "AI assistant",
+  "config": "experiments/bounded-path-angular-01.config.json",
+  "studentPrediction": "data/learning/bounded-path-angular-prediction-01.json",
+  "baselineRun": "data/learning/linear-accel-route-run-02.json",
+  "method": "Separate boundedStopTurnTime composes existing finite-linear profiles with finite-angular rest-to-rest profiles, reusing the same axis path/turns-only runs/minimum unsigned rotations. All translations and rotations are sequential, no simultaneous motion, no added dwell; start/goal/required stops at rest, initial alignment included, no target-heading alignment. Legacy API/browser/planner defaults unchanged.",
+  "checks": [
+    "Commit tentative prediction, source/tests/wrapper, config/protocol before checks. Run all tracked root test/*.test.mjs files once, including new8 composition tests and existing angular tests. Archive a new full tracked-directory TAP, excluding unrelated untracked portfolio.",
+    "Import practice13 once. Report two routes times two timing variants=4 model evaluations, not independent maps. Full regression may call legacy planners/generators, separately from zero configured planner/BFS calls.",
+    "Independently reconstruct path runs/rotations/initial alignment and translation/angular duration formulas, component totals and added penalties in Python. Validate angle/distance/rest/caps/continuity/schedules and64-panel velocity integrals for bounded component phases.",
+    "Compare legacy outputs with immutable baseline, equal translation profiles/geometry before/after, and original/source/input/test/historical bytes. Preserve every older manifest/TAP/result. Determine whether tentative X selection is supported without inventing a reason or numeric forecast."
+  ],
+  "scope": "Analytic stop-turn schedule with finite linear/angular acceleration only; no wheel-based pose integration, steering/jerk/slip/dynamics/controller/collision/sensing/calibration/hardware/energy or elapsed-runtime validation, and no global fastest-path proof. AI code/operation/review separate from tentative student forecast and earlier student route design."
+}
