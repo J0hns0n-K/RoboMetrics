@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-01",
+  "status": "frozen-before-restricted-family-enumeration",
+  "methodAuthor": "AI assistant",
+  "config": "experiments/bounded-path-monotone-enumeration-01.config.json",
+  "studentPrediction": "data/learning/bounded-path-monotone-prediction-01.json",
+  "baselineRun": "data/learning/bounded-path-angular-run-01.json",
+  "checks": [
+    "Commit tentative forecast/config/protocol/enumeration runner before evaluation. Import practice14 once, reporting20bounded timing evaluations on one complete known restricted family, not20independent maps.",
+    "Independently enumerate right-move positions with Python combinations and verify exact set equality/uniqueness/cardinality C(6,3)=20, path coordinates/endpoints/unit length/counts and student/X anchors.",
+    "Independently reconstruct merged runs/minimum rotations/initial alignment and finite-linear/angular time formulas for all20candidates. Verify each reported metric and summary minimum/ties/faster/slower counts; compare anchors with immutable baseline outputs.",
+    "Verify unchanged model/dependency/tests/prior156-pass TAP/historical artifact hashes. New runner is checked by full configured enumeration and independent set/formula comparison; no repeated unit tests or full-suite claim for unchanged model code."
+  ],
+  "scope": "Exhaustive within fixed empty-plane monotone six-move family only. No new map cohort, A*/Greedy/BFS calls, search expansion budget, globally fastest-route proof, physical body/collision/calibration/controller/runtime/energy result. Student tentative forecast and previous route design separate from AI enumeration/operation/review."
+}

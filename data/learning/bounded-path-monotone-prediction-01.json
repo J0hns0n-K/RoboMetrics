@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-01",
+  "userVerbatim": "없지 않ㄴ나?",
+  "task": "experiments/bounded-path-monotone-enumeration-01.design.json",
+  "resolvedPrediction": "Tentatively predicts no faster bounded-time route than the student down/down/down/right/right/right within the20six-move permutations.",
+  "certainty": "tentative; typo and question mark preserved",
+  "context": "AI proposed the exhaustive restricted family at fixed endpoints/motion limits after the two-path comparison. Student supplied no reason or numeric minimum, before enumeration/evaluation.",
+  "roles": {"student":"Tentative guided prior no-faster-candidate forecast; earlier one-turn route design.","ai":"Defines family/limits, implements enumeration, operates independent completeness/time checks and review."},
+  "scope": "Do not promote this to a prior proof, explicit reason, student code/execution, physical result or claim about all possible routes."
+}
