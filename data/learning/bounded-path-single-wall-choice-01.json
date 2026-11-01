@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-01",
+  "userVerbatim": "2",
+  "task": "experiments/bounded-path-single-wall-01.design.json",
+  "resolvedChoice": "Offered position2, immediately left of goal, point cell(2,3).",
+  "selectedCell": [2,3],
+  "context": "AI offered two cells on the prior student route; student selected the second before the wall control is run. No reason, new route, timing forecast or execution report supplied.",
+  "roles": {"student":"Selected the offered single-wall condition.","ai":"Offered locations, transcribes selection, implements classification/valid-only ranking and operates verification."},
+  "scope": "Guided condition selection, not independent map generation, physical collision/clearance validation or student-authored code."
+}

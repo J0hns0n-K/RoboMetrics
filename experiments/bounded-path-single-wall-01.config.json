@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "studentChoice": "data/learning/bounded-path-single-wall-choice-01.json",
+  "candidateSource": "data/learning/bounded-path-monotone-run-01.json",
+  "baseConfig": "experiments/bounded-path-monotone-enumeration-01.config.json",
+  "blockedCells": [[2,3]],
+  "motionLimits": {"initialHeading":"down","linearSpeed":1,"linearAcceleration":1,"angularSpeedDegrees":180,"stopPolicy":"turns-only","angularAccelerationMagnitudeDegreesPerSecondSquared":360},
+  "controls": "Same20archived six-move candidates, endpoints and motion limits; only one point cell is blocked. Classify before timing, blocked candidate time null; rank only point-cell-valid candidates. No physical body/edge sweep model."
+}

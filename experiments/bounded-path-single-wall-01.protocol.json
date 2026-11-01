@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-01",
+  "status": "frozen-before-student-single-wall-control",
+  "methodAuthor": "AI assistant",
+  "config": "experiments/bounded-path-single-wall-01.config.json",
+  "studentChoice": "data/learning/bounded-path-single-wall-choice-01.json",
+  "baselineRun": "data/learning/bounded-path-monotone-run-01.json",
+  "checks": [
+    "Commit selected cell/config/protocol/runner before execution. Reuse exactly20archived candidates with identical coordinates/IDs/motion limits; add only blocked point cell(2,3).",
+    "Import practice15 once; classify all20before timing. Blocked candidate duration must be null and never used for ranking; evaluate bounded model only for valid candidates.",
+    "Independently reconstruct all20candidates with Python combinations, check blocked/valid membership against selected cell, coordinates/IDs/partition completeness and student reference status. Recompute valid times/runs/angles/formulas, minima/ties and baseline consistency.",
+    "Preserve old empty-case minimum9 as historical evidence; do not promote its blocked route to a valid recommendation. Verify model/dependency/test/prior156-pass TAP/historical hashes; reuse unchanged model test evidence without repeating tests or claiming new full-suite execution."
+  ],
+  "scope": "One student-selected offered schematic point-cell obstacle on one fixed20path family, not a new independent map cohort, physical robot clearance/swept-volume/collision check, planner/BFS/expansion-budget run, calibrated/controller/runtime/energy result or globally fastest path."
+}
