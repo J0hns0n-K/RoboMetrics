@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student DDDDRRRU witness is valid on new AI4x5point map; data/learning/bounded-path-detour-witness-run-01.json confirms8moves, independent BFS minimum8, A*FIFO under budget20 succeeds length8 with9expanded. Bounded time13modelseconds (translation11/rotation2). Old20six-move family has0valid/20blocked on this map. No unit-test repetition; prior156-pass hashes preserved. Next experiments/bounded-path-coverage-interpretation-01.design.json asks student to distinguish candidate-family exhaustion from full-graph unreachability. No student scope explanation yet.",
+  "nextTask": "Student rejects global unreachability from failed six-move family, citing the already-shown8move minimum: data/learning/bounded-path-coverage-interpretation-01.json. Guided post-result reasoning, no new execution/proof. Next experiments/bounded-path-family-response-choice-01.design.json asks selection between extending the exact-length family to8moves and existing A* graph search after family exhaustion. Neither new response policy implemented; A* unit-cost objective is minimum moves, not minimum bounded time.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -339,5 +339,7 @@
   "boundedPathDetourWitnessDraft": "experiments/bounded-path-detour-witness-01.design.json",
   "boundedPathDetourWitness": "data/learning/bounded-path-detour-witness-01.json",
   "boundedPathDetourRun": "data/learning/bounded-path-detour-witness-run-01.json",
-  "boundedPathCoverageInterpretationDraft": "experiments/bounded-path-coverage-interpretation-01.design.json"
+  "boundedPathCoverageInterpretationDraft": "experiments/bounded-path-coverage-interpretation-01.design.json",
+  "boundedPathCoverageInterpretation": "data/learning/bounded-path-coverage-interpretation-01.json",
+  "boundedPathFamilyResponseChoiceDraft": "experiments/bounded-path-family-response-choice-01.design.json"
 }

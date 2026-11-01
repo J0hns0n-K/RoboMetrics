@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-01",
+  "userVerbatim": "안되죠. 가장 최단루트가 8칸인데 당연하지",
+  "task": "experiments/bounded-path-coverage-interpretation-01.design.json",
+  "evidence": "data/learning/bounded-path-detour-witness-run-01.json",
+  "evidenceSourceCommit": "4694255e9c1aa7d51654199ab1bb83ae02111f1e",
+  "context": "AI had shown the student eight-arrow witness is valid, BFS minimum moves8 and all20six-move candidates blocked, then asked whether family failure establishes unreachability.",
+  "review": {
+    "studentContent": "Rejects the unreachability conclusion, citing the shown shortest route of8moves.",
+    "consistentWithShownEvidence": true,
+    "notInferred": "No independent discovery/shortest-path proof, new numeric prediction, code/solver execution or physical reachability claim. The eight-move minimum was already shown by AI reference checks.",
+    "aiClarification": "No valid member in a registered six-move family is narrower than no path in the full point graph. Future fallback must distinguish graph exhaustion from budget exhaustion as well."
+  },
+  "roles": {
+    "student": "Guided post-result scope explanation referring to the known8move result.",
+    "ai": "Question/context, previous A*/BFS checks and detailed policy review/recording."
+  },
+  "execution": "Documentation/learning record only, no new timing/search/BFS/test/physical run.",
+  "nextTask": "experiments/bounded-path-family-response-choice-01.design.json"
+}

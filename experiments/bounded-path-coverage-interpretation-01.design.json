@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-11-01",
-  "status": "awaiting-student-guided-post-result-scope-explanation",
+  "status": "student-guided-scope-explanation-recorded",
   "proposalAuthor": "AI assistant",
   "context": "data/learning/bounded-path-detour-witness-run-01.json",
   "question": "On this new map all20registered six-move candidates are blocked, yet your valid eight-move path reaches G. Is it correct to conclude that G is unreachable merely because the six-move family has no usable path? Explain briefly in your own words.",
@@ -12,6 +12,8 @@
     "studentPointPathValid": true,
     "unbudgetedBfsMinimumMoves": 8
   },
-  "studentExplanationVerbatim": null,
-  "scope": "Guided post-result interpretation of candidate-family coverage versus full point-graph reachability; no new experiment or inferred student general proof yet. Not physical robot reachability."
+  "studentExplanationVerbatim": "안되죠. 가장 최단루트가 8칸인데 당연하지",
+  "scope": "Guided post-result interpretation of candidate-family coverage versus full point-graph reachability; no new experiment or inferred student general proof yet. Not physical robot reachability.",
+  "answerRecord": "data/learning/bounded-path-coverage-interpretation-01.json",
+  "nextTask": "experiments/bounded-path-family-response-choice-01.design.json"
 }

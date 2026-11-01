@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-01",
+  "status": "awaiting-student-offered-response-policy-selection",
+  "proposalAuthor": "AI assistant",
+  "context": "data/learning/bounded-path-coverage-interpretation-01.json",
+  "question": "Choose what the program should try when every registered six-move candidate is blocked:1extend the registered family to exactly8moves using cardinal steps, then check/rank valid members;2run existing unit-cost A* on the finite point map to find a valid route. Both are proposed responses, not implemented policies yet.",
+  "options": [
+    {
+      "choice": "1",
+      "policy": "extend-exact-length-family",
+      "effect": "Generate/check an8move candidate family. Any optimum remains restricted to that family; candidate count can grow with length."
+    },
+    {
+      "choice": "2",
+      "policy": "astar-after-family-exhaustion",
+      "effect": "Use graph search after candidate-family exhaustion; retain success/budget-exceeded/graph-exhausted outcomes. A* here minimizes move count, not bounded model time."
+    }
+  ],
+  "studentChoiceVerbatim": null,
+  "selectedPolicy": null,
+  "controls": {
+    "referenceMap": "experiments/bounded-path-detour-witness-01.config.json",
+    "initialFamilySource": "data/learning/bounded-path-monotone-run-01.json",
+    "samePointValidityRules": true,
+    "sameMotionLimits": true,
+    "proposedAstarVariant": {
+      "algorithm": "astar",
+      "tieBreak": "fifo",
+      "maxExpansions": 20
+    }
+  },
+  "plan": "After student choice, freeze selected response/config/protocol before implementation and new controls. Keep candidate checks separate from search expansions and elapsed time; preserve earlier reference-only runs. No speed/work improvement claim from choosing a response alone.",
+  "scope": "Pending guided student response-policy selection, not student code, implemented fallback, physical controller, minimum-model-time planner or general optimality evidence."
+}

@@ -918,6 +918,11 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - At unchanged v1/a1/angular180/alpha360/initial down/turns-only, student runs4/3/1 give11translation+2rotation=13modelseconds. One student timing evaluation,20candidate point-validity checks. Python arrows/coordinates/set/point checks, BFS and component formulas/schedule/64-panel integrals for5profiles/12phases agree. Model/core/dependency/test/prior156-pass TAP/historical bytes unchanged; tests not repeated.
 - Known designed coverage counterexample, no new independent map cohort/physical body/swept collision/calibration/controller/runtime/energy/global fastest-time result. Student witness design separate from AI code/reference execution/proof. Next [student candidate-coverage interpretation](../experiments/bounded-path-coverage-interpretation-01.design.json) pending.
 
+## 2026-11-01 — Student explains the candidate-family scope limit
+
+- Student **안되죠. 가장 최단루트가 8칸인데 당연하지** [guided post-result explanation](../data/learning/bounded-path-coverage-interpretation-01.json) rejects global no-path inference and cites the already-shown8move minimum. Preserve as student reasoning after witness/A*/BFS results, not a prior prediction, independent shortest-path proof or new data.
+- Documentation only; no new timing/search/BFS/test/physical run, historical evidence unchanged. Next [response-policy choice](../experiments/bounded-path-family-response-choice-01.design.json) offers exact8move family expansion versus existing unit-cost A* after family exhaustion. No selection/implementation yet. Candidate checks/search expansions/time objectives remain distinct.
+
 ## New experiment template
 - Date / local time:
 - Git commit SHA:
