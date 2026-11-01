@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-01",
+  "status": "frozen-before-student-detour-control",
+  "methodAuthor": "AI assistant",
+  "config": "experiments/bounded-path-detour-witness-01.config.json",
+  "studentInput": "data/learning/bounded-path-detour-witness-01.json",
+  "checks": [
+    "Commit student arrows/config/protocol/runner before checks. Reconstruct bounds/endpoints/unit cardinal moves/blocked cells; do not time invalid student paths.",
+    "Import practice16 once: classify20archived six-move paths on the new4x5map; time only the student witness if valid. Run existing A* once with FIFO/Manhattan unit-cost graph and expansion budget20; retain raw status/path/expanded count.",
+    "Independently reconstruct student arrows/coordinates and candidate completeness/point validity with Python combinations. Run one unbudgeted Python BFS on the entire finite point grid to check shortest move count, not minimum model time.",
+    "Independently check bounded translation/angular formulas, schedule and64-panel phase integrals; compare A* path validity/length with BFS and student witness. Separate registered-family exhaustion from global graph unreachability.",
+    "Verify unchanged model/core/dependency/test/prior156-pass TAP/historical bytes; reuse existing tests without repeating unit/full suite for a control wrapper. Preserve all earlier map/results."
+  ],
+  "scope": "Known designed point-grid coverage counterexample, not new independent map trials, physical body/swept collision, calibration/controller/runtime/energy/global time optimum or A*versusGreedy performance comparison. Student route design separate from AI map/limits/code/reference BFS/A* operation."
+}

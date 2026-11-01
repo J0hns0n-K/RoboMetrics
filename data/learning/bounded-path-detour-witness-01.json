@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-01",
+  "userVerbatim": "`↓ `  `↓ `  `↓ `  `↓ `  `→ `  `→ `  `→ `  ↑",
+  "normalizedSequence": [
+    "down",
+    "down",
+    "down",
+    "down",
+    "right",
+    "right",
+    "right",
+    "up"
+  ],
+  "task": "experiments/bounded-path-detour-witness-01.design.json",
+  "context": "Student supplied arrows on the new AI-proposed4x5point grid with longer moves allowed, before configured validation/timing/reference search. No numeric time, shortest-path proof or independent map design supplied.",
+  "roles": {
+    "student": "Constructed the guided eight-arrow point-route witness.",
+    "ai": "Proposed map/constraints, transcribes coordinates, implements/operates validity/timing and reference checks."
+  },
+  "scope": "Route design on a known AI teaching/control map, not a student-authored planner, independent map cohort, physical run or fastest-time proof."
+}
