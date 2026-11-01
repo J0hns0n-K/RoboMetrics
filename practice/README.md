@@ -156,4 +156,8 @@ const fieldName = '____';
 
 ## 열네 번째 파일 — 같은6칸 경로20개 완전 비교
 
-학생은 **없지 않ㄴ나?**라고 [잠정 예상](../data/learning/bounded-path-monotone-prediction-01.json)을 제시했다. 오타·물음표와 이유·숫자 없음은 유지한다. AI의 [14-six-move-paths.mjs](14-six-move-paths.mjs), [방법](../docs/BOUNDED_PATH_TIME_KR.md), [결과](../data/learning/bounded-path-monotone-run-01.json)는 같은 출발/도착·운동 한계에서 오른쪽3번/아래3번의20개 고유 경로를 비교한다. 학생의 이전 DDDRRR 설계가 유일9모델 초, 더 빠른 후보0개·자신 포함 동시간1개·더 느린19개·최대18초였다. 별도의 조합 집합·좌표·시간식 검증이 일치했고 기준 결과와 기존156개 통과 소스/검사/TAP 해시도 같아 검사는 반복하지 않았다. AI의 생성·완전성/수식 검증이며 학생이 증명/코드/실행을 수행한 것으로 기록하지 않는다. 한정 후보군의 결과이지 실제 로봇이나 모든 경로의 최속 증명이 아니다. 다음은 [학생이 벽 한 칸을 선택해 유효 경로만 비교하는 과제](../experiments/bounded-path-single-wall-01.design.json)다.
+학생은 **없지 않ㄴ나?**라고 [잠정 예상](../data/learning/bounded-path-monotone-prediction-01.json)을 제시했다. 오타·물음표와 이유·숫자 없음은 유지한다. AI의 [14-six-move-paths.mjs](14-six-move-paths.mjs), [방법](../docs/BOUNDED_PATH_TIME_KR.md), [결과](../data/learning/bounded-path-monotone-run-01.json)는 같은 출발/도착·운동 한계에서 오른쪽3번/아래3번의20개 고유 경로를 비교한다. 학생의 이전 DDDRRR 설계가 유일9모델 초, 더 빠른 후보0개·자신 포함 동시간1개·더 느린19개·최대18초였다. 별도의 조합 집합·좌표·시간식 검증이 일치했고 기준 결과와 기존156개 통과 소스/검사/TAP 해시도 같아 검사는 반복하지 않았다. AI의 생성·완전성/수식 검증이며 학생이 증명/코드/실행을 수행한 것으로 기록하지 않는다. 한정 후보군의 결과이지 실제 로봇이나 모든 경로의 최속 증명이 아니다. 학생은 이후2번 위치를 골랐고 아래 실습15에서 유효 후보만 비교했다.
+
+## 열다섯 번째 파일 — 벽에 막힌 경로를 먼저 제외
+
+학생은 **2**로 [도착 왼쪽 점 칸(2,3)](../data/learning/bounded-path-single-wall-choice-01.json)을 골랐다. 이유·새 경로·시간 예상은 없었다. AI의 [15-single-wall.mjs](15-single-wall.mjs), [방법](../docs/BOUNDED_PATH_TIME_KR.md), [결과](../data/learning/bounded-path-single-wall-run-01.json)는 같은20개 후보를10막힘/10유효로 먼저 분류한다. 막힌 후보는현재 `null`, 시간 모델 호출/순위에서 제외한다. 이전 학생9초 경로도 막혔고 유효군의 유일 최소는 RRRDDD10모델 초다. 기존 빈 조건9초 원본은 유지한다. 별도의 조합/좌표/분할/시간식과 이전 소스·검사·156개 통과 TAP 해시를 확인해 검사는 반복하지 않았다. 선택은 학생, 코드·실행·검증·해석은 AI 지원이다. 점 칸 금지 조건이며 실제 로봇 몸체 여유/연속 충돌 검증은 아니다. 다음은 [왜 현재의 유효10초 경로를 선택해야 하는지 본인 말로 설명](../experiments/bounded-path-wall-interpretation-01.design.json)하는 단계다.

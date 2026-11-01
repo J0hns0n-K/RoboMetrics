@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-11-01",
-  "status": "awaiting-student-single-wall-selection",
+  "status": "student-offered-wall-choice-recorded-and-ai-point-validity-control-checked",
   "proposalAuthor": "AI assistant",
   "context": "data/learning/bounded-path-monotone-run-01.json",
   "question": "Design a single point-cell obstacle on the earlier student down/down/down/right/right/right route, excluding start/goal. Choose offered position1immediately below start(0,1), or position2immediately left of goal(2,3); a different intermediate cell on that route may also be supplied. No wall has yet been selected or evaluated.",
@@ -23,8 +23,11 @@
       "description": "immediately left of goal"
     }
   ],
-  "studentChoiceVerbatim": null,
-  "selectedCell": null,
+  "studentChoiceVerbatim": "2",
+  "selectedCell": [
+    2,
+    3
+  ],
   "controls": {
     "candidateSource": "data/learning/bounded-path-monotone-run-01.json",
     "candidateCountBeforeValidityFilter": 20,
@@ -42,5 +45,9 @@
     "sameMotionLimits": true
   },
   "plan": "After student selection, freeze cell/protocol before checks. Classify every archived candidate as blocked or point-cell valid before timing/ranking valid members; keep blocked identities/counts. Do not treat the formerly fastest blocked route as a valid low-time option. Preserve all earlier empty-case raw data.",
-  "scope": "Pending student offered-condition selection and point-cell validity control, not physical body/swept-volume collision validation, A*/Greedy/BFS replanning, new independent maps, measured time or global optimum."
+  "scope": "Completed offered condition choice and AI point-cell filter/valid-only ranking on one fixed20path family. No student reason/new route/time forecast/code/execution, physical body/swept-volume/collision result, new map cohort, planner/BFS or global optimum.",
+  "choiceRecord": "data/learning/bounded-path-single-wall-choice-01.json",
+  "runRecord": "data/learning/bounded-path-single-wall-run-01.json",
+  "sourceCommit": "e907420890593153b1fb73428ebade0d30760426",
+  "nextTask": "experiments/bounded-path-wall-interpretation-01.design.json"
 }

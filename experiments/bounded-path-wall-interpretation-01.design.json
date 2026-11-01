@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-01",
+  "status": "awaiting-student-guided-post-result-interpretation",
+  "proposalAuthor": "AI assistant",
+  "context": "data/learning/bounded-path-single-wall-run-01.json",
+  "question": "With the selected wall in the current condition, why should a valid10modelsecond route be chosen instead of the route that previously took9modelseconds? Explain in one sentence in your own words.",
+  "factsShown": {
+    "selectedCell": [
+      2,
+      3
+    ],
+    "candidateCount": 20,
+    "blockedCount": 10,
+    "validCount": 10,
+    "oldStudentEmptyCaseSeconds": 9,
+    "currentStudentStatus": "BLOCKED_POINT_CELL",
+    "currentStudentSeconds": null,
+    "bestValidSeconds": 10,
+    "bestValidSequence": [
+      "right",
+      "right",
+      "right",
+      "down",
+      "down",
+      "down"
+    ]
+  },
+  "studentExplanationVerbatim": null,
+  "scope": "Guided post-result engineering interpretation, not a prior prediction, independent proof, new run or physical collision/clearance claim. Do not fill a student explanation before receiving it."
+}

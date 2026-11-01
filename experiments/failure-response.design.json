@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student tentative 없지 않ㄴ나? no-faster forecast supported in data/learning/bounded-path-monotone-run-01.json: exact20unique three-right/three-down paths, student DDDRRR sole minimum9modelseconds,0faster/1equal including itself/19slower, maximum18. Independent combinations-set and all-time formulas match; prior156-pass source/test/TAP hashes reused, no new tests/maps/planners. Next experiments/bounded-path-single-wall-01.design.json awaits a student single point-cell wall choice before classifying blocked/valid candidates and ranking feasible routes.",
+  "nextTask": "Student choice2 maps to wall(2,3). AI point-cell control data/learning/bounded-path-single-wall-run-01.json classifies20archived paths into10blocked/10valid before timing only10valid members. Old student9second route becomes BLOCKED_POINT_CELL/null; valid-family sole minimum RRRDDD takes10modelseconds. Prior156-pass source/test/TAP hashes reused/no test repeat, no planners/maps/hardware. Next experiments/bounded-path-wall-interpretation-01.design.json asks the student why feasibility must precede comparison of9historical versus10current valid seconds; explanation not yet supplied.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -331,5 +331,8 @@
   "boundedPathRestrictedCandidatesDraft": "experiments/bounded-path-monotone-enumeration-01.design.json",
   "boundedPathRestrictedPrediction": "data/learning/bounded-path-monotone-prediction-01.json",
   "boundedPathRestrictedRun": "data/learning/bounded-path-monotone-run-01.json",
-  "boundedPathSingleWallDraft": "experiments/bounded-path-single-wall-01.design.json"
+  "boundedPathSingleWallDraft": "experiments/bounded-path-single-wall-01.design.json",
+  "boundedPathSingleWallChoice": "data/learning/bounded-path-single-wall-choice-01.json",
+  "boundedPathSingleWallRun": "data/learning/bounded-path-single-wall-run-01.json",
+  "boundedPathWallInterpretationDraft": "experiments/bounded-path-wall-interpretation-01.design.json"
 }
