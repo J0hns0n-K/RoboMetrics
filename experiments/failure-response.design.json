@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Known empty-map direct-A* comparison completed: see data/learning/candidate-astar-direct-comparison-run-01.json. Same6moves; candidate-first9versus direct FIFO A*10model seconds at initial-down/archived limits/budget20, due to initial alignment. AI operation/explanation; student reported uncertainty only. Next experiments/candidate-astar-direct-interpretation-01.design.json awaits guided post-result interpretation.",
+  "nextTask": "Guided initial-direction explanation recorded in data/learning/candidate-astar-direct-interpretation-01.json. No new experiment/test run or student numerical explanation inferred. Next experiments/equal-turn-run-lengths-01.design.json awaits a student forecast for two AI-proposed8move/two-turn paths with different straight-run lengths, fixed initial-down and shared linear cap2. Prior raw comparison remains immutable.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -346,5 +346,7 @@
   "candidateAstarFallbackRun": "data/learning/candidate-astar-fallback-run-01.json",
   "candidateAstarDirectComparisonDraft": "experiments/candidate-astar-direct-comparison-01.design.json",
   "candidateAstarDirectComparisonRun": "data/learning/candidate-astar-direct-comparison-run-01.json",
-  "candidateAstarDirectInterpretationDraft": "experiments/candidate-astar-direct-interpretation-01.design.json"
+  "candidateAstarDirectInterpretationDraft": "experiments/candidate-astar-direct-interpretation-01.design.json",
+  "candidateAstarDirectInterpretationRecord": "data/learning/candidate-astar-direct-interpretation-01.json",
+  "equalTurnRunLengthDraft": "experiments/equal-turn-run-lengths-01.design.json"
 }

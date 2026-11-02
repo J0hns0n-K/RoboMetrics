@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-02",
+  "context": "data/learning/candidate-astar-direct-comparison-run-01.json",
+  "task": "experiments/candidate-astar-direct-interpretation-01.design.json",
+  "studentResponseVerbatim": "처음 향하는 방향 ㄸㅐ문",
+  "classification": "guided-post-result-qualitative-explanation",
+  "supportedInterpretation": "Student attributes the shown model-time difference to the initial facing direction. Preserve original spelling. The student did not separately identify the A* route, quantify the rotation, supply a new prediction, implement code or execute a new experiment.",
+  "assistanceAlreadyProvided": "AI had shown the selected paths,9versus10model-second result, and explanation that initial-down adds an extra90degree turn to the right-first path.",
+  "roles": {"student":"Short initial-direction attribution after explanation.","ai":"Prior comparison code/operation/checks and detailed causal/numerical explanation; record transcription and next proposed control."},
+  "newExperimentOrTests": false
+}
