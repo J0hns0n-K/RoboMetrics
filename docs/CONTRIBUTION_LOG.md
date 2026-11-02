@@ -184,3 +184,8 @@
 | YYYY-MM-DD | Junmo | **PENDING — only fill after real action** | Git commit SHA, screenshots, experiment data | What decision he made and why | TBD |
 
 Requirements: Never rewrite AI/mentor-seeded files as though student wrote them unaided. Track decisions, learning, assistance, errors, fixes, tests and dates.
+
+
+## 2026-11-02 — Known empty-map objective comparison
+
+Student [response](../data/learning/candidate-astar-direct-prediction-01.json) is **몰라**: no directional/numeric forecast, new code, execution or explanation inferred. Earlier DDDRRR design remains student contribution. AI froze the [protocol](../experiments/candidate-astar-direct-comparison-01.protocol.json)/wrapper at source `0e0c29fb10af0790cd1e4ad40164a9710542bc45`, operated the comparison and independent checks, and authored explanation/docs. [Raw comparison/manifest](../data/learning/candidate-astar-direct-comparison-run-01.json) and [method](CANDIDATE_ASTAR_FALLBACK_KR.md) bind conditions/counts: same known empty layout/initial-down/limits, candidate-first6moves/9model seconds versus direct FIFO A*budget20/6moves/10model seconds, with extra initial rotation. No physical, runtime or global optimal-time claim. Existing166-pass source/test/TAP bytes unchanged; no regression rerun. Next guided interpretation is pending.

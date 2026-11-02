@@ -168,4 +168,9 @@ const fieldName = '____';
 
 ## 열일곱 번째 파일 — 후보가 없으면 A*로 탐색
 
-학생은 **2**로 [A* 대응 규칙](../data/learning/bounded-path-family-response-choice-01.json)을 골랐고 이유/성능 예상은 없었다. AI의 [17-candidate-fallback.mjs](17-candidate-fallback.mjs), [방법](../docs/CANDIDATE_ASTAR_FALLBACK_KR.md), [결과](../data/learning/candidate-astar-fallback-run-01.json)는 유효 후보가 있으면 시간 비교로 고르고 없으면 기존 A*FIFO/명시 예산으로 탐색한다. 우회 지도 예산20은8칸/13모델 초 성공, 같은 지도 예산5는예산 초과, 아래 틈 봉쇄는도착 불가, 빈 지도에서는 후보9초를 고르고 A*를 건너뛴다. 전체31개 추적 검사 파일166개 통과(새10개 포함), 별도 BFS/수식/프로필 검증도 일치했다. 실제 로봇 검증이나 시간 최적 A*가 아니며 A*는 이동 횟수 기준이다. 후보 확인·모델 계산·노드 확장은 별도 지표다. 다음은 [후보 우선과 처음부터 A* 사용 시 도착 모델 시간이 같을지 예상](../experiments/candidate-astar-direct-comparison-01.design.json)하는 단계다.
+학생은 **2**로 [A* 대응 규칙](../data/learning/bounded-path-family-response-choice-01.json)을 골랐고 이유/성능 예상은 없었다. AI의 [17-candidate-fallback.mjs](17-candidate-fallback.mjs), [방법](../docs/CANDIDATE_ASTAR_FALLBACK_KR.md), [결과](../data/learning/candidate-astar-fallback-run-01.json)는 유효 후보가 있으면 시간 비교로 고르고 없으면 기존 A*FIFO/명시 예산으로 탐색한다. 우회 지도 예산20은8칸/13모델 초 성공, 같은 지도 예산5는예산 초과, 아래 틈 봉쇄는도착 불가, 빈 지도에서는 후보9초를 고르고 A*를 건너뛴다. 전체31개 추적 검사 파일166개 통과(새10개 포함), 별도 BFS/수식/프로필 검증도 일치했다. 실제 로봇 검증이나 시간 최적 A*가 아니며 A*는 이동 횟수 기준이다. 후보 확인·모델 계산·노드 확장은 별도 지표다. 학생은 모른다고 답했고 아래 실습18에서 AI가 비교했다.
+
+
+## 열여덟 번째 파일 — 이동 횟수와 모델 시간 목표 비교
+
+[18-candidate-versus-direct.mjs](18-candidate-versus-direct.mjs)는 같은 빈 점 지도에서 후보 시간 비교와 기존 FIFO A*를 직접 비교한다. [방법·조건·검증](../docs/CANDIDATE_ASTAR_FALLBACK_KR.md), [원시 결과](../data/learning/candidate-astar-direct-comparison-run-01.json), [사전 프로토콜](../experiments/candidate-astar-direct-comparison-01.protocol.json)은 소스 `0e0c29fb10af0790cd1e4ad40164a9710542bc45`를 고정한다. 출발 아래쪽·같은 운동 한계·A*예산20에서 후보 ↓↓↓→→→는6칸/9모델 초, A* →→→↓↓↓는6칸/10모델 초(16확장)였다. 출발 회전 추가가 차이를 만든다. AI가 경로/수식/프로필을 확인했고 기존166통과 소스·TAP는 같아 검사를 반복하지 않았다. [학생 답](../data/learning/candidate-astar-direct-prediction-01.json)은 **몰라**이며 새 예상/실행/발견으로 기록하지 않는다. 코드·실행·상세 해석은 AI, 이전 아래쪽 먼저 화살표 설계는 학생이다. 실제 시간 측정이나 동일 전체 계산량 비교가 아니다. 다음은 [어느 경로에 출발 회전이 추가되는지 설명](../experiments/candidate-astar-direct-interpretation-01.design.json)하는 단계다.

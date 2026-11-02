@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-02",
+  "status": "awaiting-guided-student-interpretation",
+  "context": "data/learning/candidate-astar-direct-comparison-run-01.json",
+  "question": "Both selected paths have6moves. The robot initially faces down. Which selected route needs an extra turn before its first move, and why? The9versus10model-second result and explanation have already been shown, so this is a guided post-result explanation, not a prior prediction or independent discovery.",
+  "studentResponseVerbatim": null,
+  "nextEngineeringDecision": "After interpretation, propose and freeze a controlled change to the heading or planner objective; no new run or student-selected change inferred."
+}

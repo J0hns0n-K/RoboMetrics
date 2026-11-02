@@ -944,3 +944,8 @@ AI configures the same known connected map and A* FIFO, with completion budget 8
 - Interpretations and what is still unknown:
 - Student's own implementation/analysis contribution:
 - Next experiment:
+
+
+## 2026-11-02 — Candidate time ranking versus direct unit-cost A*
+
+[Protocol](../experiments/candidate-astar-direct-comparison-01.protocol.json), [raw results/validation](../data/learning/candidate-astar-direct-comparison-run-01.json), [method/limits](CANDIDATE_ASTAR_FALLBACK_KR.md), source `0e0c29fb10af0790cd1e4ad40164a9710542bc45`. Student reported uncertainty before execution; no forecast inferred. AI operates one candidate-first invocation and one direct FIFO/Manhattan A*invocation on the same known empty4×5map, start(0,0)/goal(3,3), initial-down and archived motion limits, A*cap20. Candidate-first checks/times20paths, selects DDDRRR/6moves/9model seconds and skips A*. Direct A*expands16nodes, returns RRRDDD/6moves/10model seconds and times that path once. Both translate8model seconds; rotations1versus2model seconds from initial alignment. Distinct counts, not equal computational budget or runtime/energy measurement. Independent20path validity/ranking, Manhattan lower-bound6, component times and7selected profiles/18phases with64-panel integrals agree; prior empty-policy result reproduced exactly. All historical hashes and31tracked tests/dependencies/166-pass TAP unchanged; no regression repeat, new BFS or Greedy call. One known layout, no independent research-map cohort or physical/global optimal-time conclusion. Next guided interpretation pending.
