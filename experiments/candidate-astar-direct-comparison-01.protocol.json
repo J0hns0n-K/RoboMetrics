@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-02",
+  "status": "frozen-before-configured-comparison",
+  "methodAuthor": "AI assistant",
+  "config": "experiments/candidate-astar-fallback-01.config.json",
+  "caseId": "empty-valid-family",
+  "studentResponse": "data/learning/candidate-astar-direct-prediction-01.json",
+  "candidateSource": "data/learning/bounded-path-monotone-run-01.json",
+  "astar": {"algorithm":"astar","tieBreak":"fifo","maxExpansions":20},
+  "controls": "One known obstacle-free4x5 point layout, same start(0,0),goal(3,3), initial-down heading, fixed motion limits, six-move20candidate family. Candidate-first minimizes model time in registered valid family; direct A* uses unchanged FIFO/Manhattan/unit moves. A* budget20 applies only to its expansions, not candidate stage or elapsed time.",
+  "checks": [
+    "Commit student response, wrapper and protocol before configured execution. Import practice18 once; archive full paths, timing operations and separate counters.",
+    "Check historical source/test/data/TAP hashes from prior validation. Reuse166-pass result only if all tracked test sources and dependencies remain unchanged; no unnecessary regression repeat for a comparison wrapper.",
+    "Independently validate all20candidate paths and rank via Python run/angle rest-to-rest formulas. Verify both selected paths, equal Manhattan minimum move length, timing components and operation schedule/profile integrals using64panels per phase. No new BFS required on this known empty layout.",
+    "Compare identical candidate-first output with prior empty control. Keep candidate checking, timing evaluation and A* expansions separate. Preserve all historical artifacts; no runtime, energy, physical or global optimal-time claims."
+  ],
+  "scope": "Known objective/tie-order control, not a blind test, independent map cohort or A*versusGreedy experiment. Student supplied no forecast; AI owns comparison code, operation and detailed explanation."
+}

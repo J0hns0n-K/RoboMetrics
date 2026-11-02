@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-02",
+  "context": "experiments/candidate-astar-direct-comparison-01.design.json",
+  "studentResponseVerbatim": "몰라",
+  "interpretation": "No directional or numerical prediction supplied. Proceed with the offered known-control comparison; do not infer a revised answer or independent student execution.",
+  "roles": "Student supplied uncertainty; AI designed and operates the comparison and explains the results. Earlier student DDDRRR path design remains separately attributed."
+}
