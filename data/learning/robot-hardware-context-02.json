@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-03",
+  "question": "이번 모델 비교 다음에는 실제 주행 준비로 넘어가려고 해. 마퀸 플러스 V3는 지금 어떤 상태야?",
+  "studentResponseVerbatim": "아직 구매 전",
+  "robotUnderDiscussion": "DFRobot Maqueen Plus V3 AA version, MBT0050-AA",
+  "classification": "user-reported-purchase-status",
+  "supportedInterpretation": "The discussed kit has not yet been purchased according to the student. This is not independently checked inventory or an observation of other robots/resources.",
+  "scope": "No purchase, delivery, assembly, motor actuation, calibration or measured physical result inferred. Existing analytic model outputs remain separate from future robot experiments."
+}

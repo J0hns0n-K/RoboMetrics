@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-11-03",
-  "status": "student-forecast-recorded-ready-for-configured-comparison",
+  "status": "configured-comparison-completed-and-independently-checked",
   "proposalAuthor": "AI assistant",
   "context": "data/learning/equal-turn-run-lengths-run-01.json",
   "sourceConfig": "experiments/equal-turn-run-lengths-01.config.json",
@@ -14,8 +14,11 @@
   },
   "controls": "Same two supplied point paths, empty5x5layout/endpoints, initial/final heading, acceleration/braking, rotation limits, rest boundaries and no dwell. No path search. Preserve prior cap2 raw data; new config/protocol/source and new artifact name required before evaluation.",
   "studentPredictionVerbatim": "2",
-  "scope": "Pending sensitivity control, no new run or forecast inferred. AI proposal/code/reference operation separate from student input. Not measured robot motion, general optimum, runtime or energy evidence.",
+  "scope": "Completed known sensitivity control on preserved pair, student2forecast unsupported here. AI inputs/code/operation/formulas separate. Raw result/validation linked in run. No physical measurement or global optimum/runtime/energy claim.",
   "studentPrediction": "data/learning/equal-turn-speed-cap-prediction-01.json",
   "config": "experiments/equal-turn-speed-cap-01.config.json",
-  "protocol": "experiments/equal-turn-speed-cap-01.protocol.json"
+  "protocol": "experiments/equal-turn-speed-cap-01.protocol.json",
+  "run": "data/learning/equal-turn-speed-cap-run-01.json",
+  "sourceCommit": "56c7247ea297dd54cd6b2a48f039d077b9eb3b82",
+  "nextTask": "experiments/first-robot-calibration-choice-01.design.json"
 }

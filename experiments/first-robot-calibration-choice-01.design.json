@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-03",
+  "status": "awaiting-student-first-calibration-target-choice",
+  "proposalAuthor": "AI assistant",
+  "context": "data/learning/equal-turn-speed-cap-run-01.json",
+  "hardwareContext": "data/learning/robot-hardware-context-02.json",
+  "researchQuestion": "Which physical discrepancy should the first calibration protocol investigate before using a robot to evaluate planned routes?",
+  "question": "For the first real-robot test once the kit is available, which should we investigate first:1straight travel(command30cm versus measured travel),or2turning(command90degrees versus measured angle)? Select1or2; a reason is optional. No movement or measurement is requested before hardware is available.",
+  "options": [
+    {"id":"1","target":"straight-distance-error","proposedCommand":"30centimeters forward","measuredQuantity":"externally measured travel distance; duration logged separately","purpose":"Calibrate distance scale and repeatability before multi-leg routes."},
+    {"id":"2","target":"turn-angle-error","proposedCommand":"90degree in-place turn","measuredQuantity":"externally measured heading change; duration logged separately","purpose":"Calibrate turn scale and repeatability before stop-turn routes."}
+  ],
+  "studentChoiceVerbatim": null,
+  "plan": "After student selection, draft a reviewable measurement protocol and blank recording template, including units, start/end rest, surface/start-pose controls, repeat count, motor-library assistance and external reference. Preserve failures. No raw measurements, robot program execution or calibrated parameter values until actually observed. Do not identify virtual model cells/seconds with centimeters/physical time without calibration.",
+  "scope": "Pending offered engineering decision and future physical protocol. Robot is user-reported not yet purchased. AI proposed targets; no student choice, hardware availability, trial execution or independent student implementation inferred."
+}

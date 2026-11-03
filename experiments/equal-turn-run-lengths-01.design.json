@@ -133,5 +133,6 @@
   "protocol": "experiments/equal-turn-run-lengths-01.protocol.json",
   "run": "data/learning/equal-turn-run-lengths-run-01.json",
   "sourceCommit": "9a91d48abec196ddf52f35afbca334078849084e",
-  "nextTask": "experiments/equal-turn-speed-cap-01.design.json"
+  "nextTask": "experiments/first-robot-calibration-choice-01.design.json",
+  "speedCapFollowUpRun": "data/learning/equal-turn-speed-cap-run-01.json"
 }

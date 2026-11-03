@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Equal-turn run-length control completed in data/learning/equal-turn-run-lengths-run-01.json: two8move/two90degree-turn paths at initial-down/shared cap2 give11.4641versus11.6569model seconds, supporting student1forecast only in this pair. AI design/operation/validation; no reason, code, physical execution or purchase inferred. Next experiments/equal-turn-speed-cap-01.design.json awaits cap-only sensitivity forecast.",
+  "nextTask": "Cap-only comparison completed in data/learning/equal-turn-speed-cap-run-01.json: same known paths at shared cap1yield exact13/13model seconds, not supporting student2forecast. Old cap2raw/135hashes/166-pass evidence preserved. AI operation/formulas, no physical execution. Student reports discussed kit not yet purchased in data/learning/robot-hardware-context-02.json. Next experiments/first-robot-calibration-choice-01.design.json awaits offered choice of first calibration target once hardware is available.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -350,5 +350,8 @@
   "candidateAstarDirectInterpretationRecord": "data/learning/candidate-astar-direct-interpretation-01.json",
   "equalTurnRunLengthDraft": "experiments/equal-turn-run-lengths-01.design.json",
   "equalTurnRunLengthRun": "data/learning/equal-turn-run-lengths-run-01.json",
-  "equalTurnSpeedCapDraft": "experiments/equal-turn-speed-cap-01.design.json"
+  "equalTurnSpeedCapDraft": "experiments/equal-turn-speed-cap-01.design.json",
+  "equalTurnSpeedCapRun": "data/learning/equal-turn-speed-cap-run-01.json",
+  "latestHardwareContext": "data/learning/robot-hardware-context-02.json",
+  "firstRobotCalibrationChoiceDraft": "experiments/first-robot-calibration-choice-01.design.json"
 }
