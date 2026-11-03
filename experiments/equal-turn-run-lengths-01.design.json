@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-11-02",
-  "status": "student-forecast-recorded-ready-for-configured-comparison",
+  "status": "configured-comparison-completed-and-independently-checked",
   "proposalAuthor": "AI assistant",
   "context": "data/learning/candidate-astar-direct-interpretation-01.json",
   "researchQuestion": "At fixed endpoints, initial heading, move count and rotation angles, can the placement of stops along straight runs change bounded rest-to-rest model time?",
@@ -127,8 +127,11 @@
   "controls": "Two AI-designed known routes on one empty5x5point layout, not the archived20six-move candidate family. Each has8moves, initial alignment0degrees, two internal90degree turns, same final-down heading, start/end at rest, no dwell. Both use the same higher linear cap2, explicitly different from prior direct-A*control cap1; do not attribute a cross-experiment time change solely to run placement.",
   "studentPredictionVerbatim": "1",
   "plannedMethod": "After recording the student reply, freeze execution protocol and wrapper source before a new named configured run. Evaluate each fixed path once using unchanged boundedStopTurnTime, independently audit coordinates, run lengths, rotation angles, rest-to-rest formulas, schedules and phase integrals; preserve historical artifacts and passing-test source hashes. No search algorithm is required for two supplied paths. Do not claim measured robot time, runtime/energy, route-family completeness or a global time optimum.",
-  "scope": "Pending known-control timing comparison, not completed evidence or a student-designed map/path. Prediction can be uncertainty. Detailed mechanism, code and operation remain AI support.",
+  "scope": "Completed known two-path control; student supplied qualitative1forecast only. AI paths/limits/code/operation/formulas separate. Full raw results/validation linked in run. No independent map cohort, global optimum or physical measurements.",
   "studentPrediction": "data/learning/equal-turn-run-lengths-prediction-01.json",
   "config": "experiments/equal-turn-run-lengths-01.config.json",
-  "protocol": "experiments/equal-turn-run-lengths-01.protocol.json"
+  "protocol": "experiments/equal-turn-run-lengths-01.protocol.json",
+  "run": "data/learning/equal-turn-run-lengths-run-01.json",
+  "sourceCommit": "9a91d48abec196ddf52f35afbca334078849084e",
+  "nextTask": "experiments/equal-turn-speed-cap-01.design.json"
 }
