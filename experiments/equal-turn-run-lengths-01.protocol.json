@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-03",
+  "status": "frozen-before-configured-timing-comparison",
+  "methodAuthor": "AI assistant",
+  "config": "experiments/equal-turn-run-lengths-01.config.json",
+  "studentPrediction": "data/learning/equal-turn-run-lengths-prediction-01.json",
+  "priorValidation": "data/learning/candidate-astar-direct-comparison-run-01.json",
+  "wrapper": "practice/19-equal-turn-run-lengths.mjs",
+  "validationCommand": "python experiments/validate-equal-turn-run-lengths-01.py",
+  "checks": [
+    "Freeze source, wrapper, student forecast, config, protocol and independent validation program in a source commit before execution. Import wrapper once, evaluating two supplied paths with unchanged boundedStopTurnTime. Archive full timings and stdout under a new immutable name.",
+    "Independently reconstruct unit moves, coordinates, straight runs, headings and rotation angles in Python. Check same endpoints/minimum Manhattan8, length8, zero initial alignment, two90degree turns and three runs. This verifies supplied point paths, not body clearance or physical feasibility.",
+    "Compute rest-to-rest translation and rotation times independently from distance, finite speed caps and acceleration limits. Check achieved peak speeds, phase continuity/rest/caps, sequential schedules and64-panel velocity integrals. Compare unrounded times; round only for display.",
+    "Verify all historical source/test/data/TAP hashes in prior validation. Reuse prior166-pass result only if all31tracked test sources and dependencies remain unchanged; no full regression repeat for a fixed-input wrapper. No new planner, BFS or independent map cohort.",
+    "Preserve old raw outputs. Student prediction is qualitative route1 only, without reason or code. AI owns paths/config/code/operation/formulas and detailed explanation. No runtime, energy, physical, general route-family or global minimum-time claim."
+  ],
+  "scope": "Two analytic evaluations on one known empty point layout. A controlled check that move/turn counts alone may not determine bounded time. Not a blind algorithm comparison or a measured robot result."
+}

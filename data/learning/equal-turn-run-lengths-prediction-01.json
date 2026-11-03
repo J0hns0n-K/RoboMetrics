@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-03",
+  "context": "experiments/equal-turn-run-lengths-01.design.json",
+  "studentResponseVerbatim": "1",
+  "selectedPrediction": "route1-faster",
+  "reasonVerbatim": null,
+  "classification": "prior-qualitative-forecast-on-offered-known-control",
+  "roles": "Student selected route1 as quicker before this configured run. No numeric forecast, rationale, route/map design, code edit or observed execution supplied. AI designed the paths/limits, implements and operates the comparison and validation."
+}
