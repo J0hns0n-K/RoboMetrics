@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "design": "experiments/equal-turn-speed-cap-01.design.json",
+  "studentPrediction": "data/learning/equal-turn-speed-cap-prediction-01.json",
+  "world": {
+    "width": 5,
+    "height": 5,
+    "start": [
+      0,
+      0
+    ],
+    "goal": [
+      4,
+      4
+    ],
+    "blockedCells": [],
+    "model": "cardinal point grid, no body/swept-clearance claim"
+  },
+  "candidates": [
+    {
+      "id": "route1",
+      "sequence": "DRRRRDDD",
+      "straightRunLengths": [
+        1,
+        4,
+        3
+      ],
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ]
+    },
+    {
+      "id": "route2",
+      "sequence": "DDRRRRDD",
+      "straightRunLengths": [
+        2,
+        4,
+        2
+      ],
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ]
+    }
+  ],
+  "motionLimits": {
+    "initialHeading": "down",
+    "linearSpeed": 1,
+    "linearAcceleration": 1,
+    "angularSpeedDegrees": 180,
+    "stopPolicy": "turns-only",
+    "angularAccelerationMagnitudeDegreesPerSecondSquared": 360
+  },
+  "controls": "Same two supplied8move/two90degree-turn paths, empty5x5point layout, endpoints and initial/final-down, zero alignment, turns-only rest, linear acceleration1, angular cap180/acceleration360 and no dwell as prior cap2control. Only shared linear speed cap changes2to1. No path search or expansion budget.",
+  "baselineConfig": "experiments/equal-turn-run-lengths-01.config.json"
+}

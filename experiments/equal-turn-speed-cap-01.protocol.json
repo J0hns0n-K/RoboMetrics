@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-03",
+  "status": "frozen-before-configured-speed-cap-comparison",
+  "methodAuthor": "AI assistant",
+  "config": "experiments/equal-turn-speed-cap-01.config.json",
+  "studentPrediction": "data/learning/equal-turn-speed-cap-prediction-01.json",
+  "priorValidation": "data/learning/equal-turn-run-lengths-run-01.json",
+  "wrapper": "practice/20-equal-turn-speed-cap.mjs",
+  "validationCommand": "python experiments/validate-equal-turn-speed-cap-01.py",
+  "checks": [
+    "Commit forecast/config/protocol/wrapper/independent validator before configured run. Import wrapper once: two fixed-path boundedStopTurnTime evaluations. New immutable artifact; do not rerun prior cap2baseline.",
+    "Assert baseline world/candidates unchanged and all motion inputs equal except shared linear cap2to1. Independently reconstruct coordinates/unit moves, run lengths/headings/angles/zero alignment/Manhattan minimum8 and same rest boundaries.",
+    "Independently calculate rest-to-rest time/achieved peaks, validate phase rest/continuity/caps and sequential schedules with64-panel velocity integrals. Compare unrounded outputs. Contrast with preserved source-bound cap2result without adding new baseline calls.",
+    "Verify prior source/test/data/TAP hashes and same31tracked tests. Reuse prior166-pass result if sources/dependencies remain identical; no full regression repeat for input-only wrapper. No A*/Greedy/BFS calls or new independent maps.",
+    "Preserve student2forecast even if unsupported; do not infer reason/code/execution. AI operation/checks/explanation separate. Scope analytic point-path control, no runtime/energy/global optimum or physical measurements."
+  ],
+  "scope": "Pending known sensitivity control, two analytic evaluations on the already studied pair. Hardware status separately user-reported, no physical experiment."
+}

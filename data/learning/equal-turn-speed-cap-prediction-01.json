@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-03",
+  "context": "experiments/equal-turn-speed-cap-01.design.json",
+  "studentResponseVerbatim": "2",
+  "selectedPrediction": "route2-faster",
+  "reasonVerbatim": null,
+  "classification": "prior-qualitative-forecast-on-offered-speed-cap-control",
+  "roles": "Student selects offered route2 as quicker before this configured run; no reason, numeric forecast, path design, code edit or execution supplied. AI control/config/code/operation/formula explanation separate."
+}

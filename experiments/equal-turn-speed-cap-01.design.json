@@ -1,13 +1,21 @@
 {
   "schemaVersion": 1,
   "clientDateSeoul": "2026-11-03",
-  "status": "awaiting-student-prior-speed-cap-comparison-forecast",
+  "status": "student-forecast-recorded-ready-for-configured-comparison",
   "proposalAuthor": "AI assistant",
   "context": "data/learning/equal-turn-run-lengths-run-01.json",
   "sourceConfig": "experiments/equal-turn-run-lengths-01.config.json",
   "question": "Keep both8move/two-turn routes, start-down, linear acceleration1 and all angular/stop limits fixed. Change only the shared linear speed cap from2to1. Will route1 still be quicker, route2 be quicker, or will they tie? Uncertainty is also acceptable. Record before a new configured evaluation.",
-  "change": {"field":"motionLimits.linearSpeed","from":2,"to":1,"units":"virtual cells per model second"},
+  "change": {
+    "field": "motionLimits.linearSpeed",
+    "from": 2,
+    "to": 1,
+    "units": "virtual cells per model second"
+  },
   "controls": "Same two supplied point paths, empty5x5layout/endpoints, initial/final heading, acceleration/braking, rotation limits, rest boundaries and no dwell. No path search. Preserve prior cap2 raw data; new config/protocol/source and new artifact name required before evaluation.",
-  "studentPredictionVerbatim": null,
-  "scope": "Pending sensitivity control, no new run or forecast inferred. AI proposal/code/reference operation separate from student input. Not measured robot motion, general optimum, runtime or energy evidence."
+  "studentPredictionVerbatim": "2",
+  "scope": "Pending sensitivity control, no new run or forecast inferred. AI proposal/code/reference operation separate from student input. Not measured robot motion, general optimum, runtime or energy evidence.",
+  "studentPrediction": "data/learning/equal-turn-speed-cap-prediction-01.json",
+  "config": "experiments/equal-turn-speed-cap-01.config.json",
+  "protocol": "experiments/equal-turn-speed-cap-01.protocol.json"
 }
