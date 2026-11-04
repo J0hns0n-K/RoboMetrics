@@ -4,7 +4,7 @@ const illustrativeCommandCm = 30;
 const illustrativeResponseCm = 29;
 
 // Student task: change only this 30 to 60, then save.
-const probeCommandCm = 30;
+const probeCommandCm = 60;
 
 if (!Number.isFinite(probeCommandCm) || probeCommandCm <= 0) {
   throw new RangeError('Use a finite positive hypothetical command distance.');

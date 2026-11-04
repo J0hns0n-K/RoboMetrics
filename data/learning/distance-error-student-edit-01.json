@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-04",
+  "studentReportVerbatim": "저장함",
+  "file": "practice/21-distance-error-hypotheses.mjs",
+  "baselineRevision": "65f82732b6cd162a5decde103478a8b726779e85",
+  "verifiedChange": {
+    "field": "probeCommandCm",
+    "from": 30,
+    "to": 60,
+    "onlyNormalizedTextChange": true,
+    "oldLine": "const probeCommandCm = 30;",
+    "newLine": "const probeCommandCm = 60;"
+  },
+  "currentSourceSha256Bytes": "7f61a4fe00ab265fedd369f5206c5faadabaad3cadc5adb2c1262b3183075e35",
+  "classification": "guided-parameter-edit-matched-to-student-save-report",
+  "roles": {
+    "student": "Reports saving and matching requested one-value edit is present in shared file. Direct editor interaction not observed.",
+    "ai": "Original scaffold/fictional examples/formulas, edit instruction, file/diff verification and Git operation. Configured execution will be AI-operated, not student execution."
+  },
+  "scope": "One parameter modification in an AI reference teaching script. No new algorithm/formula, independent numerical prediction, hardware command or physical observation."
+}

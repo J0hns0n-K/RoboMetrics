@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-04",
+  "status": "frozen-before-student-edited60probe-check",
+  "source": "practice/21-distance-error-hypotheses.mjs",
+  "studentEdit": "data/learning/distance-error-student-edit-01.json",
+  "baselineCheck": "data/learning/distance-error-hypotheses-demo-check-01.json",
+  "checks": [
+    "Commit student-reported/verified sole probe30to60edit with protocol before check. Preserve original scaffold and all other numeric inputs/formulas.",
+    "Import practice21once and archive exports/stdout under a new immutable name. Compare the two conditional arithmetic predictions at60with the preserved30probe; do not rerun the baseline.",
+    "Independently check offset and scale arithmetic in Python; confirm fictional labels and exact expected one-value source change. Preserve all140historical hashes, original30cmphysical draft/template and previous raw teaching check.",
+    "No physical observations or motor commands; no A*/Greedy/BFS/path timing evaluations or production changes. Prior166-pass source/TAP remains valid by hash; no full regression repeat for the one-value teaching edit."
+  ],
+  "scope": "AI-operated check of a guided student parameter edit on invented examples, not an empirical robot fit, calibrated parameter or independently student-operated experiment."
+}
