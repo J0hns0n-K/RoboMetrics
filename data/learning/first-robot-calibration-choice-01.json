@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-04",
+  "context": "experiments/first-robot-calibration-choice-01.design.json",
+  "studentResponseVerbatim": "1",
+  "selectedTarget": "straight-distance-error",
+  "reasonVerbatim": null,
+  "classification": "offered-first-calibration-target-choice",
+  "roles": "Student selected the offered straight-distance target, without a reason, trial count, measurement method, code or execution. AI proposed30cm/90degree options and drafts the repeat protocol/blank template. No robot purchase, delivery or physical result inferred.",
+  "latestHardwareReport": "data/learning/robot-hardware-context-02.json"
+}

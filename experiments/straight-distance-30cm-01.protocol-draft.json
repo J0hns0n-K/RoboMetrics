@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-04",
+  "status": "DRAFT_PENDING_HARDWARE_AND_COMMAND_DEFINITION",
+  "methodAuthor": "AI assistant",
+  "studentChoice": "data/learning/first-robot-calibration-choice-01.json",
+  "latestHardwareReport": "data/learning/robot-hardware-context-02.json",
+  "question": "How much does externally measured forward displacement differ from a30cmforward command under one fixed robot/controller/surface/start-pose condition?",
+  "plannedCommandDistanceCm": 30,
+  "plannedAttemptCount": 10,
+  "expectedRobotModel": "DFRobot Maqueen Plus V3 AA version MBT0050-AA with micro:bit V2; verify actual equipment before use",
+  "plannedBaselineController": "Manufacturer distance/PID/encoder assistance, exact library/firmware/program revision and command units unresolved. This is assisted baseline control, not student-implemented PID or A*/Greedy planning.",
+  "unresolvedBeforeAnyCommand": [
+    "Actual robot availability, model, firmware and library version; no purchase/delivery inferred from the previous user report.",
+    "Exact distance-command API/unit/completion and stop semantics; freeze reviewed program source and confirm a single deliberate start produces one command before the recorded series.",
+    "Choose a low fixed speed command after hardware/unit checks; record native units and do not substitute virtual cells/model seconds for physical calibration.",
+    "Reference-marker location relative to wheel-axis midpoint, initial orientation/alignment, ruler resolution, projection/readout uncertainty and physical measurement boundary.",
+    "Surface, battery type/start state, independent measurement method, operator, session ID/date and video reference if used."
+  ],
+  "controls": [
+    "Same unchanging program/controller parameters and30cmtarget for all10planned attempts. No correction-factor fitting or tuning during this baseline series.",
+    "Same flat floor area, wheels/body configuration, start point/heading and same reference marker. Reset by hand only after the robot stops; begin and finish each attempt at rest.",
+    "Use distance-command behavior without line-following or obstacle-avoidance interventions; confirm actual program behavior rather than assume unrelated firmware features are inactive.",
+    "Fix the speed-command setting and log battery observations/interruptions. If configuration changes, close this session with all attempts preserved and start a newly identified series."
+  ],
+  "measurement": {
+    "primaryQuantity": "signed forward displacement of the same reference point, projected onto the initial-heading axis; centimeters",
+    "secondaryQuantity": "signed lateral offset from the start axis, right positive; centimeters",
+    "referencePoint": "Fixed chassis marker associated with the midpoint between the two drive-wheel axes; identify/photo its actual placement before trials. Read its same ground-projected point before and after rest; report any placement/projection uncertainty.",
+    "externalReference": "Ruler/tape and start/target marks. Manufacturer encoder distance is controller feedback and must not serve as its own independent physical ground truth.",
+    "distanceMeaning": "Forward displacement and lateral endpoint offset are not actual curved path length. A path-length claim requires separate trajectory tracking.",
+    "timing": "Optional physical duration, with method/resolution recorded; video uses actual timestamps from first visible motion to the first frame of settled rest. Never copy analytic model seconds into this field."
+  },
+  "attemptAccounting": "Retain all10attempt slots and every attempted start, including errors, no-motion events, interruptions and missing measurements. NOT_RUN slots stay empty; COMPLETED means an uninterrupted observed attempt with usable measurement, not arrival within any success tolerance. Overshoot/undershoot are outcomes, not grounds to discard a row. Record ABORTED or MEASUREMENT_UNAVAILABLE with reason/evidence where appropriate; never turn missing values into zero.",
+  "plannedAnalysis": {
+    "signedForwardErrorCm": "measuredForwardDisplacementCm -30, positive overshoot/negative undershoot",
+    "summary": "Report attempted/completed/aborted/missing denominators. Summarize only measured, pre-specified eligible attempts with mean signed forward error, mean absolute forward error and sample standard deviation; standard deviation is undefined below2eligible observations. Summarize lateral drift separately. No current values or tolerance-based success rate.",
+    "calibrationFollowUp": "A correction candidate may be proposed only after baseline inspection; assess it on a new source-frozen series rather than claiming improvement from the fitting data."
+  },
+  "blankTemplate": "experiments/templates/straight-distance-30cm-01.session-template.json",
+  "recordingPolicy": "Keep this template blank. After actual observations, copy to a newly named session under data/physical/ and bind protocol/program/library revisions and original evidence files; preserve raw measurements and failures. The planned10attempts are not10completed trials.",
+  "manufacturerReferences": [
+    {"url":"https://wiki.dfrobot.com/mbt0050-aa/docs/23834","checkedClientDateSeoul":"2026-11-04","use":"Assembly/library setup reference; unit/API/firmware checks still pending on actual equipment."},
+    {"url":"https://wiki.dfrobot.com/mbt0050-18650/docs/22710","checkedClientDateSeoul":"2026-11-04","use":"Manufacturer PID distance/speed-feedback example linked from the AA documentation; not an independently verified robot accuracy result."}
+  ],
+  "scope": "AI-authored draft and blank recording preparation only. Student chose offered target1. No hardware command, physical observation, computed physical summary, calibrated parameter or simulation-to-real validation completed."
+}
