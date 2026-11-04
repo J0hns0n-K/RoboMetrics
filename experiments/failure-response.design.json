@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student selected offered additional60cmmethod in data/learning/calibration-distance-range-choice-01.json. Practice21is an AI-fictional hypothesis demo, checked only at default probe30and source5a01d4fbb8df91c01d61578c23c380792e343686. Next student changes only probeCommandCm30to60and saves; verify before attribution. No physical observations or motor commands; original30cmprotocol/template preserved. Follow experiments/calibration-distance-range-01.design.json.",
+  "nextTask": "Student-reported probe30to60edit verified; separate AI fictional teaching check in data/learning/distance-error-hypotheses-demo-check-02.json gives conditional59/58predictions. No physical evidence or student execution. Next experiments/distance-error-hypotheses-interpretation-01.design.json awaits guided interpretation of what real measurement is still needed. Hardware status remains user-reported not purchased; original30cmdraft/template preserved.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -359,5 +359,8 @@
   "straightDistanceBlankTemplate": "experiments/templates/straight-distance-30cm-01.session-template.json",
   "calibrationDistanceRangeChoice": "data/learning/calibration-distance-range-choice-01.json",
   "calibrationDistanceRangeDesign": "experiments/calibration-distance-range-01.design.json",
-  "distanceErrorTeachingCheck": "data/learning/distance-error-hypotheses-demo-check-01.json"
+  "distanceErrorTeachingCheck": "data/learning/distance-error-hypotheses-demo-check-01.json",
+  "distanceErrorStudentEdit": "data/learning/distance-error-student-edit-01.json",
+  "distanceErrorEditedProbeCheck": "data/learning/distance-error-hypotheses-demo-check-02.json",
+  "distanceErrorInterpretationDraft": "experiments/distance-error-hypotheses-interpretation-01.design.json"
 }

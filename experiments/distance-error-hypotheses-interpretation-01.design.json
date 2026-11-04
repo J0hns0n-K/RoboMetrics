@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-04",
+  "status": "awaiting-guided-post-demo-interpretation",
+  "context": "data/learning/distance-error-hypotheses-demo-check-02.json",
+  "question": "After the verified30to60probe edit, the two assumed rules predict59and58cm. Do these outputs alone tell us which rule fits a real robot? What kind of observation would be needed? The fictional labels and conditional outputs were already shown; this is guided interpretation, not a blind forecast.",
+  "studentResponseVerbatim": null,
+  "scope": "No actual robot measurement or claim that either error law is correct. Student parameter edit is separately verified; original code/formulas and check operation remain AI support."
+}

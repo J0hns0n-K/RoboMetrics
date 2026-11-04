@@ -30,6 +30,9 @@
   "selectedTarget": "straight-distance-error",
   "protocolDraft": "experiments/straight-distance-30cm-01.protocol-draft.json",
   "blankSessionTemplate": "experiments/templates/straight-distance-30cm-01.session-template.json",
-  "nextTask": "Hardware still user-reported not purchased. Guided fictional tutorial led to offered additional60cmmethod; next student edit is probeCommandCm30to60in practice/21-distance-error-hypotheses.mjs, then verify actual edit/run. Physical30cmdraft/template remain unchanged and blank; no floor preparation or hardware execution inferred.",
-  "followUpDistanceRangeDesign": "experiments/calibration-distance-range-01.design.json"
+  "nextTask": "Student-reported probe30to60edit verified; separate AI fictional teaching check in data/learning/distance-error-hypotheses-demo-check-02.json gives conditional59/58predictions. No physical evidence or student execution. Next experiments/distance-error-hypotheses-interpretation-01.design.json awaits guided interpretation of what real measurement is still needed. Hardware status remains user-reported not purchased; original30cmdraft/template preserved.",
+  "followUpDistanceRangeDesign": "experiments/calibration-distance-range-01.design.json",
+  "distanceErrorStudentEdit": "data/learning/distance-error-student-edit-01.json",
+  "distanceErrorEditedProbeCheck": "data/learning/distance-error-hypotheses-demo-check-02.json",
+  "distanceErrorInterpretationDraft": "experiments/distance-error-hypotheses-interpretation-01.design.json"
 }
