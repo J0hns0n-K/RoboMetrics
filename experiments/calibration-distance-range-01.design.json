@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-04",
+  "status": "additional-distance-method-selected-teaching-edit-pending",
+  "proposalAuthor": "AI assistant",
+  "studentChoice": "data/learning/calibration-distance-range-choice-01.json",
+  "existing30cmProtocolDraft": "experiments/straight-distance-30cm-01.protocol-draft.json",
+  "existingBlankTemplate": "experiments/templates/straight-distance-30cm-01.session-template.json",
+  "question": "A single command distance cannot distinguish a constant offset from proportional distance error. What extra command distance would help investigate the difference?",
+  "prospectivePhysicalDistancesCm": [30,60],
+  "prospectiveControls": "Before any physical follow-up, freeze actual robot/program/library/controller settings, native speed, surface, start heading, reference point and measurement method; address order/battery differences. Distance is the intended varied factor. Repeat count/order and hardware-specific program are not fixed by the student's choice. Retain failed attempts and measurement uncertainty; multiple distances do not prove a globally valid correction law.",
+  "additionalDistanceAttemptCount": null,
+  "hardwareContext": "data/learning/robot-hardware-context-02.json",
+  "teachingExercise": {
+    "source": "practice/21-distance-error-hypotheses.mjs",
+    "dataClass": "AI_FICTIONAL_VALUES_NOT_PHYSICAL_DATA",
+    "illustrativeAnchor": {"commandCm":30,"responseCm":29},
+    "hypotheses": ["constant additive offset through the fictional anchor","proportional scale through the fictional anchor and zero"],
+    "initialProbeCommandCm":30,
+    "studentRequestedEdit": "Change only probeCommandCm from30to60 and save. Verify an actual edit before attributing code modification or a run to the student.",
+    "scope": "Conditional arithmetic predictions, not an empirical model fit or motor program. No assumption that either hypothesis is correct for the real robot."
+  },
+  "scope": "A guided choice in a fictional lesson motivates a prospective additional-distance comparison. Original30cmprotocol/template and published preparation manifest stay unchanged. No new physical session, completed trial, calibration parameter, confidence claim or student implementation."
+}

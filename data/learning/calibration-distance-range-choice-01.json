@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-04",
+  "documentType": "GUIDED_FICTIONAL_EXERCISE_RESPONSES",
+  "context": "docs/STRAIGHT_DISTANCE_30CM_KR.md",
+  "fictionalExamplesSuppliedByAi": {"commandCm":30,"robotAResponsesCm":[28,30,32],"robotBResponsesCm":[29,29,29]},
+  "guidedReplies": [
+    {"questionContext":"Does average30imply every run reaches30?","studentResponseVerbatim":"아니","supportedInterpretation":"Rejects the every-run claim after the illustrative values were shown; no numerical derivation or real data supplied."},
+    {"questionContext":"Which fictional robot moves more consistently, AorB?","studentResponseVerbatim":"b","supportedInterpretation":"Selects Bafter the three identical29values were shown; no reason supplied."}
+  ],
+  "studentResponseVerbatim": "2",
+  "selectedMethod": "include-a60cm-command-in-a-future-distance-comparison",
+  "reasonVerbatim": null,
+  "supportedInterpretation": "Selects the offered additional-distance method to investigate distance dependence. Does not assert that physical error doubles, choose a calibration model or provide any physical observations.",
+  "roles": "AI invented all example values and offered methods, code and explanation. Student supplied the three brief guided answers only. No hardware purchase, preparation, movement, measurement or code edit inferred."
+}
