@@ -30,5 +30,6 @@
   "selectedTarget": "straight-distance-error",
   "protocolDraft": "experiments/straight-distance-30cm-01.protocol-draft.json",
   "blankSessionTemplate": "experiments/templates/straight-distance-30cm-01.session-template.json",
-  "nextTask": "Student may prepare start/30cmtarget marks with ruler/tape before hardware. Actual robot/unit/program/speed/reference checks remain unresolved; record preparation only if reported. No trial or purchase inferred."
+  "nextTask": "Hardware still user-reported not purchased. Guided fictional tutorial led to offered additional60cmmethod; next student edit is probeCommandCm30to60in practice/21-distance-error-hypotheses.mjs, then verify actual edit/run. Physical30cmdraft/template remain unchanged and blank; no floor preparation or hardware execution inferred.",
+  "followUpDistanceRangeDesign": "experiments/calibration-distance-range-01.design.json"
 }

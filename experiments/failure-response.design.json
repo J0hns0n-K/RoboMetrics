@@ -62,7 +62,7 @@
     "data/retry-policy/retry-connected-02-to-04-validation-01.json"
   ],
   "studentFinalBudgetMessage": "예산 초과라고 해서 길이 없다는 것이 아니야. 예산을 조금 더 늘리면 길이 있을 수도 있어.",
-  "nextTask": "Student selected offered calibration target1 in data/learning/first-robot-calibration-choice-01.json. AI drafted experiments/straight-distance-30cm-01.protocol-draft.json and empty experiments/templates/straight-distance-30cm-01.session-template.json. Thirty-centimeter/ten-attempt plan only; no actual robot/program/speed/unit confirmation or measured values. Student may prepare start/target marks with ruler/tape; do not infer preparation, purchase or physical execution without evidence.",
+  "nextTask": "Student selected offered additional60cmmethod in data/learning/calibration-distance-range-choice-01.json. Practice21is an AI-fictional hypothesis demo, checked only at default probe30and source5a01d4fbb8df91c01d61578c23c380792e343686. Next student changes only probeCommandCm30to60and saves; verify before attribution. No physical observations or motor commands; original30cmprotocol/template preserved. Follow experiments/calibration-distance-range-01.design.json.",
   "studentMapChangeChoiceRecord": "data/learning/map-change-choice-01.json",
   "studentResumeInterpretationRecord": "data/learning/resume-interpretation-01.json",
   "studentStateReuseResponseVerbatim": "모르겠네",
@@ -356,5 +356,8 @@
   "firstRobotCalibrationChoiceDraft": "experiments/first-robot-calibration-choice-01.design.json",
   "firstRobotCalibrationChoice": "data/learning/first-robot-calibration-choice-01.json",
   "straightDistanceProtocolDraft": "experiments/straight-distance-30cm-01.protocol-draft.json",
-  "straightDistanceBlankTemplate": "experiments/templates/straight-distance-30cm-01.session-template.json"
+  "straightDistanceBlankTemplate": "experiments/templates/straight-distance-30cm-01.session-template.json",
+  "calibrationDistanceRangeChoice": "data/learning/calibration-distance-range-choice-01.json",
+  "calibrationDistanceRangeDesign": "experiments/calibration-distance-range-01.design.json",
+  "distanceErrorTeachingCheck": "data/learning/distance-error-hypotheses-demo-check-01.json"
 }
