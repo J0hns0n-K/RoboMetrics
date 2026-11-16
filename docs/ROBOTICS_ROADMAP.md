@@ -38,3 +38,8 @@ The student has [interpreted the equal-time countercase](../data/learning/linear
 
 ## Decision rules
 - If hardware is not accessible, do not manufacture a sim-to-real study. Instead deepen physics-based simulator, run parameter sensitivity, document as simulation-only. A research report can be strong without claims of hardware, if it is careful.
+
+
+## Current hardware preparation — 2026-11-16
+
+The earlier availability reports above are historical. [Parts photos and guided bring-up](../data/learning/robot-bringup-guided-report-01.json) now show a Maqueen Plus V3 18650 kit present; the student reports assembly, battery fit and a heart display after battery-power instructions. AI directly checked USB enumeration earlier, not battery operation. No final wiring, current program identity, sensor communication or motion performance is verified. Next add the manufacturer extension, archive exact program/library revisions and check stationary output/stop behavior before bounded wheels-raised motor operation. The distance-calibration protocol and all measurement slots remain prospective and blank.

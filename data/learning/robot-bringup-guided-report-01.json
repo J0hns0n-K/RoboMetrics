@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "clientDateSeoul": "2026-11-16",
+  "documentType": "GUIDED_HARDWARE_BRINGUP_REPORT_NOT_MOTION_DATASET",
+  "recordingBaseRevision": "3368b1d5c28680ec6b72f42de40f48cb43f746b2",
+  "hardware": {
+    "robot": "DFRobot Maqueen Plus V3, 18650 version",
+    "visibleBaseboardMarking": "Maqueen Plus V3.1",
+    "controller": "micro:bit; purchased as V2.21 Go bundle, exact board revision not independently read",
+    "battery": "MEGACANON 18650 3500mAh, user-provided unpacking photo and earlier listing; installed fit user-reported"
+  },
+  "photoObservations": {
+    "unpackingImage": "KakaoTalk_20261116_184412427.jpg",
+    "visible": "Unassembled chassis, controller, 18650 battery board, sensor, wheels, brackets, pillars, cables and packaged cells. This image does not verify the final wiring or assembly.",
+    "undersideImage": "WIN_20261116_18_49_00_Pro.jpg",
+    "undersideScope": "Underside cover and fitted wheels visible; no powered motion shown.",
+    "imagesPublishedInRepository": false
+  },
+  "studentReports": [
+    {
+      "context": "Battery inserted under guided instructions",
+      "responseVerbatim": "들어갔어"
+    },
+    {
+      "context": "After instructions to disconnect USB, raise wheels and turn on both switches, asked whether heart is visible",
+      "responseVerbatim": "하트 보여",
+      "classification": "guided-user-reported-battery-powered-LED-observation",
+      "independentPowerSourceOrDisplayVerification": false
+    }
+  ],
+  "aiDirectChecksEarlierInConversation": {
+    "usbEnumeration": {
+      "volumeLabel": "MICROBIT",
+      "drive": "D:",
+      "method": "Read-only Win32_LogicalDisk query before USB disconnection; not repeated for battery operation"
+    },
+    "usbDiagnostic": {
+      "file": "ASSERT.TXT",
+      "assertSource": "../../../source/daplink/drag-n-drop/file_stream.c",
+      "assertLine": 164,
+      "interfaceVersion": "0256",
+      "interpretation": "USB transfer assertion record observed; exact timing and whether the current heart program successfully replaced earlier firmware are unresolved. User later reported a heart on the physical board.",
+      "resolved": false
+    }
+  },
+  "programEvidence": {
+    "guidedMakeCodeProjectName": "robometrics-first-check",
+    "aiSuggestedBehavior": "On start, show a heart icon",
+    "savedHexOrProjectExport": null,
+    "installedProgramHash": null,
+    "flashingSuccessIndependentlyVerified": false
+  },
+  "contributions": {
+    "student": "Provided parts photos, reported guided assembly, battery fit and visible heart; no independent controller design or new motion result inferred.",
+    "ai": "Provided assembly, wiring and LED-program instructions, inspected USB diagnostics, and authored this record and documentation. Corrected its initial mistaken instruction to put all five pillars on the base: three belong on the base and two above the battery board."
+  },
+  "notEstablished": [
+    "Final wiring and sensor communication",
+    "Motor actuation or stop behavior",
+    "Battery charge, measured voltage, operating duration or energy",
+    "Distance, angle, speed, timing, repeatability or calibration",
+    "Identity of the exact program currently installed"
+  ],
+  "physicalMotionMeasurements": null,
+  "nextStep": "Add the manufacturer MakeCode extension, archive exact program/library revision, and check a stationary output and motor stop before a bounded wheels-raised actuation check. Distance calibration remains prospective.",
+  "sources": [
+    "https://wiki.dfrobot.com/mbt0050-18650/docs/22701",
+    "https://support.microbit.org/support/solutions/articles/19000129888-assert-txt",
+    "https://microbit.org/get-started/user-guide/transfer-code-to-the-microbit/"
+  ]
+}
